@@ -1,0 +1,133 @@
+# Cytognosis Download Sources Registry
+# Tracks canonical download URLs for all datasets
+# Location: infrastructure/docs/data-strategy/download-sources.yaml
+# Updated: 2026-05-26
+
+# auto_refreshable: true = can be re-downloaded without manual intervention
+# requires_license: true = needs license agreement before download
+
+ontologies:
+  go-plus:
+    url: "https://purl.obolibrary.org/obo/go/extensions/go-plus.owl"
+    format: OWL
+    auto_refreshable: true
+    local_path: "~/datasets/01-ontologies/go/go-plus.owl"
+    notes: "Extended GO with inter-ontology links. Good testing target."
+
+  mondo:
+    url: "https://purl.obolibrary.org/obo/mondo.owl"
+    format: OWL
+    auto_refreshable: true
+    local_path: "~/datasets/01-ontologies/mondo/mondo.owl"
+
+  hp:
+    url: "https://purl.obolibrary.org/obo/hp.owl"
+    format: OWL
+    auto_refreshable: true
+    local_path: "~/datasets/01-ontologies/hp/hp.owl"
+
+  uberon:
+    url: "https://purl.obolibrary.org/obo/uberon/ext.owl"
+    format: OWL
+    auto_refreshable: true
+    local_path: "~/datasets/01-ontologies/uberon/uberon-ext.owl"
+
+  cl:
+    url: "https://purl.obolibrary.org/obo/cl.owl"
+    format: OWL
+    auto_refreshable: true
+    local_path: "~/datasets/01-ontologies/cl/cl.owl"
+
+  chebi:
+    url: "https://purl.obolibrary.org/obo/chebi.owl"
+    format: OWL
+    auto_refreshable: true
+    local_path: "~/datasets/01-ontologies/chebi/chebi.owl"
+    notes: "Very large (~2GB). Download takes a while."
+
+  doid:
+    url: "https://purl.obolibrary.org/obo/doid.owl"
+    format: OWL
+    auto_refreshable: true
+    local_path: "~/datasets/01-ontologies/doid/doid.owl"
+
+  efo:
+    url: "https://github.com/EBISPOT/efo/releases/latest/download/efo.owl"
+    format: OWL
+    auto_refreshable: true
+    local_path: "~/datasets/01-ontologies/efo/efo.owl"
+
+vocabularies:
+  umls:
+    url: "https://download.nlm.nih.gov/umls/kss/{version}/umls-{version}-full.zip"
+    requires_license: true
+    format: RRF
+    local_path: "~/datasets/02-vocabularies/UMLS"
+    notes: "Requires UMLS license. Download via UTS API."
+
+  snomed-ct:
+    url: "https://download.nlm.nih.gov/umls/kss/{version}/SnomedCT_InternationalRF2_PRODUCTION_{version}.zip"
+    requires_license: true
+    format: RF2
+    local_path: "~/datasets/02-vocabularies/SnomedCT"
+    notes: "Requires UMLS license. International + US editions."
+
+  loinc:
+    url: "https://loinc.org/downloads/"
+    requires_license: true
+    format: CSV
+    local_path: "~/datasets/02-vocabularies/LOINC"
+    notes: "Free registration required."
+
+cross-ontology:
+  ols4-sssom:
+    url: "https://www.ebi.ac.uk/ols4/api/sssom/"
+    format: TSV
+    auto_refreshable: true
+    local_path: "~/datasets/04-identifiers/ols4-sssom/sssom"
+    notes: "SSSOM mapping files from OLS4. Bulk download."
+
+  umls-sssom:
+    url: "https://github.com/monarch-initiative/umls-sssom/releases/"
+    format: TSV
+    auto_refreshable: true
+    local_path: "~/datasets/04-identifiers/umls-sssom"
+
+knowledge-graphs:
+  monarch:
+    url: "https://data.monarchinitiative.org/monarch-kg/latest/"
+    format: DuckDB
+    auto_refreshable: true
+    local_path: "~/datasets/03-knowledge-graphs/monarch"
+
+  primekg:
+    url: "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/IXA7BM"
+    format: CSV
+    auto_refreshable: true
+    local_path: "~/datasets/03-knowledge-graphs/primekg"
+
+  open-targets:
+    url: "https://platform.opentargets.org/downloads"
+    format: Parquet
+    auto_refreshable: true
+    local_path: "~/datasets/03-knowledge-graphs/open-targets"
+    notes: "Very large (~180GB). Download specific partitions."
+
+  unichem:
+    url: "https://ftp.ebi.ac.uk/pub/databases/chembl/UniChem/"
+    format: TSV
+    auto_refreshable: true
+    local_path: "~/datasets/04-identifiers/databases/UniChem"
+
+identifiers:
+  bioregistry:
+    url: "https://github.com/biopragmatics/bioregistry/releases/"
+    format: JSON
+    auto_refreshable: true
+    notes: "CURIE prefix registry. Updated frequently."
+
+  ensembl:
+    url: "https://ftp.ensembl.org/pub/current/"
+    format: various
+    auto_refreshable: true
+    local_path: "~/datasets/04-identifiers/ensembl"

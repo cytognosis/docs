@@ -1,0 +1,193 @@
+# Cytognosis Dataset Catalog
+# Machine-readable registry of all datasets with ingestion status
+# Location: infrastructure/docs/data-strategy/catalog.yaml
+# Updated: 2026-05-26
+
+# Status values: raw | parsed | harmonized | kg-integrated | validated
+# Access tiers: T1 (Open) | T2 (Registered) | T3 (Controlled) | T4 (Restricted/PHI)
+
+datasets:
+
+  # ── 01-ontologies (~85 GB) ──────────────────────────────────────────────────
+  - id: ontologies-obo-51
+    name: "OBO Foundry Ontologies (51 OWL files)"
+    category: ontologies
+    local_path: "~/datasets/01-ontologies"
+    access_tier: T1
+    version: "various (588-643 days stale)"
+    license: "CC-BY-4.0 / CC0"
+    size_gb: 85.0
+    ingestion_status: parsed
+    dvc_tracked: false
+    provenance_coverage: 0.80
+    notes: "All 51 ontologies validated. Need refresh for currency."
+
+  # ── 02-vocabularies (~77 GB) ────────────────────────────────────────────────
+  - id: umls-2026aa
+    name: "UMLS Metathesaurus 2026AA"
+    category: vocabularies
+    local_path: "~/datasets/02-vocabularies/UMLS"
+    access_tier: T3
+    version: "2026AA"
+    license: "UMLS-License"
+    size_gb: 42.0
+    ingestion_status: parsed
+    dvc_tracked: false
+    provenance_coverage: 0.933
+    notes: "94.9M rows parsed to parquet. 3 provenance sidecars missing."
+
+  - id: snomed-ct
+    name: "SNOMED CT US Edition"
+    category: vocabularies
+    local_path: "~/datasets/02-vocabularies/SnomedCT"
+    access_tier: T3
+    version: "2024-09-01"
+    license: "SNOMED-License"
+    size_gb: 28.0
+    ingestion_status: parsed
+    dvc_tracked: false
+    provenance_coverage: 0.90
+    notes: "International + US editions. Parsed to parquet."
+
+  - id: loinc
+    name: "LOINC"
+    category: vocabularies
+    local_path: "~/datasets/02-vocabularies/LOINC"
+    access_tier: T2
+    version: "2.78"
+    license: "LOINC-License"
+    size_gb: 2.0
+    ingestion_status: raw
+    dvc_tracked: false
+    provenance_coverage: 0.50
+    notes: "Downloaded, needs parsing pipeline."
+
+  # ── 03-knowledge-graphs (~440 GB) ──────────────────────────────────────────
+  - id: monarch-kg
+    name: "Monarch Knowledge Graph"
+    category: knowledge-graphs
+    local_path: "~/datasets/03-knowledge-graphs/monarch"
+    access_tier: T1
+    version: "2024-08"
+    license: "CC0"
+    size_gb: 45.0
+    ingestion_status: kg-integrated
+    dvc_tracked: false
+    provenance_coverage: 0.95
+    notes: "DuckDB format. 1.89M entities, merged into cytos KG."
+
+  - id: primekg
+    name: "PrimeKG"
+    category: knowledge-graphs
+    local_path: "~/datasets/03-knowledge-graphs/primekg"
+    access_tier: T1
+    version: "2023-02"
+    license: "MIT"
+    size_gb: 2.0
+    ingestion_status: kg-integrated
+    dvc_tracked: false
+    provenance_coverage: 0.95
+
+  - id: open-targets
+    name: "Open Targets Platform"
+    category: knowledge-graphs
+    local_path: "~/datasets/03-knowledge-graphs/open-targets"
+    access_tier: T1
+    version: "25.03"
+    license: "Apache-2.0"
+    size_gb: 180.0
+    ingestion_status: parsed
+    dvc_tracked: false
+    provenance_coverage: 0.85
+    notes: "Schema change: molecule/ → drug_molecule/. LinkMLizer needs update."
+
+  - id: pkg2
+    name: "Precision Knowledge Graph 2.0"
+    category: knowledge-graphs
+    local_path: "~/datasets/03-knowledge-graphs/pkg2.0"
+    access_tier: T1
+    version: "2.0"
+    license: "CC-BY-4.0"
+    size_gb: 8.0
+    ingestion_status: kg-integrated
+    dvc_tracked: false
+    provenance_coverage: 0.90
+
+  - id: pheknowlator
+    name: "PheKnowLator"
+    category: knowledge-graphs
+    local_path: "~/datasets/03-knowledge-graphs/pheknowlator"
+    access_tier: T1
+    version: "current_build"
+    license: "BSD-3-Clause"
+    size_gb: 15.0
+    ingestion_status: raw
+    dvc_tracked: false
+    provenance_coverage: 0.50
+
+  # ── 04-identifiers (~178 GB) ───────────────────────────────────────────────
+  - id: ols4-sssom
+    name: "OLS4 SSSOM Cross-Ontology Mappings"
+    category: identifiers
+    local_path: "~/datasets/04-identifiers/ols4-sssom/sssom"
+    access_tier: T1
+    version: "2024-Q4"
+    license: "CC0"
+    size_gb: 2.0
+    ingestion_status: parsed
+    dvc_tracked: false
+    provenance_coverage: 0.85
+    notes: "9.98M unique SSSOM mappings consolidated."
+
+  - id: unichem
+    name: "UniChem Cross-References"
+    category: identifiers
+    local_path: "~/datasets/04-identifiers/databases/UniChem"
+    access_tier: T1
+    version: "latest"
+    license: "CC-BY-SA-3.0"
+    size_gb: 5.0
+    ingestion_status: kg-integrated
+    dvc_tracked: false
+    provenance_coverage: 0.90
+
+  # ── 06-genotype (~105 GB) ──────────────────────────────────────────────────
+  - id: gwas-summary-stats
+    name: "GWAS Summary Statistics (8 traits)"
+    category: genotype
+    local_path: "~/datasets/06-genotype/gwas"
+    access_tier: T1
+    version: "various"
+    license: "various"
+    size_gb: 15.0
+    ingestion_status: parsed
+    dvc_tracked: false
+    provenance_coverage: 0.75
+    notes: "69.5M variants. 4 datasets pending: EPI 2023, SUD 2018 ALC, SUD 2020 OP, SUD 2023."
+
+  - id: ldgm
+    name: "LDGM Precision Matrices"
+    category: genotype
+    local_path: "~/datasets/06-genotype/ldgm"
+    access_tier: T1
+    version: "2024"
+    license: "MIT"
+    size_gb: 5.0
+    ingestion_status: parsed
+    dvc_tracked: false
+    provenance_coverage: 0.80
+    notes: "5 ancestries. Only EUR currently integrated."
+
+  # ── 08-neuroimaging (~319 GB) ──────────────────────────────────────────────
+  - id: neuroimaging-bids
+    name: "Neuroimaging BIDS datasets"
+    category: neuroimaging
+    local_path: "~/datasets/08-neuroimaging"
+    access_tier: T2
+    version: "various"
+    license: "various"
+    size_gb: 319.0
+    ingestion_status: raw
+    dvc_tracked: false
+    provenance_coverage: 0.30
+    notes: "BIDS format. Needs DataLad for versioning."

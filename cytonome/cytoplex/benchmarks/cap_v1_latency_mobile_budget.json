@@ -1,0 +1,315 @@
+{
+  "benchmark_id": "cap-v1-latency-mobile-resource-local",
+  "benchmarks": [
+    {
+      "battery_proxy": {
+        "basis": "cpu_time_ms_per_1000_ops; this is a relative proxy only, not measured device battery drain.",
+        "cpu_time_ms_per_1000_ops": 20.88
+      },
+      "category": "latency",
+      "cpu_time_ms_per_1000_ops": 20.88,
+      "cpu_time_ms_total": 1.044,
+      "iterations": 50,
+      "latency_ms": {
+        "count": 50,
+        "max": 0.035125,
+        "mean": 0.019588,
+        "min": 0.0185,
+        "p50": 0.019355,
+        "p95": 0.019981
+      },
+      "name": "direct_mcp_tool_handler",
+      "notes": "Direct local handler call without CAP envelope, Edge PEP, registry lookup, or ExecutionReport.",
+      "path": "direct_tool",
+      "tracemalloc_peak_bytes": 5376,
+      "tracemalloc_peak_kib": 5.25,
+      "warmup": 5
+    },
+    {
+      "battery_proxy": {
+        "basis": "cpu_time_ms_per_1000_ops; this is a relative proxy only, not measured device battery drain.",
+        "cpu_time_ms_per_1000_ops": 4604.52
+      },
+      "category": "latency",
+      "cpu_time_ms_per_1000_ops": 4604.52,
+      "cpu_time_ms_total": 230.226,
+      "iterations": 50,
+      "latency_ms": {
+        "count": 50,
+        "max": 5.212959,
+        "mean": 4.637088,
+        "min": 4.3415,
+        "p50": 4.606521,
+        "p95": 5.107883
+      },
+      "name": "cap_mediated_mcp_tools_call",
+      "notes": "CAPEnvelope signing, Edge PEP verification, registry discovery, handler call, and ExecutionReport creation.",
+      "path": "cap_mediated_tool",
+      "tracemalloc_peak_bytes": 83285,
+      "tracemalloc_peak_kib": 81.333,
+      "warmup": 5
+    },
+    {
+      "battery_proxy": {
+        "basis": "cpu_time_ms_per_1000_ops; this is a relative proxy only, not measured device battery drain.",
+        "cpu_time_ms_per_1000_ops": 2988.94
+      },
+      "category": "edge_resource_proxy",
+      "cpu_time_ms_per_1000_ops": 2988.94,
+      "cpu_time_ms_total": 149.447,
+      "iterations": 50,
+      "latency_ms": {
+        "count": 50,
+        "max": 3.629958,
+        "mean": 3.019265,
+        "min": 2.755875,
+        "p50": 3.009521,
+        "p95": 3.366291
+      },
+      "name": "edge_pep_verify_envelope",
+      "notes": "Edge PEP verification path used by the CAP-mediated MCP benchmark.",
+      "path": "edge_pep",
+      "tracemalloc_peak_bytes": 32534,
+      "tracemalloc_peak_kib": 31.771,
+      "warmup": 5
+    },
+    {
+      "battery_proxy": {
+        "basis": "cpu_time_ms_per_1000_ops; this is a relative proxy only, not measured device battery drain.",
+        "cpu_time_ms_per_1000_ops": 1.74
+      },
+      "category": "latency",
+      "cpu_time_ms_per_1000_ops": 1.74,
+      "cpu_time_ms_total": 0.087,
+      "iterations": 50,
+      "latency_ms": {
+        "count": 50,
+        "max": 0.001375,
+        "mean": 0.000479,
+        "min": 0.000416,
+        "p50": 0.000458,
+        "p95": 0.0005
+      },
+      "name": "direct_user_output_emit",
+      "notes": "Direct local user-output construction without Local PEP gating.",
+      "path": "direct_output",
+      "tracemalloc_peak_bytes": 2124,
+      "tracemalloc_peak_kib": 2.074,
+      "warmup": 5
+    },
+    {
+      "battery_proxy": {
+        "basis": "cpu_time_ms_per_1000_ops; this is a relative proxy only, not measured device battery drain.",
+        "cpu_time_ms_per_1000_ops": 23.04
+      },
+      "category": "local_pep_latency",
+      "cpu_time_ms_per_1000_ops": 23.04,
+      "cpu_time_ms_total": 1.152,
+      "iterations": 50,
+      "latency_ms": {
+        "count": 50,
+        "max": 0.037083,
+        "mean": 0.022009,
+        "min": 0.020792,
+        "p50": 0.02125,
+        "p95": 0.024771
+      },
+      "name": "local_pep_user_output_gate",
+      "notes": "Local PEP user-visible output gate with profile checks and audit metadata.",
+      "path": "local_pep",
+      "tracemalloc_peak_bytes": 74874,
+      "tracemalloc_peak_kib": 73.119,
+      "warmup": 5
+    },
+    {
+      "battery_proxy": {
+        "basis": "cpu_time_ms_per_1000_ops; this is a relative proxy only, not measured device battery drain.",
+        "cpu_time_ms_per_1000_ops": 2.16
+      },
+      "category": "streaming",
+      "cpu_time_ms_per_1000_ops": 2.16,
+      "cpu_time_ms_total": 0.108,
+      "iterations": 50,
+      "latency_ms": {
+        "count": 50,
+        "max": 0.003042,
+        "mean": 0.000643,
+        "min": 0.000541,
+        "p50": 0.000583,
+        "p95": 0.000758
+      },
+      "name": "direct_stream_concat",
+      "notes": "Direct scripted stream concatenation without lookahead or Local PEP checks.",
+      "path": "direct_stream",
+      "tracemalloc_peak_bytes": 1910,
+      "tracemalloc_peak_kib": 1.865,
+      "warmup": 5
+    },
+    {
+      "battery_proxy": {
+        "basis": "cpu_time_ms_per_1000_ops; this is a relative proxy only, not measured device battery drain.",
+        "cpu_time_ms_per_1000_ops": 319.48
+      },
+      "category": "streaming",
+      "cpu_time_ms_per_1000_ops": 319.48,
+      "cpu_time_ms_total": 15.974,
+      "iterations": 50,
+      "latency_ms": {
+        "count": 50,
+        "max": 0.547792,
+        "mean": 0.317518,
+        "min": 0.2915,
+        "p50": 0.302812,
+        "p95": 0.384977
+      },
+      "name": "cap_live_stream_gate",
+      "notes": "Scripted model stream through Local PEP lookahead, frame creation, and audit/provenance refs.",
+      "observed_user_visible_frame_delay_ms": {
+        "count": 0,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "path": "cap_stream",
+      "tracemalloc_peak_bytes": 38797,
+      "tracemalloc_peak_kib": 37.888,
+      "warmup": 5
+    },
+    {
+      "battery_proxy": {
+        "basis": "cpu_time_ms_per_1000_ops; this is a relative proxy only, not measured device battery drain.",
+        "cpu_time_ms_per_1000_ops": 27.68
+      },
+      "category": "mobile_resource_proxy",
+      "cpu_time_ms_per_1000_ops": 27.68,
+      "cpu_time_ms_total": 1.384,
+      "iterations": 50,
+      "latency_ms": {
+        "count": 50,
+        "max": 0.043166,
+        "mean": 0.026642,
+        "min": 0.0255,
+        "p50": 0.025917,
+        "p95": 0.029337
+      },
+      "name": "android_mobile_proxy_user_output",
+      "notes": "Android separately privileged proxy scaffold path for mediated user-visible output.",
+      "path": "mobile_android",
+      "tracemalloc_peak_bytes": 81414,
+      "tracemalloc_peak_kib": 79.506,
+      "warmup": 5
+    },
+    {
+      "battery_proxy": {
+        "basis": "cpu_time_ms_per_1000_ops; this is a relative proxy only, not measured device battery drain.",
+        "cpu_time_ms_per_1000_ops": 28.92
+      },
+      "category": "mobile_resource_proxy",
+      "cpu_time_ms_per_1000_ops": 28.92,
+      "cpu_time_ms_total": 1.446,
+      "iterations": 50,
+      "latency_ms": {
+        "count": 50,
+        "max": 0.067708,
+        "mean": 0.027738,
+        "min": 0.025625,
+        "p50": 0.026208,
+        "p95": 0.030629
+      },
+      "name": "ios_mobile_proxy_user_output",
+      "notes": "iOS separately privileged proxy scaffold path for mediated user-visible output.",
+      "path": "mobile_ios",
+      "tracemalloc_peak_bytes": 81414,
+      "tracemalloc_peak_kib": 79.506,
+      "warmup": 5
+    }
+  ],
+  "caveats": [
+    "Numbers are local microbenchmarks from this checkout and machine.",
+    "The mobile measurements are Python proxy-path measurements, not native Android/iOS device telemetry.",
+    "Battery is represented only by CPU-time proxy units; no power rail, OS battery API, or device profiler is sampled.",
+    "The direct MCP/tool path intentionally bypasses CAP checks and is not a safe execution recommendation.",
+    "Production model providers, native UI wrappers, service meshes, registries, and networked PDPs can change latency substantially."
+  ],
+  "comparisons": [
+    {
+      "direct_benchmark": "direct_mcp_tool_handler",
+      "mediated_benchmark": "cap_mediated_mcp_tools_call",
+      "name": "mcp_tools_call_cap_over_direct",
+      "p50_overhead_ms": 4.587166,
+      "p50_ratio": 238.001602,
+      "p95_overhead_ms": 5.087902
+    },
+    {
+      "direct_benchmark": "direct_user_output_emit",
+      "mediated_benchmark": "local_pep_user_output_gate",
+      "name": "user_output_local_pep_over_direct_emit",
+      "p50_overhead_ms": 0.020792,
+      "p50_ratio": 46.39738,
+      "p95_overhead_ms": 0.024271
+    },
+    {
+      "direct_benchmark": "direct_stream_concat",
+      "mediated_benchmark": "cap_live_stream_gate",
+      "name": "streaming_cap_gate_over_direct_concat",
+      "p50_overhead_ms": 0.302229,
+      "p50_ratio": 519.403087,
+      "p95_overhead_ms": 0.384219
+    }
+  ],
+  "configuration": {
+    "command": "cap-run-v1-benchmarks --iterations 50 --warmup 5",
+    "dependencies": "Python stdlib plus repository runtime modules",
+    "iterations": 50,
+    "local_only": true,
+    "warmup": 5
+  },
+  "environment": {
+    "cpu_count": 8,
+    "machine": "arm64",
+    "perf_counter": {
+      "adjustable": false,
+      "implementation": "mach_absolute_time()",
+      "monotonic": true,
+      "resolution": 4.166666666666667e-08
+    },
+    "platform": "macOS-26.3-arm64-arm-64bit",
+    "process_time": {
+      "adjustable": false,
+      "implementation": "clock_gettime(CLOCK_PROCESS_CPUTIME_ID)",
+      "monotonic": true,
+      "resolution": 1.0000000000000002e-06
+    },
+    "processor": "arm",
+    "python_implementation": "CPython",
+    "python_version": "3.12.12",
+    "release": "25.3.0",
+    "system": "Darwin"
+  },
+  "generated_at": "2026-05-25T08:17:39+00:00",
+  "release_gate_relevance": {
+    "gate": "Research-strengthening latency and mobile/edge budget evidence",
+    "result_artifact": "docs/benchmarks/cap_v1_latency_mobile_budget.json",
+    "status": "local_deterministic_microbenchmark"
+  },
+  "schema_version": "1.0",
+  "streaming_delay": {
+    "configured_lookahead": {
+      "max_buffer_chars": 500,
+      "max_buffer_ms": 250,
+      "max_buffer_tokens": 50
+    },
+    "deterministic_timer_release_delay_ms": 250.0,
+    "measurement_note": "Observed delay is measured inside the local scripted stream path. The configured default safety budget remains the smaller of 250 ms or 50 tokens unless a profile overrides it.",
+    "observed_user_visible_frame_delay_ms": {
+      "count": 0,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    }
+  }
+}
