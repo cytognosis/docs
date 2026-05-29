@@ -1,0 +1,286 @@
+id: https://schema.cytognosis.org/scholarly-kg/research-objects
+name: cytognosis_research_objects
+title: Cytognosis Scholarly KG - Research Objects Schema
+description: >-
+  LinkML schema for Research Objects (RO-Crate). Captures aggregated research
+  artifacts as packaged Research Object Crates, including papers, code,
+  datasets, models, workflows, protocols, and supporting materials. Aligned
+  with RO-Crate 1.1/1.2 specifications and community profiles.
+version: 0.4.0
+license: CC-BY-4.0
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: https://schema.org/
+  dcterms: http://purl.org/dc/terms/
+  foaf: http://xmlns.com/foaf/0.1/
+  prov: http://www.w3.org/ns/prov#
+  pav: http://purl.org/pav/
+  datacite: https://schema.datacite.org/
+  biolink: https://w3id.org/biolink/vocab/
+  DOI: https://doi.org/
+  ROR: https://ror.org/
+  cytognosis: https://schema.cytognosis.org/scholarly-kg/
+
+default_prefix: cytognosis
+default_range: string
+imports:
+  - linkml:types
+
+
+# =============================================================================
+# ENUMERATIONS
+# =============================================================================
+enums:
+
+  ResearchObjectProfile:
+    description: RO-Crate profile or community specification that the Research Object conforms to.
+    permissible_values:
+      base:
+        description: Base RO-Crate 1.1/1.2 profile with minimal required metadata.
+      workflow:
+        description: Workflow RO-Crate profile for capturing workflow definitions and metadata.
+      workflow_run:
+        description: Workflow Run RO-Crate (WRROC) profile for workflow execution records and provenance.
+      process_run:
+        description: Process Run Crate profile for general computational process execution.
+      provenance_run:
+        description: Provenance Run Crate profile with detailed W3C PROV-O tracking.
+      workflow_testing:
+        description: Workflow Testing Crate profile for test suites and test results.
+      five_safes:
+        description: Five Safes RO-Crate profile for sensitive data protection and governance.
+      arc:
+        description: Annotated Research Context (ARC) profile by DataPLANT for plant science research.
+
+
+# =============================================================================
+# CLASSES
+# =============================================================================
+classes:
+
+  # ===========================================================================
+  # MIXINS
+  # ===========================================================================
+
+  HasTimestamps:
+    mixin: true
+    slots:
+      - created_date
+      - updated_date
+
+  HasTopics:
+    mixin: true
+    slots:
+      - topics
+      - keywords
+
+  HasLicense:
+    mixin: true
+    slots:
+      - license_ref
+      - license_spdx_id
+      - license_text
+
+  HasProvenance:
+    mixin: true
+    description: W3C PROV-aligned provenance tracking.
+    class_uri: prov:Entity
+    slots:
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+
+  HasROCrateMetadata:
+    mixin: true
+    description: RO-Crate metadata for packaging in Research Object Crates.
+    slots:
+      - conforms_to
+      - sd_publisher
+      - sd_date_published
+      - credit_text
+      - cite_as
+
+
+  # ===========================================================================
+  # ABSTRACT BASE CLASSES
+  # ===========================================================================
+
+  NamedThing:
+    description: A generic groupable object with an identifier and name.
+    slots:
+      - id
+      - display_name
+      - description
+      - alternate_names
+      - xref
+
+  ScholarlyEntity:
+    is_a: NamedThing
+    description: Base class for scholarly/research entities.
+    slots:
+      - id
+      - display_name
+      - description
+      - alternate_names
+      - xref
+
+
+  # ===========================================================================
+  # RESEARCH OBJECT
+  # ===========================================================================
+
+  ResearchObject:
+    is_a: ScholarlyEntity
+    class_uri: schema:Dataset
+    mixins: [HasLicense, HasProvenance, HasROCrateMetadata]
+    description: >-
+      Research Object packaged as RO-Crate. Aggregates related research
+      artifacts (papers, code, datasets, models, workflows, protocols) with
+      metadata and provenance. Conformant to RO-Crate 1.1/1.2 and community
+      profiles (Workflow, WRROC, Process Run, ARC, etc.).
+    slots:
+      - id
+      - display_name
+      - description
+      - ro_crate_profile
+      - ro_crate_version
+      - has_part_papers
+      - has_part_code
+      - has_part_datasets
+      - has_part_models
+      - has_part_workflows
+      - has_part_protocols
+      - has_part_presentations
+      - has_part_instruments
+      - has_part_other
+      - main_entity
+      - contributors
+      - date_published
+      - date_modified
+      - license_ref
+      - license_spdx_id
+      - license_text
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+      - conforms_to
+      - sd_publisher
+      - sd_date_published
+      - credit_text
+      - cite_as
+
+
+# =============================================================================
+# SLOTS
+# =============================================================================
+slots:
+
+  # ---- Identity ------------------------------------------------------------
+  id:
+    slot_uri: schema:identifier
+    range: uriorcurie
+    identifier: true
+  display_name:
+    slot_uri: schema:name
+  description:
+    slot_uri: dcterms:description
+  alternate_names:
+    slot_uri: schema:alternateName
+    multivalued: true
+  xref:
+    multivalued: true
+    description: Cross-references to external databases (CURIEs).
+
+  # ---- Timestamps ----------------------------------------------------------
+  created_date:
+    slot_uri: dcterms:created
+    range: datetime
+  updated_date:
+    slot_uri: dcterms:modified
+    range: datetime
+  date_published:
+    slot_uri: schema:datePublished
+    range: date
+  date_modified:
+    slot_uri: schema:dateModified
+    range: date
+
+  # ---- License slots -------------------------------------------------------
+  license_ref:
+    range: string
+  license_spdx_id: {}
+  license_text: {}
+
+  # ---- Provenance ----------------------------------------------------------
+  data_source: {}
+  confidence_score:
+    range: float
+  extraction_method: {}
+  was_derived_from:
+    slot_uri: prov:wasDerivedFrom
+    range: uriorcurie
+  was_generated_by:
+    slot_uri: prov:wasGeneratedBy
+  was_attributed_to:
+    slot_uri: prov:wasAttributedTo
+
+  # ---- RO-Crate metadata ---------------------------------------------------
+  conforms_to: {}
+  sd_publisher: {}
+  sd_date_published:
+    slot_uri: schema:sdDatePublished
+    range: date
+  credit_text: {}
+  cite_as: {}
+
+  # ---- RO-Crate Profile Information ----------------------------------------
+  ro_crate_profile:
+    range: ResearchObjectProfile
+    description: RO-Crate profile(s) that this Research Object conforms to.
+  ro_crate_version:
+    description: Version of RO-Crate specification (e.g., "1.1", "1.2").
+
+  # ---- Contained Artifacts -------------------------------------------------
+  has_part_papers:
+    multivalued: true
+    description: Bibliographic resources (papers, articles) included in this RO.
+  has_part_code:
+    multivalued: true
+    description: Code repositories or software included in this RO.
+  has_part_datasets:
+    multivalued: true
+    description: Datasets included in this RO.
+  has_part_models:
+    multivalued: true
+    description: Machine learning models included in this RO.
+  has_part_workflows:
+    multivalued: true
+    description: Computational workflows included in this RO.
+  has_part_protocols:
+    multivalued: true
+    description: Research protocols included in this RO.
+  has_part_presentations:
+    multivalued: true
+    description: Presentations, slides, or talks included in this RO.
+  has_part_instruments:
+    multivalued: true
+    description: Scientific instruments or equipment data included in this RO.
+  has_part_other:
+    multivalued: true
+    description: Other supplementary materials or artifacts included in this RO.
+
+  # ---- Primary Entity -------------------------------------------------------
+  main_entity:
+    description: Main or primary entity of the Research Object (typically a paper or dataset).
+
+  # ---- Contributors -------------------------------------------------------
+  contributors:
+    multivalued: true
+    description: Authors, creators, or contributors to this Research Object.

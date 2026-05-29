@@ -1,0 +1,369 @@
+id: https://schema.cytognosis.org/scholarly-kg/relationships
+name: cytognosis_relationships
+title: Cytognosis Scholarly KG - Artifact Relationships Schema
+description: >-
+  LinkML schema for relationships and associations between scholarly research
+  artifacts. Captures semantic connections between papers and code, papers and
+  models, papers and datasets, with relationship types aligned to CiTO, DCAT,
+  and domain-specific vocabularies. Includes evidence and provenance tracking.
+version: 0.4.0
+license: CC-BY-4.0
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: https://schema.org/
+  dcterms: http://purl.org/dc/terms/
+  cito: http://purl.org/spar/cito/
+  dcat: http://www.w3.org/ns/dcat#
+  foaf: http://xmlns.com/foaf/0.1/
+  prov: http://www.w3.org/ns/prov#
+  pav: http://purl.org/pav/
+  datacite: https://schema.datacite.org/
+  biolink: https://w3id.org/biolink/vocab/
+  DOI: https://doi.org/
+  ROR: https://ror.org/
+  cytognosis: https://schema.cytognosis.org/scholarly-kg/
+
+default_prefix: cytognosis
+default_range: string
+imports:
+  - linkml:types
+
+
+# =============================================================================
+# ENUMERATIONS
+# =============================================================================
+enums:
+
+  PaperCodeRelationType:
+    description: Type of relationship between a paper and code repository.
+    permissible_values:
+      implements:
+        description: Paper describes algorithm or method that the code implements.
+      supplements:
+        description: Code is supplementary material to the paper.
+      depends_on:
+        description: Paper depends on existing code library or framework.
+      extends:
+        description: Paper extends or modifies existing code.
+      documents:
+        description: Paper serves as reference publication or documentation for code.
+      reproduces:
+        description: Code is reproduction or reimplementation of methods in paper.
+
+  PaperModelRelationType:
+    description: Type of relationship between a paper and machine learning model.
+    permissible_values:
+      proposes:
+        description: Paper proposes or introduces model as novel contribution.
+      uses:
+        description: Paper uses existing model without modification.
+      fine_tunes:
+        description: Paper fine-tunes pre-trained model for new task or domain.
+      evaluates:
+        description: Paper evaluates or benchmarks model performance.
+      distills:
+        description: Paper applies knowledge distillation to model.
+      extends_architecture:
+        description: Paper proposes architectural modifications to model.
+
+  PaperDatasetRelationType:
+    description: Type of relationship between a paper and dataset.
+    permissible_values:
+      creates:
+        description: Paper introduces or creates new dataset.
+      uses:
+        description: Paper uses existing dataset (general usage).
+      uses_for_training:
+        description: Paper uses dataset specifically for training machine learning models.
+      uses_for_testing:
+        description: Paper uses dataset for testing or evaluation purposes.
+      uses_for_validation:
+        description: Paper uses dataset for validation or hyperparameter tuning.
+      uses_as_benchmark:
+        description: Paper uses dataset as standard benchmark for comparison.
+      augments:
+        description: Paper augments or extends existing dataset.
+      curates:
+        description: Paper curates, cleans, or re-annotates existing dataset.
+
+
+# =============================================================================
+# CLASSES
+# =============================================================================
+classes:
+
+  # ===========================================================================
+  # MIXINS
+  # ===========================================================================
+
+  HasTimestamps:
+    mixin: true
+    slots:
+      - created_date
+      - updated_date
+
+  HasProvenance:
+    mixin: true
+    description: W3C PROV-aligned provenance tracking.
+    class_uri: prov:Entity
+    slots:
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+
+
+  # ===========================================================================
+  # ABSTRACT BASE CLASSES
+  # ===========================================================================
+
+  NamedThing:
+    description: A generic groupable object with an identifier and name.
+    slots:
+      - id
+      - display_name
+      - description
+      - alternate_names
+      - xref
+
+  ScholarlyEntity:
+    is_a: NamedThing
+    description: Base class for scholarly/research entities.
+    slots:
+      - id
+      - display_name
+      - description
+      - alternate_names
+      - xref
+
+
+  # ===========================================================================
+  # ARTIFACT RELATIONSHIPS (ABSTRACT BASE)
+  # ===========================================================================
+
+  ArtifactRelationship:
+    abstract: true
+    is_a: NamedThing
+    mixins: [HasTimestamps, HasProvenance]
+    description: >-
+      Abstract base class for relationships between scholarly research
+      artifacts. Captures semantic connection, evidence, and provenance.
+    slots:
+      - id
+      - display_name
+      - description
+      - relationship_source
+      - relationship_target
+      - relationship_predicate
+      - evidence_text
+      - evidence_url
+      - is_primary
+      - created_date
+      - updated_date
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+
+
+  # ===========================================================================
+  # PAPER-CODE RELATIONSHIP
+  # ===========================================================================
+
+  PaperCodeRelationship:
+    is_a: ArtifactRelationship
+    description: >-
+      Relationship between a paper and a code repository. Captures type of
+      relationship (implements, supplements, depends on, reproduces, etc.)
+      with evidence and provenance.
+    slots:
+      - id
+      - display_name
+      - description
+      - paper_ref
+      - code_ref
+      - paper_code_relation_type
+      - relationship_source
+      - relationship_target
+      - relationship_predicate
+      - evidence_text
+      - evidence_url
+      - is_primary
+      - created_date
+      - updated_date
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+
+
+  # ===========================================================================
+  # PAPER-MODEL RELATIONSHIP
+  # ===========================================================================
+
+  PaperModelRelationship:
+    is_a: ArtifactRelationship
+    description: >-
+      Relationship between a paper and a machine learning model. Captures
+      type of relationship (proposes, uses, fine-tunes, evaluates, etc.)
+      with evidence and provenance.
+    slots:
+      - id
+      - display_name
+      - description
+      - paper_ref
+      - model_ref
+      - paper_model_relation_type
+      - relationship_source
+      - relationship_target
+      - relationship_predicate
+      - evidence_text
+      - evidence_url
+      - is_primary
+      - created_date
+      - updated_date
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+
+
+  # ===========================================================================
+  # PAPER-DATASET RELATIONSHIP
+  # ===========================================================================
+
+  PaperDatasetRelationship:
+    is_a: ArtifactRelationship
+    description: >-
+      Relationship between a paper and a dataset. Captures type of relationship
+      (creates, uses, uses for training, uses as benchmark, curates, etc.)
+      and dataset split/version used, with evidence and provenance.
+    slots:
+      - id
+      - display_name
+      - description
+      - paper_ref
+      - dataset_relationship_ref
+      - paper_dataset_relation_type
+      - dataset_split_used
+      - relationship_source
+      - relationship_target
+      - relationship_predicate
+      - evidence_text
+      - evidence_url
+      - is_primary
+      - created_date
+      - updated_date
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+
+
+# =============================================================================
+# SLOTS
+# =============================================================================
+slots:
+
+  # ---- Identity ------------------------------------------------------------
+  id:
+    slot_uri: schema:identifier
+    range: uriorcurie
+    identifier: true
+  display_name:
+    slot_uri: schema:name
+  description:
+    slot_uri: dcterms:description
+  alternate_names:
+    slot_uri: schema:alternateName
+    multivalued: true
+  xref:
+    multivalued: true
+    description: Cross-references to external databases (CURIEs).
+
+  # ---- Timestamps ----------------------------------------------------------
+  created_date:
+    slot_uri: dcterms:created
+    range: datetime
+  updated_date:
+    slot_uri: dcterms:modified
+    range: datetime
+
+  # ---- Provenance ----------------------------------------------------------
+  data_source: {}
+  confidence_score:
+    range: float
+  extraction_method: {}
+  was_derived_from:
+    slot_uri: prov:wasDerivedFrom
+    range: uriorcurie
+  was_generated_by:
+    slot_uri: prov:wasGeneratedBy
+  was_attributed_to:
+    slot_uri: prov:wasAttributedTo
+
+  # ---- Relationship Properties -----------------------------------------------
+  relationship_source:
+    range: uriorcurie
+    description: Source artifact in the relationship.
+  relationship_target:
+    range: uriorcurie
+    description: Target artifact in the relationship.
+  relationship_predicate:
+    slot_uri: cito:hasCitationRelationship
+    description: RDF predicate or semantic relationship type (CiTO, DCAT, custom).
+  evidence_text:
+    description: Text snippet or quotation from source that supports the relationship.
+  evidence_url:
+    range: uri
+    description: URL to evidence or source document supporting the relationship.
+  is_primary:
+    range: boolean
+    description: Whether this is the primary or most significant relationship.
+
+  # ---- Paper-Code Relationship Slots ----------------------------------------
+  paper_ref:
+    range: uriorcurie
+    description: Reference to the paper (DOI, URL, or identifier).
+    required: true
+  code_ref:
+    range: uriorcurie
+    description: Reference to the code repository (GitHub URL, DOI, or identifier).
+    required: true
+  paper_code_relation_type:
+    range: PaperCodeRelationType
+    description: Type of relationship between paper and code.
+    required: true
+
+  # ---- Paper-Model Relationship Slots ----------------------------------------
+  model_ref:
+    range: uriorcurie
+    description: Reference to the model (HuggingFace URL, DOI, or identifier).
+    required: true
+  paper_model_relation_type:
+    range: PaperModelRelationType
+    description: Type of relationship between paper and model.
+    required: true
+
+  # ---- Paper-Dataset Relationship Slots -------------------------------------
+  dataset_relationship_ref:
+    range: uriorcurie
+    description: Reference to the dataset (DOI, URL, or identifier).
+    required: true
+  paper_dataset_relation_type:
+    range: PaperDatasetRelationType
+    description: Type of relationship between paper and dataset.
+    required: true
+  dataset_split_used:
+    description: Specific split or version of dataset used (e.g., "train", "test", "full").

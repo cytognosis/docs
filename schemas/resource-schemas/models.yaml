@@ -1,0 +1,551 @@
+id: https://schema.cytognosis.org/scholarly-kg/models
+name: cytognosis_models
+title: Cytognosis Scholarly KG - ML Models Schema
+description: >-
+  LinkML schema for machine learning models, including abstract MLModel,
+  PublishedModel (registry-hosted), and LocalModel (internal/private).
+  Includes model cards, benchmarks, evaluation metrics, and performance
+  disaggregation.
+version: 0.4.0
+license: CC-BY-4.0
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: https://schema.org/
+  dcterms: http://purl.org/dc/terms/
+  foaf: http://xmlns.com/foaf/0.1/
+  bibo: http://purl.org/ontology/bibo/
+  prism: http://prismstandard.org/namespaces/basic/2.0/
+  cito: http://purl.org/spar/cito/
+  prov: http://www.w3.org/ns/prov#
+  pav: http://purl.org/pav/
+  datacite: https://schema.datacite.org/
+  biolink: https://w3id.org/biolink/vocab/
+  croissant: http://mlcommons.org/croissant/
+  openalex: https://openalex.org/
+  DOI: https://doi.org/
+  ROR: https://ror.org/
+  cytognosis: https://schema.cytognosis.org/scholarly-kg/
+
+default_prefix: cytognosis
+default_range: string
+imports:
+  - linkml:types
+
+
+# =============================================================================
+# ENUMERATIONS
+# =============================================================================
+enums:
+
+  MLTask:
+    description: HuggingFace pipeline_tag taxonomy for model tasks.
+    permissible_values:
+      text-generation: {}
+      text-classification: {}
+      token-classification: {}
+      question-answering: {}
+      summarization: {}
+      translation: {}
+      fill-mask: {}
+      text-to-image: {}
+      image-classification: {}
+      object-detection: {}
+      image-segmentation: {}
+      audio-classification: {}
+      automatic-speech-recognition: {}
+      text-to-speech: {}
+      tabular-classification: {}
+      tabular-regression: {}
+      reinforcement-learning: {}
+      feature-extraction: {}
+      sentence-similarity: {}
+      zero-shot-classification: {}
+      conversational: {}
+      other: {}
+
+  MLFramework:
+    description: ML framework or library used by the model.
+    permissible_values:
+      pytorch: {}
+      tensorflow: {}
+      jax: {}
+      transformers: {}
+      diffusers: {}
+      onnx: {}
+      scikit-learn: {}
+      spacy: {}
+      keras: {}
+      xgboost: {}
+      other: {}
+
+  ModelPrecision:
+    description: Numerical precision or quantization level of model weights.
+    permissible_values:
+      float32: {}
+      float16: {}
+      bfloat16: {}
+      int8: {}
+      int4: {}
+      mixed: {}
+
+
+# =============================================================================
+# CLASSES
+# =============================================================================
+classes:
+
+  # ===========================================================================
+  # MIXINS
+  # ===========================================================================
+
+  HasTimestamps:
+    mixin: true
+    slots:
+      - created_date
+      - updated_date
+
+  HasTopics:
+    mixin: true
+    slots:
+      - topics
+      - keywords
+
+  HasLicense:
+    mixin: true
+    slots:
+      - license_ref
+      - license_spdx_id
+      - license_text
+
+  HasProvenance:
+    mixin: true
+    description: W3C PROV-aligned provenance tracking.
+    class_uri: prov:Entity
+    slots:
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+
+  HasROCrateMetadata:
+    mixin: true
+    description: RO-Crate metadata for packaging in Research Object Crates.
+    slots:
+      - conforms_to
+      - sd_publisher
+      - sd_date_published
+      - credit_text
+      - cite_as
+
+
+  # ===========================================================================
+  # ABSTRACT BASE CLASSES
+  # ===========================================================================
+
+  NamedThing:
+    description: A generic groupable object with an identifier and name.
+    slots:
+      - id
+      - display_name
+      - description
+      - alternate_names
+      - xref
+
+  ScholarlyEntity:
+    is_a: NamedThing
+    description: Base class for scholarly/research entities.
+    slots:
+      - id
+      - display_name
+      - description
+      - alternate_names
+      - xref
+
+
+  # ===========================================================================
+  # ASSOCIATION CLASSES
+  # ===========================================================================
+
+  BenchmarkResult:
+    description: Performance of a model on a named benchmark or metric.
+    slots:
+      - benchmark_name
+      - metric_name
+      - metric_value
+      - dataset_ref
+      - split
+      - verified
+
+  DisaggregatedResult:
+    description: Model performance broken down by demographic or contextual group.
+    slots:
+      - group_name
+      - group_value
+      - metric_name
+      - metric_value
+
+
+  # ===========================================================================
+  # ML MODEL CLASSES
+  # ===========================================================================
+
+  MLModel:
+    abstract: true
+    is_a: ScholarlyEntity
+    class_uri: schema:SoftwareApplication
+    mixins: [HasTopics, HasLicense, HasProvenance, HasROCrateMetadata]
+    description: >-
+      Abstract base for ML models. Aligned with HuggingFace Model Cards
+      and Croissant ML. Captures model architecture, training data,
+      evaluation metrics, and ethical considerations.
+    slots:
+      - id
+      - display_name
+      - description
+      - model_url
+      - huggingface_url
+      - model_architecture
+      - model_family
+      - ml_task
+      - ml_framework
+      - library_name
+      - base_model
+      - fine_tuned_from
+      - training_datasets
+      - evaluation_datasets
+      - parameter_count
+      - model_size_bytes
+      - precision
+      - benchmark_results
+      - evaluation_metrics
+      - hardware_used
+      - training_time_hours
+      - training_cost_usd
+      - carbon_emissions_kg
+      - inference_hardware
+      - intended_uses
+      - out_of_scope_uses
+      - known_limitations
+      - bias_risks
+      - ethical_considerations
+      - disaggregated_results
+      - associated_papers
+      - associated_code_repos
+      - contributors
+      - model_version
+      - date_published
+      - topics
+      - keywords
+      - license_ref
+      - license_spdx_id
+      - license_text
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+      - conforms_to
+      - sd_publisher
+      - sd_date_published
+      - credit_text
+      - cite_as
+
+  PublishedModel:
+    is_a: MLModel
+    description: >-
+      Model published on a registry like HuggingFace Hub, ONNX Zoo, or
+      TensorFlow Hub. Includes registry metadata, download statistics,
+      and model card information.
+    slots:
+      - id
+      - display_name
+      - description
+      - model_url
+      - huggingface_url
+      - model_architecture
+      - model_family
+      - ml_task
+      - ml_framework
+      - library_name
+      - base_model
+      - fine_tuned_from
+      - training_datasets
+      - evaluation_datasets
+      - parameter_count
+      - model_size_bytes
+      - precision
+      - benchmark_results
+      - evaluation_metrics
+      - hardware_used
+      - training_time_hours
+      - training_cost_usd
+      - carbon_emissions_kg
+      - inference_hardware
+      - intended_uses
+      - out_of_scope_uses
+      - known_limitations
+      - bias_risks
+      - ethical_considerations
+      - disaggregated_results
+      - associated_papers
+      - associated_code_repos
+      - contributors
+      - model_version
+      - date_published
+      - registry_name
+      - registry_id
+      - download_count
+      - likes_count
+      - inference_api_enabled
+      - pipeline_tag
+      - model_tags
+      - spaces_using_model
+      - model_card_text
+      - topics
+      - keywords
+      - license_ref
+      - license_spdx_id
+      - license_text
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+      - conforms_to
+      - sd_publisher
+      - sd_date_published
+      - credit_text
+      - cite_as
+
+  LocalModel:
+    is_a: MLModel
+    description: >-
+      Internal or private model not published on a public registry.
+      Captures internal storage location and deployment status.
+    slots:
+      - id
+      - display_name
+      - description
+      - model_url
+      - model_architecture
+      - model_family
+      - ml_task
+      - ml_framework
+      - library_name
+      - base_model
+      - fine_tuned_from
+      - training_datasets
+      - evaluation_datasets
+      - parameter_count
+      - model_size_bytes
+      - precision
+      - benchmark_results
+      - evaluation_metrics
+      - hardware_used
+      - training_time_hours
+      - training_cost_usd
+      - carbon_emissions_kg
+      - inference_hardware
+      - intended_uses
+      - out_of_scope_uses
+      - known_limitations
+      - bias_risks
+      - ethical_considerations
+      - disaggregated_results
+      - associated_papers
+      - associated_code_repos
+      - contributors
+      - model_version
+      - date_published
+      - internal_storage_url
+      - deployment_status
+      - topics
+      - keywords
+      - license_ref
+      - license_spdx_id
+      - license_text
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+      - conforms_to
+      - sd_publisher
+      - sd_date_published
+      - credit_text
+      - cite_as
+
+
+# =============================================================================
+# SLOTS
+# =============================================================================
+slots:
+
+  # ---- Identity ------------------------------------------------------------
+  id:
+    slot_uri: schema:identifier
+    range: uriorcurie
+    identifier: true
+  display_name:
+    slot_uri: schema:name
+  description:
+    slot_uri: dcterms:description
+  alternate_names:
+    slot_uri: schema:alternateName
+    multivalued: true
+  xref:
+    multivalued: true
+    description: Cross-references to external databases (CURIEs).
+
+  # ---- Timestamps ----------------------------------------------------------
+  created_date:
+    slot_uri: dcterms:created
+    range: datetime
+  updated_date:
+    slot_uri: dcterms:modified
+    range: datetime
+  date_published:
+    slot_uri: schema:datePublished
+    range: date
+
+  # ---- License slots -------------------------------------------------------
+  license_ref:
+    range: string
+  license_spdx_id: {}
+  license_text: {}
+
+  # ---- Topics and keywords -------------------------------------------------
+  topics:
+    multivalued: true
+  keywords:
+    multivalued: true
+    slot_uri: schema:keywords
+
+  # ---- Provenance ----------------------------------------------------------
+  data_source: {}
+  confidence_score:
+    range: float
+  extraction_method: {}
+  was_derived_from:
+    slot_uri: prov:wasDerivedFrom
+    range: uriorcurie
+  was_generated_by:
+    slot_uri: prov:wasGeneratedBy
+  was_attributed_to:
+    slot_uri: prov:wasAttributedTo
+
+  # ---- RO-Crate metadata ---------------------------------------------------
+  conforms_to: {}
+  sd_publisher: {}
+  sd_date_published:
+    slot_uri: schema:sdDatePublished
+    range: date
+  credit_text: {}
+  cite_as: {}
+
+  # ---- Model core slots ----------------------------------------------------
+  model_url:
+    range: uri
+  huggingface_url:
+    range: uri
+  model_architecture: {}
+  model_family: {}
+  library_name: {}
+  base_model:
+    range: string
+  fine_tuned_from:
+    range: string
+  model_version: {}
+  model_size_bytes:
+    range: integer
+  parameter_count:
+    range: integer
+  precision:
+    range: ModelPrecision
+
+  # ---- ML Task and Framework -----------------------------------------------
+  ml_task:
+    range: MLTask
+  ml_framework:
+    range: MLFramework
+
+  # ---- Training and Evaluation slots ---------------------------------------
+  training_datasets:
+    multivalued: true
+  evaluation_datasets:
+    multivalued: true
+  benchmark_results:
+    multivalued: true
+    inlined_as_list: true
+    range: BenchmarkResult
+  evaluation_metrics:
+    multivalued: true
+  hardware_used: {}
+  training_time_hours:
+    range: float
+  training_cost_usd:
+    range: float
+  carbon_emissions_kg:
+    range: float
+  inference_hardware: {}
+
+  # ---- Model Capabilities and Limitations ----------------------------------
+  intended_uses: {}
+  out_of_scope_uses: {}
+  known_limitations: {}
+  bias_risks: {}
+  ethical_considerations: {}
+  disaggregated_results:
+    multivalued: true
+    inlined_as_list: true
+    range: DisaggregatedResult
+
+  # ---- Related Artifacts --------------------------------------------------
+  associated_papers:
+    multivalued: true
+  associated_code_repos:
+    multivalued: true
+  contributors:
+    multivalued: true
+
+  # ---- Published Model Specific --------------------------------------------
+  registry_name: {}
+  registry_id: {}
+  download_count:
+    range: integer
+  likes_count:
+    range: integer
+  inference_api_enabled:
+    range: boolean
+  pipeline_tag:
+    range: MLTask
+  model_tags:
+    multivalued: true
+  spaces_using_model:
+    multivalued: true
+  model_card_text: {}
+
+  # ---- Local Model Specific ------------------------------------------------
+  internal_storage_url:
+    range: uri
+  deployment_status: {}
+
+  # ---- BenchmarkResult Slots -----------------------------------------------
+  benchmark_name: {}
+  metric_name: {}
+  metric_value: {}
+  dataset_ref:
+    range: string
+  split: {}
+  verified:
+    range: boolean
+
+  # ---- DisaggregatedResult Slots -------------------------------------------
+  group_name: {}
+  group_value: {}

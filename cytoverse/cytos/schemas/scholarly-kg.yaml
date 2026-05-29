@@ -1,0 +1,2388 @@
+# =============================================================================
+# Cytognosis Foundation — Scholarly Knowledge Graph Schema v0.3.0
+# =============================================================================
+#
+# Design goals:
+#   1. Full BibTeX/BibLaTeX entry types with required/optional fields
+#   2. Full OpenAlex entity coverage (Work–Award, Geo, Authorship, Location)
+#   3. SemOpenAlex RDF alignment (soa:, cito:, prism:, bido:, skos:)
+#   4. Biolink Model alignment for all biomedical entities
+#   5. NCATS Translator compatibility (TRAPI, qualifiers, infores, KP-readiness)
+#   6. UMLS as default medical identifier hub (CUI, TUI, Semantic Groups)
+#   7. PubMedKG compatibility (articles, patents, trials, bio-associations)
+#   8. W3C Web Annotation personalization layer
+#   9. First-class Dataset entity (DCAT 3, DATS, Croissant, DataCite, RO-Crate)
+#  10. First-class Code entity (CodeMeta, CFF, Software Heritage)
+#  11. First-class MLModel entity (HuggingFace Model Cards, Croissant ML)
+#  12. License as entity (SPDX, ODRL, Creative Commons, OpenRAIL)
+#  13. Online content types (WebPage, BlogPost, ForumPost, Notebook)
+#  14. Paper subtypes (AIMLPaper, BiomedicalPaper) with expected artifact links
+#  15. Published/deployed model registry entries (HuggingFace Hub)
+#
+# Standards mapped:
+#   schema:    — Schema.org               dcterms:  — Dublin Core Terms
+#   bibo:      — Bibliographic Ontology    foaf:     — FOAF
+#   fabio:     — FRBR-aligned Bib Ontology oa:       — W3C Web Annotation
+#   biolink:   — Biolink Model             dcat:     — DCAT 3
+#   codemeta:  — CodeMeta                  spdx:     — SPDX License
+#   prov:      — W3C PROV Ontology         odrl:     — ODRL 2.2
+#   dats:      — Data Tag Suite            croissant: — Croissant (MLCommons)
+#   swh:       — Software Heritage         datacite: — DataCite
+#   soa:       — SemOpenAlex Ontology      cito:     — Citation Typing Ontology
+#   prism:     — PRISM (publishing)        bido:     — Bibliometric Data Ontology
+#   skos:      — SKOS (concepts)           umls:     — UMLS Metathesaurus
+#   infores:   — Biolink InfoRes           NCIT:     — NCI Thesaurus
+#
+# Version: 0.3.0
+# License: CC-BY-4.0
+# =============================================================================
+
+id: https://schema.cytognosis.org/scholarly-kg
+name: cytognosis_scholarly_kg
+title: Cytognosis Scholarly Knowledge Graph Schema
+description: >-
+  Comprehensive LinkML schema unifying bibliographic metadata (BibTeX),
+  scholarly entities (OpenAlex/SemOpenAlex), biomedical knowledge
+  (Biolink/PubMedKG/UMLS), NCATS Translator compatibility, research
+  artifacts (code, data, models), licenses, and W3C Web Annotation.
+version: 0.3.0
+license: https://creativecommons.org/licenses/by/4.0/
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  dcterms: http://purl.org/dc/terms/
+  bibo: http://purl.org/ontology/bibo/
+  foaf: http://xmlns.com/foaf/0.1/
+  fabio: http://purl.org/spar/fabio/
+  oa: http://www.w3.org/ns/oa#
+  biolink: https://w3id.org/biolink/vocab/
+  dcat: http://www.w3.org/ns/dcat#
+  dats: https://datatagsuite.github.io/schema/
+  codemeta: https://codemeta.github.io/terms/
+  spdx: http://spdx.org/rdf/terms#
+  odrl: http://www.w3.org/ns/odrl/2/
+  prov: http://www.w3.org/ns/prov#
+  swh: https://www.softwareheritage.org/schema/
+  datacite: https://schema.datacite.org/
+  croissant: http://mlcommons.org/croissant/
+  # SemOpenAlex + SPAR ontologies
+  soa: https://semopenalex.org/ontology/
+  cito: http://purl.org/spar/cito/
+  prism: http://prismstandard.org/namespaces/basic/2.0/
+  bido: http://purl.org/spar/bido/
+  skos: http://www.w3.org/2004/02/skos/core#
+  org: http://www.w3.org/ns/org#
+  # UMLS + NCI
+  umls: https://uts.nlm.nih.gov/uts/umls/concept/
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+  # NCATS Translator
+  infores: https://w3id.org/biolink/vocab/infores/
+  # Entity namespaces
+  openalex: https://openalex.org/
+  semopenalex: https://semopenalex.org/
+  wikidata: http://www.wikidata.org/entity/
+  ORCID: https://orcid.org/
+  ROR: https://ror.org/
+  DOI: https://doi.org/
+  PMID: https://pubmed.ncbi.nlm.nih.gov/
+  NCBIGene: https://www.ncbi.nlm.nih.gov/gene/
+  NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
+  MONDO: http://purl.obolibrary.org/obo/MONDO_
+  HP: http://purl.obolibrary.org/obo/HP_
+  CHEBI: http://purl.obolibrary.org/obo/CHEBI_
+  UBERON: http://purl.obolibrary.org/obo/UBERON_
+  GO: http://purl.obolibrary.org/obo/GO_
+  CL: http://purl.obolibrary.org/obo/CL_
+  DRUGBANK: https://go.drugbank.com/drugs/
+  CHEMBL_COMPOUND: https://www.ebi.ac.uk/chembl/compound_report_card/
+  UniProtKB: https://www.uniprot.org/uniprot/
+  REACTOME: https://reactome.org/content/detail/
+  MESH: http://id.nlm.nih.gov/mesh/
+  cytognosis: https://schema.cytognosis.org/scholarly-kg/
+
+default_prefix: cytognosis
+default_range: string
+imports:
+  - linkml:types
+
+
+# =============================================================================
+# ENUMERATIONS
+# =============================================================================
+enums:
+
+  BibtexEntryType:
+    description: All standard BibTeX and BibLaTeX entry types.
+    permissible_values:
+      article: { meaning: fabio:JournalArticle }
+      book: { meaning: fabio:Book }
+      booklet: { meaning: fabio:Booklet }
+      inbook: { meaning: fabio:BookChapter }
+      incollection: { meaning: fabio:BookChapter }
+      inproceedings: { meaning: fabio:ConferencePaper }
+      conference: { meaning: fabio:ConferencePaper }
+      manual: { meaning: fabio:Manual }
+      mastersthesis: { meaning: fabio:MastersThesis }
+      phdthesis: { meaning: fabio:DoctoralThesis }
+      proceedings: { meaning: fabio:ConferenceProceedings }
+      techreport: { meaning: fabio:TechnicalReport }
+      unpublished: { meaning: fabio:Preprint }
+      misc: { meaning: fabio:Expression }
+      online: { meaning: fabio:WebContent }
+      patent: { meaning: fabio:Patent }
+      dataset: { meaning: schema:Dataset }
+      software: { meaning: schema:SoftwareSourceCode }
+      report: { meaning: fabio:Report }
+      standard: { meaning: fabio:Specification }
+      review: { meaning: fabio:ReviewArticle }
+      preprint: { meaning: fabio:Preprint }
+
+  OpenAlexWorkType:
+    permissible_values:
+      journal-article: {}
+      book-chapter: {}
+      dataset: {}
+      preprint: {}
+      dissertation: {}
+      book: {}
+      review: {}
+      paratext: {}
+      letter: {}
+      editorial: {}
+      erratum: {}
+      standard: {}
+      grant: {}
+      report: {}
+      peer-review: {}
+      other: {}
+
+  SourceType:
+    permissible_values:
+      journal: { meaning: fabio:Journal }
+      repository: { meaning: fabio:Repository }
+      conference: { meaning: fabio:ConferenceProceedings }
+      ebook_platform: {}
+      book_series: {}
+      metadata: {}
+      other: {}
+
+  InstitutionType:
+    permissible_values:
+      education: { meaning: schema:EducationalOrganization }
+      healthcare: { meaning: schema:Hospital }
+      company: { meaning: schema:Corporation }
+      archive: {}
+      nonprofit: { meaning: schema:NGO }
+      government: { meaning: schema:GovernmentOrganization }
+      facility: {}
+      other: {}
+
+  OpenAccessStatus:
+    permissible_values:
+      gold: {}
+      green: {}
+      bronze: {}
+      hybrid: {}
+      closed: {}
+
+  AuthorPosition:
+    permissible_values:
+      first: {}
+      middle: {}
+      last: {}
+
+  WorkVersion:
+    permissible_values:
+      submittedVersion: {}
+      acceptedVersion: {}
+      publishedVersion: {}
+
+  AnnotationMotivation:
+    description: W3C Web Annotation motivation vocabulary.
+    permissible_values:
+      bookmarking: { meaning: oa:bookmarking }
+      classifying: { meaning: oa:classifying }
+      commenting: { meaning: oa:commenting }
+      describing: { meaning: oa:describing }
+      editing: { meaning: oa:editing }
+      highlighting: { meaning: oa:highlighting }
+      identifying: { meaning: oa:identifying }
+      linking: { meaning: oa:linking }
+      moderating: { meaning: oa:moderating }
+      questioning: { meaning: oa:questioning }
+      replying: { meaning: oa:replying }
+      tagging: { meaning: oa:tagging }
+      assessing: { description: Cytognosis — quality/relevance assessment. }
+
+  SelectorType:
+    permissible_values:
+      FragmentSelector: { meaning: oa:FragmentSelector }
+      TextQuoteSelector: { meaning: oa:TextQuoteSelector }
+      TextPositionSelector: { meaning: oa:TextPositionSelector }
+      XPathSelector: { meaning: oa:XPathSelector }
+      CssSelector: { meaning: oa:CssSelector }
+      DataPositionSelector: { meaning: oa:DataPositionSelector }
+      SvgSelector: { meaning: oa:SvgSelector }
+      RangeSelector: { meaning: oa:RangeSelector }
+
+  AnnotationBodyPurpose:
+    permissible_values:
+      tagging: { meaning: oa:tagging }
+      commenting: { meaning: oa:commenting }
+      describing: { meaning: oa:describing }
+      classifying: { meaning: oa:classifying }
+      linking: { meaning: oa:linking }
+      editing: { meaning: oa:editing }
+
+  # ---- Biolink-aligned bio-entity types ------------------------------------
+  BioEntityType:
+    description: Biolink Model biological entity categories.
+    permissible_values:
+      gene: { meaning: biolink:Gene }
+      protein: { meaning: biolink:Protein }
+      disease: { meaning: biolink:Disease }
+      phenotypic_feature: { meaning: biolink:PhenotypicFeature }
+      drug: { meaning: biolink:Drug }
+      small_molecule: { meaning: biolink:SmallMolecule }
+      chemical_mixture: { meaning: biolink:ChemicalMixture }
+      molecular_activity: { meaning: biolink:MolecularActivity }
+      biological_process: { meaning: biolink:BiologicalProcess }
+      cellular_component: { meaning: biolink:CellularComponent }
+      pathway: { meaning: biolink:Pathway }
+      anatomical_entity: { meaning: biolink:AnatomicalEntity }
+      cell: { meaning: biolink:Cell }
+      cell_line: { meaning: biolink:CellLine }
+      organism_taxon: { meaning: biolink:OrganismTaxon }
+      sequence_variant: { meaning: biolink:SequenceVariant }
+      nucleic_acid_entity: { meaning: biolink:NucleicAcidEntity }
+      food: { meaning: biolink:Food }
+      exposure: { meaning: biolink:ChemicalExposure }
+
+  BioAssociationType:
+    description: Biolink-aligned association predicates.
+    permissible_values:
+      gene_associated_with_condition: { meaning: biolink:gene_associated_with_condition }
+      treats: { meaning: biolink:treats }
+      affects: { meaning: biolink:affects }
+      interacts_with: { meaning: biolink:interacts_with }
+      target_for: { meaning: biolink:target_for }
+      has_phenotype: { meaning: biolink:has_phenotype }
+      located_in: { meaning: biolink:located_in }
+      causes: { meaning: biolink:causes }
+      contributes_to: { meaning: biolink:contributes_to }
+      expressed_in: { meaning: biolink:expressed_in }
+      colocalizes_with: { meaning: biolink:colocalizes_with }
+      regulates: { meaning: biolink:regulates }
+      positively_regulates: { meaning: biolink:positively_regulates }
+      negatively_regulates: { meaning: biolink:negatively_regulates }
+      is_sequence_variant_of: { meaning: biolink:is_sequence_variant_of }
+      has_metabolite: { meaning: biolink:has_metabolite }
+
+  TrialStatus:
+    permissible_values:
+      not_yet_recruiting: {}
+      recruiting: {}
+      enrolling_by_invitation: {}
+      active_not_recruiting: {}
+      completed: {}
+      suspended: {}
+      terminated: {}
+      withdrawn: {}
+      unknown: {}
+
+  TrialPhase:
+    permissible_values:
+      early_phase_1: {}
+      phase_1: {}
+      phase_1_2: {}
+      phase_2: {}
+      phase_2_3: {}
+      phase_3: {}
+      phase_4: {}
+      not_applicable: {}
+
+  TopicHierarchyLevel:
+    permissible_values:
+      domain: {}
+      field: {}
+      subfield: {}
+      topic: {}
+
+  AwardStatus:
+    permissible_values:
+      active: {}
+      completed: {}
+      pending: {}
+      terminated: {}
+
+  # ---- License enums -------------------------------------------------------
+  LicenseFamily:
+    description: High-level license classification.
+    permissible_values:
+      permissive: { description: MIT, Apache-2.0, BSD, ISC, Unlicense }
+      weak_copyleft: { description: MPL-2.0, LGPL }
+      strong_copyleft: { description: GPL, AGPL }
+      creative_commons: { description: CC-BY, CC-BY-SA, CC-BY-NC, etc. }
+      open_data: { description: ODC-By, ODC-ODbL, CDLA }
+      responsible_ai: { description: OpenRAIL-M, OpenRAIL-S, OpenRAIL-D, RAIL }
+      proprietary: { description: All-rights-reserved, custom EULA }
+      public_domain: { description: CC0, Unlicense, PDDL }
+      other: {}
+
+  LicenseScope:
+    description: What artifact type the license governs.
+    permissible_values:
+      software: { meaning: spdx:Software }
+      data: {}
+      model: {}
+      content: {}
+      mixed: {}
+
+  # ---- ML Model enums ------------------------------------------------------
+  MLTask:
+    description: HuggingFace pipeline_tag taxonomy.
+    permissible_values:
+      text-generation: {}
+      text-classification: {}
+      token-classification: {}
+      question-answering: {}
+      summarization: {}
+      translation: {}
+      fill-mask: {}
+      text-to-image: {}
+      image-classification: {}
+      object-detection: {}
+      image-segmentation: {}
+      audio-classification: {}
+      automatic-speech-recognition: {}
+      text-to-speech: {}
+      tabular-classification: {}
+      tabular-regression: {}
+      reinforcement-learning: {}
+      feature-extraction: {}
+      sentence-similarity: {}
+      zero-shot-classification: {}
+      conversational: {}
+      other: {}
+
+  MLFramework:
+    description: ML framework / library.
+    permissible_values:
+      pytorch: {}
+      tensorflow: {}
+      jax: {}
+      transformers: {}
+      diffusers: {}
+      onnx: {}
+      scikit-learn: {}
+      spacy: {}
+      keras: {}
+      xgboost: {}
+      other: {}
+
+  ModelPrecision:
+    permissible_values:
+      float32: {}
+      float16: {}
+      bfloat16: {}
+      int8: {}
+      int4: {}
+      mixed: {}
+
+  # ---- Dataset enums -------------------------------------------------------
+  DataAccessLevel:
+    description: DCAT / DATS access restrictions.
+    permissible_values:
+      open: { description: No restrictions, publicly downloadable. }
+      registered: { description: Requires free registration. }
+      controlled: { description: Requires application and approval (e.g., dbGaP). }
+      embargoed: { description: Temporarily restricted until a date. }
+      restricted: { description: Available only to authorized researchers. }
+      closed: { description: Not available externally. }
+
+  DataType:
+    description: Broad data modality classification.
+    permissible_values:
+      tabular: {}
+      text: {}
+      image: {}
+      audio: {}
+      video: {}
+      genomic: {}
+      proteomic: {}
+      metabolomic: {}
+      spatial_transcriptomic: {}
+      single_cell: {}
+      time_series: {}
+      graph: {}
+      geospatial: {}
+      mixed: {}
+      other: {}
+
+  # ---- Online content type -------------------------------------------------
+  OnlineContentType:
+    permissible_values:
+      blog_post: {}
+      medium_article: {}
+      substack_post: {}
+      forum_post: {}
+      wiki_page: {}
+      documentation_page: {}
+      tutorial: {}
+      notebook: { description: Jupyter, Colab, Observable, etc. }
+      social_media_thread: {}
+      video: {}
+      podcast_episode: {}
+      presentation_slides: {}
+      other: {}
+
+  # ---- UMLS Semantic Groups ------------------------------------------------
+  UMLSSemanticGroup:
+    description: >-
+      UMLS Semantic Network high-level grouping of 127 semantic types
+      into 15 categories. Used for coarse entity classification.
+    permissible_values:
+      ACTI: { description: Activities & Behaviors }
+      ANAT: { description: Anatomy }
+      CHEM: { description: Chemicals & Drugs }
+      CONC: { description: Concepts & Ideas }
+      DEVI: { description: Devices }
+      DISO: { description: Disorders }
+      GENE: { description: Genes & Molecular Sequences }
+      GEOG: { description: Geographic Areas }
+      LIVB: { description: Living Beings }
+      OBJC: { description: Objects }
+      OCCU: { description: Occupations }
+      ORGA: { description: Organizations }
+      PHEN: { description: Phenomena }
+      PHYS: { description: Physiology }
+      PROC: { description: Procedures }
+
+  # ---- NCATS Translator enums ----------------------------------------------
+  KnowledgeLevel:
+    description: >-
+      Biolink knowledge_level — how confidently an edge is asserted.
+      Required for NCATS Translator TRAPI compliance.
+    permissible_values:
+      knowledge_assertion: { description: Explicitly stated fact from literature or curated source. }
+      logical_entailment: { description: Derived from ontological reasoning or logical rules. }
+      statistical_association: { description: Inferred from statistical analysis (e.g., GWAS, co-occurrence). }
+      prediction: { description: Computational prediction not yet experimentally validated. }
+      observation: { description: Direct experimental or clinical observation. }
+      not_provided: { description: Confidence level not available. }
+
+  AgentType:
+    description: >-
+      Biolink agent_type — how an edge was produced.
+      Required for NCATS Translator TRAPI compliance.
+    permissible_values:
+      manual_agent: { description: Human curation. }
+      automated_agent: { description: Algorithmic extraction or pipeline. }
+      text_mining_agent: { description: NLP/text-mining extraction. }
+      image_processing_agent: { description: Computer vision extraction. }
+      not_provided: { description: Agent type unknown. }
+
+  TranslatorQualifierAspect:
+    description: >-
+      Subject/object aspect qualifiers used in NCATS Translator qualified
+      associations. Refines what dimension of the entity the predicate acts on.
+    permissible_values:
+      expression: { description: Gene/protein expression level. }
+      activity: { description: Protein/enzyme activity. }
+      abundance: { description: Protein/metabolite abundance. }
+      localization: { description: Subcellular localization. }
+      stability: { description: Molecular stability. }
+      splicing: { description: mRNA splicing variant. }
+      mutation_rate: { description: Somatic/germline mutation rate. }
+      methylation: { description: DNA/histone methylation. }
+      secretion: { description: Cellular secretion. }
+      synthesis: { description: Biosynthesis. }
+      degradation: { description: Molecular degradation. }
+      transport: { description: Molecular transport. }
+
+  TranslatorDirectionQualifier:
+    description: Direction qualifiers for Translator edge refinement.
+    permissible_values:
+      increased: {}
+      decreased: {}
+      upregulated: {}
+      downregulated: {}
+      activated: {}
+      inhibited: {}
+      not_provided: {}
+
+
+# =============================================================================
+# CLASSES
+# =============================================================================
+classes:
+
+  # ===========================================================================
+  # MIXINS
+  # ===========================================================================
+
+  HasTimestamps:
+    mixin: true
+    slots:
+      - created_date
+      - updated_date
+
+  HasMetrics:
+    mixin: true
+    description: Scholarly impact metrics (OpenAlex pattern).
+    slots:
+      - works_count
+      - cited_by_count
+      - h_index
+      - i10_index
+      - counts_by_year
+
+  HasExternalIds:
+    mixin: true
+    slots:
+      - doi
+      - pmid
+      - pmcid
+      - arxiv_id
+      - ssrn_id
+      - openalex_id
+      - wikidata_id
+      - crossref_id
+      - scopus_id
+
+  HasImages:
+    mixin: true
+    slots:
+      - image_url
+      - image_thumbnail_url
+
+  HasTopics:
+    mixin: true
+    slots:
+      - topics
+      - keywords
+
+  HasGeo:
+    mixin: true
+    slots:
+      - geo
+
+  HasProvenance:
+    mixin: true
+    description: W3C PROV-aligned provenance tracking.
+    class_uri: prov:Entity
+    slots:
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+
+  HasLicense:
+    mixin: true
+    description: Anything that can be licensed.
+    slots:
+      - license_ref
+      - license_spdx_id
+      - license_text
+
+  HasCytognosisLinks:
+    mixin: true
+    description: >-
+      Cytognosis-specific links to internal artifacts. Maps to Zotero Extra
+      field key-value pairs.
+    slots:
+      - drive_pdf_url
+      - code_original_url
+      - code_internal_url
+      - dataset_original_url
+      - dataset_internal_url
+      - model_original_url
+      - model_internal_url
+
+  # ---- UMLS mixin ----------------------------------------------------------
+  HasUMLS:
+    mixin: true
+    description: >-
+      UMLS Metathesaurus integration. Provides CUI (Concept Unique
+      Identifier) as the universal cross-reference hub for biomedical
+      entities. With a full UMLS license, CUIs map to 200+ source
+      vocabularies (SNOMED CT, ICD-10, MeSH, RxNorm, HPO, OMIM, etc.).
+    slots:
+      - cui
+      - umls_semantic_types
+      - umls_semantic_group
+      - umls_preferred_term
+      - umls_source_vocabs
+
+  # ---- SemOpenAlex mixin ---------------------------------------------------
+  HasSemOpenAlex:
+    mixin: true
+    description: >-
+      SemOpenAlex RDF Knowledge Graph compatibility. Provides the
+      SemOpenAlex URI, MAG ID (legacy), and indexing metadata.
+    slots:
+      - semopenalex_uri
+      - mag_id
+      - indexed_in
+
+  # ---- NCATS Translator mixin ---------------------------------------------
+  HasTranslatorCompat:
+    mixin: true
+    description: >-
+      NCATS Biomedical Data Translator compatibility. Adds TRAPI-required
+      fields for any entity that could serve as a node in a Translator
+      Knowledge Provider: canonical CURIEs, infores provenance, and
+      NodeNormalization-compatible identifiers.
+    slots:
+      - infores
+      - knowledge_level
+      - agent_type
+      - translator_canonical_id
+      - translator_equivalent_ids
+
+
+  # ===========================================================================
+  # ABSTRACT BASE CLASSES
+  # ===========================================================================
+
+  NamedThing:
+    abstract: true
+    class_uri: biolink:NamedThing
+    description: >-
+      Root class — aligned with Biolink NamedThing.
+    slots:
+      - id
+      - display_name
+      - description
+      - alternate_names
+      - category
+    slot_usage:
+      id:
+        required: true
+        identifier: true
+      display_name:
+        required: true
+
+  ScholarlyEntity:
+    abstract: true
+    is_a: NamedThing
+    mixins:
+      - HasTimestamps
+      - HasExternalIds
+      - HasSemOpenAlex
+    description: >-
+      Entity in the scholarly communication ecosystem. HasSemOpenAlex mixin
+      provides SemOpenAlex RDF URI for linked-data interoperability.
+
+  Agent:
+    abstract: true
+    is_a: NamedThing
+    class_uri: biolink:Agent
+    description: Person or organization.
+    slots:
+      - homepage_url
+
+
+  # ===========================================================================
+  # LICENSE — First-class entity (SPDX + ODRL + OpenRAIL)
+  # ===========================================================================
+
+  License:
+    is_a: NamedThing
+    class_uri: spdx:License
+    description: >-
+      A license governing use of software, data, models, or content. Modeled
+      as a first-class entity to support SPDX identifiers, ODRL permissions,
+      and the OpenRAIL family of responsible AI licenses.
+    slots:
+      - spdx_id
+      - license_family
+      - license_scope
+      - license_url
+      - is_osi_approved
+      - is_fsf_libre
+      - is_copyleft
+      - permissions
+      - license_conditions
+      - limitations
+      - use_restrictions
+      - deprecated
+    slot_usage:
+      spdx_id:
+        description: >-
+          SPDX identifier (e.g., MIT, Apache-2.0, CC-BY-4.0, OpenRAIL-M).
+          For non-SPDX licenses (OpenRAIL variants, Llama, etc.) use a
+          Cytognosis-minted URI.
+
+
+  # ===========================================================================
+  # BIBLIOGRAPHIC RESOURCES — BibTeX hierarchy
+  # ===========================================================================
+
+  BibliographicResource:
+    abstract: true
+    is_a: ScholarlyEntity
+    class_uri: biolink:Publication
+    mixins:
+      - HasMetrics
+      - HasTopics
+      - HasCytognosisLinks
+      - HasLicense
+    description: >-
+      Abstract base for all citable works. Inherits from Biolink Publication.
+      SemOpenAlex alignment: maps to soa:Work. Citation edges use cito:cites.
+      Bibliometric properties use prism:, fabio:, bido: URIs.
+    slots:
+      # SemOpenAlex additional properties
+      - crossref_type
+      - countries_distinct_count
+      - institutions_distinct_count
+      - has_sustainable_development_goal
+      - cites
+      - title
+      - authors_text
+      - year
+      - month
+      - abstract_text
+      - note
+      - language
+      - url
+      - bibtex_entry_type
+      - openalex_work_type
+      - publication_date
+      - volume
+      - issue
+      - pages
+      - first_page
+      - last_page
+      - edition
+      - series
+      - chapter
+      - page_total
+      - isbn
+      - issn
+      - eprint
+      - eprint_type
+      - version
+      - open_access
+      - is_retracted
+      - is_paratext
+      - authorships
+      - referenced_works
+      - related_works
+      - locations
+      - source_ref
+      - grants
+      - mesh_terms
+      - bio_entity_mentions
+    slot_usage:
+      title:
+        required: true
+        slot_uri: dcterms:title
+
+  # ---- Concrete BibTeX entry types -----------------------------------------
+
+  Article:
+    is_a: BibliographicResource
+    class_uri: fabio:JournalArticle
+    description: "BibTeX @article. Required: author, title, journal, year."
+    slots:
+      - journal
+    slot_usage:
+      journal: { required: true }
+      year: { required: true }
+
+  Book:
+    is_a: BibliographicResource
+    class_uri: fabio:Book
+    description: "BibTeX @book. Required: author/editor, title, publisher, year."
+    slots: [publisher_name, editor_text, address]
+    slot_usage:
+      publisher_name: { required: true }
+      year: { required: true }
+
+  InBook:
+    is_a: BibliographicResource
+    class_uri: fabio:BookChapter
+    description: "BibTeX @inbook. Required: author/editor, title, chapter/pages, publisher, year."
+    slots: [publisher_name, editor_text, address, book_title]
+    slot_usage:
+      publisher_name: { required: true }
+      year: { required: true }
+
+  InCollection:
+    is_a: BibliographicResource
+    class_uri: fabio:BookChapter
+    description: "BibTeX @incollection. Required: author, title, booktitle, publisher, year."
+    slots: [book_title, publisher_name, editor_text, address, entry_type_field]
+    slot_usage:
+      book_title: { required: true }
+      publisher_name: { required: true }
+      year: { required: true }
+
+  InProceedings:
+    is_a: BibliographicResource
+    class_uri: fabio:ConferencePaper
+    description: "BibTeX @inproceedings / @conference. Required: author, title, booktitle, year."
+    slots: [book_title, editor_text, publisher_name, organization, address]
+    slot_usage:
+      book_title: { required: true }
+      year: { required: true }
+
+  Conference:
+    is_a: InProceedings
+    description: Alias for InProceedings.
+
+  Proceedings:
+    is_a: BibliographicResource
+    class_uri: fabio:ConferenceProceedings
+    description: "BibTeX @proceedings. Required: title, year."
+    slots: [editor_text, publisher_name, organization, address]
+    slot_usage:
+      year: { required: true }
+
+  PhdThesis:
+    is_a: BibliographicResource
+    class_uri: fabio:DoctoralThesis
+    description: "BibTeX @phdthesis. Required: author, title, school, year."
+    slots: [school, address, entry_type_field]
+    slot_usage:
+      school: { required: true }
+      year: { required: true }
+
+  MastersThesis:
+    is_a: BibliographicResource
+    class_uri: fabio:MastersThesis
+    description: "BibTeX @mastersthesis. Required: author, title, school, year."
+    slots: [school, address, entry_type_field]
+    slot_usage:
+      school: { required: true }
+      year: { required: true }
+
+  TechReport:
+    is_a: BibliographicResource
+    class_uri: fabio:TechnicalReport
+    description: "BibTeX @techreport. Required: author, title, institution, year."
+    slots: [institution_name, address, report_number, entry_type_field]
+    slot_usage:
+      institution_name: { required: true }
+      year: { required: true }
+
+  Manual:
+    is_a: BibliographicResource
+    class_uri: fabio:Manual
+    description: "BibTeX @manual. Required: title."
+    slots: [organization, address, editor_text]
+
+  Booklet:
+    is_a: BibliographicResource
+    class_uri: fabio:Booklet
+    description: "BibTeX @booklet. Required: title."
+    slots: [how_published, address]
+
+  Unpublished:
+    is_a: BibliographicResource
+    class_uri: fabio:Preprint
+    description: "BibTeX @unpublished. Required: author, title, note."
+    slot_usage:
+      note: { required: true }
+
+  MiscEntry:
+    is_a: BibliographicResource
+    class_uri: fabio:Expression
+    description: "BibTeX @misc. No required fields."
+    slots: [how_published]
+
+  PatentEntry:
+    is_a: BibliographicResource
+    class_uri: fabio:Patent
+    description: Patent document (BibLaTeX/PubMedKG).
+    slots: [patent_number, patent_holder, filing_date, grant_date]
+
+  Standard:
+    is_a: BibliographicResource
+    class_uri: fabio:Specification
+    description: Technical or industry standard.
+    slots: [organization, address, report_number]
+
+  ReviewArticle:
+    is_a: Article
+    class_uri: fabio:ReviewArticle
+    description: Review article surveying a field.
+
+  Preprint:
+    is_a: BibliographicResource
+    class_uri: fabio:Preprint
+    description: Pre-peer-review manuscript.
+    slots: [preprint_server]
+
+  # ---- Domain-specific paper subtypes --------------------------------------
+
+  AIMLPaper:
+    is_a: Article
+    description: >-
+      AI/ML paper expected to have associated models, training datasets,
+      evaluation benchmarks, and code repositories.
+    slots:
+      - associated_models
+      - training_datasets
+      - evaluation_datasets
+      - associated_code_repos
+      - benchmark_results
+      - compute_used
+
+  BiomedicalPaper:
+    is_a: Article
+    description: >-
+      Biomedical paper expected to have associated experimental datasets,
+      biological entities studied, clinical trials, and protocols.
+    slots:
+      - associated_datasets
+      - studied_entities
+      - related_trials
+      - protocols
+      - specimen_types
+
+  # ---- Online content types ------------------------------------------------
+
+  OnlineContent:
+    is_a: BibliographicResource
+    class_uri: biolink:WebPage
+    description: >-
+      Any online-only content — blog posts, forum threads, notebooks, videos.
+      Designed for easy Chrome extension capture.
+    slots:
+      - online_content_type
+      - platform_name
+      - url_date
+      - author_username
+      - reading_time_minutes
+      - claps_or_likes
+      - comment_count
+
+  BlogPost:
+    is_a: OnlineContent
+    description: Blog post (personal blog, Medium, Substack, etc.).
+
+  ForumPost:
+    is_a: OnlineContent
+    description: Forum post, StackOverflow answer, Reddit post, etc.
+
+  NotebookEntry:
+    is_a: OnlineContent
+    description: Jupyter/Colab/Observable notebook published online.
+    slots:
+      - notebook_runtime
+      - notebook_kernel
+
+  VideoContent:
+    is_a: OnlineContent
+    description: YouTube talk, conference recording, tutorial video.
+    slots:
+      - duration_seconds
+      - transcript_url
+
+
+  # ===========================================================================
+  # AGENTS
+  # ===========================================================================
+
+  Person:
+    is_a: Agent
+    class_uri: biolink:Person
+    mixins: [HasTimestamps, HasExternalIds, HasMetrics, HasTopics, HasImages, HasSemOpenAlex]
+    description: >-
+      Researcher / author (OpenAlex Author, PubMedKG Author).
+      SemOpenAlex: soa:Author with foaf:name, org:memberOf, bido:h-index.
+    slots:
+      - given_name
+      - family_name
+      - name_alternatives
+      - orcid
+      - affiliations
+      - last_known_institution
+      - last_publication_date
+      # SemOpenAlex Author metrics
+      - two_yr_mean_citedness
+
+  Organization:
+    abstract: true
+    is_a: Agent
+    class_uri: biolink:Organization
+    mixins: [HasTimestamps, HasExternalIds, HasMetrics, HasTopics, HasImages, HasGeo, HasSemOpenAlex]
+    slots:
+      - ror_id
+      - country_code
+      - country_name
+      - organization_roles
+
+  Institution:
+    is_a: Organization
+    class_uri: schema:ResearchOrganization
+    description: >-
+      OpenAlex Institution + PubMedKG Affiliation.
+      SemOpenAlex: soa:Institution with soa:hasParentInstitution,
+      soa:hasChildInstitution, soa:hasAssociatedInstitution.
+    slots:
+      - institution_type
+      - lineage
+      - associated_institutions
+      - international_status
+      # SemOpenAlex institution hierarchy
+      - parent_institution
+      - child_institutions
+      - acronym
+
+  Publisher:
+    is_a: Organization
+    description: OpenAlex Publisher.
+    slots: [parent_publisher, hierarchy_level, sources_count]
+
+  Funder:
+    is_a: Organization
+    class_uri: schema:FundingAgency
+    description: OpenAlex Funder.
+    slots: [grants_count]
+
+
+  # ===========================================================================
+  # PUBLICATION VENUE
+  # ===========================================================================
+
+  Source:
+    is_a: ScholarlyEntity
+    class_uri: fabio:PeriodicalPublicationVenue
+    mixins: [HasMetrics, HasTopics, HasImages]
+    description: >-
+      Journal, repository, conference, book series (OpenAlex Source).
+      SemOpenAlex: soa:Source with fabio:hasURL, prism: page metadata.
+    slots:
+      - issn_l
+      - issn_list
+      - source_type
+      - host_organization
+      - is_oa
+      - is_in_doaj
+      - apc_usd
+      - apc_prices
+      - homepage_url
+      - country_code
+
+
+  # ===========================================================================
+  # FUNDING
+  # ===========================================================================
+
+  Award:
+    is_a: ScholarlyEntity
+    class_uri: schema:MonetaryGrant
+    mixins: [HasTimestamps]
+    description: A grant or funding award (OpenAlex Award).
+    slots:
+      - funder_ref
+      - funder_award_id
+      - award_amount_usd
+      - currency
+      - awardee_ref
+      - investigators
+      - funded_works
+      - award_status
+      - start_date
+      - end_date
+
+
+  # ===========================================================================
+  # CLASSIFICATION
+  # ===========================================================================
+
+  Topic:
+    is_a: NamedThing
+    mixins: [HasMetrics, HasTimestamps, HasUMLS, HasSemOpenAlex]
+    description: >-
+      OpenAlex Topic hierarchy (Domain > Field > Subfield > Topic).
+      SemOpenAlex models these as skos:Concept with skos:broader hierarchy
+      and links to Wikidata via owl:sameAs. UMLS CUI enables cross-mapping
+      of biomedical topics to MeSH, SNOMED CT, etc.
+    slots:
+      - hierarchy_level_type
+      - parent_domain
+      - parent_field
+      - parent_subfield
+      # SemOpenAlex / SKOS concept alignment
+      - skos_broader
+      - skos_related
+      - skos_pref_label
+      - skos_in_scheme
+      - wikidata_qid
+      - concept_score
+
+  MeSHTerm:
+    is_a: NamedThing
+    mixins: [HasUMLS]
+    description: >-
+      Medical Subject Heading (PubMed indexing). UMLS CUI provides
+      cross-mapping to SNOMED CT, ICD-10, and other vocabularies.
+      SemOpenAlex links via soa:hasMesh to http://id.nlm.nih.gov/mesh/.
+    slots: [mesh_id, mesh_qualifiers, mesh_tree_numbers, scope_note]
+
+
+  # ===========================================================================
+  # BIOMEDICAL ENTITIES — Biolink Model aligned
+  # ===========================================================================
+
+  BiologicalEntity:
+    abstract: true
+    is_a: NamedThing
+    class_uri: biolink:BiologicalEntity
+    mixins: [HasExternalIds, HasProvenance, HasTimestamps, HasUMLS, HasTranslatorCompat]
+    description: >-
+      Abstract base for all biomedical entities. Aligned with Biolink Model
+      biological_entity. All PubMedKG entity types are concrete subclasses.
+      HasUMLS mixin: CUI is the universal cross-reference hub — all source
+      vocabulary IDs (SNOMED CT, ICD-10, MeSH, HPO, RxNorm, DrugBank, etc.)
+      can be resolved through the CUI. UMLS semantic types/groups enable
+      coarse entity classification.
+      HasTranslatorCompat mixin: enables this entity to serve as a node
+      in an NCATS Translator Knowledge Provider (TRAPI-compliant CURIEs,
+      infores provenance, NodeNormalization-compatible identifiers).
+    slots:
+      - bio_entity_type
+      - synonyms
+      - in_taxon
+      - external_db_refs
+      - mentioned_in_works
+      - xref
+
+  Gene:
+    is_a: BiologicalEntity
+    class_uri: biolink:Gene
+    description: Gene entity (Biolink Gene, PubMedKG Gene).
+    slots:
+      - ncbi_gene_id
+      - hgnc_symbol
+      - ensembl_id
+      - gene_ontology_terms
+      - associated_diseases
+      - expressed_in_tissues
+      - has_gene_product
+
+  Protein:
+    is_a: BiologicalEntity
+    class_uri: biolink:Protein
+    description: Protein entity (Biolink Protein).
+    slots:
+      - uniprot_id
+      - pdb_id
+      - protein_family
+      - gene_product_of
+      - molecular_weight
+      - sequence
+
+  Disease:
+    is_a: BiologicalEntity
+    class_uri: biolink:Disease
+    description: Disease entity (Biolink Disease, PubMedKG Disease).
+    slots:
+      - mondo_id
+      - doid
+      - mesh_disease_id
+      - omim_id
+      - icd_codes
+      - associated_genes
+      - indicated_drugs
+
+  PhenotypicFeature:
+    is_a: BiologicalEntity
+    class_uri: biolink:PhenotypicFeature
+    description: Observable phenotypic characteristic (Biolink PhenotypicFeature).
+    slots:
+      - hpo_id
+      - associated_diseases
+      - associated_genes
+
+  Drug:
+    is_a: BiologicalEntity
+    class_uri: biolink:Drug
+    description: Drug entity (Biolink Drug, PubMedKG Drug).
+    slots:
+      - drugbank_id
+      - chembl_id
+      - pubchem_cid
+      - rxnorm_id
+      - mechanism_of_action
+      - drug_targets
+      - indications
+
+  SmallMolecule:
+    is_a: BiologicalEntity
+    class_uri: biolink:SmallMolecule
+    description: Non-drug chemical entity (Biolink SmallMolecule).
+    slots:
+      - chembl_id
+      - pubchem_cid
+      - inchi
+      - smiles
+      - molecular_formula
+
+  OrganismTaxon:
+    is_a: BiologicalEntity
+    class_uri: biolink:OrganismTaxon
+    description: Species / organism (Biolink OrganismTaxon, PubMedKG Species).
+    slots: [ncbi_taxonomy_id, common_name]
+
+  SequenceVariant:
+    is_a: BiologicalEntity
+    class_uri: biolink:SequenceVariant
+    description: Genetic variant (Biolink SequenceVariant, PubMedKG Mutation).
+    slots:
+      - hgvs_notation
+      - variant_gene
+      - variant_type
+      - clinical_significance
+      - dbsnp_id
+      - clinvar_id
+
+  AnatomicalEntity:
+    is_a: BiologicalEntity
+    class_uri: biolink:AnatomicalEntity
+    description: Anatomical structure (Biolink AnatomicalEntity, UBERON).
+    slots: [uberon_id]
+
+  Cell:
+    is_a: AnatomicalEntity
+    class_uri: biolink:Cell
+    description: Cell type (Biolink Cell, Cell Ontology).
+    slots: [cell_ontology_id]
+
+  CellLine:
+    is_a: BiologicalEntity
+    class_uri: biolink:CellLine
+    description: Cultured cell line (Biolink CellLine).
+    slots: [cellosaurus_id, species_of_origin]
+
+  Pathway:
+    is_a: BiologicalEntity
+    class_uri: biolink:Pathway
+    description: Biological pathway (Biolink Pathway).
+    slots: [reactome_id, kegg_id, participating_genes]
+
+  MolecularActivity:
+    is_a: BiologicalEntity
+    class_uri: biolink:MolecularActivity
+    description: GO Molecular Function (Biolink MolecularActivity).
+    slots: [go_id]
+
+  BiologicalProcess:
+    is_a: BiologicalEntity
+    class_uri: biolink:BiologicalProcess
+    description: GO Biological Process (Biolink BiologicalProcess).
+    slots: [go_id]
+
+  CellularComponent:
+    is_a: BiologicalEntity
+    class_uri: biolink:CellularComponent
+    description: GO Cellular Component (Biolink CellularComponent).
+    slots: [go_id]
+
+  ClinicalTrial:
+    is_a: ScholarlyEntity
+    mixins: [HasTimestamps, HasUMLS]
+    description: >-
+      Clinical trial record (PubMedKG ClinicalTrial). UMLS CUI maps
+      trial conditions/interventions to standard vocabularies.
+    slots:
+      - nct_id
+      - trial_status
+      - trial_phase
+      - conditions
+      - interventions
+      - sponsor
+      - principal_investigator
+      - enrollment
+      - start_date
+      - end_date
+      - related_articles
+
+
+  # ===========================================================================
+  # BIO-ENTITY ASSOCIATION (Biolink-aligned edges)
+  # ===========================================================================
+
+  BioEntityAssociation:
+    is_a: NamedThing
+    class_uri: biolink:Association
+    mixins: [HasProvenance, HasTranslatorCompat]
+    description: >-
+      Typed, evidence-backed association between biomedical entities.
+      Aligned with Biolink Association. PubMedKG edge with provenance.
+      NCATS Translator compatible: includes knowledge_level, agent_type,
+      infores, and qualifier slots for TRAPI-compliant edge export.
+    slots:
+      - subject_entity
+      - predicate
+      - object_entity
+      - association_type
+      - supporting_publications
+      - co_occurrence_count
+      - p_value
+      - effect_size
+      - negated
+      # NCATS Translator qualifier slots
+      - qualified_predicate
+      - subject_aspect_qualifier
+      - object_aspect_qualifier
+      - subject_direction_qualifier
+      - object_direction_qualifier
+      - anatomical_context_qualifier
+      - species_context_qualifier
+      - temporal_context_qualifier
+
+  # ---- Translator-specialized Association subtypes -------------------------
+  ChemicalToGeneAssociation:
+    is_a: BioEntityAssociation
+    class_uri: biolink:ChemicalToGeneAssociation
+    description: >-
+      Chemical/drug → gene association (e.g., drug affects gene expression).
+      Biolink subtype used in NCATS Translator Molecular Data Provider.
+
+  ChemicalToDiseaseAssociation:
+    is_a: BioEntityAssociation
+    class_uri: biolink:ChemicalToDiseaseAssociation
+    description: >-
+      Chemical/drug → disease association (e.g., drug treats disease).
+      Biolink subtype for Translator Drug/Clinical providers.
+
+  GeneToDiseaseAssociation:
+    is_a: BioEntityAssociation
+    class_uri: biolink:GeneToDiseaseAssociation
+    description: >-
+      Gene → disease association (e.g., GWAS hit, causal variant).
+      Biolink subtype for Translator Genetics Provider.
+
+  GeneToExpressionSiteAssociation:
+    is_a: BioEntityAssociation
+    class_uri: biolink:GeneToExpressionSiteAssociation
+    description: >-
+      Gene → anatomical site expression (e.g., gene expressed_in liver).
+      Biolink subtype for Translator tissue expression data.
+
+
+  # ===========================================================================
+  # RESEARCH ARTIFACTS
+  # ===========================================================================
+
+  # ---- CODE (CodeMeta + CFF + Software Heritage) ---------------------------
+
+  CodeRepository:
+    is_a: ScholarlyEntity
+    class_uri: codemeta:SoftwareSourceCode
+    mixins: [HasTopics, HasLicense, HasProvenance]
+    description: >-
+      Code repository linked to publications. Schema aligned with CodeMeta,
+      CITATION.cff, and Software Heritage.
+    slots:
+      # Identity
+      - repository_url
+      - github_url
+      - swh_id
+      # Authorship
+      - contributors
+      - maintainers
+      # Technical
+      - programming_languages
+      - software_version
+      - software_requirements
+      - operating_systems
+      - runtime_platform
+      - build_instructions
+      - dependency_list
+      - development_status
+      - continuous_integration_url
+      - test_framework
+      - code_coverage_percent
+      # Metrics
+      - stars_count
+      - forks_count
+      - download_count
+      # Relationships
+      - fork_of
+      - is_part_of
+      - associated_papers
+      - associated_datasets
+      - associated_models
+      # CodeMeta specific
+      - date_published
+      - date_modified
+      - issn
+      - reference_publication
+      - readme_url
+      - issue_tracker_url
+      - documentation_url
+
+  # ---- DATASET (DCAT 3 + DATS + Croissant + DataCite + RO-Crate) ----------
+
+  Dataset:
+    is_a: ScholarlyEntity
+    class_uri: dcat:Dataset
+    mixins: [HasTopics, HasLicense, HasProvenance]
+    description: >-
+      Research dataset as first-class KG entity. Schema unifies DCAT 3,
+      DATS (NIH), Croissant (MLCommons), DataCite, and RO-Crate.
+    slots:
+      # Identity
+      - repository_url
+      - zenodo_url
+      - datacite_doi
+      # Access
+      - access_level
+      - access_url
+      - download_url
+      - access_requirements
+      - embargo_end_date
+      # Description
+      - data_type
+      - data_formats
+      - record_count
+      - size_bytes
+      - number_of_files
+      - schema_description
+      - variables
+      # Coverage
+      - spatial_coverage
+      - temporal_coverage_start
+      - temporal_coverage_end
+      - species_coverage
+      # Quality
+      - quality_annotation
+      - completeness
+      - collection_method
+      - processing_pipeline
+      # Provenance (DATS: Material, Method, Activity)
+      - produced_by_activity
+      - derived_from_datasets
+      - source_organisms
+      - instruments_used
+      # Relationships
+      - associated_papers
+      - associated_code_repos
+      - associated_models
+      - contributors
+      # Versioning
+      - dataset_version
+      - version_history
+      # FAIR
+      - fair_score
+      - persistent_id_type
+      - metadata_standard
+      # Croissant ML extensions
+      - record_sets
+      - is_training_data_for
+      - is_evaluation_data_for
+      # DATS specific
+      - stored_in
+      - data_use_conditions
+      # Temporal
+      - date_published
+      - date_modified
+      - date_collected
+
+  DataDistribution:
+    description: >-
+      A specific available form of a dataset (DCAT Distribution).
+    class_uri: dcat:Distribution
+    slots:
+      - download_url
+      - access_url
+      - media_type
+      - byte_size
+      - compression_format
+      - checksum
+      - distribution_description
+
+  # ---- ML MODEL (HuggingFace Model Cards + Croissant) ---------------------
+
+  MLModel:
+    abstract: true
+    is_a: ScholarlyEntity
+    class_uri: schema:SoftwareApplication
+    mixins: [HasTopics, HasLicense, HasProvenance]
+    description: >-
+      Abstract base for machine learning models. Schema aligned with
+      HuggingFace Model Cards (Mitchell et al. 2018) and Croissant ML.
+    slots:
+      # Identity
+      - model_url
+      - huggingface_url
+      - model_architecture
+      - model_family
+      # Task & Framework
+      - ml_task
+      - ml_framework
+      - library_name
+      # Lineage
+      - base_model
+      - fine_tuned_from
+      - training_datasets
+      - evaluation_datasets
+      # Size & Performance
+      - parameter_count
+      - model_size_bytes
+      - precision
+      - benchmark_results
+      - evaluation_metrics
+      # Hardware & Cost
+      - hardware_used
+      - training_time_hours
+      - training_cost_usd
+      - carbon_emissions_kg
+      - inference_hardware
+      # Responsible AI (Model Cards)
+      - intended_uses
+      - out_of_scope_uses
+      - known_limitations
+      - bias_risks
+      - ethical_considerations
+      - disaggregated_results
+      # Relationships
+      - associated_papers
+      - associated_code_repos
+      - contributors
+      # Versioning
+      - model_version
+      - date_published
+
+  PublishedModel:
+    is_a: MLModel
+    description: >-
+      A model published on a registry (HuggingFace Hub, ONNX Zoo, TF Hub).
+      Captures registry-specific metadata: downloads, likes, pipeline widget.
+    slots:
+      - registry_name
+      - registry_id
+      - download_count
+      - likes_count
+      - inference_api_enabled
+      - pipeline_tag
+      - model_tags
+      - spaces_using_model
+      - model_card_text
+
+  LocalModel:
+    is_a: MLModel
+    description: >-
+      An internal/private model not published to a public registry.
+      E.g., a fine-tuned variant stored on Cytognosis GCP.
+    slots:
+      - internal_storage_url
+      - deployment_status
+
+
+  # ===========================================================================
+  # W3C WEB ANNOTATION
+  # ===========================================================================
+
+  Annotation:
+    is_a: NamedThing
+    class_uri: oa:Annotation
+    mixins: [HasTimestamps]
+    description: >-
+      W3C Web Annotation — the personalization layer over any KG object.
+    slots:
+      - annotation_creator
+      - motivation
+      - annotation_body
+      - annotation_target
+      - generated_at
+    slot_usage:
+      annotation_target: { required: true }
+
+  AnnotationBody:
+    class_uri: oa:TextualBody
+    slots: [body_value, body_format, body_language, body_purpose]
+
+  AnnotationTarget:
+    class_uri: oa:SpecificResource
+    slots: [target_source_uri, target_selector, target_scope]
+
+  AnnotationSelector:
+    class_uri: oa:Selector
+    slots: [selector_type, selector_value, start_offset, end_offset]
+
+
+  # ===========================================================================
+  # EMBEDDED / ASSOCIATION CLASSES
+  # ===========================================================================
+
+  Authorship:
+    description: >-
+      Author–Work association with position and affiliation (OpenAlex).
+      SemOpenAlex: soa:Authorship with soa:hasAuthor, soa:position,
+      soa:isCorresponding, soa:rawAffiliation, soa:hasOrganization.
+    slots:
+      - person_ref
+      - author_position
+      - is_corresponding
+      - institution_refs
+      - raw_affiliation_string
+
+  Location:
+    description: Where a work is hosted (OpenAlex Location).
+    slots:
+      - landing_page_url
+      - pdf_url
+      - location_source
+      - work_version
+      - location_license
+      - is_oa
+
+  OpenAccessInfo:
+    slots: [is_oa, oa_status, oa_url]
+
+  GeoLocation:
+    class_uri: schema:Place
+    slots: [city, region, country_code, country_name, continent, latitude, longitude, geonames_city_id]
+
+  APCPrice:
+    slots: [currency, price, price_usd]
+
+  YearlyCount:
+    slots: [count_year, count_works, count_citations]
+
+  Affiliation:
+    description: Author-institution association over years.
+    slots: [institution_ref, affiliation_years]
+
+  OrganizationRole:
+    description: An institution can also act as funder or publisher (OpenAlex).
+    slots: [role_type, role_entity_id, role_works_count]
+
+  ExternalDatabaseRef:
+    description: Reference to an external database identifier.
+    slots: [db_name, db_id, db_url]
+
+  BenchmarkResult:
+    description: Performance on a named benchmark or metric.
+    slots:
+      - benchmark_name
+      - metric_name
+      - metric_value
+      - dataset_ref
+      - split
+      - verified
+
+  DisaggregatedResult:
+    description: >-
+      Model performance broken down by demographic group, geography, or data
+      slice (Model Cards for Model Reporting, Mitchell et al. 2018).
+    slots:
+      - group_name
+      - group_value
+      - metric_name
+      - metric_value
+
+  RecordSet:
+    description: >-
+      Croissant ML RecordSet — a logical table within a dataset.
+    class_uri: croissant:RecordSet
+    slots:
+      - record_set_name
+      - record_set_description
+      - fields
+
+
+  # ===========================================================================
+  # SLOTS
+  # ===========================================================================
+
+slots:
+
+  # ---- Identity ------------------------------------------------------------
+  id:
+    slot_uri: schema:identifier
+    range: uriorcurie
+    identifier: true
+  display_name:
+    slot_uri: schema:name
+  description:
+    slot_uri: dcterms:description
+  alternate_names:
+    slot_uri: schema:alternateName
+    multivalued: true
+  category:
+    slot_uri: biolink:category
+    multivalued: true
+    description: Biolink category URIs.
+  title:
+    slot_uri: dcterms:title
+  xref:
+    multivalued: true
+    description: Cross-references to external databases (CURIEs).
+
+  # ---- External IDs --------------------------------------------------------
+  doi: { slot_uri: datacite:doi, description: "DOI. SemOpenAlex uses datacite:doi." }
+  pmid: { slot_uri: fabio:hasPubMedId }
+  pmcid: { slot_uri: fabio:hasPubMedCentralId }
+  arxiv_id: {}
+  ssrn_id: {}
+  openalex_id: { range: uriorcurie }
+  wikidata_id: {}
+  crossref_id: {}
+  scopus_id: {}
+  orcid: { slot_uri: ORCID:id }
+  ror_id: { slot_uri: ROR:id }
+  issn_l: { slot_uri: bibo:issn }
+  issn_list: { multivalued: true }
+  isbn: { slot_uri: bibo:isbn }
+  issn: { slot_uri: bibo:issn }
+  spdx_id: { description: SPDX license identifier string. }
+  swh_id: { description: Software Heritage intrinsic identifier (SWHID). }
+  datacite_doi: { description: DataCite-minted DOI. }
+
+  # ---- BibTeX core ---------------------------------------------------------
+  authors_text: {}
+  year: { range: integer, slot_uri: fabio:hasPublicationYear }
+  month: {}
+  journal: { slot_uri: bibo:Journal }
+  book_title: { description: BibTeX booktitle. }
+  publisher_name: { slot_uri: dcterms:publisher }
+  editor_text: {}
+  school: {}
+  institution_name: {}
+  organization: {}
+  address: { slot_uri: schema:address }
+  how_published: {}
+  note: {}
+  publication_date: { slot_uri: prism:publicationDate, range: date }
+  volume: { slot_uri: bibo:volume }
+  issue: { slot_uri: bibo:issue }
+  pages: { slot_uri: bibo:pages }
+  first_page: { slot_uri: prism:startingPage }
+  last_page: { slot_uri: prism:endingPage }
+  edition: { slot_uri: bibo:edition }
+  series: {}
+  chapter: {}
+  page_total: { range: integer }
+  report_number: { slot_uri: bibo:number }
+  entry_type_field: {}
+  eprint: {}
+  eprint_type: {}
+  abstract_text: { slot_uri: dcterms:abstract }
+  language: { slot_uri: dcterms:language }
+  url: { slot_uri: schema:url, range: uri }
+  url_date: {}
+  version: { slot_uri: schema:version, range: WorkVersion }
+  preprint_server: {}
+
+  # ---- Typing enums --------------------------------------------------------
+  bibtex_entry_type: { range: BibtexEntryType }
+  openalex_work_type: { range: OpenAlexWorkType }
+  source_type: { range: SourceType }
+  institution_type: { range: InstitutionType }
+  bio_entity_type: { range: BioEntityType }
+  association_type: { range: BioAssociationType }
+  trial_status: { range: TrialStatus }
+  trial_phase: { range: TrialPhase }
+  hierarchy_level_type: { range: TopicHierarchyLevel }
+  award_status: { range: AwardStatus }
+  oa_status: { range: OpenAccessStatus }
+  online_content_type: { range: OnlineContentType }
+  license_family: { range: LicenseFamily }
+  license_scope: { range: LicenseScope }
+  ml_task: { range: MLTask }
+  ml_framework: { range: MLFramework }
+  precision: { range: ModelPrecision }
+  access_level: { range: DataAccessLevel }
+  data_type: { range: DataType }
+
+  # ---- Flags ---------------------------------------------------------------
+  is_retracted: { range: boolean }
+  is_paratext: { range: boolean }
+  is_oa: { range: boolean }
+  is_in_doaj: { range: boolean }
+  is_corresponding: { range: boolean }
+  is_osi_approved: { range: boolean }
+  is_fsf_libre: { range: boolean }
+  is_copyleft: { range: boolean }
+  deprecated: { range: boolean }
+  negated: { range: boolean, description: Association is negated (NOT). }
+  verified: { range: boolean }
+  inference_api_enabled: { range: boolean }
+
+  # ---- Metrics -------------------------------------------------------------
+  works_count: { range: integer }
+  cited_by_count: { range: integer }
+  h_index: { range: integer, slot_uri: bido:h-index }
+  i10_index: { range: integer }
+  counts_by_year: { multivalued: true, inlined_as_list: true, range: YearlyCount }
+  sources_count: { range: integer }
+  grants_count: { range: integer }
+  stars_count: { range: integer }
+  forks_count: { range: integer }
+  download_count: { range: integer }
+  likes_count: { range: integer }
+  enrollment: { range: integer }
+  co_occurrence_count: { range: integer }
+  record_count: { range: integer }
+  number_of_files: { range: integer }
+  size_bytes: { range: integer }
+  parameter_count: { range: integer }
+  model_size_bytes: { range: integer }
+  reading_time_minutes: { range: integer }
+  claps_or_likes: { range: integer }
+  comment_count: { range: integer }
+  duration_seconds: { range: integer }
+  code_coverage_percent: { range: float }
+  p_value: { range: float }
+  effect_size: { range: float }
+  fair_score: { range: float }
+  training_time_hours: { range: float }
+  training_cost_usd: { range: float }
+  carbon_emissions_kg: { range: float }
+  molecular_weight: { range: float }
+
+  # ---- Timestamps ----------------------------------------------------------
+  created_date: { slot_uri: dcterms:created, range: datetime }
+  updated_date: { slot_uri: dcterms:modified, range: datetime }
+  last_publication_date: { range: date }
+  start_date: { range: date }
+  end_date: { range: date }
+  filing_date: { range: date }
+  grant_date: { range: date }
+  generated_at: { range: datetime }
+  date_published: { slot_uri: schema:datePublished, range: date }
+  date_modified: { slot_uri: schema:dateModified, range: date }
+  date_collected: { range: date }
+  embargo_end_date: { range: date }
+
+  # ---- Geographic ----------------------------------------------------------
+  geo: { range: GeoLocation, inlined: true }
+  city: { slot_uri: schema:addressLocality }
+  region: { slot_uri: schema:addressRegion }
+  country_code: {}
+  country_name: { slot_uri: schema:addressCountry }
+  continent: {}
+  latitude: { range: float, slot_uri: schema:latitude }
+  longitude: { range: float, slot_uri: schema:longitude }
+  geonames_city_id: {}
+
+  # ---- Open Access ---------------------------------------------------------
+  open_access: { range: OpenAccessInfo, inlined: true }
+  oa_url: { range: uri }
+  apc_usd: { range: float }
+  apc_prices: { multivalued: true, inlined_as_list: true, range: APCPrice }
+
+  # ---- License slots -------------------------------------------------------
+  license_ref: { range: License, description: Reference to License entity. }
+  license_spdx_id: { description: Shorthand SPDX ID when full entity not needed. }
+  license_text: { description: Full license text or URL to license text. }
+  license_url: { range: uri }
+  permissions: { multivalued: true, description: "ODRL permissions (e.g., reproduce, distribute, modify)." }
+  license_conditions: { multivalued: true, description: "ODRL conditions (e.g., attribution, share-alike, notice)." }
+  limitations: { multivalued: true, description: "ODRL limitations (e.g., no-liability, no-warranty)." }
+  use_restrictions: { multivalued: true, description: "RAIL behavioral restrictions (e.g., no-surveillance, no-weapons)." }
+
+  # ---- Relationships (entity references) -----------------------------------
+  authorships: { multivalued: true, inlined_as_list: true, range: Authorship }
+  locations: { multivalued: true, inlined_as_list: true, range: Location }
+  source_ref: { range: Source }
+  location_source: { range: Source }
+  grants: { multivalued: true, range: Award }
+  referenced_works: { multivalued: true, range: BibliographicResource }
+  related_works: { multivalued: true, range: BibliographicResource }
+  associated_papers: { multivalued: true, range: BibliographicResource }
+  supporting_publications: { multivalued: true, range: BibliographicResource }
+  related_articles: { multivalued: true, range: BibliographicResource }
+  mentioned_in_works: { multivalued: true, range: BibliographicResource }
+  funded_works: { multivalued: true, range: BibliographicResource }
+  reference_publication: { range: BibliographicResource }
+  person_ref: { range: Person }
+  annotation_creator: { slot_uri: dcterms:creator, range: Person }
+  principal_investigator: { range: Person }
+  investigators: { multivalued: true, range: Person }
+  contributors: { multivalued: true, range: Person }
+  maintainers: { multivalued: true, range: Person }
+  was_attributed_to: { slot_uri: prov:wasAttributedTo, range: Agent }
+  host_organization: { range: Organization }
+  last_known_institution: { range: Institution }
+  parent_publisher: { range: Publisher }
+  funder_ref: { range: Funder }
+  awardee_ref: { range: Organization }
+  sponsor: { range: Organization }
+  institution_ref: { range: Institution }
+  institution_refs: { multivalued: true, range: Institution }
+  associated_institutions: { multivalued: true, range: Institution }
+  lineage: { multivalued: true, range: Institution }
+  topics: { multivalued: true, range: Topic }
+  parent_domain: { range: Topic }
+  parent_field: { range: Topic }
+  parent_subfield: { range: Topic }
+  mesh_terms: { multivalued: true, range: MeSHTerm }
+
+  # ---- Bio entity references -----------------------------------------------
+  bio_entity_mentions: { multivalued: true, range: BiologicalEntity }
+  subject_entity: { range: BiologicalEntity }
+  object_entity: { range: BiologicalEntity }
+  predicate: { description: Biolink predicate CURIE (e.g., biolink:treats). }
+  variant_gene: { range: Gene }
+  associated_diseases: { multivalued: true, range: Disease }
+  associated_genes: { multivalued: true, range: Gene }
+  drug_targets: { multivalued: true, range: Gene }
+  indicated_drugs: { multivalued: true, range: Drug }
+  indications: { multivalued: true, range: Disease }
+  conditions: { multivalued: true, range: Disease }
+  interventions: { multivalued: true }
+  in_taxon: { range: OrganismTaxon, slot_uri: biolink:in_taxon }
+  species_of_origin: { range: OrganismTaxon }
+  species_coverage: { multivalued: true, range: OrganismTaxon }
+  source_organisms: { multivalued: true, range: OrganismTaxon }
+  has_gene_product: { range: Protein, slot_uri: biolink:has_gene_product }
+  gene_product_of: { range: Gene, slot_uri: biolink:gene_product_of }
+  expressed_in_tissues: { multivalued: true, range: AnatomicalEntity }
+  participating_genes: { multivalued: true, range: Gene }
+  studied_entities: { multivalued: true, range: BiologicalEntity }
+  related_trials: { multivalued: true, range: ClinicalTrial }
+
+  # ---- Code entity slots ---------------------------------------------------
+  repository_url: { range: uri }
+  github_url: { range: uri }
+  programming_languages: { multivalued: true, slot_uri: codemeta:programmingLanguage }
+  software_version: { slot_uri: schema:softwareVersion }
+  software_requirements: { multivalued: true, slot_uri: schema:softwareRequirements }
+  operating_systems: { multivalued: true, slot_uri: schema:operatingSystem }
+  runtime_platform: { slot_uri: schema:runtimePlatform }
+  build_instructions: {}
+  dependency_list: { multivalued: true }
+  development_status: { slot_uri: codemeta:developmentStatus }
+  continuous_integration_url: { range: uri, slot_uri: codemeta:contIntegration }
+  test_framework: {}
+  issue_tracker_url: { range: uri, slot_uri: codemeta:issueTracker }
+  documentation_url: { range: uri }
+  readme_url: { range: uri, slot_uri: codemeta:readme }
+  fork_of: { range: CodeRepository }
+  is_part_of: { range: CodeRepository }
+  associated_code_repos: { multivalued: true, range: CodeRepository }
+
+  # ---- Dataset entity slots ------------------------------------------------
+  zenodo_url: { range: uri }
+  access_url: { range: uri, slot_uri: dcat:accessURL }
+  download_url: { range: uri, slot_uri: dcat:downloadURL }
+  access_requirements: { description: Human-readable access conditions. }
+  data_formats: { multivalued: true, slot_uri: dcterms:format }
+  schema_description: { description: Schema of the data (JSON Schema, LinkML, etc.). }
+  variables: { multivalued: true, description: Variable/column names and descriptions. }
+  spatial_coverage: { slot_uri: dcterms:spatial }
+  temporal_coverage_start: { range: date }
+  temporal_coverage_end: { range: date }
+  quality_annotation: { slot_uri: dcat:qualityAnnotation }
+  completeness: {}
+  collection_method: {}
+  processing_pipeline: { description: Description or URL of data processing pipeline. }
+  produced_by_activity: { description: DATS Activity that produced this dataset. }
+  derived_from_datasets: { multivalued: true, range: Dataset }
+  instruments_used: { multivalued: true }
+  dataset_version: {}
+  version_history: { multivalued: true }
+  persistent_id_type: { description: "PID type (DOI, Handle, ARK, etc.)." }
+  metadata_standard: { description: "Standard used (DCAT, DATS, DataCite, etc.)." }
+  record_sets: { multivalued: true, inlined_as_list: true, range: RecordSet }
+  is_training_data_for: { multivalued: true, range: MLModel }
+  is_evaluation_data_for: { multivalued: true, range: MLModel }
+  stored_in: { description: DATS DataRepository or storage location. }
+  data_use_conditions: { description: DATS data use conditions. }
+  associated_datasets: { multivalued: true, range: Dataset }
+  training_datasets: { multivalued: true, range: Dataset }
+  evaluation_datasets: { multivalued: true, range: Dataset }
+  dataset_ref: { range: Dataset }
+
+  # ---- ML Model entity slots -----------------------------------------------
+  model_url: { range: uri }
+  huggingface_url: { range: uri }
+  model_architecture: {}
+  model_family: { description: "Model family (BERT, GPT, T5, ViT, etc.)." }
+  library_name: { description: HuggingFace library_name (transformers, diffusers, etc.). }
+  base_model: { range: MLModel, description: Parent model this was derived from. }
+  fine_tuned_from: { range: MLModel }
+  benchmark_results: { multivalued: true, inlined_as_list: true, range: BenchmarkResult }
+  evaluation_metrics: { multivalued: true }
+  hardware_used: {}
+  inference_hardware: {}
+  intended_uses: {}
+  out_of_scope_uses: {}
+  known_limitations: {}
+  bias_risks: {}
+  ethical_considerations: {}
+  disaggregated_results: { multivalued: true, inlined_as_list: true, range: DisaggregatedResult }
+  model_version: {}
+  registry_name: { description: "Model registry (huggingface, tensorflow-hub, onnx-zoo)." }
+  registry_id: { description: Registry-specific model identifier. }
+  pipeline_tag: { range: MLTask }
+  model_tags: { multivalued: true }
+  spaces_using_model: { multivalued: true }
+  model_card_text: {}
+  internal_storage_url: { range: uri }
+  deployment_status: {}
+  associated_models: { multivalued: true, range: MLModel }
+  compute_used: { description: Compute resources used (GPU-hours, etc.). }
+
+  # ---- Online content slots ------------------------------------------------
+  platform_name: { description: "Platform name (Medium, Substack, YouTube, etc.)." }
+  author_username: {}
+  notebook_runtime: {}
+  notebook_kernel: {}
+  transcript_url: { range: uri }
+
+  # ---- Paper subtype slots -------------------------------------------------
+  protocols: { multivalued: true }
+  specimen_types: { multivalued: true }
+
+  # ---- Annotation slots ----------------------------------------------------
+  motivation: { range: AnnotationMotivation, slot_uri: oa:motivatedBy }
+  annotation_body: { range: AnnotationBody, inlined: true, slot_uri: oa:hasBody }
+  annotation_target: { range: AnnotationTarget, inlined: true, slot_uri: oa:hasTarget }
+  body_value: { slot_uri: oa:bodyValue }
+  body_format: {}
+  body_language: {}
+  body_purpose: { range: AnnotationBodyPurpose }
+  target_source_uri: { range: uri, slot_uri: oa:hasSource }
+  target_selector: { range: AnnotationSelector, inlined: true, slot_uri: oa:hasSelector }
+  target_scope: { range: uri, slot_uri: oa:hasScope }
+  selector_type: { range: SelectorType }
+  selector_value: {}
+  start_offset: { range: integer }
+  end_offset: { range: integer }
+
+  # ---- Cytognosis link slots -----------------------------------------------
+  drive_pdf_url: { range: uri }
+  code_original_url: { range: uri }
+  code_internal_url: { range: uri }
+  dataset_original_url: { range: uri }
+  dataset_internal_url: { range: uri }
+  model_original_url: { range: uri }
+  model_internal_url: { range: uri }
+
+  # ---- Provenance ----------------------------------------------------------
+  data_source: {}
+  confidence_score: { range: float }
+  extraction_method: {}
+  was_derived_from: { slot_uri: prov:wasDerivedFrom, range: uriorcurie }
+  was_generated_by: { slot_uri: prov:wasGeneratedBy }
+
+  # ---- Images --------------------------------------------------------------
+  image_url: { slot_uri: schema:image, range: uri }
+  image_thumbnail_url: { range: uri }
+
+  # ---- Misc counts ---------------------------------------------------------
+  count_year: { range: integer }
+  count_works: { range: integer }
+  count_citations: { range: integer }
+  hierarchy_level: { range: integer }
+
+  # ---- Generic string lists ------------------------------------------------
+  keywords: { multivalued: true, slot_uri: schema:keywords }
+  synonyms: { multivalued: true }
+  gene_ontology_terms: { multivalued: true }
+
+  # ---- Remaining IDs -------------------------------------------------------
+  mesh_id: {}
+  mesh_qualifiers: { multivalued: true }
+  mesh_tree_numbers: { multivalued: true }
+  scope_note: {}
+  mesh_disease_id: {}
+  ncbi_gene_id: {}
+  hgnc_symbol: {}
+  ensembl_id: {}
+  uniprot_id: {}
+  pdb_id: {}
+  protein_family: {}
+  ncbi_taxonomy_id: {}
+  common_name: {}
+  mondo_id: {}
+  doid: {}
+  omim_id: {}
+  icd_codes: { multivalued: true }
+  drugbank_id: {}
+  chembl_id: {}
+  pubchem_cid: {}
+  rxnorm_id: {}
+  reactome_id: {}
+  kegg_id: {}
+  go_id: { description: Gene Ontology term ID. }
+  cell_ontology_id: {}
+  cellosaurus_id: {}
+  hpo_id: {}
+  uberon_id: {}
+  hgvs_notation: {}
+  variant_type: {}
+  clinical_significance: {}
+  dbsnp_id: {}
+  clinvar_id: {}
+  mechanism_of_action: {}
+  inchi: {}
+  smiles: {}
+  molecular_formula: {}
+  sequence: { description: Amino acid or nucleotide sequence. }
+  nct_id: {}
+  patent_number: {}
+  patent_holder: {}
+  homepage_url: { slot_uri: foaf:homepage, range: uri }
+  international_status: {}
+  landing_page_url: { range: uri }
+  pdf_url: { range: uri }
+  work_version: { range: WorkVersion }
+  location_license: {}
+  given_name: { slot_uri: foaf:givenName }
+  family_name: { slot_uri: foaf:familyName }
+  name_alternatives: { multivalued: true }
+  affiliations: { multivalued: true, inlined_as_list: true, range: Affiliation }
+  affiliation_years: { multivalued: true, range: integer }
+  organization_roles: { multivalued: true, inlined_as_list: true, range: OrganizationRole }
+  role_type: {}
+  role_entity_id: { range: uriorcurie }
+  role_works_count: { range: integer }
+  external_db_refs: { multivalued: true, inlined_as_list: true, range: ExternalDatabaseRef }
+  db_name: {}
+  db_id: {}
+  db_url: { range: uri }
+  author_position: { range: AuthorPosition }
+  raw_affiliation_string: {}
+  funder_award_id: {}
+  award_amount_usd: { range: float }
+  currency: {}
+  price: { range: float }
+  price_usd: { range: float }
+  byte_size: { range: integer }
+  media_type: {}
+  compression_format: {}
+  checksum: {}
+  distribution_description: {}
+  benchmark_name: {}
+  metric_name: {}
+  metric_value: { range: float }
+  split: { description: "Dataset split (train, val, test)." }
+  group_name: {}
+  group_value: {}
+  record_set_name: {}
+  record_set_description: {}
+  fields: { multivalued: true, description: Field definitions within a RecordSet. }
+
+  # ===========================================================================
+  # UMLS SLOTS
+  # ===========================================================================
+
+  cui:
+    description: >-
+      UMLS Concept Unique Identifier (CUI). The universal cross-reference
+      hub for biomedical concepts. Format: C followed by 7 digits.
+      With a full UMLS license, each CUI maps to 200+ source vocabularies
+      (SNOMED CT, ICD-10, MeSH, RxNorm, HPO, OMIM, GO, etc.) via
+      MRCONSO.RRF. This is the single most powerful normalization key
+      in biomedicine.
+    pattern: "^C[0-9]{7}$"
+  umls_semantic_types:
+    multivalued: true
+    description: >-
+      UMLS Semantic Type identifiers (TUIs). Format: T followed by 3
+      digits (e.g., T047 = Disease or Syndrome, T116 = Amino Acid,
+      Peptide, or Protein). The 127 semantic types form a hierarchy
+      in the UMLS Semantic Network. Stored in MRSTY.RRF.
+  umls_semantic_group:
+    range: UMLSSemanticGroup
+    description: >-
+      UMLS Semantic Group — coarse clustering of the 127 semantic types
+      into 15 groups (DISO, CHEM, GENE, ANAT, etc.). Essential for
+      fast entity-type filtering and Biolink category alignment.
+  umls_preferred_term:
+    description: >-
+      UMLS preferred term (English). The canonical human-readable name
+      for this concept as designated by the UMLS Metathesaurus.
+  umls_source_vocabs:
+    multivalued: true
+    description: >-
+      Source vocabulary abbreviations (SABs) that contain this concept
+      in UMLS (e.g., SNOMEDCT_US, ICD10CM, MSH, RXNORM, HPO, OMIM).
+      Enables quick lookup of which vocabularies provide identifiers
+      for this entity.
+
+  # ===========================================================================
+  # SEMOPENALEX SLOTS
+  # ===========================================================================
+
+  semopenalex_uri:
+    range: uri
+    description: >-
+      SemOpenAlex RDF entity URI (e.g., https://semopenalex.org/work/W2741809807).
+      Links this entity to the 26-billion-triple SemOpenAlex SPARQL endpoint.
+    slot_uri: schema:sameAs
+  mag_id:
+    range: integer
+    description: >-
+      Microsoft Academic Graph legacy identifier. Preserved by SemOpenAlex
+      (soa:magId) and useful for linking to MAKG archives.
+    slot_uri: soa:magId
+  indexed_in:
+    multivalued: true
+    description: >-
+      Indexing services that cover this work (SemOpenAlex soa:indexedIn).
+      Values: Crossref, PubMed, DOAJ, etc.
+    slot_uri: soa:indexedIn
+  crossref_type:
+    description: >-
+      Crossref type classification (SemOpenAlex soa:crossrefType).
+      More granular than openalex_work_type.
+    slot_uri: soa:crossrefType
+  countries_distinct_count:
+    range: integer
+    description: >-
+      Number of distinct countries represented among authors
+      (SemOpenAlex soa:countriesDistinctCount).
+    slot_uri: soa:countriesDistinctCount
+  institutions_distinct_count:
+    range: integer
+    description: >-
+      Number of distinct institutions represented among authors
+      (SemOpenAlex soa:institutionsDistinctCount).
+    slot_uri: soa:institutionsDistinctCount
+  has_sustainable_development_goal:
+    multivalued: true
+    description: >-
+      UN Sustainable Development Goals aligned with this work
+      (SemOpenAlex soa:hasSustainableDevelopmentGoal, score >= 0.4).
+    slot_uri: soa:hasSustainableDevelopmentGoal
+  cites:
+    multivalued: true
+    range: BibliographicResource
+    description: >-
+      Works cited by this work. Uses SPAR Citation Typing Ontology
+      (cito:cites) as canonical predicate — the standard for RDF
+      citation graphs used by SemOpenAlex.
+    slot_uri: cito:cites
+  two_yr_mean_citedness:
+    range: float
+    description: >-
+      SemOpenAlex 2-year mean citedness for an Author
+      (soa:2YrMeanCitedness).
+    slot_uri: soa:2YrMeanCitedness
+  # SemOpenAlex SKOS concept slots
+  skos_broader:
+    multivalued: true
+    range: Topic
+    description: >-
+      SKOS broader concept(s) in Topic hierarchy (skos:broader).
+      SemOpenAlex models the 65k OpenAlex concepts as a SKOS
+      concept scheme with 6 hierarchical levels.
+    slot_uri: skos:broader
+  skos_related:
+    multivalued: true
+    range: Topic
+    description: Related concepts (skos:related).
+    slot_uri: skos:related
+  skos_pref_label:
+    description: SKOS preferred label (skos:prefLabel).
+    slot_uri: skos:prefLabel
+  skos_in_scheme:
+    description: >-
+      SKOS concept scheme this topic belongs to (skos:inScheme).
+    slot_uri: skos:inScheme
+  wikidata_qid:
+    description: >-
+      Wikidata entity QID (e.g., Q12345). SemOpenAlex links concepts
+      to Wikidata via owl:sameAs.
+  concept_score:
+    range: float
+    description: >-
+      Relevance score of a concept to a work (SemOpenAlex
+      soa:ConceptScore). Range 0.0–1.0.
+  # SemOpenAlex Institution hierarchy slots
+  parent_institution:
+    range: Institution
+    description: >-
+      Parent institution in organizational hierarchy
+      (SemOpenAlex soa:hasParentInstitution).
+    slot_uri: soa:hasParentInstitution
+  child_institutions:
+    multivalued: true
+    range: Institution
+    description: >-
+      Child/subsidiary institutions
+      (SemOpenAlex soa:hasChildInstitution).
+    slot_uri: soa:hasChildInstitution
+  acronym:
+    description: >-
+      Institution acronym (SemOpenAlex dbpedia:acronym).
+
+  # ===========================================================================
+  # NCATS TRANSLATOR SLOTS
+  # ===========================================================================
+
+  infores:
+    description: >-
+      Biolink Information Resource identifier (infores CURIE).
+      Registered at https://biolink.github.io/infores/.
+      Identifies the Knowledge Provider that produced this edge or
+      entity (e.g., infores:pubmedkg, infores:drugbank,
+      infores:cytognosis-scholarly-kg).
+    slot_uri: biolink:provided_by
+  knowledge_level:
+    range: KnowledgeLevel
+    description: >-
+      How confidently an edge/association is asserted. Required for
+      NCATS Translator TRAPI compliance on every edge.
+    slot_uri: biolink:knowledge_level
+  agent_type:
+    range: AgentType
+    description: >-
+      How an edge/association was produced (manual curation, automated
+      pipeline, text mining, etc.). Required for TRAPI compliance.
+    slot_uri: biolink:agent_type
+  translator_canonical_id:
+    range: uriorcurie
+    description: >-
+      NCATS NodeNormalization canonical CURIE for this entity. The
+      preferred identifier as returned by the NodeNormalization service
+      (e.g., NCBIGene:7157 for TP53, MONDO:0005148 for T2DM).
+  translator_equivalent_ids:
+    multivalued: true
+    range: uriorcurie
+    description: >-
+      All equivalent CURIEs as returned by NodeNormalization service.
+      Enables federated queries across Translator KPs that may use
+      different identifier schemes for the same concept.
+  # Translator qualifier slots (for BioEntityAssociation edges)
+  qualified_predicate:
+    description: >-
+      Refined predicate for Translator qualifier system (e.g.,
+      biolink:causes when the base predicate is biolink:affects).
+  subject_aspect_qualifier:
+    range: TranslatorQualifierAspect
+    description: >-
+      What aspect of the subject entity the predicate acts on
+      (e.g., expression, activity, abundance).
+  object_aspect_qualifier:
+    range: TranslatorQualifierAspect
+    description: >-
+      What aspect of the object entity the predicate acts on.
+  subject_direction_qualifier:
+    range: TranslatorDirectionQualifier
+    description: >-
+      Direction of change in the subject (e.g., increased, decreased).
+  object_direction_qualifier:
+    range: TranslatorDirectionQualifier
+    description: >-
+      Direction of change in the object (e.g., upregulated, downregulated).
+  anatomical_context_qualifier:
+    description: >-
+      UBERON CURIE for the anatomical site context of an association
+      (e.g., UBERON:0002107 for liver).
+    range: uriorcurie
+  species_context_qualifier:
+    description: >-
+      NCBITaxon CURIE for the species context of an association
+      (e.g., NCBITaxon:9606 for human).
+    range: uriorcurie
+  temporal_context_qualifier:
+    description: >-
+      Temporal context of an association (date range, developmental
+      stage ontology term, or time-point description).
