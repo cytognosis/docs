@@ -1,0 +1,34 @@
+# Grant & Funding Opportunity Pipeline — Documentation Hub
+
+This folder is the single documentation hub for all grant-related infrastructure in Cytos. It covers the canonical template system, the extraction/harmonization pipeline, testing strategy, and roadmap.
+
+## Contents
+
+| Document | Path | Purpose |
+|---|---|---|
+| **Deep Research Report** | [architecture/deep_research_report.md](architecture/deep_research_report.md) | Comprehensive findings, schema analysis, convergence status, and gap analysis |
+| **Architecture Diagram** | [architecture/pipeline_architecture.md](architecture/pipeline_architecture.md) | End-to-end pipeline flow with component relationships |
+| **Status Matrix** | [status/component_status.md](status/component_status.md) | Per-component implementation status (done/WIP/missing) |
+| **Implementation Plan** | [plans/implementation_plan.md](plans/implementation_plan.md) | Phased plan to complete, test, and ship the pipeline |
+| **Testing Strategy** | [testing/testing_strategy.md](testing/testing_strategy.md) | Unit, integration, and pressure-test plan |
+
+## Quick Links to Source Code
+
+| Module | Path | Status |
+|---|---|---|
+| Parser | [parser.py](../../src/cytos/scholarly/grants/parser.py) | ✅ Production |
+| Extractor | [extractor.py](../../src/cytos/scholarly/grants/extractor.py) | ✅ Production (Llama 3.1; Nemotron pending) |
+| Registry | [registry.py](../../src/cytos/scholarly/grants/registry.py) | ✅ Production |
+| Harmonizer | [harmonizer.py](../../src/cytos/scholarly/grants/harmonizer.py) | ⚠️ Scaffolded (placeholder slot mapping) |
+| Generator | [generator.py](../../src/cytos/scholarly/grants/generator.py) | ⚠️ Scaffolded (LLM-based, needs templates) |
+| Renderer | [render.py](../../src/cytos/scholarly/grants/render.py) | ⚠️ Scaffolded (Jinja2 only, no Pandoc/Quarto wiring) |
+
+## Quick Links to Schemas
+
+| Asset | Path | Status |
+|---|---|---|
+| Manifest (v1.2) | [manifest.yaml](../../src/cytos/scholarly/grants/schemas/manifest.yaml) | ✅ Authoritative |
+| Groups & Presets | [groups.yaml](../../src/cytos/scholarly/grants/schemas/groups.yaml) | ✅ Complete |
+| Opportunity Mappings | [opportunity_mapping.yaml](../../src/cytos/scholarly/grants/schemas/opportunity_mapping.yaml) | ✅ 71 opportunities mapped |
+| Funder Profiles | [funders/](../../src/cytos/scholarly/grants/schemas/funders/) | ⚠️ 17 files / ~25 needed |
+| Slot Files | [slots/](../../src/cytos/scholarly/grants/schemas/slots/) | ⚠️ 27 files; 4 authored, 23 stubs |
