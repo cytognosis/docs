@@ -2502,6 +2502,58 @@ npm install @cytognosis/icons
 
 ---
 
+## Visual Profiles
+
+Cytognosis uses six visual profiles to adapt the design system across different product surfaces and audiences. Each profile scopes typography, color emphasis, spacing, and voice via the CSS attribute `[data-profile="<name>"]`.
+
+### Profile Overview
+
+| Profile | Surface | Default Type | Palette Emphasis | Voice |
+|---------|---------|-------------|-----------------|-------|
+| **Foundation** | cytognosis.org, decks, social, press | Inter / Newsreader / JetBrains Mono | Signature triad gradient | Visionary, hopeful |
+| **Clinical** | Patient + consumer app | Inter / Source Serif Pro / JetBrains Mono | Muted 300-shade pastels | Calm, reassuring |
+| **Research** | Cytoverse workbench, dashboards | IBM Plex Sans + Plex Mono | Indigo + magenta alert | Precise, neutral |
+| **Lab** | CLI, editor, dev docs, terminal | Recursive (variable axes) | Violet-300 on ink | Technical, playful |
+| **Companion** | ND daily use, Yar, mood/med tracking | Lexend / Atkinson Hyperlegible Mono | Muted pastels, cognitive signals | Gentle, supportive |
+| **Crisis** | Health alerts, urgent states | Inter (18px+) / JetBrains Mono | High contrast, coral urgency | Clear, direct |
+
+### Companion Profile
+
+The Companion profile implements evidence-based neurodivergent-first design principles. It serves as the default for Yar daily use, mood/med tracking, and any surface targeting neurodivergent individuals managing daily health.
+
+Key design decisions:
+
+- **Typography**: Lexend as the default font (validated for reading-fluency improvement), with user toggle to Atkinson Hyperlegible, Inter, or OpenDyslexic via `[data-font]` attribute.
+- **Spacing**: 1.7 line-height, 1.5em paragraph gap, 48px touch targets, max 65 characters per line width.
+- **Colors**: Muted 300-shade pastels as default. Cognitive-signal colors encode health dimensions (Focus=Azure-300, Mood=Violet-300, Sleep=Teal-300, Stress=Coral-300, Energy=Magenta-300).
+- **Motion**: Off by default (`--cg-reduce-motion: 1`). Users opt in to animations, not out.
+- **Gamification**: Streak glow, achievement background, progress fill/track, reward accent. Never punitive.
+- **Density control**: `[data-density="compact|comfortable|spacious"]` attribute adjusts padding, gap, and line-height.
+
+### Crisis Profile
+
+The Crisis profile handles urgent health states where clarity and speed of action are the only priorities. It activates when the crisis detector fires or when explicit escalation occurs, and deactivates when the state resolves.
+
+Key design decisions:
+
+- **Typography**: Inter at 18px+ minimum body size. JetBrains Mono for data readouts.
+- **Layout**: Single-action focus per screen. No distractions, no secondary actions, no decorative elements.
+- **Colors**: High contrast mode with coral urgency accents. Maximum readability under stress.
+- **Touch targets**: 56px minimum (larger than standard 44px) to accommodate trembling or rushed interaction.
+- **Voice**: Clear, direct, zero ambiguity. Every word earns its place.
+
+### Profile Selection Decision Tree
+
+- Prospective audience (investors, press, partners): **Foundation**
+- Someone who just learned something worrying about their body: **Clinical**
+- Neurodivergent individual managing daily health: **Companion**
+- Health alert requiring immediate action: **Crisis**
+- Scientists with a hypothesis: **Research**
+- Developers shipping code: **Lab**
+- Public-facing default: **Foundation**; internal default: **Research**; ND-facing default: **Companion**
+
+---
+
 ## Appendix
 
 ### Glossary

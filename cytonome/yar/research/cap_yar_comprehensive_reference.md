@@ -195,7 +195,7 @@ flowchart TB
 | `routes_model.py` | `GET /model/status`, `POST /model/test` | Model router introspection |
 | `routes_voice.py` | `POST /voice/turn`, voice conversation management | Mobile voice capture pipeline |
 | `routes_planning.py` | `POST /plan/daily`, `GET /plan/daily` | Gentle daily planning (no shame/streaks) |
-| `routes_communication.py` | `POST /communication/translate` | Communication Translator Lite |
+| `routes_communication.py` | `POST /communication/coach` | Communication Coach Lite |
 | `routes_persona.py` | Persona endpoints | Persona/tone management |
 | `routes_retrieval.py` | `POST /retrieve`, `GET /retrieve` | Semantic retrieval with Gemma reranking |
 | `routes_export.py` | Export endpoints | JSON/Markdown export |

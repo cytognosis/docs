@@ -311,7 +311,7 @@ Not verified in this environment:
 - Backend edge `http_json` is an integration interface, not an embedded LiteRT runtime.
 - Central E4B through Ollama depends on the configured model being installed locally.
 - Anytype write execution depends on real MCP configuration and write-tool discovery.
-- This slice does not implement browser extension import, Hypothesis/Memex workflows, personalization, health tracking, planning, or communication translation.
+- This slice does not implement browser extension import, Hypothesis/Memex workflows, personalization, health tracking, planning, or communication coaching.
 
 ## Next Steps
 

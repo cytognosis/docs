@@ -39,7 +39,7 @@ Yar is built by neurodivergent minds, for everyone. It runs on your phone, your 
 | Pillar | What It Does | How It Feels |
 |---|---|---|
 | **Layer 1: Friction Reduction** | Captures thoughts before they vanish. Routes brain dumps to typed objects. Quick voice capture. Browser-aware contextual capture. | Immediate relief. "Finally, something that keeps up with my brain." |
-| **Layer 2: Cognitive & Emotional Skill Building** | Embeds CBT-adjacent principles naturally (like MIT's Guardians). Communication translation. Gentle reflection prompting. Pattern surfacing. | Invisible growth. "I didn't realize I was learning to do this differently." |
+| **Layer 2: Cognitive & Emotional Skill Building** | Embeds CBT-adjacent principles naturally (like MIT's Guardians). Communication coaching. Gentle reflection prompting. Pattern surfacing. | Invisible growth. "I didn't realize I was learning to do this differently." |
 | **Layer 3: Relational Companionship** | Longitudinal understanding of your cognitive patterns, communication preferences per person, emotional aftercare after hard conversations, vocal biomarker tracking over time. | Trust. "It actually knows me." |
 
 ### 1.3 Target Audience
@@ -47,7 +47,7 @@ Yar is built by neurodivergent minds, for everyone. It runs on your phone, your 
 | Segment | What They're Drowning In | How Yar Helps |
 |---|---|---|
 | **ADHD adults** | Thought loss, executive dysfunction, shame spirals from failed systems | Voice capture before thoughts vanish; gentle planning without guilt; brain-dump-to-structure routing |
-| **Autistic adults** | Communication mismatch, social interpretation load, sensory overwhelm | Bidirectional Communication Translator; social script interpretation; consistent, predictable interface |
+| **Autistic adults** | Communication mismatch, social interpretation load, sensory overwhelm | Bidirectional Communication Coach; social script interpretation; consistent, predictable interface |
 | **2e (twice-exceptional)** | Brilliant but can't operationalize; deep knowledge with no organization | Schema-aware knowledge capture; auto-linking papers↔code↔people↔projects; semantic retrieval |
 | **Late-diagnosed adults** | Decades of coping strategies that half-work; grief + relief + confusion | Emotional aftercare; reflection without judgment; longitudinal pattern visibility |
 | **ND researchers & students** | Hyperfocus without capture; context-switching devastation; paper mountains | Browser extension captures context in-flow; Anytype KG; gentle task management |
@@ -63,7 +63,7 @@ Yar is built by neurodivergent minds, for everyone. It runs on your phone, your 
 
 #### Tier 2: Skill Building (invisible growth)
 
-5. **Communication Translation** (bidirectional):
+5. **Communication Coach** (bidirectional):
    - **ND → NT moderation**: "I need to say this to my boss..." → Translates emotional content into professional language while preserving intent
    - **NT → ND interpretation**: "My manager said 'we should discuss your priorities'..." → Surfaces possible subtext, implicit expectations, and emotional undertones that may not be obvious
 6. **Emotional aftercare**: After a hard conversation → "That sounded intense. Want to process what happened?" → Reduces replay loops by structured reflection
@@ -94,7 +94,7 @@ Yar is built by neurodivergent minds, for everyone. It runs on your phone, your 
 | Principle | What It Means in Practice |
 |---|---|
 | **No shame, ever** | No streaks. No red overdue tasks. No "you missed 3 days." No productivity language. No gamification that punishes inconsistency. |
-| **Identity-safe** | Never a masking engine. Communication translation preserves your intent and teaches the bridge, not the mask. |
+| **Identity-safe** | Never a masking engine. Communication coaching preserves your intent and teaches the bridge, not the mask. |
 | **Frictionless** | Support where cognition already happens (browser, voice). No context-switching tax. |
 | **Trust-first** | Health tracking (vocal biomarkers, mood) is a natural extension AFTER relationship trust is built, not a day-1 surveillance feature. |
 | **Teaching fishing** | Skill building embedded in companionship, not as separate "lessons" or "exercises." Growth happens naturally through use. |
@@ -106,7 +106,7 @@ Yar is built by neurodivergent minds, for everyone. It runs on your phone, your 
 | Product | What Yar Takes From It | What Yar Does Differently |
 |---|---|---|
 | **Goblin Tools** | ND-specific task decomposition | Yar adds relational context + longitudinal tracking |
-| **Finch** | Emotional companion, no shame | Yar adds knowledge capture + communication translation |
+| **Finch** | Emotional companion, no shame | Yar adds knowledge capture + communication coaching |
 | **Tana** | Structured knowledge capture, supertags | Yar adds voice-first, ND-aware, on-device |
 | **Hypothesis/Memex** | Browser annotation + highlights | Yar adds AI interpretation + auto-linking to personal KG |
 | **MIT Guardians** | CBT principles embedded in gameplay | Yar embeds CBT in conversation, not gamification |

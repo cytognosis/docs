@@ -173,7 +173,7 @@ The following are intentionally out of scope for the skeleton MVP:
 - health tracking,
 - diagnosis,
 - treatment advice,
-- full communication translator,
+- full communication coach,
 - full planning engine,
 - personalization model training,
 - full Neuroverse phenotype stack.

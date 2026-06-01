@@ -28,7 +28,7 @@ Yar is built by neurodivergent minds, for everyone. It runs on your phone, your 
 | Pillar | What It Does | How It Feels |
 |---|---|---|
 | **Layer 1: Friction Reduction** | Captures thoughts before they vanish. Routes brain dumps to typed objects. Quick voice capture. Browser-aware contextual capture. | Immediate relief. "Finally, something that keeps up with my brain." |
-| **Layer 2: Cognitive & Emotional Skill Building** | Embeds CBT-adjacent principles naturally (like MIT's Guardians). Communication translation. Gentle reflection prompting. Pattern surfacing. | Invisible growth. "I didn't realize I was learning to do this differently." |
+| **Layer 2: Cognitive & Emotional Skill Building** | Embeds CBT-adjacent principles naturally (like MIT's Guardians). Communication coaching. Gentle reflection prompting. Pattern surfacing. | Invisible growth. "I didn't realize I was learning to do this differently." |
 | **Layer 3: Relational Companionship** | Longitudinal understanding of your cognitive patterns, communication preferences per person, emotional aftercare after hard conversations, vocal biomarker tracking over time. | Trust. "It actually knows me." |
 
 ### 1.3 Target Audience
@@ -36,7 +36,7 @@ Yar is built by neurodivergent minds, for everyone. It runs on your phone, your 
 | Segment | What They're Drowning In | How Yar Helps |
 |---|---|---|
 | **ADHD adults** | Thought loss, executive dysfunction, shame spirals from failed systems | Voice capture before thoughts vanish; gentle planning without guilt; brain-dump-to-structure routing |
-| **Autistic adults** | Communication mismatch, social interpretation load, sensory overwhelm | Bidirectional Communication Translator; social script interpretation; consistent, predictable interface |
+| **Autistic adults** | Communication mismatch, social interpretation load, sensory overwhelm | Bidirectional Communication Coach; social script interpretation; consistent, predictable interface |
 | **2e (twice-exceptional)** | Brilliant but can't operationalize; deep knowledge with no organization | Schema-aware knowledge capture; auto-linking papers↔code↔people↔projects; semantic retrieval |
 | **Late-diagnosed adults** | Decades of coping strategies that half-work; grief + relief + confusion | Emotional aftercare; reflection without judgment; longitudinal pattern visibility |
 | **ND researchers & students** | Hyperfocus without capture; context-switching devastation; paper mountains | Browser extension captures context in-flow; Anytype KG; gentle task management |
@@ -52,9 +52,9 @@ Yar is built by neurodivergent minds, for everyone. It runs on your phone, your 
 
 #### Tier 2: Skill Building (invisible growth)
 
-5. **Communication Translation** (bidirectional):
-   - **ND → NT moderation**: "I need to say this to my boss..." → Translates emotional content into professional language while preserving intent
-   - **NT → ND interpretation**: "My manager said 'we should discuss your priorities'..." → Surfaces possible subtext, implicit expectations, and emotional undertones that may not be obvious
+5. **Communication Coach** (bidirectional):
+   - **ND → NT moderation**: "I need to say this to my boss..." → Yar coaches you through expressing your intent clearly while preserving your authentic voice
+   - **NT → ND interpretation**: "My manager said 'we should discuss your priorities'..." → Yar coaches you through interpreting subtext and implicit expectations
 6. **Emotional aftercare**: After a hard conversation → "That sounded intense. Want to process what happened?" → Reduces replay loops by structured reflection
 7. **Pattern surfacing**: "You've been capturing a lot about sleep this week. Is that something you want to think about together?"
 8. **Gentle cognitive scaffolding**: Embeds CBT-adjacent principles naturally into conversations, not as exercises or worksheets
@@ -83,7 +83,7 @@ Yar is built by neurodivergent minds, for everyone. It runs on your phone, your 
 | Principle | What It Means in Practice |
 |---|---|
 | **No shame, ever** | No streaks. No red overdue tasks. No "you missed 3 days." No productivity language. No gamification that punishes inconsistency. |
-| **Identity-safe** | Never a masking engine. Communication translation preserves your intent and teaches the bridge, not the mask. |
+| **Identity-safe** | Never a masking engine. Communication coaching preserves your intent and teaches the bridge, not the mask. |
 | **Frictionless** | Support where cognition already happens (browser, voice). No context-switching tax. |
 | **Trust-first** | Health tracking (vocal biomarkers, mood) is a natural extension AFTER relationship trust is built, not a day-1 surveillance feature. |
 | **Teaching fishing** | Skill building embedded in companionship, not as separate "lessons" or "exercises." Growth happens naturally through use. |
@@ -95,8 +95,8 @@ Yar is built by neurodivergent minds, for everyone. It runs on your phone, your 
 | Product | What Yar Takes From It | What Yar Does Differently |
 |---|---|---|
 | **Goblin Tools** | ND-specific task decomposition | Yar adds relational context + longitudinal tracking |
-| **Finch** | Emotional companion, no shame | Yar adds knowledge capture + communication translation |
-| **Tana** | Structured knowledge capture, supertags | Yar adds voice-first, ND-aware, on-device |
+| **Finch** | Emotional companion, no shame | Yar adds knowledge capture + communication coaching |
+| **Tana** | Structured knowledge capture, supertags, mobile voice agent for ambient info capture | Yar adds ND-aware persona system, on-device AI, sensor integration |
 | **Hypothesis/Memex** | Browser annotation + highlights | Yar adds AI interpretation + auto-linking to personal KG |
 | **MIT Guardians** | CBT principles embedded in gameplay | Yar embeds CBT in conversation, not gamification |
 | **Tiimo/Leantime** | ND-aware task management | Yar is companion-first, not productivity-first |
@@ -355,19 +355,44 @@ Only evaluate for Phase 4+ if user research shows full-duplex naturalism matters
 
 ### Phase 6: Persona System (Week 10-12)
 
-#### 2.6.1 Implement persona schema
+#### 2.6.1 Multi-Persona Architecture
 
-Use the schema proposed in [01_cytonome_master_reference.md](file:///home/mohammadi/.gemini/antigravity/brain/3a11be50-0404-4087-86d2-471b9987ec43/artifacts/01_cytonome_master_reference.md) §8.2.
+Yar's persona system goes beyond a static personality configuration. Each persona captures a comprehensive character identity including:
 
-Key implementation:
-- YAML persona definition loaded at startup
-- Persona parameters injected into prompt templates
-- CAP-Lite constraints enforced based on persona's authority level
-- Visual state machine drives Rive animation (idle → listening → thinking → speaking → empathic)
+- **Personality and character traits**: warmth, patience, humor style, formality level, energy, directness
+- **Relationship type**: coach, buddy, guardian, mom, partner, mentor, accountability partner, study buddy
+- **Voice identity**: ElevenLabs voice clone or selection, pitch, speed, emotional range
+- **Visual identity**: Rive animation style, color palette, avatar appearance
+- **Communication style**: vocabulary preferences, sentence length, emoji usage, metaphor density
+- **Behavioral boundaries**: what the persona will and won't do (enforced via CAP authority levels)
 
-#### 2.6.2 Character Card V3 compatibility
+#### 2.6.2 Adaptive Persona Learning
 
-Export Yar's persona as a CCv3-compatible JSON for interoperability with other agent systems:
+The key ND-specific innovation: Yar reduces the cognitive tax of manual configuration by learning personas adaptively during natural interactions.
+
+1. **Interaction-driven refinement**: Yar observes which phrasings, tones, and approaches resonate with the user and adjusts automatically. No settings pages required.
+2. **Multi-persona support**: Users can have multiple personas (e.g., a gentle "Mom" for emotional support days, a direct "Coach" for work sprints, a playful "Buddy" for creative sessions).
+3. **Context-aware persona switching**: Yar learns which persona the user prefers in different moods, times of day, and activity contexts. During a low-energy morning, Yar might default to the nurturing "Guardian" persona. During a focused work block, it switches to the efficient "Coach."
+4. **Mood-context persona model**: A lightweight on-device model maps (mood_state, time_of_day, activity_type, energy_level) → preferred_persona. This model trains continuously from implicit feedback (engagement duration, follow-through rate, explicit persona switches).
+
+#### 2.6.3 ElevenLabs Voice Integration
+
+Each persona gets a distinct voice via ElevenLabs:
+
+| Persona Type | Voice Profile | Emotional Range |
+|---|---|---|
+| Coach | Confident, clear, moderate pace | Encouraging → firm |
+| Buddy | Warm, casual, slightly faster | Playful → supportive |
+| Guardian | Gentle, slow, deep | Calming → protective |
+| Mom | Nurturing, melodic, patient | Tender → concerned |
+| Partner | Intimate, variable pace | Affectionate → honest |
+| Mentor | Measured, articulate, thoughtful | Curious → proud |
+
+Voice selection persists per-persona. ElevenLabs API handles TTS with emotion control. Fallback to platform TTS when offline.
+
+#### 2.6.4 Character Card V3 Compatibility
+
+Export Yar's persona as a CCv3-compatible JSON for interoperability:
 
 ```python
 def to_character_card_v3(persona: YarPersona) -> dict:
@@ -377,14 +402,130 @@ def to_character_card_v3(persona: YarPersona) -> dict:
         "data": {
             "name": persona.identity.name,
             "personality": persona.identity.specialty,
+            "relationship_type": persona.identity.relationship_type,
+            "voice_id": persona.voice.elevenlabs_voice_id,
             "system_prompt": _build_system_prompt(persona),
             "extensions": {
                 "cap_profile": persona.constraints.cap_profile,
                 "authority_level": persona.behavior.authority_level,
+                "mood_context_model": persona.learning.mood_context_weights,
             }
         }
     }
 ```
+
+---
+
+### Phase 7: Universal Sensor Adapter Protocol (Week 12-16)
+
+> **Full documentation**: [Consolidated Sensor Reference](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/unified-sensor-report.md)
+> **Schema system**: [Cytos LinkML Sensor Schemas](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/)
+> **Standards crosswalk**: [Semantic Alignment Specification](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/semantic-alignment.md)
+
+#### 2.7.1 The Problem
+
+Health-aware cognitive companions need sensor data (heart rate variability, sleep quality, activity levels, skin conductance, brain connectivity) but every sensor speaks a different protocol. Users should not need to become systems integrators to connect their Oura ring, Apple Watch, or Cytognosis mood tracker.
+
+#### 2.7.2 Sensor MCP: MCP for Sensors
+
+Yar introduces a **Universal Sensor Adapter Protocol (USAP)**, modeled on the MCP (Model Context Protocol) pattern but purpose-built for real-time physiological sensor streams. The USAP operates as the runtime layer over the [Cytos LinkML sensor schema system](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml) (35+ classes, SOSA/SSN-aligned):
+
+| Component | Purpose | Cytos Schema Mapping |
+|---|---|---|
+| **Sensor Descriptor** | Declares sensor type, data schema, sampling rate, units, calibration metadata | `Sensor` + `Device` + `ObservableProperty` + `SystemCapability` |
+| **Stream Adapter** | Normalizes raw sensor data into Yar's internal signal format | `Observation` with typed `Result` (scalar, coded, waveform) |
+| **Signal Router** | Routes normalized signals to the appropriate Yar subsystem (Brain Weather, Pause Day detection, vocal biomarker correlation) | `Channel` routing to `ObservationCollection` |
+| **Privacy Gate** | CAP-enforced boundary: user controls which signals are stored, which are ephemeral, and which are shared | `DUO:` data use ontology bindings |
+
+#### 2.7.3 Supported Sensor Classes
+
+| Sensor Class | Example Devices | Data Type | Cytos Schema | Implementation Guide |
+|---|---|---|---|---|
+| **Wearable rings** | Oura Ring, RingConn | HRV, sleep stages, temperature, activity | [vendor_oura.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_oura.yaml) | [Implementing Wearables](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-wearables.md) |
+| **Smartwatches** | Apple Watch, Pixel Watch, Fitbit | HR, SpO2, stress, steps, activity | [vendor_fitbit.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_fitbit.yaml) | [Implementing Wearables](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-wearables.md) |
+| **Smartphone sensors** | Built-in accelerometer, GPS, screen, apps | Motion, location, digital behavior, ESM | [profile_aware.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml) | [Implementing AWARE](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-aware.md) |
+| **Health instruments** | PHQ-9, GAD-7, ASRS, PSQI, WHO-5 | Self-report scores, subscales | [selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml) | [Implementing Health Instruments](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-health-instruments.md) |
+| **CGM** | Dexcom G6/G7, Libre | Continuous glucose | [vendor_dexcom.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_dexcom.yaml) | TBD |
+| **Brain connectomic** | Muse, Neurosity Crown | EEG, functional connectivity | Core `Observation` + `WaveformResult` | TBD |
+| **Environmental** | Air quality, light, noise sensors | CO2, lux, dB levels | Core `Observation` | TBD |
+| **Voice/audio** | Built-in mic, OMI wearable | Vocal biomarkers, prosody | Core `Observation` (13 fields) | [sensor-architecture.md §5](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-architecture.md) |
+
+#### 2.7.4 Adapter Architecture
+
+The runtime `Sensor` Protocol is the Yar-facing interface. A bridge layer (`cytos_bridge.py`) converts runtime observations into Cytos LinkML instances for persistence and semantic interoperability:
+
+```python
+from typing import AsyncIterator, Protocol
+
+class Sensor(Protocol):
+    """Universal sensor interface. All sensors implement this.
+
+    Runtime facade over the full Cytos LinkML schema:
+      - SensorDescriptor → Cytos Sensor + Device + ObservableProperty
+      - SensorObservation → Cytos Observation + Result
+      - session_id → Cytos Session + Deployment
+
+    See: cytos/schemas/domains/sensor/core/core.yaml
+    """
+
+    @property
+    def descriptor(self) -> SensorDescriptor:
+        """Sensor metadata: identity, modality, capabilities, output schema."""
+        ...
+
+    async def initialize(self) -> None:
+        """Load models, connect to hardware, validate dependencies."""
+        ...
+
+    async def start(self, session_id: str) -> None:
+        """Begin producing observations for a session."""
+        ...
+
+    async def stop(self) -> None:
+        """Stop producing observations. Release resources."""
+        ...
+
+    async def observe(self, raw_input: bytes | None = None) -> SensorObservation:
+        """Produce a single observation.
+
+        For pull-based sensors (wearables), raw_input is None; the sensor
+        polls its source. For push-based sensors (audio, video), raw_input
+        contains the data chunk.
+        """
+        ...
+
+    def stream(
+        self, raw_input_stream: AsyncIterator[bytes]
+    ) -> AsyncIterator[SensorObservation]:
+        """Produce a stream of observations from a stream of inputs."""
+        ...
+
+    async def teardown(self) -> None:
+        """Clean up. Release models from memory."""
+        ...
+```
+
+#### 2.7.5 Standards Alignment
+
+Every sensor observation aligns with four health data standards through the [Cytos schema profiles](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/):
+
+| Standard | Profile | Coverage |
+|---|---|---|
+| W3C SOSA/SSN | [profile_sosa.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_sosa.yaml) | Full (class_uri + slot_uri bindings for lossless RDF round-trip) |
+| IEEE 1752.1 / Open mHealth | [profile_ieee1752.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_ieee1752.yaml) | Full (heart-rate, BP, body-temp, glucose, SpO2, sleep, activity) |
+| HL7 FHIR R5 | [profile_fhir.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_fhir.yaml) | Full (Observation, Device, DeviceMetric, vital signs profiles) |
+| AWARE Framework | [profile_aware.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml) | Full (25 smartphone sensors + ESM) |
+
+Machine-readable crosswalks: [SSSOM mapping sets](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/crosswalks/)
+
+#### 2.7.6 Plug-and-Play User Experience
+
+Users add sensors through a simple discovery flow:
+1. Yar scans for available sensors (BLE, USB, network)
+2. Sensor adapter auto-detected from descriptor
+3. User approves data access with granular privacy controls
+4. Sensor data flows into Brain Weather and persona context
+5. No configuration files, no API keys, no developer knowledge required
 
 ---
 
@@ -441,7 +582,8 @@ flowchart LR
 | In-process CAP guard | Fast, no network hop | Can't prove transport independence | Phase 1 (sidecar implementation) |
 | 48KB monolithic Anytype adapter | Works | Untestable, unmaintainable | Phase 2 (subpackage refactor) |
 | Static web shell | Zero dependencies | Ugly, limited functionality | Phase 4 (evaluate enhanced static vs React) |
-| No persona system | Not needed for hackathon | Users have no sense of Yar's character | Phase 6 |
+| No persona system | Not needed for hackathon | Users have no sense of Yar's character. No adaptive persona learning. | Phase 6 (expanded with multi-persona, ElevenLabs, mood-context switching) |
+| No sensor integration | Not needed for MVP | Cannot correlate physiological data with cognitive state | Phase 7 (Universal Sensor Adapter Protocol) |
 | Platform TTS only | Zero effort | Robotic, not warm | When voice quality matters to users |
 | No distributed runtime | Not needed for single-user | Blocks multi-device sync | Future phase (Dapr + NATS) |
 | No graph RAG | Not needed for MVP | Limits retrieval quality | Future phase |
