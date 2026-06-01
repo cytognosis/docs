@@ -37,7 +37,7 @@ Cytognosis Platform = "GPS for Health"
 | Repo | Docs Section |
 |------|-------------|
 | Yar | `cytonome/yar/` |
-| CAP → cytoplex | `cytonome/cytoplex/` |
+| CAP → cytoplex | `cytonome/yar/cytoplex/` |
 | cytos | `cytoverse/cytos/` |
 | cytoskeleton | `toolchain/cytoskeleton/` |
 | cytocast | `toolchain/cytocast/` |
