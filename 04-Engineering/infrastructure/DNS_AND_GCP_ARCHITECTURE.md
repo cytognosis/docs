@@ -163,17 +163,74 @@ Standard Google Workspace MX for all three domains:
 
 ---
 
-## 7. Pending Remediation Items
+## 7. DNS Remediation Checklist (Verified 2026-06-14)
 
-| Item | Priority | Detail |
-|---|---|---|
-| Attach `cytohost-ip` to VM | High | Prevents DNS breakage on VM restart; update all `*.cytognosis.org` A records to 136.111.39.188 after attach |
-| Fix `cg-ai` DKIM record | High | `google._domainkey.cytognosis.ai` is empty; populate with real DKIM key |
-| DNS zone deduplication | Medium | Delete `org-zone`, `cg-com`, `ai-zone` after pre-deletion checklist above |
-| Migrate `zotero.cytognosis.org` record | Medium | A → 34.61.134.177 exists only in `org-zone`; add to `cg-org` |
-| Migrate Anthropic TXT to `com-zone` | Medium | Required before deleting `cg-com` |
-| Verify registrar delegation | Medium | Confirm correct NS delegation at Squarespace for each domain |
-| Fix Anthropic TXT typo check | Low | `anthropic-domain-verification-1fpkv3=RwAA...` (vs RWaA) — verify against Anthropic console |
+Six Cloud DNS zones, three duplicate pairs. Authoritative delegation: `.org` → `cg-org` (ns-cloud-d), `.com` → `com-zone` (ns-cloud-c), `.ai` → `ai-zone` (ns-cloud-e).
+
+> [!IMPORTANT]
+> Items marked **email-sensitive / irreversible** require care. A misconfigured SPF, DMARC, or DKIM record can silently break outbound email delivery for all cytognosis.ai senders. Make changes one record at a time and allow 24-48 hours for propagation before proceeding to the next item.
+
+### Done
+
+- [x] `zotero.cytognosis.org A 34.61.134.177` added to `cg-org` (was only in `org-zone`)
+- [x] `cytohost-static` static IP reservation created; `34.171.23.255` promoted from ephemeral to static (2026-06-14)
+
+### Pending — Infrastructure (safe, non-email)
+
+- [ ] **Release orphaned reserved IP `cytohost-ip` (136.111.39.188)** — RESERVED but not attached to any VM; safely releasable once `cytohost-static` is confirmed stable. Run: `gcloud compute addresses delete cytohost-ip --region us-central1`
+- [ ] **Verify registrar delegation per domain** — Confirm at Squarespace that each domain's NS records match the authoritative zone's nameservers: `.org` → ns-cloud-d, `.com` → ns-cloud-c, `.ai` → ns-cloud-e. Verdicts above are based on record completeness, not confirmed registrar state.
+- [ ] **Decide `.ai` apex hosting** — `ai-zone` A records (216.239.x.x) point to Google Sites. Confirm whether `cytognosis.ai` should remain a Google Sites landing page or migrate to the infrastructure LB (34.98.121.181 = `cytognosis-ip`). This decision gates the zone consolidation below.
+
+### Pending — Email-Sensitive (require care, do in order)
+
+> [!CAUTION]
+> Each item below touches live DNS records that affect email delivery. Apply one record at a time. Verify with `dig TXT cytognosis.ai` or [Google Admin Toolbox](https://toolbox.googleapps.com/apps/checkmx/) before proceeding to the next item.
+
+**For `cytognosis.ai` (live zone: `ai-zone`, ns-cloud-e):**
+
+- [ ] **Add SPF to `ai-zone`** — `ai-zone` currently lacks an SPF record. `cg-ai` has `v=spf1 include:_spf.google.com ~all`. Add to `ai-zone` apex:
+  ```
+  TXT  "v=spf1 include:_spf.google.com ~all"
+  ```
+- [ ] **Add DMARC to `ai-zone`** — `ai-zone` has no `_dmarc` record. Copy from `cg-ai` (p=none):
+  ```
+  _dmarc.cytognosis.ai.  TXT  "v=DMARC1; p=none; rua=mailto:dmarc@cytognosis.ai"
+  ```
+- [ ] **Fix DKIM in `ai-zone`** — `google._domainkey.cytognosis.ai` in `cg-ai` is an **empty TXT record** (DKIM signing will fail for cytognosis.ai email). Get the real DKIM key from Google Workspace Admin > Apps > Google Workspace > Gmail > Authenticate email, then add to `ai-zone`:
+  ```
+  google._domainkey.cytognosis.ai.  TXT  "v=DKIM1; k=rsa; p=<real-key-from-admin>"
+  ```
+
+**For `cytognosis.com` (live zone: `com-zone`, ns-cloud-c):**
+
+- [ ] **Copy Anthropic domain verification TXT to `com-zone`** — Present in `cg-com` only. Must be migrated before `cg-com` is deleted. Value (from `cg-com`):
+  ```
+  cytognosis.com.  TXT  "anthropic-domain-verification-1fpkv3=..."
+  ```
+  Retrieve exact value from `cg-com` with: `gcloud dns record-sets list --zone=cg-com --name=cytognosis.com. --type=TXT`
+
+### Pending — Zone Cleanup (do last, after all records verified)
+
+> [!WARNING]
+> Delete zones only after: (1) all email-sensitive records above are live in the authoritative zones, (2) registrar delegation is confirmed, and (3) you have verified email delivery still works for all three domains.
+
+- [ ] Delete `org-zone` (cytognosis.org non-authoritative duplicate, ns-cloud-b)
+- [ ] Delete `cg-com` (cytognosis.com non-authoritative duplicate, ns-cloud-a)
+- [ ] Delete `cg-ai` (cytognosis.ai non-authoritative duplicate, ns-cloud-d) — only after records copied to `ai-zone`
+
+**Delete command pattern:** `gcloud dns managed-zones delete <zone-name> --project=cytognosis-infrastructure`
+Zones must be empty (all non-SOA/NS records deleted) before the zone itself can be deleted.
+
+---
+
+## 8. Static IP Summary
+
+| Name | Address | Region | Status | Usage |
+|---|---|---|---|---|
+| `cytohost-static` | 34.171.23.255 | us-central1 | ATTACHED to cytohost | All `*.cytognosis.org` subdomain A records |
+| `cytognosis-ip` | 34.98.121.181 | global | RESERVED | `cytognosis.ai` A record (CDN/LB frontend) |
+| `core-services-ip` | 34.70.62.117 | us-central1 | RESERVED | Legacy records in `org-zone` (stale zone, pending delete) |
+| `cytohost-ip` | 136.111.39.188 | us-central1 | **ORPHANED — releasable** | Was planned for cytohost; replaced by `cytohost-static` |
 
 ---
 
@@ -182,6 +239,7 @@ Standard Google Workspace MX for all three domains:
 | Document | Relationship |
 |---|---|
 | [Architecture Overview](architecture.md) | Parent topology |
+| [QUICK_REFERENCE.md](QUICK_REFERENCE.md) | Master infra quick reference including DNS zone table |
 | [GCP Setup](gcp-setup.md) | Bucket and IAM detail |
 | [Hosting & Deployment](HOSTING_AND_DEPLOYMENT.md) | Cloud Run + CDN frontend |
 | [Compute: Node Types](compute/node-types.md) | cytohost VM detail |
