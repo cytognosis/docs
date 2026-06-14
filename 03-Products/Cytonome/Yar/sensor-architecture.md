@@ -70,3 +70,13 @@ The first sensor. Receives 16kHz audio, outputs per-utterance emotion + vocal bi
 | Contextual | Ambient noise, time of day | Lowest sensitivity |
 
 **Multi-language is built in from day one.** Paralinguistic features (pitch, jitter) are universal. Text sensors use multilingual models (mBERT, XLM-R).
+
+---
+
+## See Also
+
+| Doc | Relationship |
+|-----|-------------|
+| [`04-Engineering/cytoplex/interop/README.md`](../../04-Engineering/cytoplex/interop/README.md) | CAP interoperability runbook; defines how Yar sensing adapters connect to external systems via MCP/A2A |
+| [`03-Products/Cytonome/Yar/yar-product-implementation.md`](./yar-product-implementation.md) | Product-level implementation details; complements this sensor-layer architecture |
+| [`05-Research/neuroverse/README.md`](../../../05-Research/neuroverse/README.md) | Neuroverse is the first deployment of multimodal Yar sensing in a clinical research context |
