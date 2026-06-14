@@ -1,9 +1,60 @@
 # Reorg Notes: Universal Taxonomy 2026-06-12
 
 Branch: `reorg/universal-taxonomy-2026-06-12`
-Date: 2026-06-14
-Executor: Claude Sonnet 4.6 (subagent)
-Total files in repo after reorg: 536 (down from 539 due to 3 dedups removed)
+Date started: 2026-06-12. Phase 3a completed: 2026-06-14.
+Blueprint: v8 (BLUEPRINT_v8_universal_taxonomy.md in outputs).
+Executor: Claude Sonnet/Fable.
+
+## Phase 3a Status: COMPLETE (2026-06-14)
+
+All 6 commits applied to branch. Tree matches v8 final taxonomy. Ready to merge when Shahin reviews.
+
+**Commit log:**
+1. `6aa0c90` — Remove duplicate root documentation-standards.md; clean empty placeholder dirs
+2. `9adf895` — Add REORG_NOTES.md with full old→new mapping, dedups, and inbox list
+3. `c35e416` — Remove agent-work validation artifacts and _archive (git holds history; v8: no lifecycle folders)
+4. `c34429c` — Renumber layers for v8 taxonomy (02-Products→03, 03-Eng→04, 04-Res→05, 05-Ops→06, 06-Design→07)
+5. `da1c5ae` — Create 02-Funding layer from 01-Strategy/funding and fundraising
+6. `c66c2fe` — v8 structural corrections (YC submissions → 02-Funding/YC/submissions/; sensing schema → cytos/sensing-schema/; remove cytoplex/v1-baseline snapshot)
+
+**Final file count:** ~516 tracked files (down from 539: 3 dedups removed + 20 cytoplex v1-baseline snapshot files removed)
+
+## Final top-level tree
+
+```
+00-Inbox/        — unsorted intake (5 files parked)
+01-Strategy/     — master plan, platform strategy, data strategy
+02-Funding/      — grants pipeline, YC/submissions, funder research
+03-Products/     — Cytoverse/, Cytonome/ (portfolios; Yar is the product)
+04-Engineering/  — cytos/, cytoplex/, yar/, toolchain/, infrastructure/, decisions/, standards/
+05-Research/     — neuroverse/
+06-Operations/   — org/, data-strategy/compliance+policies, audits, communications
+07-Design/       — design system, brand, design research
+_templates/      — canonical template set (see TEMPLATE_ASSESSMENT.md for full set)
+```
+
+## Key v8 corrections applied
+
+- Yar submission bundle moved from `03-Products/Cytonome/Yar/submission/` → `02-Funding/YC/submissions/`
+- Sensing schema core (sensor-architecture, sensor-taxonomy, interop-standards, data-formats, semantic-alignment, unified-sensor-report, human-body-systems, datatypes/) moved from `yar/sensors/` → `04-Engineering/cytos/sensing-schema/`; adapter/implementation docs remain in `04-Engineering/yar/sensors/`
+- `04-Engineering/cytoplex/v1-baseline/` removed (snapshot folder; spec/ is canonical; git holds history)
+- `_archive/` removed; `07-Agent-Work/` removed (ephemeral agent artifacts not tracked in docs repo)
+
+---
+
+## Remaining Phase 3 work (docs repo is DONE; other sources follow)
+
+See MASTER_DRIVE_PLAN.md "Resume here" section. Order:
+1. Obsidian (Phase 3b): de-mirror ~1,000 files; frontmatter normalization; remove symlinks
+2. Claude Projects (Phase 3c): create 9 hybrid projects; migrate per master_catalog.tsv
+3. gdrive (Phase 3d): digest unique items; write ops/legal index pointers
+4. Monday (Phase 3e): reconnect connector; build entity+relationship boards
+5. Cross-link pass (Phase 3f)
+6. Phase 4: verification
+
+---
+
+Total files in repo after initial reorg pass: 536 (down from 539 due to 3 dedups removed)
 
 ---
 
