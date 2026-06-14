@@ -1,5 +1,12 @@
 # External Repository Directory
-**Source**: Cytognosis curations archive | **Last updated**: 2026-05-22
+
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, researchers
+> **Tags**: `tools`, `external-repos`, `dependencies`
+
+**Source**: Cytognosis curations archive | **Last updated**: 2026-06-14
 **Coverage**: 10+ major open-source ecosystems with Cytognosis-relevance annotations
 
 > A reference guide to external GitHub organizations and repositories that Cytognosis

@@ -1,13 +1,21 @@
 ---
 title: "Code Search Infrastructure: Zoekt vs GitNexus"
-date: "2026-05-25"
-source: "migrated from org/plans"
+date: "2026-06-14"
+source: "migrated from org/plans/research/code-search-infrastructure.md"
 category: "research"
 status: "current"
 tags:
   - cytognosis
   - research
 ---
+
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `code-search`, `zoekt`, `self-hosted`
+
+**Last verified: 2026-06-14** — `code.cytognosis.org` subdomain confirmed in `cg-org` DNS zone pointing to cytohost (`34.171.23.255`, ephemeral). Deployment target is cytohost (`e2-highmem-2`, `us-central1-b`).
 
 # Code Search Infrastructure: Zoekt vs GitNexus
 

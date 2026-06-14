@@ -1,6 +1,14 @@
 # DVC Dual-Remote Strategy
 
-> v1.0 | Last updated: 2026-05-26
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `dvc`, `gcs`, `data-versioning`
+
+**Last verified: 2026-06-14** — `gs://cytognosis-data-hub` confirmed with versioning and lifecycle rules. `gs://cytognosis-mlflow-artifacts` bucket NOW EXISTS (created 2026-06-14, `us-central1`). `cytognosis-data` project does NOT exist; DVC remotes use `cytognosis-infrastructure` and `cytognosis-phi-prod` projects only.
+
+> v1.1 | Last updated: 2026-06-14
 
 ## Remote Configuration
 
