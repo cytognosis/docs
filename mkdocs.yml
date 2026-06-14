@@ -1,0 +1,124 @@
+site_name: Cytognosis Documentation
+site_description: >
+  Open, rigorous, and human-centered biomedical AI documentation from the Cytognosis Foundation.
+site_url: https://cytognosis.github.io/docs/
+repo_url: https://github.com/cytognosis/docs
+repo_name: cytognosis/docs
+
+docs_dir: site_docs
+site_dir: site
+
+theme:
+  name: material
+  logo: null
+  favicon: null
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+
+extra_css:
+  - _site_assets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+
+plugins:
+  - search
+
+validation:
+  links:
+    absolute_links: warn
+    unrecognized_links: ignore
+    not_found: warn
+
+nav:
+  - Home: index.md
+
+  - Tutorials:
+    - Cytoverse Platform — End-to-End: tutorials/platform-tutorial.md
+
+  - How-to Guides:
+    - Overview: how-to/index.md
+
+  - Reference:
+    - Overview: reference/index.md
+    - Cytoskills Packages:
+      - Core Package: reference/cytoskills/packages/core/core.md
+      - Core Quick Reference: reference/cytoskills/packages/core/core-quickref.md
+      - CLI Package: reference/cytoskills/packages/cli/cli.md
+      - CLI Quick Reference: reference/cytoskills/packages/cli/cli-quickref.md
+      - Deploy Package: reference/cytoskills/packages/deploy/deploy.md
+      - Deploy Quick Reference: reference/cytoskills/packages/deploy/deploy-quickref.md
+    - Cytoskills Skills:
+      - cytognosis-branding: reference/cytoskills/skills/cytognosis-branding/cytognosis-branding.md
+      - cytognosis-branding (quickref): reference/cytoskills/skills/cytognosis-branding/cytognosis-branding-quickref.md
+      - cytognosis-design-system-master: reference/cytoskills/skills/cytognosis-design-system-master/cytognosis-design-system-master.md
+      - cytognosis-design-system-master (quickref): reference/cytoskills/skills/cytognosis-design-system-master/cytognosis-design-system-master-quickref.md
+      - cytognosis-dev: reference/cytoskills/skills/cytognosis-dev/cytognosis-dev.md
+      - cytognosis-dev (quickref): reference/cytoskills/skills/cytognosis-dev/cytognosis-dev-quickref.md
+      - cytognosis-doc: reference/cytoskills/skills/cytognosis-doc/cytognosis-doc.md
+      - cytognosis-doc (quickref): reference/cytoskills/skills/cytognosis-doc/cytognosis-doc-quickref.md
+      - cytognosis-orchestrator: reference/cytoskills/skills/cytognosis-orchestrator/cytognosis-orchestrator.md
+      - cytognosis-orchestrator (quickref): reference/cytoskills/skills/cytognosis-orchestrator/cytognosis-orchestrator-quickref.md
+      - cytognosis-org: reference/cytoskills/skills/cytognosis-org/cytognosis-org.md
+      - cytognosis-org (quickref): reference/cytoskills/skills/cytognosis-org/cytognosis-org-quickref.md
+      - cytognosis-template-master: reference/cytoskills/skills/cytognosis-template-master/cytognosis-template-master.md
+      - cytognosis-template-master (quickref): reference/cytoskills/skills/cytognosis-template-master/cytognosis-template-master-quickref.md
+      - cytognosis-writer: reference/cytoskills/skills/cytognosis-writer/cytognosis-writer.md
+      - cytognosis-writer (quickref): reference/cytoskills/skills/cytognosis-writer/cytognosis-writer-quickref.md
+    - Engineering Standards:
+      - Coding Standards: reference/coding-standards.md
+      - Documentation Standards: reference/documentation-standards.md
+
+  - Explanation:
+    - Overview: explanation/index.md
+    - Cytoverse:
+      - Platform Design: explanation/platform-design.md
+      - Tool Roles Explained: explanation/tool-roles-explained.md
+    - Cytoplex Protocol:
+      - Overview: explanation/cytoplex-overview.md
+      - Foundations: explanation/cytoplex-foundations.md
+      - Core Data Model: explanation/cytoplex-core-model.md
