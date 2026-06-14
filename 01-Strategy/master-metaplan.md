@@ -9,6 +9,13 @@ tags:
   - strategy
 ---
 
+> **Status**: Active
+> **Date**: 2026-05-25
+> **Author**: @mohammadi
+> **Audience**: operators, stakeholders
+> **Tags**: `strategy`, `metaplan`
+
+
 # Cytognosis Master Metaplan
 
 > **Owner**: Shahin Mohammadi · **Created**: 2026-05-23 · **Status**: DRAFT — Awaiting Review
@@ -683,3 +690,19 @@ For each repo in this track:
 
 Save all artifacts to git repos, NOT to ~/.gemini/ or ~/.claude/.
 ```
+
+
+---
+
+## Current State (as of 2026-06-14)
+
+> [!NOTE]
+> The agent prompt scaffolding above reflects the original migration directive (Phase 1-2, early 2026). The taxonomy and repo structure have since been updated to v8. See active docs below.
+
+## See Also
+
+| Doc | Relationship |
+|-----|-------------|
+| [`03-Products/Cytonome/cytonome-track.md`](../03-Products/Cytonome/cytonome-track.md) | Cytonome track (Cytoplex + Yar + USAP + PBC); the current product strategy doc |
+| [`04-Engineering/cytos/architecture-overview-v2.md`](../04-Engineering/cytos/architecture-overview-v2.md) | Current Cytos engineering architecture; the technical counterpart to this strategy plan |
+| [`02-Funding/gdrive-funding-index.md`](../02-Funding/gdrive-funding-index.md) | Active grant working documents in Google Drive |

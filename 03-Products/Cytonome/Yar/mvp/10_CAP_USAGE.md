@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `cytonome`, `mvp`, `yar`
+
 # Yar CAP Usage and Capability Matrix
 
 This document maps Yar's CAP usage to the Cytognosis CAP v0.1 production-candidate package supplied in:

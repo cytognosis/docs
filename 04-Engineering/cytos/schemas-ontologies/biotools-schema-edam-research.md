@@ -9,6 +9,13 @@ tags:
   - research
 ---
 
+> **Status**: Active
+> **Date**: 2026-05-24
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `engineering`, `schemas`, `research`, `biotools`, `edam`
+
+
 # biotoolsSchema, EDAM Ontology, and bio.tools Registry: Research Analysis
 
 > **Owner**: Shahin Mohammadi · **Created**: 2026-05-24 · **Status**: DRAFT
@@ -551,3 +558,14 @@ Adding EDAM as a TopicSource would provide precise bioinformatics-specific class
 **Last Updated**: 2026-05-24
 **Next Review**: After Phase 1 completion
 **Owner**: Shahin Mohammadi, Cytognosis Foundation
+
+
+---
+
+## See Also
+
+| Doc | Relationship |
+|-----|-------------|
+| [`linkml-playbook/README.md`](./linkml-playbook/README.md) | Practical implementation guide; the LinkML playbook is the hands-on counterpart to this schema survey |
+| [`05-Research/neuroverse/datasets-cohorts.md`](../../../05-Research/neuroverse/datasets-cohorts.md) | Neuroverse datasets; the primary Cytognosis use-case for applying biotoolsSchema/EDAM registration |
+| [`04-Engineering/cytos/schemas-ontologies/linkml-playbook/04_biolink_and_core_schemas.md`](./linkml-playbook/04_biolink_and_core_schemas.md) | Biolink and core schemas chapter; extends the EDAM landscape covered here |

@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, stakeholders
+> **Tags**: `cytonome`, `features`, `yar`
+
 # Yar — Product, Feature & Implementation Master Reference
 
 **Compiled:** 2026-05-31 · **Status:** canonical consolidated reference (use this going forward)

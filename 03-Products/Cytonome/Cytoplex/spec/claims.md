@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `cap`, `cytoplex`, `spec`
+
 # CAP Claims and Non-Claims
 
 This file defines what the current package supports and what it does not claim.
