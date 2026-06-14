@@ -1,12 +1,23 @@
 # GitHub Actions Self-Hosted Runner Setup
 
-Since we are running heavy cross-platform deployments (such as `flutter build linux` and compiling heavy Python modules), moving our heavy workload runners to our high-compute GCP infrastructure (`research-stack-server`, `e2-standard-4`) will yield faster builds and significantly reduce GitHub Action minute usage limits.
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `github-actions`, `ci-cd`, `self-hosted-runner`
 
-## Setting Up on `research-stack-server`
+**Last verified: 2026-06-14** — runner is installed on `cytohost` (`e2-highmem-2`, `us-central1-b`). The `research-stack-server` referenced below no longer exists; `cytohost` is the current runner host.
+
+> [!IMPORTANT]
+> The instance name in the commands below (`research-stack-server`) is stale. The current runner host is **`cytohost`** in zone `us-central1-b`. See [runner-setup.md](runner-setup.md) for the current operational configuration.
+
+For heavy cross-platform deployments (such as compiling heavy Python modules and building Docker images), the self-hosted runner on `cytohost` (`e2-highmem-2`, 16 GB RAM) handles all CI workloads across the cytognosis org.
+
+## Setting Up on `cytohost` (current — replaces `research-stack-server`)
 
 1. **SSH into the GCP instance:**
 ```bash
-gcloud compute ssh research-stack-server --project cytognosis-infrastructure --zone us-central1-a
+gcloud compute ssh cytohost --project cytognosis-infrastructure --zone us-central1-b
 ```
 
 2. **Download the GitHub Actions Runner payload:**

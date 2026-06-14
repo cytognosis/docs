@@ -1,32 +1,48 @@
+> **Status**: Approved
+> **Date**: 2026-06-14
+> **Author**: Cytognosis Engineering
+> **Audience**: Engineering, DevOps
+> **Tags**: `compute`, `gcp`, `vm`, `cytohost`
+> **Last verified**: 2026-06-14 against gcloud
+
 # Compute Node Types & Provisioning
+
+## BLUF
+
+`cytohost` is an `e2-highmem-2` (x86\_64) VM in `us-central1-b`. It is NOT ARM64/t2a — those references are stale. The reserved static IP `cytohost-ip` (136.111.39.188) is not attached; the VM currently has ephemeral IP 34.171.23.255. Business-hours auto-stop is not implemented.
+
+---
 
 ## Region
 
-All Cytognosis compute is in **`us-central1`**, zone **`us-central1-b`** (required for ARM t2a instances).
+All persistent Cytognosis compute is in **`us-central1`**, zone **`us-central1-b`**.
+
+---
 
 ## Deployed Nodes
 
-| Name | Type | Zone | vCPU | RAM | External IP | Cost | Purpose |
+| Name | Type | Zone | vCPU | RAM | Architecture | Current External IP | Reserved Static IP |
 |---|---|---|---|---|---|---|---|
-| **`cytohost`** | `t2a-standard-2` (ARM64) | us-central1-b | 2 | 8 GB | 136.111.39.188 | ~$45/mo | Core services stack + GitHub Actions runner |
+| **`cytohost`** | `e2-highmem-2` | us-central1-b | 2 | 16 GB | **x86\_64** | 34.171.23.255 (ephemeral) | 136.111.39.188 (NOT attached) |
 
+> [!WARNING]
+> **Remediation pending**: The reserved static IP `cytohost-ip` (136.111.39.188) is not attached to the VM. The ephemeral IP will change on VM restart, breaking all `*.cytognosis.org` DNS records. Attach `cytohost-ip` and update DNS A records before any planned or unplanned restart.
 
-**Services running on cytohost** (core stack, all `unless-stopped`):
+> [!IMPORTANT]
+> All prior references to `t2a-standard-2`, ARM64, or 8 GB RAM for cytohost are **stale and incorrect**. The VM was migrated to `e2-highmem-2` x86\_64 (16 GB RAM).
 
-| Service | URL | Image |
-|---|---|---|
-| Caddy (reverse proxy + TLS) | — | `caddy:2-alpine` (ARM64) |
-| Cal.com | `cal.cytognosis.org` | `calcom/cal.com:latest` (x86, QEMU) |
-| Cal.com PostgreSQL | — | `postgres:15` (ARM64) |
-| Excalidraw | `whiteboard.cytognosis.org` | `excalidraw/excalidraw:latest` (ARM64) |
-| Excalidraw Room | — | `excalidraw/excalidraw-room:latest` (x86, QEMU) |
-| Mermaid Live | `mermaid.cytognosis.org` | `ghcr.io/mermaid-js/mermaid-live-editor:latest` (ARM64) |
-| Logseq | `notes.cytognosis.org` | `ghcr.io/logseq/logseq-webapp:latest` (ARM64) |
-| MLflow | `mlflow.cytognosis.org` | `ghcr.io/mlflow/mlflow:latest` (ARM64) |
+> [!NOTE]
+> **Business-hours auto-start/stop is roadmap only.** Cloud Scheduler API and Cloud Functions API are disabled in `cytognosis-infrastructure`. cytohost runs 24/7. The `automaticRestart: true` setting means GCP will restart it after host maintenance, but no scheduled shutdowns are configured.
 
-> **x86 via QEMU**: Cal.com and Excalidraw Room lack ARM64 images; they run under QEMU
-> emulation (`platform: linux/amd64` in their service YAML). Performance is adequate for
-> scheduling tools — not recommended for CPU-intensive workloads.
+### Services Running on cytohost
+
+11 containers via `docker-compose.cytohost-v2.yml`. Full list: see [architecture.md](../architecture.md).
+
+### Service Account Note
+
+The default Compute Engine SA (`517562623935-compute@developer.gserviceaccount.com`) attached to cytohost is **intentionally disabled** for security. Workflows authenticate via OIDC. This is not a bug — it is the correct security posture.
+
+---
 
 ## SSH Access
 
@@ -41,33 +57,46 @@ gcloud compute ssh cytohost \
 sudo docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.Image}}'
 
 # Restart a specific container
-sudo docker restart generated-<service>-1
+sudo docker restart cyto-<service>
 
 # Bring up full stack (after reboot or changes)
-cd /opt/container_framework && sudo python3 stack_manager.py up core
+cd /opt/container_framework && sudo docker compose up -d
 ```
+
+---
 
 ## On-Demand Research Compute Tiers
 
-Spin up as spot instances when needed; terminate immediately after. All in `us-central1-b`.
+Ephemeral spot instances spun up when needed. All in `us-central1`.
 
 | Profile | Type | vCPU | RAM | VRAM | Est. spot cost | Use case |
 |---|---|---|---|---|---|---|
-| Neo4j always-on | `e2-standard-2` | 2 | 8 GB | — | ~$49/mo | Knowledge graph + OLS4 |
 | CPU-heavy ETL | `n2-standard-8` spot | 8 | 32 GB | — | ~$0.10/hr | BioCypher, TileDB ingest |
 | Memory-heavy | `n2-highmem-8` spot | 8 | 64 GB | — | ~$0.13/hr | Large AnnData, SOMA |
 | GPU small | `n1-standard-4` + T4 spot | 4 | 15 GB | 16 GB | ~$0.22/hr | Embedding, small inference |
 | GPU medium | `a2-highgpu-1g` spot | 12 | 85 GB | 40 GB | ~$0.90/hr | A100 — fine-tuning |
 | GPU large | `a3-highgpu-1g` spot | 26 | 170 GB | 80 GB | ~$1.80/hr | H100 — foundation models |
 
+Name ephemeral nodes `research-<purpose>-YYYYMMDD` and terminate when done.
+
+---
+
 ## Naming Convention
 
-Persistent nodes follow the pattern `cytonode-NN`:
-- `cytohost` — current core services node (ARM64, us-central1-b)
-- `cytonode-02` — future second node if needed (use same `t2a-standard-2` type)
+| Name | Type | Purpose |
+|---|---|---|
+| `cytohost` | `e2-highmem-2` | Core services stack + GitHub Actions runner |
+| `research-<purpose>-YYYYMMDD` | Ephemeral spot | On-demand research workloads |
 
-Ephemeral research nodes are named `research-<purpose>-YYYYMMDD` (auto-deleted when done).
+All new persistent compute goes in `us-central1-b`.
 
-**All new persistent compute goes in `us-central1-b`** (t2a ARM64 availability zone).
+---
 
+## Cross-References
 
+| Document | Relationship |
+|---|---|
+| [Architecture Overview](../architecture.md) | Full system topology |
+| [Self-Hosted Stack](../self-hosted/deployment_walkthrough.md) | 11-container deployment detail |
+| [CI/CD: Runner Setup](../ci-cd/runner-setup.md) | GitHub Actions runner on cytohost |
+| [GCP Setup](../gcp-setup.md) | IAM and project config |

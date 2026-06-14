@@ -1,5 +1,13 @@
 # OIDC / Workload Identity Federation
 
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `oidc`, `github-actions`, `iam`, `workload-identity`
+
+**Last verified: 2026-06-14** — `github-pool` / `github-provider` confirmed ACTIVE in `cytognosis-infrastructure` (project 517562623935). Zero OIDC pools in `cytognosis-phi-prod`.
+
 ## What It Is
 
 Workload Identity Federation lets GitHub Actions authenticate to GCP **without

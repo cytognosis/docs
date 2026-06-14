@@ -1,52 +1,75 @@
+> **Status**: Approved
+> **Date**: 2026-06-14
+> **Author**: Cytognosis Engineering
+> **Audience**: Engineering, DevOps, New Team Members
+> **Tags**: `architecture`, `overview`, `gcp`, `infrastructure`
+> **Last verified**: 2026-06-14 against gcloud
+
 # Infrastructure Architecture Overview
 
-> v1.0 | Last updated: 2026-05-26
+## BLUF
 
-The Cytognosis infrastructure follows extreme simplicity, serverless-first, and HIPAA-ready architectural choices. Three GCP projects, three domain TLDs, and a composable container framework serve all platform needs.
+Cytognosis runs across two live GCP projects (`cytognosis-infrastructure` and `cytognosis-phi-prod`). The core self-hosted stack — 11 containers on a single `e2-highmem-2` VM (`cytohost`) — serves all internal tooling. The public website runs on Cloud Run in `cytognosis-phi-prod`. A third project (`cytognosis-data`) is planned but does not exist yet.
+
+---
 
 ## GCP Project Topology
 
 ```mermaid
 flowchart TB
     subgraph GCP["Google Cloud Platform"]
-        infra["cytognosis-infrastructure<br/>DNS, IAM, legacy buckets"]
-        phi["cytognosis-phi-prod<br/>Website, services, PHI"]
-        data["cytognosis-data<br/>Data platform, analytics"]
+        infra["cytognosis-infrastructure\nDNS, IAM, Artifact Registry,\nlegacy buckets, Compute (cytohost)"]
+        phi["cytognosis-phi-prod\nCloud Run website + Stories API,\nPHI storage, HIPAA workloads"]
+        data["cytognosis-data\n[PLANNED — does not exist yet]"]
     end
     subgraph Storage["Cloud Storage"]
-        datahub["gs://cytognosis-data-hub/<br/>DVC cache, datasets, shared"]
-        phiprod["gs://cytognosis-phi-prod/<br/>HIPAA-compliant PHI data"]
+        datahub["gs://cytognosis-data-hub/\nDVC cache, datasets"]
+        phiprod["gs://cytognosis-phi-core/\nHIPAA-compliant PHI"]
     end
     subgraph Compute["Compute"]
-        cloudrun["Cloud Run<br/>Website, APIs"]
-        cytohost["cytohost VM<br/>Core services"]
+        cloudrun["Cloud Run (cytognosis-phi-prod)\ncytognosis-website-v2 + stories-api"]
+        cytohost["cytohost VM (cytognosis-infrastructure)\n11 self-hosted containers"]
     end
     infra --> datahub
+    infra --> cytohost
     phi --> phiprod
     phi --> cloudrun
-    infra --> cytohost
 ```
 
-| Project ID | Purpose | Classification |
-|------------|---------|----------------|
-| `cytognosis-infrastructure` | DNS zones, IAM root, legacy buckets | Management |
-| `cytognosis-phi-prod` | Website, services, user data | **Sensitive (PHI)** |
-| `cytognosis-data` | Data platform, analytics | Regulated |
+| Project ID | Purpose | Classification | Status |
+|---|---|---|---|
+| `cytognosis-infrastructure` | DNS zones, IAM root, Artifact Registry, GCS buckets, Compute Engine | Management | Live |
+| `cytognosis-phi-prod` | Cloud Run website, Stories API, PHI storage, HIPAA workloads | **Sensitive (PHI)** | Live |
+| `cytognosis-data` | Data platform, analytics, BigQuery | Regulated | **Planned — not provisioned** |
 
-## Domain Architecture
+> [!NOTE]
+> Cloud Run API is **disabled** in `cytognosis-infrastructure`. All Cloud Run services live in `cytognosis-phi-prod`. Similarly, Cloud Functions API and Cloud Scheduler API are disabled in both projects.
 
-Three primary apex domains:
+---
 
-| Domain | Purpose | Registrar |
-|--------|---------|-----------|
-| `cytognosis.org` | Primary canonical | Squarespace |
-| `cytognosis.com` | Secondary canonical | Squarespace |
-| `cytognosis.ai` | Technology canonical | Squarespace |
+## Compute: cytohost VM
 
-DNS routing uses a dual-zone topology in Cloud DNS for backward compatibility:
+| Field | Value |
+|---|---|
+| Name | `cytohost` |
+| Machine type | **`e2-highmem-2`** (x86\_64) |
+| Zone | `us-central1-b` |
+| vCPU | 2 |
+| RAM | 16 GB |
+| Current external IP | **34.171.23.255 (ephemeral)** |
+| Reserved static IP | `cytohost-ip` = 136.111.39.188 (**RESERVED BUT NOT ATTACHED**) |
+| Status | RUNNING |
 
-- Active canonical zones: `cg-org`, `cg-com`, `cg-ai`
-- Legacy fallback zones: `org-zone`, `com-zone`, `ai-zone`
+> [!WARNING]
+> **Remediation pending**: The reserved static IP `cytohost-ip` (136.111.39.188) is not attached to the VM. The current ephemeral IP (34.171.23.255) will change on restart, breaking all `*.cytognosis.org` subdomain DNS records. Action required: attach `cytohost-ip` to cytohost and repoint DNS A records.
+
+> [!NOTE]
+> The default Compute Engine service account (`517562623935-compute@developer.gserviceaccount.com`) on cytohost is **intentionally disabled** for security. CI/CD workflows authenticate via OIDC (Workload Identity Federation); no ambient SA credentials are used.
+
+> [!NOTE]
+> **Business-hours auto-start/stop is NOT implemented.** Cloud Scheduler API and Cloud Functions API are both disabled in `cytognosis-infrastructure`. The documented scheduler + wake function are roadmap items. cytohost currently runs 24/7.
+
+---
 
 ## Service Architecture
 
@@ -55,30 +78,61 @@ flowchart LR
     subgraph Internet["Public Internet"]
         users["Users"]
     end
-    subgraph CloudRun["Cloud Run (Serverless)"]
-        website["cytognosis.org<br/>Main website"]
+    subgraph CloudRun["Cloud Run — cytognosis-phi-prod"]
+        website["cytognosis.org\ncytognosis-website-v2\n(FastAPI + Uvicorn)"]
+        stories["stories-api"]
     end
-    subgraph Cytohost["cytohost VM"]
-        caddy["Caddy<br/>Reverse proxy"]
-        core["Core Stack<br/>Cal.com, Excalidraw,<br/>Mermaid, Logseq, MLflow"]
-        ondemand["On-demand<br/>Neo4j, SurrealDB,<br/>Jupyter"]
+    subgraph Cytohost["cytohost VM — cytognosis-infrastructure"]
+        caddy["cyto-caddy\nReverse proxy + TLS"]
+        core["Always-on stack\ncyto-calcom, cyto-excalidraw,\ncyto-excalidraw-room, cyto-gitea,\ncyto-mlflow, cyto-wiki,\ncyto-postgres, cyto-prefect,\ncyto-zoekt"]
+        ondemand["On-demand\ncyto-neo4j"]
     end
     users --> website
+    users --> stories
     users --> caddy --> core
     caddy --> ondemand
 ```
 
-### On-Demand Service Model
+### Self-Hosted Container Stack (11 services)
 
-Services default OFF and start when needed. The `core` stack runs always-on behind Caddy. Everything else (Neo4j, Jupyter, SurrealDB) starts on demand via `stack_manager.py`.
+All containers run via `docker-compose.cytohost-v2.yml` on cytohost.
 
-| Stack | Services | Mode |
-|-------|----------|------|
-| **core** | Caddy, Cal.com, Excalidraw, Mermaid, Logseq, MLflow | Always-on |
-| **research** | Neo4j, Jupyter, MLflow | On-demand |
-| **neo4j-only** | Neo4j | On-demand |
+| Container | Image | Mode | Subdomain |
+|---|---|---|---|
+| `cyto-caddy` | `caddy:2-alpine` | Always-on | — |
+| `cyto-postgres` | `postgres:16-alpine` | Always-on | — |
+| `cyto-calcom` | `calcom/cal.com:latest` | Always-on | `cal.cytognosis.org` |
+| `cyto-excalidraw` | `excalidraw/excalidraw:latest` | Always-on | `whiteboard.cytognosis.org` |
+| `cyto-excalidraw-room` | `excalidraw/excalidraw-room:latest` | Always-on | — |
+| `cyto-gitea` | `gitea/gitea:latest` | Always-on | `code.cytognosis.org` |
+| `cyto-mlflow` | `ghcr.io/mlflow/mlflow:v2.21.0` | Always-on | `mlflow.cytognosis.org` |
+| `cyto-wiki` | `requarks/wiki:2` | Always-on | `wiki.cytognosis.org` |
+| `cyto-prefect` | `prefecthq/prefect:3-python3.12` | Always-on | `prefect.cytognosis.org` |
+| `cyto-zoekt` | `ghcr.io/sourcegraph/zoekt:latest` | Always-on | `search.cytognosis.org` |
+| `cyto-neo4j` | `neo4j:5.18.1-community` | **On-demand** | `kg.cytognosis.org` |
 
-See [Container Framework](container-framework.md) for full details.
+### Cloud Run Services
+
+| Service | Project | URL | Last Deployed |
+|---|---|---|---|
+| `cytognosis-website-v2` | `cytognosis-phi-prod` | https://cytognosis-website-v2-tdmthpm4va-uc.a.run.app | 2026-06-09 |
+| `stories-api` | `cytognosis-phi-prod` | https://stories-api-143911445857.us-central1.run.app | 2025-12-09 |
+
+---
+
+## Domain Architecture
+
+Three apex domains, all registered at Squarespace:
+
+| Domain | Purpose | Authoritative DNS Zone |
+|---|---|---|
+| `cytognosis.org` | Primary canonical | `cg-org` (ns-cloud-d) |
+| `cytognosis.com` | Secondary canonical | `com-zone` (ns-cloud-c) |
+| `cytognosis.ai` | Technology canonical | `cg-ai` (ns-cloud-d) |
+
+Six Cloud DNS managed zones exist in `cytognosis-infrastructure` as three duplicate pairs. Authoritative (keeper) zones are listed above. Duplicate zones (`org-zone`, `cg-com`, `ai-zone`) are **pending deduplication and deletion**. See [DNS & GCP Architecture](DNS_AND_GCP_ARCHITECTURE.md) for full record details.
+
+---
 
 ## Data Layer
 
@@ -96,7 +150,9 @@ gs://cytognosis-data-hub/
 └── manifests/                 Dataset manifest JSONs
 ```
 
-See [GCP Setup](gcp-setup.md) and [DVC Strategy](dvc-strategy.md) for details.
+Full bucket inventory: see [GCP Setup](gcp-setup.md).
+
+---
 
 ## Provenance Stack
 
@@ -108,9 +164,16 @@ L3: MLflow            Experiment tracking
 L4: RO-Crate          FAIR publication packages
 ```
 
-## Related Documentation
+---
 
-- [GCP Setup](gcp-setup.md)
-- [Container Framework](container-framework.md)
-- [DVC Strategy](dvc-strategy.md)
-- [Master Infrastructure](MASTER_INFRASTRUCTURE.md)
+## Cross-References
+
+| Document | Relationship |
+|---|---|
+| [MASTER_INFRASTRUCTURE.md](MASTER_INFRASTRUCTURE.md) | Navigation index for all infra sections |
+| [DNS & GCP Architecture](DNS_AND_GCP_ARCHITECTURE.md) | Full DNS zone records and dedup plan |
+| [Hosting & Deployment](HOSTING_AND_DEPLOYMENT.md) | Cloud Run + CI/CD + OIDC detail |
+| [GCP Setup](gcp-setup.md) | Buckets, IAM, Artifact Registry detail |
+| [Self-Hosted Stack](self-hosted/deployment_walkthrough.md) | Container deployment walkthrough |
+| [Container Framework](container-framework.md) | Framework reference |
+| [DVC Strategy](dvc-strategy.md) | Data version control |
