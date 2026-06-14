@@ -9,6 +9,13 @@ tags:
   - strategy
 ---
 
+> **Status**: Active
+> **Date**: 2026-05-25
+> **Author**: @mohammadi
+> **Audience**: operators, stakeholders
+> **Tags**: `strategy`, `metaplan`
+
+
 # Cytognosis Master Metaplan
 
 > **Owner**: Shahin Mohammadi · **Created**: 2026-05-23 · **Status**: DRAFT — Awaiting Review
