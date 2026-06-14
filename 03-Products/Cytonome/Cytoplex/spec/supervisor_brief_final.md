@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `cap`, `cytoplex`, `spec`
+
 # CAP v0.1 Supervisor Brief — Final Production-Candidate Package
 
 ## One-paragraph summary

@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `architecture`, `cytonome`, `mvp`, `yar`
+
 # 07 — Architecture Design Prompt
 
 Copy and use this prompt to generate a detailed implementation architecture.

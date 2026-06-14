@@ -1,3 +1,9 @@
+> **Status**: Draft
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `cap`, `cytoplex`, `spec`
+
 # CAP Changelog from Previous Draft
 
 This changelog records the architectural shift from the older protocol-shaped CAP draft to the v0.1-candidate Control Authority Profile.

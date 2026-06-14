@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `cytonome`, `mvp`, `yar`
+
 # Yar Gemma 4 Good MVP Docs — Current Scope
 
 This package updates the previous Yar Gemma 4 Good hackathon scope based on the latest product/architecture feedback.
