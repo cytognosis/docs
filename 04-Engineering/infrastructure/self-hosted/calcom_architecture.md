@@ -1,7 +1,15 @@
 # Cal.com Integration Evaluation
 
+> **Status**: Historical evaluation — Cal.com is deployed at `cal.cytognosis.org`.
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `self-hosted`, `calcom`, `scheduling`
+
+**Last verified: 2026-06-14** — `cal.cytognosis.org` is live, pointing to cytohost (`34.171.23.255`, ephemeral; `cg-org` DNS zone).
+
 ## Overview
-Cal.com is an open-source scheduling tool that can replace Calendly and similar alternatives. This document evaluates how we can incorporate Cal.com into our existing website (`cytognosis/website`) for personal and company-wide team scheduling.
+Cal.com is an open-source scheduling tool that replaced Calendly for Cytognosis scheduling. This document is the original integration evaluation record.
 
 ## Deployment Options
 

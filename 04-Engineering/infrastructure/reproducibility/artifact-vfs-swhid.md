@@ -1,4 +1,11 @@
-<!-- Last updated: 2026-05-22 | Source: Plans/design/11_reproducibility_strategy/ -->
+<!-- Last updated: 2026-06-14 | Source: Plans/design/11_reproducibility_strategy/ -->
+
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `reproducibility`, `vfs`, `swhid`, `provenance`
+
 **← [Back to Reproducibility Index](README.md)**
 
 # 02 — Artifact Storage: VFS + SWHID

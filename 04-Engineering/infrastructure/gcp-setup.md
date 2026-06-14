@@ -1,128 +1,162 @@
+> **Status**: Approved
+> **Date**: 2026-06-14
+> **Author**: Cytognosis Engineering
+> **Audience**: Engineering, DevOps
+> **Tags**: `gcp`, `buckets`, `iam`, `artifact-registry`, `oidc`
+> **Last verified**: 2026-06-14 against gcloud
+
 # GCP Project Setup
 
-> v1.0 | Last updated: 2026-05-26
+## BLUF
+
+Two live projects: `cytognosis-infrastructure` (DNS, IAM, buckets, compute) and `cytognosis-phi-prod` (Cloud Run, PHI storage). `cytognosis-data` does not exist. 19 total GCS buckets. The `website-deployer` SA lives in `cytognosis-infrastructure`; OIDC pool `github-pool` is in `cytognosis-infrastructure`.
+
+---
 
 ## Project Layout
 
-| Project ID | Purpose | Region | Classification |
-|------------|---------|--------|----------------|
-| `cytognosis-infrastructure` | DNS, IAM root, Artifact Registry, legacy buckets | us-central1 | Management |
-| `cytognosis-phi-prod` | Website (Cloud Run), user data, HIPAA workloads | us-central1 | **Sensitive (PHI)** |
-| `cytognosis-data` | Data platform, BigQuery, analytics | us-central1 | Regulated |
+| Project ID | Project Number | Purpose | Region | Status |
+|---|---|---|---|---|
+| `cytognosis-infrastructure` | 517562623935 | DNS zones, IAM root, Artifact Registry, GCS buckets, Compute Engine (cytohost) | us-central1 | **Live** |
+| `cytognosis-phi-prod` | 143911445857 | Website (Cloud Run), user data, HIPAA workloads | us-central1 | **Live** |
+| `cytognosis-data` | — | Data platform, BigQuery, analytics | us-central1 | **Planned — does not exist** |
+
+> [!NOTE]
+> Cloud Run API, Cloud Functions API, and Cloud Scheduler API are all **disabled** in `cytognosis-infrastructure`. Cloud Run services live exclusively in `cytognosis-phi-prod`.
+
+---
 
 ## Cloud Storage Buckets
 
-### Data Hub (`cytognosis-data`)
+### cytognosis-infrastructure (16 buckets)
+
+| Bucket | Versioning | Retention Lock | Notes |
+|---|---|---|---|
+| `gs://cytoagent/` | No | No | Created 2026-05-19 |
+| `gs://cytoexplorer/` | No | No | Created 2026-05-19 |
+| `gs://cytognosis/` | No | No | Created 2026-02-22 (oldest) |
+| `gs://cytognosis-audit-7yr/` | No | **7yr locked** | Created 2026-05-18; immutable |
+| `gs://cytognosis-data-hub/` | **Yes** | No | DVC cache, datasets; lifecycle 60d→Nearline, 180d→Coldline |
+| `gs://cytognosis-internal/` | No | No | Internal team files |
+| `gs://cytognosis-phi-prod/` | **Yes** | **7yr locked** | Labels: compliance=hipaa, data-class=phi |
+| `gs://cytognosis-public-data/` | No | No | De-identified public datasets |
+| `gs://cytognosis-restricted-prod/` | No | **1yr locked** | public_access_prevention: enforced |
+| `gs://cytomark/` | No | No | Created 2026-05-19 |
+| `gs://cytonome/` | No | No | Created 2026-05-19 |
+| `gs://cytopilot/` | No | No | Created 2026-05-19 |
+| `gs://cytoscope/` | No | No | Created 2026-05-19 |
+| `gs://cytoskeleton/` | No | No | Created 2026-05-19 |
+| `gs://cytoverse/` | No | No | Created 2026-05-19 |
+| `gs://neuroverse/` | No | No | Created 2026-05-19 |
+
+> [!NOTE]
+> `gs://cytognosis-mlflow-artifacts` does **not** exist in either project. MLflow artifact storage is local to cytohost or the bucket has not been created. The `mlflow.cytognosis.org` DNS subdomain is live but has no corresponding GCS bucket.
+
+### cytognosis-phi-prod (3 buckets)
+
+| Bucket | Versioning | Retention | KMS | Notes |
+|---|---|---|---|---|
+| `gs://cytognosis-phi-collab-nih/` | **Yes** | 7-day soft delete | **CMEK: phi-bucket-key** | NIH collaborative controlled data |
+| `gs://cytognosis-phi-core/` | **Yes** | 7-day soft delete | **CMEK: phi-bucket-key** | Raw PHI genomic/clinical data |
+| `gs://cytognosis-phi-prod_cloudbuild/` | No | No | None | Cloud Build staging bucket |
+
+Both PHI buckets use CMEK: keyring `phi-keyring`, key `phi-bucket-key` in us-central1.
+
+### Data Hub Layout
 
 ```
 gs://cytognosis-data-hub/
-├── dvc-cache/                 # Content-addressed DVC cache (md5 → blob)
-│                                Shared across all projects
+├── dvc-cache/                 Content-addressed DVC cache (shared across projects)
 ├── processed/
-│   └── cytos/dvc/             # Cytos project DVC remote
+│   └── cytos/dvc/             Cytos project DVC remote
 ├── purdue/
-│   ├── active/                # Collaborator active workspace
-│   └── delivered/             # Finalized deliveries
+│   ├── active/                Collaborator active workspace
+│   └── delivered/             Finalized deliveries
 ├── shared/
-│   ├── soma/                  # TileDB-SOMA exports
-│   ├── gwas/                  # GWAS summary statistics
-│   ├── embeddings/            # Feature vectors
-│   └── reference/             # GRCh38, GENCODE GTFs
-├── public-mirror/             # Public dataset mirrors
-└── manifests/                 # Dataset manifest JSONs
+│   ├── soma/                  TileDB-SOMA exports
+│   ├── gwas/                  GWAS summary statistics
+│   ├── embeddings/            Feature vectors
+│   └── reference/             GRCh38, GENCODE GTFs
+├── public-mirror/             Public dataset mirrors
+└── manifests/                 Dataset manifest JSONs
 ```
 
-### PHI Production (`cytognosis-phi-prod`)
+---
 
-```
-gs://cytognosis-phi-prod/
-├── dvc-cache/                 # HIPAA-compliant DVC cache
-├── pec/                       # PsychENCODE data
-└── clinical/                  # Clinical partner data
-```
+## IAM: Service Accounts
 
-Protected by VPC Service Controls, Cloud Healthcare API, and Confidential Compute.
+| Account | Project | Purpose | Disabled? |
+|---|---|---|---|
+| `website-deployer@cytognosis-infrastructure.iam.gserviceaccount.com` | cytognosis-infrastructure | CI/CD Cloud Run deployments | No |
+| `517562623935-compute@developer.gserviceaccount.com` | cytognosis-infrastructure | Default compute SA (attached to cytohost) | **Yes — intentionally disabled** |
+| `stories-api-sa@cytognosis-phi-prod.iam.gserviceaccount.com` | cytognosis-phi-prod | Stories API runtime SA | No |
 
-## IAM Configuration
+> [!IMPORTANT]
+> The `website-deployer` SA is in **`cytognosis-infrastructure`**, not `cytognosis-phi-prod`. Any OIDC config referencing `website-deployer@cytognosis-phi-prod` is incorrect.
+>
+> `dvc-reader@cytognosis-data` and `dvc-writer@cytognosis-data` SAs referenced in older docs do NOT exist — they depend on the `cytognosis-data` project, which has not been provisioned.
 
-### Service Accounts
+---
 
-| Account | Purpose | Roles |
-|---------|---------|-------|
-| `website-deployer@cytognosis-phi-prod` | CI/CD Cloud Run deployments | Cloud Run Admin, Storage Object Viewer |
-| `dvc-reader@cytognosis-data` | Read-only DVC access | Storage Object Viewer on data-hub |
-| `dvc-writer@cytognosis-data` | Read-write DVC access | Storage Object Admin on data-hub |
-
-### Workload Identity Federation
-
-GitHub Actions uses OIDC federation (no long-lived JSON keys):
+## Workload Identity Federation
 
 ```yaml
-# .github/workflows/deploy.yml
+# Minimum OIDC auth snippet for any Cytognosis GitHub Actions workflow
 - uses: google-github-actions/auth@v2
   with:
-    workload_identity_provider: 'projects/123/locations/global/workloadIdentityPools/github/providers/cytognosis'
-    service_account: 'website-deployer@cytognosis-phi-prod.iam.gserviceaccount.com'
+    workload_identity_provider: "projects/517562623935/locations/global/workloadIdentityPools/github-pool/providers/github-provider"
+    service_account: "website-deployer@cytognosis-infrastructure.iam.gserviceaccount.com"
 ```
+
+| Field | Value |
+|---|---|
+| Pool | `github-pool` |
+| Provider | `github-provider` |
+| Issuer | `https://token.actions.githubusercontent.com` |
+| Condition | `attribute.repository_owner == "cytognosis"` (all org repos) |
+| Project | `cytognosis-infrastructure` (517562623935) |
+
+---
 
 ## Artifact Registry
 
-Container images push to GCP Artifact Registry:
+| Registry | Format | Location | Size | Purpose |
+|---|---|---|---|---|
+| `cytognosis-infrastructure/cytognosis-compute` | Docker | us-central1 | 0 MB (empty) | Internal compute images |
+| `cytognosis-infrastructure/cytognosis-python` | Python | us-central1 | ~4.4 MB | Internal PyPI packages |
+| `cytognosis-infrastructure/cytognosis-npm` | npm | us-central1 | ~0.05 MB | Internal npm packages |
+| `cytognosis-phi-prod/cytognosis-website-v2` | Docker | us-central1 | ~594 MB | Website container images |
+| `cytognosis-phi-prod/phi-services` | Docker | us (multi-region) | ~82 MB | HIPAA-compliant service containers |
 
-```
-us-central1-docker.pkg.dev/cytognosis-infrastructure/cytognosis-compute/
-├── neo4j-cytognosis:latest
-├── surrealdb-cytognosis:latest
-├── jupyter-cytognosis:latest
-└── caddy-cytognosis:latest
-```
-
-## DNS Configuration
-
-### Cloud DNS Zones
-
-| Zone | Domain | Status |
-|------|--------|--------|
-| `cg-org` | cytognosis.org | Active canonical |
-| `cg-com` | cytognosis.com | Active canonical |
-| `cg-ai` | cytognosis.ai | Active canonical |
-| `org-zone` | cytognosis.org | Legacy fallback |
-| `com-zone` | cytognosis.com | Legacy fallback |
-| `ai-zone` | cytognosis.ai | Legacy fallback |
-
-### Key DNS Records
-
-```
-# Cloud Run (serverless)
-@       A      216.239.32.21, 216.239.34.21, 216.239.36.21, 216.239.38.21
-www     CNAME  ghs.googlehosted.com.
-
-# Core services (cytohost VM)
-cal     A      136.111.39.188
-code    A      136.111.39.188
-hub     A      136.111.39.188
-```
+---
 
 ## Authentication
 
-### Application Default Credentials
+### Application Default Credentials (local dev)
 
 ```bash
 gcloud auth application-default login
 # Creates ~/.config/gcloud/application_default_credentials.json
 ```
 
-### Service Account Key (CI/CD only)
+### Service Account Keys (avoid)
+
+Prefer Workload Identity Federation. SA keys are only for local development when WIF is unavailable:
 
 ```bash
-# Prefer Workload Identity Federation
-# Only use key files for local development if WIF unavailable
 gcloud iam service-accounts keys create key.json \
-    --iam-account=dvc-writer@cytognosis-data.iam.gserviceaccount.com
+    --iam-account=website-deployer@cytognosis-infrastructure.iam.gserviceaccount.com
 ```
 
-## Related Documentation
+---
 
-- [Architecture Overview](architecture.md)
-- [Container Framework](container-framework.md)
-- [DVC Strategy](dvc-strategy.md)
+## Cross-References
+
+| Document | Relationship |
+|---|---|
+| [Architecture Overview](architecture.md) | Full topology |
+| [Hosting & Deployment](HOSTING_AND_DEPLOYMENT.md) | Cloud Run + CI/CD |
+| [CI/CD: OIDC Federation](ci-cd/oidc-federation.md) | WIF detailed setup |
+| [Service Accounts](service-accounts.md) | Canonical SA inventory |
+| [DVC Strategy](dvc-strategy.md) | Data version control |
+| [Container Framework](container-framework.md) | Self-hosted stack |

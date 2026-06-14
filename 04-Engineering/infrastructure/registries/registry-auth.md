@@ -1,5 +1,13 @@
 # Registry Authentication
 
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `artifact-registry`, `auth`, `oidc`, `docker`, `python`
+
+**Last verified: 2026-06-14** — OIDC pool `github-pool` / provider `github-provider` confirmed ACTIVE in `cytognosis-infrastructure`. Workload identity provider resource: `projects/517562623935/locations/global/workloadIdentityPools/github-pool/providers/github-provider`.
+
 ## Authentication Methods
 
 ### Local Development (gcloud ADC)

@@ -1,5 +1,11 @@
 # Cytognosis Tools Catalog
 
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, researchers
+> **Tags**: `tools`, `catalog`, `infrastructure`
+
 > *Cytognosis exists so no one else waits decades for answers.*
 
 Single source of truth for the **911 unique tools** evaluated, adopted, deferred, or rejected across the Cytognosis Foundation infrastructure stack. Consolidated from six research archives plus the May 2026 connectomics review.

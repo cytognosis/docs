@@ -1,9 +1,20 @@
 # Cytognosis Service Account Architecture
 
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, operators
+> **Tags**: `iam`, `service-accounts`, `oidc`
+
+**Last verified: 2026-06-14**
+
 ## Canonical Service Accounts
 
 This document is the authoritative reference for all GCP service accounts in the
 Cytognosis ecosystem. All SAs are audited quarterly; stale ones are disabled then deleted.
+
+> [!WARNING]
+> The default compute SA on `cytohost` (`517562623935-compute@developer.gserviceaccount.com`) is **disabled**. cytohost currently has no functional service account, which will cause Cloud Logging, Monitoring, and Pub/Sub writes to fail. Remediation pending.
 
 ---
 
@@ -154,7 +165,10 @@ uses `attribute.repository_owner` (org-wide), not `attribute.repository` (per-re
 
 ---
 
-**Document version**: 1.0
-**Last updated**: 2026-05-19
+**Document version**: 1.1
+**Last updated**: 2026-06-14
 **Owner**: Infrastructure, Cytognosis Foundation
 **Next audit**: 2026-08-19
+
+> [!NOTE]
+> Verified against live GCP state 2026-06-14. Two SAs confirmed in cytognosis-infrastructure (website-deployer active, default compute disabled). Two SAs confirmed in cytognosis-phi-prod (stories-api-sa active, default compute active). OIDC pool github-pool confirmed ACTIVE in cytognosis-infrastructure only (zero pools in cytognosis-phi-prod).

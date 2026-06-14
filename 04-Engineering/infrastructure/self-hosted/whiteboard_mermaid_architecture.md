@@ -1,5 +1,13 @@
 # Extended Self-Hosting Evaluation Report
 
+> **Status**: Historical evaluation — services now deployed on cytohost.
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `self-hosted`, `excalidraw`, `mermaid`, `whiteboard`
+
+**Last verified: 2026-06-14** — Mermaid Live Editor is deployed at `mermaid.cytognosis.org`, Excalidraw/whiteboard at `whiteboard.cytognosis.org` (draw.cytognosis.org also in DNS). Both point to cytohost (`34.171.23.255`, ephemeral; `cg-org` DNS zone).
+
 This report evaluates the feasibility, pricing, and architectural options for self-hosting advanced features of Cal.com, Zotero, Neo4j, and Mermaid.js for the Cytognosis Foundation.
 
 ---

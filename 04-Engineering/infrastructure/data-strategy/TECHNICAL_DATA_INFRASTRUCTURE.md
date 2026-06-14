@@ -1,8 +1,16 @@
 # Technical Data Infrastructure Strategy (HIPAA & PHI)
 
-**Last Updated**: May 2026
-**Status**: 🔵 ACTIVE — bucket taxonomy and project boundaries enforced; VPC-SC perimeter and Healthcare API integration in progress
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, compliance
+> **Tags**: `hipaa`, `gcs`, `phi`, `vpc-sc`, `iam`
+
+**Last Updated**: 2026-06-14
+**Status**: ACTIVE — bucket taxonomy and project boundaries enforced; VPC-SC perimeter NOT YET configured (API disabled as of 2026-06-14 audit); Healthcare API integration in progress
 **Maintainer**: Infrastructure Team
+
+**Last verified: 2026-06-14**
 
 ## 🎯 Overview
 
@@ -19,8 +27,9 @@ To isolate sensitive data from public-facing infrastructure, Cytognosis utilizes
 - All external data (NIH NDA, UKBB) must be ingested directly into `cytognosis-phi-prod`. No PHI is ever allowed in `cytognosis-infrastructure`.
 
 ### 2. VPC Service Controls (VPC-SC)
-- A **VPC Service Perimeter** must be established around the `cytognosis-phi-prod` project. 
+- A **VPC Service Perimeter** must be established around the `cytognosis-phi-prod` project.
 - This zero-trust perimeter explicitly denies data exfiltration by blocking unapproved API calls bridging the secure project and the outside world, even if a user has valid IAM credentials.
+- **Current state (2026-06-14)**: VPC-SC is NOT yet configured. This is a P1 HIPAA remediation item (see audit findings).
 
 ---
 
@@ -41,7 +50,7 @@ To satisfy the stringent and diverse requirements for internal operations versus
 - **Compliance**: Standard Google-managed encryption. Strict IAM for internal team members only. No PHI permitted.
 
 #### 2. Public Data Sharing (`cytognosis-public-data`)
-- **Project**: `cytognosis-data`
+- **Project**: `cytognosis-infrastructure` (note: `cytognosis-data` project does NOT exist as of 2026-06-14)
 - **Purpose**: Broad open-science dissemination of thoroughly de-identified, aggregated research results.
 - **Compliance**: Standard encryption. Public read access allowed. Data must pass through the DLP API before release to verify zero PHI.
 

@@ -1,5 +1,13 @@
 # Internal Python Package Registry (cytognosis-python)
 
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `artifact-registry`, `python`, `pypi`, `packages`
+
+**Last verified: 2026-06-14** — `cytognosis-python` registry confirmed in `cytognosis-infrastructure`, `us-central1`, 4.425 MB.
+
 ## Overview
 
 Cytognosis maintains a private Python package registry in **GCP Artifact Registry**.

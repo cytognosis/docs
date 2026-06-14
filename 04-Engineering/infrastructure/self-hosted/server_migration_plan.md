@@ -1,12 +1,22 @@
 # Server Migration & Optimization Plan
 
-## Current State Analysis
-Currently, `cytognosis-infrastructure` has the following footprint:
-- **`calcom-server`** (`e2-medium`): Running self-hosted services (Cal.com, Caddy, etc.). This size (2 vCPU, 4GB RAM) is typically overkill for simple web apps but under-resourced if Postgres load spikes. At $25/mo, it's slightly unoptimized.
-- **`research-stack-server`** (`e2-standard-4`): Was previously running but has now been **shutdown** to save ~$100/mo.
+> **Status**: Historical planning document — superseded by the consolidated cytohost architecture.
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `compute`, `self-hosted`, `migration`
 
-## The Problem
-Running our self-hosted core apps on an `e2-medium` permanently costs around $300/year, and scaling vertically on the E2 family can be inefficient. The `research-stack-server` was costing $100/mo but was idle most of the time.
+> [!IMPORTANT]
+> **Outcome (2026-06-14)**: The `calcom-server` and `research-stack-server` instances described below have been consolidated into a single **`cytohost`** VM: `e2-highmem-2` (2 vCPU, 16 GB RAM), zone `us-central1-b`, running 24/7. All 11 self-hosted containers (core + research stacks) run on cytohost. None of the migration options below were selected — the e2-highmem-2 consolidation was the actual outcome. See [deployment_walkthrough.md](deployment_walkthrough.md) for the live state.
+
+## Current State Analysis (Historical — pre-consolidation)
+
+Previously, `cytognosis-infrastructure` had the following footprint:
+- **`calcom-server`** (`e2-medium`): Running self-hosted services (Cal.com, Caddy, etc.).
+- **`research-stack-server`** (`e2-standard-4`): Was running but shut down to save ~$100/mo.
+
+## The Problem (Historical)
+Running self-hosted core apps on an `e2-medium` cost around $300/year; the E2 family was inefficient for memory-intensive workloads. The `research-stack-server` was costing $100/mo but was idle most of the time.
 
 ## Recommended Target Architecture
 
