@@ -1,87 +1,111 @@
-# Container Services
+> **Status**: Approved
+> **Date**: 2026-06-14
+> **Author**: Cytognosis Engineering
+> **Audience**: Engineering, DevOps
+> **Tags**: `containers`, `docker`, `self-hosted`, `cytohost`
+> **Last verified**: 2026-06-14 against gcloud
 
-> Quick reference for Cytognosis Docker/Podman container stack.
+# Container Services — Quick Reference
 
-## Available Stacks
+## BLUF
 
-| Stack | Services | Use Case |
-|-------|----------|----------|
-| `core` | Neo4j, SurrealDB | KG storage and query |
-| `research` | Neo4j, JupyterLab, MLflow | Data science workbench |
-| `neo4j-only` | Neo4j | Graph database only |
+11 containers run on `cytohost` (e2-highmem-2, 16 GB RAM, x86\_64). All are native x86\_64 — no QEMU emulation. Full deployment detail: see [deployment_walkthrough.md](self-hosted/deployment_walkthrough.md).
+
+> [!WARNING]
+> Prior references to `n2d-standard-8 / 32 GB RAM`, ARM64 images, or QEMU emulation for Cal.com/Excalidraw Room are stale. cytohost is x86\_64 with 16 GB RAM.
+
+---
+
+## Live Stack
+
+| Container | Image | Mode | Port | Subdomain |
+|---|---|---|---|---|
+| `cyto-caddy` | `caddy:2-alpine` | Always-on | 80, 443 | — |
+| `cyto-postgres` | `postgres:16-alpine` | Always-on | 5432 (internal) | — |
+| `cyto-calcom` | `calcom/cal.com:latest` | Always-on | 3000 (internal) | `cal.cytognosis.org` |
+| `cyto-excalidraw` | `excalidraw/excalidraw:latest` | Always-on | 80 (internal) | `whiteboard.cytognosis.org` |
+| `cyto-excalidraw-room` | `excalidraw/excalidraw-room:latest` | Always-on | 3002 (internal) | — |
+| `cyto-gitea` | `gitea/gitea:latest` | Always-on | 3000 (internal) | `code.cytognosis.org` |
+| `cyto-mlflow` | `ghcr.io/mlflow/mlflow:v2.21.0` | Always-on | 5000 (internal) | `mlflow.cytognosis.org` |
+| `cyto-wiki` | `requarks/wiki:2` | Always-on | 3000 (internal) | `wiki.cytognosis.org` |
+| `cyto-prefect` | `prefecthq/prefect:3-python3.12` | Always-on | 4200 (internal) | `prefect.cytognosis.org` |
+| `cyto-zoekt` | `ghcr.io/sourcegraph/zoekt:latest` | Always-on | 6070 (internal) | `search.cytognosis.org` |
+| `cyto-neo4j` | `neo4j:5.18.1-community` | **On-demand** | 7474, 7687 (internal) | `kg.cytognosis.org` |
+
+---
 
 ## Neo4j Configuration
 
-| Parameter | Default | Notes |
-|-----------|---------|-------|
+| Parameter | Value | Notes |
+|---|---|---|
 | Image | `neo4j:5.18.1-community` | Community Edition |
-| Auth | `neo4j/cytognosis2026` | Override via `$NEO4J_AUTH` |
-| Heap | 2GB initial + max | Override via `$NEO4J_HEAP` |
-| Page cache | 2GB | Override via `$NEO4J_PAGECACHE` |
-| Ports | 7474 (HTTP), 7687 (Bolt) | |
-| Health check | Every 30s, 5 retries | HTTP check on :7474 |
+| Auth | Set via `$NEO4J_AUTH` | Do NOT use default credentials in production |
+| Heap | 2 GB initial + max | Override via `$NEO4J_HEAP` |
+| Page cache | 2 GB | Override via `$NEO4J_PAGECACHE` |
+| Ports | 7474 (HTTP), 7687 (Bolt) | Internal to Docker network |
+| Mode | On-demand (`--profile on-demand`) | Not started with the default stack |
 | GC | G1GC + ExitOnOutOfMemoryError | |
-| Query log | INFO, threshold 1s | Slow queries logged |
+
+**Memory tuning for 16 GB cytohost:**
+
+| Use case | Heap | Page Cache | Total |
+|---|---|---|---|
+| Neo4j small (KG dev) | 2 GB | 2 GB | 4 GB |
+| Neo4j full KG | 4 GB | 6 GB | 10 GB |
+| Neo4j max (leaves 6 GB for other containers) | 4 GB | 6 GB | 10 GB |
+
+```bash
+export NEO4J_HEAP=4g
+export NEO4J_PAGECACHE=6g
+sudo docker compose --profile on-demand up -d cyto-neo4j
+```
+
+---
 
 ## Quick Commands
 
 ```bash
-# Navigate to the stack manager
-cd ~/repos/cytognosis/infrastructure/container_framework
-
-# List available stacks and services
-python stack_manager.py list
-
-# Generate docker-compose.yml for a stack
-python stack_manager.py compose research
-
-# Start a stack
-python stack_manager.py up research
-
-# Stop a stack
-python stack_manager.py down research
+# SSH into cytohost
+gcloud compute ssh cytohost --zone=us-central1-b --project=cytognosis-infrastructure --tunnel-through-iap
 
 # Check running containers
-python stack_manager.py status
+sudo docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.Image}}'
 
-# Restart a specific service
-python stack_manager.py restart research neo4j
+# Start all always-on services
+cd /opt/container_framework && sudo docker compose up -d
 
-# Build a custom image
-python stack_manager.py build neo4j
+# Start on-demand neo4j
+sudo docker compose --profile on-demand up -d cyto-neo4j
 
-# Push to Artifact Registry
-python stack_manager.py push neo4j
+# Stop a service
+sudo docker stop cyto-<service>
+
+# View logs
+sudo docker logs cyto-<service> --tail 100 -f
+
+# Restart a service
+sudo docker restart cyto-<service>
 ```
 
-## Container Runtime Detection
-
-The stack manager auto-detects the container runtime:
-1. Checks `$CONTAINER_RUNTIME` env var
-2. Tries `podman` (rootless preferred)
-3. Falls back to `docker`
+---
 
 ## Artifact Registry
 
+Internal compute images push to:
+
 ```
 us-central1-docker.pkg.dev/cytognosis-infrastructure/cytognosis-compute/
-└── neo4j:latest
-└── datascience:latest
 ```
 
-## Memory Tuning for GCP Host
+This registry is empty as of 2026-06-14. Deployed containers pull from public registries (Docker Hub, GHCR).
 
-For the `cytohost` VM (n2d-standard-8, 32GB RAM):
+---
 
-| Service | Heap | Page Cache | Total |
-|---------|------|------------|-------|
-| Neo4j (small) | 2GB | 2GB | 4GB |
-| Neo4j (full KG) | 8GB | 12GB | 20GB |
-| Neo4j (max) | 12GB | 16GB | 28GB |
+## Cross-References
 
-Adjust via environment variables:
-```bash
-export NEO4J_HEAP=8g
-export NEO4J_PAGECACHE=12g
-python stack_manager.py up neo4j-only
-```
+| Document | Relationship |
+|---|---|
+| [Deployment Walkthrough](self-hosted/deployment_walkthrough.md) | Full live state |
+| [Container Framework](container-framework.md) | Framework management detail |
+| [Architecture Overview](architecture.md) | System topology |
+| [Compute: Node Types](compute/node-types.md) | VM specs |

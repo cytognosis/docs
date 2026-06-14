@@ -1,62 +1,122 @@
-# Infrastructure Walkthrough
+> **Status**: Approved
+> **Date**: 2026-06-14
+> **Author**: Cytognosis Engineering
+> **Audience**: Engineering, DevOps
+> **Tags**: `self-hosted`, `docker`, `containers`, `cytohost`
+> **Last verified**: 2026-06-14 against gcloud
 
-## Container Framework
+# Self-Hosted Stack — Deployment Walkthrough
 
-Built a composable, YAML-driven container framework at [`container_framework/`](../../container_framework/):
+## BLUF
 
-- **9 service definitions** — `caddy`, `calcom`, `excalidraw`, `jupyter`, `logseq`, `mermaid`, `mlflow`, `neo4j`, `zotero` (zotero retained as optional, not in deployed `core` stack — see [paper library architecture](../data-strategy/paper-library-architecture.md))
-- **3 stack definitions** — `core`, `research`, `neo4j-only`
-- **`stack_manager.py`** — CLI for `list`, `compose`, `up`, `down`, `build`, `push`
-- Auto-detects Podman vs Docker runtime
+11 containers running on `cytohost` (`e2-highmem-2`, x86\_64, us-central1-b). Current external IP is 34.171.23.255 (ephemeral; static IP attachment pending). All services route through `cyto-caddy` on ports 80/443. Production compose file: `container_framework/docker-compose.cytohost-v2.yml`.
 
-## Docker vs Podman Evaluation
+> [!WARNING]
+> All prior references to 8 containers, IP `34.122.154.49`, IP `34.61.134.177`, ARM64 images, or QEMU emulation are **stale** and describe the pre-v2 deployment. The current state is documented below.
 
-Tested Neo4j OLS4 (24GB) with both runtimes:
+---
 
-| | Docker | Podman |
-|---|---|---|
-| Volume mounts | ✅ Works (sudo) | ⚠️ UID mapping `chown` errors |
-| Image names | Short names OK | Needs `docker.io/library/` prefix |
-| Security | Root daemon | Rootless by default |
+## Live Container Stack
 
-## Unified Core Services (Deployed)
+| Container | Image | Mode | Internal Port | External Subdomain |
+|---|---|---|---|---|
+| `cyto-caddy` | `caddy:2-alpine` | Always-on | 80, 443 | — (reverse proxy) |
+| `cyto-postgres` | `postgres:16-alpine` | Always-on | 5432 (internal) | — |
+| `cyto-calcom` | `calcom/cal.com:latest` | Always-on | 3000 (internal) | `cal.cytognosis.org` |
+| `cyto-excalidraw` | `excalidraw/excalidraw:latest` | Always-on | 80 (internal) | `whiteboard.cytognosis.org` |
+| `cyto-excalidraw-room` | `excalidraw/excalidraw-room:latest` | Always-on | 3002 (internal) | — (collab backend) |
+| `cyto-gitea` | `gitea/gitea:latest` | Always-on | 3000 (internal) | `code.cytognosis.org` |
+| `cyto-mlflow` | `ghcr.io/mlflow/mlflow:v2.21.0` | Always-on | 5000 (internal) | `mlflow.cytognosis.org` |
+| `cyto-wiki` | `requarks/wiki:2` | Always-on | 3000 (internal) | `wiki.cytognosis.org` |
+| `cyto-prefect` | `prefecthq/prefect:3-python3.12` | Always-on | 4200 (internal) | `prefect.cytognosis.org` |
+| `cyto-zoekt` | `ghcr.io/sourcegraph/zoekt:latest` | Always-on | 6070 (internal) | `search.cytognosis.org` |
+| `cyto-neo4j` | `neo4j:5.18.1-community` | **On-demand** | 7474, 7687 (internal) | `kg.cytognosis.org` |
 
-8 containers running on `cytohost` (34.122.154.49):
+All containers use Docker Compose restart policy `unless-stopped` (except neo4j, which is on-demand profile).
 
-| Container | Status | Internal Routing |
-|---|---|---|
-| Caddy (reverse proxy) | ✅ Running | Ports 80/443 |
-| Cal.com | ✅ Running | `cal.cytognosis.org` → :3000 |
-| Excalidraw | ✅ Running | `whiteboard.cytognosis.org` → :80 |
-| Excalidraw Room | ✅ Running | Collab backend |
-| Mermaid Live Editor | ✅ Running | `mermaid.cytognosis.org` → :8080 |
-| Logseq Web | ✅ Running | `notes.cytognosis.org` → :80 |
-| MLflow | ✅ Running | `mlflow.cytognosis.org` → :5000 |
-| Postgres (Cal.com DB) | ✅ Healthy | Internal :5432 |
+---
 
-**Verified:** Caddy correctly routes to all services via Docker internal network.
+## Host Details
 
-## Research Stack (Deployed)
+| Field | Value |
+|---|---|
+| VM | `cytohost` |
+| Machine type | `e2-highmem-2` (2 vCPU, 16 GB RAM, x86\_64) |
+| Zone | us-central1-b |
+| Current external IP | **34.171.23.255** (ephemeral) |
+| Reserved static IP | `cytohost-ip` = 136.111.39.188 (not yet attached) |
+| Compose file | `container_framework/docker-compose.cytohost-v2.yml` |
 
-Running on `research-stack-server` (34.61.134.177):
-- Neo4j ✅ (ports 7474, 7687)
-- Mermaid ✅ (port 8081)
+---
 
-## GitHub Actions CI/CD
+## DNS Routing
 
-Created `.github/workflows/build-containers.yml`:
-- Triggers on push to main when Dockerfiles change
-- Builds neo4j + datascience images via matrix strategy
-- Pushes to GCP Artifact Registry + optionally Docker Hub
-- Uses existing Workload Identity Federation
+All service subdomains point to 34.171.23.255 in the `cg-org` Cloud DNS zone. Caddy handles TLS termination and proxies to the correct container on the internal Docker network.
 
-## DNS Setup Needed
+| Subdomain | Container |
+|---|---|
+| `cal.cytognosis.org` | cyto-calcom |
+| `code.cytognosis.org` | cyto-gitea |
+| `draw.cytognosis.org` | cyto-excalidraw |
+| `hub.cytognosis.org` | cyto-gitea (alt route) |
+| `kg.cytognosis.org` | cyto-neo4j |
+| `mermaid.cytognosis.org` | (served via Caddy static or separate container — verify on host) |
+| `mlflow.cytognosis.org` | cyto-mlflow |
+| `notes.cytognosis.org` | (verify on host — logseq not in compose v2) |
+| `prefect.cytognosis.org` | cyto-prefect |
+| `search.cytognosis.org` | cyto-zoekt |
+| `whiteboard.cytognosis.org` | cyto-excalidraw |
+| `wiki.cytognosis.org` | cyto-wiki |
 
-To complete the deployment, create these DNS A records pointing to `34.122.154.49`:
-- `cal.cytognosis.org`
-- `whiteboard.cytognosis.org`
-- `mermaid.cytognosis.org`
-- `notes.cytognosis.org`
-- `mlflow.cytognosis.org`
+> [!NOTE]
+> `mermaid.cytognosis.org` and `notes.cytognosis.org` DNS records exist in `cg-org`. The corresponding containers (`mermaid-live-editor` and `logseq`) are present in YAML stack configs but not in `docker-compose.cytohost-v2.yml`. Their live status on cytohost should be verified directly.
 
-Once DNS propagates, Caddy will auto-provision Let's Encrypt HTTPS certificates.
+---
+
+## Operations
+
+```bash
+# SSH into cytohost
+gcloud compute ssh cytohost \
+  --zone=us-central1-b \
+  --project=cytognosis-infrastructure \
+  --tunnel-through-iap
+
+# Check running containers
+sudo docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.Image}}'
+
+# Start full always-on stack
+cd /opt/container_framework
+sudo docker compose up -d
+
+# Start on-demand neo4j
+sudo docker compose --profile on-demand up -d cyto-neo4j
+
+# Stop neo4j
+sudo docker compose stop cyto-neo4j
+
+# View container logs
+sudo docker logs cyto-<service> --tail 100 -f
+
+# Restart a container
+sudo docker restart cyto-<service>
+```
+
+---
+
+## GitHub Actions Runner
+
+The self-hosted GitHub Actions runner runs as a systemd service on cytohost. Labels: `self-hosted, linux, X64, cytohost`. See [runner-setup.md](../ci-cd/runner-setup.md) for registration and maintenance.
+
+---
+
+## Cross-References
+
+| Document | Relationship |
+|---|---|
+| [Architecture Overview](../architecture.md) | Full topology and container table |
+| [Container Framework](../container-framework.md) | YAML-driven stack management |
+| [Container Services](../container-services.md) | Service-level quick reference |
+| [CI/CD: Runner Setup](../ci-cd/runner-setup.md) | GitHub Actions runner |
+| [Compute: Node Types](../compute/node-types.md) | VM specs and SSH |
+| [DNS & GCP Architecture](../DNS_AND_GCP_ARCHITECTURE.md) | DNS records and pending remediation |
