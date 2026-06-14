@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `cap`, `cytoplex`, `spec`
+
 # Implementation Alignment Checklist
 
 This checklist maps repository evidence to the CAP documents. It separates implemented v0.1 behavior, documented CAP v1 target behavior, partially implemented v1 scaffolding, and missing v1 runtime behavior.

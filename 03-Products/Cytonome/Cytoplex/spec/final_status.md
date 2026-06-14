@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `cap`, `cytoplex`, `spec`
+
 # CAP v0.1 Production-Candidate Status
 
 **Package:** `cap-protocol` / `cytognosis_cap_v01_production_candidate`

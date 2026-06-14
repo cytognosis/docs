@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `cap`, `cytoplex`, `spec`, `tasks`
+
 # CAP v1 Documentation Gap Backlog
 
 This backlog tracks the gap between the current CAP v0.1 production-candidate package and the CAP v1 target architecture.

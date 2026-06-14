@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `cytonome`, `mvp`, `yar`
+
 # 03 — LinkML to Anytype Mapping
 
 ## Goal

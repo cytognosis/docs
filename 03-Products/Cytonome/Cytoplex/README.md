@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, stakeholders
+> **Tags**: `cap`, `cytoplex`
+
 # Cytoplex — Yar's Safety, Authority & Coordination Component
 
 > [!IMPORTANT]

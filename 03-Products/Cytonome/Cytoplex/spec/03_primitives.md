@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `cap`, `cytoplex`, `spec`
+
 # CAP_03 — Primitives
 
 The current package defines seven shared artifacts: five envelope payload artifacts plus two core structures used by those payloads. CAP v1 keeps the successful subset but expands the target Core object model to support the hybrid supervisory architecture.

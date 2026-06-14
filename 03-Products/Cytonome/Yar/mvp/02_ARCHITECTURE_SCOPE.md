@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `architecture`, `cytonome`, `mvp`, `yar`
+
 # 02 — Architecture Scope
 
 ## High-level architecture
