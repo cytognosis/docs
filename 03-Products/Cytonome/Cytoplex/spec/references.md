@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `cap`, `cytoplex`, `spec`
+
 # CAP References and Standards Map
 
 This file consolidates the main external standards CAP composes with. URLs were verified during preparation of the v0.1-candidate supervisor package.

@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `cap`, `cytoplex`, `spec`
+
 # CAP_05 — Integrations
 
 CAP is designed to compose with other systems. This file defines recommended mappings. Unless a profile says otherwise, these mappings are informative, not mandatory.

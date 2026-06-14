@@ -1,3 +1,9 @@
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, stakeholders
+> **Tags**: `cytonome`, `features`, `planning`, `yar`
+
 # YAR Feature Comparison (ADHD-Friendly): Artifact Reference
 
 > This artifact points to the canonical document at:
