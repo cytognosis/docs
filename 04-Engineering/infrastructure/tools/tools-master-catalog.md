@@ -1,5 +1,11 @@
 # Cytognosis Tools Master Catalog
 
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, researchers
+> **Tags**: `tools`, `infrastructure`, `catalog`
+
 > *Cytognosis exists so no one else waits decades for answers.*
 
 A single source of truth for every named tool, repo, standard, ontology, schema, model, dataset, format, framework, or service we've researched across the Cytognosis Foundation infrastructure stack. Union of the five archive sources plus the May 2026 connectomics review. ADHD-friendly: plenty of diagrams, short summaries, jump anywhere.

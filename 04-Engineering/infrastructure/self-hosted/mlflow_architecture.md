@@ -1,6 +1,14 @@
 # MLOps & Infrastructure Architecture Evaluation
 
-Based on your request to optimize instance resources and evaluate MLOps platforms, here is the assessment and proposed architecture for Cytognosis Foundation.
+> **Status**: Historical evaluation — MLflow now deployed on cytohost.
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `mlflow`, `mlops`, `self-hosted`, `compute`
+
+**Last verified: 2026-06-14** — MLflow runs on `cytohost` (`e2-highmem-2`, `us-central1-b`) as part of the core stack. Artifact bucket `gs://cytognosis-mlflow-artifacts` NOW EXISTS (created 2026-06-14, `us-central1`). The `e2-micro`/`e2-small` options and dynamic spin-up approach described below were evaluated but not chosen; the consolidated cytohost architecture was the outcome.
+
+Based on earlier work to optimize instance resources and evaluate MLOps platforms, here is the assessment and proposed architecture for Cytognosis Foundation.
 
 ---
 

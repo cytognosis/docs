@@ -1,6 +1,14 @@
 # Bundled Infrastructure & Modular Compute Plan
 
-> Historical planning document. The architecture described below is now operational and is documented in the [Container Framework README](../../container_framework/README.md) and the [Deployment Walkthrough](deployment_walkthrough.md). This page is preserved as the original strategy record.
+> **Status**: Historical — planning doc preserved as a strategy record.
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `self-hosted`, `docker`, `compute`
+
+**Last verified: 2026-06-14** — all services run on `cytohost` (`e2-highmem-2`, `us-central1-b`). VM runs 24/7; no business-hours scheduler exists (Cloud Scheduler API disabled in cytognosis-infrastructure).
+
+> Historical planning document. The architecture described below is now operational and is documented in the [Deployment Walkthrough](deployment_walkthrough.md). This page is preserved as the original strategy record.
 
 ## Goal
 

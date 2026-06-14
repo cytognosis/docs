@@ -1,6 +1,14 @@
 # Data Infrastructure Overview
 
-> ADHD-friendly quick reference. For full details, see the [infrastructure repo docs](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/data-strategy/).
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, operators
+> **Tags**: `data-strategy`, `gcs`, `dvc`, `neo4j`
+
+> ADHD-friendly quick reference. For full architecture detail, see [master-data-strategy.md](master-data-strategy.md) and [TECHNICAL_DATA_INFRASTRUCTURE.md](TECHNICAL_DATA_INFRASTRUCTURE.md).
+
+**Last verified: 2026-06-14**
 
 ## How Data Flows
 
@@ -87,8 +95,8 @@ cypher-shell -u neo4j -p cytognosis2026 "MATCH (n) RETURN count(n)"
 
 ## Related Docs
 
-- [DVC Configuration](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/data-strategy/dvc-configuration.md)
-- [Dataset Catalog](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/data-strategy/catalog.yaml)
-- [Download Sources](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/data-strategy/download-sources.yaml)
-- [Data Hub Architecture](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/data-strategy/data-hub.md)
-- [Master Data Strategy](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/data-strategy/master-data-strategy.md)
+- [DVC Configuration](dvc-configuration.md)
+- [Dataset Catalog](dataset-catalog.md)
+- [Data Hub Architecture](data-hub.md)
+- [Master Data Strategy](master-data-strategy.md)
+- [TECHNICAL_DATA_INFRASTRUCTURE](TECHNICAL_DATA_INFRASTRUCTURE.md)
