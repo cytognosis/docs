@@ -9,6 +9,13 @@ tags:
   - research
 ---
 
+> **Status**: Active
+> **Date**: 2026-05-24
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `engineering`, `schemas`, `research`, `biotools`, `edam`
+
+
 # biotoolsSchema, EDAM Ontology, and bio.tools Registry: Research Analysis
 
 > **Owner**: Shahin Mohammadi · **Created**: 2026-05-24 · **Status**: DRAFT

@@ -279,3 +279,40 @@ docs/
 - `strategy/tool-landscape/` was empty; removed without git mv.
 - `cytoverse/cytos/validation/` (143 files) treated as agent execution session artifacts -> `07-Agent-Work/validation/`. Contains screenshots, PNGs, WEBPs, and session reports from prior agent runs.
 - The `_archive/cytos-historical/historical/` double-nesting is preserved from the source (`cytoverse/cytos/historical/historical/`).
+
+---
+
+## Phase 3 — All Phases Complete (2026-06-14)
+
+| Phase | Status | Description |
+|-------|--------|-------------|
+| 3a: Docs repo renumber | ✅ DONE | 6 structural commits; v8 taxonomy applied; 536 files |
+| 3b: Obsidian cleanup | ✅ DONE | De-mirrored 61 symlinks; v8 renumber; 234 files in vault |
+| 3c: Claude Projects CLAUDE.md | ✅ DONE | 8 hybrid projects wired with CLAUDE.md routing files |
+| 3c Stage 1: Gather Yar/Cytoplex/CAP docs | ✅ DONE | 23 new files + 36 headers; research/ EVAL-topic.md convention |
+| 3d: Google Drive index | ✅ DONE | `06-Operations/gdrive-ops-legal-index.md` + `02-Funding/gdrive-funding-index.md` |
+| 3e: Monday.com boards | 🔒 BLOCKED | Monday connector disconnected; no action taken |
+| 3f: Cross-link pass | ✅ DONE | `sensor-architecture.md`, `biotools-schema-edam-research.md`, `master-metaplan.md` |
+
+### Phase 4 Verification Results
+
+- **Headers**: All modified files in this branch have `> **Status**` metadata headers. ✅
+- **Legacy stubs**: `plans/yar-feature-comparison-adhd-ref.md` and `plans/yar-feature-comparison-ref.md` removed (broken `file://` paths; canonical content in `research/`). ✅
+- **Branch status**: Clean working tree. ✅
+- **Cross-links verified**: All three `See Also` sections reference valid relative paths. ✅
+
+### Final Commit Log (Phase 3c-4)
+
+```
+63e78cc feat(docs): Phase 3f — add cross-links to key hub docs
+acaf36b feat(docs): Phase 3d — add Google Drive ops/legal/funding index pointers
+bd4a6d4 chore(docs): add cytognosis-doc metadata headers to Yar/Cytoplex docs
+ee3eb58 feat(docs): Phase 3c Stage 1 — gather Yar/Cytoplex/CAP docs
+```
+
+### Remaining Work (not blocking merge)
+
+- **Broader metadata normalization**: ~480 docs outside the Cytonome section still lack cytognosis-doc headers; run a follow-up batch header pass on `04-Engineering/`, `05-Research/`, `06-Operations/`.
+- **Phase 3e (Monday)**: reconnect connector; build entity+relationship boards.
+- **00-Inbox review**: 5 ambiguous files still parked for manual placement.
+
