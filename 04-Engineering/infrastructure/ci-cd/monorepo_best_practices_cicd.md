@@ -1,5 +1,11 @@
 # Mono-Repo Best Practices for Multi-Platform Apps
 
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `ci-cd`, `monorepo`, `github-actions`
+
 ## 1. How Super Productivity Does It
 
 ### Architecture: One App, Multiple Shells

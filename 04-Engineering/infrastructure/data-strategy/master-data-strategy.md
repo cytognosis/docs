@@ -1,5 +1,11 @@
 # Cytognosis Foundation Master Data Strategy
 
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, researchers, compliance, stakeholders
+> **Tags**: `data-strategy`, `fair`, `hipaa`, `governance`
+
 ## Executive Summary
 
 Cytognosis Foundation is developing AI-native healthcare technologies that detect and prevent disease before symptoms emerge. Our data strategy focuses on creating a comprehensive, ethical, and globally accessible framework for multimodal health data integration while maintaining the highest standards of privacy, security, and regulatory compliance.

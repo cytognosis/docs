@@ -1,5 +1,13 @@
 # Cytognosis Central Data Hub (`cytognosis-data-hub`)
 
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, data scientists
+> **Tags**: `gcs`, `dvc`, `data-hub`
+
+**Last verified: 2026-06-14** — `gs://cytognosis-data-hub` confirmed in `cytognosis-infrastructure`, `us-central1`, with versioning ON and lifecycle rules (60d Nearline, 180d Coldline).
+
 ## Purpose
 
 `gs://cytognosis-data-hub` is the canonical **collaborative data sharing** bucket for the

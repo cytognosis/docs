@@ -1,4 +1,10 @@
-# Cytognosis Dataset Catalog & Stratification
+# Cytognosis Dataset Catalog and Stratification
+
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, researchers, compliance
+> **Tags**: `datasets`, `data-strategy`, `hipaa`, `nih-gds`
 
 This document serves as the comprehensive registry of datasets managed, accessed, or integrated by the Cytognosis Foundation. It details the stratification of highly restricted neuro-related datasets, their corresponding access restrictions, and the underlying infrastructure requirements necessary to ensure full regulatory and security compliance (HIPAA, NIH NDA, etc.).
 
