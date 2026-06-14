@@ -1,7 +1,14 @@
-# Reproducibility & FAIR Strategy
+# Reproducibility and FAIR Strategy
+
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers
+> **Tags**: `reproducibility`, `fair`, `cytoskeleton`, `ro-crate`
+
 **Applies to**: all Cytognosis repos — cytoskeleton, cytos, Yar, neuro-*
 **Status**: Strategy complete; implementation in progress (cytoskeleton v2 Phase 1)
-**Last updated**: 2026-05-22
+**Last updated**: 2026-06-14
 
 ---
 

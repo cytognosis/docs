@@ -1,5 +1,11 @@
 # Wave-Based Ingestion Tracker
 
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, data scientists
+> **Tags**: `data-strategy`, `ingestion`, `datasets`
+
 > Track progress of dataset ingestion through the Cytognosis data pipeline.
 
 ## Wave 0: Infrastructure Testing (In Progress)

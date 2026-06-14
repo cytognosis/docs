@@ -1,6 +1,12 @@
 # Cytognosis Data Management Plan (DMP)
 
-**Status**: 🟢 ACTIVE · **Last Updated**: 2026-05-25
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, compliance, grant writers
+> **Tags**: `dmp`, `fair`, `hipaa`, `nih-gds`
+
+**Status**: Active | **Last Updated**: 2026-06-14
 
 This document outlines the master data strategy for the Cytognosis Foundation, aligning with NIH GDS policy and our FAIR data principles.
 

@@ -1,5 +1,11 @@
 # Cytognosis Infrastructure Stack
 
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, researchers
+> **Tags**: `tools`, `infrastructure`, `storage`, `provenance`, `fair`
+
 > How the bytes become FAIR-published reasoning, layer by layer, with the actual tools at each layer named.
 
 Companion to [`tools-master-catalog.md`](tools-master-catalog.md) (the catalog) and [`tools-master-catalog.xlsx`](tools-master-catalog.xlsx) (the searchable spreadsheet). This doc focuses on the *infrastructure* — storage, repositories, the meta layer that annotates/shares/searches them, provenance tracking, FAIR experiment packaging, workflow execution, and how it all fits together as data flows.

@@ -1,6 +1,14 @@
 # Research Knowledge Management Platform
 
-> Replace paid tools (ReadCube Papers, Lucid Spark, ClickUp) with an open, sovereign stack for paper management, annotation, knowledge graphs, collaborative whiteboarding, and citation management — self-hosted on Cytognosis GCP infrastructure.
+> **Status**: Active
+> **Date**: 2026-06-14
+> **Author**: @mohammadi
+> **Audience**: engineers, researchers
+> **Tags**: `self-hosted`, `logseq`, `zotero`, `knowledge-management`
+
+**Last verified: 2026-06-14** — Logseq is deployed at `notes.cytognosis.org` on cytohost (`34.171.23.255`, ephemeral; `cg-org` DNS zone).
+
+> Architecture for the open, sovereign stack for paper management, annotation, knowledge graphs, collaborative whiteboarding, and citation management — self-hosted on Cytognosis GCP infrastructure.
 
 This document is the architecture for the *research workflow tier* — what researchers see and use day-to-day. The underlying data architecture (where PDFs live, how metadata syncs, how annotations are stored) is the [sovereign paper library architecture](../data-strategy/paper-library-architecture.md). Read that first if you're trying to understand the storage layout.
 
