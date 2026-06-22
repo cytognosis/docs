@@ -1,14 +1,14 @@
 > **Status**: Active
-> **Date**: 2026-06-18
+> **Date**: 2026-06-21
 > **Author**: Cytognosis Engineering
 > **Audience**: engineers, operators
 > **Tags**: `quick-reference`, `infrastructure`, `gcp`, `cytohost`
-> **Last verified**: 2026-06-18 against `gcloud` CLI + `gh` API
+> **Last verified**: 2026-06-21 against `gcloud` CLI + `ssh cytohost`
 
 # Cytognosis Infrastructure — Quick Reference
 
-> **One line**: Current-state snapshot of every live GCP resource, cytohost service, and key CLI command.
-> **Full doc**: [MASTER_INFRASTRUCTURE.md](MASTER_INFRASTRUCTURE.md) | [DNS & GCP Architecture](DNS_AND_GCP_ARCHITECTURE.md) | [cytoinfra docs](cytoinfra/cytoinfra.md)
+> **One line**: Live GCP resources, cytohost services, and verified usage examples for every operation.
+> **Full docs**: [MASTER_INFRASTRUCTURE.md](MASTER_INFRASTRUCTURE.md) | [DNS & GCP Architecture](DNS_AND_GCP_ARCHITECTURE.md) | [cytoinfra docs](cytoinfra/cytoinfra.md)
 
 ---
 
@@ -35,7 +35,9 @@
 | **External IP** | `34.171.23.255` (static: `cytohost-static`) |
 | **Internal IP** | `10.128.0.6` |
 | **Project** | `cytognosis-infrastructure` |
-| **Network tags** | `http-server`, `https-server`, `research-stack` |
+| **Network tags** | `http-server`, `https-server` |
+| **Service Account** | `cytohost-sa@cytognosis-infrastructure.iam.gserviceaccount.com` |
+| **OS Login** | ✅ Enabled (project-wide) |
 | **Status** | ✅ Running |
 
 ### Static IPs
@@ -43,31 +45,427 @@
 | Name | Address | Status | Notes |
 |---|---|---|---|
 | `cytohost-static` | `34.171.23.255` | **IN_USE** | Attached to cytohost |
-| `cytohost-ip` | `136.111.39.188` | RESERVED | Orphaned — releasable |
-| `core-services-ip` | `34.70.62.117` | RESERVED | Orphaned — releasable |
-| `cytognosis-ip` | `34.98.121.181` | RESERVED | Global, orphaned — releasable |
 
-> [!WARNING]
-> Three orphaned static IPs are incurring idle costs (~$7.30/mo each). Release them when confirmed unnecessary.
+> All orphaned IPs deleted 2026-06-19.
 
 ---
 
-## Self-Hosted Stack (cytohost — Docker Compose, 11 containers)
+## Self-Hosted Stack (cytohost — Docker Compose)
+
+### Always-on Services (9 containers)
 
 | Container | Subdomain | URL | Notes |
 |---|---|---|---|
-| `cyto-caddy` | — | — | Reverse proxy + TLS termination |
-| `cyto-calcom` | `cal` | https://cal.cytognosis.org | Scheduling |
-| `cyto-excalidraw` | `draw` | https://draw.cytognosis.org | Whiteboard |
+| `cyto-caddy` | — | — | Reverse proxy + TLS + basicauth |
+| `cyto-postgres` | — | internal | Shared PostgreSQL 16 (wiki, gitea, prefect, calcom) |
+| `cyto-wiki` | `wiki` | https://wiki.cytognosis.org | Wiki.js collaborative docs |
+| `cyto-mlflow` | `mlflow` | https://mlflow.cytognosis.org | ML experiment tracking (🔒) |
 | `cyto-gitea` | `code` | https://code.cytognosis.org | Internal Git forge |
-| `cyto-mlflow` | `mlflow` | https://mlflow.cytognosis.org | ML experiment tracking |
-| `cyto-neo4j` | `hub` / `kg` | https://hub.cytognosis.org | Knowledge graph |
-| `cyto-postgres` | — | internal | Shared PostgreSQL |
-| `cyto-prefect` | `prefect` | https://prefect.cytognosis.org | Workflow orchestration |
-| `cyto-wiki` | `notes` | https://notes.cytognosis.org | Wiki.js collaborative docs |
-| `cyto-zoekt` | `search` | https://search.cytognosis.org | Code search |
+| `cyto-zoekt` | `search` | https://search.cytognosis.org | Cross-repo code search |
+| `cyto-prefect` | `prefect` | https://prefect.cytognosis.org | Workflow orchestration (🔒) |
+| `cyto-excalidraw` | `draw` | https://draw.cytognosis.org | Collaborative whiteboard |
+| `cyto-calcom` | `cal` | https://cal.cytognosis.org | Scheduling |
 
-All subdomain A records point to `34.171.23.255` in DNS zone `cg-org`. Additional A records exist for `whiteboard`, `wiki`, `mermaid`, and `kg` as aliases.
+### On-Demand Services (3 databases — use `--profile on-demand`)
+
+| Container | Subdomain | URL | Protocol | Notes |
+|---|---|---|---|---|
+| `cyto-neo4j` | `kg` | https://kg.cytognosis.org | Bolt 7687, HTTP 7474 | Knowledge graph (🔒, 6-8 GB) |
+| `cyto-surrealdb` | `surreal` | https://surreal.cytognosis.org | HTTP 8000 | Multi-model DB (🔒, 512 MB) |
+| `cyto-falkordb` | `graph` | https://graph.cytognosis.org | Redis 6379 | Fast graph DB (🔒, 256 MB) |
+
+🔒 = protected by Caddy basicauth (`admin_auth` snippet)
+
+All subdomain A records point to `34.171.23.255` in DNS zone `cg-org`.
+
+---
+
+## Usage Examples
+
+### 1. Connect to Cytohost
+
+```bash
+# Option A: SSH alias (recommended — uses IAP tunnel, configured in ~/.ssh/config)
+ssh cytohost
+
+# Option B: Full gcloud command (if SSH config not set up)
+gcloud compute ssh cytohost \
+  --zone=us-central1-b \
+  --project=cytognosis-infrastructure \
+  --tunnel-through-iap
+
+# Option C: VS Code Remote-SSH
+# Add "cytohost" as a host in VS Code → Remote Explorer → SSH Targets
+# It reads ~/.ssh/config automatically
+
+# Run a single command without interactive session
+ssh cytohost "sudo docker ps --format 'table {{.Names}}\t{{.Status}}'"
+```
+
+### 2. Service Lifecycle (Start / Stop / Restart)
+
+```bash
+# Compose file location on cytohost (after deployment):
+# /opt/cytognosis/docker-compose.cytohost-v2.yml
+
+# --- Always-on services ---
+
+# Stop a specific service
+ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml stop wiki"
+
+# Start it again
+ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml start wiki"
+
+# Restart with fresh config
+ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml up -d wiki"
+
+# --- On-demand databases (neo4j, surrealdb, falkordb) ---
+
+# Start Neo4j (on-demand profile)
+ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml --profile on-demand up -d neo4j"
+
+# Start SurrealDB
+ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml --profile on-demand up -d surrealdb"
+
+# Start FalkorDB
+ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml --profile on-demand up -d falkordb"
+
+# Start ALL on-demand databases at once
+ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml --profile on-demand up -d neo4j surrealdb falkordb"
+
+# Stop an on-demand service
+ssh cytohost "sudo docker stop cyto-surrealdb"
+
+# Check health of all running services
+ssh cytohost "sudo docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}'"
+```
+
+### 3. Upload Datasets to GCS Buckets
+
+```bash
+# --- From your local machine ---
+
+# Upload a single file
+gcloud storage cp ./my-dataset.parquet gs://cytognosis-data-hub/datasets/my-dataset/
+
+# Upload a directory recursively
+gcloud storage cp -r ./processed-data/ gs://cytognosis-data-hub/datasets/my-experiment/
+
+# Upload with parallel threads (large files)
+gcloud storage cp --parallel-thread-count=8 ./large-file.h5ad gs://cytognosis-data-hub/raw/
+
+# Upload to public data bucket (de-identified, public-readable)
+gcloud storage cp ./public-resource.csv gs://cytognosis-public-data/datasets/
+
+# --- Using DVC ---
+# DVC remote is configured to use cytognosis-data-hub
+cd /path/to/your/repo
+dvc push  # Pushes tracked data to gs://cytognosis-data-hub/dvc-cache/
+```
+
+### 4. Download Datasets on Cytohost → Pipe Directly to GCS
+
+```bash
+# --- Stream from URL directly to GCS (skips local disk entirely) ---
+
+# Basic streaming download
+ssh cytohost "curl -L 'https://portal.brain-map.org/data/atlas.h5ad' | \
+  gcloud storage cp - gs://cytognosis-data-hub/raw/allen-adult-brain-atlas.h5ad"
+
+# With progress bar (using pv if installed)
+ssh cytohost "curl -L 'https://example.org/big-dataset.tar.gz' | \
+  pv | gcloud storage cp - gs://cytognosis-data-hub/raw/big-dataset.tar.gz"
+
+# Stream with authentication header
+ssh cytohost "curl -L -H 'Authorization: Bearer TOKEN' \
+  'https://api.synapse.org/file/v1/entity/syn123/download' | \
+  gcloud storage cp - gs://cytognosis-data-hub/raw/synapse/syn123.csv"
+
+# Download from GCS to local (on cytohost)
+ssh cytohost "gcloud storage cp gs://cytognosis-data-hub/datasets/my-data.parquet /tmp/"
+
+# Copy between buckets
+gcloud storage cp -r gs://cytognosis-data-hub/raw/experiment-1/ gs://cytognosis-public-data/datasets/experiment-1/
+```
+
+### 5. Docker Operations
+
+```bash
+# --- Using cytoinfra CLI (from infrastructure repo) ---
+cd /home/mohammadi/repos/cytognosis/infrastructure
+
+# List registered containers
+uv run cytoinfra container list
+
+# Build a container image
+uv run cytoinfra container build neo4j
+
+# Push to GCP Artifact Registry
+uv run cytoinfra container push neo4j
+
+# Deploy a service to cytohost
+uv run cytoinfra service deploy neo4j --remote mohammadi@34.171.23.255
+
+# --- Manual docker operations on cytohost ---
+
+# Build and pull latest images
+ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml pull"
+
+# Rebuild a service (if using custom Dockerfile)
+ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml build neo4j"
+
+# View logs for a service
+ssh cytohost "sudo docker logs cyto-neo4j --tail 50"
+
+# Follow logs in real-time
+ssh cytohost "sudo docker logs -f cyto-surrealdb"
+
+# Exec into a container
+ssh cytohost "sudo docker exec -it cyto-neo4j cypher-shell"
+
+# Clean up unused images
+ssh cytohost "sudo docker system prune -f"
+```
+
+### 6. Add a New Dockerized Service to Cytohost
+
+**4-step process:**
+
+```bash
+# Step 1: Create service config YAML
+cat > infrastructure/container_framework/configs/services/myservice.yaml << 'EOF'
+name: myservice
+description: "My new service"
+image: myimage:latest
+ports:
+  - "8080:8080"
+environment:
+  MY_VAR: "value"
+volumes:
+  - name: myservice_data
+    target: /data
+healthcheck:
+  test: "curl -sf http://localhost:8080/health || exit 1"
+  interval: "30s"
+  timeout: "10s"
+  retries: 5
+  start_period: "15s"
+resources:
+  min_memory: "256m"
+  recommended_memory: "512m"
+  min_cpus: 1
+EOF
+
+# Step 2: Add to docker-compose.cytohost-v2.yml
+# Add volume: myservice_data:
+# Add service block under services:
+
+# Step 3: Add Caddy reverse proxy entry
+cat >> infrastructure/container_framework/configs/Caddyfile << 'EOF'
+myservice.cytognosis.org {
+    import security_headers
+    reverse_proxy myservice:8080
+}
+EOF
+
+# Step 4: Add DNS A record
+gcloud dns record-sets create myservice.cytognosis.org. \
+  --zone=cg-org --type=A --ttl=300 --rrdatas=34.171.23.255 \
+  --project=cytognosis-infrastructure
+
+# Step 5: Deploy to cytohost
+# Copy updated compose + Caddyfile to cytohost and restart
+scp docker-compose.cytohost-v2.yml cytohost:/opt/cytognosis/
+scp configs/Caddyfile cytohost:/opt/cytognosis/configs/
+ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml up -d myservice"
+
+# Step 6: Validate
+docker compose -f docker-compose.cytohost-v2.yml config --quiet  # Local syntax check
+```
+
+### 7. Use Cytoskeleton for Asset Management
+
+```bash
+cd /home/mohammadi/repos/cytognosis/cytoskeleton
+
+# --- Environment Management ---
+uv run cytoskeleton env build         # Build/resolve environment from component graph
+uv run cytoskeleton env sync          # Sync environment to local venv
+
+# --- Dependency Diagnostics ---
+uv run cytoskeleton deps check        # Verify schema compliance + hash integrity
+uv run cytoskeleton deps add numpy    # Dry-run: analyze adding a dependency
+uv run cytoskeleton deps trace numpy  # Trace dependency through the graph
+uv run cytoskeleton deps diff         # Compare lockfiles
+uv run cytoskeleton deps doctor       # Binary-search conflict isolation
+uv run cytoskeleton deps viz          # Generate Mermaid/Graphviz dependency diagram
+
+# --- Lock File Management ---
+uv run cytoskeleton lock generate     # Generate lock files for all platforms
+uv run cytoskeleton lock publish      # Publish LOCK_MANIFEST with SHA-256 hashes
+uv run cytoskeleton lock export       # Export uv lock → conda environment
+
+# --- Asset Store ---
+uv run cytoskeleton store list        # List registered assets
+uv run cytoskeleton store pull <asset-ref>   # Pull an asset from remote
+uv run cytoskeleton store push <asset-ref>   # Push an asset to remote
+uv run cytoskeleton store search <query>     # Search asset index
+uv run cytoskeleton store merge              # Merge asset indices
+
+# --- VFS (Virtual Filesystem) ---
+# Cytoskeleton supports 7 VFS backends: local, git, github, gcs, s3, hf_hub, zenodo
+# Set GCS backend for production:
+export CYTOSKELETON_GCS_BUCKET=cytognosis-artifacts
+```
+
+### 8. Build New Packages with Cytocast
+
+```bash
+cd /home/mohammadi/repos/cytognosis/cytocast
+
+# --- Scaffold a new project using Copier templates ---
+# Cytocast is a Copier template engine — it uses `copier copy` to scaffold projects
+
+# List available profiles
+ls profiles/
+
+# Create a new AI/ML project
+copier copy --trust \
+  /home/mohammadi/repos/cytognosis/cytocast/templates \
+  /path/to/new-project \
+  --data project_name=my-project \
+  --data profile=ai-llm
+
+# Create a new data science project
+copier copy --trust \
+  /home/mohammadi/repos/cytognosis/cytocast/templates \
+  /path/to/new-project \
+  --data project_name=my-analysis \
+  --data profile=data-science
+
+# Create a new Python library
+copier copy --trust \
+  /home/mohammadi/repos/cytognosis/cytocast/templates \
+  /path/to/new-project \
+  --data project_name=my-library \
+  --data profile=library
+
+# Update an existing project from latest templates
+copier update --trust /path/to/existing-project
+
+# Available profiles: ai-llm, bio-modeling, cytos, data-science, django,
+#   fastapi, full-stack, library, ml, r-analysis, and more
+```
+
+### 9. Database Access
+
+```bash
+# --- Neo4j (Bolt + HTTP) ---
+# Browser UI: https://kg.cytognosis.org (basicauth required)
+# Bolt endpoint: bolt://34.171.23.255:7687
+# Default credentials: neo4j / cytognosis2026
+
+# Cypher shell (on cytohost)
+ssh cytohost "sudo docker exec -it cyto-neo4j cypher-shell -u neo4j -p cytognosis2026"
+
+# Python (local, via Bolt)
+# pip install neo4j
+from neo4j import GraphDatabase
+driver = GraphDatabase.driver("bolt://34.171.23.255:7687", auth=("neo4j", "cytognosis2026"))
+
+# --- SurrealDB (HTTP/WebSocket) ---
+# HTTP API: https://surreal.cytognosis.org (basicauth required)
+# Default credentials: root / cytognosis2026
+# Uses SurrealKV storage engine
+
+# CLI (on cytohost)
+ssh cytohost "sudo docker exec -it cyto-surrealdb /surreal sql --endpoint http://localhost:8000 --username root --password cytognosis2026 --namespace cytognosis --database main"
+
+# Python (local, via HTTP)
+# pip install surrealdb
+from surrealdb import Surreal
+async with Surreal("ws://34.171.23.255:8000/rpc") as db:
+    await db.signin({"user": "root", "pass": "cytognosis2026"})
+    await db.use("cytognosis", "main")
+
+# --- FalkorDB (Redis protocol) ---
+# Endpoint: redis://34.171.23.255:6379
+# Default password: cytognosis2026
+
+# CLI (on cytohost)
+ssh cytohost "sudo docker exec -it cyto-falkordb redis-cli -a cytognosis2026"
+# Inside redis-cli:
+# GRAPH.QUERY mygraph "MATCH (n) RETURN n LIMIT 10"
+
+# Python (local)
+# pip install falkordb
+from falkordb import FalkorDB
+db = FalkorDB(host="34.171.23.255", port=6379, password="cytognosis2026")
+graph = db.select_graph("cytognosis")
+result = graph.query("MATCH (n) RETURN n LIMIT 10")
+```
+
+### 10. cytoinfra CLI Reference
+
+```bash
+cd /home/mohammadi/repos/cytognosis/infrastructure
+
+# --- Container management ---
+uv run cytoinfra container list                        # List registered containers
+uv run cytoinfra container add <name> --image <img>    # Register a container
+uv run cytoinfra container remove <name>               # Remove from manifest
+uv run cytoinfra container build <name>                # Build container image
+uv run cytoinfra container push <name>                 # Push to Artifact Registry
+uv run cytoinfra container pull <name>                 # Pull from registry
+
+# --- Service deployment ---
+uv run cytoinfra service deploy <name>                 # Deploy locally
+uv run cytoinfra service deploy <name> --remote mohammadi@34.171.23.255  # Deploy to cytohost
+uv run cytoinfra service status                        # Show running containers
+uv run cytoinfra service stop <name>                   # Stop a service
+
+# --- Compute pools (Prefect + Cloud Batch) ---
+uv run cytoinfra compute pools                         # List available compute pools
+uv run cytoinfra compute init                          # Generate default pool config
+
+# --- Job submission ---
+uv run cytoinfra run python train.py --pool gpu-t4     # Submit a GPU job
+uv run cytoinfra run python ingest.py --pool cpu-medium --dry-run  # Dry run
+
+# --- Cloud Run (emergency/manual deploy) ---
+uv run cytoinfra cloud-run deploy <image>              # Deploy to Cloud Run
+uv run cytoinfra cloud-run deploy <image> --dry-run    # Show gcloud command
+
+# --- Wiki.js management ---
+uv run cytoinfra wiki-js setup                         # Deploy Wiki.js
+uv run cytoinfra wiki-js sync-config                   # Generate git sync config
+```
+
+---
+
+## GCS Buckets
+
+### cytognosis-infrastructure (11 buckets, all US-CENTRAL1)
+
+| Bucket | Purpose | Retention | Notes |
+|---|---|---|---|
+| `cytognosis` | Brand reserve | — | Public assets, potential sub-folders in future |
+| `cytognosis-artifacts` | Metadata, manifests, provenance, MLflow | — | Versioned, unified artifact registry |
+| `cytognosis-audit-7yr` | HIPAA audit logs | **7yr locked (irrevocable)** | Tamper-evident |
+| `cytognosis-data-hub` | Active data + DVC cache | Lifecycle: Standard→Nearline@60d→Coldline@180d | Purdue collab, shared datasets |
+| `cytognosis-internal` | Team working files | — | — |
+| `cytognosis-phi-prod` | Legacy (locked) | **7yr locked** | labels: compliance=hipaa; cannot delete until 2033 |
+| `cytognosis-public-data` | Open science datasets | — | De-identified, public-readable |
+
+**Brand namespace reserves** (empty, no retention): `cytonome`, `cytoscope`, `cytoverse`, `neuroverse`
+
+### cytognosis-phi-prod (3 buckets, US-CENTRAL1)
+
+| Bucket | Purpose | Encryption | Notes |
+|---|---|---|---|
+| `cytognosis-phi-core` | PHI vault | **CMEK** (`phi-keyring`/`phi-bucket-key`) | Versioned, uniform access |
+| `cytognosis-phi-collab` | External PHI collaborations | **CMEK** (`phi-keyring`/`phi-bucket-key`) | Sub-prefixes per DUC/partner |
+| `cytognosis-phi-prod_cloudbuild` | Cloud Build staging | GCP-managed | Auto-created by GCP; 30-day lifecycle |
 
 ---
 
@@ -78,34 +476,7 @@ All subdomain A records point to `34.171.23.255` in DNS zone `cg-org`. Additiona
 | `cytognosis-website-v2` | https://cytognosis-website-v2-tdmthpm4va-uc.a.run.app | Active |
 | `stories-api` | https://stories-api-tdmthpm4va-uc.a.run.app | Active (last deployed 2025-12-09) |
 
-Deployed via GitHub Actions OIDC through `website-deployer` SA.
-
----
-
-## GCS Buckets
-
-### cytognosis-infrastructure (16 buckets, all US-CENTRAL1)
-
-| Bucket | Retention | Notes |
-|---|---|---|
-| `cytognosis` | — | Oldest bucket (2026-02-22), public assets |
-| `cytognosis-audit-7yr` | **7yr locked (irrevocable)** | HIPAA audit logs |
-| `cytognosis-data-hub` | Lifecycle: Standard→Nearline@60d→Coldline@180d | Active data sharing, Purdue collab |
-| `cytognosis-internal` | — | Team working files |
-| `cytognosis-mlflow-artifacts` | — | MLflow artifact store |
-| `cytognosis-phi-prod` | **7yr locked** | labels: compliance=hipaa, data-class=phi |
-| `cytognosis-public-data` | — | Open science datasets |
-| `cytognosis-restricted-prod` | **1yr locked**, public access prevented | Restricted data |
-
-**Brand namespace reserves** (empty, no retention): `cytoagent`, `cytoexplorer`, `cytomark`, `cytonome`, `cytopilot`, `cytoscope`, `cytoskeleton`, `cytoverse`, `neuroverse`
-
-### cytognosis-phi-prod (3 buckets, US-CENTRAL1)
-
-| Bucket | Notes |
-|---|---|
-| `cytognosis-phi-core` | PHI core data |
-| `cytognosis-phi-collab-nih` | NIH collaboration |
-| `cytognosis-phi-prod_cloudbuild` | Cloud Build staging (US multi-region) |
+Deployed via GitHub Actions OIDC through `website-deployer` SA. Both are BAA-covered (Cloud Run).
 
 ---
 
@@ -136,12 +507,13 @@ Deployed via GitHub Actions OIDC through `website-deployer` SA.
 |---|---|---|---|
 | `website-deployer@cytognosis-infrastructure.iam` | Website Deployer | infra | ALL GitHub Actions CI/CD (org-wide OIDC) |
 | `stories-api-sa@cytognosis-phi-prod.iam` | Stories API SA | phi-prod | Runtime identity for Stories API Cloud Run |
+| `cytohost-sa@cytognosis-infrastructure.iam` | Cytohost VM SA | infra | Logging + monitoring for cytohost VM |
 
 ### Disabled / Managed
 
 | Email | Status | Notes |
 |---|---|---|
-| `517562623935-compute@developer.gserviceaccount.com` | **Disabled** | Infra default compute SA |
+| `517562623935-compute@developer.gserviceaccount.com` | **Disabled** | Infra default compute SA — replaced by `cytohost-sa` |
 | `143911445857-compute@developer.gserviceaccount.com` | Active | phi-prod default compute SA (used for Cloud Build + Cloud Run) |
 
 ---
@@ -171,11 +543,13 @@ Deployed via GitHub Actions OIDC through `website-deployer` SA.
 
 ## DNS Managed Zones
 
-| Domain | Live Zone | Nameservers | Duplicate Zone |
-|---|---|---|---|
-| `cytognosis.org` | `cg-org` | ns-cloud-d1-4 | `org-zone` (deletable) |
-| `cytognosis.com` | `com-zone` | ns-cloud-c1-4 | `cg-com` (deletable) |
-| `cytognosis.ai` | `ai-zone` | ns-cloud-e1-4 | `cg-ai` (deletable) |
+| Domain | Zone Name | Nameservers |
+|---|---|---|
+| `cytognosis.org` | `cg-org` | ns-cloud-d1-4 |
+| `cytognosis.com` | `com-zone` | ns-cloud-c1-4 |
+| `cytognosis.ai` | `ai-zone` | ns-cloud-e1-4 |
+
+> 3 duplicate zones (`org-zone`, `cg-com`, `cg-ai`) deleted 2026-06-19. `_dmarc` and `google._domainkey` records merged into live zones before deletion.
 
 ### Key DNS Records (cytognosis.org)
 
@@ -183,36 +557,21 @@ Deployed via GitHub Actions OIDC through `website-deployer` SA.
 |---|---|---|
 | `cytognosis.org` | A | Google hosting IPs (216.239.x.x) |
 | `www.cytognosis.org` | CNAME | `ghs.googlehosted.com.` |
-| `cal`, `code`, `draw`, `hub`, `kg`, `mermaid`, `mlflow`, `notes`, `prefect`, `search`, `whiteboard`, `wiki` | A | `34.171.23.255` |
+| `cal`, `code`, `draw`, `hub`, `kg`, `mermaid`, `mlflow`, `notes`, `prefect`, `search`, `surreal`, `whiteboard`, `wiki` | A | `34.171.23.255` |
 | `zotero.cytognosis.org` | A | `34.61.134.177` |
 
 ---
 
-## Key Commands
+## Firewall Rules (4 total)
 
-```bash
-# cytoinfra CLI
-cytoinfra container list                        # List registered containers
-cytoinfra container build <name>                # Build container image
-cytoinfra container push <name>                 # Push to Artifact Registry
-cytoinfra service deploy <name>                 # Deploy via docker-compose
-cytoinfra service status                        # Show running containers
-cytoinfra compute pools                         # List compute pools
-cytoinfra cloud-run deploy <image>              # Deploy to Cloud Run
+| Rule | Action | Direction | Ports | Source | Tags |
+|---|---|---|---|---|---|
+| `allow-http-https` | ALLOW | INGRESS | tcp:80,443 | 0.0.0.0/0 | http-server, https-server |
+| `allow-iap-ssh` | ALLOW | INGRESS | tcp:22 | 35.235.240.0/20 (IAP) | — |
+| `default-allow-icmp` | ALLOW | INGRESS | icmp | 0.0.0.0/0 | — |
+| `default-allow-internal` | ALLOW | INGRESS | all | 10.128.0.0/9 | — |
 
-# gcloud — VM management
-gcloud compute instances describe cytohost --zone us-central1-b --project=cytognosis-infrastructure
-gcloud compute ssh cytohost --zone=us-central1-b --project=cytognosis-infrastructure
-
-# GitHub Actions runner
-sudo systemctl status actions.runner.*          # Runner service status
-sudo systemctl restart actions.runner.*         # Restart runner
-
-# Orphaned IP cleanup (when confirmed safe)
-gcloud compute addresses delete cytohost-ip --region=us-central1 --project=cytognosis-infrastructure
-gcloud compute addresses delete core-services-ip --region=us-central1 --project=cytognosis-infrastructure
-gcloud compute addresses delete cytognosis-ip --project=cytognosis-infrastructure
-```
+> `default-allow-rdp`, `default-allow-ssh`, `allow-research-stack` deleted 2026-06-19. SSH is IAP-only.
 
 ---
 
@@ -222,9 +581,20 @@ gcloud compute addresses delete cytognosis-ip --project=cytognosis-infrastructur
 |---|---|
 | Google BAA | ✅ Signed 2025-09-01 |
 | Audit log 7yr | ✅ Locked irrevocably 2026-05-22 |
-| CMEK on PHI buckets | 🔲 Deferred (trigger: first DUC data ingest) |
+| CMEK on PHI buckets | ✅ Deployed (`phi-keyring`/`phi-bucket-key`); verified 2026-06-19 |
 | VPC Service Controls | 🔲 Deferred (trigger: first external PHI receipt) |
 | 9 HIPAA SOPs | ✅ Complete |
+
+---
+
+## Toolchain Summary
+
+| Tool | Version | CLI | Purpose | Maturity |
+|---|---|---|---|---|
+| **cytoskeleton** | 0.6.0 | `cytoskeleton`, `cytoskeleton-env` | VFS, asset management, env building, dependency tools | Beta/Production |
+| **cytoinfra** | 0.1.0 | `cytoinfra` | Container management, service deploy, compute pools, Cloud Run | Alpha/Functional |
+| **cytocast** | 1.1.0 | — (uses `copier`) | Project scaffolding from Copier templates (14 profiles) | Beta/Production |
+| **cytos** | 2026.5.0 | `cytos` | Data engineering, KG building, genomics, scholarly (ML stubs) | Alpha |
 
 ---
 
@@ -235,3 +605,4 @@ gcloud compute addresses delete cytognosis-ip --project=cytognosis-infrastructur
 - [cytoinfra/cytoinfra.md](cytoinfra/cytoinfra.md) — cytoinfra CLI reference
 - [compute/node-types.md](compute/node-types.md) — cytohost VM detail
 - [HOSTING_AND_DEPLOYMENT.md](HOSTING_AND_DEPLOYMENT.md) — Cloud Run + CDN frontend
+- [storage-architecture.md](storage-architecture.md) — bucket strategy and data tiers
