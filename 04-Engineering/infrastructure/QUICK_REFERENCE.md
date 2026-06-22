@@ -106,32 +106,32 @@ ssh cytohost "sudo docker ps --format 'table {{.Names}}\t{{.Status}}'"
 
 ```bash
 # Compose file location on cytohost (after deployment):
-# /opt/cytognosis/docker-compose.cytohost-v2.yml
+# ~/compose/docker-compose.yml
 
 # --- Always-on services ---
 
 # Stop a specific service
-ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml stop wiki"
+ssh cytohost "cd ~/compose && sudo docker compose stop wiki"
 
 # Start it again
-ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml start wiki"
+ssh cytohost "cd ~/compose && sudo docker compose start wiki"
 
 # Restart with fresh config
-ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml up -d wiki"
+ssh cytohost "cd ~/compose && sudo docker compose up -d wiki"
 
 # --- On-demand databases (neo4j, surrealdb, falkordb) ---
 
 # Start Neo4j (on-demand profile)
-ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml --profile on-demand up -d neo4j"
+ssh cytohost "cd ~/compose && sudo docker compose --profile on-demand up -d neo4j"
 
 # Start SurrealDB
-ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml --profile on-demand up -d surrealdb"
+ssh cytohost "cd ~/compose && sudo docker compose --profile on-demand up -d surrealdb"
 
 # Start FalkorDB
-ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml --profile on-demand up -d falkordb"
+ssh cytohost "cd ~/compose && sudo docker compose --profile on-demand up -d falkordb"
 
 # Start ALL on-demand databases at once
-ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml --profile on-demand up -d neo4j surrealdb falkordb"
+ssh cytohost "cd ~/compose && sudo docker compose --profile on-demand up -d neo4j surrealdb falkordb"
 
 # Stop an on-demand service
 ssh cytohost "sudo docker stop cyto-surrealdb"
@@ -209,10 +209,10 @@ uv run cytoinfra service deploy neo4j --remote mohammadi@34.171.23.255
 # --- Manual docker operations on cytohost ---
 
 # Build and pull latest images
-ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml pull"
+ssh cytohost "cd ~/compose && sudo docker compose pull"
 
 # Rebuild a service (if using custom Dockerfile)
-ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml build neo4j"
+ssh cytohost "cd ~/compose && sudo docker compose build neo4j"
 
 # View logs for a service
 ssh cytohost "sudo docker logs cyto-neo4j --tail 50"
@@ -275,9 +275,9 @@ gcloud dns record-sets create myservice.cytognosis.org. \
 
 # Step 5: Deploy to cytohost
 # Copy updated compose + Caddyfile to cytohost and restart
-scp docker-compose.cytohost-v2.yml cytohost:/opt/cytognosis/
-scp configs/Caddyfile cytohost:/opt/cytognosis/configs/
-ssh cytohost "cd /opt/cytognosis && sudo docker compose -f docker-compose.cytohost-v2.yml up -d myservice"
+gcloud compute scp docker-compose.cytohost-v2.yml cytohost:~/compose/docker-compose.yml ...
+gcloud compute scp configs/Caddyfile cytohost:~/compose/configs/Caddyfile ...
+ssh cytohost "cd ~/compose && sudo docker compose up -d myservice"
 
 # Step 6: Validate
 docker compose -f docker-compose.cytohost-v2.yml config --quiet  # Local syntax check
