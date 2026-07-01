@@ -2,6 +2,7 @@
 
 > **Status**: Active · **Version**: 10.1.0 · **Last synced**: 2026-05-19
 > **Claude Design project**: [`db29365a-e44f-4ca8-a947-3b669bdb7264`](https://claude.ai/design/p/db29365a-e44f-4ca8-a947-3b669bdb7264)
+> **Reconciled**: 2026-07-01 (Branding consolidation) added §14 Website Implementation Profile, folding the unique content of `WEBSITE_DESIGN_HANDBOOK.md` and `research-design-consolidation.md`. One open item (signature-gradient stops, brand skill v8.0 vs this spec v10.1.0) is logged in `Website/00-CONSOLIDATION/CONFLICTS.md`. Push §14 upstream to the branding repo `guidelines/` at the next sync so the design-system-master skill carries it.
 
 ## 1. Overview
 
@@ -607,6 +608,86 @@ A concatenated version exists as `MASTER_GUIDELINES.md` (67KB).
 | Font readability | Validated accessibility fonts | Lexend, Atkinson Hyperlegible available |
 | Content width | Max 65–75ch | Prevents line-tracking loss |
 | Keyboard navigation | Full tab order | Semantic HTML + focus management |
+
+## 14. Website Implementation Profile (public site)
+
+> **Reconciled 2026-07-01** from `WEBSITE_DESIGN_HANDBOOK.md` and `_drive/research-design-consolidation.md` during the Branding consolidation. These are the public website's implementation-level overrides on top of the Foundation profile (§2.3). They do not change the brand identity palette (§4.1); they scope calmer, neurodiversity-first defaults for cytognosis.org. Superseded source docs live under `Website/_archive/` with forward links. Reflect this section upstream in the branding repo `guidelines/` at the next sync so the design-system-master skill carries it.
+
+### 14.1 Calm violet override
+
+The public site lowers primary-violet chroma to reduce visual anxiety while keeping the brand primary intact for emphasis.
+
+| Token | Value | Role on the site |
+|-------|-------|------------------|
+| `--violet` | `#6E5BD1` | Website primary (calmer; 5.14:1 on dark) |
+| `--violet-strong` | `#8B3FC7` | Links, gradient midpoints; equals brand `--cg-violet-600` (§4.1) |
+
+The brand primary `--cg-violet-600` (`#8B3FC7`) is unchanged; `#6E5BD1` is a site-scoped calm default only.
+
+### 14.2 Warm-light theme
+
+The site ships a warm-light theme (Foundation is dark-first in §4.3). Section-level dark areas use a `.dark` class rather than a user-toggled dark mode; a full dark-mode toggle is deferred to the Yar phase.
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--bg` | `#F4F2EF` | Page background (warm) |
+| `--bg-2` | `#FAF8F2` | Raised background |
+| `--bg-3` | `#ECE9E4` | Sunken background |
+| `--surface` | `#FFFFFF` | Cards, surfaces |
+| `--ink` | `#23232B` | Primary text |
+| `--ink-2` | `#3C3D45` | Secondary text |
+| `--muted` | `#6F7178` | Muted text |
+| `--faint` | `#9A9CA4` | Faint text, placeholders |
+| `--night` | `#15151F` | Dark section background |
+| `--night-2` | `#1B1B2B` | Dark raised |
+| `--night-card` | `#23233A` | Dark card |
+| `--on-night-1` | `#F0EEF8` | Text on dark |
+| `--on-night-2` | `#ADAAC8` | Muted on dark |
+| `--on-night-3` | `#7C7A9C` | Faint on dark |
+
+### 14.3 Token name mapping (site to spec)
+
+| Website token | Canonical token (§4.4) |
+|---------------|------------------------|
+| `--grad-brand` | `--cg-gradient-signature` |
+
+Keep site aliases pointing at canonical tokens; do not fork the definitions. See the OPEN gradient-drift conflict in `Website/00-CONSOLIDATION/CONFLICTS.md`.
+
+### 14.4 Font scope rules
+
+Typography follows §5 (Inter for display and body; Newsreader for accent). Space Grotesk is NOT used; earlier handbook and `CLAUDE.md` references to Space Grotesk are superseded (see CONFLICTS.md).
+
+- Display font (Inter) for headings and eyebrows only; never body, labels, or form fields.
+- Newsreader for pullquotes of three sentences or fewer only.
+- Body, labels, and forms: Inter, 16px minimum, line-height 1.6.
+
+### 14.5 Calm-revision override hooks (neurodiversity-first)
+
+Website-profile values that override the base motion and spacing tokens (§6.4, §6.1) for a calmer reading experience. Base spec values shown for reference.
+
+| Hook | Calm value | Base (spec) |
+|------|-----------|-------------|
+| `--dur-fast` | 200ms | 150ms |
+| `--dur-base` | 320ms | 250ms |
+| `--dur-slow` | 520ms | 350ms |
+| Section vertical padding | calm rhythm (`--space-2xl` bands) | `--space-3xl` and up |
+| Parallax intensity | minimal; off under `prefers-reduced-motion` | not specified |
+| Hover lift | 2px maximum | varies |
+| Form input font-size | 16px minimum (prevents iOS zoom) | 16px |
+| Body text size | 16 to 17px | 16px |
+
+All motion collapses to near-zero under `prefers-reduced-motion` (§5.4, §13); Lenis smooth-scroll is destroyed when reduce-motion is set.
+
+### 14.6 Website profile open decisions
+
+| ID | Decision | Recommended default |
+|----|----------|---------------------|
+| D1 | `--grad-brand` equals `--cg-gradient-signature` alias | Adopt the alias (§14.3); resolve the gradient-stop drift (CONFLICTS.md) before launch |
+| D2 | Accent/quote font: Newsreader vs Source Serif Pro | Newsreader primary, Source Serif Pro fallback (and print/decks) |
+| D3 | When to load the a11y font chain (Atkinson Hyperlegible) | On-demand via the accessibility control, not global |
+| D4 | Form input font-size | 16px minimum site-wide |
+| D5 | Dark neutral alignment | Align site `--night*` toward spec neutrals (§4.3) at next sync |
+| D6 | Source Serif Pro exception | Retain for print and deck exports only |
 
 ## Appendix A: Quick Reference Card
 
