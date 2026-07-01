@@ -1,3 +1,9 @@
+> [!WARNING]
+> **Status:** SUPERSEDED · **Date:** 2026-07-01 · Superseded by [module-map.md](../module-map.md).
+> Byte-identical duplicate of module-map.md; module-map.md kept as canonical. Archived by the Cytos consolidation (`reorg/cytos-2026-07-01`). Retained for history; do not edit.
+
+---
+
 # Cytos Module Map
 
 > All `src/cytos/` Python modules, status, and purpose.

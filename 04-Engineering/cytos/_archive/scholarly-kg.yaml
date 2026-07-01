@@ -1,3 +1,6 @@
+# SUPERSEDED 2026-07-01: replaced by ../schemas-ontologies/schemas/scholarly-kg-v0.4.0.yaml
+# LinkML scholarly-KG schema v0.3.0; superseded by v0.4.0 (adds RO-Crate, ArtifactRelationship, goals 16+). Archived by Cytos consolidation (reorg/cytos-2026-07-01). Retained for history; do not edit.
+
 # =============================================================================
 # Cytognosis Foundation — Scholarly Knowledge Graph Schema v0.3.0
 # =============================================================================
