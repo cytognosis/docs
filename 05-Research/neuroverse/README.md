@@ -80,11 +80,34 @@ Satisfying all three is the acceptance criterion.
 
 ## Documents in This Section
 
+**Program and operations**
+
 | Doc | Purpose |
 |---|---|
 | [datasets-cohorts.md](datasets-cohorts.md) | Full cohort table: modalities, access routes, DUC status, data tiers |
 | [infrastructure.md](infrastructure.md) | Secure Analysis Environment design, inter-institutional access patterns |
 | [action-plan.md](action-plan.md) | IRB, DUC submission sequence, onboarding flow, roadmap |
+| [pipeline-report-v0.md](pipeline-report-v0.md) | First real-data phenotype projection and archetypal-analysis run (the micro-to-meso bridge) |
+
+**Science foundation** (consolidated 2026-07-01; framing for [03-Products/Cytoverse](../../03-Products/Cytoverse/science-foundation.md))
+
+| Doc | Purpose |
+|---|---|
+| [neurobehavioral-phenotype-feature-space.md](neurobehavioral-phenotype-feature-space.md) | Six-layer neurobehavioral phenotype feature space; the Cytognosis continuous axis |
+| [cdisc-qrs-instrument-reference.md](cdisc-qrs-instrument-reference.md) | CDISC QRS instrument vocabulary and four-identifier harmonization strategy |
+| [multimodal-coembedding-methods-review.md](multimodal-coembedding-methods-review.md) | 2025-2026 methods review; ranked co-embedding architecture recommendation |
+| [multimodal-coembedding-addendum.md](multimodal-coembedding-addendum.md) | Four deep-dive updates (FGW, cross-attention, MoE, causal representation) |
+| [master-dataset-curation.md](master-dataset-curation.md) | Master dataset curation narrative (data table in `datasets/curations/master/`) |
+| [fmri-methods-review.md](fmri-methods-review.md) | fMRI methods literature review (converted from the original .docx) |
+
+**Methods and standards**
+
+| Doc | Purpose |
+|---|---|
+| [neuroimaging-python-stack-defaults.md](neuroimaging-python-stack-defaults.md) | Org-wide Python package defaults for neuroimaging and electrophysiology |
+| [schema-survey/](schema-survey/README.md) | Survey of how to represent body, sensors, data, and models (SOSA chain); canonical copy |
+
+> Consolidation navigation for this project lives in `~/Claude/Projects/Science and Platform/00-CONSOLIDATION/INDEX.md`.
 
 ---
 
