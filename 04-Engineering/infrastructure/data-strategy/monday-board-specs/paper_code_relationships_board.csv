@@ -1,0 +1,21 @@
+Column Name,Column Type,Description,Is Required,Default Value
+Relationship ID,text,Unique identifier for this relationship,true,
+Paper DOI,text,DOI of the paper in the relationship,true,
+Code Repository,link,GitHub or repository URL of the code,true,
+Relationship Type,select,Type: Implements, Supplements, Depends On, Extends, Documents, Reproduces,true,Implements
+Is Primary,checkbox,Whether this is the primary/most significant relationship,false,true
+Evidence Text,long_text,Text snippet or quote supporting the relationship,false,
+Evidence URL,link,URL to page where relationship is documented,false,
+Confidence Score,number,Confidence of relationship detection (0-1),false,
+Extraction Method,text,How relationship was identified (manual, automated, etc),false,
+Data Source,text,Source of relationship information,false,
+Paper Title,text,Title of the paper (for reference),false,
+Code Repository Name,text,Name of the code repository (for reference),false,
+Paper Year,number,Publication year of paper,false,
+Code Language,text,Primary programming language of code,false,
+Paper Authors,text,Authors of the paper,false,
+Code Contributors,text,Code repository contributors,false,
+Relationship Strength,select,Strength of relationship: Explicit, Implicit, Inferred,false,Explicit
+Notes,long_text,Internal notes and commentary,false,
+Created Date,datetime,When record was created,false,
+Updated Date,datetime,When record was last updated,false,

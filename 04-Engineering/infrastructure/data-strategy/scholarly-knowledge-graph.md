@@ -2,15 +2,16 @@
 
 > Cytognosis maintains a single LinkML schema that unifies bibliographic metadata, scholarly graph data, biomedical entities, research artifacts (code, data, models, workflows, protocols), licenses, and personal annotations — and is interoperable with SemOpenAlex SPARQL, the UMLS Metathesaurus, the NCATS Translator ecosystem, and RO-Crate packaging.
 
-The canonical schema YAML lives in the **Infrastructure and Tooling** workspace folder rather than this repo, because it is regenerated routinely by the codegen pipeline and downstream artifacts (Pydantic, JSON Schema, OWL, SHACL, SQL DDL) are large. This document is the authoritative description of what the schema is for, where to find it, and how it is structured.
+The canonical schema YAML was migrated into this repo on 2026-07-02 (Infrastructure consolidation) and lives under [`schemas/`](schemas/). Codegen outputs (Pydantic, JSON Schema, OWL, SHACL, SQL DDL) are large and stay out of git; regenerate them on demand. This document is the authoritative description of what the schema is for, where to find it, and how it is structured.
 
 ## Where to find the schema
 
 | Artifact | Location |
 | --- | --- |
-| Current schema (v0.4.0) | `Infrastructure and Tooling/cytognosis_scholarly_kg_v0.4.0.yaml` (workspace) |
-| Previous schema (v0.3.0) | `Infrastructure and Tooling/cytognosis_scholarly_kg.yaml` (workspace) — retained for reference |
-| Codegen outputs | regenerated on demand into `Infrastructure and Tooling/cytognosis_scholarly_kg/` (Pydantic, JSON Schema, SHACL, OWL, SQL DDL) |
+| Current schema (v0.4.0) | [`schemas/cytognosis_scholarly_kg_v0.4.0.yaml`](schemas/cytognosis_scholarly_kg_v0.4.0.yaml) |
+| Previous schema (v0.3.0) | [`schemas/cytognosis_scholarly_kg.yaml`](schemas/cytognosis_scholarly_kg.yaml) — retained for reference |
+| Resource sub-schemas | [`schemas/`](schemas/) — code, datasets, models, papers, protocols, relationships, research_objects, workflows |
+| Codegen outputs | regenerated on demand (Pydantic, JSON Schema, SHACL, OWL, SQL DDL); not tracked in git |
 
 When the schema is promoted to a public release we will publish it under `cytognosis/scholarly-kg-schema` with a SPDX license, FAIR identifier (DOI via Zenodo), and a Hugging Face `data-card` mirror.
 

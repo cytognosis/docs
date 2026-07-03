@@ -1,0 +1,26 @@
+Column Name,Column Type,Description,Is Required,Default Value
+Relationship ID,text,Unique identifier for this relationship,true,
+Paper DOI,text,DOI of the paper in the relationship,true,
+Model URL,link,URL to HuggingFace Hub or model registry,true,
+Relationship Type,select,Type: Proposes, Uses, Fine Tunes, Evaluates, Distills, Extends Architecture,true,Proposes
+Is Primary,checkbox,Whether this is the primary/most significant relationship,false,true
+Evidence Text,long_text,Text snippet or quote supporting the relationship,false,
+Evidence URL,link,URL to page where relationship is documented,false,
+Confidence Score,number,Confidence of relationship detection (0-1),false,
+Extraction Method,text,How relationship was identified (manual, automated, etc),false,
+Data Source,text,Source of relationship information,false,
+Paper Title,text,Title of the paper (for reference),false,
+Model Name,text,Name or identifier of the model (for reference),false,
+Paper Year,number,Publication year of paper,false,
+Model Family,text,Architecture or model family,false,
+Paper Authors,text,Authors of the paper,false,
+Model Developers,text,Developers of the model,false,
+Model Task,text,Primary ML task of model,false,
+Benchmark Used,text,Benchmark dataset or metric used in evaluation,false,
+Performance Metric,text,Performance metric or score reported,false,
+Performance Value,text,Numeric value of performance metric,false,
+Relationship Strength,select,Strength of relationship: Explicit, Implicit, Inferred,false,Explicit
+Domain,text,Application domain (e.g., NLP, Computer Vision, Speech),false,
+Notes,long_text,Internal notes and commentary,false,
+Created Date,datetime,When record was created,false,
+Updated Date,datetime,When record was last updated,false,

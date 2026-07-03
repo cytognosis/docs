@@ -1,0 +1,371 @@
+id: https://schema.cytognosis.org/scholarly-kg/workflows
+name: cytognosis_workflows
+title: Cytognosis Scholarly KG - Computational Workflows Schema
+description: >-
+  LinkML schema for computational workflows. Aligned with Bioschemas
+  ComputationalWorkflow, Common Workflow Language (CWL), Workflow Description
+  Language (WDL), and RO-Crate Workflow Profile. Captures workflow metadata,
+  inputs/outputs, steps, software requirements, and integration with research
+  artifacts.
+version: 0.4.0
+license: CC-BY-4.0
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: https://schema.org/
+  dcterms: http://purl.org/dc/terms/
+  bioschemas: https://bioschemas.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  prov: http://www.w3.org/ns/prov#
+  pav: http://purl.org/pav/
+  datacite: https://schema.datacite.org/
+  biolink: https://w3id.org/biolink/vocab/
+  DOI: https://doi.org/
+  ROR: https://ror.org/
+  cytognosis: https://schema.cytognosis.org/scholarly-kg/
+
+default_prefix: cytognosis
+default_range: string
+imports:
+  - linkml:types
+
+
+# =============================================================================
+# ENUMERATIONS
+# =============================================================================
+enums:
+
+  WorkflowLanguage:
+    description: Workflow definition language or format.
+    permissible_values:
+      cwl:
+        description: Common Workflow Language (CWL).
+      wdl:
+        description: Workflow Description Language (WDL).
+      nextflow:
+        description: Nextflow workflow framework.
+      snakemake:
+        description: Snakemake workflow framework.
+      galaxy:
+        description: Galaxy workflow format.
+      airflow:
+        description: Apache Airflow DAG definition.
+      argo:
+        description: Argo Workflows format.
+      dagster:
+        description: Dagster asset/job definitions.
+      prefect:
+        description: Prefect flow definitions.
+      luigi:
+        description: Luigi task pipeline.
+      other:
+        description: Other workflow language or format.
+
+  WorkflowStatus:
+    description: Publication/curation status of the workflow.
+    permissible_values:
+      draft:
+        description: In development, not yet published.
+      published:
+        description: Published and stable.
+      deprecated:
+        description: Deprecated, superseded by newer version.
+      retired:
+        description: No longer actively maintained.
+
+  ParameterDirection:
+    description: Direction of a workflow parameter (input or output).
+    permissible_values:
+      input:
+        description: Input parameter to the workflow.
+      output:
+        description: Output parameter from the workflow.
+
+
+# =============================================================================
+# CLASSES
+# =============================================================================
+classes:
+
+  # ===========================================================================
+  # MIXINS
+  # ===========================================================================
+
+  HasTimestamps:
+    mixin: true
+    slots:
+      - created_date
+      - updated_date
+
+  HasTopics:
+    mixin: true
+    slots:
+      - topics
+      - keywords
+
+  HasLicense:
+    mixin: true
+    slots:
+      - license_ref
+      - license_spdx_id
+      - license_text
+
+  HasProvenance:
+    mixin: true
+    description: W3C PROV-aligned provenance tracking.
+    class_uri: prov:Entity
+    slots:
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+
+  HasROCrateMetadata:
+    mixin: true
+    description: RO-Crate metadata for packaging in Research Object Crates.
+    slots:
+      - conforms_to
+      - sd_publisher
+      - sd_date_published
+      - credit_text
+      - cite_as
+
+
+  # ===========================================================================
+  # ABSTRACT BASE CLASSES
+  # ===========================================================================
+
+  NamedThing:
+    description: A generic groupable object with an identifier and name.
+    slots:
+      - id
+      - display_name
+      - description
+      - alternate_names
+      - xref
+
+  ScholarlyEntity:
+    is_a: NamedThing
+    description: Base class for scholarly/research entities.
+    slots:
+      - id
+      - display_name
+      - description
+      - alternate_names
+      - xref
+
+
+  # ===========================================================================
+  # FORMAL PARAMETER (WORKFLOW INPUT/OUTPUT)
+  # ===========================================================================
+
+  FormalParameter:
+    is_a: NamedThing
+    class_uri: bioschemas:FormalParameter
+    description: >-
+      Formal parameter of a workflow step or workflow itself. Captures input
+      and output specifications with type information, format, and constraints.
+    slots:
+      - id
+      - display_name
+      - description
+      - parameter_direction
+      - parameter_type
+      - parameter_format
+      - default_value
+      - value_required
+      - value_pattern
+      - additional_type
+
+
+  # ===========================================================================
+  # COMPUTATIONAL WORKFLOW
+  # ===========================================================================
+
+  ComputationalWorkflow:
+    is_a: ScholarlyEntity
+    class_uri: bioschemas:ComputationalWorkflow
+    mixins: [HasLicense, HasProvenance, HasROCrateMetadata]
+    description: >-
+      Computational workflow for automated data analysis or processing.
+      Aligned with Bioschemas ComputationalWorkflow and RO-Crate Workflow
+      Profile. Captures workflow language, inputs/outputs, steps, and
+      integration with associated research artifacts.
+    slots:
+      - id
+      - display_name
+      - description
+      - workflow_language
+      - workflow_status
+      - workflow_version
+      - workflow_url
+      - workflow_repository_url
+      - workflow_inputs
+      - workflow_outputs
+      - workflow_steps
+      - software_requirements
+      - runtime_platform
+      - associated_papers
+      - associated_datasets
+      - associated_code_repos
+      - contributors
+      - date_published
+      - date_modified
+      - documentation_url
+      - test_suite_url
+      - license_ref
+      - license_spdx_id
+      - license_text
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+      - conforms_to
+      - sd_publisher
+      - sd_date_published
+      - credit_text
+      - cite_as
+
+
+# =============================================================================
+# SLOTS
+# =============================================================================
+slots:
+
+  # ---- Identity ------------------------------------------------------------
+  id:
+    slot_uri: schema:identifier
+    range: uriorcurie
+    identifier: true
+  display_name:
+    slot_uri: schema:name
+  description:
+    slot_uri: dcterms:description
+  alternate_names:
+    slot_uri: schema:alternateName
+    multivalued: true
+  xref:
+    multivalued: true
+    description: Cross-references to external databases (CURIEs).
+
+  # ---- Timestamps ----------------------------------------------------------
+  created_date:
+    slot_uri: dcterms:created
+    range: datetime
+  updated_date:
+    slot_uri: dcterms:modified
+    range: datetime
+  date_published:
+    slot_uri: schema:datePublished
+    range: date
+  date_modified:
+    slot_uri: schema:dateModified
+    range: date
+
+  # ---- License slots -------------------------------------------------------
+  license_ref:
+    range: string
+  license_spdx_id: {}
+  license_text: {}
+
+  # ---- Topics and keywords -------------------------------------------------
+  topics:
+    multivalued: true
+  keywords:
+    multivalued: true
+    slot_uri: schema:keywords
+
+  # ---- Provenance ----------------------------------------------------------
+  data_source: {}
+  confidence_score:
+    range: float
+  extraction_method: {}
+  was_derived_from:
+    slot_uri: prov:wasDerivedFrom
+    range: uriorcurie
+  was_generated_by:
+    slot_uri: prov:wasGeneratedBy
+  was_attributed_to:
+    slot_uri: prov:wasAttributedTo
+
+  # ---- RO-Crate metadata ---------------------------------------------------
+  conforms_to: {}
+  sd_publisher: {}
+  sd_date_published:
+    slot_uri: schema:sdDatePublished
+    range: date
+  credit_text: {}
+  cite_as: {}
+
+  # ---- Workflow Metadata ---------------------------------------------------
+  workflow_language:
+    range: WorkflowLanguage
+    slot_uri: bioschemas:workflowLanguage
+  workflow_status:
+    range: WorkflowStatus
+  workflow_version:
+    slot_uri: schema:softwareVersion
+  workflow_url:
+    range: uri
+    slot_uri: schema:url
+  workflow_repository_url:
+    range: uri
+  workflow_inputs:
+    multivalued: true
+    inlined_as_list: true
+    range: FormalParameter
+    slot_uri: bioschemas:input
+  workflow_outputs:
+    multivalued: true
+    inlined_as_list: true
+    range: FormalParameter
+    slot_uri: bioschemas:output
+  workflow_steps:
+    multivalued: true
+    description: Description or enumeration of workflow steps.
+
+  # ---- Technical Requirements -----------------------------------------------
+  software_requirements:
+    multivalued: true
+    slot_uri: schema:softwareRequirements
+  runtime_platform:
+    slot_uri: schema:runtimePlatform
+
+  # ---- Documentation and Testing -------------------------------------------
+  documentation_url:
+    range: uri
+  test_suite_url:
+    range: uri
+    description: URL to test suite or test cases for the workflow.
+
+  # ---- Related Artifacts ---------------------------------------------------
+  associated_papers:
+    multivalued: true
+  associated_datasets:
+    multivalued: true
+  associated_code_repos:
+    multivalued: true
+  contributors:
+    multivalued: true
+
+  # ---- FormalParameter Slots -----------------------------------------------
+  parameter_direction:
+    range: ParameterDirection
+  parameter_type:
+    description: Data type of the parameter (e.g., File, string, int, float).
+  parameter_format:
+    description: File format or schema (e.g., MIME type, EDAMontology term).
+  default_value:
+    description: Default value for the parameter if not provided.
+  value_required:
+    range: boolean
+    description: Whether parameter value is required.
+  value_pattern:
+    description: Regular expression or pattern for value validation.
+  additional_type:
+    multivalued: true
+    description: Additional semantic type annotations (URIs).

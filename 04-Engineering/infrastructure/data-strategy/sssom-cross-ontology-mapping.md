@@ -2,9 +2,9 @@
 
 > Cross-ontology mapping at Cytognosis lives as data, not as bespoke code. We use the Simple Standard for Sharing Ontology Mappings (SSSOM) to round-trip between UMLS, MONDO, HP, CL, CHEBI, NCBITaxon, SNOMED CT and the Cytognosis [scholarly knowledge graph](scholarly-knowledge-graph.md), and we hand SSSOM tables to downstream consumers (NCATS Translator, CELLxGENE, internal LLMs) without rewriting them.
 
-The full hands-on writeup with worked examples (download SNOMED CT exports, validate, convert to RDF, apply SNOMED → MONDO mappings before CELLxGENE schema validation) lives at:
+The full hands-on writeup with worked examples (download SNOMED CT exports, validate, convert to RDF, apply SNOMED → MONDO mappings before CELLxGENE schema validation) was migrated into this repo on 2026-07-02 and lives at:
 
-- `Infrastructure and Tooling/sssom_tooling_for_cytognosis.md` (workspace folder)
+- [`sssom-tooling-handbook.md`](sssom-tooling-handbook.md) (this repo)
 
 This document captures the architectural decision and serves as the canonical pointer.
 
@@ -43,7 +43,7 @@ Single-cell datasets need both **structural** validation (does this AnnData have
 - **Structural** — CZI's `cellxgene-schema validate` is the right tool; no custom code competes with it.
 - **Semantic** — LinkML + OAK + SSSOM. Source vocabularies in `obs` (e.g. SNOMED CT codes from a clinical site) are mapped through SSSOM to the CL / MONDO / NCBITaxon IDs that CELLxGENE requires.
 
-The worked SNOMED CT example in `sssom_tooling_for_cytognosis.md` demonstrates this end-to-end.
+The worked SNOMED CT example in [`sssom-tooling-handbook.md`](sssom-tooling-handbook.md) demonstrates this end-to-end.
 
 ## OLS4 SSSOM endpoint
 

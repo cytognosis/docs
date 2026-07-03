@@ -2,9 +2,9 @@
 
 > A 22-chapter, group-organized, hands-on playbook covering everything from "what is LinkML" to "how do I run an LLM RAG agent over the Cytognosis KG". This is the standard reference for any new schema, ontology mapping, or KG ingestion task at Cytognosis.
 
-The playbook itself is a directory of markdown chapters and supporting code, not a single document. It lives in the workspace folder rather than this repo because it includes large data examples and is regenerated when chapters are restructured.
+The playbook itself is a directory of markdown chapters and supporting code, not a single document. The full playbook was migrated into this repo on 2026-07-02 (Infrastructure consolidation) and now lives alongside this pointer document.
 
-- **Location** — `Infrastructure and Tooling/linkml_kg_playbook/` (workspace folder)
+- **Location** — [`linkml-kg-playbook/`](linkml-kg-playbook/) (this repo)
 
 This pointer document captures the structure and the decisions that came out of the playbook, so the operational docs in this repo (the [scholarly KG schema](scholarly-knowledge-graph.md), [SSSOM stack](sssom-cross-ontology-mapping.md), [paper library](paper-library-architecture.md)) can reference specific chapters reliably.
 
@@ -95,7 +95,7 @@ This pointer document captures the structure and the decisions that came out of 
 
 ---
 **Document Owner**: Chief Data Officer, Cytognosis Foundation
-**Playbook location**: `Infrastructure and Tooling/linkml_kg_playbook/` (workspace folder)
+**Playbook location**: [`linkml-kg-playbook/`](linkml-kg-playbook/) (this repo)
 **Last Updated**: May 2026
 **Status**: 22 chapters in 8 groups; living document
 **Classification**: Internal Use Only

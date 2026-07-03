@@ -1,0 +1,428 @@
+id: https://schema.cytognosis.org/scholarly-kg/datasets
+name: cytognosis_datasets
+title: Cytognosis Scholarly KG - Datasets Schema
+description: >-
+  LinkML schema for research datasets. Unifies DCAT 3, DATS, Croissant,
+  DataCite, and RO-Crate specifications. Captures dataset metadata, access
+  information, data types, quality metrics, and usage in research.
+version: 0.4.0
+license: CC-BY-4.0
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: https://schema.org/
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  foaf: http://xmlns.com/foaf/0.1/
+  croissant: http://mlcommons.org/croissant/
+  prov: http://www.w3.org/ns/prov#
+  datacite: https://schema.datacite.org/
+  biolink: https://w3id.org/biolink/vocab/
+  DOI: https://doi.org/
+  ROR: https://ror.org/
+  cytognosis: https://schema.cytognosis.org/scholarly-kg/
+
+default_prefix: cytognosis
+default_range: string
+imports:
+  - linkml:types
+
+
+# =============================================================================
+# ENUMERATIONS
+# =============================================================================
+enums:
+
+  DataAccessLevel:
+    description: DCAT / DATS access restrictions.
+    permissible_values:
+      open:
+        description: No restrictions, publicly downloadable.
+      registered:
+        description: Requires free registration.
+      controlled:
+        description: Requires application and approval (e.g., dbGaP).
+      embargoed:
+        description: Temporarily restricted until a date.
+      restricted:
+        description: Available only to authorized researchers.
+      closed:
+        description: Not available externally.
+
+  DataType:
+    description: Broad data modality classification.
+    permissible_values:
+      tabular: {}
+      text: {}
+      image: {}
+      audio: {}
+      video: {}
+      genomic: {}
+      proteomic: {}
+      metabolomic: {}
+      spatial_transcriptomic: {}
+      single_cell: {}
+      time_series: {}
+      graph: {}
+      geospatial: {}
+      mixed: {}
+      other: {}
+
+
+# =============================================================================
+# CLASSES
+# =============================================================================
+classes:
+
+  # ===========================================================================
+  # MIXINS
+  # ===========================================================================
+
+  HasTimestamps:
+    mixin: true
+    slots:
+      - created_date
+      - updated_date
+
+  HasTopics:
+    mixin: true
+    slots:
+      - topics
+      - keywords
+
+  HasLicense:
+    mixin: true
+    slots:
+      - license_ref
+      - license_spdx_id
+      - license_text
+
+  HasProvenance:
+    mixin: true
+    description: W3C PROV-aligned provenance tracking.
+    class_uri: prov:Entity
+    slots:
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+
+  HasROCrateMetadata:
+    mixin: true
+    description: RO-Crate metadata for packaging in Research Object Crates.
+    slots:
+      - conforms_to
+      - sd_publisher
+      - sd_date_published
+      - credit_text
+      - cite_as
+
+
+  # ===========================================================================
+  # ABSTRACT BASE CLASSES
+  # ===========================================================================
+
+  NamedThing:
+    description: A generic groupable object with an identifier and name.
+    slots:
+      - id
+      - display_name
+      - description
+      - alternate_names
+      - xref
+
+  ScholarlyEntity:
+    is_a: NamedThing
+    description: Base class for scholarly/research entities.
+    slots:
+      - id
+      - display_name
+      - description
+      - alternate_names
+      - xref
+
+
+  # ===========================================================================
+  # ASSOCIATION CLASSES
+  # ===========================================================================
+
+  DataDistribution:
+    description: A specific available form of a dataset (DCAT Distribution).
+    class_uri: dcat:Distribution
+    slots:
+      - download_url
+      - access_url
+      - media_type
+      - byte_size
+      - compression_format
+      - checksum
+      - distribution_description
+
+  RecordSet:
+    description: Croissant ML RecordSet for machine learning datasets.
+    class_uri: croissant:RecordSet
+    slots:
+      - record_set_name
+      - record_set_description
+      - fields
+
+
+  # ===========================================================================
+  # DATASET CLASS
+  # ===========================================================================
+
+  Dataset:
+    is_a: ScholarlyEntity
+    class_uri: dcat:Dataset
+    mixins: [HasTopics, HasLicense, HasProvenance, HasROCrateMetadata]
+    description: >-
+      Research dataset as first-class KG entity. Schema unifies DCAT 3,
+      DATS, Croissant, DataCite, and RO-Crate. Captures dataset metadata,
+      access information, data types, coverage, quality metrics, and usage
+      in research.
+    slots:
+      - id
+      - display_name
+      - description
+      - repository_url
+      - zenodo_url
+      - datacite_doi
+      - access_level
+      - access_url
+      - download_url
+      - access_requirements
+      - embargo_end_date
+      - data_type
+      - data_formats
+      - record_count
+      - size_bytes
+      - number_of_files
+      - schema_description
+      - variables
+      - spatial_coverage
+      - temporal_coverage_start
+      - temporal_coverage_end
+      - species_coverage
+      - quality_annotation
+      - completeness
+      - collection_method
+      - processing_pipeline
+      - produced_by_activity
+      - derived_from_datasets
+      - source_organisms
+      - instruments_used
+      - associated_papers
+      - associated_code_repos
+      - associated_models
+      - contributors
+      - dataset_version
+      - version_history
+      - fair_score
+      - persistent_id_type
+      - metadata_standard
+      - record_sets
+      - is_training_data_for
+      - is_evaluation_data_for
+      - stored_in
+      - data_use_conditions
+      - date_published
+      - date_modified
+      - date_collected
+      - topics
+      - keywords
+      - license_ref
+      - license_spdx_id
+      - license_text
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+      - was_attributed_to
+      - conforms_to
+      - sd_publisher
+      - sd_date_published
+      - credit_text
+      - cite_as
+
+
+# =============================================================================
+# SLOTS
+# =============================================================================
+slots:
+
+  # ---- Identity ------------------------------------------------------------
+  id:
+    slot_uri: schema:identifier
+    range: uriorcurie
+    identifier: true
+  display_name:
+    slot_uri: schema:name
+  description:
+    slot_uri: dcterms:description
+  alternate_names:
+    slot_uri: schema:alternateName
+    multivalued: true
+  xref:
+    multivalued: true
+    description: Cross-references to external databases (CURIEs).
+
+  # ---- Timestamps ----------------------------------------------------------
+  created_date:
+    slot_uri: dcterms:created
+    range: datetime
+  updated_date:
+    slot_uri: dcterms:modified
+    range: datetime
+  date_published:
+    slot_uri: schema:datePublished
+    range: date
+  date_modified:
+    slot_uri: schema:dateModified
+    range: date
+  date_collected:
+    range: date
+
+  # ---- License slots -------------------------------------------------------
+  license_ref:
+    range: string
+  license_spdx_id: {}
+  license_text: {}
+
+  # ---- Topics and keywords -------------------------------------------------
+  topics:
+    multivalued: true
+  keywords:
+    multivalued: true
+    slot_uri: schema:keywords
+
+  # ---- Provenance ----------------------------------------------------------
+  data_source: {}
+  confidence_score:
+    range: float
+  extraction_method: {}
+  was_derived_from:
+    slot_uri: prov:wasDerivedFrom
+    range: uriorcurie
+  was_generated_by:
+    slot_uri: prov:wasGeneratedBy
+  was_attributed_to:
+    slot_uri: prov:wasAttributedTo
+
+  # ---- RO-Crate metadata ---------------------------------------------------
+  conforms_to: {}
+  sd_publisher: {}
+  sd_date_published:
+    slot_uri: schema:sdDatePublished
+    range: date
+  credit_text: {}
+  cite_as: {}
+
+  # ---- Access and Distribution -------------------------------------------
+  repository_url:
+    range: uri
+  zenodo_url:
+    range: uri
+  datacite_doi: {}
+  access_level:
+    range: DataAccessLevel
+  access_url:
+    range: uri
+    slot_uri: dcat:accessURL
+  download_url:
+    range: uri
+    slot_uri: dcat:downloadURL
+  access_requirements: {}
+  embargo_end_date:
+    range: date
+
+  # ---- Data Description --------------------------------------------------
+  data_type:
+    range: DataType
+  data_formats:
+    multivalued: true
+    slot_uri: dcterms:format
+  schema_description: {}
+  variables:
+    multivalued: true
+
+  # ---- Coverage and Context -----------------------------------------------
+  spatial_coverage:
+    slot_uri: dcterms:spatial
+  temporal_coverage_start:
+    range: date
+  temporal_coverage_end:
+    range: date
+  species_coverage:
+    multivalued: true
+
+  # ---- Quality and Metrics ------------------------------------------------
+  record_count:
+    range: integer
+  number_of_files:
+    range: integer
+  size_bytes:
+    range: integer
+  quality_annotation:
+    slot_uri: dcat:qualityAnnotation
+  completeness: {}
+  fair_score:
+    range: float
+
+  # ---- Data Collection and Processing ------------------------------------
+  collection_method: {}
+  processing_pipeline: {}
+  produced_by_activity: {}
+
+  # ---- Versioning and Standards ------------------------------------------
+  dataset_version: {}
+  version_history:
+    multivalued: true
+  persistent_id_type: {}
+  metadata_standard: {}
+
+  # ---- ML Dataset Specific -----------------------------------------------
+  record_sets:
+    multivalued: true
+    inlined_as_list: true
+    range: RecordSet
+  is_training_data_for:
+    multivalued: true
+  is_evaluation_data_for:
+    multivalued: true
+
+  # ---- Related Artifacts --------------------------------------------------
+  derived_from_datasets:
+    multivalued: true
+  source_organisms:
+    multivalued: true
+  instruments_used:
+    multivalued: true
+  associated_papers:
+    multivalued: true
+  associated_code_repos:
+    multivalued: true
+  associated_models:
+    multivalued: true
+  contributors:
+    multivalued: true
+
+  # ---- Data Governance ---------------------------------------------------
+  stored_in: {}
+  data_use_conditions: {}
+
+  # ---- DataDistribution Slots -------------------------------------------
+  media_type: {}
+  byte_size:
+    range: integer
+  compression_format: {}
+  checksum: {}
+  distribution_description: {}
+
+  # ---- RecordSet Slots --------------------------------------------------
+  record_set_name: {}
+  record_set_description: {}
+  fields:
+    multivalued: true
