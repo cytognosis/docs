@@ -3,7 +3,7 @@
 > **Author**: Cytognosis Engineering
 > **Audience**: Engineering, DevOps, New Team Members
 > **Tags**: `infrastructure`, `index`, `gcp`
-> **Last verified**: 2026-06-14 against gcloud
+> **Last verified**: 2026-06-19 against gcloud
 
 # Cytognosis Foundation — Master Infrastructure
 
@@ -18,7 +18,7 @@ Two live GCP projects (`cytognosis-infrastructure`, `cytognosis-phi-prod`). One 
 | Resource | Current State |
 |---|---|
 | VM `cytohost` | e2-highmem-2, x86\_64, us-central1-b, RUNNING |
-| cytohost external IP | 34.171.23.255 (ephemeral; static `cytohost-ip` 136.111.39.188 reserved but NOT attached) |
+| cytohost external IP | 34.171.23.255 (`cytohost-static`, static IP attached) |
 | Self-hosted containers | 11 running (see architecture.md) |
 | Website | Cloud Run `cytognosis-website-v2` in `cytognosis-phi-prod` |
 | `cytognosis-data` project | **Does not exist** (planned) |
@@ -34,7 +34,7 @@ GCP project topology, compute (cytohost), full 11-container service matrix, Clou
 
 ### 2. [DNS & GCP Architecture](DNS_AND_GCP_ARCHITECTURE.md)
 
-Six Cloud DNS zones with dedup plan; canonical A/MX/TXT records per domain; pending remediation items (static IP attach, DNS dedup).
+Three Cloud DNS zones (duplicates deleted 2026-06-19); canonical A/MX/TXT records per domain; DNS remediation log.
 
 ### 3. [Hosting & Deployment](HOSTING_AND_DEPLOYMENT.md)
 
@@ -42,7 +42,7 @@ Cloud Run migration rationale, CI/CD OIDC federation (`website-deployer`), Artif
 
 ### 4. [GCP Setup](gcp-setup.md)
 
-Full GCS bucket inventory (16 buckets in `cytognosis-infrastructure`, 3 in `cytognosis-phi-prod`); IAM / service accounts; Workload Identity Federation config; Artifact Registry.
+Full GCS bucket inventory (11 buckets in `cytognosis-infrastructure`, 3 in `cytognosis-phi-prod`); IAM / service accounts (`website-deployer`, `cytohost-sa`, `stories-api-sa`); Workload Identity Federation config; Artifact Registry.
 
 ### 5. [Compute: Node Types](compute/node-types.md)
 

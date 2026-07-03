@@ -1,6 +1,7 @@
 # SOP: Deferred Security Controls
-**Status**: Documented intent — not yet implemented (except Control 7, which is done)
+**Status**: Documented intent — Controls 1, 6, 7 implemented; others deferred
 **Owner**: Engineering | **Review**: Quarterly; implement when trigger condition met
+**Last verified**: 2026-06-19
 
 ## Purpose
 
@@ -11,30 +12,21 @@ implementation criteria, not forgotten.
 
 ---
 
-## Control 1: CMEK on PHI Buckets
+## ~~Control 1: CMEK on PHI Buckets~~ — ✅ Completed 2026-06-14
+
+**Status**: ✅ DONE. CMEK deployed on `cytognosis-phi-core` and `cytognosis-phi-collab` using `phi-keyring/phi-bucket-key` in `us-central1` (verified 2026-06-19).
 
 **Control**: HIPAA 164.312(a)(2)(iv) — Encryption and Decryption
-**Deferred because**: No PHI data has been ingested yet. KMS costs $6/keyring/month.
-**Trigger**: First DUC data staged for ingestion into `gs://cytognosis-phi-core/`
 
-**Implementation** (run when triggered):
+**Verify**:
 ```bash
-# Create key ring per DUC
-gcloud kms keyrings create duc-<name> \
-  --location=us-central1 --project=cytognosis-infrastructure
-
-gcloud kms keys create data-key-v1 \
-  --keyring=duc-<name> --location=us-central1 \
-  --purpose=encryption \
-  --rotation-period=90d \
-  --next-rotation-time=$(date -u -d '+90 days' +%FT%TZ) \
-  --project=cytognosis-infrastructure
-
-# Apply CMEK to bucket
-gcloud storage buckets update gs://cytognosis-phi-core \
-  --default-kms-key=projects/cytognosis-infrastructure/locations/us-central1/keyRings/duc-<name>/cryptoKeys/data-key-v1
+gcloud storage buckets describe gs://cytognosis-phi-core --format="yaml(encryption)"
+gcloud storage buckets describe gs://cytognosis-phi-collab --format="yaml(encryption)"
 ```
-**Estimated cost**: ~$6/keyring/month + $0.03/10K operations
+
+> [!NOTE]
+> Additional per-DUC keyrings may be created when specific DUC data is ingested.
+> The base CMEK infrastructure is operational.
 
 ---
 
@@ -103,17 +95,15 @@ pipeline, audit logging at the record level.
 
 ---
 
-## Control 6: Object Versioning on PHI Buckets
+## ~~Control 6: Object Versioning on PHI Buckets~~ — ✅ Completed 2026-06-19
 
-**Control**: HIPAA 164.308(a)(7) — Data backup
-**Deferred because**: Zero objects currently in PHI buckets; versioning has a cost multiplier.
-**Trigger**: First data upload to `cytognosis-phi-core` or `cytognosis-phi-collab-nih`
+**Status**: ✅ DONE. Versioning enabled on `cytognosis-phi-core` and `cytognosis-phi-collab` (verified 2026-06-19).
 
+**Verify**:
 ```bash
-gcloud storage buckets update gs://cytognosis-phi-core --versioning
-gcloud storage buckets update gs://cytognosis-phi-collab-nih --versioning
+gcloud storage buckets describe gs://cytognosis-phi-core --format="yaml(versioning)"
+gcloud storage buckets describe gs://cytognosis-phi-collab --format="yaml(versioning)"
 ```
-**Estimated cost**: ~2× storage cost depending on update frequency
 
 ---
 
@@ -129,6 +119,7 @@ gcloud storage buckets update gs://cytognosis-phi-collab-nih --versioning
 | Date | Reviewer | Controls activated | Controls still deferred |
 |---|---|---|---|
 | 2026-05-22 | Shahin Mohammadi | Control 7 (audit lock) | Controls 1-6 |
+| 2026-06-19 | Engineering | Controls 1, 6 (CMEK + versioning) | Controls 2-5 |
 | 2026-08-22 | Privacy Officer | [to be filled] | [to be filled] |
 | 2026-11-22 | Privacy Officer | | |
 | 2027-05-22 | Privacy Officer | | |

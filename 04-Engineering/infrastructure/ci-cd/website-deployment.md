@@ -5,6 +5,9 @@
 > **Tags**: `ci-cd`, `cloud-run`, `oidc`, `website`
 > **Last verified**: 2026-06-14 against gcloud
 
+> [!WARNING]
+> **Website redesign in progress.** The deployment pipeline, Dockerfile, and Cloud Run config may change when the new website lands. The OIDC/WIF setup and `website-deployer` SA remain valid regardless. Re-verify after redesign merge.
+
 # CI/CD — Website Deployment Pipeline
 
 ## BLUF
