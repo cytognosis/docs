@@ -83,7 +83,7 @@ This pointer document captures the structure and the decisions that came out of 
 
 ## Caveats and follow-ups
 
-- **UMLS / SNOMED CT data folders** — chapter 05 assumes read-only mirrors at `_data/umls/` and `_data/snomed/` (workspace folder). At the time the chapter was written those folders were not present; once they are, the chapter's hands-on commands run as-written.
+- **UMLS / SNOMED CT data folders** — chapter 05 assumes read-only mirrors at `_data/umls/` and `_data/snomed/` (local checkout subfolders). At the time the chapter was written those folders were not present; once they are, the chapter's hands-on commands run as-written.
 - **No unverified URLs** — when chapters reference external endpoints (OLS4 SSSOM exports, OpenAlex API), the playbook is explicit about which URLs have been tested. New chapters or revisions should keep that discipline; if a URL has not been verified, phrase it as a hypothesis rather than an instruction.
 
 ## Cross-references
