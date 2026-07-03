@@ -1,3 +1,9 @@
+> [!WARNING]
+> **Status:** SUPERSEDED · **Date:** 2026-07-01 · Superseded by [architecture.md](../architecture.md).
+> Byte-identical to architecture-overview-v2.md; both are v3.0, superseded by architecture.md v4.0. Archived by the Cytos consolidation (`reorg/cytos-2026-07-01`). Retained for history; do not edit.
+
+---
+
 # Cytos Architecture Overview
 
 > v3.0 — Data-only KG construction and genomic infrastructure layer.
