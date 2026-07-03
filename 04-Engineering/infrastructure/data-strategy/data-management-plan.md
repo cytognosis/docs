@@ -16,7 +16,7 @@ This document outlines the master data strategy for the Cytognosis Foundation, a
 - **Internal Data (`gs://cytognosis-internal`)**: Internal development, non-PHI operational data, testing data.
 - **Shared Hub (`gs://cytognosis-data-hub`)**: Processed datasets shared with external collaborators (e.g., Purdue).
 - **Sensitive PHI Core (`gs://cytognosis-phi-core`)**: Raw genomic/clinical PHI, L3 controlled data.
-- **NIH Collaboration (`gs://cytognosis-phi-collab-nih`)**: NIH Data Use Certification (DUC) governed collaboration data.
+- **PHI Collaboration (`gs://cytognosis-phi-collab`)**: External PHI collaboration data, CMEK-encrypted, governed by Data Use Certifications.
 
 ## 2. FAIR Data Repositories
 
@@ -32,7 +32,7 @@ Cytognosis enforces FAIR (Findable, Accessible, Interoperable, Reusable) princip
 Data is stored in Google Cloud Storage (GCS) utilizing uniform bucket-level access.
 - **Audit Logs (`gs://cytognosis-audit-7yr`)**: 7-year immutable retention policy enforced via Cloud Storage Bucket Lock.
 - **Location**: All data resides in `us-central1`.
-- **Encryption**: Google-managed encryption keys (CMEK planned for PHI upon first DUC ingest).
+- **Encryption**: CMEK (`phi-keyring`/`phi-bucket-key`) on PHI buckets; Google-managed on non-PHI buckets.
 
 ## 4. Access and Security
 

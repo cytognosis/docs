@@ -45,11 +45,11 @@ graph TD
     AG --> KI
 
     subgraph "Cytohost (GCP VM)"
-        CH[136.111.39.188<br/>via IAP tunnel]
-        N4[neo4j:5.18.1]
-        SD[surrealdb:v2]
-        HD[hedgedoc + postgres]
-        CD[caddy reverse proxy]
+        CH[34.171.23.255<br/>cytohost-static via IAP]
+        N4[neo4j:5-community]
+        FK[falkordb:latest]
+        WK[wiki.js + postgres]
+        CD[caddy reverse proxy + TLS]
     end
 
     CI -->|SSH deploy| CH
@@ -109,8 +109,8 @@ cytoskeleton store list --remote
 ```
 
 ```text
-  [R] neo4j (5.18.1)               — cytoinfra/containers/neo4j@5.18.1
-  [R] surrealdb (v2)               — cytoinfra/containers/surrealdb@v2
+  [R] neo4j (5-community)           — cytoinfra/containers/neo4j@5-community
+  [R] falkordb (latest)              — cytoinfra/containers/falkordb@latest
   [R] mlflow (2.21.0)              — cytoinfra/containers/mlflow@2.21.0
   [R] caddy (2-alpine)             — cytoinfra/containers/caddy@2-alpine
   [R] hedgedoc (latest)            — cytoinfra/containers/hedgedoc@latest
@@ -510,7 +510,7 @@ gcloud compute start-iap-tunnel cytohost 22 \
 Or via SSH config (already configured):
 
 ```bash
-ssh 136.111.39.188
+ssh cytohost  # Uses IAP tunnel (34.171.23.255)
 ```
 
 ### Deploy a Service Locally
@@ -538,7 +538,7 @@ from cytoinfra.services.deploy import deploy_remote
 # Deploy to cytohost via SSH
 deploy_remote(
     service_name="neo4j",
-    host="mohammadi@136.111.39.188",
+    host="mohammadi@34.171.23.255",
     compose_file=Path("infrastructure/container_framework/docker-compose.yaml"),
     remote_dir="/opt/cytognosis",
 )
@@ -551,7 +551,7 @@ deploy_remote(
 cytoinfra service deploy neo4j
 
 # Deploy to cytohost
-cytoinfra service deploy neo4j --remote mohammadi@136.111.39.188
+cytoinfra service deploy neo4j --remote mohammadi@34.171.23.255
 
 # Check service status
 cytoinfra service status neo4j
@@ -576,25 +576,25 @@ cytoinfra service logs neo4j --tail 50
 
 ```bash
 # SSH into cytohost and manage services
-ssh 136.111.39.188 'docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
+ssh cytohost 'docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
 ```
 
 ```text
 NAMES              STATUS         PORTS
 cytos-neo4j        Up 3 hours     0.0.0.0:7474->7474/tcp, 0.0.0.0:7687->7687/tcp
-cytos-surrealdb    Up 3 hours     0.0.0.0:8000->8000/tcp
+cytos-falkordb     Up 3 hours     0.0.0.0:6379->6379/tcp
 caddy              Up 5 days      0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp
 ```
 
 ```bash
 # Stop a specific service
-ssh 136.111.39.188 'cd /opt/cytognosis && docker compose stop neo4j'
+ssh cytohost 'cd /opt/cytognosis && docker compose stop neo4j'
 
 # Start it again
-ssh 136.111.39.188 'cd /opt/cytognosis && docker compose start neo4j'
+ssh cytohost 'cd /opt/cytognosis && docker compose start neo4j'
 
 # Restart with fresh config
-ssh 136.111.39.188 'cd /opt/cytognosis && docker compose up -d neo4j'
+ssh cytohost 'cd /opt/cytognosis && docker compose up -d neo4j'
 ```
 
 ---
@@ -658,7 +658,7 @@ docs.cytognosis.org {
 cytoinfra hedgedoc deploy
 
 # Or deploy to cytohost
-cytoinfra hedgedoc deploy --remote mohammadi@136.111.39.188
+cytoinfra hedgedoc deploy --remote mohammadi@34.171.23.255
 ```
 
 ```text
@@ -675,7 +675,7 @@ cytoinfra hedgedoc deploy --remote mohammadi@136.111.39.188
 cytoinfra service status hedgedoc
 
 # Or directly on cytohost
-ssh 136.111.39.188 'docker ps | grep hedgedoc'
+ssh cytohost 'docker ps | grep hedgedoc'
 ```
 
 ```text
@@ -915,7 +915,7 @@ cytoinfra container push cytognosis-dashboard
 
 # 4. Deploy to cytohost
 cytoinfra service deploy cytognosis-dashboard \
-    --remote mohammadi@136.111.39.188
+    --remote mohammadi@34.171.23.255
 ```
 
 ```text
@@ -927,7 +927,7 @@ cytoinfra service deploy cytognosis-dashboard \
 
 ```bash
 # 5. Add Caddy reverse proxy entry (on cytohost)
-ssh 136.111.39.188 'cat >> /opt/cytognosis/Caddyfile << EOF
+ssh cytohost 'cat >> /opt/cytognosis/Caddyfile << EOF
 dashboard.cytognosis.org {
     reverse_proxy cytognosis-dashboard:8501
 }

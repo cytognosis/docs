@@ -15,7 +15,7 @@ graph TB
         direction TB
         PHI_CORE["gs://cytognosis-phi-core<br/>L3 PHI data"]
         PHI_DATA["gs://cytognosis-phi-prod-data<br/>L2 controlled data"]
-        PHI_COLLAB["gs://cytognosis-phi-collab-nih<br/>L2 collaborative data"]
+        PHI_COLLAB["gs://cytognosis-phi-collab<br/>L2 collaborative data"]
         VERTEX["Vertex AI<br/>Training jobs"]
         BQ["BigQuery<br/>Aggregate queries"]
     end
@@ -58,9 +58,9 @@ graph TB
 
 | Bucket | Data Tier | Contents | CMEK | Versioning |
 |---|---|---|---|---|
-| `gs://cytognosis-phi-core` | L3 — PHI | Direct identifiers (clinical EHR) | ⏳ At first ingest | ⏳ At first ingest |
+| `gs://cytognosis-phi-core` | L3 — PHI | Direct identifiers (clinical EHR) | ✅ Deployed | ✅ Enabled |
 | `gs://cytognosis-phi-prod-data` | L2 — Controlled | NDA/Synapse DUC data (WGS, scRNA-seq, MRI) | ⏳ At first ingest | ⏳ At first ingest |
-| `gs://cytognosis-phi-collab-nih` | L2 — Controlled | Collaborative controlled data shared with partners | ⏳ At first ingest | ⏳ At first ingest |
+| `gs://cytognosis-phi-collab` | L2 — Controlled | Collaborative controlled data shared with partners (sub-prefixed per partner) | ✅ Deployed | ✅ Enabled |
 | `gs://cytognosis-audit-7yr` | Audit | Cloud Audit Logs — **locked 2026-05-22** | No (audit cannot use CMEK) | N/A (retention-locked) |
 
 All buckets are in `us-central1`. Data does not leave this region without explicit

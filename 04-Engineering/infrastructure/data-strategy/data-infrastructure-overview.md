@@ -40,7 +40,7 @@ graph LR
 | `cytognosis-internal` | Non-PHI ops | T2 | infra |
 | `cytognosis-public-data` | De-identified open data | T1 | infra |
 | `cytognosis-phi-core` | Raw PHI vault (CMEK) | T4 | phi-prod |
-| `cytognosis-phi-collab-nih` | Restricted joint-analysis | T3 | phi-prod |
+| `cytognosis-phi-collab` | External PHI collaborations (CMEK) | T3 | phi-prod |
 | `cytognosis` | Public media/assets | T1 | infra |
 
 ## Provenance Stack (5 Layers)

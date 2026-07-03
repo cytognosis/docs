@@ -117,13 +117,13 @@ and operates HIPAA-aligned facilities. Cytognosis does not maintain its own data
 | Control | Status | Evidence | Owner |
 |---|---|---|---|
 | PHI integrity controls documented | ✅ Done | [phi-security-controls-checklist.md](phi-security-controls-checklist.md) | Shahin Mohammadi |
-| Object versioning on PHI buckets | ✅ **Done 2026-05-25** | Enabled on `phi-core` + `phi-collab-nih`; [GCP audit](../../audits/gcp-infrastructure-audit-2026-05-25.md) | Shahin Mohammadi |
+| Object versioning on PHI buckets | ✅ **Done 2026-05-25** | Enabled on `phi-core` + `phi-collab`; [GCP audit](../../audits/gcp-infrastructure-audit-2026-05-25.md) | Shahin Mohammadi |
 
 ### Encryption (§164.312(a)(2)(iv) and §164.312(e)(2))
 | Control | Status | Evidence | Owner |
 |---|---|---|---|
 | Encryption at rest (GCS default encryption) | ✅ Done | GCP-managed encryption on all buckets | GCP |
-| CMEK on PHI buckets | ⏳ Pending (trigger: first DUC ingest) | [deferred-controls.md](deferred-controls.md) §Control 1 | Shahin Mohammadi |
+| CMEK on PHI buckets | ✅ **Done 2026-06-14** | `phi-keyring`/`phi-bucket-key` (us-central1) on `phi-core` + `phi-collab`; verified via `gcloud` 2026-06-19 | Shahin Mohammadi |
 | Encryption in transit (TLS everywhere) | ✅ Done | GCP enforces TLS; Caddy proxy forces HTTPS | Shahin Mohammadi |
 | Key management policy documented | ✅ Done | [phi-security-controls-checklist.md](phi-security-controls-checklist.md) | Shahin Mohammadi |
 
@@ -202,7 +202,7 @@ NIST SP 800-171 compliance. See full breakdown in
 | Privacy Officer appointed | ⏳ Q3 2026 | TBD |
 | First HIPAA training cycle | ⏳ Q3 2026 | TBD |
 | VPC Service Controls perimeter | ⏳ Trigger: first external PHI | TBD |
-| CMEK on PHI buckets | ⏳ Trigger: first DUC data ingest | TBD |
+| CMEK on PHI buckets | ✅ **Done** | **2026-06-14** |
 | First DR tabletop exercise | ⏳ Q1 2027 | TBD |
 
 ---

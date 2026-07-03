@@ -3,13 +3,13 @@
 > **Author**: Cytognosis Engineering
 > **Audience**: Engineering, DevOps
 > **Tags**: `compute`, `gcp`, `vm`, `cytohost`
-> **Last verified**: 2026-06-14 against gcloud
+> **Last verified**: 2026-06-19 against gcloud
 
 # Compute Node Types & Provisioning
 
 ## BLUF
 
-`cytohost` is an `e2-highmem-2` (x86\_64) VM in `us-central1-b`. It is NOT ARM64/t2a — those references are stale. The reserved static IP `cytohost-ip` (136.111.39.188) is not attached; the VM currently has ephemeral IP 34.171.23.255. Business-hours auto-stop is not implemented.
+`cytohost` is an `e2-highmem-2` (x86\_64) VM in `us-central1-b`. It is NOT ARM64/t2a, those references are stale. The VM has static IP `cytohost-static` (34.171.23.255) attached. Service account `cytohost-sa` is attached with OS Login enabled. Business-hours auto-stop is not implemented.
 
 ---
 
@@ -21,12 +21,12 @@ All persistent Cytognosis compute is in **`us-central1`**, zone **`us-central1-b
 
 ## Deployed Nodes
 
-| Name | Type | Zone | vCPU | RAM | Architecture | Current External IP | Reserved Static IP |
+| Name | Type | Zone | vCPU | RAM | Architecture | External IP | Service Account |
 |---|---|---|---|---|---|---|---|
-| **`cytohost`** | `e2-highmem-2` | us-central1-b | 2 | 16 GB | **x86\_64** | 34.171.23.255 (ephemeral) | 136.111.39.188 (NOT attached) |
+| **`cytohost`** | `e2-highmem-2` | us-central1-b | 2 | 16 GB | **x86\_64** | 34.171.23.255 (`cytohost-static`) | `cytohost-sa` (OS Login enabled) |
 
-> [!WARNING]
-> **Remediation pending**: The reserved static IP `cytohost-ip` (136.111.39.188) is not attached to the VM. The ephemeral IP will change on VM restart, breaking all `*.cytognosis.org` DNS records. Attach `cytohost-ip` and update DNS A records before any planned or unplanned restart.
+> [!NOTE]
+> Static IP `cytohost-static` (34.171.23.255) is attached to the VM. DNS is stable across VM restarts. Orphaned IPs (`cytohost-ip`, `core-services-ip`, `cytognosis-ip`) were deleted 2026-06-19.
 
 > [!IMPORTANT]
 > All prior references to `t2a-standard-2`, ARM64, or 8 GB RAM for cytohost are **stale and incorrect**. The VM was migrated to `e2-highmem-2` x86\_64 (16 GB RAM).
@@ -40,7 +40,7 @@ All persistent Cytognosis compute is in **`us-central1`**, zone **`us-central1-b
 
 ### Service Account Note
 
-The default Compute Engine SA (`517562623935-compute@developer.gserviceaccount.com`) attached to cytohost is **intentionally disabled** for security. Workflows authenticate via OIDC. This is not a bug — it is the correct security posture.
+The default Compute Engine SA (`517562623935-compute@developer.gserviceaccount.com`) is **disabled**. It has been replaced by `cytohost-sa@cytognosis-infrastructure.iam.gserviceaccount.com`, which is attached to the VM with OS Login enabled (2026-06-19). CI/CD workflows authenticate via OIDC.
 
 ---
 

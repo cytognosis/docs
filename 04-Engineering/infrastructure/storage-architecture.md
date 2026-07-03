@@ -8,14 +8,15 @@
 
 **Origin**: Imported from `/home/mohammadi/Claude/Projects/Infrastructure and Tooling/storage-architecture.md` (draft v0.1, 2026-05-10). Revised to ground truth (2026-06-14).
 
-**Last verified: 2026-06-14**
+**Last verified: 2026-06-19**
 
 > [!IMPORTANT]
 > Ground-truth corrections applied:
 > - Primary region is `us-central1` (confirmed by all existing buckets).
 > - `cytognosis-data` project does NOT exist. All non-PHI buckets are in `cytognosis-infrastructure`.
-> - `gs://cytognosis-mlflow-artifacts` NOW EXISTS (created 2026-06-14, `us-central1`).
-> - The named buckets in §2.2 below are the planned target layout; the actual current bucket inventory is in [MASTER_INFRASTRUCTURE.md](MASTER_INFRASTRUCTURE.md) and [DNS_AND_GCP_ARCHITECTURE.md](DNS_AND_GCP_ARCHITECTURE.md).
+> - `gs://cytognosis-mlflow-artifacts` was merged into `gs://cytognosis-artifacts` (unified bucket, created 2026-06-19). MLflow uses `gs://cytognosis-artifacts/mlflow/` as its artifact root.
+> - `gs://cytognosis-phi-collab-nih` was replaced by `gs://cytognosis-phi-collab` (CMEK-encrypted, 2026-06-19).
+> - The named buckets in §2.2 below are the planned target layout; the actual current bucket inventory is in [gcp-setup.md](gcp-setup.md) and [DNS_AND_GCP_ARCHITECTURE.md](DNS_AND_GCP_ARCHITECTURE.md).
 
 ---
 
@@ -68,7 +69,7 @@ PHI and non-PHI **never share a bucket**. Bucket-level boundaries make CMEK rota
 gs://cytognosis-data-hot          # non-PHI active datasets, models, code artifacts
 gs://cytognosis-data-cold         # non-PHI archive (Coldline / Archive lifecycle)
 gs://cytognosis-data-hub          # EXISTING — DVC cache + shared data (Standard, versioning ON)
-gs://cytognosis-mlflow-artifacts  # EXISTING (created 2026-06-14) — MLflow artifact root
+gs://cytognosis-artifacts          # EXISTING (created 2026-06-19) — unified metadata, manifests, provenance, MLflow (under /mlflow/)
 gs://cytognosis-tiledb-arrays     # TileDB-SOMA / TileDB-VCF / TileDB-BioImaging vaults (planned)
 gs://cytognosis-zarr              # Zarr/N5 stores (planned)
 gs://cytognosis-phi-instruments   # PHI raw — CMEK, retention lock, audit, no public IAM (planned)
@@ -76,7 +77,7 @@ gs://cytognosis-phi-derived       # PHI processed — same controls (planned)
 gs://cytognosis-public-data       # EXISTING — publicly readable, de-identified, multi-region
 gs://cytognosis-audit-7yr         # EXISTING — immutable retention lock 7yr
 gs://cytognosis-phi-core          # EXISTING — PHI vault, CMEK, versioning ON (cytognosis-phi-prod)
-gs://cytognosis-phi-collab-nih    # EXISTING — restricted joint-analysis (cytognosis-phi-prod)
+gs://cytognosis-phi-collab         # EXISTING — external PHI collaborations, CMEK (cytognosis-phi-prod)
 ```
 
 Per-bucket settings (apply uniformly):
@@ -212,7 +213,7 @@ Day-to-day: `dvc push/pull` use `hot`. Dataset releases: `dvc push -r cold` writ
 | Layer | Encryption | Notes |
 |---|---|---|
 | GCS objects | CMEK via Cloud KMS, key per data class | Annual rotation |
-| PHI buckets (phi-prod) | CMEK with `phi-keyring`/`phi-bucket-key` | Confirmed deployed (2026-06-14) |
+| PHI buckets (phi-prod) | CMEK with `phi-keyring`/`phi-bucket-key` | Confirmed deployed (2026-06-14), verified 2026-06-19 |
 | GCS in transit | TLS 1.2+ enforced | mTLS for service-to-service |
 | Cloud SQL (PHI metadata) | CMEK + private IP + IAM auth | Restore from PITR tested quarterly |
 | Local cold HDD | LUKS2, key in YubiKey or sealed-to-TPM | Mandatory |
@@ -228,7 +229,7 @@ See the original source doc for the 4–6 week implementation roadmap and open q
 2. Add `gs://cytognosis-dvc-cold` cold remote for release workflow.
 3. Provision Strix Halo workstation with mergerfs + cache-mover + TileDB exclusions.
 4. Ship `cytoverse.storage.resolve()` Python helper + YAML config.
-5. Attach `cytohost-ip` static IP (136.111.39.188) to cytohost VM to stabilize DNS.
+5. ~~Attach static IP to cytohost VM~~ — **Done**: `cytohost-static` (34.171.23.255) attached; orphaned IPs deleted (2026-06-19).
 
 ---
 
