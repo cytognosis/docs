@@ -140,7 +140,7 @@ Use it as follows:
 - [x] **Project boundary**: PHI workloads run in `cytognosis-phi-prod` (never in `cytognosis-infrastructure` or `cytognosis-data`). See [`../TECHNICAL_DATA_INFRASTRUCTURE.md`](../TECHNICAL_DATA_INFRASTRUCTURE.md).
 - [ ] **VPC Service Controls**: perimeter active around `cytognosis-phi-prod`; egress rules approved by DSO. — ⏳ Deferred: trigger = first external PHI
 - [x] **IAM roles** reviewed and minimal; access granted via Workspace Groups, never to individual user accounts. Default compute SAs disabled.
-- [ ] **CMEK**: Customer-Managed Encryption Keys via Cloud KMS for `cytognosis-phi-core` and `cytognosis-phi-collab-*` buckets. — ⏳ Deferred: trigger = first DUC data ingest
+- [x] **CMEK**: Customer-Managed Encryption Keys via Cloud KMS for `cytognosis-phi-core` and `cytognosis-phi-collab` buckets. — ✅ **Done 2026-06-14**: `phi-keyring`/`phi-bucket-key` (us-central1); verified via `gcloud` 2026-06-19
 - [x] **Cloud Audit Logs**: `DATA_READ` / `DATA_WRITE` events shipped to a tamper-evident sink with a **7-year** retention policy. Retention **locked 2026-05-22** (irrevocable).
 - [ ] **Security Command Center** Premium / Enterprise monitoring enabled. — ⏳ Deferred: trigger = team >3 OR NIH grant requirement
 

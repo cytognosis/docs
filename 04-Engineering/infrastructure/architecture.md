@@ -3,7 +3,7 @@
 > **Author**: Cytognosis Engineering
 > **Audience**: Engineering, DevOps, New Team Members
 > **Tags**: `architecture`, `overview`, `gcp`, `infrastructure`
-> **Last verified**: 2026-06-14 against gcloud
+> **Last verified**: 2026-06-19 against gcloud
 
 # Infrastructure Architecture Overview
 
@@ -56,15 +56,14 @@ flowchart TB
 | Zone | `us-central1-b` |
 | vCPU | 2 |
 | RAM | 16 GB |
-| Current external IP | **34.171.23.255 (ephemeral)** |
-| Reserved static IP | `cytohost-ip` = 136.111.39.188 (**RESERVED BUT NOT ATTACHED**) |
+| Current external IP | **34.171.23.255** (`cytohost-static`, static IP attached) |
 | Status | RUNNING |
 
-> [!WARNING]
-> **Remediation pending**: The reserved static IP `cytohost-ip` (136.111.39.188) is not attached to the VM. The current ephemeral IP (34.171.23.255) will change on restart, breaking all `*.cytognosis.org` subdomain DNS records. Action required: attach `cytohost-ip` to cytohost and repoint DNS A records.
+> [!NOTE]
+> Static IP `cytohost-static` (34.171.23.255) is attached to the VM (promoted from ephemeral 2026-06-14). DNS is stable across VM restarts. Orphaned IPs (`cytohost-ip`, `core-services-ip`, `cytognosis-ip`) were deleted 2026-06-19.
 
 > [!NOTE]
-> The default Compute Engine service account (`517562623935-compute@developer.gserviceaccount.com`) on cytohost is **intentionally disabled** for security. CI/CD workflows authenticate via OIDC (Workload Identity Federation); no ambient SA credentials are used.
+> The default Compute Engine service account on cytohost is **disabled**. It has been replaced by `cytohost-sa@cytognosis-infrastructure.iam.gserviceaccount.com`, attached with OS Login enabled (2026-06-19). CI/CD workflows authenticate via OIDC (Workload Identity Federation).
 
 > [!NOTE]
 > **Business-hours auto-start/stop is NOT implemented.** Cloud Scheduler API and Cloud Functions API are both disabled in `cytognosis-infrastructure`. The documented scheduler + wake function are roadmap items. cytohost currently runs 24/7.
@@ -130,7 +129,7 @@ Three apex domains, all registered at Squarespace:
 | `cytognosis.com` | Secondary canonical | `com-zone` (ns-cloud-c) |
 | `cytognosis.ai` | Technology canonical | `cg-ai` (ns-cloud-d) |
 
-Six Cloud DNS managed zones exist in `cytognosis-infrastructure` as three duplicate pairs. Authoritative (keeper) zones are listed above. Duplicate zones (`org-zone`, `cg-com`, `ai-zone`) are **pending deduplication and deletion**. See [DNS & GCP Architecture](DNS_AND_GCP_ARCHITECTURE.md) for full record details.
+Three Cloud DNS managed zones in `cytognosis-infrastructure`, one per domain. Duplicate zones (`org-zone`, `cg-com`, `ai-zone`) were deleted 2026-06-19 after migrating all unique records. See [DNS & GCP Architecture](DNS_AND_GCP_ARCHITECTURE.md) for full record details and remediation log.
 
 ---
 

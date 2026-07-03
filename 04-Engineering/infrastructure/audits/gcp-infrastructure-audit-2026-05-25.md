@@ -8,7 +8,10 @@
 
 **Origin**: Imported from `/home/mohammadi/Documents/ObsidianVault/06-Operations/infrastructure/gcp-infrastructure-audit-2026-05-25.md` (Obsidian ADHD-friendly reformatted version, created 2026-05-29).
 
-**Last verified: 2026-05-25** (audit date). Updated ground-truth note: as of 2026-06-14 audit, cytognosis-infrastructure has 16 buckets (matching the audit count plus `cytognosis-phi-prod` in-project and `cytognosis-restricted-prod`); `cytognosis-mlflow-artifacts` NOW EXISTS (created 2026-06-14).
+**Last verified: 2026-05-25** (audit date).
+
+> [!IMPORTANT]
+> **Superseded**: This audit reflects the state as of 2026-05-25. Significant cleanup occurred on 2026-06-19: bucket count reduced from 16 to 14 (11 infra + 3 phi-prod), deleted buckets (`cytoagent`, `cytoexplorer`, `cytomark`, `cytopilot`, `cytoskeleton`, `cytognosis-restricted-prod`, `cytognosis-mlflow-artifacts`), `cytognosis-phi-collab-nih` renamed to `cytognosis-phi-collab` (CMEK), `cytognosis-artifacts` created as unified bucket. CMEK deployed on PHI buckets (2026-06-14). See [gcp-setup.md](../gcp-setup.md) for current state.
 
 > [!NOTE]
 > **TL;DR**: The 2026-05-25 GCP audit covered **16 buckets**, **16 sys-* projects**, **service accounts**, **IAM bindings**, and **HIPAA compliance**. Key actions taken: versioning enabled on 3 critical buckets, lifecycle rules added to data-hub, labels applied to all 16 buckets. **3 critical HIPAA gaps** found: no CMEK, no VPC-SC, no audit logging on PHI project.
@@ -49,7 +52,7 @@ graph TD
 |--------|--------|--------|
 | Enable versioning | `gs://cytognosis-data-hub` | Done |
 | Enable versioning | `gs://cytognosis-phi-core` | Done |
-| Enable versioning | `gs://cytognosis-phi-collab-nih` | Done |
+| Enable versioning | `gs://cytognosis-phi-collab` | Done |
 | Lifecycle rules (60d Nearline, 180d Coldline) | `gs://cytognosis-data-hub` | Done |
 | Labels (`team`, `managed-by`) | All 16 buckets | Done |
 | Verify UBLA | All 16 buckets | Already enabled |
@@ -124,7 +127,7 @@ graph TD
 
 | Control | Status (2026-05-25) | Status (2026-06-14) | Details |
 |---------|---------------------|---------------------|---------|
-| **CMEK encryption** | Not configured | Partially done | PHI buckets now use CMEK (`phi-bucket-key`); non-PHI buckets still use Google-managed keys |
+| **CMEK encryption** | Not configured | **Done (2026-06-14)** | PHI buckets use CMEK (`phi-keyring`/`phi-bucket-key`); verified 2026-06-19 |
 | **VPC Service Controls** | Not configured | Not configured | API not enabled in cytognosis-infrastructure |
 | **Audit logging** | Not configured | Unknown | `auditConfigs` returned empty at audit time |
 | Versioning on PHI buckets | Done | Done | Enabled during audit |

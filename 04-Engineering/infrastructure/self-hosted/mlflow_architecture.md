@@ -6,7 +6,7 @@
 > **Audience**: engineers
 > **Tags**: `mlflow`, `mlops`, `self-hosted`, `compute`
 
-**Last verified: 2026-06-14** — MLflow runs on `cytohost` (`e2-highmem-2`, `us-central1-b`) as part of the core stack. Artifact bucket `gs://cytognosis-mlflow-artifacts` NOW EXISTS (created 2026-06-14, `us-central1`). The `e2-micro`/`e2-small` options and dynamic spin-up approach described below were evaluated but not chosen; the consolidated cytohost architecture was the outcome.
+**Last verified: 2026-06-19** — MLflow runs on `cytohost` (`e2-highmem-2`, `us-central1-b`) as part of the core stack. Artifact bucket is `gs://cytognosis-artifacts` (unified, created 2026-06-19; MLflow uses the `/mlflow/` prefix). The former `gs://cytognosis-mlflow-artifacts` was merged into this unified bucket. The `e2-micro`/`e2-small` options and dynamic spin-up approach described below were evaluated but not chosen; the consolidated cytohost architecture was the outcome.
 
 Based on earlier work to optimize instance resources and evaluate MLOps platforms, here is the assessment and proposed architecture for Cytognosis Foundation.
 

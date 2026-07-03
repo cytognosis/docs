@@ -3,13 +3,13 @@
 > **Author**: Cytognosis Engineering
 > **Audience**: Engineering, DevOps
 > **Tags**: `self-hosted`, `docker`, `containers`, `cytohost`
-> **Last verified**: 2026-06-14 against gcloud
+> **Last verified**: 2026-06-19 against gcloud
 
 # Self-Hosted Stack — Deployment Walkthrough
 
 ## BLUF
 
-11 containers running on `cytohost` (`e2-highmem-2`, x86\_64, us-central1-b). Current external IP is 34.171.23.255 (ephemeral; static IP attachment pending). All services route through `cyto-caddy` on ports 80/443. Production compose file: `container_framework/docker-compose.cytohost-v2.yml`.
+11 containers running on `cytohost` (`e2-highmem-2`, x86\_64, us-central1-b). External IP is 34.171.23.255 (`cytohost-static`, static IP attached). All services route through `cyto-caddy` on ports 80/443. Production compose file: `container_framework/docker-compose.cytohost-v2.yml`.
 
 > [!WARNING]
 > All prior references to 8 containers, IP `34.122.154.49`, IP `34.61.134.177`, ARM64 images, or QEMU emulation are **stale** and describe the pre-v2 deployment. The current state is documented below.
@@ -43,8 +43,8 @@ All containers use Docker Compose restart policy `unless-stopped` (except neo4j,
 | VM | `cytohost` |
 | Machine type | `e2-highmem-2` (2 vCPU, 16 GB RAM, x86\_64) |
 | Zone | us-central1-b |
-| Current external IP | **34.171.23.255** (ephemeral) |
-| Reserved static IP | `cytohost-ip` = 136.111.39.188 (not yet attached) |
+| Current external IP | **34.171.23.255** (`cytohost-static`, attached) |
+| Service account | `cytohost-sa` (OS Login enabled) |
 | Compose file | `container_framework/docker-compose.cytohost-v2.yml` |
 
 ---

@@ -3,13 +3,13 @@
 > **Author**: Cytognosis Engineering
 > **Audience**: Engineering, DevOps
 > **Tags**: `gcp`, `buckets`, `iam`, `artifact-registry`, `oidc`
-> **Last verified**: 2026-06-14 against gcloud
+> **Last verified**: 2026-06-19 against gcloud
 
 # GCP Project Setup
 
 ## BLUF
 
-Two live projects: `cytognosis-infrastructure` (DNS, IAM, buckets, compute) and `cytognosis-phi-prod` (Cloud Run, PHI storage). `cytognosis-data` does not exist. 19 total GCS buckets. The `website-deployer` SA lives in `cytognosis-infrastructure`; OIDC pool `github-pool` is in `cytognosis-infrastructure`.
+Two live projects: `cytognosis-infrastructure` (DNS, IAM, buckets, compute) and `cytognosis-phi-prod` (Cloud Run, PHI storage). `cytognosis-data` does not exist. 14 total GCS buckets (11 infra + 3 phi-prod). Three service accounts: `website-deployer`, `stories-api-sa`, `cytohost-sa`. OIDC pool `github-pool` is in `cytognosis-infrastructure`.
 
 ---
 
@@ -28,39 +28,35 @@ Two live projects: `cytognosis-infrastructure` (DNS, IAM, buckets, compute) and 
 
 ## Cloud Storage Buckets
 
-### cytognosis-infrastructure (16 buckets)
+### cytognosis-infrastructure (11 buckets)
 
 | Bucket | Versioning | Retention Lock | Notes |
 |---|---|---|---|
-| `gs://cytoagent/` | No | No | Created 2026-05-19 |
-| `gs://cytoexplorer/` | No | No | Created 2026-05-19 |
-| `gs://cytognosis/` | No | No | Created 2026-02-22 (oldest) |
-| `gs://cytognosis-audit-7yr/` | No | **7yr locked** | Created 2026-05-18; immutable |
+| `gs://cytognosis/` | No | No | Brand reserve; potential sub-folders in future |
+| `gs://cytognosis-artifacts/` | **Yes** | No | Metadata, manifests, provenance, MLflow artifacts |
+| `gs://cytognosis-audit-7yr/` | No | **7yr locked** | Created 2026-05-18; immutable, tamper-evident |
 | `gs://cytognosis-data-hub/` | **Yes** | No | DVC cache, datasets; lifecycle 60d→Nearline, 180d→Coldline |
 | `gs://cytognosis-internal/` | No | No | Internal team files |
-| `gs://cytognosis-phi-prod/` | **Yes** | **7yr locked** | Labels: compliance=hipaa, data-class=phi |
+| `gs://cytognosis-phi-prod/` | **Yes** | **7yr locked** | Labels: compliance=hipaa, data-class=phi; cannot delete until 2033 |
 | `gs://cytognosis-public-data/` | No | No | De-identified public datasets |
-| `gs://cytognosis-restricted-prod/` | No | **1yr locked** | public_access_prevention: enforced |
-| `gs://cytomark/` | No | No | Created 2026-05-19 |
-| `gs://cytonome/` | No | No | Created 2026-05-19 |
-| `gs://cytopilot/` | No | No | Created 2026-05-19 |
-| `gs://cytoscope/` | No | No | Created 2026-05-19 |
-| `gs://cytoskeleton/` | No | No | Created 2026-05-19 |
-| `gs://cytoverse/` | No | No | Created 2026-05-19 |
-| `gs://neuroverse/` | No | No | Created 2026-05-19 |
+| `gs://cytonome/` | No | No | Pillar brand reserve |
+| `gs://cytoscope/` | No | No | Pillar brand reserve |
+| `gs://cytoverse/` | No | No | Pillar brand reserve |
+| `gs://neuroverse/` | No | No | Pillar brand reserve |
 
 > [!NOTE]
-> `gs://cytognosis-mlflow-artifacts` does **not** exist in either project. MLflow artifact storage is local to cytohost or the bucket has not been created. The `mlflow.cytognosis.org` DNS subdomain is live but has no corresponding GCS bucket.
+> `gs://cytognosis-artifacts` replaces the previous `gs://cytognosis-mlflow-artifacts`. MLflow uses `gs://cytognosis-artifacts/mlflow/` as its artifact root. Non-MLflow metadata (manifests, provenance, catalog indexes) lives alongside.
+> Deleted 2026-06-19: `cytoagent`, `cytoexplorer`, `cytomark`, `cytopilot`, `cytoskeleton` (non-pillar brand reserves), `cytognosis-restricted-prod`, `cytognosis-mlflow-artifacts`.
 
 ### cytognosis-phi-prod (3 buckets)
 
 | Bucket | Versioning | Retention | KMS | Notes |
 |---|---|---|---|---|
-| `gs://cytognosis-phi-collab-nih/` | **Yes** | 7-day soft delete | **CMEK: phi-bucket-key** | NIH collaborative controlled data |
+| `gs://cytognosis-phi-collab/` | **Yes** | 7-day soft delete | **CMEK: phi-bucket-key** | External PHI collaborations (sub-prefixes per DUC/partner) |
 | `gs://cytognosis-phi-core/` | **Yes** | 7-day soft delete | **CMEK: phi-bucket-key** | Raw PHI genomic/clinical data |
-| `gs://cytognosis-phi-prod_cloudbuild/` | No | No | None | Cloud Build staging bucket |
+| `gs://cytognosis-phi-prod_cloudbuild/` | No | No | None | Cloud Build staging (auto-created by GCP); 30-day lifecycle |
 
-Both PHI buckets use CMEK: keyring `phi-keyring`, key `phi-bucket-key` in us-central1.
+Both PHI buckets use CMEK: keyring `phi-keyring`, key `phi-bucket-key` in us-central1. Verified via `gcloud` 2026-06-19.
 
 ### Data Hub Layout
 
@@ -88,13 +84,16 @@ gs://cytognosis-data-hub/
 | Account | Project | Purpose | Disabled? |
 |---|---|---|---|
 | `website-deployer@cytognosis-infrastructure.iam.gserviceaccount.com` | cytognosis-infrastructure | CI/CD Cloud Run deployments | No |
-| `517562623935-compute@developer.gserviceaccount.com` | cytognosis-infrastructure | Default compute SA (attached to cytohost) | **Yes — intentionally disabled** |
+| `cytohost-sa@cytognosis-infrastructure.iam.gserviceaccount.com` | cytognosis-infrastructure | Compute Engine SA attached to cytohost (OS Login enabled) | No |
 | `stories-api-sa@cytognosis-phi-prod.iam.gserviceaccount.com` | cytognosis-phi-prod | Stories API runtime SA | No |
+| `517562623935-compute@developer.gserviceaccount.com` | cytognosis-infrastructure | Default compute SA (replaced by cytohost-sa) | **Yes — intentionally disabled** |
 
 > [!IMPORTANT]
 > The `website-deployer` SA is in **`cytognosis-infrastructure`**, not `cytognosis-phi-prod`. Any OIDC config referencing `website-deployer@cytognosis-phi-prod` is incorrect.
 >
 > `dvc-reader@cytognosis-data` and `dvc-writer@cytognosis-data` SAs referenced in older docs do NOT exist — they depend on the `cytognosis-data` project, which has not been provisioned.
+>
+> The default compute SA on cytohost has been replaced by `cytohost-sa` with OS Login enabled (2026-06-19).
 
 ---
 

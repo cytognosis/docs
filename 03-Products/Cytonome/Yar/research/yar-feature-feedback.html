@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yar: What would help you most?</title>
+<style>
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  --bg:          #f7f6f4;
+  --surface:     #ffffff;
+  --surface-alt: #f2f0ee;
+  --border:      #ddd9d4;
+  --text:        #2a2522;
+  --text-muted:  #6b6460;
+  --focus-ring:  #5b4fcf;
+
+  /* Area accent colors -- muted fills, not harsh blocks */
+  --aef-accent:  #6d3bab;   /* violet */
+  --erm-accent:  #2f6ec0;   /* azure */
+  --sci-accent:  #c42a88;   /* magenta */
+  --spr-accent:  #108686;   /* teal */
+  --cto-accent:  #c8452b;   /* coral */
+  --smi-accent:  #3b7dd6;   /* azure variant */
+
+  --aef-bg:      #f3eeff;
+  --erm-bg:      #eef4ff;
+  --sci-bg:      #fce8f5;
+  --spr-bg:      #e5f6f6;
+  --cto-bg:      #fff0ed;
+  --smi-bg:      #e9f1ff;
+
+  --radius:      10px;
+  --max-w:       720px;
+  --spacing:     1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:          #1a1917;
+    --surface:     #242220;
+    --surface-alt: #2e2c2a;
+    --border:      #3d3a36;
+    --text:        #e8e4df;
+    --text-muted:  #9a9490;
+    --focus-ring:  #9b87f5;
+
+    --aef-bg:      #221a30;
+    --erm-bg:      #182030;
+    --sci-bg:      #2a1525;
+    --spr-bg:      #102020;
+    --cto-bg:      #2a1510;
+    --smi-bg:      #182030;
+  }
+}
+
+/* ============================================================
+   RESET + BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+h1 { font-size: 1.75rem; font-weight: 700; line-height: 1.25; }
+h2 { font-size: 1.25rem; font-weight: 600; }
+h3 { font-size: 1.05rem; font-weight: 600; }
+p  { max-width: 65ch; }
+
+a { color: var(--focus-ring); }
+
+:focus-visible {
+  outline: 2.5px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   LAYOUT WRAPPERS
+   ============================================================ */
+.page-shell {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.page-header {
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.page-header .tagline {
+  margin-top: .6rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.framing-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+  margin-top: 1.25rem;
+  font-size: .95rem;
+  color: var(--text-muted);
+}
+
+.framing-box ul {
+  list-style: none;
+  padding: 0;
+  margin-top: .4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem .8rem;
+}
+
+.framing-box li::before { content: "· "; }
+
+/* ============================================================
+   HOW IT WORKS BOX
+   ============================================================ */
+.how-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.how-box h2 { margin-bottom: .75rem; }
+
+.rating-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  font-size: .95rem;
+  margin-top: .5rem;
+}
+
+.rating-key-item {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+}
+
+.rating-key-item .glyph {
+  font-size: 1.2rem;
+  line-height: 1;
+  display: inline-block;
+  width: 1.6rem;
+  text-align: center;
+}
+
+/* ============================================================
+   AREA NAV
+   ============================================================ */
+.area-nav {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .9rem 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.area-nav-label {
+  font-size: .8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--text-muted);
+  margin-bottom: .5rem;
+}
+
+.area-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  list-style: none;
+  padding: 0;
+}
+
+.area-nav-links a {
+  display: inline-block;
+  padding: .3rem .7rem;
+  border-radius: 20px;
+  font-size: .85rem;
+  font-weight: 500;
+  text-decoration: none;
+  background: var(--surface-alt);
+  color: var(--text);
+  border: 1px solid var(--border);
+  transition: background .15s;
+}
+
+.area-nav-links a:hover { background: var(--border); }
+
+/* ============================================================
+   PROGRESS LINE
+   ============================================================ */
+.progress-line {
+  font-size: .9rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  padding: .6rem .9rem;
+  background: var(--surface);
+  border-left: 3px solid var(--focus-ring);
+  border-radius: 0 6px 6px 0;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--focus-ring);
+}
+
+/* ============================================================
+   AREA SECTIONS
+   ============================================================ */
+.area-section {
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.area-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  user-select: none;
+  background: var(--surface-alt);
+  border-bottom: 1px solid transparent;
+  transition: background .15s;
+  gap: .75rem;
+}
+
+.area-header:hover { background: var(--border); }
+
+.area-header-left {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.area-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.area-title-group { min-width: 0; }
+.area-title-group h2 { font-size: 1.05rem; }
+.area-count { font-size: .82rem; color: var(--text-muted); font-weight: 400; }
+
+.area-chevron {
+  font-size: .85rem;
+  color: var(--text-muted);
+  transition: transform .2s;
+  flex-shrink: 0;
+}
+
+.area-section.is-open .area-header { border-bottom-color: var(--border); }
+.area-section.is-open .area-chevron { transform: rotate(180deg); }
+
+.area-intro {
+  padding: .85rem 1.25rem;
+  font-size: .9rem;
+  color: var(--text-muted);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: none;
+}
+
+.area-section.is-open .area-intro { display: block; }
+
+.area-body {
+  display: none;
+  padding: .5rem .75rem 1rem;
+  background: var(--surface);
+}
+
+.area-section.is-open .area-body { display: block; }
+
+/* ============================================================
+   FEATURE CARDS
+   ============================================================ */
+.feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  padding: .85rem .75rem;
+  border-bottom: 1px solid var(--border);
+  transition: background .1s;
+}
+
+.feature-card:last-child { border-bottom: none; }
+.feature-card:hover { background: var(--surface-alt); }
+
+.feature-text { flex: 1; min-width: 0; }
+.feature-label { font-weight: 600; font-size: .97rem; }
+.feature-desc { font-size: .88rem; color: var(--text-muted); margin-top: .2rem; }
+
+.feature-controls {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  flex-shrink: 0;
+}
+
+/* Toggle buttons */
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: background .12s, border-color .12s;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.toggle-btn:hover { background: var(--surface-alt); border-color: var(--text-muted); }
+
+.toggle-btn[aria-pressed="true"] {
+  border-color: currentColor;
+}
+
+.toggle-btn.btn-purple[aria-pressed="true"] {
+  background: #e8d8ff;
+  border-color: var(--aef-accent);
+  color: var(--aef-accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toggle-btn.btn-purple[aria-pressed="true"] {
+    background: #2d1f50;
+    border-color: #9b87f5;
+    color: #c4acff;
+  }
+}
+
+.toggle-btn.btn-white[aria-pressed="true"] {
+  background: var(--surface-alt);
+  border-color: var(--text-muted);
+  color: var(--text);
+}
+
+.toggle-btn.btn-star[aria-pressed="true"] {
+  background: #fff5cc;
+  border-color: #c09010;
+  color: #c09010;
+}
+
+@media (prefers-color-scheme: dark) {
+  .toggle-btn.btn-star[aria-pressed="true"] {
+    background: #2e2510;
+    border-color: #d4b030;
+    color: #e0c050;
+  }
+}
+
+/* ============================================================
+   AREA COLOR ACCENTS
+   ============================================================ */
+.area-aef .area-header { background: var(--aef-bg); }
+.area-erm .area-header { background: var(--erm-bg); }
+.area-sci .area-header { background: var(--sci-bg); }
+.area-spr .area-header { background: var(--spr-bg); }
+.area-cto .area-header { background: var(--cto-bg); }
+.area-smi .area-header { background: var(--smi-bg); }
+
+.area-aef .area-dot { background: var(--aef-accent); }
+.area-erm .area-dot { background: var(--erm-accent); }
+.area-sci .area-dot { background: var(--sci-accent); }
+.area-spr .area-dot { background: var(--spr-accent); }
+.area-cto .area-dot { background: var(--cto-accent); }
+.area-smi .area-dot { background: var(--smi-accent); }
+
+.area-aef .area-header:hover { background: #e4d5ff; }
+.area-erm .area-header:hover { background: #dce8ff; }
+.area-sci .area-header:hover { background: #f7d5ee; }
+.area-spr .area-header:hover { background: #caeaea; }
+.area-cto .area-header:hover { background: #ffd8d0; }
+.area-smi .area-header:hover { background: #cfdeff; }
+
+@media (prefers-color-scheme: dark) {
+  .area-aef .area-header:hover { background: #2e1f44; }
+  .area-erm .area-header:hover { background: #1a2840; }
+  .area-sci .area-header:hover { background: #35162e; }
+  .area-spr .area-header:hover { background: #132828; }
+  .area-cto .area-header:hover { background: #351a12; }
+  .area-smi .area-header:hover { background: #1a2840; }
+}
+
+/* ============================================================
+   NOMINATIONS SECTION
+   ============================================================ */
+.nominations-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.nominations-section h2 { margin-bottom: .4rem; }
+.nominations-section .section-desc { font-size: .9rem; color: var(--text-muted); margin-bottom: 1.1rem; }
+
+.input-group { margin-bottom: .85rem; }
+
+.input-group label {
+  display: block;
+  font-size: .88rem;
+  font-weight: 600;
+  margin-bottom: .3rem;
+}
+
+.input-group .hint { font-size: .8rem; color: var(--text-muted); margin-top: .25rem; }
+
+.text-input, .select-input {
+  width: 100%;
+  padding: .55rem .75rem;
+  border: 1.5px solid var(--border);
+  border-radius: 7px;
+  font-size: .95rem;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--bg);
+  transition: border-color .15s;
+}
+
+.text-input:focus, .select-input:focus { border-color: var(--focus-ring); outline: none; }
+
+.add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .55rem 1.1rem;
+  background: var(--focus-ring);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: .95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity .15s;
+  margin-top: .5rem;
+}
+
+.add-btn:hover { opacity: .88; }
+
+.nominations-list {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+
+.nomination-item {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .7rem .9rem;
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+}
+
+.nomination-content { flex: 1; min-width: 0; }
+.nomination-what { font-weight: 600; font-size: .93rem; }
+.nomination-meta { font-size: .82rem; color: var(--text-muted); margin-top: .15rem; }
+
+.remove-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: .2rem .5rem;
+  font-size: .8rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background .1s;
+}
+
+.remove-btn:hover { background: var(--border); }
+
+/* ============================================================
+   FOOTER ACTIONS
+   ============================================================ */
+.footer-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-section h2 { margin-bottom: .6rem; }
+
+.send-note {
+  font-size: .9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  background: var(--surface-alt);
+  padding: .7rem .9rem;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+}
+
+.send-placeholder {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.privacy-note {
+  font-size: .82rem;
+  color: var(--text-muted);
+  margin-top: .75rem;
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin-top: .85rem;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .6rem 1.15rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: .93rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--surface);
+  color: var(--text);
+  transition: background .12s, border-color .12s;
+}
+
+.action-btn:hover { background: var(--surface-alt); border-color: var(--text-muted); }
+.action-btn.primary { background: var(--focus-ring); color: #fff; border-color: var(--focus-ring); }
+.action-btn.primary:hover { opacity: .88; }
+
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #2a2522;
+  color: #fff;
+  padding: .6rem 1.2rem;
+  border-radius: 8px;
+  font-size: .9rem;
+  transition: transform .25s;
+  z-index: 100;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+@media (prefers-color-scheme: dark) {
+  .toast { background: #e8e4df; color: #1a1917; }
+}
+
+/* ============================================================
+   PAGE FOOTER
+   ============================================================ */
+.page-footer {
+  margin-top: 2.5rem;
+  font-size: .83rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+  text-align: center;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 520px) {
+  h1 { font-size: 1.4rem; }
+  .feature-controls { flex-wrap: wrap; justify-content: flex-end; }
+  .feature-card { flex-direction: column; gap: .5rem; }
+  .feature-controls { align-self: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-shell">
+
+  <!-- HEADER -->
+  <header class="page-header" id="top">
+    <h1>Yar: What would help you most?</h1>
+    <p class="tagline">
+      Yar is a personal cognitive companion built by and for neurodivergent people,
+      designed to work the way your brain actually works.
+    </p>
+    <div class="framing-box" role="note" aria-label="How this works">
+      <strong>Browse what resonates. You do not have to rate everything.</strong>
+      <ul>
+        <li>No account required</li>
+        <li>No time pressure</li>
+        <li>Your progress saves on this device only</li>
+        <li>Skip anything that does not feel relevant right now</li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-box" aria-labelledby="how-heading">
+    <h2 id="how-heading">How it works</h2>
+    <p style="font-size:.9rem;color:var(--text-muted);margin-bottom:.75rem;">
+      For any feature that catches your eye, tap or click one of the three marks below.
+      Use the star sparingly, for the features you feel most strongly about.
+    </p>
+    <div class="rating-key" role="list" aria-label="Rating key">
+      <div class="rating-key-item" role="listitem">
+        <span class="glyph" aria-hidden="true">💜</span>
+        <span>Would really help me</span>
+      </div>
+      <div class="rating-key-item" role="listitem">
+        <span class="glyph" aria-hidden="true">🤍</span>
+        <span>Maybe or somewhat</span>
+      </div>
+      <div class="rating-key-item" role="listitem">
+        <span class="glyph" aria-hidden="true">⭐</span>
+        <span>Top priority for me (optional)</span>
+      </div>
+      <div class="rating-key-item" role="listitem">
+        <span class="glyph" aria-hidden="true">✕</span>
+        <span>Clear a mark</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREA NAV -->
+  <nav class="area-nav" aria-label="Jump to area">
+    <div class="area-nav-label">Jump to area</div>
+    <ul class="area-nav-links">
+      <li><a href="#area-AEF">Getting started, focus, and time</a></li>
+      <li><a href="#area-ERM">Mood, energy, and emotional support</a></li>
+      <li><a href="#area-SCI">Connecting and communicating</a></li>
+      <li><a href="#area-SPR">Sensory comfort</a></li>
+      <li><a href="#area-CTO">Thinking, notes, and ideas</a></li>
+      <li><a href="#area-SMI">Noticing and understanding yourself</a></li>
+    </ul>
+  </nav>
+
+  <!-- PROGRESS LINE -->
+  <div class="progress-line" id="progress-line" aria-live="polite" aria-atomic="true">
+    You have not marked any features yet. Mark whatever resonates, whenever you are ready.
+  </div>
+
+  <!-- FEATURE SECTIONS -->
+  <div id="feature-sections"></div>
+
+  <!-- NOMINATIONS -->
+  <section class="nominations-section" aria-labelledby="nom-heading">
+    <h2 id="nom-heading">Something missing? Suggest it.</h2>
+    <p class="section-desc">
+      If something important to you is not in the list, tell us here. One line is enough.
+    </p>
+
+    <form id="nom-form" novalidate>
+      <div class="input-group">
+        <label for="nom-what">What would help you? <span aria-hidden="true" style="color:#c00">*</span></label>
+        <input
+          type="text"
+          id="nom-what"
+          class="text-input"
+          placeholder="Describe a feature or idea"
+          maxlength="300"
+          required
+          aria-required="true"
+        >
+      </div>
+
+      <div class="input-group">
+        <label for="nom-when">When would you use it? <span style="font-weight:400;color:var(--text-muted)">(optional)</span></label>
+        <input
+          type="text"
+          id="nom-when"
+          class="text-input"
+          placeholder="e.g., mornings before work, when I am overwhelmed"
+          maxlength="200"
+        >
+      </div>
+
+      <div class="input-group">
+        <label for="nom-area">Which area does it fit? <span style="font-weight:400;color:var(--text-muted)">(optional)</span></label>
+        <select id="nom-area" class="select-input">
+          <option value="">-- pick one if helpful --</option>
+          <option value="AEF">Getting started, focus, and time</option>
+          <option value="ERM">Mood, energy, and emotional support</option>
+          <option value="SCI">Connecting and communicating</option>
+          <option value="SPR">Sensory comfort</option>
+          <option value="CTO">Thinking, notes, and ideas</option>
+          <option value="SMI">Noticing and understanding yourself</option>
+          <option value="OTHER">Something else entirely</option>
+        </select>
+      </div>
+
+      <button type="submit" class="add-btn">
+        <span aria-hidden="true">+</span> Add to my list
+      </button>
+    </form>
+
+    <div id="nominations-list" class="nominations-list" aria-label="Your nominations" aria-live="polite"></div>
+  </section>
+
+  <!-- FOOTER ACTIONS -->
+  <section class="footer-section" aria-labelledby="send-heading">
+    <h2 id="send-heading">Share your feedback</h2>
+
+    <div class="send-note">
+      When you are ready, download or copy your feedback and send it to us via
+      <span class="send-placeholder">[ send to the feedback link we share, or email feedback@cytognosis.org ]</span>
+    </div>
+
+    <div class="action-row">
+      <button class="action-btn primary" id="btn-download" type="button">
+        <span aria-hidden="true">&#8681;</span> Download my feedback (.json)
+      </button>
+      <button class="action-btn" id="btn-copy" type="button">
+        <span aria-hidden="true">&#9112;</span> Copy my feedback (plain text)
+      </button>
+    </div>
+
+    <p class="privacy-note">
+      Your responses stay on your device until you choose to send them.
+      Nothing is transmitted automatically.
+    </p>
+  </section>
+
+  <!-- PAGE FOOTER -->
+  <footer class="page-footer">
+    <p>
+      Yar is being built by
+      <a href="https://cytognosis.org" rel="noopener">Cytognosis Foundation</a>,
+      a nonprofit. Our work is shaped by and for the neurodivergent community.
+    </p>
+  </footer>
+
+</div><!-- /.page-shell -->
+
+<!-- TOAST -->
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ============================================================
+   INLINE DATA: 62 features
+   ============================================================ */
+const AREAS = [
+  {
+    id: "AEF",
+    label: "Getting started, focus, and time",
+    intro: "Starting tasks, keeping track of time, staying with what matters, and capturing things before they vanish -- this area is about reducing friction when your brain is fighting you.",
+  },
+  {
+    id: "ERM",
+    label: "Mood, energy, and emotional support",
+    intro: "Tracking how you feel, getting support on hard days, and building habits that are honest about what you actually have to give.",
+  },
+  {
+    id: "SCI",
+    label: "Connecting and communicating",
+    intro: "Support for navigating social situations, communicating across different neurotypes, and staying connected to people who matter.",
+  },
+  {
+    id: "SPR",
+    label: "Sensory comfort",
+    intro: "Features that make the experience of using Yar easier on your senses, attention, and nervous system.",
+  },
+  {
+    id: "CTO",
+    label: "Thinking, notes, and ideas",
+    intro: "Tools for organizing your thoughts, building on ideas, and keeping your knowledge connected in a way that makes sense to your brain.",
+  },
+  {
+    id: "SMI",
+    label: "Noticing and understanding yourself",
+    intro: "Features for tracking your own patterns over time, connecting your body and environment to how you feel and function, and building a clearer picture of yourself.",
+  },
+];
+
+/* primaryArea: first Domain code that appears in the CSV for this feature */
+const FEATURES = [
+  { id:"F01", area:"AEF", label:"Voice brain dump",              description:"Talk out everything on your mind and let it be captured for you, no typing needed." },
+  { id:"F02", area:"AEF", label:"Brain dump to action plan",     description:"Turn a voice or text brain dump into a list of actual next steps automatically." },
+  { id:"F03", area:"AEF", label:"Tasks from your words",         description:"Pull out the things you need to do directly from what you said or wrote, without any manual sorting." },
+  { id:"F04", area:"AEF", label:"Right-sized task breakdown",    description:"Choose how small you want tasks chopped up, so each step feels actually doable right now." },
+  { id:"F05", area:"ERM", label:"Your energy and mood map",      description:"See a simple picture of how your energy and mood have been moving, updated as you go." },
+  { id:"F06", area:"AEF", label:"Focus companion and body doubling", description:"Have a quiet presence with you while you work, the same way body doubling helps you stay in the task." },
+  { id:"F07", area:"AEF", label:"Flexible plan with a backup track", description:"Build a plan that has two versions built in: what you want to do, and a lighter version for harder days." },
+  { id:"F08", area:"ERM", label:"Mood tag on tasks",             description:"Add a quick mood note to any task so you can see later how different emotional states connect to your work." },
+  { id:"F09", area:"CTO", label:"Structured note types",         description:"Organize your notes with flexible types that help you find and use them the way your memory actually works." },
+  { id:"F10", area:"CTO", label:"Saved smart searches",          description:"Set up searches that stay active and surface the right notes and tasks as things change, without you having to re-run them." },
+  { id:"F11", area:"ERM", label:"Companion style and voice",     description:"Choose what kind of voice and presence you want from Yar, so it feels right for how you relate to support." },
+  { id:"F12", area:"SMI", label:"Open sensor connection layer (CSP)", description:"A flexible layer that lets Yar connect to a wide range of data sources and devices you choose to bring in." },
+  { id:"F13", area:"CTO", label:"Voice-grown thought map",       description:"Talk out loud and watch your words build into a connected visual map of your ideas, hands-free." },
+  { id:"F14", area:"CTO", label:"Thought placement assistant",   description:"When you are not sure where a new idea belongs, get a suggestion for where it fits in your existing map." },
+  { id:"F15", area:"CTO", label:"Spatial thought map view",      description:"See your notes and ideas laid out spatially, with connections drawn between related things." },
+  { id:"F16", area:"CTO", label:"Your data in your own tools",   description:"Use Yar alongside Obsidian, Logseq, or other tools you already love, with your data staying in your own hands." },
+  { id:"F17", area:"ERM", label:"Private space before planning", description:"Write out how you are actually feeling before jumping into tasks, with no one else seeing it." },
+  { id:"F18", area:"ERM", label:"Safety and consent layer (CAP)", description:"A built-in layer of consent and safety controls so you are always in charge of what Yar can see or do." },
+  { id:"F19", area:"ERM", label:"On-device private AI",          description:"All the AI processing happens on your device, not in the cloud, so your data never leaves your hands." },
+  { id:"F20", area:"AEF", label:"Single-task focus mode",        description:"Fill your screen with one thing only, so nothing else competes for your attention." },
+  { id:"F21", area:"AEF", label:"Graceful activity pause",       description:"When you step away, Yar notices and holds your place without any fuss, ready when you come back." },
+  { id:"F22", area:"AEF", label:"Gentle break prompts",          description:"Get a soft nudge to stop and rest before you have been deep in something for too long." },
+  { id:"F23", area:"SPR", label:"Read-aloud with highlighting",  description:"Have any text read to you while the words are highlighted in sync, so you can follow along your own way." },
+  { id:"F24", area:"AEF", label:"AI morning plan",               description:"Start your day with a suggested plan built around what you have going on and how you are feeling." },
+  { id:"F25", area:"SCI", label:"Pre-send tone check-in",        description:"Before you send a message, get an optional heads-up about how the tone might land, so you can decide if it is what you meant." },
+  { id:"F26", area:"AEF", label:"Floating task reminder",        description:"Keep a small reminder of the current task visible in a corner of your screen while you do other things." },
+  { id:"F27", area:"ERM", label:"Rest day support",              description:"When you need a pause, Yar holds space for that without treating it as a failure or a gap to recover from." },
+  { id:"F28", area:"AEF", label:"Open data connections (MCP)",   description:"Connect Yar to the other tools you already use so your information can flow between them." },
+  { id:"F29", area:"ERM", label:"Companion that learns your style", description:"Over time, Yar adjusts how it talks and responds to match what you actually find helpful." },
+  { id:"F30", area:"SMI", label:"Wearable sensor connection",    description:"Connect a wearable like an Oura ring or Apple Watch and let Yar factor in your body data when it supports you." },
+  { id:"F31", area:"CTO", label:"Thought map reviewer",          description:"After a thinking session, get a gentle review of your map that catches loose threads and helps you tighten the ideas." },
+  { id:"F32", area:"AEF", label:"Stray thought capture",         description:"Quickly drop a random thought or to-do somewhere safe while you are in the middle of something else." },
+  { id:"F33", area:"CTO", label:"Your personal vocabulary",      description:"Yar learns your personal names, phrases, and shorthand so it always transcribes and understands you accurately." },
+  { id:"F34", area:"CTO", label:"Map to document transform",     description:"Turn a messy thought map into a clean, structured document in one step, ready to share or file." },
+  { id:"F35", area:"ERM", label:"Energy check before saying yes", description:"Before you commit to something new, pause and check in with how much you genuinely have right now." },
+  { id:"F36", area:"SCI", label:"Co-planning with a trusted person", description:"Share your planning with someone you trust, like a partner, friend, or support person, with your full control over what they can see." },
+  { id:"F37", area:"SPR", label:"Gentle context change cues",    description:"Get a soft signal when you are about to shift from one thing to another, so transitions feel less abrupt." },
+  { id:"F38", area:"ERM", label:"No-penalty plan change",        description:"Change your plan at any time without guilt or a performance hit, because plans are supposed to flex." },
+  { id:"F39", area:"SMI", label:"Personalized gentle nudges",    description:"Get nudges that are tuned to your own patterns, so they arrive at times that are actually useful, not random." },
+  { id:"F40", area:"ERM", label:"Voice wellbeing signals (research)", description:"An optional, research-stage feature that listens for patterns in your voice that might reflect how you are doing, with full consent and control. (This is early research and would only ever be opt-in.)" },
+  { id:"F41", area:"AEF", label:"All-in-one ND support app",     description:"Have your tasks, time, notes, mood, and AI support all in one place so you do not need to switch between apps." },
+  { id:"F42", area:"SCI", label:"Two-way communication bridge",  description:"Get support translating between neurodivergent and neurotypical communication styles, in both directions." },
+  { id:"F43", area:"SMI", label:"Layered wellbeing dashboard",   description:"See your wellbeing data in layers you can open up as much or as little as you want, without being overwhelmed." },
+  { id:"F44", area:"ERM", label:"Streaks that honor rest days",  description:"Keep a record of your consistency that does not punish you for the days you needed to stop." },
+  { id:"F45", area:"ERM", label:"Mood-matched companion",        description:"Yar reads the room and shifts its tone to match how you are feeling in the moment." },
+  { id:"F46", area:"SMI", label:"Brain sensor connection layer", description:"A forward-looking, research-stage connection for non-invasive brain sensing devices, for people who want to go deeper. (This is future research, not a current feature, and would always be fully opt-in.)" },
+  { id:"F47", area:"CTO", label:"Untangling parallel thoughts",  description:"When several ideas are running at the same time, get help sorting them into threads you can work with one at a time." },
+  { id:"F48", area:"ERM", label:"Gentle reset after a hard day", description:"When things fall apart, get a short, kind debrief to help you process it and set it down." },
+  { id:"F49", area:"ERM", label:"Your week as a story",          description:"At the end of the week, get a short, human narrative of how it went, not just a list of what you did or did not do." },
+  { id:"F50", area:"CTO", label:"Highlight and link on any page", description:"Highlight anything on any web page and link it straight into your notes, with the context kept." },
+  { id:"F51", area:"CTO", label:"Open schema translation layer", description:"A technical feature that lets your notes and data move cleanly between different apps and formats without losing structure." },
+  { id:"F52", area:"CTO", label:"Private local knowledge store", description:"All your notes and knowledge live on your device in an open format you own and can take anywhere." },
+  { id:"F53", area:"ERM", label:"Mood-anchored morning check-in", description:"Start each day with a brief, low-pressure check-in that sets the tone for your plan." },
+  { id:"F54", area:"ERM", label:"Voice mood awareness",          description:"An opt-in feature that picks up on mood signals in your voice to help Yar respond more attuned to where you are. (Always opt-in and always under your control.)" },
+  { id:"F55", area:"SMI", label:"Your custom tracking axes",     description:"Define your own dimensions to track, things that matter to you that no standard app covers, and build your own picture." },
+  { id:"F56", area:"SCI", label:"Social connections and your mood", description:"See how your social interactions connect to how you feel, so you can understand your patterns without judgment." },
+  { id:"F57", area:"ERM", label:"Adaptive companion that builds trust", description:"Yar gets to know you gradually, adjusting not just style but how much it reads between the lines, as trust grows." },
+  { id:"F58", area:"CTO", label:"Names and terms you use",       description:"Yar recognizes your people, places, and specific terms so transcriptions and searches stay accurate over time." },
+  { id:"F59", area:"AEF", label:"Capture from anywhere",         description:"Save something to Yar from your phone, computer, or browser in a single tap, wherever you are." },
+  { id:"F60", area:"CTO", label:"Conversational thought map",    description:"Build a thought map through a back-and-forth conversation, like thinking out loud with someone who is keeping track." },
+  { id:"F61", area:"CTO", label:"Thought to document templates", description:"Apply a template to a thought map and get a formatted document, report, or email drafted for you." },
+  { id:"F62", area:"SMI", label:"Opt-in self-assessment tools",  description:"Take validated, optional self-assessments at your own pace to build a clearer picture of your patterns over time. (Never diagnostic, always yours to keep.)" },
+];
+
+/* ============================================================
+   STATE (localStorage)
+   ============================================================ */
+const LS_RATINGS    = "yar_feedback_ratings";
+const LS_STARS      = "yar_feedback_stars";
+const LS_OPEN       = "yar_feedback_open";
+const LS_NOMS       = "yar_feedback_nominations";
+
+function loadState(key, fallback) {
+  try { return JSON.parse(localStorage.getItem(key)) || fallback; }
+  catch { return fallback; }
+}
+
+function saveState(key, value) {
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch {}
+}
+
+/* rating: "purple" | "white" | null */
+let ratings      = loadState(LS_RATINGS, {});   /* { F01: "purple", ... } */
+let stars        = loadState(LS_STARS,   {});   /* { F01: true, ... } */
+let openSections = loadState(LS_OPEN,    {});   /* { AEF: true, ... } */
+let nominations  = loadState(LS_NOMS,    []);   /* [{what,when,area,id}] */
+
+/* ============================================================
+   RENDER SECTIONS
+   ============================================================ */
+function buildSections() {
+  const container = document.getElementById("feature-sections");
+  container.innerHTML = "";
+
+  AREAS.forEach(area => {
+    const features = FEATURES.filter(f => f.area === area.id);
+    const isOpen   = openSections[area.id] !== false; /* default open */
+
+    const section = document.createElement("section");
+    section.className = `area-section area-${area.id.toLowerCase()} ${isOpen ? "is-open" : ""}`;
+    section.id = `area-${area.id}`;
+    section.setAttribute("aria-labelledby", `area-title-${area.id}`);
+
+    /* Header (collapsible trigger) */
+    const header = document.createElement("div");
+    header.className = "area-header";
+    header.setAttribute("role", "button");
+    header.setAttribute("tabindex", "0");
+    header.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    header.setAttribute("aria-controls", `area-body-${area.id}`);
+    header.setAttribute("id", `area-title-${area.id}`);
+
+    header.innerHTML = `
+      <div class="area-header-left">
+        <span class="area-dot" aria-hidden="true"></span>
+        <div class="area-title-group">
+          <h2>${area.label}</h2>
+          <span class="area-count">${features.length} features</span>
+        </div>
+      </div>
+      <span class="area-chevron" aria-hidden="true">&#9660;</span>
+    `;
+
+    header.addEventListener("click",   () => toggleSection(section, area.id, header));
+    header.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleSection(section, area.id, header); }
+    });
+
+    /* Intro */
+    const intro = document.createElement("div");
+    intro.className = "area-intro";
+    intro.textContent = area.intro;
+
+    /* Body */
+    const body = document.createElement("div");
+    body.className = "area-body";
+    body.id = `area-body-${area.id}`;
+
+    features.forEach(feat => {
+      body.appendChild(buildCard(feat));
+    });
+
+    section.appendChild(header);
+    section.appendChild(intro);
+    section.appendChild(body);
+    container.appendChild(section);
+  });
+}
+
+function toggleSection(section, areaId, header) {
+  const open = section.classList.toggle("is-open");
+  header.setAttribute("aria-expanded", open ? "true" : "false");
+  openSections[areaId] = open;
+  saveState(LS_OPEN, openSections);
+}
+
+/* ============================================================
+   FEATURE CARD
+   ============================================================ */
+function buildCard(feat) {
+  const card = document.createElement("div");
+  card.className = "feature-card";
+  card.id = `card-${feat.id}`;
+
+  const text = document.createElement("div");
+  text.className = "feature-text";
+  text.innerHTML = `<div class="feature-label">${feat.label}</div><div class="feature-desc">${feat.description}</div>`;
+
+  const controls = document.createElement("div");
+  controls.className = "feature-controls";
+  controls.setAttribute("role", "group");
+  controls.setAttribute("aria-label", `Rate: ${feat.label}`);
+
+  /* Purple heart */
+  const btnPurple = makeToggle("btn-purple", "💜", `Mark "${feat.label}" as would really help me`);
+  btnPurple.setAttribute("aria-pressed", ratings[feat.id] === "purple" ? "true" : "false");
+  btnPurple.addEventListener("click", () => {
+    const was = ratings[feat.id] === "purple";
+    ratings[feat.id] = was ? null : "purple";
+    saveState(LS_RATINGS, ratings);
+    refreshCard(feat.id);
+    updateProgress();
+  });
+
+  /* White heart */
+  const btnWhite = makeToggle("btn-white", "🤍", `Mark "${feat.label}" as maybe or somewhat`);
+  btnWhite.setAttribute("aria-pressed", ratings[feat.id] === "white" ? "true" : "false");
+  btnWhite.addEventListener("click", () => {
+    const was = ratings[feat.id] === "white";
+    ratings[feat.id] = was ? null : "white";
+    saveState(LS_RATINGS, ratings);
+    refreshCard(feat.id);
+    updateProgress();
+  });
+
+  /* Star */
+  const btnStar = makeToggle("btn-star", "⭐", `Mark "${feat.label}" as top priority`);
+  btnStar.setAttribute("aria-pressed", stars[feat.id] ? "true" : "false");
+  btnStar.addEventListener("click", () => {
+    stars[feat.id] = !stars[feat.id];
+    if (!stars[feat.id]) delete stars[feat.id];
+    saveState(LS_STARS, stars);
+    refreshCard(feat.id);
+  });
+
+  controls.appendChild(btnPurple);
+  controls.appendChild(btnWhite);
+  controls.appendChild(btnStar);
+
+  card.appendChild(text);
+  card.appendChild(controls);
+  return card;
+}
+
+function makeToggle(cls, glyph, label) {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = `toggle-btn ${cls}`;
+  btn.setAttribute("aria-label", label);
+  btn.setAttribute("aria-pressed", "false");
+  btn.textContent = glyph;
+  return btn;
+}
+
+function refreshCard(featId) {
+  const card = document.getElementById(`card-${featId}`);
+  if (!card) return;
+  const controls = card.querySelector(".feature-controls");
+  const [btnP, btnW, btnS] = controls.querySelectorAll(".toggle-btn");
+
+  btnP.setAttribute("aria-pressed", ratings[featId] === "purple" ? "true" : "false");
+  btnW.setAttribute("aria-pressed", ratings[featId] === "white"  ? "true" : "false");
+  btnS.setAttribute("aria-pressed", stars[featId] ? "true" : "false");
+}
+
+/* ============================================================
+   PROGRESS
+   ============================================================ */
+function updateProgress() {
+  const count = Object.values(ratings).filter(v => v !== null).length;
+  const line  = document.getElementById("progress-line");
+  if (count === 0) {
+    line.textContent = "You have not marked any features yet. Mark whatever resonates, whenever you are ready.";
+  } else {
+    line.textContent = `You have marked ${count} feature${count === 1 ? "" : "s"}. Thank you. There is no need to do more.`;
+  }
+}
+
+/* ============================================================
+   NOMINATIONS
+   ============================================================ */
+function renderNominations() {
+  const list = document.getElementById("nominations-list");
+  list.innerHTML = "";
+  if (nominations.length === 0) return;
+
+  nominations.forEach((nom, idx) => {
+    const areaLabel = AREAS.find(a => a.id === nom.area);
+    const item = document.createElement("div");
+    item.className = "nomination-item";
+
+    const content = document.createElement("div");
+    content.className = "nomination-content";
+    content.innerHTML = `
+      <div class="nomination-what">${escHtml(nom.what)}</div>
+      <div class="nomination-meta">
+        ${nom.when ? `<span>When: ${escHtml(nom.when)}</span>` : ""}
+        ${nom.area ? `${nom.when ? " &middot; " : ""}<span>Area: ${areaLabel ? areaLabel.label : nom.area}</span>` : ""}
+      </div>
+    `;
+
+    const removeBtn = document.createElement("button");
+    removeBtn.className = "remove-btn";
+    removeBtn.textContent = "Remove";
+    removeBtn.setAttribute("aria-label", `Remove nomination: ${nom.what}`);
+    removeBtn.addEventListener("click", () => {
+      nominations.splice(idx, 1);
+      saveState(LS_NOMS, nominations);
+      renderNominations();
+    });
+
+    item.appendChild(content);
+    item.appendChild(removeBtn);
+    list.appendChild(item);
+  });
+}
+
+document.getElementById("nom-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const what = document.getElementById("nom-what").value.trim();
+  if (!what) {
+    document.getElementById("nom-what").focus();
+    return;
+  }
+  const when = document.getElementById("nom-when").value.trim();
+  const area = document.getElementById("nom-area").value;
+
+  nominations.push({ what, when, area, id: Date.now().toString() });
+  saveState(LS_NOMS, nominations);
+  renderNominations();
+
+  document.getElementById("nom-what").value = "";
+  document.getElementById("nom-when").value = "";
+  document.getElementById("nom-area").value = "";
+  showToast("Nomination added.");
+});
+
+/* ============================================================
+   EXPORT
+   ============================================================ */
+document.getElementById("btn-download").addEventListener("click", () => {
+  const data = buildExportData();
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement("a");
+  a.href = url;
+  a.download = "yar-feedback.json";
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast("Feedback downloaded.");
+});
+
+document.getElementById("btn-copy").addEventListener("click", () => {
+  const data = buildExportData();
+  const text = formatPlainText(data);
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(() => showToast("Feedback copied to clipboard."));
+  } else {
+    /* Fallback */
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity  = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand("copy");
+    document.body.removeChild(ta);
+    showToast("Feedback copied to clipboard.");
+  }
+});
+
+function buildExportData() {
+  const markedFeatures = FEATURES
+    .filter(f => ratings[f.id])
+    .map(f => ({
+      id:       f.id,
+      label:    f.label,
+      area:     AREAS.find(a => a.id === f.area)?.label || f.area,
+      rating:   ratings[f.id] === "purple" ? "would really help me" : "maybe or somewhat",
+      priority: !!stars[f.id],
+    }));
+
+  return {
+    exported_at:    new Date().toISOString(),
+    marked_features: markedFeatures,
+    starred_count:  markedFeatures.filter(f => f.priority).length,
+    nominations:    nominations.map(n => ({
+      what: n.what,
+      when: n.when || null,
+      area: n.area ? (AREAS.find(a => a.id === n.area)?.label || n.area) : null,
+    })),
+  };
+}
+
+function formatPlainText(data) {
+  const lines = [];
+  lines.push("Yar Community Feedback");
+  lines.push(`Exported: ${data.exported_at}`);
+  lines.push("");
+
+  if (data.marked_features.length === 0) {
+    lines.push("No features marked.");
+  } else {
+    lines.push(`Features marked: ${data.marked_features.length}`);
+    lines.push("");
+
+    AREAS.forEach(area => {
+      const inArea = data.marked_features.filter(f => f.area === area.label);
+      if (inArea.length === 0) return;
+      lines.push(`-- ${area.label} --`);
+      inArea.forEach(f => {
+        const star = f.priority ? " [TOP PRIORITY]" : "";
+        const mark = f.rating === "would really help me" ? "[PURPLE HEART]" : "[WHITE HEART]";
+        lines.push(`  ${mark}${star} ${f.label}`);
+      });
+      lines.push("");
+    });
+  }
+
+  if (data.nominations.length > 0) {
+    lines.push("Nominations (features not yet in the list):");
+    data.nominations.forEach((n, i) => {
+      lines.push(`  ${i + 1}. ${n.what}`);
+      if (n.when) lines.push(`     When: ${n.when}`);
+      if (n.area) lines.push(`     Area: ${n.area}`);
+    });
+    lines.push("");
+  }
+
+  lines.push("Send to: [ send to the feedback link we share, or email feedback@cytognosis.org ]");
+  return lines.join("\n");
+}
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+let toastTimer = null;
+function showToast(msg) {
+  const toast = document.getElementById("toast");
+  toast.textContent = msg;
+  toast.classList.add("show");
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove("show"), 2800);
+}
+
+/* ============================================================
+   UTILITY
+   ============================================================ */
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+buildSections();
+renderNominations();
+updateProgress();
+</script>
+</body>
+</html>

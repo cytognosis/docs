@@ -9,7 +9,7 @@
 > **Status**: Operational (v3.67.1 with GCS support)
 > **Updated**: 2026-06-14
 
-**Last verified: 2026-06-14** — `gs://cytognosis-data-hub` confirmed with versioning ON and lifecycle rules (60d Nearline, 180d Coldline). `gs://cytognosis-mlflow-artifacts` NOW EXISTS (created 2026-06-14, `us-central1`). DVC remotes use `cytognosis-infrastructure` and `cytognosis-phi-prod` projects only; `cytognosis-data` project does NOT exist.
+**Last verified: 2026-06-19** — `gs://cytognosis-data-hub` confirmed with versioning ON and lifecycle rules (60d Nearline, 180d Coldline). `gs://cytognosis-artifacts` is the unified artifact bucket (created 2026-06-19; replaces the former `cytognosis-mlflow-artifacts`). MLflow uses `gs://cytognosis-artifacts/mlflow/`. DVC remotes use `cytognosis-infrastructure` and `cytognosis-phi-prod` projects only; `cytognosis-data` project does NOT exist.
 
 ## Installation
 
