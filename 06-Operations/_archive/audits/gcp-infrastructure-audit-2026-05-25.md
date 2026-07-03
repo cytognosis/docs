@@ -1,3 +1,8 @@
+> **Status:** SUPERSEDED · **Date:** 2026-07-01 · **Agent:** Operations
+> Superseded by the annotated canonical audit at `04-Engineering/infrastructure/audits/gcp-infrastructure-audit-2026-05-25.md` (Infrastructure layer, up to date on the 2026-06-19 GCP cleanup). This is the original raw agent output, archived here for provenance only.
+
+---
+
 # GCP Infrastructure Audit Report
 
 **Date**: 2026-05-25  

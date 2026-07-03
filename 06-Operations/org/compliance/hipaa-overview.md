@@ -1,6 +1,6 @@
 # HIPAA Compliance Overview
 
-> ADHD-friendly quick reference. For full details, see the [compliance docs](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/data-strategy/compliance/).
+> ADHD-friendly quick reference. For full details, see the [compliance docs](../../data-strategy/compliance/).
 
 ## Current Status: Pre-Operational
 
@@ -17,8 +17,8 @@ graph TD
     end
     
     subgraph "cytognosis-phi-prod"
-        PHI["PHI Core<br/><i>gs://cytognosis-phi-core</i><br/>CMEK + VPC-SC"]
-        Collab["PHI Collab<br/><i>gs://cytognosis-phi-collab-nih</i>"]
+        PHI["PHI Core<br/><i>gs://cytognosis-phi-core</i><br/>CMEK encrypted"]
+        Collab["PHI Collab<br/><i>gs://cytognosis-phi-collab</i><br/>CMEK encrypted"]
     end
     
     style PHI fill:#ff4444,color:#fff
@@ -31,11 +31,11 @@ graph TD
 | Control | Status | Notes |
 |---------|--------|-------|
 | Project isolation (PHI vs non-PHI) | ✅ Done | `cytognosis-phi-prod` separate project |
-| CMEK encryption at rest | ⏳ Verify | Check KMS key status on PHI buckets |
-| Uniform bucket access | ⏳ Verify | Should be enabled on all buckets |
-| Bucket versioning | ⏳ Configuring | Enabling on data-hub, phi-core, phi-collab |
+| CMEK encryption at rest | ✅ Done | `phi-keyring/phi-bucket-key` deployed on PHI buckets (verified 2026-06-19) |
+| Uniform bucket access | ✅ Done | Enabled on all buckets |
+| Bucket versioning | ✅ Done | Enabled on data-hub, phi-core, phi-collab |
 | VPC Service Controls | ⏳ Planned | Not yet configured |
-| Audit logging | ⏳ Verify | Check data access logs enabled |
+| Audit logging | ✅ Done | Data access logs enabled |
 | De-identification pipeline | 📋 Planned | DLP API + Healthcare API |
 | BAA with Google | 📋 Needed | Required before PHI ingestion |
 | NIST 800-171 self-assessment | 📋 Needed | Required for DUC submissions |
@@ -53,6 +53,6 @@ Before ingesting **any** T4 (Restricted/PHI) data:
 
 ## Related Docs
 
-- [Data Governance Policy](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/data-strategy/compliance/data-governance-policy.md)
-- [HIPAA Status](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/data-strategy/compliance/HIPAA-STATUS.md)
-- [Technical Infrastructure](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/data-strategy/TECHNICAL_DATA_INFRASTRUCTURE.md)
+- [Data Governance Policy](../../data-strategy/policies/data-governance-policy.md)
+- [HIPAA Status](../../data-strategy/compliance/HIPAA-STATUS.md)
+- [Technical Infrastructure](../../../04-Engineering/infrastructure/data-strategy/TECHNICAL_DATA_INFRASTRUCTURE.md) (Infrastructure layer)
