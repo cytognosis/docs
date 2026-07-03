@@ -142,7 +142,7 @@ Migration steps:
 4. Rebuild the ReadCube collection hierarchy as Zotero collections from the XLS.
 5. Validate: every Zotero item resolves to a working Drive link; every paper in `Library/Papers/` has a corresponding Zotero record.
 
-A step-by-step operational guide (`zotero-setup-guide.md`) lives in the **Infrastructure and Tooling** workspace folder rather than this repo, because it contains personal Drive paths and account specifics.
+A step-by-step operational guide ([`zotero-setup-guide.md`](zotero-setup-guide.md)) was migrated into this repo on 2026-07-02. It contains personal Drive paths and account specifics, so treat it as internal.
 
 ## Cross-references
 

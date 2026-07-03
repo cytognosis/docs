@@ -1,0 +1,34 @@
+Column Name,Column Type,Description,Is Required,Default Value
+Research Object Name,text,Display name of the Research Object,true,
+RO-Crate Profile,select,Profile: Base, Workflow, Workflow Run, Process Run, Provenance Run, Workflow Testing, Five Safes, ARC,false,Base
+RO-Crate Version,text,RO-Crate specification version (e.g., 1.1, 1.2),false,1.1
+Description,long_text,Description of the aggregated research context,false,
+Main Entity,text,Primary research artifact (usually DOI of main paper),false,
+Contained Papers,link,Links to papers included in this RO,false,
+Contained Code,link,Links to code repositories included in this RO,false,
+Contained Datasets,link,Links to datasets included in this RO,false,
+Contained Models,link,Links to ML models included in this RO,false,
+Contained Workflows,link,Links to workflows included in this RO,false,
+Contained Protocols,link,Links to protocols included in this RO,false,
+Contained Presentations,link,Links to presentations/slides included in this RO,false,
+Contained Instruments,link,Links to instrument data included in this RO,false,
+Other Materials,link,Links to supplementary materials included in this RO,false,
+Total Artifacts,number,Total count of artifacts included,false,
+License,text,License for the Research Object (e.g., CC-BY-4.0),false,
+Contributors,text,Authors/contributors separated by semicolon,false,
+Date Published,date,Publication date of the RO,false,
+Date Modified,date,Last modification date,false,
+Archival Status,select,Archival status: Active, Preserved, Embargo, Retired,false,Active
+Access Level,select,Access: Open, Restricted, Embargoed, Closed,false,Open
+DOI,text,DOI assigned to this Research Object,false,
+Zenodo URL,link,Zenodo URL if archived there,false,
+Curation Notes,long_text,Notes on RO curation and completeness,false,
+Research Context,long_text,Contextual information about the research,false,
+Intended Audience,text,Intended users or audience,false,
+Reuse Potential,long_text,Notes on potential for reuse by others,false,
+Metadata Quality,text,Assessment of metadata completeness,false,
+Status,select,Curation status: Draft, Reviewed, Published, Archived,false,Published
+Tags,text,Tags separated by semicolon,false,
+Notes,long_text,Internal notes and commentary,false,
+Created Date,datetime,When record was created,false,
+Updated Date,datetime,When record was last updated,false,

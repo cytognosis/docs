@@ -1,0 +1,689 @@
+# =============================================================================
+# Cytognosis Scholarly Knowledge Graph - Papers Schema
+# Extracted resource type: BibliographicResource and subtypes
+# =============================================================================
+
+id: https://schema.cytognosis.org/scholarly-kg/papers
+name: cytognosis_papers_schema
+title: Papers and Bibliographic Resources Schema
+description: >-
+  Extracted LinkML schema for BibliographicResource and all subtypes
+  (Article, Book, InProceedings, AIMLPaper, BiomedicalPaper, Preprint, etc.)
+  from the Cytognosis Scholarly Knowledge Graph.
+version: 0.4.0
+license: https://creativecommons.org/licenses/by/4.0/
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  dcterms: http://purl.org/dc/terms/
+  bibo: http://purl.org/ontology/bibo/
+  foaf: http://xmlns.com/foaf/0.1/
+  fabio: http://purl.org/spar/fabio/
+  prism: http://prismstandard.org/namespaces/basic/2.0/
+  cito: http://purl.org/spar/cito/
+  datacite: https://schema.datacite.org/
+  biolink: https://w3id.org/biolink/vocab/
+  DOI: https://doi.org/
+  PMID: https://pubmed.ncbi.nlm.nih.gov/
+  ORCID: https://orcid.org/
+  ROR: https://ror.org/
+  cytognosis: https://schema.cytognosis.org/scholarly-kg/
+
+default_prefix: cytognosis
+default_range: string
+imports:
+  - linkml:types
+
+
+# =============================================================================
+# ENUMERATIONS
+# =============================================================================
+enums:
+
+  BibtexEntryType:
+    description: All standard BibTeX and BibLaTeX entry types.
+    permissible_values:
+      article: { meaning: fabio:JournalArticle }
+      book: { meaning: fabio:Book }
+      booklet: { meaning: fabio:Booklet }
+      inbook: { meaning: fabio:BookChapter }
+      incollection: { meaning: fabio:BookChapter }
+      inproceedings: { meaning: fabio:ConferencePaper }
+      conference: { meaning: fabio:ConferencePaper }
+      manual: { meaning: fabio:Manual }
+      mastersthesis: { meaning: fabio:MastersThesis }
+      phdthesis: { meaning: fabio:DoctoralThesis }
+      proceedings: { meaning: fabio:ConferenceProceedings }
+      techreport: { meaning: fabio:TechnicalReport }
+      unpublished: { meaning: fabio:Preprint }
+      misc: { meaning: fabio:Expression }
+      online: { meaning: fabio:WebContent }
+      patent: { meaning: fabio:Patent }
+      dataset: { meaning: schema:Dataset }
+      software: { meaning: schema:SoftwareSourceCode }
+      report: { meaning: fabio:Report }
+      standard: { meaning: fabio:Specification }
+      review: { meaning: fabio:ReviewArticle }
+      preprint: { meaning: fabio:Preprint }
+
+  OpenAlexWorkType:
+    permissible_values:
+      journal-article: {}
+      book-chapter: {}
+      dataset: {}
+      preprint: {}
+      dissertation: {}
+      book: {}
+      review: {}
+      paratext: {}
+      letter: {}
+      editorial: {}
+      erratum: {}
+      standard: {}
+      grant: {}
+      report: {}
+      peer-review: {}
+      other: {}
+
+  SourceType:
+    permissible_values:
+      journal: { meaning: fabio:Journal }
+      repository: { meaning: fabio:Repository }
+      conference: { meaning: fabio:ConferenceProceedings }
+      ebook_platform: {}
+      book_series: {}
+      metadata: {}
+      other: {}
+
+  OpenAccessStatus:
+    permissible_values:
+      gold: {}
+      green: {}
+      bronze: {}
+      hybrid: {}
+      closed: {}
+
+  AuthorPosition:
+    permissible_values:
+      first: {}
+      middle: {}
+      last: {}
+
+  WorkVersion:
+    permissible_values:
+      submittedVersion: {}
+      acceptedVersion: {}
+      publishedVersion: {}
+
+  OnlineContentType:
+    permissible_values:
+      blog_post: {}
+      medium_article: {}
+      substack_post: {}
+      forum_post: {}
+      wiki_page: {}
+      documentation_page: {}
+      tutorial: {}
+      notebook: { description: Jupyter, Colab, Observable, etc. }
+      social_media_thread: {}
+      video: {}
+      podcast_episode: {}
+      presentation_slides: {}
+      other: {}
+
+
+# =============================================================================
+# CLASSES
+# =============================================================================
+classes:
+
+  # ===========================================================================
+  # MIXINS
+  # ===========================================================================
+
+  HasTimestamps:
+    mixin: true
+    slots:
+      - created_date
+      - updated_date
+
+  HasMetrics:
+    mixin: true
+    description: Scholarly impact metrics (OpenAlex pattern).
+    slots:
+      - works_count
+      - cited_by_count
+      - h_index
+      - i10_index
+      - counts_by_year
+
+  HasExternalIds:
+    mixin: true
+    slots:
+      - doi
+      - pmid
+      - pmcid
+      - arxiv_id
+      - ssrn_id
+      - openalex_id
+      - wikidata_id
+      - crossref_id
+      - scopus_id
+
+  HasLicense:
+    mixin: true
+    slots:
+      - license_ref
+      - license_spdx_id
+      - license_url
+
+  HasProvenance:
+    mixin: true
+    slots:
+      - data_source
+      - confidence_score
+      - extraction_method
+      - was_derived_from
+      - was_generated_by
+
+  HasTopics:
+    mixin: true
+    slots:
+      - topics
+      - keywords
+
+  HasImages:
+    mixin: true
+    slots:
+      - image_url
+      - image_thumbnail_url
+
+  HasSemOpenAlex:
+    mixin: true
+    slots:
+      - semopenalex_uri
+      - mag_id
+      - indexed_in
+      - crossref_type
+      - countries_distinct_count
+      - institutions_distinct_count
+      - has_sustainable_development_goal
+      - two_yr_mean_citedness
+
+  HasUMLS:
+    mixin: true
+    slots:
+      - cui
+      - umls_semantic_types
+      - umls_semantic_group
+      - umls_preferred_term
+      - umls_source_vocabs
+
+
+  # ===========================================================================
+  # BASE CLASSES
+  # ===========================================================================
+
+  NamedThing:
+    abstract: true
+    slots:
+      - id
+      - display_name
+      - description
+      - alternate_names
+
+  ScholarlyEntity:
+    abstract: true
+    is_a: NamedThing
+    slots:
+      - title
+      - date_published
+      - date_modified
+
+
+  # ===========================================================================
+  # BIBLIOGRAPHIC RESOURCES
+  # ===========================================================================
+
+  BibliographicResource:
+    abstract: true
+    is_a: ScholarlyEntity
+    class_uri: fabio:Expression
+    mixins: [HasExternalIds, HasLicense, HasProvenance, HasTopics, HasMetrics, HasImages, HasTimestamps, HasSemOpenAlex]
+    description: >-
+      Any type of published or unpublished work that can be cited (paper,
+      book, dataset, software, etc.). Aligns with BibTeX, BibLaTeX, BIBO,
+      FABIO, and OpenAlex.
+    slots:
+      - authors_text
+      - authorships
+      - year
+      - month
+      - abstract_text
+      - language
+      - url
+      - journal
+      - book_title
+      - publisher_name
+      - editor_text
+      - volume
+      - issue
+      - pages
+      - first_page
+      - last_page
+      - edition
+      - series
+      - chapter
+      - page_total
+      - address
+      - school
+      - institution_name
+      - organization
+      - how_published
+      - note
+      - report_number
+      - entry_type_field
+      - eprint
+      - eprint_type
+      - version
+      - bibtex_entry_type
+      - openalex_work_type
+      - source_ref
+      - locations
+      - publication_date
+      - is_retracted
+      - is_paratext
+      - open_access
+      - oa_status
+      - is_oa
+      - cites
+      - referenced_works
+      - related_works
+      - grants
+      - cited_by_count
+      - drive_pdf_url
+
+  Article:
+    is_a: BibliographicResource
+    class_uri: fabio:JournalArticle
+
+  Book:
+    is_a: BibliographicResource
+    class_uri: fabio:Book
+    slots: [isbn]
+
+  Thesis:
+    is_a: BibliographicResource
+    class_uri: fabio:Thesis
+
+  MastersThesis:
+    is_a: Thesis
+    class_uri: fabio:MastersThesis
+
+  DoctoralThesis:
+    is_a: Thesis
+    class_uri: fabio:DoctoralThesis
+
+  InProceedings:
+    is_a: BibliographicResource
+    class_uri: fabio:ConferencePaper
+
+  BookChapter:
+    is_a: BibliographicResource
+    class_uri: fabio:BookChapter
+
+  TechReport:
+    is_a: BibliographicResource
+    class_uri: fabio:TechnicalReport
+
+  Manual:
+    is_a: BibliographicResource
+    class_uri: fabio:Manual
+    slots: [organization, address, editor_text]
+
+  Booklet:
+    is_a: BibliographicResource
+    class_uri: fabio:Booklet
+    slots: [how_published, address]
+
+  Unpublished:
+    is_a: BibliographicResource
+    class_uri: fabio:Preprint
+    slot_usage:
+      note: { required: true }
+
+  MiscEntry:
+    is_a: BibliographicResource
+    class_uri: fabio:Expression
+    slots: [how_published]
+
+  PatentEntry:
+    is_a: BibliographicResource
+    class_uri: fabio:Patent
+    slots: [patent_number, patent_holder, filing_date, grant_date]
+
+  Standard:
+    is_a: BibliographicResource
+    class_uri: fabio:Specification
+    slots: [organization, address, report_number]
+
+  ReviewArticle:
+    is_a: Article
+    class_uri: fabio:ReviewArticle
+
+  Preprint:
+    is_a: BibliographicResource
+    class_uri: fabio:Preprint
+    slots: [preprint_server]
+
+  # Domain-specific paper subtypes
+  AIMLPaper:
+    is_a: Article
+    description: >-
+      AI/ML paper expected to have associated models, training datasets,
+      evaluation benchmarks, and code repositories.
+    slots:
+      - associated_models
+      - training_datasets
+      - evaluation_datasets
+      - associated_code_repos
+      - benchmark_results
+      - compute_used
+
+  BiomedicalPaper:
+    is_a: Article
+    description: >-
+      Biomedical paper expected to have associated experimental datasets,
+      biological entities studied, clinical trials, and protocols.
+    slots:
+      - associated_datasets
+      - studied_entities
+      - related_trials
+      - protocols
+      - specimen_types
+
+  # Online content types
+  OnlineContent:
+    is_a: BibliographicResource
+    class_uri: biolink:WebPage
+    description: Any online-only content.
+    slots:
+      - online_content_type
+      - platform_name
+      - url_date
+      - author_username
+      - reading_time_minutes
+      - claps_or_likes
+      - comment_count
+
+  BlogPost:
+    is_a: OnlineContent
+
+  ForumPost:
+    is_a: OnlineContent
+
+  NotebookEntry:
+    is_a: OnlineContent
+    description: Jupyter/Colab/Observable notebook published online.
+    slots: [notebook_runtime, notebook_kernel]
+
+  VideoContent:
+    is_a: OnlineContent
+    description: YouTube talk, conference recording, tutorial video.
+    slots: [duration_seconds, transcript_url]
+
+
+# =============================================================================
+# SLOTS
+# =============================================================================
+slots:
+
+  # ---- Identity and core metadata -------------------------------------------
+  id:
+    slot_uri: schema:identifier
+    range: uriorcurie
+    identifier: true
+  display_name:
+    slot_uri: schema:name
+  description:
+    slot_uri: dcterms:description
+  alternate_names:
+    slot_uri: schema:alternateName
+    multivalued: true
+  title:
+    slot_uri: dcterms:title
+
+  # ---- External IDs ---------------------------------------------------------
+  doi: { slot_uri: datacite:doi }
+  pmid: { slot_uri: fabio:hasPubMedId }
+  pmcid: { slot_uri: fabio:hasPubMedCentralId }
+  arxiv_id: {}
+  ssrn_id: {}
+  openalex_id: { range: uriorcurie }
+  wikidata_id: {}
+  crossref_id: {}
+  scopus_id: {}
+  isbn: { slot_uri: bibo:isbn }
+  issn_l: { slot_uri: bibo:issn }
+  issn: { slot_uri: bibo:issn }
+
+  # ---- BibTeX core ---------------------------------------------------------
+  authors_text: {}
+  authorships: { multivalued: true, inlined_as_list: true, range: Authorship }
+  year: { range: integer, slot_uri: fabio:hasPublicationYear }
+  month: {}
+  journal: { slot_uri: bibo:Journal }
+  book_title: {}
+  publisher_name: { slot_uri: dcterms:publisher }
+  editor_text: {}
+  school: {}
+  institution_name: {}
+  organization: {}
+  address: { slot_uri: schema:address }
+  how_published: {}
+  note: {}
+  publication_date: { slot_uri: prism:publicationDate, range: date }
+  volume: { slot_uri: bibo:volume }
+  issue: { slot_uri: bibo:issue }
+  pages: { slot_uri: bibo:pages }
+  first_page: { slot_uri: prism:startingPage }
+  last_page: { slot_uri: prism:endingPage }
+  edition: { slot_uri: bibo:edition }
+  series: {}
+  chapter: {}
+  page_total: { range: integer }
+  report_number: { slot_uri: bibo:number }
+  entry_type_field: {}
+  eprint: {}
+  eprint_type: {}
+  abstract_text: { slot_uri: dcterms:abstract }
+  language: { slot_uri: dcterms:language }
+  url: { slot_uri: schema:url, range: uri }
+  url_date: {}
+  version: { slot_uri: schema:version, range: WorkVersion }
+  preprint_server: {}
+
+  # ---- Typing enums --------------------------------------------------------
+  bibtex_entry_type: { range: BibtexEntryType }
+  openalex_work_type: { range: OpenAlexWorkType }
+  oa_status: { range: OpenAccessStatus }
+  online_content_type: { range: OnlineContentType }
+
+  # ---- Flags ---------------------------------------------------------------
+  is_retracted: { range: boolean }
+  is_paratext: { range: boolean }
+  is_oa: { range: boolean }
+
+  # ---- Metrics and citations -----------------------------------------------
+  cited_by_count: { range: integer }
+  works_count: { range: integer }
+  h_index: { range: integer }
+  i10_index: { range: integer }
+  counts_by_year: { multivalued: true, inlined_as_list: true, range: YearlyCount }
+  two_yr_mean_citedness: { range: float }
+
+  # ---- Timestamps ----------------------------------------------------------
+  created_date: { slot_uri: dcterms:created, range: datetime }
+  updated_date: { slot_uri: dcterms:modified, range: datetime }
+  date_published: { slot_uri: schema:datePublished, range: date }
+  date_modified: { slot_uri: schema:dateModified, range: date }
+
+  # ---- License and provenance -----------------------------------------------
+  license_ref: { range: License }
+  license_spdx_id: {}
+  license_url: { range: uri }
+  data_source: {}
+  confidence_score: { range: float }
+  extraction_method: {}
+  was_derived_from: { slot_uri: prov:wasDerivedFrom, range: uriorcurie }
+  was_generated_by: { slot_uri: prov:wasGeneratedBy }
+
+  # ---- Related entities references ------------------------------------------
+  source_ref: { range: Source }
+  locations: { multivalued: true, inlined_as_list: true, range: Location }
+  cites: { multivalued: true, range: BibliographicResource, slot_uri: cito:cites }
+  referenced_works: { multivalued: true, range: BibliographicResource }
+  related_works: { multivalued: true, range: BibliographicResource }
+  grants: { multivalued: true, range: Award }
+  associated_papers: { multivalued: true, range: BibliographicResource }
+  associated_code_repos: { multivalued: true, range: CodeRepository }
+  associated_datasets: { multivalued: true, range: Dataset }
+  associated_models: { multivalued: true, range: MLModel }
+  benchmark_results: { multivalued: true, inlined_as_list: true, range: BenchmarkResult }
+  training_datasets: { multivalued: true, range: Dataset }
+  evaluation_datasets: { multivalued: true, range: Dataset }
+  related_trials: { multivalued: true, range: ClinicalTrial }
+  studied_entities: { multivalued: true, range: BiologicalEntity }
+  protocols: { multivalued: true }
+  specimen_types: { multivalued: true }
+
+  # ---- Topics and keywords --------------------------------------------------
+  topics: { multivalued: true, range: Topic }
+  keywords: { multivalued: true, slot_uri: schema:keywords }
+
+  # ---- Online content specific ----------------------------------------------
+  platform_name: {}
+  author_username: {}
+  reading_time_minutes: { range: integer }
+  claps_or_likes: { range: integer }
+  comment_count: { range: integer }
+  notebook_runtime: {}
+  notebook_kernel: {}
+  duration_seconds: { range: integer }
+  transcript_url: { range: uri }
+
+  # ---- Paper subtype slots --------------------------------------------------
+  compute_used: {}
+
+  # ---- Images and links -----------------------------------------------------
+  image_url: { slot_uri: schema:image, range: uri }
+  image_thumbnail_url: { range: uri }
+  drive_pdf_url: { range: uri }
+
+  # ---- Additional identifiers -----------------------------------------------
+  patent_number: {}
+  patent_holder: {}
+  filing_date: { range: date }
+  grant_date: { range: date }
+
+  # ---- Open Access info -----------------------------------------------------
+  open_access: { range: OpenAccessInfo, inlined: true }
+  oa_url: { range: uri }
+
+  # ---- SemOpenAlex slots ---------------------------------------------------
+  semopenalex_uri: { range: uri, slot_uri: schema:sameAs }
+  mag_id: { range: integer }
+  indexed_in: { multivalued: true }
+  crossref_type: {}
+  countries_distinct_count: { range: integer }
+  institutions_distinct_count: { range: integer }
+  has_sustainable_development_goal: { multivalued: true }
+
+  # ---- UMLS slots -----------------------------------------------------------
+  cui: { pattern: "^C[0-9]{7}$" }
+  umls_semantic_types: { multivalued: true }
+  umls_semantic_group: { range: UMLSSemanticGroup }
+  umls_preferred_term: {}
+  umls_source_vocabs: { multivalued: true }
+
+  # ---- Dates ----------------------------------------------------------------
+  filing_date: { range: date }
+  grant_date: { range: date }
+
+
+# =============================================================================
+# ASSOCIATION CLASSES
+# =============================================================================
+
+  Authorship:
+    description: Author-Work association with position and affiliation.
+    slots:
+      - person_ref
+      - author_position
+      - is_corresponding
+      - institution_refs
+      - raw_affiliation_string
+
+  Location:
+    description: Where a work is hosted (OpenAlex Location).
+    slots:
+      - landing_page_url
+      - pdf_url
+      - location_source
+      - work_version
+      - location_license
+      - is_oa
+
+  OpenAccessInfo:
+    slots: [is_oa, oa_status, oa_url]
+
+  YearlyCount:
+    slots: [count_year, count_works, count_citations]
+
+  Award:
+    is_a: ScholarlyEntity
+    class_uri: schema:MonetaryGrant
+    mixins: [HasTimestamps]
+    slots:
+      - funder_ref
+      - funder_award_id
+      - award_amount_usd
+      - currency
+      - awardee_ref
+      - investigators
+      - funded_works
+      - award_status
+      - start_date
+      - end_date
+
+  Source:
+    is_a: ScholarlyEntity
+    class_uri: fabio:PeriodicalPublicationVenue
+    mixins: [HasMetrics, HasTopics, HasImages]
+    slots:
+      - issn_l
+      - issn_list
+      - source_type
+      - host_organization
+      - is_oa
+      - is_in_doaj
+      - apc_usd
+      - apc_prices
+      - homepage_url
+      - country_code
+
+  Topic:
+    is_a: NamedThing
+    mixins: [HasMetrics, HasTimestamps, HasUMLS, HasSemOpenAlex]
+    slots:
+      - hierarchy_level_type
+      - parent_domain
+      - parent_field
+      - parent_subfield
+      - skos_broader
+      - skos_related
+      - skos_pref_label
+      - skos_in_scheme
+      - wikidata_qid
+      - concept_score

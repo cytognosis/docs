@@ -1,0 +1,30 @@
+Column Name,Column Type,Description,Is Required,Default Value
+Relationship ID,text,Unique identifier for this relationship,true,
+Paper DOI,text,DOI of the paper in the relationship,true,
+Dataset DOI,text,DOI of the dataset in the relationship,true,
+Relationship Type,select,Type: Creates, Uses, Uses for Training, Uses for Testing, Uses for Validation, Uses as Benchmark, Augments, Curates,true,Uses
+Dataset Split Used,text,Specific split or version used (train, test, validation),false,
+Is Primary,checkbox,Whether this is the primary dataset used in paper,false,true
+Evidence Text,long_text,Text snippet or quote supporting the relationship,false,
+Evidence URL,link,URL to page where relationship is documented,false,
+Confidence Score,number,Confidence of relationship detection (0-1),false,
+Extraction Method,text,How relationship was identified (manual, automated, etc),false,
+Data Source,text,Source of relationship information,false,
+Paper Title,text,Title of the paper (for reference),false,
+Dataset Name,text,Name of the dataset (for reference),false,
+Paper Year,number,Publication year of paper,false,
+Dataset Release Year,number,Year dataset was released,false,
+Paper Authors,text,Authors of the paper,false,
+Dataset Curators,text,Dataset creators/curators,false,
+Dataset Size,text,Size or scale of dataset,false,
+Records Used,number,Approximate records used from dataset,false,
+Metric Reported,text,Performance metric or result using this dataset,false,
+Metric Value,text,Numeric value of the metric,false,
+Data Modality,text,Data type (text, images, audio, tabular, etc),false,
+Domain,text,Research domain or application area,false,
+Relationship Strength,select,Strength of relationship: Explicit, Implicit, Inferred,false,Explicit
+Impact,text,Impact assessment (high, medium, low impact on results),false,Medium
+Reproducibility,text,Dataset availability for reproducibility (available, restricted, unavailable),false,Available
+Notes,long_text,Internal notes and commentary,false,
+Created Date,datetime,When record was created,false,
+Updated Date,datetime,When record was last updated,false,
