@@ -31,9 +31,17 @@
 
 | Engine | Weighted Score | Status |
 |---|---|---|
-| sqlite | 3.609 | ✅ Winner |
-| falkordb | 5.344 | ✅ Strong second |
+| sqlite | 3.609 | ✅ Winner at 10k |
+| falkordb | 5.344 | ✅ Strong second at 10k |
 | surrealdb_tuned | 8.384 | ✅ Functional, improved, but third |
+
+### 100k RocksDB + HNSW, SurrealDB v3.1.5
+
+| Engine | Weighted Score | Status |
+|---|---|---|
+| falkordb | 5.369 | ✅ Winner at 100k |
+| sqlite | 6.794 | ✅ Second (vector search degrades without HNSW) |
+| surrealdb_tuned | 9.478 | ✅ Third (task_lookup 325ms is critical bottleneck) |
 
 ### Key Latency Comparison (p50 ms, 10k)
 

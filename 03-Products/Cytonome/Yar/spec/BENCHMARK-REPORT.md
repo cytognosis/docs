@@ -96,15 +96,41 @@ The SurrealDB v3.1.5 retest confirms the prior PATCH10 finding: **SQLite wins at
 
 ## 4. 100k Results — RocksDB + HNSW
 
-> **Status:** 100k benchmark is running as of report creation. Results will be appended.
+**Weighted decision scores** (lower is better):
 
-**Reference from PATCH10 (v3.1.3):**
+| Engine | Score | Coverage |
+|---|---|---|
+| **falkordb** | **5.369** | 1.20 |
+| **sqlite** | **6.794** | 1.20 |
+| **surrealdb_tuned** | **9.478** | 1.20 |
 
-| Engine | Score |
-|---|---|
-| falkordb | 4.262 |
-| sqlite | 5.495 |
-| surrealdb_tuned | 9.375 |
+**p50 latency (ms):**
+
+| Operation | SQLite | FalkorDB | SurrealDB v3.1.5 |
+|---|---|---|---|
+| build_import | 15,361 | 605,324 | 303,321 |
+| cold_open | 103.97 | 8.93 | 353.67 |
+| depth2_context | 0.03 | 0.47 | 2.13 |
+| depth3_context | 0.03 | 0.48 | 2.37 |
+| hybrid_rrf | 24.96 | 2.53 | 23.56 |
+| incremental_write | 0.21 | 3.42 | 5.01 |
+| lexical_search | 1.09 | 0.33 | 20.89 |
+| memory_packet | 23.34 | 1.36 | 6.63 |
+| person_memory | 12.38 | 0.53 | 7.92 |
+| project_decisions | 21.93 | 1.21 | 0.89 |
+| reverse_refs | 0.01 | 0.29 | 0.30 |
+| task_lookup | 11.41 | 8.12 | 325.42 |
+| vector_search | 23.57 | 2.38 | 5.10 |
+
+**Key 100k observations:**
+
+1. **FalkorDB wins at 100k** — graph operations scale sub-linearly; lexical search stays sub-millisecond.
+2. **SQLite degrades** — vector_search hits 23.6ms (brute-force vec0); hybrid_rrf escalates to 25ms; cold_open jumps to 104ms.
+3. **SurrealDB task_lookup explodes** — 325ms at 100k (vs 38ms at 10k; 8.6x degradation). Confirms RC-4.
+4. **SurrealDB memory_packet improves relative to SQLite** — 6.6ms vs 23.3ms. SurrealDB's vector search (5.1ms) beats SQLite's (23.6ms) at 100k.
+5. **SurrealDB cold_open** — 354ms at 100k. Network/startup overhead scales with DB size.
+
+**Validation:** All 3102 measurements per engine completed with 0 failures.
 
 ---
 
@@ -138,8 +164,5 @@ The `surrealdb_tuned` adapter on v3.1.5 confirmed:
 ## Raw Output Locations
 
 - 10k results: `db_benchmark/results_v315_10k_rocks_hnsw/`
-  - `REPORT.md` — auto-generated report
-  - `summary.csv` — per-engine per-operation metrics
-  - `decision_score.csv` — weighted scores
-- 100k results: `db_benchmark/results_v315_100k_rocks_hnsw/` (pending)
+- 100k results: `db_benchmark/results_v315_100k_rocks_hnsw/`
 - Reference results: `reference_results/surreal_tuned_patch10_final_comparison.md`

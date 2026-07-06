@@ -121,12 +121,12 @@ Both use the PATCH10 tuned configuration: SCHEMAFULL schema, FTS indexes, vector
 
 **Weighted decision scores:**
 
-| Engine | 10k score (v3.1.3) | 10k score (v3.1.5) | 100k score (v3.1.3) | Status |
-|---|---|---|---|---|
-| SQLite + FTS5 + sqlite-vec | 3.05 | 3.61 | 5.49 | Measured, MVP confirmed |
-| FalkorDB | 5.53 | 5.34 | 4.26 | Measured, server projection confirmed |
-| SurrealDB (tuned) | 8.35 | 8.38 | 9.37 | Measured, retest COMPLETED (O-3 closed) |
-| LadybugDB | -- | -- | -- | Not benchmarked; candidate pending benchmark |
+| Engine | 10k score (v3.1.3) | 10k score (v3.1.5) | 100k score (v3.1.3) | 100k score (v3.1.5) | Status |
+|---|---|---|---|---|---|
+| SQLite + FTS5 + sqlite-vec | 3.05 | 3.61 | 5.49 | 6.79 | Measured, MVP confirmed |
+| FalkorDB | 5.53 | 5.34 | 4.26 | 5.37 | Measured, server projection confirmed |
+| SurrealDB (tuned) | 8.35 | 8.38 | 9.37 | 9.48 | Measured, retest COMPLETED (O-3 closed) |
+| LadybugDB | -- | -- | -- | -- | Not benchmarked; candidate pending benchmark |
 
 **v3.1.5 p50 latency comparison, 10k RocksDB + HNSW (ms):**
 

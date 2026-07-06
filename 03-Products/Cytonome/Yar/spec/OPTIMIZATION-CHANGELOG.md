@@ -114,17 +114,32 @@ All validation gates passed:
 
 ---
 
-## 100k Results
+## 100k Results (v3.1.5)
 
-> **Note:** 100k benchmark is running as of document creation. Results will be appended when complete.
+**Weighted decision scores** (lower is better):
 
-100k reference from PATCH10 (v3.1.3):
+| Engine | Score (v3.1.5) | Score (v3.1.3 ref) |
+|---|---|---|
+| **falkordb** | **5.369** | 4.262 |
+| **sqlite** | **6.794** | 5.495 |
+| **surrealdb_tuned** | **9.478** | 9.375 |
 
-| Engine | Score |
-|---|---|
-| falkordb | 4.262 |
-| sqlite | 5.495 |
-| surrealdb_tuned | 9.375 |
+**p50 latency comparison (ms):**
+
+| Operation | FalkorDB | SQLite | SurrealDB v3.1.5 |
+|---|---|---|---|
+| lexical_search | 0.33 | 1.09 | 20.89 |
+| hybrid_rrf | 2.53 | 24.96 | 23.56 |
+| vector_search | 2.38 | 23.57 | 5.10 |
+| memory_packet | 1.36 | 23.34 | 6.63 |
+| task_lookup | 8.12 | 11.41 | 325.42 |
+| depth2_context | 0.47 | 0.03 | 2.13 |
+| depth3_context | 0.48 | 0.03 | 2.37 |
+| project_decisions | 1.21 | 21.93 | 0.89 |
+| incremental_write | 3.42 | 0.21 | 5.01 |
+| cold_open | 8.93 | 103.97 | 353.67 |
+
+**Key observation:** At 100k, SurrealDB's vector_search (5.1ms) is **4.6x faster** than SQLite's (23.6ms) due to HNSW index vs brute-force. SurrealDB's task_lookup (325ms) is **40x slower** than FalkorDB's (8.1ms) due to the composite index limitation (RC-4).
 
 ---
 
