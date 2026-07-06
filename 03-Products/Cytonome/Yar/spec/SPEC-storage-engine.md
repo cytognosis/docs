@@ -1,19 +1,19 @@
 ---
 spec_id: SPEC-storage-engine
-version: "0.1"
-status: draft
+version: "0.2"
+status: active
 domain: storage-sync
 owner: Shahin Mohammadi
 created: 2026-06-21
-last_updated: 2026-06-22
+last_updated: 2026-07-06
 depends_on: []
 implements: []
 ---
 
 > **Related:** benchmark digest at `Yar/consolidation_2026-06-21/_storage/BENCHMARK_DIGEST.md`; local-runtime decision at `04-Engineering/yar/research/yar-substrate-decision.md`; [SurrealDB tuning guide](./SurrealDB-tuning-and-graphrag-guide.md)
 
-> **Status**: Draft
-> **Date**: 2026-06-22
+> **Status**: Active (v0.2 — updated after SurrealDB v3.1.5 retest)
+> **Date**: 2026-07-06
 > **Author**: Cytognosis Foundation
 > **Audience**: engineers and reviewers
 > **Tags**: `yar`, `storage`, `graph-db`, `surrealdb`, `sqlite`, `ladybugdb`, `crdt`, `local-first`, `hipaa`
@@ -22,7 +22,7 @@ implements: []
 
 # SPEC: Yar Storage Engine
 
-**BLUF:** The CRDT op-log is the single source of truth. The L4 graph engine is a derived, swappable index rebuilt by replaying it. Which engine fills L4 is open. SQLite and SurrealDB are the two measured candidates (PATCH10 benchmark); LadybugDB is a candidate pending benchmark. Do not treat this spec as a commitment to any engine.
+**BLUF:** The CRDT op-log is the single source of truth. The L4 graph engine is a derived, swappable index rebuilt by replaying it. **SQLite + FTS5 + sqlite-vec is the decided MVP engine for phone and laptop**, confirmed by the SurrealDB v3.1.5 retest (2026-07-06). SurrealDB is a priority GraphRAG projection candidate, not rejected, but not MVP default. See `STORAGE-ENGINE-RECOMMENDATION.md` for the full decision and `SURREALDB-ROOTCAUSE.md` for root cause analysis.
 
 ---
 
@@ -113,35 +113,39 @@ Six criteria are make-or-break. Any engine that fails one is disqualified as the
 
 ### 3.6 Benchmark Status
 
-The canonical benchmark is the PATCH10 run from `yar_supervisor_reproducible_benchmark_package/reference_results/surreal_tuned_patch10_final_comparison.md`. PATCH10 is the first valid SurrealDB tuned run: SCHEMAFULL schema, FTS indexes, vector indexes, and all measured operations confirmed passing. The weighted score is lower-is-better.
+Two canonical benchmarks exist:
+1. **PATCH10 (v3.1.3):** `yar_supervisor_reproducible_benchmark_package/reference_results/surreal_tuned_patch10_final_comparison.md`
+2. **v3.1.5 retest (2026-07-06):** `results_v315_10k_rocks_hnsw/` — fresh run on Linux, Docker 29.3.1, Python 3.14.4
 
-**PATCH10 weighted decision scores:**
+Both use the PATCH10 tuned configuration: SCHEMAFULL schema, FTS indexes, vector indexes, and all measured operations confirmed passing. The weighted score is lower-is-better.
 
-| Engine | 10k score | 100k score | Status |
-|---|---|---|---|
-| SQLite + FTS5 + sqlite-vec | 3.05 | 5.49 | Measured (PATCH10) |
-| FalkorDB | 5.53 | 4.26 | Measured (PATCH10) |
-| SurrealDB (tuned) | 8.35 | 9.37 | Measured (PATCH10); retest pending (see O-3) |
-| LadybugDB | -- | -- | Not benchmarked; candidate pending benchmark |
+**Weighted decision scores:**
 
-**PATCH10 p50 latency comparison, 10k RocksDB + HNSW (ms):**
+| Engine | 10k score (v3.1.3) | 10k score (v3.1.5) | 100k score (v3.1.3) | Status |
+|---|---|---|---|---|
+| SQLite + FTS5 + sqlite-vec | 3.05 | 3.61 | 5.49 | Measured, MVP confirmed |
+| FalkorDB | 5.53 | 5.34 | 4.26 | Measured, server projection confirmed |
+| SurrealDB (tuned) | 8.35 | 8.38 | 9.37 | Measured, retest COMPLETED (O-3 closed) |
+| LadybugDB | -- | -- | -- | Not benchmarked; candidate pending benchmark |
 
-| Operation | FalkorDB | SQLite | SurrealDB tuned |
-|---|---|---|---|
-| lexical_search | 0.349 | 0.132 | 3.555 |
-| hybrid_rrf | 3.244 | 2.289 | 5.923 |
-| vector_search | 2.894 | 2.229 | 2.722 |
-| memory_packet | 2.134 | 2.135 | 8.374 |
-| task_lookup | 0.573 | 0.579 | 46.003 |
-| depth2_context | 0.453 | 0.021 | 2.584 |
-| depth3_context | 0.492 | 0.025 | 4.458 |
-| project_decisions | 0.435 | 5.102 | 0.732 |
-| incremental_write | 4.014 | 0.268 | 6.259 |
-| cold_open | 0.783 | 12.432 | 63.654 |
+**v3.1.5 p50 latency comparison, 10k RocksDB + HNSW (ms):**
 
-**These numbers are data, not a decision.** SurrealDB's FTS/hybrid results improved dramatically after tuning (lexical search: 214 ms untuned to 3.6 ms tuned). However, `task_lookup` (~46 ms at 10k, ~446 ms at 100k) and `cold_open` remain materially slower than SQLite and FalkorDB. **The SurrealDB retest (O-3) is required before any decision that would exclude it.** The benchmark package also identifies next recommended tests: embedded Rust SurrealDB (not Docker/WebSocket), ID lookup optimization, and a real GraphRAG query combining FTS + KNN + graph expansion.
+| Operation | FalkorDB | SQLite | SurrealDB v3.1.5 | SurrealDB v3.1.3 |
+|---|---|---|---|---|
+| lexical_search | 0.204 | 0.194 | 4.309 | 3.555 |
+| hybrid_rrf | 2.263 | 2.562 | 4.680 | 5.923 |
+| vector_search | 2.085 | 2.420 | 2.868 | 2.722 |
+| memory_packet | 1.043 | 2.335 | 4.835 | 8.374 |
+| task_lookup | 0.482 | 1.132 | 37.967 | 46.003 |
+| depth2_context | 0.288 | 0.022 | 2.302 | 2.584 |
+| depth3_context | 0.315 | 0.025 | 2.592 | 4.458 |
+| project_decisions | 0.374 | 6.251 | 0.451 | 0.732 |
+| incremental_write | 2.628 | 0.216 | 4.846 | 6.259 |
+| cold_open | 1.073 | 14.200 | 36.406 | 63.654 |
 
-PATCH10 100k latency table is in the source file at `yar_supervisor_reproducible_benchmark_package/reference_results/surreal_tuned_patch10_final_comparison.md`.
+**SurrealDB v3.1.5 shows improvements** in 8 of 10 operations vs v3.1.3, with cold_open (-43%), memory_packet (-42%), and depth3_context (-42%) showing the largest gains. However, `task_lookup` (~38 ms at 10k) and `cold_open` remain materially slower than SQLite and FalkorDB. The v3.1.5 retest (O-3) is now **completed**; the ranking is unchanged. See `SURREALDB-ROOTCAUSE.md` for the six ranked root causes.
+
+Next recommended tests: embedded Rust SurrealDB (not Docker/WebSocket), RELATE-based graph model, and a real GraphRAG query combining FTS + KNN + graph expansion.
 
 ### 3.8 Ruled Out
 
@@ -192,9 +196,9 @@ Under the **recommended interpretation** (CRDT log is the single source; engine 
 
 | # | Decision | Current leaning | Blocker or gate |
 |---|---|---|---|
-| **O-1** | L4 engine: SurrealDB vs SQLite stack (vs LadybugDB if benchmarked) | SurrealDB is the preferred multi-model candidate; SQLite stack is the safest fallback (benchmark-validated). LadybugDB is excluded from this decision until a PATCH10-comparable benchmark run exists. | SurrealDB: multi-week iOS + Android soak test required; benchmark retest (O-3) required. LadybugDB: fork-ownership (O-2) and benchmark both prerequisites. |
+| **O-1** | L4 engine: SurrealDB vs SQLite stack (vs LadybugDB if benchmarked) | **SQLite stack decided for MVP.** SurrealDB remains the priority GraphRAG projection candidate for future evaluation. LadybugDB excluded until benchmarked. | SurrealDB: embedded Rust mode benchmark required. LadybugDB: fork-ownership (O-2) and benchmark both prerequisites. |
 | **O-2** | LadybugDB fork ownership | No current leaning; team must decide | Android binding is DIY; Kuzu upstream archived. Deciding "no" removes LadybugDB from consideration entirely. |
-| **O-3** | SurrealDB benchmark retest | Retest with correct FTS index, persistent WebSocket, SurrealKV backend, schemafull mode, fresh volumes per dataset size | Ali reruns before any decision that excludes SurrealDB. See `STORAGE_BENCHMARK_TRACKER.md §FLAG` |
+| **O-3** | SurrealDB benchmark retest | **COMPLETED 2026-07-06.** v3.1.5 retest done with correct FTS, SCHEMAFULL, HNSW validation. Result confirms prior ranking: SQLite > FalkorDB > SurrealDB. See `OPTIMIZATION-CHANGELOG.md`. | ~~Ali reruns before any decision that excludes SurrealDB.~~ Done. |
 | **O-4** | SurrealDB BSL license for commercial PBC | Confirm BSL embed terms allow commercial PBC use | Legal check not yet done; required before launch if SurrealDB is adopted |
 | **O-5** | Encrypted blob store at L3 | iroh-blobs (if Loro+Iroh sync path) or any-sync-filenode (if any-sync path) | Follows sync protocol decision in `SPEC-sync-protocol.md` |
 
