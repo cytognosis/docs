@@ -221,10 +221,10 @@ The strategy above is implemented through these documents in this directory:
 - [`sssom-cross-ontology-mapping.md`](sssom-cross-ontology-mapping.md) — UMLS / MONDO / HP / CL / CHEBI / NCBITaxon / SNOMED CT mapping stack.
 - [`monday-resource-boards.md`](monday-resource-boards.md) — Resources workspace as the human-resolution KG until Neo4j is fully online.
 - [`linkml-kg-playbook.md`](linkml-kg-playbook.md) — pointer to the 22-chapter hands-on playbook.
-- [`compliance/hipaa-compliance-framework.md`](compliance/hipaa-compliance-framework.md) and the [PHI checklist](compliance/phi-security-controls-checklist.md) — HIPAA program.
-- [`policies/data-governance-policy.md`](policies/data-governance-policy.md), [`policies/controlled-data-access.md`](policies/controlled-data-access.md), [`policies/nih-nda-access-procedures.md`](policies/nih-nda-access-procedures.md) — governance and acquisition SOPs.
+- [`compliance/hipaa-compliance-framework.md`](../../../06-Operations/data-strategy/compliance/hipaa-compliance-framework.md) and the [PHI checklist](../../../06-Operations/data-strategy/compliance/phi-security-controls-checklist.md) — HIPAA program.
+- [`policies/data-governance-policy.md`](../../../06-Operations/data-strategy/policies/data-governance-policy.md), [`policies/controlled-data-access.md`](../../../06-Operations/data-strategy/policies/controlled-data-access.md), [`policies/nih-nda-access-procedures.md`](../../../06-Operations/data-strategy/policies/nih-nda-access-procedures.md) — governance and acquisition SOPs.
 - [`schemas/multimodal-health-data-schema.md`](schemas/multimodal-health-data-schema.md) — JSON schemas for the multimodal patient record.
-- [`templates/data-use-agreement-template.md`](templates/data-use-agreement-template.md) — outbound DUA template.
+- [`templates/data-use-agreement-template.md`](../../../_templates/data-use-agreement-template.md) — outbound DUA template.
 
 ---
 

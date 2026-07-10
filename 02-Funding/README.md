@@ -27,8 +27,8 @@ This folder is the single documentation hub for all grant-related infrastructure
 
 | Asset | Path | Status |
 |---|---|---|
-| Manifest (v1.2) | [manifest.yaml](../../src/cytos/scholarly/grants/schemas/manifest.yaml) | ✅ Authoritative |
-| Groups & Presets | [groups.yaml](../../src/cytos/scholarly/grants/schemas/groups.yaml) | ✅ Complete |
-| Opportunity Mappings | [opportunity_mapping.yaml](../../src/cytos/scholarly/grants/schemas/opportunity_mapping.yaml) | ✅ 71 opportunities mapped |
-| Funder Profiles | [funders/](../../src/cytos/scholarly/grants/schemas/funders/) | ⚠️ 17 files / ~25 needed |
+| Manifest (v1.2) | [manifest.yaml](reusable-blocks/slot-library/manifest.yaml) | ✅ Authoritative |
+| Groups & Presets | [groups.yaml](reusable-blocks/slot-library/groups.yaml) | ✅ Complete |
+| Opportunity Mappings | [opportunity_mapping.yaml](reusable-blocks/slot-library/opportunity_mapping.yaml) | ✅ 71 opportunities mapped |
+| Funder Profiles | [funders/](reusable-blocks/slot-library/funders) | ⚠️ 17 files / ~25 needed |
 | Slot Files | [slots/](../../src/cytos/scholarly/grants/schemas/slots/) | ⚠️ 27 files; 4 authored, 23 stubs |

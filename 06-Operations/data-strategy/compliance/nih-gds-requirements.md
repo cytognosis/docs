@@ -81,7 +81,7 @@ NIH genomic data is stored or processed.
 - Must report to NIH data access committee within the timeframes specified in the DUC.
 - **Cytognosis implementation**: [incident-response-runbook.md](incident-response-runbook.md).
   Reporting contacts per DUC are tracked in the master dataset tracker
-  ([../../programs/neuroverse/datasets-cohorts.md](../../programs/neuroverse/datasets-cohorts.md)).
+  ([../../programs/neuroverse/datasets-cohorts.md](../../../05-Research/neuroverse/datasets-cohorts.md)).
 
 ### Requirement 8: Personnel Obligations
 - Every Approved User must be **named on the DUC** before accessing data.
@@ -171,7 +171,7 @@ Before submitting any new NDA/dbGaP/Synapse DUC:
 - [ ] Confirm DUC-specific IAM group exists (see [duc-iam-pattern.md](duc-iam-pattern.md))
 - [ ] Confirm DUC-specific bucket exists with CMEK pending or active
 - [ ] Complete Privacy Impact Assessment ([pia-template.md](pia-template.md))
-- [ ] Register DUC in the master dataset tracker ([../../programs/neuroverse/datasets-cohorts.md](../../programs/neuroverse/datasets-cohorts.md))
+- [ ] Register DUC in the master dataset tracker ([../../programs/neuroverse/datasets-cohorts.md](../../../05-Research/neuroverse/datasets-cohorts.md))
 
 ---
 

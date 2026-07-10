@@ -137,7 +137,7 @@ Use it as follows:
 ## Cloud and Infrastructure Security
 
 ### Google Cloud Platform (GCP) Controls
-- [x] **Project boundary**: PHI workloads run in `cytognosis-phi-prod` (never in `cytognosis-infrastructure` or `cytognosis-data`). See [`../TECHNICAL_DATA_INFRASTRUCTURE.md`](../TECHNICAL_DATA_INFRASTRUCTURE.md).
+- [x] **Project boundary**: PHI workloads run in `cytognosis-phi-prod` (never in `cytognosis-infrastructure` or `cytognosis-data`). See [`../TECHNICAL_DATA_INFRASTRUCTURE.md`](../../../04-Engineering/infrastructure/data-strategy/TECHNICAL_DATA_INFRASTRUCTURE.md).
 - [ ] **VPC Service Controls**: perimeter active around `cytognosis-phi-prod`; egress rules approved by DSO. — ⏳ Deferred: trigger = first external PHI
 - [x] **IAM roles** reviewed and minimal; access granted via Workspace Groups, never to individual user accounts. Default compute SAs disabled.
 - [x] **CMEK**: Customer-Managed Encryption Keys via Cloud KMS for `cytognosis-phi-core` and `cytognosis-phi-collab` buckets. — ✅ **Done 2026-06-14**: `phi-keyring`/`phi-bucket-key` (us-central1); verified via `gcloud` 2026-06-19

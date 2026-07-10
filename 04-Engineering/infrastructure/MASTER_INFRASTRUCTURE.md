@@ -82,6 +82,6 @@ Six-principle reproducibility framework. Schema strategy, artifact VFS/SWHID, en
 ---
 
 > [!NOTE]
-> **HIPAA compliance dashboard**: [`data-strategy/compliance/HIPAA-STATUS.md`](data-strategy/compliance/HIPAA-STATUS.md)
+> **HIPAA compliance dashboard**: [`data-strategy/compliance/HIPAA-STATUS.md`](../../06-Operations/data-strategy/compliance/HIPAA-STATUS.md)
 >
-> **NIH GDS 2025 requirements**: [`data-strategy/compliance/nih-gds-requirements.md`](data-strategy/compliance/nih-gds-requirements.md)
+> **NIH GDS 2025 requirements**: [`data-strategy/compliance/nih-gds-requirements.md`](../../06-Operations/data-strategy/compliance/nih-gds-requirements.md)

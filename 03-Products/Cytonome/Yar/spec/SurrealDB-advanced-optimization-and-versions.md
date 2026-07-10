@@ -162,7 +162,7 @@ class SurrealAdapter:
         return self._loop.run_until_complete(self.db.query(query, params or {}))
 ```
 
-**Do not** create a new `AsyncSurreal()` per query. Every instantiation triggers a new WebSocket handshake (40-400 ms overhead per call). Source: [Code Audit Issue 1](../consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md).
+**Do not** create a new `AsyncSurreal()` per query. Every instantiation triggers a new WebSocket handshake (40-400 ms overhead per call). Source: [Code Audit Issue 1](../research/SURREALDB_CODE_AUDIT.md).
 
 ### 2.4 Query and Index Tuning
 
@@ -494,25 +494,25 @@ Ordered by impact, highest first. Items marked [AUDIT] are fixes from the code a
 
 **Before the benchmark rerun:**
 
-1. **[AUDIT, CRITICAL] Switch to `AsyncSurreal` (SDK 2.0.0).** Replace `from surrealdb import Surreal` with `from surrealdb import AsyncSurreal`. Rewrite `SurrealAdapter` and `SurrealTunedAdapter` to use `asyncio.run()` or a single persistent event loop. Expected drop: task_lookup 46-446 ms → 1-5 ms. This is the single largest latency reduction available. Source: [Code Audit Issue 1](../consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md).
+1. **[AUDIT, CRITICAL] Switch to `AsyncSurreal` (SDK 2.0.0).** Replace `from surrealdb import Surreal` with `from surrealdb import AsyncSurreal`. Rewrite `SurrealAdapter` and `SurrealTunedAdapter` to use `asyncio.run()` or a single persistent event loop. Expected drop: task_lookup 46-446 ms → 1-5 ms. This is the single largest latency reduction available. Source: [Code Audit Issue 1](../research/SURREALDB_CODE_AUDIT.md).
 
-2. **[AUDIT, HIGH] Fix transaction wrapping in `build_import`.** Separate `BEGIN TRANSACTION`, `INSERT INTO node $rows`, and `COMMIT TRANSACTION` into three `_q()` calls (not one multi-statement string). Expected: build_import drops from 24k ms back toward the 8k ms untuned baseline and likely better. Source: [Code Audit Issue 2](../consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md).
+2. **[AUDIT, HIGH] Fix transaction wrapping in `build_import`.** Separate `BEGIN TRANSACTION`, `INSERT INTO node $rows`, and `COMMIT TRANSACTION` into three `_q()` calls (not one multi-statement string). Expected: build_import drops from 24k ms back toward the 8k ms untuned baseline and likely better. Source: [Code Audit Issue 2](../research/SURREALDB_CODE_AUDIT.md).
 
-3. **[AUDIT, HIGH] Add SurrealKV comparable runs.** Change `docker-compose.yml` default from `rocksdb://` to `surrealkv://` (with `sync=every` for fair comparison) and run the full 10k and 100k benchmark against all three engines. The DISKANN-only SurrealKV probe scored 1.20 but is not comparable because it ran without SQLite and FalkorDB. Source: [Code Audit Issue 3](../consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md).
+3. **[AUDIT, HIGH] Add SurrealKV comparable runs.** Change `docker-compose.yml` default from `rocksdb://` to `surrealkv://` (with `sync=every` for fair comparison) and run the full 10k and 100k benchmark against all three engines. The DISKANN-only SurrealKV probe scored 1.20 but is not comparable because it ran without SQLite and FalkorDB. Source: [Code Audit Issue 3](../research/SURREALDB_CODE_AUDIT.md).
 
 4. **[VERSION] Pin to `surrealdb/surrealdb:v3.1.5`.** Replaces the benchmark's 3.1.3 pin. Includes cold-start race fix, record-id point-lookup fix, and all 3.1.0 HNSW performance gains. Source: [surrealdb.com/releases](https://surrealdb.com/releases).
 
-5. **[SCHEMA] Move vector index definition to after data import.** Define HNSW/DISKANN after all rows are inserted, then call `REBUILD INDEX`. Eliminates incremental per-row HNSW graph updates during bulk load. Expected: build_import improvement at 100k. Source: [Code Audit Issue 5](../consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md).
+5. **[SCHEMA] Move vector index definition to after data import.** Define HNSW/DISKANN after all rows are inserted, then call `REBUILD INDEX`. Eliminates incremental per-row HNSW graph updates during bulk load. Expected: build_import improvement at 100k. Source: [Code Audit Issue 5](../research/SURREALDB_CODE_AUDIT.md).
 
 6. **[SCHEMA] Add `SCHEMAFULL` and `DEFINE DATABASE STRICT`.** Eliminates per-write type inference overhead. Already in PATCH10 but confirm via `INFO FOR TABLE` output.
 
-7. **[SCHEMA] Add embedding dimension assertion.** Add `ASSERT array::len($value) = {dim}` to the embedding field definition. Prevents silent dimension mismatch that corrupts HNSW at the next dataset size. Source: [Code Audit Issue 7](../consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md).
+7. **[SCHEMA] Add embedding dimension assertion.** Add `ASSERT array::len($value) = {dim}` to the embedding field definition. Prevents silent dimension mismatch that corrupts HNSW at the next dataset size. Source: [Code Audit Issue 7](../research/SURREALDB_CODE_AUDIT.md).
 
-8. **[QUERY] Confirm KNN operator form uses `<|k, ef|>` not `<|k, COSINE|>`.** The `<|k, COSINE|>` form bypasses the HNSW index entirely and runs brute force. The current code uses `<|k, ef|>` correctly but has a silent brute-force fallback on failure. Add explicit logging for the fallback path. Source: [Code Audit Issue 4](../consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md).
+8. **[QUERY] Confirm KNN operator form uses `<|k, ef|>` not `<|k, COSINE|>`.** The `<|k, COSINE|>` form bypasses the HNSW index entirely and runs brute force. The current code uses `<|k, ef|>` correctly but has a silent brute-force fallback on failure. Add explicit logging for the fallback path. Source: [Code Audit Issue 4](../research/SURREALDB_CODE_AUDIT.md).
 
-9. **[INFRA] Remove `|| true` from volume reset.** Silently swallowed volume deletion failures cause stale index data across runs. Verify volume deletion explicitly. Source: [Code Audit Issue 6](../consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md).
+9. **[INFRA] Remove `|| true` from volume reset.** Silently swallowed volume deletion failures cause stale index data across runs. Verify volume deletion explicitly. Source: [Code Audit Issue 6](../research/SURREALDB_CODE_AUDIT.md).
 
-10. **[VERIFY] Stamp version with `SELECT * FROM sys::version()`** at the start of every run. The current code uses `INFO FOR DB` as a workaround from an earlier patch; the `sys::version()` function is confirmed available in 3.1.3+. Source: [Code Audit Issue 8](../consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md).
+10. **[VERIFY] Stamp version with `SELECT * FROM sys::version()`** at the start of every run. The current code uses `INFO FOR DB` as a workaround from an earlier patch; the `sys::version()` function is confirmed available in 3.1.3+. Source: [Code Audit Issue 8](../research/SURREALDB_CODE_AUDIT.md).
 
 11. **[VERIFY] Run `INFO FOR TABLE memo` before first query** and confirm: HNSW/DISKANN index listed, FTS index listed, field types correct. Reject any run where an expected index is missing.
 
@@ -580,7 +580,7 @@ run_case results_rerun_100k_surrealkv "sqlite,falkordb,surrealdb_tuned" 100000 3
 | Dimension assert | yar_bench.py | 1108 | Add `ASSERT array::len($value) = {dataset.dim}` |
 | Version stamp | yar_bench.py | 933-938 | Try `SELECT * FROM sys::version()` first; fall back to `INFO FOR DB` |
 
-Full code for each fix is in [SURREALDB_CODE_AUDIT.md](../consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md).
+Full code for each fix is in [SURREALDB_CODE_AUDIT.md](../research/SURREALDB_CODE_AUDIT.md).
 
 ---
 
@@ -655,6 +655,6 @@ Source: [SurrealDB 2.5 release notes](https://surrealdb.com/releases), [SurrealD
 - [SurrealDB monthly release schedule announcement](https://surrealdb.com/blog/introducing-our-new-monthly-release-schedule)
 - [SurrealDB 3.x benchmarks](https://surrealdb.com/benchmarks)
 - [SurrealDB GraphRAG blog post](https://surrealdb.com/blog/graph-rag-does-not-need-a-graph-database-it-needs-a-database-that-does-everything)
-- [SURREALDB_CODE_AUDIT.md (benchmark code issues 1-8)](../consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md)
-- [BENCHMARK_DIGEST.md (original benchmark results and root-cause analysis)](../consolidation_2026-06-21/_storage/BENCHMARK_DIGEST.md)
+- [SURREALDB_CODE_AUDIT.md (benchmark code issues 1-8)](../research/SURREALDB_CODE_AUDIT.md)
+- [BENCHMARK_DIGEST.md (original benchmark results and root-cause analysis)](../_archive/consolidation_2026-06-21/_storage/BENCHMARK_DIGEST.md)
 - [SurrealDB-tuning-and-graphrag-guide.md (base guide this document extends)](./SurrealDB-tuning-and-graphrag-guide.md)

@@ -391,6 +391,6 @@ The eight-anchor headset target list (DLPFC, dACC, vmPFC/OFC, anterior insula, s
 
 ## See also
 
-- [Master biotype cheatsheet v2](BIOTYPES_CHEATSHEET_v2.md)
-- [Per-disorder biotype files](.) and the [transdiagnostic connectomic synthesis](transdiagnostic-connectomic-synthesis.md)
+- [Master biotype cheatsheet v2](disease-biotypes/diseases/BIOTYPES_CHEATSHEET_v2.md)
+- [Per-disorder biotype files](.) and the [transdiagnostic connectomic synthesis](disease-biotypes/transdiagnostic/transdiagnostic-connectomic-synthesis.md)
 - The interactive HTML version of this guide is at [NEUROANATOMY_GUIDE.html](NEUROANATOMY_GUIDE.html)

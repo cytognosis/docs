@@ -26,9 +26,9 @@ The Yar codebase has been reorganized from a hackathon MVP into a clean, modular
 
 | Phase | Status | Report |
 |---|---|---|
-| 0. Audit & Cleanup | 🟡 5/7 | [01_audit_cleanup.md](01_audit_cleanup.md) |
-| 1. Anytype Submodule | ✅ Complete | [02_anytype_refactor.md](02_anytype_refactor.md) |
-| 2. CAP Consolidation | ✅ Complete | [03_cap_consolidation.md](03_cap_consolidation.md) |
+| 0. Audit & Cleanup | 🟡 5/7 | [01_audit_cleanup.md](../04-Engineering/yar/reports/01_audit_cleanup.md) |
+| 1. Anytype Submodule | ✅ Complete | [02_anytype_refactor.md](../04-Engineering/yar/reports/02_anytype_refactor.md) |
+| 2. CAP Consolidation | ✅ Complete | [03_cap_consolidation.md](../04-Engineering/yar/reports/03_cap_consolidation.md) |
 | 3. Code Quality | 🟡 Partial | Covered in phase reports |
 | 5. Documentation | ✅ Complete | Covered in audit report |
 

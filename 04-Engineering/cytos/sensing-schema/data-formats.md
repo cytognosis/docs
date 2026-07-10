@@ -143,7 +143,7 @@ For tabular non-omics data (a sensor stream, a lab panel time series), the analo
 
 ## 5. Units, types, and value semantics
 
-Already covered in [sensors.md](sensors.md) section 3. The same model applies at the data layer: per-column or per-channel `value_type`, `unit` (UCUM), `range`, `transformation`, `missing_value_encoding`. These belong on the `var` (or column-level) annotation in AnnData, on the SpatialData Table, on the BIDS sidecar JSON, on the FHIR Observation `valueQuantity`, on the OMOP `unit_concept_id`, etc.
+Already covered in [sensors.md](../../../05-Research/neuroverse/schema-survey/sensors.md) section 3. The same model applies at the data layer: per-column or per-channel `value_type`, `unit` (UCUM), `range`, `transformation`, `missing_value_encoding`. These belong on the `var` (or column-level) annotation in AnnData, on the SpatialData Table, on the BIDS sidecar JSON, on the FHIR Observation `valueQuantity`, on the OMOP `unit_concept_id`, etc.
 
 ## Provenance, packaging, and identifiers
 

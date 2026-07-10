@@ -7,7 +7,7 @@
 > [!NOTE]
 > **Implementation status**: This template is complete and ready for use.
 > The first DMP to be written from this template will be for the **Neuroverse program**.
-> See [Neuroverse datasets](../../programs/neuroverse/datasets-cohorts.md) for the cohorts
+> See [Neuroverse datasets](../05-Research/neuroverse/datasets-cohorts.md) for the cohorts
 > that will populate sections 2.1 and 2.3 of the DMP.
 
 ## Instructions
@@ -62,11 +62,11 @@ For each dataset or data category the project will generate or reuse, complete t
 | DS-002 | [e.g. Clinical phenotypes] | [Clinical] | [FHIR R4 JSON, CSV] | [~2 GB] | [Reused from NDA] | [PHI] |
 | DS-003 | [e.g. Trained ML models] | [Model] | [ONNX, PyTorch .pt] | [~50 GB] | [Generated] | [Internal] |
 
-> **Guidance**: Use open, non-proprietary formats where possible (CSV/TSV, JSON, HDF5, Parquet, ONNX). If proprietary formats are required for collection (e.g., vendor instrument output), document the conversion pipeline to an open format. See the [Cytognosis Multimodal Health Data Schema](../schemas/multimodal-health-data-schema.md) for canonical format specifications and the [Tools Catalog — L1 Storage](../../tools/tools-master-catalog.md#l1-storage) for approved storage formats (TileDB, Zarr v3, AnnData/h5ad, Safetensors, GGUF, Parquet). The [Storage Hierarchy](../../tools/tools-master-catalog.md#storage-hierarchy-by-data-type) and [Dataset Versioning by Scale](../../tools/tools-master-catalog.md#dataset-versioning-by-scale) tables specify which tools to use at each data-lifecycle stage.
+> **Guidance**: Use open, non-proprietary formats where possible (CSV/TSV, JSON, HDF5, Parquet, ONNX). If proprietary formats are required for collection (e.g., vendor instrument output), document the conversion pipeline to an open format. See the [Cytognosis Multimodal Health Data Schema](../04-Engineering/infrastructure/data-strategy/schemas/multimodal-health-data-schema.md) for canonical format specifications and the [Tools Catalog — L1 Storage](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l1-storage) for approved storage formats (TileDB, Zarr v3, AnnData/h5ad, Safetensors, GGUF, Parquet). The [Storage Hierarchy](../04-Engineering/infrastructure/tools/tools-master-catalog.md#storage-hierarchy-by-data-type) and [Dataset Versioning by Scale](../04-Engineering/infrastructure/tools/tools-master-catalog.md#dataset-versioning-by-scale) tables specify which tools to use at each data-lifecycle stage.
 
 ### 2.2 Data Classification **(HIPAA)**
 
-All data must be classified according to the [Cytognosis Data Governance Policy](../policies/data-governance-policy.md):
+All data must be classified according to the [Cytognosis Data Governance Policy](../06-Operations/data-strategy/policies/data-governance-policy.md):
 
 | Level | Definition | Examples | Storage Requirement |
 | --- | --- | --- | --- |
@@ -104,15 +104,15 @@ For each reused dataset, document:
 ### 3.3 Making Data Interoperable **(FAIR: I1-I3)**
 
 - **Open formats**: Primary data outputs use open, documented file formats (see section 2.1). Conversion scripts from proprietary formats are version-controlled in the project repository.
-- **Vocabularies and ontologies**: [List controlled vocabularies, e.g., "Gene Ontology (GO), Human Phenotype Ontology (HPO), Cell Ontology (CL), MONDO Disease Ontology, SNOMED CT, UMLS, CHEBI, NCBITaxon"]. Cross-ontology mappings follow the [SSSOM specification](../sssom-cross-ontology-mapping.md).
+- **Vocabularies and ontologies**: [List controlled vocabularies, e.g., "Gene Ontology (GO), Human Phenotype Ontology (HPO), Cell Ontology (CL), MONDO Disease Ontology, SNOMED CT, UMLS, CHEBI, NCBITaxon"]. Cross-ontology mappings follow the [SSSOM specification](../04-Engineering/infrastructure/data-strategy/sssom-cross-ontology-mapping.md).
 - **Qualified references**: Datasets link to related entities via PIDs: article DOIs, ORCID iDs, ROR IDs for institutions, grant IDs, and software DOIs. Relationship types use CiTO or DataCite relation types.
 
 ### 3.4 Making Data Reusable **(FAIR: R1-R1.3)**
 
 - **Documentation**: Each dataset includes a README (Markdown or plain text) with: file descriptions, column/variable definitions (data dictionary), units, missing value codes, processing steps, quality control procedures, and known limitations.
 - **License**: [Specify, e.g., "Public datasets: CC BY 4.0. Code: Apache 2.0 or MIT. PHI-derived aggregates: CC BY 4.0 with de-identification certification. Controlled-access datasets: custom DUA per source agreement."] Default to CC BY 4.0 or CC0 for maximum reuse unless restrictions apply.
-- **Provenance**: Processing pipelines are documented as reproducible workflows (Nextflow, Snakemake, or equivalent). Container images (Docker/Podman) are versioned and deposited alongside data. Git commit hashes and software versions are recorded in metadata. See the [Tools Catalog — L7 Provenance](../../tools/tools-master-catalog.md#l7-provenance) for the adopted provenance stack: LaminDB + bionty for lineage, redun for AST + data hashing, DVC for dataset versioning, and MLflow/Aim for experiment tracking.
-- **Community standards**: [Specify domain standards, e.g., "BIDS for neuroimaging, AnnData/CELLxGENE schema for single-cell, GA4GH for genomic data exchange, HL7 FHIR R4 for clinical data."]. The [Tools Catalog — L9 Standards](../../tools/tools-master-catalog.md#l9-standard) catalogs 211 standards, schemas, ontologies, and protocols evaluated for Cytognosis. The [L6 FAIR Packaging](../../tools/tools-master-catalog.md#l6-fair) section covers RO-Crate, FAIRSCAPE, WRROC, and persistent identifier systems (DOI + SWHID + ARK).
+- **Provenance**: Processing pipelines are documented as reproducible workflows (Nextflow, Snakemake, or equivalent). Container images (Docker/Podman) are versioned and deposited alongside data. Git commit hashes and software versions are recorded in metadata. See the [Tools Catalog — L7 Provenance](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l7-provenance) for the adopted provenance stack: LaminDB + bionty for lineage, redun for AST + data hashing, DVC for dataset versioning, and MLflow/Aim for experiment tracking.
+- **Community standards**: [Specify domain standards, e.g., "BIDS for neuroimaging, AnnData/CELLxGENE schema for single-cell, GA4GH for genomic data exchange, HL7 FHIR R4 for clinical data."]. The [Tools Catalog — L9 Standards](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l9-standard) catalogs 211 standards, schemas, ontologies, and protocols evaluated for Cytognosis. The [L6 FAIR Packaging](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l6-fair) section covers RO-Crate, FAIRSCAPE, WRROC, and persistent identifier systems (DOI + SWHID + ARK).
 
 ---
 
@@ -131,7 +131,7 @@ For datasets containing sensitive information, describe the privacy protection s
 - **De-identification / anonymization**: [Method, e.g., "Safe Harbor method per 45 CFR 164.514(b)(2): removal of 18 HIPAA identifiers. Verification by qualified statistical expert." or "Expert determination method." or "k-anonymity with k≥5 using Amnesia tool."]
 - **Pseudonymization**: [If applicable, describe key management, e.g., "Participant IDs are pseudonymized using a SHA-256 hash with a project-specific salt stored in a separate, access-restricted keystore."]
 - **Encryption**: [Specify, e.g., "Data encrypted at rest using AES-256 (GCP default). Data encrypted in transit using TLS 1.3. Encryption keys managed via GCP Cloud KMS with HSM-backed key material."]
-- **Access controls**: [Describe IAM roles, MFA requirements, VPN, audit logging per the HIPAA Security Controls Checklist](../compliance/phi-security-controls-checklist.md).
+- **Access controls**: [Describe IAM roles, MFA requirements, VPN, audit logging per the HIPAA Security Controls Checklist](../06-Operations/data-strategy/compliance/phi-security-controls-checklist.md).
 
 ### 4.3 Ethical and Legal Compliance
 
@@ -274,21 +274,21 @@ Use this checklist (adapted from [Jones & Grootveld, 2017](https://doi.org/10.52
 
 ## Appendix B: Cytognosis-Specific References
 
-- [Master Data Strategy](../master-data-strategy.md)
-- [Data Governance Policy](../policies/data-governance-policy.md)
-- [HIPAA Compliance Framework](../compliance/hipaa-compliance-framework.md)
-- [**HIPAA Compliance Status Dashboard**](../compliance/HIPAA-STATUS.md) — single pane of glass for all 45 CFR controls
-- [NIH GDS 2025 Requirements](../compliance/nih-gds-requirements.md) — NIST 800-171 mapping, generative AI restriction
-- [PHI Security Controls Checklist](../compliance/phi-security-controls-checklist.md)
-- [Controlled Data Access Policy](../policies/controlled-data-access.md)
-- [NIH NDA Access Procedures](../policies/nih-nda-access-procedures.md)
-- [Multimodal Health Data Schema](../schemas/multimodal-health-data-schema.md)
+- [Master Data Strategy](../04-Engineering/infrastructure/data-strategy/master-data-strategy.md)
+- [Data Governance Policy](../06-Operations/data-strategy/policies/data-governance-policy.md)
+- [HIPAA Compliance Framework](../06-Operations/data-strategy/compliance/hipaa-compliance-framework.md)
+- [**HIPAA Compliance Status Dashboard**](../06-Operations/data-strategy/compliance/HIPAA-STATUS.md) — single pane of glass for all 45 CFR controls
+- [NIH GDS 2025 Requirements](../06-Operations/data-strategy/compliance/nih-gds-requirements.md) — NIST 800-171 mapping, generative AI restriction
+- [PHI Security Controls Checklist](../06-Operations/data-strategy/compliance/phi-security-controls-checklist.md)
+- [Controlled Data Access Policy](../06-Operations/data-strategy/policies/controlled-data-access.md)
+- [NIH NDA Access Procedures](../06-Operations/data-strategy/policies/nih-nda-access-procedures.md)
+- [Multimodal Health Data Schema](../04-Engineering/infrastructure/data-strategy/schemas/multimodal-health-data-schema.md)
 - [Data Use Agreement Template](data-use-agreement-template.md)
-- [Scholarly Knowledge Graph Schema](../scholarly-knowledge-graph.md)
-- [Technical Data Infrastructure](../TECHNICAL_DATA_INFRASTRUCTURE.md)
+- [Scholarly Knowledge Graph Schema](../04-Engineering/infrastructure/data-strategy/scholarly-knowledge-graph.md)
+- [Technical Data Infrastructure](../04-Engineering/infrastructure/data-strategy/TECHNICAL_DATA_INFRASTRUCTURE.md)
 - [Tools Catalog](../../tools/README.md) — 911-tool technology landscape with storage, FAIR, provenance, workflow, and standards picks
-- [Infrastructure Stack Deep-Dive](../../tools/tools-infrastructure-stack.md) — data flow from bytes to FAIR-published reasoning
-- [**Neuroverse Datasets & Cohorts**](../../programs/neuroverse/datasets-cohorts.md) — primary data sources for the first Cytognosis DMP
+- [Infrastructure Stack Deep-Dive](../04-Engineering/infrastructure/tools/tools-infrastructure-stack.md) — data flow from bytes to FAIR-published reasoning
+- [**Neuroverse Datasets & Cohorts**](../05-Research/neuroverse/datasets-cohorts.md) — primary data sources for the first Cytognosis DMP
 - [**Reproducibility & FAIR Strategy**](../../reproducibility/README.md) — how data gets packaged as WRROC and published via SEEK/WorkflowHub
 
 ## Appendix C: External Reference Standards
@@ -319,15 +319,15 @@ This appendix maps DMP sections to the relevant layers of the [Cytognosis Tools 
 
 | DMP Section | Catalog Layer(s) | Key Primary Picks |
 | --- | --- | --- |
-| 2.1 Data Types and Formats | [L1-storage](../../tools/tools-master-catalog.md#l1-storage) | TileDB, Zarr v3, Parquet, AnnData/h5ad, Safetensors, GGUF |
-| 2.1 Preprocessing pipelines | [L2-preprocessing](../../tools/tools-master-catalog.md#l2-preprocessing) | fMRIPrep, Docling, GROBID, PLINK2, Scanpy, scVI |
-| 3.1 Findable (PIDs, metadata) | [L6-fair](../../tools/tools-master-catalog.md#l6-fair) | Zenodo (DOI), SWHID, ARK (FAIRSCAPE), CITATION.cff |
-| 3.3 Interoperable (schemas) | [L9-standard](../../tools/tools-master-catalog.md#l9-standard) | LinkML, BIDS, NWB, GA4GH VRS, Biolink Model, CELLxGENE |
-| 3.4 Reusable (provenance) | [L7-provenance](../../tools/tools-master-catalog.md#l7-provenance) | LaminDB, redun, DVC, DataLad, MLflow, Aim |
-| 3.4 FAIR packaging | [L6-fair](../../tools/tools-master-catalog.md#l6-fair) | RO-Crate (WRROC), FAIRSCAPE |
-| 4.2 Security controls | [L13-net](../../tools/tools-master-catalog.md#l13-net) | Tailscale, WireGuard, NATS+JetStream |
-| 5.1 Storage infrastructure | [L1-storage](../../tools/tools-master-catalog.md#l1-storage) | GCS, TileDB, AIStor (MinIO), DuckDB |
-| 5.3 Long-term preservation | [L3-repository](../../tools/tools-master-catalog.md#l3-repository) | Zenodo, DANDI, OpenNeuro, Software Heritage |
-| 6.1 Data sharing (repositories) | [L3-repository](../../tools/tools-master-catalog.md#l3-repository) | GitHub, HuggingFace Hub, Zenodo, OpenNeuro |
-| 6.3 Code sharing | [L4-meta](../../tools/tools-master-catalog.md#l4-meta) | Zoekt, GitNexus, CITATION.cff |
-| 8 Costs (open-source stack) | [Cross-cutting themes](../../tools/tools-master-catalog.md#cross-cutting-themes) | All primary picks permissively licensed |
+| 2.1 Data Types and Formats | [L1-storage](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l1-storage) | TileDB, Zarr v3, Parquet, AnnData/h5ad, Safetensors, GGUF |
+| 2.1 Preprocessing pipelines | [L2-preprocessing](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l2-preprocessing) | fMRIPrep, Docling, GROBID, PLINK2, Scanpy, scVI |
+| 3.1 Findable (PIDs, metadata) | [L6-fair](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l6-fair) | Zenodo (DOI), SWHID, ARK (FAIRSCAPE), CITATION.cff |
+| 3.3 Interoperable (schemas) | [L9-standard](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l9-standard) | LinkML, BIDS, NWB, GA4GH VRS, Biolink Model, CELLxGENE |
+| 3.4 Reusable (provenance) | [L7-provenance](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l7-provenance) | LaminDB, redun, DVC, DataLad, MLflow, Aim |
+| 3.4 FAIR packaging | [L6-fair](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l6-fair) | RO-Crate (WRROC), FAIRSCAPE |
+| 4.2 Security controls | [L13-net](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l13-net) | Tailscale, WireGuard, NATS+JetStream |
+| 5.1 Storage infrastructure | [L1-storage](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l1-storage) | GCS, TileDB, AIStor (MinIO), DuckDB |
+| 5.3 Long-term preservation | [L3-repository](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l3-repository) | Zenodo, DANDI, OpenNeuro, Software Heritage |
+| 6.1 Data sharing (repositories) | [L3-repository](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l3-repository) | GitHub, HuggingFace Hub, Zenodo, OpenNeuro |
+| 6.3 Code sharing | [L4-meta](../04-Engineering/infrastructure/tools/tools-master-catalog.md#l4-meta) | Zoekt, GitNexus, CITATION.cff |
+| 8 Costs (open-source stack) | [Cross-cutting themes](../04-Engineering/infrastructure/tools/tools-master-catalog.md#cross-cutting-themes) | All primary picks permissively licensed |

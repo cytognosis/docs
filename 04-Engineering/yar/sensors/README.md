@@ -3,7 +3,7 @@
 > [!IMPORTANT]
 > **TL;DR**: This is Yar's **sensing component**, nested at `docs/cytonome/yar/sensors/`. It defines the **sensor protocol** that lets any sensor (voice, wearables, self-report, future connectomics) plug into Yar as a typed, consent-governed adapter. The protocol is referred to here as **USAP (Universal Sensor Adapter Protocol)**; the Yar master and strategy docs call the same protocol **CSP (Cytonome Sensor Protocol)**. They are the same thing. It is a standalone sensor architecture, integrated as Yar's input layer (Yar master `§4B`) and governed by **CAP** (every adapter needs per-sensor consent; raw data stays on-device by default).
 
-> **Start here**: [Consolidated Sensor Reference](unified-sensor-report.md)
+> **Start here**: [Consolidated Sensor Reference](../../cytos/sensing-schema/unified-sensor-report.md)
 
 ## Quick Navigation
 
@@ -11,11 +11,11 @@
 
 | Document | Content |
 |---|---|
-| [Consolidated Sensor Reference](unified-sensor-report.md) | **Master reference**: architecture, schema system, standards coverage, vendor profiles, interop stack, roadmap |
-| [Semantic Alignment Specification](semantic-alignment.md) | SOSA/SSN ↔ IEEE 1752 ↔ FHIR ↔ AWARE crosswalk tables, SSSOM integration, gap analysis |
+| [Consolidated Sensor Reference](../../cytos/sensing-schema/unified-sensor-report.md) | **Master reference**: architecture, schema system, standards coverage, vendor profiles, interop stack, roadmap |
+| [Semantic Alignment Specification](../../cytos/sensing-schema/semantic-alignment.md) | SOSA/SSN ↔ IEEE 1752 ↔ FHIR ↔ AWARE crosswalk tables, SSSOM integration, gap analysis |
 | [Sensor Architecture](sensor-architecture.md) | Runtime sensor protocol, Voice Sensor 0 reference implementation, MindMed AI fusion architecture |
-| [Sensor Taxonomy](sensor-taxonomy.md) | Full sensor taxonomy across micro/meso/macro scales with IEEE 1752 and Open mHealth coverage |
-| [Interop Standards](interop-standards.md) | Cross-standard interop details and data flow patterns |
+| [Sensor Taxonomy](../../cytos/sensing-schema/sensor-taxonomy.md) | Full sensor taxonomy across micro/meso/macro scales with IEEE 1752 and Open mHealth coverage |
+| [Interop Standards](../../cytos/sensing-schema/interop-standards.md) | Cross-standard interop details and data flow patterns |
 
 ### Implementation Guides
 
@@ -29,8 +29,8 @@
 
 | Document | Content |
 |---|---|
-| [Data Formats](data-formats.md) | Storage format recommendations (AnnData, Zarr, Parquet, TileDB-SOMA) |
-| [Human Body Systems](human-body-systems.md) | Human Reference Atlas (HRA), HuBMAP, CCF Ontology integration |
+| [Data Formats](../../cytos/sensing-schema/data-formats.md) | Storage format recommendations (AnnData, Zarr, Parquet, TileDB-SOMA) |
+| [Human Body Systems](../../cytos/sensing-schema/human-body-systems.md) | Human Reference Atlas (HRA), HuBMAP, CCF Ontology integration |
 | [ML Models](ml-models.md) | Model manifest, IO contracts, distributional outputs |
 
 ## Schema Location

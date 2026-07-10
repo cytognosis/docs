@@ -74,7 +74,7 @@ Single source of truth for the **911 unique tools** evaluated, adopted, deferred
 This catalog informs and is referenced by several other infrastructure documents:
 
 - [Master Data Strategy](../data-strategy/master-data-strategy.md) — data governance vision referencing storage and FAIR tools
-- [Data Management Plan Template](../data-strategy/templates/data-management-plan-template.md) — DMP sections reference specific tools for storage, versioning, FAIR packaging, and repositories
+- [Data Management Plan Template](../../../_templates/data-management-plan-template.md) — DMP sections reference specific tools for storage, versioning, FAIR packaging, and repositories
 - [Technical Data Infrastructure](../data-strategy/TECHNICAL_DATA_INFRASTRUCTURE.md) — GCP project taxonomy and HIPAA controls using tools from L1, L7, L8
 - [Scholarly Knowledge Graph](../data-strategy/scholarly-knowledge-graph.md) — LinkML schema referencing L9, L10 tools
 - [Sovereign Paper Library Architecture](../data-strategy/paper-library-architecture.md) — Zotero + Drive + Hypothes.is from L14, L4

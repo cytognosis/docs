@@ -1,11 +1,11 @@
 # Universal Grant/Application Template (Cytognosis)
 
-**Purpose.** A harmonized, funder-agnostic superset of sections that every Cytognosis grant, application, or proposal can be assembled from. Authored content lives once in canonical slots (U01…U22 + A01…A05); each funder's template is a *sink* that selects, reorders, and length-limits a subset of those slots. Funders compose their schemas via group inheritance (see [`canonical/groups.yaml`](canonical/groups.yaml) and `canonical_template_format.md` §13).
+**Purpose.** A harmonized, funder-agnostic superset of sections that every Cytognosis grant, application, or proposal can be assembled from. Authored content lives once in canonical slots (U01…U22 + A01…A05); each funder's template is a *sink* that selects, reorders, and length-limits a subset of those slots. Funders compose their schemas via group inheritance (see [`canonical/groups.yaml`](slot-library/groups.yaml) and `canonical_template_format.md` §13).
 
 **Companion docs:**
 - [`funder_metadata.md`](funder_metadata.md) — F-series funder-metadata fields (F01–F38), the schema for the *opportunity itself* (deadline, instrument, indirect-cost rule, strategic connections, sub-programs, etc.). Drives the Monday `Funding Opportunities` board.
-- [`canonical/groups.yaml`](canonical/groups.yaml) — group bundles (six U-groups, four A-groups, eight F-groups) and eleven composition presets (one per `funder_kind`).
-- [`canonical/CHANGELOG.md`](canonical/CHANGELOG.md) — schema version history (current: manifest v1.2, groups v1.0).
+- [`canonical/groups.yaml`](slot-library/groups.yaml) — group bundles (six U-groups, four A-groups, eight F-groups) and eleven composition presets (one per `funder_kind`).
+- [`canonical/CHANGELOG.md`](slot-library/CHANGELOG.md) — schema version history (current: manifest v1.2, groups v1.0).
 
 **Design principles**
 1. **Heilmeier-first spine.** U01–U08 reproduce the DARPA Heilmeier Catechism in order; every proposal answers them even when the target funder doesn't explicitly ask.

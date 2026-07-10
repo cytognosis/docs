@@ -373,4 +373,4 @@ cyto-skills agent purge-cache
 | Core package docs | [../core/core.md](../core/core.md) |
 | Deploy package docs | [../deploy/deploy.md](../deploy/deploy.md) |
 | Quick reference | [cli-quickref.md](cli-quickref.md) |
-| Existing CLI reference (older) | [../../cli-reference.md](../../cli-reference.md) |
+| Existing CLI reference (older) | [../../cli-reference.md](../../../toolchain/cytoskills/cli-reference.md) |

@@ -127,13 +127,13 @@ This policy applies to all:
 
 - **Encryption**: Encrypt all sensitive data at rest (AES-256) and in transit (TLS 1.3).
 - **Access Controls**: Implement strict role-based access, explicitly logging all requests to Restricted Data (Level 4).
-- **Backup**: Maintain secure, tested, immutable backup systems in the appropriate GCP project — `cytognosis-phi-prod` for PHI workloads, `cytognosis-data` for regulated derivatives, `cytognosis-infrastructure` for non-PHI operations (see [`../TECHNICAL_DATA_INFRASTRUCTURE.md`](../TECHNICAL_DATA_INFRASTRUCTURE.md)).
+- **Backup**: Maintain secure, tested, immutable backup systems in the appropriate GCP project — `cytognosis-phi-prod` for PHI workloads, `cytognosis-data` for regulated derivatives, `cytognosis-infrastructure` for non-PHI operations (see [`../TECHNICAL_DATA_INFRASTRUCTURE.md`](../../../04-Engineering/infrastructure/data-strategy/TECHNICAL_DATA_INFRASTRUCTURE.md)).
 - **Geographic Controls**: Comply with data residency and cross-border transfer requirements.
 
 #### Sharing
 
 - **Authorization**: Obtain approval from the Data Governance Committee for data sharing.
-- **Agreements**: Execute appropriate Data Use Agreements (DUA) (see [Data Use Agreement Template](../templates/data-use-agreement-template.md)).
+- **Agreements**: Execute appropriate Data Use Agreements (DUA) (see [Data Use Agreement Template](../../../_templates/data-use-agreement-template.md)).
 - **De-identification**: Apply privacy-preserving techniques (k-anonymity, differential privacy) before sharing.
 - **Breach Response**: Implement 72-hour breach notification procedures.
 

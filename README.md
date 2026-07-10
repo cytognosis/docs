@@ -23,14 +23,14 @@ Cytognosis Platform = "GPS for Health"
 
 | Section | Contents |
 |---------|----------|
-| [`strategy/`](strategy/) | Platform design, data strategy, tool landscape, fundraising |
+| [`strategy/`](02-Funding/strategy) | Platform design, data strategy, tool landscape, fundraising |
 | [`cytonome/`](cytonome/) | Yar, sensors, Cytoplex spec docs |
-| [`cytoverse/`](cytoverse/) | Cytos architecture, schemas, grants |
-| [`toolchain/`](toolchain/) | Cytoskeleton, Cytocast, Cytoskills, CytoExplorer |
-| [`infrastructure/`](infrastructure/) | GCP, CI/CD, containers, self-hosted, hardware |
+| [`cytoverse/`](05-Research/cytoverse) | Cytos architecture, schemas, grants |
+| [`toolchain/`](04-Engineering/toolchain) | Cytoskeleton, Cytocast, Cytoskills, CytoExplorer |
+| [`infrastructure/`](04-Engineering/infrastructure) | GCP, CI/CD, containers, self-hosted, hardware |
 | [`schemas/`](schemas/) | LinkML playbook, resource schemas, SSSOM |
-| [`org/`](org/) | Naming conventions, compliance, operations |
-| [`standards/`](standards/) | Coding standards, documentation standards, DVC |
+| [`org/`](06-Operations/org) | Naming conventions, compliance, operations |
+| [`standards/`](04-Engineering/standards) | Coding standards, documentation standards, DVC |
 
 ## Repo-to-Docs Map
 

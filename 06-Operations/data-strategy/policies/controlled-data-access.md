@@ -74,7 +74,7 @@ Data accessed through the academic partner must be legally transferred to Cytogn
 
 All controlled-access data, regardless of acquisition pathway, is subject to the highest tier of the Cytognosis Foundation Data Governance Policy (Level 4: Restricted Data).
 
-- **Data Locality:** All controlled-access data must land directly in the `cytognosis-phi-prod` project (NIH NDA-style raw imports → `cytognosis-phi-core`; partner-specific spaces → `cytognosis-phi-collab-[id]`). It must never transit through `cytognosis-infrastructure` or `cytognosis-data`. See [`../TECHNICAL_DATA_INFRASTRUCTURE.md`](../TECHNICAL_DATA_INFRASTRUCTURE.md) for bucket taxonomy and CMEK / VPC-SC requirements.
+- **Data Locality:** All controlled-access data must land directly in the `cytognosis-phi-prod` project (NIH NDA-style raw imports → `cytognosis-phi-core`; partner-specific spaces → `cytognosis-phi-collab-[id]`). It must never transit through `cytognosis-infrastructure` or `cytognosis-data`. See [`../TECHNICAL_DATA_INFRASTRUCTURE.md`](../../../04-Engineering/infrastructure/data-strategy/TECHNICAL_DATA_INFRASTRUCTURE.md) for bucket taxonomy and CMEK / VPC-SC requirements.
 - **Zero-Trust Access:** No data may be downloaded to local developer machines without explicit, project-specific authorization from the CDO. Access is restricted to secure cloud workstations.
 - **Audit Logging:** Immutably logged access via Cloud Audit Logs.
 

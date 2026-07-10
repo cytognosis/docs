@@ -116,10 +116,10 @@ Satisfying all three is the acceptance criterion.
 | Section | Why it's related |
 |---|---|
 | [Data Strategy](../../data-strategy/README.md) | Governance, HIPAA, DMP, DUA templates that apply to Neuroverse |
-| [HIPAA Status](../../data-strategy/compliance/HIPAA-STATUS.md) | Compliance controls for PHI handling |
-| [NIH GDS Requirements](../../data-strategy/compliance/nih-gds-requirements.md) | DUC obligations, NIST 800-171, generative AI restrictions |
+| [HIPAA Status](../../06-Operations/data-strategy/compliance/HIPAA-STATUS.md) | Compliance controls for PHI handling |
+| [NIH GDS Requirements](../../06-Operations/data-strategy/compliance/nih-gds-requirements.md) | DUC obligations, NIST 800-171, generative AI restrictions |
 | [Reproducibility Strategy](../../reproducibility/README.md) | How Neuroverse runs emit FAIR RO-Crates |
-| [Dataset Catalog](../../data-strategy/dataset-catalog.md) | Broader public dataset catalog (Neuroverse is a subset) |
+| [Dataset Catalog](../../04-Engineering/infrastructure/data-strategy/dataset-catalog.md) | Broader public dataset catalog (Neuroverse is a subset) |
 
 ---
 

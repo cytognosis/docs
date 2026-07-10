@@ -103,7 +103,7 @@ The future state lifts Layers 0–2 into a single graph database for cross-corpu
 - **Objective layer** — LinkML-driven nodes for papers, authors, code, models, datasets, biological entities (Gene Ontology, Disease Ontology, Cell Ontology). Fed by the Zotero API, OpenAlex, GitHub API, and HuggingFace API. Schema is documented in [`scholarly-knowledge-graph.md`](scholarly-knowledge-graph.md).
 - **Personalization layer** — W3C Web Annotation nodes harvested from Hypothes.is. Personal libraries become filtered queries over annotations; the underlying corpus is not duplicated.
 
-The Neo4j stack is already provisioned (see [`../self_hosted/logseq_knowledge_architecture.md`](../self_hosted/logseq_knowledge_architecture.md) and the [Container Framework](../../container_framework/README.md)).
+The Neo4j stack is already provisioned (see [`../self_hosted/logseq_knowledge_architecture.md`](../self-hosted/logseq_knowledge_architecture.md) and the [Container Framework](../../container_framework/README.md)).
 
 ## Reader and annotation tools
 
@@ -149,7 +149,7 @@ A step-by-step operational guide ([`zotero-setup-guide.md`](zotero-setup-guide.m
 - [`scholarly-knowledge-graph.md`](scholarly-knowledge-graph.md) — the LinkML schema that all of the above feeds into.
 - [`sssom-cross-ontology-mapping.md`](sssom-cross-ontology-mapping.md) — how biological entities mentioned in the library are mapped across UMLS, MONDO, HP, CL, CHEBI, NCBITaxon, SNOMED CT.
 - [`monday-resource-boards.md`](monday-resource-boards.md) — the registry boards that surface the corpus in Cytognosis's project-management workspace until the Neo4j stack is fully online.
-- [`../self_hosted/logseq_knowledge_architecture.md`](../self_hosted/logseq_knowledge_architecture.md) — how Logseq plugs into Layer 1 / Layer 2 for note-taking workflows.
+- [`../self_hosted/logseq_knowledge_architecture.md`](../self-hosted/logseq_knowledge_architecture.md) — how Logseq plugs into Layer 1 / Layer 2 for note-taking workflows.
 - [`linkml-kg-playbook.md`](linkml-kg-playbook.md) — pointer to the hands-on playbook (LinkML, Biolink, BioCypher, Koza/Monarch, OLS4 SSSOM) used to build the ETL pipelines above.
 
 ---

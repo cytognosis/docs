@@ -128,7 +128,7 @@ Each deployment must maintain a runbook for at least these incidents:
 | KMS/HSM outage | Fail closed for signing that grants new authority or updates policy. Continue verification from cached trusted public keys only inside documented freshness windows. |
 | Unauthorized signing request | Deny request, alert owner, retain signer audit record, check workload identity and approval controls, and consider key suspension. |
 
-Incident reports should feed back into [docs/security_review/findings_tracker_template.md](../security_review/findings_tracker_template.md) when the event affects the external security-review gate.
+Incident reports should feed back into [docs/security_review/findings_tracker_template.md](findings_tracker_template.md) when the event affects the external security-review gate.
 
 ## Auditability
 

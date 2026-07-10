@@ -78,7 +78,7 @@ DUC: nda-nbb
   Members: Shahin, Brad (when added), any named Approved User per DUC amendment
 ```
 
-Full provisioning pattern: [duc-iam-pattern.md](../../data-strategy/compliance/duc-iam-pattern.md)
+Full provisioning pattern: [duc-iam-pattern.md](../../06-Operations/data-strategy/compliance/duc-iam-pattern.md)
 
 ### Compute Architecture
 
@@ -90,7 +90,7 @@ Full provisioning pattern: [duc-iam-pattern.md](../../data-strategy/compliance/d
 | Interactive analysis | Vertex AI Workbench | Per-researcher, per-DUC |
 
 > Confidential Compute (AMD SEV-SNP) will be enabled on Vertex AI jobs that touch
-> Tier 3 (L3/PHI) data. See [deferred-controls.md](../../data-strategy/compliance/deferred-controls.md) §Control 5.
+> Tier 3 (L3/PHI) data. See [deferred-controls.md](../../06-Operations/data-strategy/compliance/deferred-controls.md) §Control 5.
 
 ---
 

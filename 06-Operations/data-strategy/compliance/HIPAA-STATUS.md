@@ -53,8 +53,8 @@ current operational phase are satisfied. Pending controls have documented trigge
 |---|---|---|---|
 | Role-based access controls documented | ✅ Done | [duc-iam-pattern.md](duc-iam-pattern.md) | Shahin Mohammadi |
 | Per-DUC IAM provisioning pattern established | ✅ Done | [duc-iam-pattern.md](duc-iam-pattern.md) | Shahin Mohammadi |
-| Least-privilege default (SA consolidation) | ✅ Done | [../../service-accounts.md](../../service-accounts.md) | Shahin Mohammadi |
-| OIDC federation (no long-lived keys) | ✅ Done | [../../ci-cd/oidc-federation.md](../../ci-cd/oidc-federation.md) | Shahin Mohammadi |
+| Least-privilege default (SA consolidation) | ✅ Done | [../../service-accounts.md](../../../04-Engineering/infrastructure/service-accounts.md) | Shahin Mohammadi |
+| OIDC federation (no long-lived keys) | ✅ Done | [../../ci-cd/oidc-federation.md](../../../04-Engineering/infrastructure/ci-cd/oidc-federation.md) | Shahin Mohammadi |
 
 ### Incident Response (§164.308(a)(6))
 | Control | Status | Evidence | Owner |

@@ -34,26 +34,26 @@ This subtree was previously split across the `cytognosis/data-strategy` reposito
 
 | Document | Purpose |
 | --- | --- |
-| **[`compliance/HIPAA-STATUS.md`](compliance/HIPAA-STATUS.md)** | **Master status dashboard**: all 45 CFR controls with ✅/⏳ status, evidence links, and owners |
-| [`compliance/nih-gds-requirements.md`](compliance/nih-gds-requirements.md) | NIH GDS 2025 operational requirements: 8 requirements, NIST SP 800-171 mapping, generative AI restriction, DUC checklist |
-| [`compliance/hipaa-compliance-framework.md`](compliance/hipaa-compliance-framework.md) | Full HIPAA program: administrative, physical, technical safeguards; BAA management; appendix A operational checklists |
-| [`compliance/phi-security-controls-checklist.md`](compliance/phi-security-controls-checklist.md) | Operational HIPAA Security Rule checklist used during quarterly reviews and audits |
+| **[`compliance/HIPAA-STATUS.md`](../../../06-Operations/data-strategy/compliance/HIPAA-STATUS.md)** | **Master status dashboard**: all 45 CFR controls with ✅/⏳ status, evidence links, and owners |
+| [`compliance/nih-gds-requirements.md`](../../../06-Operations/data-strategy/compliance/nih-gds-requirements.md) | NIH GDS 2025 operational requirements: 8 requirements, NIST SP 800-171 mapping, generative AI restriction, DUC checklist |
+| [`compliance/hipaa-compliance-framework.md`](../../../06-Operations/data-strategy/compliance/hipaa-compliance-framework.md) | Full HIPAA program: administrative, physical, technical safeguards; BAA management; appendix A operational checklists |
+| [`compliance/phi-security-controls-checklist.md`](../../../06-Operations/data-strategy/compliance/phi-security-controls-checklist.md) | Operational HIPAA Security Rule checklist used during quarterly reviews and audits |
 
 ### 5. Policies
 
 | Document | Purpose |
 | --- | --- |
-| [`policies/data-governance-policy.md`](policies/data-governance-policy.md) | Foundational governance policy: classification levels, lifecycle, roles, sanctions |
-| [`policies/controlled-data-access.md`](policies/controlled-data-access.md) | SOP for acquiring controlled-access external datasets (NIH NDA, PEC, NBB) — IRB, FWA, and academic partnership pathways |
-| [`policies/nih-nda-access-procedures.md`](policies/nih-nda-access-procedures.md) | Step-by-step NIH NDA eDAR pipeline, eRA Commons, Signing Official, post-approval obligations |
+| [`policies/data-governance-policy.md`](../../../06-Operations/data-strategy/policies/data-governance-policy.md) | Foundational governance policy: classification levels, lifecycle, roles, sanctions |
+| [`policies/controlled-data-access.md`](../../../06-Operations/data-strategy/policies/controlled-data-access.md) | SOP for acquiring controlled-access external datasets (NIH NDA, PEC, NBB) — IRB, FWA, and academic partnership pathways |
+| [`policies/nih-nda-access-procedures.md`](../../../06-Operations/data-strategy/policies/nih-nda-access-procedures.md) | Step-by-step NIH NDA eDAR pipeline, eRA Commons, Signing Official, post-approval obligations |
 
 ### 6. Schemas & Templates
 
 | Document | Purpose |
 | --- | --- |
 | [`schemas/multimodal-health-data-schema.md`](schemas/multimodal-health-data-schema.md) | JSON schemas for genomic, proteomic, clinical (FHIR R4), imaging, behavioral profiles + unified patient record |
-| [`templates/data-use-agreement-template.md`](templates/data-use-agreement-template.md) | DUA template for outbound dataset releases — permitted/prohibited uses, security requirements, indemnification |
-| [`templates/data-management-plan-template.md`](templates/data-management-plan-template.md) | FAIR-compliant DMP template aligned with Horizon Europe, NIH DMSP, and HIPAA requirements |
+| [`templates/data-use-agreement-template.md`](../../../_templates/data-use-agreement-template.md) | DUA template for outbound dataset releases — permitted/prohibited uses, security requirements, indemnification |
+| [`templates/data-management-plan-template.md`](../../../_templates/data-management-plan-template.md) | FAIR-compliant DMP template aligned with Horizon Europe, NIH DMSP, and HIPAA requirements |
 
 ## Data Governance Principles
 

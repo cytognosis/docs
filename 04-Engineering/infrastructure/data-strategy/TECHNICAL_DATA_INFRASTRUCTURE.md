@@ -14,7 +14,7 @@
 
 ## 🎯 Overview
 
-This document specifies the Google Cloud infrastructure requirements, architectures, and compliance controls that let Cytognosis securely access, store, host, and analyze sensitive multimodal human datasets (genomics from NIH NDA, UKBB, etc.). It is the technical enforcement layer for the [Data Governance Policy](policies/data-governance-policy.md) and the operational substrate for the [scholarly knowledge graph](scholarly-knowledge-graph.md).
+This document specifies the Google Cloud infrastructure requirements, architectures, and compliance controls that let Cytognosis securely access, store, host, and analyze sensitive multimodal human datasets (genomics from NIH NDA, UKBB, etc.). It is the technical enforcement layer for the [Data Governance Policy](../../../06-Operations/data-strategy/policies/data-governance-policy.md) and the operational substrate for the [scholarly knowledge graph](scholarly-knowledge-graph.md).
 
 ---
 

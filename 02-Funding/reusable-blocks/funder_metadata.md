@@ -2,9 +2,9 @@
 
 **Status:** Authoritative reference for F01–F38 funder-metadata fields.
 **Authored:** 2026-04-26 (manifest v1.2; groups v1.0).
-**Companion to:** [`universal_template.md`](universal_template.md) (U-side) and [`canonical/groups.yaml`](canonical/groups.yaml) (inheritance taxonomy).
+**Companion to:** [`universal_template.md`](universal_template.md) (U-side) and [`canonical/groups.yaml`](slot-library/groups.yaml) (inheritance taxonomy).
 
-This document explains what the F-series fields are, why they exist, and how they group together for inheritance. The machine-readable definitions live in [`canonical/manifest.yaml`](canonical/manifest.yaml) under `funder_metadata_fields:`.
+This document explains what the F-series fields are, why they exist, and how they group together for inheritance. The machine-readable definitions live in [`canonical/manifest.yaml`](slot-library/manifest.yaml) under `funder_metadata_fields:`.
 
 ---
 

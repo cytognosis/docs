@@ -41,18 +41,18 @@ CAP ships in two profiles: **CAP-Lite** (the lightweight profile Yar's MVP uses)
 | Revision plan & deep-dive | [`overview.md`](overview.md) | Current CAP scope, gaps, v0.2 proposed scope, phased plan, target standalone package structure. |
 | **Formal spec** | [`spec/`](spec/) | The narrative specification: `01_foundations` → `07_profiles_roadmap`, plus `architecture.md`, `claims.md`, `appendix_schemas.md`, conformance, and release gates. |
 | Consolidated baseline | [`v1-baseline/00_INDEX.md`](v1-baseline/00_INDEX.md) | A single consolidated v1 baseline (status, foundations, architecture, primitives, security, integrations, conformance, schema appendix, examples). |
-| Security | [`security/`](security/) | Threat model, security review, KMS/HSM, findings tracker. |
-| Conformance & quality | [`compliance/`](compliance/) · [`quality/`](quality/) · [`interop/`](interop/) | Reviewer checklists, rubrics, report templates, interop reports. |
+| Security | [`security/`](../../../../04-Engineering/cytoplex/security) | Threat model, security review, KMS/HSM, findings tracker. |
+| Conformance & quality | [`compliance/`](compliance/) · [`quality/`](../../../../04-Engineering/cytoplex/quality) · [`interop/`](../../../../04-Engineering/cytoplex/interop) | Reviewer checklists, rubrics, report templates, interop reports. |
 | Benchmarks | [`benchmarks/`](benchmarks/) | Mobile latency budget for CAP v1. |
 | Research lineage | [`research/`](research/) | CAP comprehensive reference and protocol assessment. |
 
 ## How Cytoplex integrates with the rest of Yar
 
 - **Yar master reference** (safety section): [`../yar-master-features-requirements.md`](../yar-master-features-requirements.md) `§8`.
-- **Architecture index**: [`../architecture-index.md`](../architecture-index.md).
-- **Product implementation**: [`../product-implementation.md`](../product-implementation.md).
+- **Architecture index**: [`../architecture-index.md`](../../../../00-Inbox/architecture-index.md).
+- **Product implementation**: [`../product-implementation.md`](../../../../00-Inbox/product-implementation.md).
 - **Personas**: persona authority binding (a persona cannot assert clinical authority) is a CAP concern; see the Yar master `§4A`.
-- **Sensors**: every sensor adapter in [`../sensors/`](../sensors/) is governed by CAP (per-sensor consent, on-device-by-default).
+- **Sensors**: every sensor adapter in [`../sensors/`](../../../../04-Engineering/yar/sensors) is governed by CAP (per-sensor consent, on-device-by-default).
 
 ## Naming
 

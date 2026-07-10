@@ -259,9 +259,9 @@ More detail:
 
 - [Architecture](docs/architecture.md)
 - [CAP v1 Task Backlog](docs/CAP_v1_TASKS.md)
-- [Development](docs/development.md)
-- [API](docs/api.md)
-- [Testing](docs/testing.md)
+- [Development](../../../04-Engineering/cytoplex/development.md)
+- [API](../../../04-Engineering/cytoplex/api.md)
+- [Testing](../../../04-Engineering/cytoplex/testing.md)
 - [Refactoring Notes](REFACTORING_NOTES.md)
 
 ## Current Release Status

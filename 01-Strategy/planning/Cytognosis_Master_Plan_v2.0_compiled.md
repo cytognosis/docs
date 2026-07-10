@@ -43,7 +43,7 @@ Our pilot indication is **mental health**, where the absence of biotyping create
 
 ## Three horizons in one diagram
 
-![Diagram 1 from 00_executive_summary](/tmp/master_plan_compile/diagrams/00_executive_summary__1.png)
+![Diagram 1 from 00_executive_summary](diagrams/00_executive_summary__1.png)
 
 
 ## What is new in this version
@@ -73,7 +73,7 @@ Five updates that change how we operate in the next 24 months.
 
 ## Status at a glance
 
-![Diagram 2 from 00_executive_summary](/tmp/master_plan_compile/diagrams/00_executive_summary__2.png)
+![Diagram 2 from 00_executive_summary](diagrams/00_executive_summary__2.png)
 
 
 The plan that follows turns this picture into operating decisions, milestones, and quantitative measures across the next decade.
@@ -134,7 +134,7 @@ These are the canonical wording. Earlier drafts that used "Continuity" or "Conve
 
 We use a four-layer hybrid because no single framework covers a 15-year health-research nonprofit with an R&D to clinical to globalization arc and a two-entity Helix structure. The four layers are stacked so each lower layer cleanly serves the layer above.
 
-![Diagram 1 from 01_identity_and_framework](/tmp/master_plan_compile/diagrams/01_identity_and_framework__1.png)
+![Diagram 1 from 01_identity_and_framework](diagrams/01_identity_and_framework__1.png)
 
 
 ### Why this hybrid
@@ -221,7 +221,7 @@ Cytognosis runs a 15-year strategic shell with three horizons and three gates. E
 | **H2** | 5 to 10 | Clinical and commercialization · "build the sensor and navigator" | Hybrid funding: Foundation continues open mission with non-dilutive sources; PBC subsidiary raises VC for the proprietary tracking and navigation product. |
 | **H3** | 10 to 15 | Globalization and equity · "deploy worldwide" | Federated structure: regional sister organizations carry local trust and local approvals. Foundation coordinates, licenses, and redistributes. |
 
-![Diagram 1 from 02_horizons_and_bifurcation](/tmp/master_plan_compile/diagrams/02_horizons_and_bifurcation__1.png)
+![Diagram 1 from 02_horizons_and_bifurcation](diagrams/02_horizons_and_bifurcation__1.png)
 
 
 ## The 36-month bifurcation
@@ -238,7 +238,7 @@ We solve this by building two entities (Foundation 501(c)(3) plus future PBC sub
 
 ### What the bifurcation says, exactly
 
-![Diagram 2 from 02_horizons_and_bifurcation](/tmp/master_plan_compile/diagrams/02_horizons_and_bifurcation__2.png)
+![Diagram 2 from 02_horizons_and_bifurcation](diagrams/02_horizons_and_bifurcation__2.png)
 
 
 ### What stays open after the bifurcation
@@ -399,7 +399,7 @@ The five strategic objectives carrying H1 (set in v1.1, refined in this plan):
 
 ### Cytoverse pillar (P1 · the Map)
 
-![Diagram 1 from 03_short_term_1to2y](/tmp/master_plan_compile/diagrams/03_short_term_1to2y__1.png)
+![Diagram 1 from 03_short_term_1to2y](diagrams/03_short_term_1to2y__1.png)
 
 
 **Neuroverse Micro v1 (`SI-Neuroverse-Micro` · M18 · Apache 2.0).** Per the technical-track design, the cellular foundation model is built end-to-end with a molecular foundation model rather than a frozen-dictionary embedding source. Concrete deliverable:
@@ -531,7 +531,7 @@ By end of Year 6, Cytognosis Foundation has delivered:
 
 The bifurcation is a single, dated act of the Foundation Board, supported by the Patient Advocacy Council. It happens at the start of the proprietary clinical study, target M37. Before it, no participant-level continuous tracking data exists; after it, every consent form is structured for the dual-ownership Helix.
 
-![Diagram 1 from 04_mid_term_5to6y](/tmp/master_plan_compile/diagrams/04_mid_term_5to6y__1.png)
+![Diagram 1 from 04_mid_term_5to6y](diagrams/04_mid_term_5to6y__1.png)
 
 
 ## Strategic Objectives covering mid-term
@@ -659,7 +659,7 @@ The long-term plan covers the second half of Horizon 2 (clinical and commerciali
 
 ## Headline diagram
 
-![Diagram 1 from 05_long_term_10y](/tmp/master_plan_compile/diagrams/05_long_term_10y__1.png)
+![Diagram 1 from 05_long_term_10y](diagrams/05_long_term_10y__1.png)
 
 
 ## Long-term strategic objectives
@@ -771,7 +771,7 @@ The Cytognosis Platform is what we build. It has three components, in plain lang
 
 ## The integrated picture
 
-![Diagram 1 from 10_platform_architecture](/tmp/master_plan_compile/diagrams/10_platform_architecture__1.png)
+![Diagram 1 from 10_platform_architecture](diagrams/10_platform_architecture__1.png)
 
 
 The diagram looks like a simple pipeline. The reality is bidirectional and continuous: sensors stream into the map, the map updates each individual's coordinates in real time, the navigator reads coordinates and produces recommendations, the recommendations become interventions, the interventions are themselves logged data that feeds the next cycle.
@@ -850,7 +850,7 @@ All six pillars work simultaneously across all three horizons. Their relative em
 
 The model integrates three forms of data, each with its own role:
 
-![Diagram 2 from 10_platform_architecture](/tmp/master_plan_compile/diagrams/10_platform_architecture__2.png)
+![Diagram 2 from 10_platform_architecture](diagrams/10_platform_architecture__2.png)
 
 
 The Cytoverse map acts as the **mediator variable** in the causal chain from interventions and genetic factors to clinically and personally relevant outcomes. This mediator role is what makes the navigation recommendations causal rather than associational, and it is what makes counterfactual estimation possible: with the map fixed as a state representation, we can ask "what would happen to this person if they took this intervention given this genotype and this current state?"
@@ -898,7 +898,7 @@ The shared building blocks:
 
 ## The general framework
 
-![Diagram 1 from 11_technical_track_FMs](/tmp/master_plan_compile/diagrams/11_technical_track_FMs__1.png)
+![Diagram 1 from 11_technical_track_FMs](diagrams/11_technical_track_FMs__1.png)
 
 
 The same framework applies at two scales:
@@ -935,7 +935,7 @@ A core decision from the 2026-05-07 meeting: the multi-resolution wavelet plus c
 
 This is what makes parallel development tractable. Both tracks consume the same package; both tracks contribute back to the same package; benchmarks at the package level apply to both. When one track finds a bug or improvement, both tracks benefit.
 
-![Diagram 2 from 11_technical_track_FMs](/tmp/master_plan_compile/diagrams/11_technical_track_FMs__2.png)
+![Diagram 2 from 11_technical_track_FMs](diagrams/11_technical_track_FMs__2.png)
 
 
 ## Multi-scale nested foundation models
@@ -957,7 +957,7 @@ The molecular FM is a **trainable component** of the cellular FM, connected thro
 
 This is more expensive computationally. It is also fundamentally what gives us the cross-scale modeling capability that the static-dictionary approach forecloses. The Astera proposal funds this approach explicitly because it is a research bet that scPrint2 and TranscriptFormer cannot make.
 
-![Diagram 3 from 11_technical_track_FMs](/tmp/master_plan_compile/diagrams/11_technical_track_FMs__3.png)
+![Diagram 3 from 11_technical_track_FMs](diagrams/11_technical_track_FMs__3.png)
 
 
 ## Conditional flow matching of the residual space
@@ -1091,7 +1091,7 @@ Before any internal data collection or clinical study, build alignment models ag
 
 Consented internal core team (3 to 5 people) wears research headsets (fNIRS plus EEG) plus undergoes initial clinical fMRI plus EEG. This is the dress rehearsal: the same individual wears every modality so we can validate alignment models end-to-end on the same person.
 
-![Diagram 1 from 12_clinical_to_wearable](/tmp/master_plan_compile/diagrams/12_clinical_to_wearable__1.png)
+![Diagram 1 from 12_clinical_to_wearable](diagrams/12_clinical_to_wearable__1.png)
 
 
 The pilot is small (intentionally) because the goal is validation of the alignment pipeline, not statistical power for cohort-level claims. The dataset is released as an open public good under CC BY 4.0 with consent and DP gating.
@@ -1181,7 +1181,7 @@ Each cell of this matrix is a sensor category. UBAP is the open standard that le
 
 ## Universal Biosensor Adapter Protocol (UBAP)
 
-![Diagram 1 from 13_sensor_ecosystem](/tmp/master_plan_compile/diagrams/13_sensor_ecosystem__1.png)
+![Diagram 1 from 13_sensor_ecosystem](diagrams/13_sensor_ecosystem__1.png)
 
 
 ### What UBAP specifies
@@ -1205,7 +1205,7 @@ Each cell of this matrix is a sensor category. UBAP is the open standard that le
 
 UBAP is the standard that enables a plug-in ecosystem. Companies, hospitals, academic groups, and individual makers can build plug-ins that bring their signals into the Cytognosis platform without giving us their raw data.
 
-![Diagram 2 from 13_sensor_ecosystem](/tmp/master_plan_compile/diagrams/13_sensor_ecosystem__2.png)
+![Diagram 2 from 13_sensor_ecosystem](diagrams/13_sensor_ecosystem__2.png)
 
 
 ### Plug-in modes
@@ -1300,7 +1300,7 @@ Cytonome converts a person's continuous health-state coordinates into actionable
 
 Causal recommendation operates in three distinct modes, each tied to a different relationship between current state and desired state.
 
-![Diagram 1 from 14_navigation_recommendations](/tmp/master_plan_compile/diagrams/14_navigation_recommendations__1.png)
+![Diagram 1 from 14_navigation_recommendations](diagrams/14_navigation_recommendations__1.png)
 
 
 ### Defensive (protective)
@@ -1419,7 +1419,7 @@ Five principles drive every product decision:
 
 ## Primary sections
 
-![Diagram 1 from 15_app_design](/tmp/master_plan_compile/diagrams/15_app_design__1.png)
+![Diagram 1 from 15_app_design](diagrams/15_app_design__1.png)
 
 
 ### Home: bidirectional guardian-coach
@@ -1478,7 +1478,7 @@ This is a social network built on biology rather than self-declared identity. Th
 
 Each user can optionally add their loved ones, including children and pets, to be tracked alongside themselves in the same app. Each loved-one type is a distinct market with its own product surface but shares the underlying platform.
 
-![Diagram 2 from 15_app_design](/tmp/master_plan_compile/diagrams/15_app_design__2.png)
+![Diagram 2 from 15_app_design](diagrams/15_app_design__2.png)
 
 
 ### Kids
@@ -1549,7 +1549,7 @@ Three concrete failure modes in adjacent products inform the architecture:
 
 ## The four-tier compute architecture
 
-![Diagram 1 from 16_patient_safety_architecture](/tmp/master_plan_compile/diagrams/16_patient_safety_architecture__1.png)
+![Diagram 1 from 16_patient_safety_architecture](diagrams/16_patient_safety_architecture__1.png)
 
 
 ### Tier 1: Perception (phone)
@@ -1604,7 +1604,7 @@ Tier 4 produces:
 
 ## Consent architecture
 
-![Diagram 2 from 16_patient_safety_architecture](/tmp/master_plan_compile/diagrams/16_patient_safety_architecture__2.png)
+![Diagram 2 from 16_patient_safety_architecture](diagrams/16_patient_safety_architecture__2.png)
 
 
 Every data flow from Tier 1 outward is gated by an explicit, granular, machine-readable consent record:
@@ -1676,7 +1676,7 @@ This document captures the operating-model layer using the McKinsey 12-element o
 
 ## The Helix structure
 
-![Diagram 1 from 20_organization_helix](/tmp/master_plan_compile/diagrams/20_organization_helix__1.png)
+![Diagram 1 from 20_organization_helix](diagrams/20_organization_helix__1.png)
 
 
 The Helix is a federated structure with one parent (the Foundation) and two classes of children (the PBC subsidiary and, eventually, regional sister organizations). Each child is independently governed within constraints set by the Foundation through bylaws and license terms. The Foundation does not run product, but it cannot lose control of the open mission.
@@ -1873,7 +1873,7 @@ Selection criteria:
 
 ## Operating model
 
-![Diagram 1 from 21_patient_advocacy_council](/tmp/master_plan_compile/diagrams/21_patient_advocacy_council__1.png)
+![Diagram 1 from 21_patient_advocacy_council](diagrams/21_patient_advocacy_council__1.png)
 
 
 PAC meets quarterly at minimum, with ad-hoc reviews triggered by specific decision needs (e.g., before a study IRB submission, before a major release, before a bifurcation policy change).
@@ -2097,7 +2097,7 @@ The release pipeline (`SI-Release-Pipeline`, M12 deliverable) gates every public
 
 Per `02_horizons_and_bifurcation.md`, the bifurcation is the single structured exception to open-by-default. In licensing terms:
 
-![Diagram 1 from 23_open_science_and_ip](/tmp/master_plan_compile/diagrams/23_open_science_and_ip__1.png)
+![Diagram 1 from 23_open_science_and_ip](diagrams/23_open_science_and_ip__1.png)
 
 
 The PBC subsidiary, post-activation, holds defined IP in the proprietary categories and pays the Foundation:
@@ -2181,7 +2181,7 @@ The Cytognosis Foundation funding strategy is a portfolio across three categorie
 
 ## The portfolio at a glance
 
-![Diagram 1 from 30_funding_strategy](/tmp/master_plan_compile/diagrams/30_funding_strategy__1.png)
+![Diagram 1 from 30_funding_strategy](diagrams/30_funding_strategy__1.png)
 
 
 ## Active grants (as of compilation)
@@ -2319,7 +2319,7 @@ This document gives the consolidated view of the milestone roadmap and the KPIs 
 
 ## The 10-year milestone Gantt
 
-![Diagram 1 from 40_milestones_and_kpis](/tmp/master_plan_compile/diagrams/40_milestones_and_kpis__1.png)
+![Diagram 1 from 40_milestones_and_kpis](diagrams/40_milestones_and_kpis__1.png)
 
 
 ## KPIs by horizon
@@ -2401,7 +2401,7 @@ The Cytognosis risk register is maintained on the Risks Register Monday board. T
 
 ## Risk matrix
 
-![Diagram 1 from 41_risks_and_mitigations](/tmp/master_plan_compile/diagrams/41_risks_and_mitigations__1.png)
+![Diagram 1 from 41_risks_and_mitigations](diagrams/41_risks_and_mitigations__1.png)
 
 
 ## Strategic-level risk register

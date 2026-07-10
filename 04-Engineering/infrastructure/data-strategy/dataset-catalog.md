@@ -11,9 +11,9 @@ This document serves as the comprehensive registry of datasets managed, accessed
 > [!NOTE]
 > **Neuroverse cohort detail**: For the full dataset-by-dataset breakdown of the Neuroverse program
 > (batches 1-3, modality coverage matrix, data volumes, DUC submission sequence), see
-> [programs/neuroverse/datasets-cohorts.md](../programs/neuroverse/datasets-cohorts.md).
+> [programs/neuroverse/datasets-cohorts.md](../../../05-Research/neuroverse/datasets-cohorts.md).
 > The compliance requirements for these cohorts are tracked in
-> [HIPAA-STATUS.md](compliance/HIPAA-STATUS.md) and [nih-gds-requirements.md](compliance/nih-gds-requirements.md).
+> [HIPAA-STATUS.md](../../../06-Operations/data-strategy/compliance/HIPAA-STATUS.md) and [nih-gds-requirements.md](../../../06-Operations/data-strategy/compliance/nih-gds-requirements.md).
 
 ## 1. Dataset Stratification
 
