@@ -1,5 +1,7 @@
 # Neurobehavioral phenotype feature space (agent brief)
 
+> **Variants**: Agent seed (this doc) - Technical (see docs repo 05-Research/neuroverse/) - Readable (neurobehavioral-phenotype-feature-space.md in Obsidian vault)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Variant:** agent (self-contained). **Technical source:** [neurobehavioral-phenotype-feature-space.md](neurobehavioral-phenotype-feature-space.md).
 
 ## Goal
