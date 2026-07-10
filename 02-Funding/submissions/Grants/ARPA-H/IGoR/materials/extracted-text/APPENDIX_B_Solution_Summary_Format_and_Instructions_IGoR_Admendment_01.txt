@@ -1,0 +1,76 @@
+<PRIME ORGANIZATION LOGO (optional)>
+
+[TABLE]
+| Innovative Solutions Opening Title |  |
+|---|---|
+| Solution Summary Title |  |
+| Prime Organization Name |  |
+| Prime Organization Type | Choose all that apply: / ☐ For-Profit  ☐ Non-profit  ☐ Academia |
+| SAM.gov Universal Entity Identifier (UEI) (If already registered, not required at Solution Summary stage) |  |
+| Contact Address - State |  |
+| Key Personnel/Staff | Name: / Email: / Organization: / (Repeat, as necessary) |
+| Prime Technical Point of Contact (POC) | Name: / Mailing Address: / Telephone: / Email: |
+| Prime Administrative POC | Name: / Mailing Address: / Telephone: / Email: |
+| Estimated Project Duration | ____ Months |
+| Animal Subjects | ☐ Yes  ☐ No |
+| Human Subjects | ☐ Yes  ☐ No |
+| Total Funds Requested From ARPA-H (including all phases) | Total: $ ___________________________ |
+| Resource Sharing (if applicable) | Gov’t %____                $ _______________________ / Performer % ____      $ _______________________ |
+| Place(s) of Performance |  |
+[/TABLE]
+
+
+[TABLE]
+| SUB-AWARDEE AND CONSULTANT / TEAM MEMBERS / (Add rows as necessary) | SUB-AWARDEE AND CONSULTANT / TEAM MEMBERS / (Add rows as necessary) |
+|---|---|
+| Organization Name: |  |
+| Technical POC Name: |  |
+| Organization Type(s): | Choose all that apply: / ☐ For-Profit / ☐ Non-Profit / ☐ Academia |
+| Organization Name: |  |
+| Technical POC Name: |  |
+| Organization Type(s): | Choose all that apply: / ☐ For-Profit / ☐ Non-Profit / ☐ Academia |
+| Organization Name: |  |
+| Technical POC Name: |  |
+| Organization Type(s): | Choose all that apply: / ☐ For-Profit / ☐ Non-Profit / ☐ Academia |
+| Organization Name: |  |
+| Technical POC Name: |  |
+| Organization Type(s): | Choose all that apply: / ☐ For-Profit / ☐ Non-Profit / ☐ Academia |
+[/TABLE]
+
+Note: Content recommendations are displayed in blue font and should be deleted by the proposer before submitting the Solution Summary.
+Solution submissions are due by the date listed in the ISO Summary Information Section. All proposal documents must be submitted in .pdf, .odx, .doc, or .docx formats. All submissions must be written in English and all pages must be formatted for printing on 8-1/2 by 11-inch paper with 1-inch margins and sans serif font size not smaller than 11 point. Font sizes of 8 or 10 point may be used for figures, tables, and charts. Sections 1-4 below are limited to 5 pages total.
+  - CONCEPT SUMMARY
+Describe the Solution Summary concept with minimal jargon and explain how it addresses the ISO interest areas.
+  - INNOVATION AND IMPACT
+Clearly identify the outcome(s) sought and/or the problem(s) to be solved with the proposed technology concept. Describe how the proposed effort represents an innovative and potentially revolutionary solution to the ISO interest areas. Explain the concept’s potential to be disruptive compared to existing and emerging technologies. To the extent possible, provide quantitative metrics in a table that compares the proposed technology concept to current and emerging technologies, which may include:
+  - A progression of increasingly complex technical challenges.
+  - State of the art / emerging technology “baseline.”
+  - Aggressive metrics for each year of the proposed project.
+  - Summary of specific outcomes from the proposed project or concept.
+  - PROPOSED WORK
+Describe the final deliverable(s) for the project, key interim milestones, and the overall technical approach used to achieve project objectives. Provide a concrete research plan at a level of detail that can be used to assess novelty, scientific and technical merit, and feasibility. Discuss alternative approaches considered, if any, and why the proposed approach is most appropriate for the project objectives. Describe the background, theory, simulation, modeling, experimental data, or other sound engineering and scientific practices or principles that support the proposed approach. Provide specific examples of supporting data and/or appropriate citations to the scientific and technical literature. Identify adoption challenges to be overcome for the proposed technology to be successful. Describe why the proposed effort is a significant technical challenge and the key technical risks. ARPA-H expects projects to have substantial technical risk counterbalanced with the potential for transformative impact, which must be clearly addressed within the submission.
+  - TEAM ORGANIZATION AND CAPABILITIES:
+  - Indicate the roles and responsibilities of the organizations and key personnel comprising the Project Team.
+  - Provide the name, position, and institution of each key team member and describe in 1-2 sentences the skills and experience they bring to the team. Key team members include the individuals who are expected to contribute to the scientific development or execution of the project in a substantive, measurable way.
+  - BASIS OF ESTIMATE (BOE) - Not Included in The Page Limit:
+  - Identify a BOE that encompasses all costs and resources for the entire proposed project team. The BOE should include direct labor, materials, supplies, equipment, travel, profit/fee, indirect costs, and any other costs associated with the proposed project.
+  - The BOE should identify whether resource sharing applies. Please further describe your value proposition and/or return on investment for this effort for the U.S. taxpayer beyond scientific or technical outcomes. The following table may be used:
+
+[TABLE]
+| Categories | Amount |
+|---|---|
+| Direct Labor (fully burdened) |  |
+| Labor hours |  |
+| Subcontracts/Consultants |  |
+| Materials |  |
+| Equipment |  |
+| Travel |  |
+| Other Direct Costs |  |
+| Indirect Costs |  |
+| Profit |  |
+| Total (including all phases) |  |
+| Resource Sharing (if applicable) |  |
+[/TABLE]
+
+  - References Cited – Not Included in The Page Limit
+  - For any references cited in the Solution Summary, provide uniquely identifying bibliographic information in this section, including first author, title, source (e.g., journal or book), year of publication, volume and page numbers (if applicable), and a persistent identifier, such as a DOI or PubMed ID, where available.

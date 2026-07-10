@@ -1,0 +1,14 @@
+{
+  "title": "IGoR Partner One-Pager",
+  "output_basename": "IGoR_OnePager",
+  "date": "2026-06-14",
+  "audience": "Prospective TA3 and TA4 partners; internal approval (Ananth Grama)",
+  "profile_note": "Shareable, partner-facing. No proprietary, personal, or internal-decision content.",
+  "sections": [
+    {"file": "00_header.md", "restricted": false},
+    {"file": "10_opportunity_and_vision.md", "restricted": false},
+    {"file": "20_what_we_bring.md", "restricted": false},
+    {"file": "30_what_we_seek.md", "restricted": false},
+    {"file": "40_team_and_contact.md", "restricted": false}
+  ]
+}

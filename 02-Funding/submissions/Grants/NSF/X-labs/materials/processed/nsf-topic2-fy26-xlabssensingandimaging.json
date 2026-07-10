@@ -1,0 +1,82 @@
+{
+  "title": "Scientific Instrumentation For Sensing And Imaging (NSF-Topic2-FY26-XLabsSensingandImaging)",
+  "funder_name": "National Science Foundation (NSF) Directorate for Technology, Innovation and Partnerships (TIP)",
+  "deadlines": [
+    {
+      "date": "July 6, 2026",
+      "label": "Questions Deadline",
+      "type": "hard"
+    },
+    {
+      "date": "July 13, 2026",
+      "label": "Written Proposal Submission Deadline",
+      "type": "hard"
+    }
+  ],
+  "eligibility": {
+    "entity_types": [
+      "Any eligible organization (Maximum of two Written Proposals for Phase 0 as lead)"
+    ],
+    "exclusions": [
+      "Senior/Key Personnel on more than one Written Proposal per Topic"
+    ],
+    "restrictions": [
+      "Must align with current Topic Announcement",
+      "Must propose novel platform technology and use-inspired research solutions"
+    ]
+  },
+  "funding": {
+    "min_award": null,
+    "max_award": null,
+    "phases": [
+      "Phase 0 (9-month)",
+      "Phase 1 (24-36 month)",
+      "Phase 2"
+    ],
+    "cost_share": false,
+    "indirect_cost_rule": null
+  },
+  "timeline": [
+    {
+      "event": "Oral Presentations",
+      "date_or_duration": "August 17 to August 21, 2026",
+      "phase": "Pre-award"
+    },
+    {
+      "event": "Beginning of Phase 0",
+      "date_or_duration": "November 2026",
+      "phase": "Phase 0"
+    },
+    {
+      "event": "Beginning of Phase 1 Go/No Go Selection",
+      "date_or_duration": "June 2027",
+      "phase": "Phase 0/1 Transition"
+    },
+    {
+      "event": "Beginning of Phase 1",
+      "date_or_duration": "August 2027",
+      "phase": "Phase 1"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "NSF X-Labs Team",
+      "role": "General Contact",
+      "email": "XLabs@nsf.gov",
+      "phone": null,
+      "org": "NSF"
+    }
+  ],
+  "requirements": [
+    {
+      "req_type": "submission",
+      "description": "Proposals must be submitted electronically via the NSF submission website",
+      "value": "https://nsfgov.my.site.com/xlabs"
+    },
+    {
+      "req_type": "submission",
+      "description": "Subject line of questions must include topic title",
+      "value": "NSF-Topic2-FY26-XLabsSensingandImaging"
+    }
+  ]
+}

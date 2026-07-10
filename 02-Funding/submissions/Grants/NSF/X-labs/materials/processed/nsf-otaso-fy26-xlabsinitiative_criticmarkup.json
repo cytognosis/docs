@@ -1,0 +1,73 @@
+{
+  "title": "NSF X-Labs Initiative",
+  "funder_name": "National Science Foundation (NSF)",
+  "deadlines": [
+    {
+      "date": "Letters of Intent: [insert date]",
+      "label": "Letters of Intent",
+      "type": "hard"
+    },
+    {
+      "date": "Full Proposals: [insert date]",
+      "label": "Full Proposals",
+      "type": "rolling"
+    }
+  ],
+  "eligibility": {
+    "entity_types": [
+      "Small Business",
+      "University",
+      "Non-profit"
+    ],
+    "exclusions": [
+      "U.S. proscribed parties",
+      "Entities on the Entity List",
+      "Denied Persons",
+      "Debarred Parties",
+      "Nonproliferation Sanctions",
+      "Equipment and Services Covered by Section 2 of The Secure Networks Act"
+    ],
+    "restrictions": [
+      "Individuals who are citizens of the Democratic People’s Republic of North Korea, the People’s Republic of China, the Russian Federation, or the Islamic Republic of Iran may not serve as Senior/Key Personnel."
+    ]
+  },
+  "funding": {
+    "min_award": "$1,500,000",
+    "max_award": "$50,000,000 per year",
+    "phases": [
+      "Phase 0",
+      "Phase 1",
+      "Phase 2"
+    ],
+    "cost_share": true,
+    "indirect_cost_rule": "NSF will follow the standard indirect cost rate for universities and other organizations."
+  },
+  "timeline": [
+    {
+      "event": "Team Kickoff Meeting",
+      "date_or_duration": "First month of Phase 0",
+      "phase": null
+    },
+    {
+      "event": "Data Management and Privacy Plan submission",
+      "date_or_duration": "Limited to 2 pages",
+      "phase": null
+    }
+  ],
+  "contacts": [
+    {
+      "name": "John Doe",
+      "role": "Program Officer",
+      "email": "johndoe@example.com",
+      "phone": "123-456-7890",
+      "org": "National Science Foundation (NSF)"
+    }
+  ],
+  "requirements": [
+    {
+      "req_type": "formatting",
+      "description": "Written Proposals should be direct, concise, and not exceed 8 single-sided pages exclusive of the Conflicts of Interest statement.",
+      "value": null
+    }
+  ]
+}

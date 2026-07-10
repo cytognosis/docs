@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 600" width="760" height="600" font-family="Inter, 'DejaVu Sans', Arial, sans-serif">
+  <defs>
+    <radialGradient id="hexFill" cx="40%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#1C3559"/>
+      <stop offset="70%" stop-color="#122541"/>
+      <stop offset="100%" stop-color="#0C1B33"/>
+    </radialGradient>
+    <linearGradient id="hexStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#45C3DD"/>
+      <stop offset="50%" stop-color="#8B3FC7"/>
+      <stop offset="100%" stop-color="#E0309E"/>
+    </linearGradient>
+    <linearGradient id="cycle" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2C9DB5"/>
+      <stop offset="100%" stop-color="#45C3DD"/>
+    </linearGradient>
+    <linearGradient id="sigC" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3B7DD6"/>
+      <stop offset="50%" stop-color="#8B3FC7"/>
+      <stop offset="100%" stop-color="#E0309E"/>
+    </linearGradient>
+    <radialGradient id="nucleus" cx="36%" cy="32%" r="72%">
+      <stop offset="0%" stop-color="#D7BEF5"/>
+      <stop offset="40%" stop-color="#8B3FC7"/>
+      <stop offset="100%" stop-color="#4C3F9C"/>
+    </radialGradient>
+    <radialGradient id="brainGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#6A4FD0" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#6A4FD0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeC" cx="34%" cy="28%" r="80%"><stop offset="0%" stop-color="#9EE4F1"/><stop offset="100%" stop-color="#2C9DB5"/></radialGradient>
+    <linearGradient id="psychGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B3FC7"/>
+      <stop offset="100%" stop-color="#E0309E"/>
+    </linearGradient>
+    <filter id="hglow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="softline" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="nglow" x="-120%" y="-120%" width="340%" height="340%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="cyc" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2C9DB5"/></marker>
+  </defs>
+
+  <!-- closed-loop cycle: the four-TA IGoR loop framing the badge -->
+  <g fill="none" stroke="url(#cycle)" stroke-width="7" stroke-linecap="round">
+    <path d="M295.5,53.7 A200,200 0 0 1 464.5,53.7" marker-end="url(#cyc)"/>
+    <path d="M561.3,150.5 A200,200 0 0 1 561.3,319.5" marker-end="url(#cyc)"/>
+    <path d="M464.5,416.3 A200,200 0 0 1 295.5,416.3" marker-end="url(#cyc)"/>
+    <path d="M198.7,319.5 A200,200 0 0 1 198.7,150.5" marker-end="url(#cyc)"/>
+  </g>
+
+  <!-- hexagon badge (IGoR motif) -->
+  <polygon points="210,235 295,87.8 465,87.8 550,235 465,382.2 295,382.2" fill="url(#hexFill)" filter="url(#hglow)"/>
+  <polygon points="210,235 295,87.8 465,87.8 550,235 465,382.2 295,382.2" fill="none" stroke="url(#hexStroke)" stroke-width="4.5"/>
+
+  <!-- brain glow -->
+  <ellipse cx="382" cy="236" rx="120" ry="105" fill="url(#brainGlow)"/>
+
+  <!-- subtle Cytognosis "C" membrane arc, hugging the frontal lobe -->
+  <path d="M300,176 C262,196 258,276 304,304" fill="none" stroke="url(#sigC)" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- BRAIN silhouette (side profile: frontal lobe left, cerebellum + brainstem lower-right) -->
+  <path d="M300,300 C272,288 270,234 296,204 C310,178 336,162 366,161 C404,159 442,172 460,200 C478,226 472,262 450,281 C466,291 466,308 449,315 C446,330 422,329 414,315 C402,323 360,324 336,316 C320,311 309,307 300,300 Z"
+        fill="#34297A" fill-opacity="0.40" stroke="#5FD0E6" stroke-width="3.4" stroke-linejoin="round" filter="url(#softline)"/>
+
+  <!-- gyri / sulci folds -->
+  <g fill="none" stroke="#7FE0F0" stroke-width="2.4" opacity="0.72" stroke-linecap="round">
+    <path d="M366,168 C360,206 374,250 360,300"/>
+    <path d="M312,212 C330,198 356,196 372,210"/>
+    <path d="M372,210 C392,196 422,198 438,218"/>
+    <path d="M318,250 C342,236 372,240 392,256"/>
+    <path d="M392,256 C412,246 432,250 448,266"/>
+    <path d="M306,236 C292,250 296,272 312,282"/>
+  </g>
+
+  <!-- sparse neural network woven into the gyri -->
+  <g stroke="#39A7BE" stroke-width="2.2" opacity="0.5" stroke-linecap="round">
+    <line x1="382" y1="236" x2="332" y2="198"/>
+    <line x1="382" y1="236" x2="438" y2="218"/>
+    <line x1="382" y1="236" x2="320" y2="250"/>
+    <line x1="382" y1="236" x2="446" y2="266"/>
+    <line x1="382" y1="236" x2="360" y2="300"/>
+    <line x1="332" y1="198" x2="372" y2="210"/>
+    <line x1="372" y1="210" x2="438" y2="218"/>
+  </g>
+  <g>
+    <circle cx="332" cy="198" r="8" fill="url(#nodeC)"/>
+    <circle cx="372" cy="210" r="7" fill="#8B3FC7"/>
+    <circle cx="438" cy="218" r="8" fill="url(#nodeC)"/>
+    <circle cx="320" cy="250" r="7" fill="url(#nodeC)"/>
+    <circle cx="446" cy="266" r="8" fill="#E0309E"/>
+    <circle cx="360" cy="300" r="7" fill="url(#nodeC)"/>
+  </g>
+
+  <!-- glowing causal nucleus (Cytognosis core + IGoR cluster) -->
+  <circle cx="382" cy="236" r="20" fill="url(#nucleus)" filter="url(#nglow)"/>
+  <ellipse cx="375" cy="229" rx="6.8" ry="4.2" fill="#FFFFFF" opacity="0.32" transform="rotate(-18,375,229)"/>
+
+  <!-- wordmark -->
+  <text x="380" y="492" text-anchor="middle" font-size="68" font-weight="800" letter-spacing="0.5">
+    <tspan fill="url(#psychGrad)">Psych</tspan><tspan fill="#16294A">IGoR</tspan>
+  </text>
+  <text x="380" y="528" text-anchor="middle" fill="#1F7E91" font-size="20.5" font-weight="600" letter-spacing="0.3">ARPA-H IGoR Team &#160;&#183;&#160; Schizophrenia &#8594; Bipolar Disorder</text>
+  <text x="380" y="556" text-anchor="middle" fill="#7C8DA6" font-size="13.5" font-weight="500">Purdue IPAI &#183; Cytognosis &#183; Phylo &#183; SIFT &#183; Carpenter Lab &#183; Cellanome &#183; Illumina &#183; McLean/HMS</text>
+</svg>

@@ -1,0 +1,84 @@
+NOTE: Blue font is instructional and should be deleted prior to document
+submission.
+
+<PRIME ORGANIZATION LOGO (OPTIONAL)>
+
++---------------------+-----------------------------------------------------------+
+| Proposal Title      |                                                           |
++====================:+===========================:+==============================+
+| Prime Organization  |                                                           |
++---------------------+----------------------------+------------------------------+
+| SAM.gov Universal Entity ID (UEI) Number         |                              |
++--------------------------------------------------+------------------------------+
+| Proposer’s Internal Reference Number, if any     |                              |
++--------------------------------------------------+------------------------------+
+| Total price is inclusive of all phases and any   | Total:                       |
+| proposed resource sharing.                       | $_____________________       |
+|                                                  |                              |
+|                                                  |   Phase I: $_______________  |
+|                                                  |                              |
+|                                                  |   Phase II: $_______________ |
+|                                                  |                              |
+|                                                  | Phase III: $_______________  |
++--------------------------------------------------+------------------------------+
+| Resource Sharing (if applicable) Government and  | Gov’t %____ $                |
+| Performer resource-sharing prices must sum to    | _______________________      |
+| the Total price.                                 |                              |
+|                                                  | Performer % $                |
+|                                                  | _______________________      |
++--------------------------------------------------+------------------------------+
+
+TABLE OF CONTENTS
+
+1. LEVEL OF EFFORT AND LABOR 1
+
+2. EQUIPMENT PURCHASES 1
+
+3. TRAVEL 1
+
+4. OTHER DIRECT COSTS (ODCS) 1
+
+5. RESOURCE SHARING 1
+
+PRICE DETAILS
+
+Proposers should provide the following details and include supporting
+documentation as necessary that describes the method(s) and/or
+assumptions used to estimate proposed prices. Information must be
+provided for all team members (prime, sub, consultant, etc.).
+
+LEVEL OF EFFORT AND LABOR 
+
+  Provide the levels of effort related to personnel who will contribute
+  to the project. These levels of effort may be substantiated by
+  defining key labor categories aligned to fully burdened labor rates
+  with the assigned estimated number of labor hours.
+
+EQUIPMENT PURCHASES
+
+  Provide an itemized list of all anticipated equipment including
+  quantities, unit prices, proposed vendors (if known), and the basis of
+  estimate (e.g., quotes, prior purchases, catalog price lists, etc.).
+  Any item that exceeds $10,000 in total price must be supported with
+  back-up documentation (e.g., a copy of catalog price lists, past
+  purchase order(s), invoice(s), vendor quotes prior to purchase, etc.).
+  Include any assumptions the proposer has that it will receive
+  government-furnished equipment.
+
+TRAVEL
+
+  Provide justification explaining why each proposed trip is necessary
+  and how it supports specific tasks or milestones.
+
+OTHER DIRECT COSTS (ODCS)
+
+  Provide a list of all anticipated ODCs (e.g., graduate student
+  tuition, computer maintenance and/or user fees, etc.) with
+  explanations of how they contribute to the project.
+
+RESOURCE SHARING 
+
+  Provide the source(s), nature, and amount(s) of proposed resource
+  sharing. Include details of the Resource Share commitment, including
+  percentages, nature of the contribution, cash or in-kind
+  contributions, etc.

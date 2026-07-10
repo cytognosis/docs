@@ -1,0 +1,7 @@
+## 1. Concept Summary
+
+IGoR calls for a closed loop that turns hypotheses into validated knowledge at least **10x faster**: mechanistic disease models (TA1), an AI engine that designs experiments (TA2), interoperable protocols (TA3), and a validated-laboratory marketplace (TA4). We propose that loop for **psychiatric disease, beginning with schizophrenia and extending to bipolar disorder**, a domain where mechanism is poorly understood and where a model that learns causally from each experiment would be transformative.
+
+Our distinctive idea is to treat **disease-associated genetic variation as the perturbation** that drives cellular biology, and to build a **mechanistic, multiscale, self-updating causal model (TA1)** of how that perturbation moves cells from health toward disease. An AI **New Science Engine (TA2)** interrogates that model itself, not just the literature, to find the most informative knowledge gap and design the next experiment; **interoperable protocols (TA3)** carry that experiment to **validated laboratories (TA4)** that return model-ready data, which updates the model and closes the loop.
+
+Because schizophrenia is largely polygenic and hard to model in a dish, we begin from its **penetrant, near-Mendelian forms** (the 22q11.2 deletion and large-effect rare-variant genes), engineered as **isogenic iPSC pairs**, exactly as familial Alzheimer and Parkinson variants made those diseases tractable in cells. The proposal addresses all four ISO interest areas while concentrating our deepest contribution in TA1.

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" font-family="Inter, 'DejaVu Sans', Arial, sans-serif">
+  <defs>
+    <radialGradient id="disc" cx="50%" cy="38%" r="60%"><stop offset="0%" stop-color="#E7F7FB"/><stop offset="64%" stop-color="#F3FAFD"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient>
+    <linearGradient id="topbar" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1F7E91"/><stop offset="55%" stop-color="#45C3DD"/><stop offset="100%" stop-color="#8B3FC7"/></linearGradient>
+    <radialGradient id="hub" cx="38%" cy="30%" r="80%"><stop offset="0%" stop-color="#26517F"/><stop offset="100%" stop-color="#102742"/></radialGradient>
+    <filter id="ndsh" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#13314a" flood-opacity="0.16"/></filter>
+    <marker id="ahT" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1F7E91"/></marker>
+    <marker id="ahO" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#E07A1F"/></marker>
+  </defs>
+
+  <rect width="600" height="600" fill="#FFFFFF"/>
+  <rect x="1" y="1" width="598" height="598" fill="none" stroke="#E6EDF3" stroke-width="2"/>
+  <rect width="600" height="10" fill="url(#topbar)"/>
+  <circle cx="300" cy="210" r="202" fill="url(#disc)"/>
+
+  <rect x="40" y="40" width="116" height="46" rx="23" fill="#16385B"/>
+  <text x="98" y="71" text-anchor="middle" fill="#FFFFFF" font-size="25" font-weight="700" letter-spacing="1.5">TA 4</text>
+  <rect x="404" y="46" width="154" height="42" rx="21" fill="#E6F6EC" stroke="#2E9E6E" stroke-width="2"/>
+  <text x="481" y="73" text-anchor="middle" fill="#1E7D52" font-size="18" font-weight="700">QC &#8805; 90%</text>
+
+  <!-- order hub -->
+  <circle cx="80" cy="210" r="26" fill="url(#hub)" filter="url(#ndsh)"/>
+  <g stroke="#5FD0E6" stroke-width="3" fill="none" stroke-linecap="round"><path d="M70,203 L90,203" marker-end="url(#ahT)"/><path d="M90,217 L70,217"/></g>
+  <text x="80" y="252" text-anchor="middle" fill="#5A6B86" font-size="12" font-weight="600">order</text>
+  <path d="M104,196 C124,176 130,168 142,160" stroke="#1F7E91" stroke-width="3" fill="none" marker-end="url(#ahT)"/>
+  <path d="M104,224 C124,244 130,252 142,262" stroke="#1F7E91" stroke-width="3" fill="none" marker-end="url(#ahT)"/>
+
+  <!-- ===== Lane A: Cellanome R3200 ===== -->
+  <text x="250" y="116" text-anchor="middle" fill="#1F7E91" font-size="13.5" font-weight="700">Cellanome R3200 &#183; live-cell + Perturb-seq</text>
+  <!-- flow cell + CellCages -->
+  <rect x="150" y="132" width="58" height="40" rx="6" fill="#FFFFFF" stroke="#16385B" stroke-width="2"/>
+  <g stroke="#BFD7E0" stroke-width="1.5"><line x1="166" y1="134" x2="166" y2="170"/><line x1="179" y1="134" x2="179" y2="170"/><line x1="192" y1="134" x2="192" y2="170"/></g>
+  <path d="M163,145 l6,-4 l6,4 l-2,7 l-8,0 z" fill="none" stroke="#45C3DD" stroke-width="1.8"/><circle cx="169" cy="149" r="2.4" fill="#8B3FC7"/>
+  <path d="M183,158 l6,-4 l6,4 l-2,7 l-8,0 z" fill="none" stroke="#45C3DD" stroke-width="1.8"/><circle cx="189" cy="162" r="2.4" fill="#E0309E"/>
+  <path d="M210,152 L236,152" stroke="#1F7E91" stroke-width="3" fill="none" marker-end="url(#ahT)"/>
+  <!-- live-cell imaging -->
+  <circle cx="258" cy="152" r="18" fill="#EAF7FA" stroke="#16385B" stroke-width="2"/>
+  <circle cx="258" cy="152" r="6" fill="#8B3FC7"/>
+  <path d="M272,140 a18 18 0 0 1 3,11" fill="none" stroke="#E0309E" stroke-width="2.4" stroke-linecap="round" marker-end="url(#ahT)"/>
+  <path d="M280,152 L300,152" stroke="#1F7E91" stroke-width="3" fill="none" marker-end="url(#ahT)"/>
+  <!-- barcoded cDNA -->
+  <g stroke="#2C9DB5" stroke-width="2.4" fill="none" stroke-linecap="round"><path d="M312,142 C322,150 312,162 322,170"/><path d="M324,142 C314,150 324,162 314,170"/></g>
+  <g fill="#16385B"><rect x="332" y="144" width="3" height="22"/><rect x="338" y="144" width="2" height="22"/><rect x="343" y="144" width="4" height="22"/><rect x="350" y="144" width="2" height="22"/></g>
+
+  <!-- ===== Lane B: Illumina ===== -->
+  <text x="250" y="312" text-anchor="middle" fill="#1F7E91" font-size="13.5" font-weight="700">Illumina &#183; PIP + NovaSeq X (Billion Cell Atlas)</text>
+  <!-- PIP droplets -->
+  <circle cx="158" cy="262" r="13" fill="#EAF7FA" stroke="#16385B" stroke-width="1.8"/><circle cx="158" cy="262" r="4" fill="#3B7DD6"/>
+  <circle cx="176" cy="276" r="13" fill="#EAF7FA" stroke="#16385B" stroke-width="1.8"/><circle cx="176" cy="276" r="4" fill="#8B3FC7"/>
+  <circle cx="158" cy="288" r="11" fill="#EAF7FA" stroke="#16385B" stroke-width="1.8"/><circle cx="158" cy="288" r="3.4" fill="#E0309E"/>
+  <path d="M192,276 L220,276" stroke="#1F7E91" stroke-width="3" fill="none" marker-end="url(#ahT)"/>
+  <!-- NovaSeq X Plus instrument -->
+  <rect x="224" y="252" width="58" height="48" rx="5" fill="#FFFFFF" stroke="#16385B" stroke-width="2"/>
+  <rect x="230" y="258" width="46" height="13" rx="2" fill="#16385B"/>
+  <circle cx="269" cy="290" r="3.4" fill="#FF7800"/>
+  <rect x="231" y="283" width="20" height="4" rx="2" fill="#C7D2E0"/>
+  <path d="M284,276 L300,276" stroke="#E07A1F" stroke-width="3" fill="none" marker-end="url(#ahO)"/>
+  <!-- reads -->
+  <g><rect x="306" y="258" width="44" height="5" rx="2.5" fill="#2E9E6E"/><rect x="312" y="266" width="44" height="5" rx="2.5" fill="#3B7DD6"/><rect x="304" y="274" width="44" height="5" rx="2.5" fill="#E0A52E"/><rect x="310" y="282" width="44" height="5" rx="2.5" fill="#E0309E"/><rect x="306" y="290" width="38" height="5" rx="2.5" fill="#45C3DD"/></g>
+
+  <!-- converge to model-ready data -> TA1 -->
+  <path d="M360,152 C392,160 400,182 412,200" stroke="#1F7E91" stroke-width="3" fill="none" marker-end="url(#ahT)"/>
+  <path d="M360,276 C392,268 400,238 412,220" stroke="#1F7E91" stroke-width="3" fill="none" marker-end="url(#ahT)"/>
+  <g filter="url(#ndsh)">
+    <path d="M420,196 a18 7 0 0 1 36 0 v24 a18 7 0 0 1 -36 0 z" fill="#1F7E91"/>
+    <ellipse cx="438" cy="196" rx="18" ry="7" fill="#45C3DD"/>
+  </g>
+  <text x="438" y="246" text-anchor="middle" fill="#5A6B86" font-size="11.5" font-weight="600">model-ready data</text>
+  <path d="M458,210 L486,210" stroke="#14284A" stroke-width="3.2" fill="none" marker-end="url(#ahT)"/>
+  <circle cx="510" cy="210" r="20" fill="#F4ECFB" stroke="#8B3FC7" stroke-width="2.2"/>
+  <g stroke="#8B3FC7" stroke-width="1.8" fill="#8B3FC7"><line x1="500" y1="203" x2="518" y2="199"/><line x1="518" y1="199" x2="516" y2="220"/><line x1="500" y1="203" x2="516" y2="220"/><circle cx="500" cy="203" r="2.8"/><circle cx="518" cy="199" r="2.8"/><circle cx="516" cy="220" r="2.8"/></g>
+  <text x="510" y="248" text-anchor="middle" fill="#5A6B86" font-size="12" font-weight="700">TA1</text>
+
+  <text x="250" y="356" text-anchor="middle" fill="#5A6B86" font-size="12" font-weight="500">parallel validated paths &#160;+&#160; Cell Painting (Carpenter Lab)</text>
+
+  <!-- text block -->
+  <text x="300" y="452" text-anchor="middle" fill="#14284A" font-size="32" font-weight="700">Experiment Marketplace</text>
+  <text x="300" y="487" text-anchor="middle" fill="#1F7E91" font-size="16.5" font-weight="600">Order an experiment, get model-ready data</text>
+  <text x="300" y="510" text-anchor="middle" fill="#1F7E91" font-size="16.5" font-weight="600">Validated labs; &#8805;90% cross-lab concordance</text>
+  <text x="300" y="550" text-anchor="middle" fill="#5A6B86" font-size="15.5" font-weight="500">Carpenter Lab &#160;&#183;&#160; Cellanome &#160;&#183;&#160; Illumina</text>
+</svg>

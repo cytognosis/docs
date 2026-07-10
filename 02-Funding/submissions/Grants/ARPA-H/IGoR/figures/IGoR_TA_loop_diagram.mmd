@@ -1,0 +1,21 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Inter, Arial, sans-serif","fontSize":"15px","lineColor":"#34597a","primaryTextColor":"#14284A"},"flowchart":{"curve":"basis","nodeSpacing":55,"rankSpacing":92,"htmlLabels":true,"padding":12}}}%%
+flowchart LR
+  classDef ta1 fill:#F4ECFB,stroke:#8B3FC7,stroke-width:2.5px,color:#14284A;
+  classDef ta2 fill:#E8F7FB,stroke:#2C9DB5,stroke-width:2.5px,color:#14284A;
+  classDef ta3 fill:#EAF7FA,stroke:#1F7E91,stroke-width:2.5px,color:#14284A;
+  classDef ta4 fill:#FDEAF4,stroke:#E0309E,stroke-width:2.5px,color:#14284A;
+  classDef team fill:#F7F9FC,stroke:#16294A,stroke-width:1.5px,color:#16294A;
+
+  subgraph TEAM["<b>PsychIGoR: one integrated performer (single PI, single prime)</b><br/>Prime, integration, software architecture: <b>Purdue IPAI</b> (PI A. Grama) &nbsp;·&nbsp; PM: P. Purcell &nbsp;·&nbsp; DDD workshop → bake-offs → connect-a-thon &nbsp;·&nbsp; open artifacts + IV&amp;V"]
+    direction LR
+    TA1["<b>TA1 · Comprehensive Disease Models</b><br/>Mechanistic, multiscale, <b>causal</b> model<br/>Disease-as-perturbation; sparse <b>disease axes</b><br/>Joint cellular + clinical pathway space<br/><i>Cytognosis (lead) · McLean / HMS</i>"]:::ta1
+    TA2["<b>TA2 · New Science Engine</b><br/>Agentic orchestration <b>grounded in TA1</b><br/>Competing hypotheses; dissent + verification<br/><b>Value-of-information</b> experiment design<br/><i>Phylo (Biomni) · Cytognosis</i>"]:::ta2
+    TA3["<b>TA3 · Interoperable Procedures</b><br/>Layered: intent → protocol → calibration → hardware<br/>Open standards (LabOP); RFC process<br/><i>SIFT</i>"]:::ta3
+    TA4["<b>TA4 · Experiment Marketplace</b><br/>Validated multi-lab network; ≥90% concordance<br/>Optical / live-cell Perturb-seq / sequencing<br/><i>Carpenter Lab · Cellanome · Illumina</i>"]:::ta4
+
+    TA1 -- "knowledge gaps, uncertainties,<br/>queryable causal model" --> TA2
+    TA2 -- "experiment spec:<br/>cell type · perturbation ·<br/>timepoint · readout" --> TA3
+    TA3 -- "instrument-agnostic<br/>layered protocol" --> TA4
+    TA4 -- "gold-standard, model-ready<br/>data returns (≤ 4 h model update)" --> TA1
+  end
+  class TEAM team;

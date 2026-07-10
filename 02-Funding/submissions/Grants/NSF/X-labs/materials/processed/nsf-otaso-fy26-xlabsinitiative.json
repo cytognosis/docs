@@ -1,0 +1,33 @@
+{
+  "title": "GrantInfo",
+  "funder_name": "NSF X-Labs Initiative",
+  "deadlines": [],
+  "eligibility": {
+    "entity_types": [
+      "Small Business",
+      "University",
+      "Non-profit"
+    ],
+    "exclusions": [
+      "Entity A",
+      "Entity B"
+    ],
+    "restrictions": [
+      "Restriction 1",
+      "Restriction 2"
+    ]
+  },
+  "funding": {
+    "min_award": null,
+    "max_award": null,
+    "phases": [
+      "Phase I",
+      "Phase II"
+    ],
+    "cost_share": false,
+    "indirect_cost_rule": null
+  },
+  "timeline": [],
+  "contacts": [],
+  "requirements": []
+}

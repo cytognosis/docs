@@ -1,0 +1,109 @@
+NOTE: Blue font is instructional and should be deleted prior to document
+submission.
+
+TASK DESCRIPTION DOCUMENT (TDD)
+
+When submitting a proposal to ARPA-H, using this model to describe the
+planned technical tasks and subtasks is strongly encouraged. All text in
+blue font may be deleted. There is no page limit to this Model.
+
+Instructions:
+
+1.  Provide the general objective of the proposal and a list of the
+    tasks and subtasks by Phase and Technical Area that are being
+    described. For each task/subtask, provide:
+
+- A general description of its objective.
+
+- A detailed description of the approach to be taken to accomplish it.
+
+- Identification of where it will be performed (e.g., at a commercial
+  laboratory; a non-profit site; on the campus of an academic
+  institution, etc.).
+
+- Identification (by name) of the primary organization (prime
+  contractor, sub-awardee(s), consultant(s)) responsible for its
+  execution.
+
+- Identification of all deliverables (e.g., data, reports, software) to
+  be provided to the government in support of the proposed
+  tasks/subtasks.
+
+- Identification of whether it will involve human- and/or animal subject
+  research.
+
+- Measurable milestones (A demonstration, event/activity that marks its
+  progress or completion. For example, for an assay to be developed, a
+  milestone stating that “the assay has been validated” is not
+  sufficient; instead, it should specify quantitative performance
+  criteria, such as “the assay achieves at least 95% sensitivity and 90%
+  specificity.”)
+
+- The tasks identified, and associated milestones, must be cross-walked
+  to the Cost Proposal submission requirements as well.
+
+1.  A summary of the effort and why it matters:
+
+2.  Task List. The tasks/subtasks described herein are as follows.
+    Breakout tasks, subtasks by Phase, by Technical Area as appropriate.
+
+PHASE: #
+
+  1.1.0 Task Title
+
+  1.1.1 Subtask Title
+
+  1.1.2 Subtask Title
+
+  1.1.3 Subtask Title
+
+  1.2.0 Task Title
+
+  1.2.1 Subtask Title
+
+  1.2.2 Subtask Title
+
+  1.2.3 Subtask Title
+
+  Repeat, as needed.
+
+3.  Within each of the tables, provide the information requested. Add
+    tables as needed. Do not include proprietary information.
+
++-----------------------------------------------------------------------------------------------------+
+|   PHASE:# Task: #.#.# Title:                                                                        |
++====================+===============================+===========================+====================+
+|   Task Objective   |   Task Description            |   Location                                     |
+|                    |                               |                                                |
+|                    |   Detailed description of the |   Where the work will be performed.            |
+|                    |   approach.                   |                                                |
++--------------------+-------------------------------+------------------------------------------------+
+|   Organization     |                                                                                |
+|   Responsible for  |                                                                                |
+|   Task             |                                                                                |
++--------------------+--------------------------------------------------------------------------------+
+|   Deliverable(s)   |                                                                                |
+|   (with associated |                                                                                |
+|   Intellectual     |                                                                                |
+|   Property (IP)    |                                                                                |
+|   assertion if     |                                                                                |
+|   less than        |                                                                                |
+|   Unlimited        |                                                                                |
+|   Rights)          |                                                                                |
++--------------------+--------------------------------------------------------------------------------+
+|   Human Subjects   |   ☐ Yes ☐ No                                                                   |
+|   and/or Animal    |                                                                                |
+|   Subject          |   If yes, describe the nature of the Human- and/or Animal Subjects Research.   |
+|   Research?        |                                                                                |
++--------------------+-----------------------------------------------------------+--------------------+
+|   Associated       | Observable/measurable event(s). Add/delete rows as        |                    |
+|   Milestone(s)     | applicable.                                               |                    |
++--------------------+-----------------------------------------------------------+--------------------+
+|   1.               |                                                           |                    |
++--------------------+-----------------------------------------------------------+--------------------+
+|   2.               |                                                           |                    |
++--------------------+-----------------------------------------------------------+--------------------+
+|   3.               |                                                           |                    |
++--------------------+-----------------------------------------------------------+--------------------+
+
+Repeat, as needed.

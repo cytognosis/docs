@@ -1,0 +1,625 @@
+                 APPENDIX C: PROPOSAL FORMAT, INSTRUCTIONS, AND EVALUATION
+
+
+
+1.   PROPOSAL FORMAT AND INSTRUCTIONS
+
+     1.1   CONFORMING SUBMISSION
+
+           (a)    Conforming submissions contain all requirements detailed in this ISO.
+                  Submissions that fail to include required information may be deemed
+                  non-conforming and may be rejected without further review. A
+                  submission may be deemed non-conforming if it does not meet the
+                  following solicitation requirements:
+
+                      •   The concept is applicable to the stated solicitation and program.
+                      •   The proposer meets the eligibility requirements.
+                      •   Content and formatting meet requirements in the solicitation
+                          instructions. The submission includes the requirement to address
+                          all four Technical Areas and all three Phases in the proposal.
+                      •   The proposer’s concept has not received funding or been
+                          selected for award negotiations for another funding opportunity
+                          (whether from ARPA-H or another government agency).
+
+     1.2   NOTICES
+
+           The following Notices will be provided as applicable to the Technical and
+           Administrative points of contact identified in the proposal on ARPA-H’s Solution
+           Submission Portal:
+                  • Request for clarifying details
+                         o May occur any time during the proposal evaluation process.
+                         o Will not include requests for proposal changes; changes to
+                             proposals will not be permitted at this stage.
+                  • Notice of non-selection
+                         o The proposer will be advised that its proposal submission has
+                             not been selected for funding.
+                  • Notice of selection
+                         o The selection notice will notify the proposer that the
+                             government has selected its proposal for negotiation of a
+                             potential award. This notification may indicate that only a part
+                             of the effort has been selected for negotiation and may
+                             request a revised proposal for only those selected portions, if
+                             not apparent through the delineation of proposed tasks.
+
+     1.3   PROPOSAL SUBMISSION INSTRUCTIONS
+
+
+
+                                                                                           1
+            APPENDIX C: PROPOSAL FORMAT, INSTRUCTIONS, AND EVALUATION
+
+
+      (a)    Proposal submissions are due by the date listed in the ISO Summary
+             Information Section. All proposal documents must be submitted in .pdf,
+             .odx, .doc, .docx, xls, or .xlsx formats. All submissions must be written in
+             English and all pages must be formatted for printing on 8-1/2 by 11-inch
+             paper with 1-inch margins and sans serif font size not smaller than 11
+             point. Narrow or condensed fonts should not be used. The government
+             will not consider pages in excess of the page count limitations, as
+             described herein. Proposals with fewer than the maximum number of
+             pages will not be penalized.
+
+      (b)    Proposers are encouraged to submit concise and concrete proposals.
+             Specific examples of problems, approaches, or goals are preferred to
+             qualitative generalities. Additional information not explicitly called for in
+             the Technical & Management Proposal must not be submitted, but may
+             be included as links in the bibliography. Any additional materials included
+             in the proposal package will be considered for the reviewers’
+             convenience only and not evaluated as part of the proposal.
+
+      (c)    The following matrix is designed to help proposers with their submission:
+
+           Proposal Section               Reference                         Page Limit
+       Technical &
+                                   Appendix C.1                40
+       Management Proposal
+       Task Description                                        Does Not Count Against Page
+                                   Appendix C.2
+       Document (TDD)                                          Limit
+       Cost Proposal and Cost                                  Does Not Count Against Page
+                                   Appendix C.3
+       Proposal Workbook                                       Limit
+       Admin National Policy                                   Does Not Count Against Page
+                                   Appendix D
+       Document                                                Limit
+       Draft Other Transaction                                 Does Not Count Against Page
+                                   Appendix E
+       Agreement                                               Limit
+
+
+
+(d)   Appendix E - Draft Other Transaction Agreement has been included to provide
+      potential proposers an initial draft of the ARPA-H agreement for this effort. The
+      proposer shall include a copy of the draft agreement with any
+      redlines/comments/proposed edits as part of the proposal package. If no
+      redline/comments/edits are proposed, ARPA-H will interpret that as the
+      proposer’s acceptance of the draft other transaction agreement’s terms and
+      conditions as-is. The redlined copy of the agreement does not count towards any
+      page limitations for the proposal.
+
+
+                                                                                         2
+                 APPENDIX C: PROPOSAL FORMAT, INSTRUCTIONS, AND EVALUATION
+
+
+2.   PROPOSAL EVALUATION
+
+     2.1   PROPOSAL REVIEW PROCESS
+           Submission of a solution summary is required before submission of a full
+           proposal.
+
+     2.2   HANDLING SELECTION SENSITIVE INFORMATION
+
+           (a)   It is ARPA-H’s intent to protect all proposals as selection-sensitive
+                 information and to disclose their contents only for the purpose of
+                 evaluation, and only to screened personnel for authorized reasons, in
+                 accordance with applicable federal laws and regulations, including FOIA.
+                 Restrictive notices notwithstanding, submissions may be handled by
+                 ARPA-H support contractors during the evaluation process for
+                 administrative purposes and/or to assist with technical evaluation.
+
+           (b)   ARPA-H support contractors are expressly prohibited from performing
+                 ARPA-H-sponsored technical research and are bound by appropriate
+                 non-disclosure agreements. Input on technical aspects of a proposal may
+                 be solicited by ARPA-H from non-government consultants/experts who
+                 are strictly bound by appropriate non-disclosure requirements.
+
+           (c)   When large language models (LLMs) are used (to extract data elements,
+                 summarize text, and generate text), all data will be transmitted exclusively
+                 through secure API calls, with external tool calls such as web searches
+                 disabled. Vendor contracts and technical controls enforce strict security
+                 measures: data sent for inference is never used to train public models,
+                 and all access, retention, and logging are tightly restricted and fully
+                 auditable.
+
+     2.3   EVALUTION AND AWARD DISCLAIMERS
+
+           (a)   The government reserves the right to select for negotiation all, some, one,
+                 or none of the proposals received in response to this ISO. In the event the
+                 government desires to award only portions of a proposal, negotiations
+                 will commence upon selection notification. The government reserves the
+                 right to fund proposals with phases or options for continued work, as
+                 applicable.
+
+           (b)   The government reserves the right to request any additional necessary
+                 documentation to support the negotiation and award process. The
+                 government reserves the right to remove a proposal from award
+
+                                                                                           3
+            APPENDIX C: PROPOSAL FORMAT, INSTRUCTIONS, AND EVALUATION
+
+
+             consideration should the parties fail to reach agreement on award terms,
+             conditions, price, and/or if the proposer fails to provide requested
+             additional information in a timely manner.
+
+      (c)    In all cases, the government Agreements Officer (AO) will have sole
+             discretion to negotiate all terms and conditions with proposers. ARPA-H
+             will apply publication or other restrictions, as necessary, if it is determined
+             the research resulting from the proposed effort will present a high
+             likelihood of disclosing sensitive information including Personally
+             Identifiable Information (PII), Protected Health Information (PHI), financial
+             records, proprietary data, any information marked Sensitive, etc. Any
+             award resulting from such a determination will include a requirement for
+             ARPA-H concurrence before publishing any information or results on the
+             effort.
+
+2.4   REVIEW AND SELECTION PROCESS
+
+      (a)    It is ARPA-H policy to ensure impartial, fair, transparent, and
+             comprehensive evaluations of proposals based on the evaluation criteria
+             listed herein and to select the source (or sources) with the proposal(s)
+             determined to be the most advantageous to ARPA-H's mission objectives.
+             ARPA-H will conduct a scientific and technical review of each conforming
+             proposal. Proposal evaluations will be based solely on the following
+             evaluation criteria.
+
+      (b)    ARPA-H intends to review proposals as soon as possible after receipt and
+             strives to respond to each proposer as soon as possible after receipt of
+             their proposal(s). ARPA-H will not evaluate proposals against each other
+             during the scientific technical review process; rather, ARPA-H will evaluate
+             each proposal based on its own merits to determine how well it meets
+             ISO criteria.
+
+2.5   EVALUTION CRITERIA FOR PROPOSALS
+
+      ARPA-H will conduct a scientific and technical review of each conforming
+      proposal, evaluating proposals on how well the submission meets the criteria
+      stated in this ISO. All proposals will be evaluated using the following evaluation
+      criteria, listed in descending order of importance.
+
+      Criterion 1: Overall Scientific and Technical Merit
+      The proposed technical approach is highly innovative and technically sound with
+      a well-defined path to completion. Task descriptions and associated technical
+
+                                                                                          4
+      APPENDIX C: PROPOSAL FORMAT, INSTRUCTIONS, AND EVALUATION
+
+
+elements provided are complete and in a logical sequence with all proposed
+deliverables clearly defined such that an outcome that achieves the goal is
+plausible. The proposal identifies major technical risks, expected for ARPA-H
+projects, and planned mitigation efforts are clearly defined and feasible. In
+addition, the evaluation may take into consideration the extent to which the
+proposed intellectual property (IP) rights structure and software components will
+potentially impact the ability to commercialize the technology and adhere to
+open-source solutions and/or standards.
+
+Criterion 2: Proposer’s Capabilities and/or Related Experience
+The proposed technical team has the expertise and experience to accomplish
+the proposed tasks; the proposer’s experience in similar efforts clearly
+demonstrates an ability to deliver products that meet the proposed technical
+performance within the proposed budget and schedule; the proposed team
+has the expertise to manage the cost and schedule and; similar efforts
+completed/ongoing by the proposer in this area are fully described, including
+identification of other government or commercial activities where they have led
+or participated.
+
+
+
+Criterion 3: Potential Contribution to Relevance to the ARPA-H Mission and
+User Experience
+Proposals will be evaluated on the potential future Research & Development-,
+commercial-, and/or clinical applications of the project proposed, including
+whether such applications may have the potential to address areas of currently
+unmet need within biomedicine and improve health outcomes; the degree to
+which the proposed project has the potential to transform biomedicine. The
+interdisciplinarity of the approach will also be considered. Further, the proposed
+solution contemplates the end user and reflects an understanding of the direct
+needs and benefits for stakeholders, whether they are patients, providers, health
+systems or payers. For example, how would this solution fit inside the clinical
+workflow? Or, how will this be accessible to users in all geographies, and at an
+affordable cost?
+
+Criterion 4: Assessment of Proposed Cost/Price
+
+All proposals will be evaluated to determine the reasonableness or value of the
+estimated price/cost proposed to accomplish the technical approach. Analysis
+may be performed to ensure proposed costs are realistic for the proposed
+scientific and technical approach and capabilities/related experience, accurately
+reflect the technical goals and objectives of the solicitation, the proposed costs
+are consistent with the proposer’s technical approach and reflect a sufficient
+
+                                                                                5
+                  APPENDIX C: PROPOSAL FORMAT, INSTRUCTIONS, AND EVALUATION
+
+
+           understanding of the costs and effort needed to successfully accomplish the
+           proposed technical approach. The costs for the prime proposer and proposed
+           sub-awardees should be substantiated by the details provided in the proposal
+           (e.g., the type and number of labor hours proposed per task, the types and
+           quantities of materials, equipment and fabrication costs, travel and any other
+           applicable costs including the basis for the estimates).
+
+           It is expected the effort will leverage all available relevant prior research to obtain
+           the maximum benefit from the available funding. For efforts with a likelihood of
+           commercial application, appropriate resource sharing may be a positive factor in
+           the evaluation. Proposers are encouraged to incorporate creative approaches to
+           cost-sharing and resource contributions that align with program objectives.
+           Examples include cash, in-kind contributions, shared infrastructure, data, and IP
+           access arrangements. Inclusion of such cost/resource sharing mechanisms is not
+           required, but may be evaluated in the context of overall technical merit,
+           reasonableness, value, and potential public benefit. Agreement Officers retain
+           discretion to negotiate, adjust, or omit such provisions based on the unique
+           nature, risk profile, and expected impact of the proposed effort. Proposers are
+           encouraged to describe how their approach contributes to maximizing taxpayer
+           value and sustaining long-term innovation outcomes.
+
+           Proposers are encouraged to propose the best technical solution. For example,
+           proposers are discouraged from proposing low-risk ideas with minimum
+           uncertainty or to staff the proposed effort with junior personnel to be more
+           appealing from a budget perspective. ARPA-H seeks novel solutions that are
+           reflective of the level of effort and risk proposed.
+
+3.   POLICY REQUIREMENTS AND MISCELLANEOUS OTHER INFORMATION
+
+     3.1   CONTROLLED UNCLASSIFIED INFORMATION (CUI) ON NON-FEDERAL
+           INFORMATION SYSTEMS
+           Information on Controlled Unclassified Information (CUI) identification, marking,
+           protection, and control is incorporated herein and can be found at 32 CFR §
+           2002.
+
+     3.2   INTELLECTUAL PROPERTY
+           The proposer must provide a good faith representation that it either owns or
+           possesses the appropriate licensing rights to all intellectual property (IP) that will
+           be utilized for the proposed effort. ARPA-H strongly encourages IP rights to be
+           aligned with open-source rules. Further, it is desired that all software (including
+           source code), software documentation, and data generated and/or developed
+           under the proposed project be provided as a deliverable to the government. IP
+           delivered to the government should align with the project or program goals and
+
+                                                                                                6
+              APPENDIX C: PROPOSAL FORMAT, INSTRUCTIONS, AND EVALUATION
+
+
+      should be aligned with the level of government funding provided to generate
+      and/or develop the IP.
+
+3.3   SOFTWARE COMPONENT STANDARDS
+
+
+
+      3.3.1   ARPA-H is committed to advancing interoperability in today’s health
+              ecosystem through the adoption of open, consensus-driven standards
+              and laying the foundation for emerging technologies to interoperate in
+              the health ecosystem of the future through the evolution of these
+              standards across all layers of the health data information technology (IT)
+              eco-system. With that in mind, we anticipate that the Performer will
+              develop software and data communication components that fall into
+              three categories:
+
+                 •   components that can leverage today's existing standards without
+                     impeding the R&D,
+                 •   components where extensions to existing standards will be
+                     necessary to unlock new capabilities in an interoperable way, and
+                 •   components in areas where consensus-based standards do not
+                     yet exist or where use of standards would seriously limit the ability
+                     to efficiently conduct R&D.
+
+      3.3.2   Whenever such an existing standard is available that meets the scientific,
+              technical, and research needs of the proposed effort, proposers should
+              use the existing standard instead of creating their own. In cases where an
+              existing standard provides only partial functionality, proposers should
+              expand upon the existing standard, ideally in a way that does not prohibit
+              or interfere with backward compatibility.
+
+      3.3.3   Technical solutions that contain software elements with commercial-
+              friendly open-source licenses (e.g., Massachusetts Institute of
+              Technology, Berkley Software Distribution, or Apache 2.0) are preferred.
+              If an open, consensus-based standard does not yet exist, the proposer
+              should identify the aspects that lack an open standard, describe a plan to
+              develop a general-purpose open data model and to prototype new open
+              APIs. A strong proposal will explain how the Performer will enhance data
+              interoperability (including semantic interoperability) and expand
+              the availability of open, consensus-based standards and data models.
+
+3.4   GENOMIC DATA SHARING (GDS) POLICY
+
+
+
+                                                                                        7
+             APPENDIX C: PROPOSAL FORMAT, INSTRUCTIONS, AND EVALUATION
+
+
+      If applicable, an award resulting from this ISO will include the requirement to
+      comply with the National Institutes of Health’s GDS Policy (NOT-OD-14-124).
+      Information about the GDS policy can be found at:
+
+       https://grants.nih.gov/grants/guide/notice-files/NOT-OD-24-157.html.
+
+3.5   ORGANIZATIONAL CONFLICTS OF INTEREST (OCI)
+      Through submission of a proposal, the proposer is required to identify and
+      disclose all facts relevant to a potential OCI involving the proposer, its
+      organization, and/or any proposed team member (proposed sub-awardee).
+      Along with the OCI disclosure, the proposer must submit an OCI mitigation plan,
+      which is a description of the action the proposer has taken to avoid, neutralize,
+      or mitigate the stated OCI. The government may require the proposer to provide
+      additional information to assist the government in evaluating the OCI mitigation
+      plan. The government may reject the proposal and withdraw it from
+      consideration for award if it determines the proposer failed to:
+
+         •   fully disclose an OCI; or
+         •   provide the affirmation of ARPA-H support; or
+         •   reasonably provide additional information requested by the government
+             to assist in evaluating the proposer’s OCI mitigation plan.
+
+3.6   ORGANIZATIONAL AGENCY SUPPLEMENTAL OCI POLICY
+
+      ARPA-H restricts Performers from concurrently providing professional support
+      services, including Advisory and Assistance Services or similar contracted
+      support services, in addition to performing as an R&D technical Performer.
+      Therefore, the proposer must affirm whether it or any proposed team member
+      (proposed sub-awardee, etc.) is providing professional support services to any
+      ARPA-H office(s) under: (1) a current award or subaward; or (2) a past award or
+      subaward that ended within one calendar year prior to the proposal’s submission
+      date. If any professional support services are or were provided to any ARPA-H
+      office(s), the proposal must include:
+
+         •   The name of the ARPA-H office receiving the support
+         •   The prime contract number and
+         •   Identification of proposed team member (including any proposed sub-
+             awardee) providing the support.
+
+3.7   RESEARCH SECURITY DISCLOSURES
+
+
+
+
+                                                                                        8
+        APPENDIX C: PROPOSAL FORMAT, INSTRUCTIONS, AND EVALUATION
+
+
+3.7.1   Conforming proposals selected for negotiation of a potential award will
+        undergo a Research Security Review (RSR). The RSR involves a review of
+        the proposer’s disclosures made as part of the Administrative & National
+        Policy Requirements document, and a validation and comparison of those
+        disclosures utilizing publicly available information and commercially
+        available information tools. Section 10631 of the CHIPS and Science Act
+        of 2022 prohibits federal research agencies, such as ARPA-H, from
+        providing R&D awards in response to any proposal in which a covered
+        individual is participating in a Malign Foreign Talent Recruitment Program
+        (MFTRP). It also requires federal agencies to require recipient institutions
+        to prohibit covered individuals participating in MFTRPs from working on
+        projects supported by federal R&D awards.
+
+3.7.2   In accordance with NSPM-33, to receive federal funding, research
+        organizations should identify and mitigate conflicts of commitment
+        (COCs) and conflicts of interest (COIs). COCs and COIs involving foreign
+        countries of concern (FCOCs), including the People’s Republic of China,
+        the Russian Federation, the Islamic Republic of Iran, and the Democratic
+        People’s Republic of Korea (also known as North Korea), will require risk
+        mitigation plans. A research organization proposing in response to this
+        ISO must provide research security disclosures as described in the
+        Administrative & National Policy Requirements document and the Office
+        of Science and Technology Policy-identified Common Forms. The
+        Common Forms are required for all senior or key personnel.
+
+3.7.3   After a proposal is selected for negotiations of a potential award, ARPAH
+        will conduct an RSR of each proposer and its senior or key personnel. The
+        RSR is not part of the ARPA-H scientific merit review process. The RSR
+        reviews include assessments of potential risks associated with covered
+        individuals’ disclosed or undisclosed participation in MFTRPs, funding
+        received from FCOCs, collaboration with FCOC entities (including
+        researchers and research institutions that have been identified on various
+        entity lists), foreign ownership control or influence with regard to FCOCs
+        identified in proposals, and the pursuit of foreign patents stemming from
+        U.S. government funded research prior to obtaining U.S. patent
+        protections.
+
+3.7.4   If ARPA-H determines the proposer failed to provide all requisite research
+        security disclosures or failed to reasonably provide information requested
+        by ARPA-H to assist in evaluating the proposer’s disclosures and/or
+        research security mitigations, ARPA-H may eliminate the proposal from
+        award consideration. ARPA-H may also eliminate the proposal from
+
+                                                                                  9
+             APPENDIX C: PROPOSAL FORMAT, INSTRUCTIONS, AND EVALUATION
+
+
+              award consideration if ARPA-H determines the proposer did not or
+              cannot properly mitigate research security-related risks.
+
+3.8    ELECTRONIC INVOICING AND PAYMENTS
+
+       Performers will be required to register in, and submit requests for payment
+       through, the Payment Management Services (PMS) at https://pms.psc.gov.
+
+       Requests must include the following justification (limited to 1,000 characters),
+       due to the requirement for government approval in the Defend the Spend (DTS)
+       System:
+
+       The payment is justified for the IGoR program to [include the purpose of the
+       project] for Milestones (s) (or TDD tasks/references) [x.x] that were accepted by
+       the Program Manager on [date].
+
+3.9    PROCUREMENT OF SYNTHETIC NUCLEIC ACIDS OR BENCHTOP
+       SYNTHESIZERS
+       HHS funds may only be used to procure synthetic nucleic acids or benchtop
+       nucleic acid synthesis equipment from sources adhering to the Office of
+       Science and Technology Policy Framework for Nucleic Acid Synthesis
+       Screening.
+
+3.10   DANGEROUS GAIN-OF-FUNCTION RESEARCH
+       HHS Funds may not be used to conduct any dangerous gain-of-function
+       research, per the definition in Section 8 of Executive Order (E.O.) 14292 on
+       Improving the Safety and Security of Biological Research. Further, per Section 3
+       of E.O. 14292, no HHS Funds may be used to fund life science research with
+       foreign entities in countries of concern (e.g., China) pursuant to 42 U.S.C.
+       6627(c), or in other countries where there is not adequate oversight to ensure
+       that the countries are compliant with United States oversight standards and
+       policies.
+
+3.11   GOVERNMENT FURNISHED PROPERTY/EQUIPMENT/INFORMATION
+       Government-furnished property/equipment/information is not expected to be
+       provided to performers.
+
+3.12   HUMAN SUBJECTS RESEARCH
+
+       3.10.1 A proposal for funding that will involve engagement in human subjects
+              research (HSR) (as defined in 45 CFR § 46) must provide documentation
+              of one or more current Assurance(s) of Compliance with federal
+              regulations for human subjects’ protection, including at least a
+              Department of Health and Human Services (HHS), Office of Human
+
+                                                                                     10
+             APPENDIX C: PROPOSAL FORMAT, INSTRUCTIONS, AND EVALUATION
+
+
+              Research Protection Federal Wide Assurance. All HSR must be reviewed
+              and approved by an Institutional Review Board (IRB), as applicable under
+              45 CFR § 46 and/or 21 CFR § 56. The entity’s HSR protocol must include
+              a detailed description of the research plan, study population, risks and
+              benefits of study participation, recruitment and consent process, data
+              collection, and data analysis. Recipients of ARPA-H funding must comply
+              with all applicable laws, regulations, and policies for ARPA-H funded
+              work. This includes, but is not limited to, laws, regulations, and policies
+              regarding the conduct of HSR, such as the U.S. federal regulations
+              protecting human subjects in research (e.g., 45 CFR § 46, 21 CFR § 50, §
+              56, § 312, § 812) and any other equivalent requirements of the applicable
+              jurisdiction.
+
+       3.10.2 The informed consent document utilized in HSR funded by ARPA-H must
+              comply with all applicable laws, regulations, and policies, including but
+              not limited to U.S. federal regulations protecting human subjects in
+              research (45 CFR § 46, and, as applicable, 21 CFR § 50). The protocol
+              package submitted to the IRB must contain evidence of completion of
+              appropriate HSR training by all investigators and key personnel who will
+              be involved in the design or conduct of the ARPA-H funded HSR. Funding
+              cannot be used toward HSR until ALL approvals are granted.
+
+3.13   VERTEBRATE ANIMAL SUBJECTS RESEARCH
+
+       3.11.1 All entities submitting a proposal for funding that will involve
+              engagement in vertebrate animal subjects research (award recipients
+              performing research, experimentation, or testing involving the use of
+              animals) shall comply with the laws, regulations, and policies on animal
+              acquisition, transport, care, handling, and use as outlined in:
+
+                 •   9 CFR parts 1-4, U.S. Department of Agriculture rules that
+                     implement the Animal Welfare Act of 1966, as amended, (7 U.S.C.
+                     § 2131-2159); and,
+
+                 •   the Public Health Service Policy on Humane Care and Use of
+                     Laboratory Animals, which incorporates the “U.S. Government
+                     Principles for the Utilization and Care of Vertebrate Animals Used
+                     in Testing, Research, and Training,” and "Guide for the Care and
+                     Use of Laboratory Animals" (8th Edition).”
+
+       3.11.2 Proposers must provide documentation of a current Animal Welfare
+              Assurance (AWA) on file with the Office of Laboratory Animal Welfare
+
+                                                                                      11
+                     APPENDIX C: PROPOSAL FORMAT, INSTRUCTIONS, AND EVALUATION
+
+
+                      (OLAW). The proposer must complete and submit the Vertebrate Animal
+                      Section worksheet for all proposed research anticipating Animal Subject
+                      Research (ASR). All Animal Use Research must undergo review and
+                      approval by the local Institutional Animal Care Use Committee (IACUC)
+                      prior to incurring any costs related to the animal use research. For all
+                      proposed research anticipating animal use, proposals should briefly
+                      describe plans for IACUC review and approval as described in the
+                      Appendix D - Administrative & National Policy Document.
+
+                                     ADDITIONAL LINKS
+
+42 U.S.C. § 290c(g)(1)(D)
+https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-
+section290c&num=0&edition=prelim
+
+ARPA-H’s public website
+https://arpa-h.gov/explore-funding/open-funding-opportunities
+
+SAM.gov
+https://sam.gov/content/home
+
+National Archives (CUI Registry)
+https://www.archives.gov/cui/registry/category-list
+
+ARPA-H’s Solution Submission Portal
+https://solutions.arpa-h.gov/Ask-A-Question/
+
+CHIPS and Science Act of 2022
+https://www.govinfo.gov/content/pkg/PLAW-117publ167/pdf/PLAW-117publ167.pdf
+
+50 U.S.C. § 3059
+https://uscode.house.gov/view.xhtml?req=(title:50%20section:3059%20edition:prelim)
+
+Controlled Unclassified Information on Non-Federal Information Systems
+      32 CFR § 2002
+      https://www.ecfr.gov/current/title-32/subtitle-B/chapter-XX/part-2002
+
+Human Subjects Research (HSR)
+45 CFR § 46
+https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-A/part-46
+
+Office of Human Research Protection Federal Wide Assurance
+
+                                                                                           12
+                     APPENDIX C: PROPOSAL FORMAT, INSTRUCTIONS, AND EVALUATION
+
+
+https://www.hhs.gov/ohrp/index.html
+
+21 CFR § 56
+https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-56
+
+21 CFR § 50
+https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-50
+
+Animal Subjects Research
+
+       Department of Agriculture rules that implement the Animal Welfare Act of 1966
+       https://www.nal.usda.gov/animal-health-and-welfare/animal-welfare-act
+
+       7 U.S.C. § 2131-2159
+       https://www.govinfo.gov/content/pkg/USCODE-2015-title7/html/USCODE-2015-
+       title7-chap54.htm
+
+       Public Health Service Policy on Humane Care and Use of Laboratory Animals
+       https://olaw.nih.gov/policies-laws/phs-policy.htm
+
+U.S. Government Principles for the Utilization and Care of Vertebrate Animals
+Used in Testing, Research, and Training
+https://olaw.nih.gov/policies-laws/gov-principles.htm
+
+Guide for the Care and Use of Laboratory Animals: Eighth Edition, Copyright
+2011, NAS
+https://olaw.nih.gov/policies-laws/guide-care-use-lab-animals
+
+worksheet
+https://olaw.nih.gov/sites/default/files/VASchecklist.pdf
+
+Research Security Disclosures
+      National Security Policy Memorandum 33
+      https://www.nsf.gov/bfa/dias/policy/nspm-33-implementation-guidance
+
+Electronic Invoicing and Payments
+       Payment Management Services
+       https://pms.psc.gov/
+
+
+
+
+                                                                                       13
+

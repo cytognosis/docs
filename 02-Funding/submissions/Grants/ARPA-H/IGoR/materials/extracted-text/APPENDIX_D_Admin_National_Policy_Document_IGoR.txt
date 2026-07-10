@@ -1,0 +1,644 @@
+ADMINISTRATIVE & NATIONAL POLICY REQUIREMENTS DOCUMENT
+
+This Administrative & National Policy Requirements Document must be
+completed in full and included as part of the proposal submission. Other
+than the instructions in blue font, do not delete any portion of this
+document.
+
+All pages must be formatted for printing on 8-1/2 by 11-inch paper with
+1-inch margins and sans-serif font size not smaller than 11 points.
+Sans-serif font sizes of 8 or 10 point may be used for figures, tables,
+and charts. There is no page limit for this document.
+
+The Administrative & National Policy Requirements Document must be in
+.pdf, .doc, or .docx formats. Submissions must be in English.
+
+Contents
+
+Cover Page 1
+
+1. Team Member Identification 2
+
+Senior/Key Personnel (i.e., Covered Personnel) 2
+
+2. Federally Funded Research and Development Center (FFRDC)
+Participation 3
+
+3. Organizational Conflict of Interest (OCI) Affirmations and Disclosure
+3
+
+4. Research Security Disclosure 4
+
+5. Novelty of Proposed Work 6
+
+6. Intellectual Property (IP) 6
+
+Patents 9
+
+7. Human Subjects Research (HSR) 9
+
+8. Animal Subjects Research (ASR) 10
+
+9. Representations Regarding Unpaid Delinquent Tax Liability or a Felony
+Conviction under Any Federal Law 10
+
+10. Cybersecurity 11
+
+11. Biosecurity 11
+
+<PRIME ORGANIZATION LOGO (OPTIONAL)>
+
+COVER PAGE
+
++----------------------------+-----------------------------------------+
+| Proposal Title             |                                         |
++============================+=========================================+
+| Proposer Organization      |                                         |
++----------------------------+-----------------------------------------+
+| Technical Point of Contact | Name:                                   |
+| (TPOC)                     |                                         |
+|                            | Address:                                |
+|                            |                                         |
+|                            | Telephone:                              |
+|                            |                                         |
+|                            | Email:                                  |
++----------------------------+-----------------------------------------+
+| Administrative POC (APOC)  | Name:                                   |
+|                            |                                         |
+|                            | Address:                                |
+|                            |                                         |
+|                            | Telephone:                              |
+|                            |                                         |
+|                            | Email:                                  |
++----------------------------+-----------------------------------------+
+| Date of Proposal           | (MM/DD/YYYY)                            |
+| Submission                 |                                         |
++----------------------------+-----------------------------------------+
+| Proposal Validity Period   | ______ Days                             |
+| (minimum 120 days)         |                                         |
++----------------------------+-----------------------------------------+
+
+TEAM MEMBER IDENTIFICATION
+
+  List the organizations/institutions that comprise your team.
+  Organization/Institution roles include prime awardees, sub-awardees,
+  team members, contractors, and vendors that will be supplying
+  components, information, data, or material that is critical to your
+  proposal. Add rows as needed.
+
+  --------------------------------------------------------------------------
+  Organization /Institution Name Status           Organization/Institution
+                                                  Role
+  ------------------------------ ---------------- --------------------------
+                                 ☐ U.S. ☐         
+                                 non-U.S.         
+
+                                 ☐ U.S. ☐         
+                                 non-U.S.         
+
+                                 ☐ U.S. ☐         
+                                 non-U.S.         
+
+                                 ☐ U.S. ☐         
+                                 non-U.S.         
+
+                                 ☐ U.S. ☐         
+                                 non-U.S.         
+
+                                 ☐ U.S. ☐         
+                                 non-U.S.         
+
+                                 ☐ U.S. ☐         
+                                 non-U.S.         
+
+                                 ☐ U.S. ☐         
+                                 non-U.S.         
+  --------------------------------------------------------------------------
+
+Senior/Key Personnel (i.e., Covered Personnel)
+
+Complete the following table for each Senior/Key Person[1]. Add rows, as
+needed.
+
+- ARPA-H recommends Senior/Key personnel utilize SciENcv to generate
+  their BioSketch and Current and Pending Other Support Form. NSF and
+  latest NIH are the preferred versions
+
+- Verify the attestation is signed on both the BioSketch and Other
+  Support Form
+
+- All affiliations/positions/appointments throughout career must be
+  included in the BioSketch including unpaid positions
+
+- ARPA-H also requires the Collaborators and Other Affiliations (COA)
+  document for each Senior/Key Personnel. Template is available here.
+
++-------------------+--------------------------+------------------------+
+| Senior/Key        | Organization/Institution | Confirmation Common    |
+| Personnel Names   |                          | Forms Are Attached     |
++===================+==========================+========================+
+|                   |                          | Biographical Sketch    |
+|                   |                          | Attached:              |
+|                   |                          | ☐ Yes ☐ No             |
+|                   |                          |                        |
+|                   |                          | Current & Pending      |
+|                   |                          | Support Attached: ☐    |
+|                   |                          | Yes ☐ No               |
+|                   |                          |                        |
+|                   |                          | Collaborators and      |
+|                   |                          | Other Affiliations     |
+|                   |                          | Attached:              |
+|                   |                          |                        |
+|                   |                          | ☐ Yes ☐ No             |
++-------------------+--------------------------+------------------------+
+|                   |                          | Biographical Sketch    |
+|                   |                          | Attached:              |
+|                   |                          | ☐ Yes ☐ No             |
+|                   |                          |                        |
+|                   |                          | Current & Pending      |
+|                   |                          | Support Attached: ☐    |
+|                   |                          | Yes ☐ No               |
+|                   |                          |                        |
+|                   |                          | Collaborators and      |
+|                   |                          | Other Affiliations     |
+|                   |                          | Attached:              |
+|                   |                          |                        |
+|                   |                          | ☐ Yes ☐ No             |
++-------------------+--------------------------+------------------------+
+|                   |                          | Biographical Sketch    |
+|                   |                          | Attached:              |
+|                   |                          | ☐ Yes ☐ No             |
+|                   |                          |                        |
+|                   |                          | Current & Pending      |
+|                   |                          | Support Attached: ☐    |
+|                   |                          | Yes ☐ No               |
+|                   |                          |                        |
+|                   |                          | Collaborators and      |
+|                   |                          | Other Affiliations     |
+|                   |                          | Attached:              |
+|                   |                          |                        |
+|                   |                          | ☐ Yes ☐ No             |
++-------------------+--------------------------+------------------------+
+
+FEDERALLY FUNDED RESEARCH AND DEVELOPMENT CENTER (FFRDC) PARTICIPATION
+
+  Is any member of your proposed team an FFRDC?
+
+  ☐ No ☐ Yes
+
+  If yes, provide justification for inclusion of the FFRDC and separate
+  documentation that indicates that no other source will meet the needs
+  that the FFRDC will meet.
+
+ORGANIZATIONAL CONFLICT OF INTEREST (OCI) AFFIRMATIONS AND DISCLOSURE
+
+  In accordance with the National Security Presidential Memorandum
+  (NSPM)-33 and the associated White House Office of Science and
+  Technology Policy Implementation Guidance, senior/key personnel are
+  required to disclose potential conflicts of interest (COIs) and
+  conflicts of commitment (COCs). Those disclosures are captured by
+  senior/key personnel completing the Biographical Common Form, the
+  Current and Pending (other) Support Common Form, and the Collaborators
+  and Other Affiliations document as attachments to this template. These
+  forms can be found at:
+  https://www.nsf.gov/bfa/dias/policy/nstc_disclosure.jsp.
+
+  Additional information about potential collaborations can be found at:
+  https://www.nsf.gov/funding/senior-personnel-documents#collaborators-and-other-affiliations-2b3.
+
+a.  Are any of the proposed team members or organizations (whether
+    prime, sub-awardee, or consultant) providing support in the form of
+    an Internal Support Contractor (ISC)/Systems Engineering Technical
+    Assistance (SETA) Agreement, Partnership Intermediary Agreement
+    (PIA), or similar support to ARPA-H?
+
+  ☐ No ☐ Yes
+
+b.  Has any proposed team member or organization (whether prime or
+    sub-awardee or consultant) provided ISC/SETA support or similar
+    support to ARPA-H within one calendar year of this proposal
+    submission?
+
+  ☐ No ☐ Yes
+
+  If the answer to 3.a. or 3.b. is yes, provide a separate document with
+  the following information for each such team member:
+
+- The name of the ARPA-H office receiving the support
+
+- The prime contract number
+
+- Name and type of support (e.g., prime, sub-awardee, consultant)
+
+- An OCI mitigation plan
+
+c.  Are there other potential Organizational Conflicts of Interest
+    involving a proposed team member or organization (whether prime,
+    sub-awardee, or consultant)?
+
+  ☐ No ☐ Yes
+
+  If yes, for each team member for which an OCI or a potential OCI
+  exists, provide a separate document with the following information:
+
+- Identification (name), and
+
+- An OCI mitigation plan
+
+RESEARCH SECURITY DISCLOSURE
+
+  ARPA-H’s research security program (RSP) involves research security
+  reviews (RSRs) to determine whether Proposers are covered individuals
+  or have behaviors that: (a) may be contrary to federal policy; (b)
+  undermine the integrity of ARPA-H-funded research; or (c) bring risk
+  to the agency’s research programs. The RSP aims to mitigate the risk
+  of unwanted knowledge and technology transfers to foreign countries of
+  concern (FCOCs)[2]
+
+  In addition to the senior/key personnel disclosures, answer the
+  following:
+
+a.  Has every PI and senior/key person certified (in writing or by
+    digital signature) that they are (or are not) party to a malign
+    foreign talent recruitment program (FTRP)? In accordance with 42 USC
+    §19232, individuals are prohibited from being a party in a malign
+    FTRP (as defined in 42 USC §19232).
+
+  ☐ No ☐ Yes
+
+b.  Are any members of the proposal team participating in, or previously
+    participated in, any FTRPs?
+
+  ☐ No ☐ Yes
+
+  If yes, please list the name(s) of the team member(s), the year(s) of
+  their participation, the FCOC(s) in which the program(s) is/are based,
+  and the terms of the FTRP.
+
+c.  Are any of the proposed team organizations/entities or partners
+    (e.g., the prime proposer, sub-awardees) owned wholly or in part by
+    foreign individuals, entities, or governments?
+
+  ☐ No ☐ Yes
+
+  If yes, provide the name(s) of the foreign-owned entities, and the
+  name(s) of the owner(s) (e.g., individual(s), partner(s), or
+  government(s), etc.) and identify the percentage(s) owned.
+
+d.  Is any of the proposed research projected to be executed within an
+    FCOC?
+
+  ☐ No ☐ Yes
+
+  If yes, please identify each FCOC, each entity executing research in
+  an FCOC, and a narrative discussing the criticality of executing
+  research to your proposal.
+
+e.  Do any of the proposing entities (e.g., prime, sub-awardee, or
+    consultant) intend to rely on technology, information, data sets, or
+    equipment (including known supply chain) that will be provided by or
+    transmit data to or through an FCOC?
+
+  ☐ No ☐ Yes
+
+  If yes, identify each entity that intends to do so, and provide a
+  narrative discussing the criticality to your proposal.
+
+  By submitting this document to ARPA-H, you are certifying that the
+  information provided in this section is current, accurate, and
+  complete. This includes (but is not limited to) information related to
+  current-, pending-, and other support (both foreign and domestic) as
+  defined in 42 U.S.C. § 6605.
+
+  By submitting this document to ARPA-H, you are also certifying that at
+  the time of submission, no member of the proposed team is a party in a
+  malign foreign talent recruitment program.
+
+  By submitting this document to ARPA-H, you acknowledge that
+  misrepresentations and/or omissions may be subject to prosecution and
+  liability pursuant to, but not limited to, 18 U.S.C. §§ 287, 1001,
+  1031 and 31 U.S.C. §§ 3729-3733, and 3802.
+
+NOVELTY OF PROPOSED WORK
+
+  Has the proposed work been submitted to any other government
+  solicitation?
+
+  ☐ No ☐ Yes
+
+  If yes, provide the following information (and change the font color
+  to black):
+
+- Solicitation number ________________________
+
+- Agency/Office ____________________________
+
+- Has the proposed work already received funding or a positive funding
+  decision?
+
+  ☐ No ☐ Yes ☐ Decision pending
+
+INTELLECTUAL PROPERTY (IP)
+
+  6.1 Proposer information regarding IP and data restrictions promotes
+  transparency, impacts ARPA-H’s proposal evaluation efforts, and allows
+  ARPA-H to evaluate how this information will affect the
+  project/program and the government’s rights in deliverables. Complete
+  and accurate information also reduces the chances of delays and
+  conflicts affecting negotiations and eventual project performance.
+
+  6.2 For the primary proposer or any teaming partner or sub-awardee,
+  identify background IP or otherwise restricted data (e.g., data
+  subject to confidentiality agreement) that would be relevant
+  to/incorporated into the proposed work and any deliverables in the
+  table below. Furthermore, identify what rights the government can
+  expect to have in that data or IP.
+
+- Background IP consists of trade secrets, patents, data, or
+  non-provisional patent applications owned or controlled by the
+  proposer team that exist prior to the date of any future agreement
+  with ARPA-H or are conceived and otherwise created outside the scope
+  of any future agreement with ARPA-H.
+
+  6.3 Use the following rights categories in completing the “Associated
+  Rights” column of the table.
+
+- Unlimited Rights: The government’s right to use, disclose, reproduce,
+  prepare derivative works, distribute copies to the public, and perform
+  publicly and display publicly, in any manner and for any purpose, and
+  to have or permit others to do so.
+
+- Government Purpose Rights: The government’s right to use, modify,
+  reproduce, perform, display, release, or disclose, in whole or in part
+  and in any manner, for government purposes only, and to have or permit
+  others to do so for government purposes only. Government purposes are
+  activities in which the U.S. government is a party, including
+  cooperative agreements with international or multi-national
+  organizations, or sales or transfers by the U.S. government to foreign
+  governments or international organizations. Government purposes
+  include competitive procurement, but do not include the rights to use,
+  modify, reproduce, release, perform, display, or disclose for
+  commercial purposes or authorize others to do so.
+
+- Limited Rights: The government’s right to use, modify, reproduce,
+  release, perform, display, or disclose, in whole or in part, within
+  the government. The government may not, without the written permission
+  of the Performer, release or disclose outside the government, use for
+  manufacture, or authorize use by another party. The government may
+  release or disclose to a covered government support contractor in
+  performance of a covered government support contract.
+
+- Specially Negotiated/Other Rights: Rights proposed by the Performer
+  that differ from the standard categories described above. Open
+  Source/End User License Agreements/Data Use Agreements might fall
+  under this category. Include a description of the license proposed.
+
+  6.4 The table below includes an example to assist Proposers complete
+  it. Add rows to the table if needed. In general, Proposers can assume
+  the following in completing this table.
+
+a.  ARPA-H does not, unless specified in the solicitation, intend to own
+    IP. Rather, ARPA-H's expectation is that it will receive licenses to
+    IP sufficient to meet the needs of the project or program.
+
+b.  ARPA-H generally expects to receive license rights commensurate with
+    its contribution to the IP’s/data’s development. Where ARPA-H has
+    funded some or all of the IP/data, the agency would typically expect
+    at least Government Purpose Rights. This may vary based on the needs
+    of the program or in recognition of a proposer’s heavy
+    prior/internal investment. Where IP/data has been created entirely
+    at private expense, Limited Rights or Specially Negotiated/Other
+    Rights would be appropriate, though Government Purpose Rights are
+    also common. Proposed resource share may be a factor in the rights
+    proposed. The “Basis for Assertion” would typically have to do with
+    the source of the IP, how it was funded, and when the IP/data was
+    created.
+
+Background IP and Data Assertions
+
++---------------------+-------------+-------------+------------+-----------------+
+| General description | Expected    | Basis for   | Associated | Name of         |
+| of background IP or | role of     | Assertion   | Rights     | person/entity   |
+| restricted data     | this IP or  |             | (see       | asserting the   |
+| (e.g., inventions,  | data in     |             | rights     | restriction and |
+| proprietary         | performance |             | categories | their role in   |
+| information or data | of the work |             | above)     | the requirement |
+| subject to          |             |             |            | (i.e., primary  |
+| confidentiality     |             |             |            | proposer,       |
+| agreements,         |             |             |            | teaming         |
+| computer software,  |             |             |            | partner, or     |
+| etc.). For          |             |             |            | sub-awardee)    |
+| inventions, please  |             |             |            |                 |
+| provide the         |             |             |            |                 |
+| application/patent  |             |             |            |                 |
+| number if           |             |             |            |                 |
+| available.          |             |             |            |                 |
++:===================:+:===========:+:===========:+:==========:+:===============:+
+| ARPA-H Example      | ARPA-H      | ARPA-H      | ARPA-H     | ARPA-H Example  |
+|                     | Example     | Example     | Example    |                 |
+| Background IP       |             |             |            | (“Company Name  |
+| (“Image-recognition | Used as a   | Developed   | Limited or | (Prime)” or     |
+| software” or        | core        | exclusively | Government | “Company Name   |
+| “wireless biosensor | software    | at private  | Purpose    | (Sub-Awardee)”) |
+| technology”)        | module in   | expense or  | Rights     |                 |
+|                     | the         | developed   |            |                 |
+|                     | prototype   | under       |            |                 |
+|                     | system or   | agreement   |            |                 |
+|                     | Embedded    | number ABC. |            |                 |
+|                     | into the    |             |            |                 |
+|                     | device as   |             |            |                 |
+|                     | the primary |             |            |                 |
+|                     | sensing     |             |            |                 |
+|                     | component   |             |            |                 |
++---------------------+-------------+-------------+------------+-----------------+
+|                     |             |             |            |                 |
++---------------------+-------------+-------------+------------+-----------------+
+|                     |             |             |            |                 |
++---------------------+-------------+-------------+------------+-----------------+
+|                     |             |             |            |                 |
++---------------------+-------------+-------------+------------+-----------------+
+|                     |             |             |            |                 |
++---------------------+-------------+-------------+------------+-----------------+
+|                     |             |             |            |                 |
++---------------------+-------------+-------------+------------+-----------------+
+
+PATENTS
+
+  7.1 For patents identified above, provide documentation demonstrating
+  ownership or possession of appropriate licensing rights for the
+  proposed work. If a patent application has been filed for an
+  invention, but it includes proprietary information and is not publicly
+  available, provide the following information:
+
+- The patent number
+
+- The inventor name(s)
+
+- The assignee names (if any)
+
+- The filing date
+
+- The filing date of any related provisional application and
+
+- A summary of the patent title, with either:
+
+  (1) a representation of invention ownership; or
+
+  (2) proof of possession of appropriate licensing rights in the
+      invention (i.e., an agreement from the owner of the
+      patent-granting license to the proposer).
+
+  7.2 If any IP listed was developed in whole or in part with government
+  funding from any Agency, specify under what agreements that IP was
+  developed.
+
+  7.3 Background IP of teaming partners and sub-awardees should be
+  included if restrictions on that IP have implications for the success
+  of the award or the rights the Government can expect to receive.
+
+HUMAN SUBJECTS RESEARCH (HSR)
+
+  Does the proposed work involve Human Subjects Research?
+
+  ☐ No ☐ Yes
+
+  If yes, provide separate documentation showing evidence of, or a plan
+  for, review by an Institutional Review Board (IRB) and include
+  evidence of a Federal-wide Assurance for the Protection of Human
+  Subjects. Complete the following table to identify each organization,
+  team member, and sub-awardee performing HSR. Add rows as needed.
+
+  ------------------------------------------------------------------------
+       Organization        Institution      Federal-Wide     Approved IRB
+      Performing HSR          Site        Assurance Number     Protocol
+                                                                 (Y/N)
+  ---------------------- --------------- ------------------- -------------
+                                                             
+
+                                                             
+
+                                                             
+  ------------------------------------------------------------------------
+
+ANIMAL SUBJECTS RESEARCH (ASR)
+
+  Does the proposed work involve Animal Subjects Research?
+
+  ☐ No ☐ Yes
+
+  If yes, provide:
+
+- separate documentation that gives a brief description of the plan for
+  Institutional Animal Care and Use Committee (IACUC) review and
+  approval
+
+- the Vertebrate Animal Section (VAS) worksheet, found at:
+
+  https://olaw.nih.gov/sites/default/files/VASchecklist.pdf
+
+- evidence of each applicable organization’s Animal Welfare Assurance
+
+  Complete the following table to identify each organization, team
+  member, and sub-awardee performing ASR. Add rows as needed.
+
+  --------------------------------------------------------------------------
+       Organization        Institution    Approved    Completed    Animal
+      Performing ASR          Site          IACUC     VAS (Y/N)    Welfare
+                                          Protocol                Assurance
+                                            (Y/N)                  Number
+  ---------------------- --------------- ----------- ----------- -----------
+                                                                 
+
+                                                                 
+
+                                                                 
+  --------------------------------------------------------------------------
+
+Representations Regarding Unpaid Delinquent Tax Liability or a Felony Conviction under Any Federal Law
+
+  The Proposer represents that it –
+
+a.  Is ☐ Is not ☐
+
+  a corporation that has any unpaid federal tax liability that has been
+  assessed, for which all judicial and administrative remedies have been
+  exhausted or have lapsed, and that is not being paid in a timely
+  manner pursuant to an agreement with the authority responsible for
+  collecting the tax liability.
+
+b.  Is ☐ Is not ☐
+
+  a corporation that was convicted of a felony criminal violation under
+  a federal law within the preceding 24 months.
+
+CYBERSECURITY
+
+a.  Does your organization implement a cybersecurity program leveraging
+    industry and/or government standards to secure and defend your
+    systems, networks, and/or data?
+
+  ☐ No ☐ Yes
+
+  If yes, provide a brief description of the program, including the
+  specific standard(s) that guide the program, the abilities of the
+  organization to respond to a cybersecurity incident, and how the
+  organization assesses the security posture of its systems and/or
+  networks.
+
+b.  Does your organization have experience with managing and securing
+    Controlled Unclassified Information (CUI)?
+
+  ☐ No ☐ Yes
+
+  Describe how the proposing institution and sub-awardee/subcontractor
+  organizations manage CUI, including details of access control for
+  research designated as CUI, information systems security protocols,
+  storage, communicating unclassified fundamental research with foreign
+  nationals, and risk mitigation strategies for unclassified research
+  that may ultimately become CUI as the research proceeds.
+
+BIOSECURITY
+
+a.  Dangerous Gain-of-Function Research: Does the proposal involve
+    dangerous gain-of-function research, per the definition in Section 8
+    of Executive Order (E.O.) 14292 on Improving the Safety and Security
+    of Biological Research[3]?
+
+  ☐ No ☐ Yes
+
+b.  Synthetic Nucleic Acids or Benchtop Nucleic Acid Synthesis
+    Equipment: Does the proposed work include the potential to procure
+    synthetic nucleic acids or benchtop nucleic acid synthesis
+    equipment?
+
+    - This includes, but is not limited to, procuring synthetic DNA and
+      RNA, as well as whole organism genomes (e.g., viruses, bacteria)
+      containing any synthetic nucleic acid 200 nucleotides or greater,
+      and benchtop equipment capable of synthesizing nucleic acids.
+
+  ☐ No ☐ Yes
+
+  If yes, refer to the OSTP Framework for Nucleic Acid Synthesis
+  Screening for guidance, attestation requirements, and definitions of
+  terms. The requirement to use the framework applies to all work
+  performed under the award.
+
+[1] In addition to the Principal Investigator or Program/Project
+Director, Senior/Key Personnel includes individuals who contribute to
+the scientific development or execution of a project in a substantive,
+measurable way, regardless of whether they receive salaries or
+compensation under the award. These include individuals whose absence
+from the project would significantly impact the approved scope of the
+project; in other words, were the individual to leave the program, the
+change would be so substantial that ARPA-H would need to be notified. It
+is typical that each awardee has at least one Principal Investigator or
+Program/Project Director, including one from each sub-awardee or teaming
+partner that is expected to perform critical work for the proposed
+effort.
+
+[2] Public Law 117-167, The CHIPS and Science Act, Section 10612, Aug 9.
+2022; the People’s Republic of China, the Russian Federation, the
+Islamic Republic of Iran, the Democratic People’s Republic of North
+Korea, and any other country so designated by the Department of State.
+
+[3] https://www.whitehouse.gov/presidential-actions/2025/05/improving-the-safety-and-security-of-biological-research/

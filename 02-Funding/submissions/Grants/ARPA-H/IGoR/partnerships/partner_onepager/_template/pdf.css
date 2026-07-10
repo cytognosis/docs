@@ -1,0 +1,15 @@
+/* Compact print styling for the IGoR partner one-pager (target 1 to 2 pages). */
+@page { size: Letter; margin: 0.55in; }
+body { font-family: "Helvetica Neue", Arial, "Liberation Sans", sans-serif; font-size: 9.3pt; line-height: 1.2; color: #1a1a1a; }
+h1 { font-size: 14pt; color: #0b3d5c; margin: 0 0 4px 0; border-bottom: 2px solid #0b3d5c; padding-bottom: 3px; line-height: 1.15; }
+h2 { font-size: 11pt; color: #0b3d5c; margin: 5px 0 2px 0; border-bottom: 1px solid #cdd8df; padding-bottom: 1px; }
+p { margin: 1.5px 0; }
+ul { margin: 3px 0; padding-left: 18px; }
+li { margin: 1.5px 0; }
+strong { color: #10243a; }
+table { border-collapse: collapse; width: 100%; font-size: 8.8pt; margin: 4px 0; }
+th, td { border: 1px solid #b8c4cc; padding: 2px 6px; text-align: left; vertical-align: top; }
+th { background: #eef3f6; }
+a { color: #0b5c8a; text-decoration: none; }
+h1, h2 { page-break-after: avoid; }
+table, ul { page-break-inside: avoid; }

@@ -1,0 +1,83 @@
+{
+  "title": "GrantInfo",
+  "funder_name": "NSF X-Labs Initiative",
+  "deadlines": [
+    {
+      "date": "Letters of Intent: {{letter_of_intent_date}}",
+      "label": "Letter of Intent",
+      "type": "rolling"
+    },
+    {
+      "date": "Full Proposals: {{full_proposal_deadline}}",
+      "label": "Full Proposal",
+      "type": "hard"
+    }
+  ],
+  "eligibility": {
+    "entity_types": [
+      "Small Business",
+      "University",
+      "Non-profit"
+    ],
+    "exclusions": [
+      "Multiple research arms without a clear, defined Mission",
+      "Incremental state-of-the-art advancement",
+      "Technologies with substantial existing industry/VC investment",
+      "Testbeds or data centers as the primary focus",
+      "Platforms where the sole challenges are non-technical"
+    ],
+    "restrictions": [
+      "Cost sharing or matching is required for this funding opportunity"
+    ]
+  },
+  "funding": {
+    "min_award": null,
+    "max_award": null,
+    "phases": [
+      "Phase I",
+      "Phase II"
+    ],
+    "cost_share": true,
+    "indirect_cost_rule": "Indirect costs (F&A) are allowed up to 15% of the total award amount."
+  },
+  "timeline": [
+    {
+      "event": "Letters of Intent Due",
+      "date_or_duration": "{{letter_of_intent_date}}",
+      "phase": null
+    },
+    {
+      "event": "Full Proposals Due",
+      "date_or_duration": "{{full_proposal_deadline}}",
+      "phase": null
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Program Officer",
+      "role": "NSF X-Labs Initiative Program Officer",
+      "email": "x-labs@nsf.gov",
+      "phone": "+1-202-357-3000",
+      "org": null
+    },
+    {
+      "name": "NSF X-Labs Initiative Team",
+      "role": "NSF X-Labs Initiative Team Members",
+      "email": "x-labs-team@nsf.gov",
+      "phone": "+1-202-357-3000",
+      "org": null
+    }
+  ],
+  "requirements": [
+    {
+      "req_type": "formatting",
+      "description": "Maximum 8 single-sided pages (excluding COI statement)",
+      "value": null
+    },
+    {
+      "req_type": "submission",
+      "description": "Submit as PDF without a cover letter",
+      "value": null
+    }
+  ]
+}

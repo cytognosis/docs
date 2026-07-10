@@ -1,0 +1,625 @@
+# OTHER TRANSACTION AGREEMENT
+BETWEEN
+INSERT PERFORMER NAME, ADDRESS, AND UNIQUE ENTITY IDENTIFIED (UEI)
+AND
+THE ADVANCED RESEARCH PROJECTS AGENCY FOR HEALTH (ARPA-H)
+CONCERNING
+IGoR
+Agreement No.: AY2AX000XXX
+Authority: 42 United States Code (U.S.C.) § 290c(g)(1)(D)
+Total Amount of the Agreement: 	$ X,XXX,XXX
+Phase I (24 Months) Total:		$X,XXX,XXX
+Phase II (18 Months) Total:		$X,XXX,XXX
+Phase III (12 Months) Total:		$X,XXX,XXX
+Funding Obligated: 			$ X,XXX,XXX
+Date of the Agreement: 		MM/DD/YYYY
+This Agreement is entered into between the United States (U.S.) Government, represented by The Advanced Research Projects Agency for Health (ARPA-H), and INSERT PERFORMER NAME under U.S. federal law.
+FOR THE GOVERNMENT
+ADVANCED RESEARCH PROJECTS AGENCY FOR HEALTH
+[Signature]					[Signature]
+__________________________________	___________________________________
+Name, Title			 		Adrea Robinson, Agreements Officer
+
+# TABLE OF CONTENTS
+OTHER TRANSACTION AGREEMENT	1
+TABLE OF CONTENTS	2
+ARTICLE I: SCOPE OF THE AGREEMENT	4
+ARTICLE II: TERM	7
+ARTICLE III: MANAGEMENT OF THE PROJECT	8
+ARTICLE IV: AGREEMENT POINTS OF CONTACT	9
+ARTICLE V: OBLIGATION AND PAYMENT	9
+ARTICLE VI: DISPUTES	10
+ARTICLE VII: INTELLECTUAL PROPERTY RIGHTS	12
+ARTICLE VIII: FOREIGN ACCESS TO INTELLECTUAL PROPERTY	17
+ARTICLE IX: TITLE TO AND DISPOSITION OF TANGIBLE PROPERTY	19
+ARTICLE X: PUBLIC RELEASE OR DISSEMINATION OF INFORMATION	19
+ARTICLE XI: CIVIL RIGHTS	20
+ARTICLE XII: SECURITY	20
+ARTICLE XIII: APPLICABLE LAW	21
+ARTICLE XIV: ORDER OF PRECEDENCE	21
+ARTICLE XV: EXECUTION	21
+ARTICLE XVI: SURVIVAL	21
+ARTICLE XVII: PROHIBITION ON CERTAIN TELECOMMUNICATIONS AND VIDEO SURVEILLANCE SERVICES OR EQUIPMENT	21
+ARTICLE XVIII: RESEARCH SECURITY REQUIREMENTS	23
+ARTICLE XIX: REGULATORY AGENCY CORRESPONDENCE AND MEETING PARTICIPATION	23
+ARTICLE XX: PROCUREMENT OF SYNTHETIC NUCLEIC ACIDS OR BENCHTOP SYNTHESIZERS	24
+ARTICLE XXI: DANGEROUS GAIN-OF-FUNCTION RESEARCH	24
+ARTICLE XXII: SPECIAL TERMS & CONDITIONS	24
+ATTACHMENT 1: TASK DESCRIPTION DOCUMENT (TDD)	31
+ATTACHMENT 2: REPORT REQUIREMENTS	32
+ATTACHMENT 3: MILESTONE PAYMENT SCHEDULE WITH ASSOCIATED DELIVERABLES	34
+ATTACHMENT 4: BACKGROUND INTELLECTUAL PROPERTY ASSERTIONS	36
+
+# ARTICLE I: SCOPE OF THE AGREEMENT
+
+## Background and Scope
+The Intelligent Generator of Research (IGoR) program aims to eliminate longstanding inefficiencies in research and accelerate the development of effective therapies for complex diseases by creating an AI-enabled interoperable research ecosystem. IGoR would develop: 1) mechanistic disease models that encode causal biological relationships across scales, 2) an AI orchestration layer that identifies knowledge gaps and designs optimal experiments, 3) a layered protocol architecture that enables any qualified laboratory to execute the same experiment reproducibly, and 4) a distributed marketplace of validated laboratories that execute standardized protocols and return gold-standard data. Together, these components form a cycle of hypothesis generation, experimentation, and model refinement that enables researchers to create validated knowledge at least 10x more rapidly than conventional approaches. Ultimately, IGoR will empower researchers at every level to pursue bold, unconventional research directions that are currently too slow, too complex, or too resource‑intensive.
+WHAT IS THE PERCEIVED BENEFIT OF HAVING THE GOVERNMENT AS A PARTNER IN THIS PROGRAM AND/OR PROJECT? ADDRESSING THE ISSUES OF PARTICULAR IMPORTANCE TO BOTH INDUSTRY AND ARPA-H
+WHAT THE MARKET POTENTIAL IS IF SUCCESSFUL
+WHAT THE PROJECT TRANSITION GOALS ARE FOR ARPA-H, AND WHAT THE COMMERCIALIZATION GOALS ARE FOR THE PERFORMER
+WHAT WILL WE HAVE ACCOMPLISHED IF THIS PROJECT IS SUCCESSFUL
+[Approximately ONE page should be sufficient to disscuss/address the above topics. A few sentences should suffice to address each bullet. Present in integrated/concise narrative format]
+
+## Definitions
+In this Agreement, the following definitions apply:
+Agreement: The body of this Agreement and Attachments 1 – 4, which are expressly incorporated in and made a part of the Agreement.
+Agreements Officer (AO): The person with the authority to enter into, administer, modify, and/or terminate the Agreement and to make relevant determinations. The AO is the Government’s principal point of contact for all contractual, administrative, and financial issues arising under the Agreement, and is the only individual within the Government authorized to redirect the effort in any way.
+Agreements Officer’s Representative (AOR): The Government’s technical representative charged with overall responsibility for review and verification of completion of Payable Milestones and the Research Description Document, including amendments or modifications thereto, as set forth herein. The Agreements Officer’s Representative is not otherwise authorized to make any representations or commitments of any kind on behalf of the Agreements Officer or the Government. The AOR does not have the authority to alter the Performer’s obligations or to change the terms of the Agreement.
+Background Intellectual Property: Intellectual Property (IP) that is developed, generated, conceived, or first actually reduced to practice prior to performance of this Agreement.
+Covered Government Support Contractor: A contractor under a contract, the primary purpose of which is to furnish independent and impartial advice or technical assistance directly to the Government in support of the Government’s management and oversight of a program or effort. Such contractors may receive access to internal Government and performer data during the performance of a Government contract.
+Covered Individuals: Individuals identified by the Performer as Principal Investigators (PIs) or Senior/Key Personnel. These individuals are approved by the Government to perform under this Agreement.
+Data: Recorded information, regardless of form or method of recording, which includes, but is not limited to, copyrightable material; unpatentable computer software, including programs, code, documentation and databases; trademarks; and maskworks. The term does not include financial, administrative, cost, pricing, or management information and does not include Subject Inventions, as defined in this Article.
+Day: Calendar day(s) unless otherwise specified.
+Effective Date: The date of the last signature on the Agreement.
+Foreign Entity: A firm or institution organized or existing under the laws of a country other than the U.S., its territories, or possessions. The term includes, for purposes of this Agreement, any agency or instrumentality of a foreign government; and entities, institutions or business organizations which are owned or substantially controlled by foreign governments, entities, institutions, or individuals.
+Government: The U.S. Government, as represented by ARPA-H.
+Government Purpose: Any activity in which the U.S. Government is a party, including cooperative agreements with international or multi-national organizations or sales or transfers by the U.S. Government to foreign governments or international organizations. Government purposes include competitive procurement, but do not include the Rights to use, modify, reproduce, release, perform, display, or disclose Data for commercial purposes or authorize others to do so.
+Government Purpose Rights: The right to use, modify, reproduce, perform, display, release, or disclose, in whole or in part and in any manner, for Government purposes only, and to have or permit others to do so for Government purposes only.
+Intellectual Property: Intangible creations of the human mind, such as inventions; literary and artistic works; designs; and symbols, names and images used in commerce. Such creations may be protected by law through methods such as patents, copyrights, trademarks, or trade secrets. IP includes Background and Foreground IP. Background IP is developed, generated, conceived, or first actually reduced to practice prior to performance of this Agreement. Foreground IP is developed, generated, conceived, or first reduced to practice in performance of this Agreement.
+Invention: Any invention or discovery which is or may be patentable or otherwise protectable under Title 35 of the U.S.C.
+Limited Rights: The right to use, modify, reproduce, release, perform, display, or disclose, in whole or in part, within the Government. These rights do not include, without the written permission of the Performer, release or disclose outside the Government, use for manufacture, or authorize use by another party, except for Government support contractors acting within the scope of their government support contract.
+Made: When used in relation to any invention means the conception or first actual reduction to practice of such invention.
+Party: The Government (represented by ARPA-H), the Performer, or both.
+Performer: COMPANY/ORGANIZATION/TEAM NAME
+Practical Application: To manufacture, in the case of a composition of product; to practice, in the case of a process or method, or to operate, in the case of a machine or system; and, in each case, to establish that the invention is capable of being utilized and that its benefits are, to the extent permitted by law or Government regulations, available to the public on reasonable terms.
+Project: The research and development being conducted by the Performer under this Agreement.
+Property: Any tangible personal property other than property consumed during the execution of work under this Agreement.
+Senior/Key Personnel: Individuals that contribute in a substantive, meaningful way to the scientific development or execution of this research and development project. These are individuals whose absence would have a significant impact on the scope of the Project as stipulated in Attachment 1, Task Description Document.
+Subject Invention: Any invention conceived or first actually reduced to practice in the performance of work under this Agreement.
+Sub-performer: Any person or entity awarded by the Performer part of the work or services under this Agreement. In this Agreement, the term sub-performer includes sub-awardees, subcontractors, and other team members.
+Task Description Document (TDD): A document that outlines the proposed technical solution and may include details of technical tasks to be performed.
+Unlimited Rights: The right to use, modify, reproduce, perform, display, release, or disclose, in whole or in part, in any manner and for any purposes whatsoever, and to have or permit others to do so as well.
+
+## Scope of the Project
+
+### The purpose of this Agreement is to advance research and technology goals of the IGoR program.  ARPA-H and the Performer are bound to each other by a duty of good faith and best research effort in achieving the goals of the Program. The Performer shall be responsible for the work described in the Task Description Document (TDD), incorporated in this Agreement as Attachment 1, and shall submit all deliverables as required by Attachment 2 and Attachment 3.
+
+### The Performer shall be paid a fixed amount for each milestone accomplished in accordance with the Schedule of Milestones and Payments stated in Attachment 3. The Schedule of Milestones and Payments may be revised in accordance with Article III.
+
+# ARTICLE II: TERM
+
+## Term of this Agreement
+The term of the Agreement begins on the Effective Date of the Agreement and continues for 60 months thereafter.  Provisions of this Agreement, which, by their express terms or by necessary implication, apply for periods beyond the term of the Agreement.
+
+## Termination Provisions
+
+### The Government may terminate this Agreement by written notice to the Performer. Additionally, the Performer may request a termination of the Agreement by submitting a request to the Government in writing. If the Performer requests termination of this Agreement, the Government may, at its discretion, agree to terminate.
+
+### In the event of a termination, the Government and the Performer should negotiate in good faith a reasonable and timely adjustment of all outstanding issues between the Parties. The Government will have rights in Intellectual Property as described in Article VII, Intellectual Property Rights. Failure of the Parties to agree to terminate or reach an agreement on any outstanding issues related to termination shall follow the resolution procedures in Article VI, Disputes.
+
+## Extending the Agreement
+The Parties may extend by mutual written agreement the term of this Agreement if funding availability and research opportunities reasonably warrant. Any extension shall be formalized through modification of the Agreement by the Agreements Officer (AO) and the Performer.
+
+# ARTICLE III: MANAGEMENT OF THE PROJECT
+
+## Management and Project Structure
+
+### The Performer shall be responsible for the overall technical planning and performance, management, and execution of the Project. The Performer shall submit a Project Plan Document in accordance with Attachment 2 and participate in the Project kickoff meeting and regularly scheduled project review and milestone activities in accordance with Attachment 1.
+
+### The ARPA-H Program Manager (PM) shall be responsible for the monitoring of the progression of the Project, oversight, and acceptance of completed payable milestones and deliverables. The Agreements Officer’s Representative (AOR) may assist the AO and PM in performing these functions and in general administration of Agreement terms.
+
+## Modifications
+
+### The Parties may modify the Agreement by mutual agreement. Recommendations by the Performer for modifications, including justifications to support any changes to the TDD and prospective milestones, will be documented and submitted to the Government points of contact. This documentation must detail the technical, chronological, and financial impact of the proposed modification to the Project.
+
+### The ARPA-H PM, with assistance from the AOR as needed, will review and verify any recommendations to revise or otherwise modify Attachment 1, Attachment 3, or other proposed changes to the Agreement terms and conditions.
+
+### The Government may execute minor or administrative Agreement modifications unilaterally. Minor or administrative changes are those that do not affect the substantive rights of the parties and include, but are not limited to, incremental funding, changes in the paying office or appropriation data, or changes to update Government or Performer personnel identified in the Agreement unilaterally, with no signature from the Performer.
+
+### The AO will execute all modifications to the Agreement. The Government is not required to pay for additional or revised milestones until the Agreement has been modified to effectuate the change.
+
+## Records
+
+### The Performer shall maintain, and make available for Government inspection, records related to its performance under this Agreement for a period not to exceed three (3) years after expiration of the term of the Agreement.
+
+# ARTICLE IV: AGREEMENT POINTS OF CONTACT
+Administrative and contractual matters under this Agreement shall be referred to the following representatives of the Parties:
+
+## Government Points of Contact:
+Agreements Officer (AO):
+Adrea Robinson
+ARPA-H Business Innovation Division (BID)
+ARPA-H Program Manager (PM):
+Yoram Vodovotz
+ARPA-H Resilient Systems Office (RSO)
+At the time of award, there is no assigned AOR. All AOR duties will be assigned to the PM until an AOR is appointed.
+
+## Performer Points of Contact
+Performer’s Administrative/Contracting:
+[INSERT NAME]
+[INSERT ORGANIZATION/OFFICE]
+[INSERT PHONE NUMBER]
+[INSERT EMAIL ADDRESS]
+Performer’s Project Manager/Principal Investigator:
+[INSERT NAME]
+[INSERT ORGANIZATION/OFFICE]
+[INSERT PHONE NUMBER]
+[INSERT EMAIL ADDRESS]
+
+# ARTICLE V: OBLIGATION AND PAYMENT
+
+## Obligation
+The Government’s liability to make payments to the Performer is limited to only those funds obligated under this Agreement.
+
+## Payments
+
+### The Government shall make fixed payments to the Performer for the completion of milestones.
+
+### To enable payment, the Performer shall:
+
+#### Maintain an active registration for ‘All Awards’ in System for Award Management (SAM) throughout the life of the award,
+
+#### Ensure an Electronic Business Point of Contact is designated in SAM at http://www.sam.gov, and
+
+#### Register to use the Payment Management System (PMS) within ten (10) days after award of this Agreement.
+
+#### 
+PMS guidance can be found here: https://pms.psc.gov/training/grant-recipient-training.html. The Performer is required to utilize PMS system when submitting requests for payment under this Agreement. PMS is a centralized payment and cash management system.
+
+### Payee Information: As identified in SAM.
+
+#### CAGE Code: Enter CAGE
+
+#### UEI: Enter UEI
+
+### The Performer shall document the accomplishments of each milestone by submitting milestone reports for review and approval as required per Attachment 2.
+
+### The ARPA-H PM, with the assistance of the AOR as needed, will be responsible for reviewing all deliverable(s)/ milestone report(s) to confirm whether the milestone has been met. Within fourteen (14) days of submission, the PM or AOR will either provide written notice of rejection to the Performer, which includes feedback regarding deficiencies requiring correction or provide a written notice of acceptance to the Performer and AO. If the Government rejects a milestone report, the Government shall afford the Performer with reasonable opportunities to cure or resubmit the milestone report. Written Government confirmation that the milestone has been met will ultimately be required before the payment request is paid, per Subsection 7 below.
+
+### Upon written verification of the accomplishment of the milestone by the AOR or PM, the Performer may request payment through PMS. The payment request must include a justification (limited to 1,000 characters) such as:
+
+### 
+“The payment is justified upon completion of [Milestone(s) (or TDD tasks/references [XX]), as accepted by the Program Manager on [date], for the [XX] program/project.”
+
+The justification must not include any personally identifiable information. If additional information is needed, or a correction is needed, a request for clarification will be sent back to the Performer in the Defend the Spend (DTS) System so a revised justification can be submitted.
+
+### The Performer will receive payment via PMS for amounts set forth in Attachment 3.
+
+# ARTICLE VI: DISPUTES
+
+## General
+The Parties shall communicate with one another in good faith and in a timely and cooperative manner when raising issues under this Article, with the objective of resolving disputes by mutual agreement.
+
+## Dispute Resolution Procedures
+
+### Any dispute between the Government and the Performer concerning questions of fact or law arising from or in connection with this Agreement and, regardless of whether involving an alleged breach of this Agreement, may be raised only under this Article. This Article describes the applicable administrative review process that must be completed by the parties before any other dispute resolution process or legal action pertaining to the terms of this Agreement may be taken. Completion of this process forecloses any further administrative review.
+
+### Whenever disputes arise, the Parties shall attempt to resolve the issue(s) involved by discussion and mutual agreement as soon as practicable. In no event shall a dispute, disagreement or misunderstanding which arose more than three (3) months prior to the notification made under Article VI (B)(3), constitute the basis for relief under this Article unless the ARPA-H Director waives this requirement.
+
+### Failing resolution by mutual agreement, the aggrieved Party shall document the dispute by notifying the other Party (through the ARPA-H AO or the Performer’s Administrator, as the case may be) in writing of the relevant facts, unresolved issues, and clarification or remedy sought. Within seven (7) days after providing notice to the other Party, the aggrieved Party may, in writing, request a joint decision by ARPA-H’s Head of Contracting Activity (HCA), and a senior executive no lower than [INSERT A LEVEL OF EXECUTIVE FAR ENOUGH REMOVED FROM THE PROGRAM TO MAINTAIN A GREATER LEVEL OF IMPARTIALITY] level appointed by the Performer. The other Party shall submit a written position on the matter(s) in dispute within thirty (30) days after being notified that a decision has been requested. ARPA-H’s HCA and the senior executive shall conduct a review of the matter(s) in dispute and render a decision in writing within thirty (30) days of receipt of such written position.
+
+### Failing satisfactory resolution from the joint decision, the Performer may, in writing, request a final review from the ARPA-H Deputy Director. The ARPA-H Deputy Director may elect to conduct this review jointly with a senior executive no lower than [INSERT A LEVEL OF EXECUTIVE FAR ENOUGH REMOVED FROM THE PROGRAM AND ABOVE THE PERSON IDENTIFIED AT SUBPARAGRAPH 3 TO MAINTAIN A GREATER LEVEL OF IMPARTIALITY] level appointed by the Performer. Following the review, the ARPA-H Deputy Director will reach a decision and notify the Parties in writing within sixty (60) days of the Performer’s written request. To the extent permitted by law, such resolution shall be final and binding, except that if not satisfied with the results of completing the administrative review process, either party may pursue any right and remedy in a court of competent jurisdiction.
+
+## Limitation of Damages
+Claims for damages of any nature whatsoever pursued under this Agreement shall be limited to direct damages only up to the aggregate amount of ARPA-H funding obligated as of the time the dispute arises. In no event shall ARPA-H be liable for claims for consequential, punitive, special, and incidental damages, claims for lost profits, or other indirect damages.
+
+# ARTICLE VII: INTELLECTUAL PROPERTY RIGHTS
+
+## Patent Rights
+
+### Allocation of Principal Rights – Performer
+
+#### Unless the Performer notifies the Government that the Performer does not intend to retain title, the Performer shall retain the entire right, title, and interest throughout the world to each Subject Invention consistent with the provisions of this Article.
+
+#### For each Subject Invention to which the Government obtains title, the Performer shall retain a nonexclusive, royalty-free license throughout the world to said Subject Invention.  This license extends to the Performer’s domestic subsidiaries and affiliates, including Canada, if any, and includes the right to grant license of the same scope to the extent that the Performer was legally obligated to do so at the time the Agreement was awarded. The license is transferable only with the approval of the ARPA-H AO, except when transferred to the successor of that part of the business to which the Subject Invention pertains. ARPA-H approval for license transfer shall not be unreasonably withheld.
+
+### Allocation of Principal Rights – ARPA-H
+
+#### With respect to any Subject Invention in which the Performer retains title, ARPA-H shall retain a nonexclusive, nontransferable, irrevocable, paid-up Government Purpose license in the Subject Invention throughout the world, regardless of the protection method chosen.
+
+#### Upon ARPA-H’s written request, the Performer shall convey title to any Subject Invention to ARPA-H under the following conditions. ARPA-H may only request title within sixty (60) days after learning of the Performer’s actions.
+The Performer fails to disclose a Subject Invention prior to the completion of the Agreement, or
+The Performer elects not to retain title to a Subject Invention.
+
+#### Regarding Article VII (A)(2)(b)(1), ARPA-H shall not make any such request in an arbitrary or capricious manner and/or not in abuse of its discretion, and all such requests shall be subject to Article VI, Disputes.
+
+### Invention Disclosure, Election of Title, and Election of Protection Method
+
+#### The Performer shall disclose each Subject Invention to ARPA-H within four (4) months after the inventor discloses it in writing to his company personnel responsible for patent matters. The disclosure shall be made to the ARPA-H AO and shall be in the form of a written report sufficiently complete in technical detail. The report shall identify the Agreement number, the circumstances under which the invention was made, the identity of the inventor, and any publication, sale or public use of the invention.
+
+#### If the Performer determines that it does not intend to retain title to any Subject Invention, the Performer shall notify ARPA-H in writing no more than sixty (60) days prior to the end of the one (1) year statutory U.S. patent protection period.
+
+#### If the Performer chooses to retain title to any Subject Invention, the Performer shall inform the ARPA-H AO of its corporate determination how to best protect any Subject Invention. The Performer shall choose one of the following two options to protect any Subject Invention.
+Protection of the Subject Invention through the patent process
+If the Performer chooses to file a patent application in the U.S. or other countries or forums throughout the world, the Performer shall notify ARPA-H of this decision, the dates on which the patent applications were filed and where.
+The Performer shall notify ARPA-H of any decisions not to continue the prosecution of a patent application, pay maintenance fees, or defend in a reexamination or opposition proceeding on a patent, in any country, not less than thirty (30) calendar days before the expiration of the response period required by the relevant patent office.
+The Performer shall include, within the specification of any U.S. patent application and any patent issued covering a subjection invention, the following statement:
+
+“This invention was made with U.S. Government support under Agreement No. (AY2AX000XXX) awarded by the Advanced Research Projects Agency for Health. The U.S. Government has certain rights in the invention.”
+Protection of the Subject Invention as a trade secret
+If the Performer chooses not to patent the Subject Invention but instead protect it as a trade secret, the Performer shall notify the ARPA-H AO of this decision in writing within eight (8) months of the Performer’s disclosure of the invention to ARPA-H. ARPA-H may, at its discretion, approve requests for an extension of time for electing to protect a Subject Invention as a trade secret, and such a request will not be unreasonably withheld. Such requests may be made within or after the eight-month deadline.
+In that notification, the Performer shall state the applicable law that will govern protection of the trade secret as well as any special protection methods or actions that the Performer will take to ensure secrecy.
+If the Government discloses a Subject Invention which is protected as a trade secret to a third party Covered Government Support Contractor, the Government will ensure trade secrets remain protected under an obligation of confidentiality with respect to such Covered Government Support Contractors. In order to ensure necessary confidentiality is maintained, Performer will negotiate in good faith with the goal of entering into a non-use and-disclosure agreement with that third party at the Government's request to cover information developed under this Agreement that discloses a Subject Invention that is maintained as a trade secret and is to be used by the third party solely for Government purposes. Performer will disclose such information to the third party within fifteen (15) days of entering into a non-use and -disclosure agreement.
+
+### Administrative Actions
+
+#### At the completion of the Agreement, the Performer shall submit a comprehensive listing of all Subject Inventions disclosed under this Article during the Agreement and the status of each. All required reporting shall be done, to the extent possible, using the iEdison reporting website: https://nist.gov/iedison. To the extent that the reporting cannot be accomplished by use of iEdison, any required documentation will be submitted to the ARPA-H AO.
+
+#### The Performer agrees to execute or have executed and promptly deliver to ARPA-H all instruments necessary to:
+Establish or confirm the rights the Government has throughout the world in any Subject Invention to which the Performer elects to retain title, and
+Convey title to ARPA-H when requested under this Article and to enable the Government to obtain patent protection throughout the world in the Subject Invention.
+
+#### The Performer shall instruct and educate its employees of the importance of disclosing inventions promptly to corporate personnel responsible for the administration of patent matters to permit sufficient time to satisfy its notification responsibilities under this Agreement.
+
+### Exceptional Circumstances
+
+#### The Parties recognize that the Government is making a significant investment in the Subject Inventions under this Agreement. To protect the Government’s interests, the Parties agree to the following in the event the Performer ceases operations, exits the [INSERT DESCRIPTION] industry; or otherwise makes the Subject Inventions commercially unavailable or unavailable to the Government:
+Upon ARPA-H’s request and an adequate showing of need, the Performer, assignee or exclusive licensee will provide a non-exclusive license to a responsible applicant or applicants, under terms that are reasonable under the circumstances, and
+If the Performer, assignee or exclusive licensee refuses a reasonable request from the Government, ARPA-H has the right to grant such a license itself if ARPA-H makes a reasonable determination that such action is necessary to alleviate societal health or safety needs or national security needs, which are not reasonably satisfied, by the Performer, assignee, or exclusive licensees.
+
+## Data Rights
+
+### Allocation of Principal Rights
+
+#### With respect to Data developed, generated, and/or delivered pursuant to Attachments 1 through 3 of this Agreement, the Government shall hereby receive Government Purpose Rights except as noted in the following two subparagraphs:
+With respect to the following Data deliverables, the Government shall receive Government Purpose Rights:
+Technical Status Reports
+Milestone Reports
+Final Report(s)
+The Government may require delivery of Data developed or generated under this Agreement within two (2) years after completion or termination of this Agreement. Any request for delivery of data will be made in writing with at least sixty (60) days’ notice. Upon the Government’s making such a request, the parties will negotiate in good faith the applicable Data rights for the requested Data prior to delivery, and the Government will reimburse the Performer for reasonably incurred costs for gathering and delivery of the Data.
+
+### Exceptional Circumstances
+
+#### Notwithstanding any other provision of this Section, in the event the Government chooses to exercise its rights under this Article, the Performer agrees to deliver at no additional cost to the Government all Data necessary to achieve practical application of a specified Subject Invention. The Government shall retain Unlimited Rights, as defined in Article I, to this delivered Data.
+
+#### To facilitate any future requests and deliveries, the Performer agrees to retain and maintain in good condition for three (3) years after completion or termination of this Agreement all Data necessary to achieve practical application of any Subject Invention as defined in Article I of this Agreement.
+
+#### The Government is required to execute this exercise of rights in writing and the Performer agrees to deliver the Data within sixty (60) days from the date of the written request. The Performer may request an extension of this time period by making a written justification to the Government and such a request will not be unreasonably withheld.
+
+### Marking Data
+
+#### The Performer shall mark any Data delivered under this Agreement with the following legends, as applicable:
+
+GOVERNMENT PURPOSE RIGHTS
+
+#### Agreement Number: AY2AX000XXX
+
+#### Performer Name: [INSERT PERFORMER NAME]
+
+#### In accordance with Article VII, as applicable, contained in the above identified Agreement, the Government has the right to: (a) use, modify, reproduce, perform, display, release, or disclose, in whole or in part and in any manner, for Government purposes only, and to have or permit others to do so for Government purposes only. Government purposes includes any activity in which the U.S. Government is a party, including cooperative agreements with international or multi-national organizations or sales or transfers by the U.S. Government to foreign governments or international organizations. Government purposes include competitive procurement, but do not include the rights to use, modify, reproduce, release, perform, display, or disclose Data for commercial purposes or authorize others to do so. Any reproduction of this Data or portions thereof marked with this legend must also reproduce the markings.”
+
+LIMITED RIGHTS
+
+#### Prime Agreement No.: AY2AX000XXX
+
+#### Performer Name: [INSERT PERFORMER NAME]
+
+#### In accordance with Article VII, as applicable, contained in the above identified Agreement, the Government has the right to use, modify, reproduce, release, perform, display, or disclose, in whole or in part, within the Government. The Government may not, without the written permission of the Performer, release or disclose outside the Government, use for manufacture, or authorize use by another party. The Government may release to a covered Government support contractor in performance of its Government support contract. Any reproduction of this Data or portions thereof marked with this legend must also reproduce the markings.”
+
+#### No marking is necessary if the Performer furnishes Data without restriction.
+
+### Lower Tier Agreements
+
+### The Performer shall include this Article, suitably modified, in all subawards or lower tier agreements, for experimental, developmental, or research work.
+
+# ARTICLE VIII: FOREIGN ACCESS TO INTELLECTUAL PROPERTY
+This Article shall remain in effect during the term of the Agreement and for two (2) years thereafter.
+
+## Definitions
+In this Article, the following definition applies:
+Fundamental Research: Research in science, engineering, or mathematics, the results of which ordinarily are published and shared broadly within the research community and for which the researchers have not accepted publication restrictions for proprietary or national security reasons.
+
+## General
+The Parties agree that Intellectual Property developed and/or generated under this Agreement may constitute a significant enhancement to the security and economic vitality of the U.S. Accordingly, access to important Intellectual Property developments under this Agreement by foreign entities must be carefully controlled. The controls contemplated in this Article are in addition to and are not intended to change or supersede the provisions of the International Traffic in Arms Regulations (ITAR) (22 Code of Federal Regulation (CFR) Parts 120-130) and the Department of Commerce’s (DOC’s) Export Administration Regulations (EAR) (15 CFR Parts 730-774) regarding export-controlled items. The Performer's responsibility to comply with all applicable laws and regulations regarding export-controlled items and the handling of information exists independent of, and is not established or limited by, the information provided by this article. The Performer shall consult with the Department of State regarding any questions relating to compliance with the ITAR and shall consult with the DOC regarding any questions relating to compliance with the EAR.
+
+## Restrictions on Sale or Transfer of Intellectual Property to Foreign Entities
+
+### In return for the financial investment by the Government in the Project, and to promote the national security interests of the U.S., the Government reserves the right to be notified and discuss options with the Performer before Performer’s transfer of Intellectual Property developed or generated under this Agreement to a foreign entity. It is not the Government’s intention to unduly restrict the Performer’s ability to promote and sell its products and services in the global market, but instead to protect the Government’s investment and ability to fully utilize its licenses to the Intellectual Property in the future. For purposes of this Article, a transfer includes the sale of the Performer and all its assets, or the sale or licensing of the Intellectual Property developed or generated under this Agreement. A transfer does not include:
+
+#### Sales of products or components, and licenses of Intellectual Property related to sales of products or components (e.g., software, documentation) or non-exclusive licenses,
+
+#### Transfers to foreign affiliates or subsidiaries of the Performer for purposes related to the performance of this Agreement,
+
+#### Permissible access to Intellectual Property to a foreign entity which is an approved source of supply or source of research services under this Agreement, provided that the access is limited to that necessary to allow the entity to perform its agreed upon role under this Agreement,
+
+#### Research ARPA-H agrees is Fundamental Research as defined in this agreement; or
+
+#### Any circumstances that have been included in an attachment to this Agreement.
+
+### In addition, to fully facilitate the Government’s investment in the Intellectual Property developed or generated under this Agreement, the Performer agrees to take reasonable steps to license the exclusive right to use or sell the Intellectual Property in the U.S. only to a person or entity that agrees that any product utilizing the Intellectual Property will be manufactured substantially in the U.S. If the Performer has made reasonable but unsuccessful efforts to identify and license to potential licensees to manufacture in the U.S. or if the Performer, after reasonable efforts, has determined that domestic manufacturing is not commercially feasible, the Performer shall notify the Government in writing, submitted to the AO, of its specific determination and request a waiver. The Government may waive this requirement and will not unreasonably deny such a request by the Performer without a specific and detailed written determination. The Government shall not unreasonably delay or withhold such a waiver.
+
+### The Performer shall provide timely written notice to the Government of any proposed transfer to a foreign entity at least forty-five (45) days prior to the proposed date of transfer. This notice must cite this Article and must state specifically what is to be transferred and the general terms of the transfer, including what is to be transferred and to whom. The Government will respond within thirty (30) days of receipt of the waiver request whether it agrees with the proposed transfer, if it would like to have further discussions about the transfer terms, or if it intends to invoke its rights under this Article. If the Government does not respond within thirty (30) days of the receipt of the waiver request, the Performer may assume that there are no objections to the transfer. If the Government does respond in a manner with which the Performer disagrees, the Performer may utilize the procedures under Article VI, Disputes.
+
+### If the Government determines that the transfer may have adverse consequences to the furtherance of its investment in the program the interests of the U.S., the Parties agree to jointly discuss the goal of the transfer and discuss alternative options that would obviate or mitigate the potential adverse consequences to the U.S., but which would provide substantially equivalent and acceptable benefits to the Performer.
+
+### In the event the Performer transfers the Intellectual Property developed or generated under this Agreement without the Government’s written consent -
+
+#### the Performer shall refund to the Government the full amount of federal funds paid under the Agreement for the development of the Intellectual Property, and
+
+#### the Government shall have a non-exclusive, nontransferable, irrevocable, paid-up license to practice or have practiced on behalf of the U.S. the Intellectual Property, regardless of form or protection method, throughout the world for Government purposes. Upon request of the Government, the Performer shall provide written confirmation of such licenses.
+
+## Lower Tier Agreements
+The Performer shall include this Article, suitably modified, in all subawards or lower tier agreements, regardless of tier, for experimental, developmental, or research work.
+
+# ARTICLE IX: TITLE TO AND DISPOSITION OF TANGIBLE PROPERTY
+
+## Title to Property
+Title to each item of property acquired under this Agreement with an acquisition value less than $10,000 shall vest in the Performer upon acquisition with no further obligation of the Parties unless otherwise determined by the AO. Should any item of property with an acquisition value equal to or greater than $10,000 be required, the Performer shall obtain prior written approval of the AO if such item was not included in the Performer’s final, accepted proposal. Title to this property shall vest in the Performer upon acquisition, but the Government will retain an ownership interest in the property and will participate in the disposition of property at the conclusion of the Agreement. The Performer shall be responsible for the inventory, maintenance, repair, protection, and preservation of all property at its own expense.
+
+## Disposition of Property
+At the completion of this Agreement, items of property with an acquisition value equal to or greater than $10,000 may be handled in one of the following approaches:
+
+### Purchased by the Performer at an agreed-upon price, the price to represent fair market value, with the proceeds of the sale being returned to the Government; or
+
+### Transferred to a Government research facility with title and ownership being transferred to the Government; or
+
+### Donated to a mutually agreed University or technical learning center for research purposes; or
+
+### Any other Government-approved disposition approach
+
+# ARTICLE X: PUBLIC RELEASE OR DISSEMINATION OF INFORMATION
+The Performer shall provide notice and draft documents to ARPA-H’s Division of Communications, Outreach, Marketing, Public Affairs, and Social Strategy (COMPASS) at media@arpa-h.gov at least ten (10) days prior to any public release or advertisements relating to the research being conducted in performance of the Agreement.
+The Performer shall provide notice and draft documents to the ARPA-H PM at least ten (10) days prior to any publication relating to the research being conducted in the performance of the Agreement. Publications include academic papers, presentations, and submissions to open-source repositories.
+In general, ARPA-H reserves the right to request changes to public releases or publications. The Government shall adhere to normal academic customs and may suggest revisions to the relevant draft but shall not, after being given the opportunity to examine the relevant draft, prevent publication. The Performer shall consider the Government’s suggestions and comments and shall coordinate a meeting to discuss any outstanding suggestions and/or concerns prior to submission or dissemination.
+Publications or presentations will contain a statement on the title page written substantially as follows:
+“This research was funded, in part, by the Advanced Research Projects Agency for Health (ARPA-H). The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the official policies, either expressed or implied, of the U.S. Government.”
+The following information or documents will not be subject to this Article:
+
+#### Unclassified information or documents used in the patent process, copyright approval process, or trademark approval process, or
+
+#### Papers prepared in response to academic requirements that are not intended for public release outside the academic institution.
+
+#### [RESERVED FOR ADDITIONAL CATEGORIES]
+Performers shall not use ARPA-H logos without written authorization from ARPA-H COMPASS at media@arpa-h.gov. The Government shall not be referenced in a way that suggests endorsement or affiliation.
+
+# ARTICLE XI: CIVIL RIGHTS
+By accepting this award, the Performer certifies that it is compliant with applicable anti-discrimination laws and will remain compliant for the duration of the Agreement. These laws include, but are not limited to, Title VI of the Civil Rights Act of 1964 as amended (42 U.S.C. § 2000d et seq) and Title IX of the Education Amendments of 1972, as amended, (20 U.S.C. §§ 1681 et seq). The Performer shall have a signed Assurance of Compliance (HHS Form 690) on file with HHS Office for Civil Rights throughout the term of this Agreement.
+
+# ARTICLE XII: SECURITY
+The Performer shall make all necessary efforts to secure and defend the systems and Data associated with the research supporting ARPA-H, to include meeting any applicable federal cybersecurity requirements and informing the Government of any cybersecurity incidents related to the supporting system(s). If the Performer processes Controlled Unclassified Information (as designated by the National Archives and Records Administration) on non-federal systems, the Performer shall meet the requirements in the current revision of NIST Special Publication 800-171, “Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations”. In addition, the Federal Information Processing Standards Publication 201-3 Personal Identity Verification of Federal Employees and Contractors will apply to any Performer personnel that requires access to ARPA-H facilities, information systems, and/or applications.
+
+# ARTICLE XIII: APPLICABLE LAW
+U.S. federal law governs the construction, interpretation, and resolution of any disputes arising out of or in connection with this Agreement.
+
+# ARTICLE XIV: ORDER OF PRECEDENCE
+In the event of any inconsistency between the terms of this Agreement and the Attachments, the inconsistency will be resolved by giving precedence in the following order: (1) The Agreement, and (2) all Attachments to the Agreement.
+
+# ARTICLE XV: EXECUTION
+This Agreement constitutes the entire Agreement of the Parties and supersedes all prior and contemporaneous agreements, understandings, negotiations and discussions among the Parties.
+
+# ARTICLE XVI: SURVIVAL
+The Articles covering Definitions, Records Retention and Government Access, Disputes, Limitation of Damages, Intellectual Property Rights, Foreign Access to Intellectual Property, Applicable Law, Order of Precedence, and Survival will survive beyond the period of performance or termination of the Agreement.
+
+# ARTICLE XVII: PROHIBITION ON CERTAIN TELECOMMUNICATIONS AND VIDEO SURVEILLANCE SERVICES OR EQUIPMENT
+This Article is included to comply with the requirements Section 889(a)(1)(A) of the John S. McCain National Defense Authorization Act for Fiscal Year 2019 (Pub. L. 115-232).
+
+## Definitions
+In this Article, the following definitions apply:
+Covered Foreign Country: The People's Republic of China.
+Covered Telecommunications Equipment or Services:
+
+### Telecommunications equipment produced by Huawei Technologies Company or ZTE Corporation (or any subsidiary or affiliate of such entities);
+
+### Video surveillance and telecommunications equipment produced by Hytera Communications Corporation, Hangzhou Hikvision Digital Technology Company, or Dahua Technology Company (or any subsidiary or affiliate of such entities);
+
+### Telecommunications or video surveillance services provided by such entities or using such equipment; or
+
+### Telecommunications or video surveillance equipment or services produced or provided by an entity that the Secretary of Defense, in consultation with the Director of National Intelligence or the Director of the Federal Bureau of Investigation, reasonably believes to be an entity owned or controlled by, or otherwise connected to, the government of a Covered Foreign Country.
+Critical Technology:
+
+### Defense articles or defense services included on the U.S. Munitions List set forth in the International Traffic in Arms Regulations under subchapter M of chapter I of title 22, CFR.
+
+### Items included on the Commerce Control List set forth in Supplement No. 1 to part 774 of the Export Administration Regulations under subchapter C of chapter VII of title 15, CFR, and controlled—
+
+#### Pursuant to multilateral regimes, including for reasons relating to national security, chemical and biological weapons proliferation, nuclear nonproliferation, or missile technology, or
+
+#### For reasons relating to regional stability or surreptitious listening.
+
+### Specially designed and prepared nuclear equipment, parts and components, materials, software, and technology covered by part 810 of title 10, CFR (relating to assistance to foreign atomic energy activities).
+
+### Nuclear facilities, equipment, and material covered by part 110 of title 10, CFR (relating to export and import of nuclear equipment and material).
+
+### Select agents and toxins covered by part 331 of title 7, CFR, part 121 of title 9 of such Code, or part 73 of title 42 of such Code, or
+
+### Emerging and foundational technologies controlled pursuant to Section 1758 of the Export Control Reform Act of 2018 (50 U.S.C. 4817).
+
+## Prohibition
+In accordance with Public Law 115-232, Section 889 (b), the Performer is prohibited from obligating or expending funds received by the Government under this Agreement to:
+
+### Procure or obtain,
+
+### Extend or renew a contract to procure or obtain, or
+
+### Enter into a contract (or extend or renew a contract) to procure or obtain equipment, services, or systems that uses Covered Telecommunications Equipment or Services as a substantial component of any system, or as Critical Technology as part of any system
+
+## Lower Tier Agreements
+The Performer shall include this Article, suitably modified, in all subawards or lower tier agreements.
+
+# ARTICLE XVIII: RESEARCH SECURITY REQUIREMENTS
+
+## Disclosure Requirements
+The Performer shall disclose information regarding potential conflicts of interest and commitment, including any foreign affiliations, funding, and support. The Performer shall promptly update the disclosure to reflect any changes, as discussed in Section C of this Article.
+
+## Annual Recertification
+Covered individuals must certify annually that they are not a party to a malign foreign talent recruitment program. This certification must be signed by the Covered individual and by the appropriate representative of the Performer. The Performer shall submit the certification annually to the AO identified within Article IV. This certification is due within thirty (30) days of each successive year of performance from the Effective Date of this Agreement.
+
+## Update of Assertions Due to Changes
+The Performer shall promptly report any potential changes in the Covered Individuals to the AO within ten (10) days of discovery. Changes that necessitate updates to the security-related assertions include, but are not limited to:
+
+### Replacement or addition of Covered individuals at the prime or sub-performer organization.
+
+### Changes to previously identified Covered individuals’ conflict of commitment disclosures.
+Newly nominated Covered individuals are not eligible to begin work under this Agreement until the Government completes an updated security review and the AO provides clearance to begin work.
+
+# ARTICLE XIX: REGULATORY AGENCY CORRESPONDENCE AND MEETING PARTICIPATION
+The Performer shall promptly furnish to ARPA-H copies of substantive written correspondence with regulatory authorities responsible for approving products developed under the Agreement. Such regulatory authorities include, but are not limited to, the U.S. Food and Drug Administration (FDA), the European Medicines Agency (EMA), and any equivalent domestic or foreign regulatory bodies.
+To the extent permitted by the regulatory authority, the Performer shall invite ARPA-H to substantive meetings relevant to the approval of products developed under the Agreement. The Performer shall inform ARPA-H of meetings and provide any briefing documents, presentations, or other information in advance.
+Where ARPA-H is unable to attend a meeting with a regulatory authority, the Performer shall provide ARPA-H with a written summary of the meeting, including key issues discussed, advice or feedback provided, and any commitments or follow-up actions agreed.
+The Performer shall remain solely responsible for any regulatory submissions and interactions with regulatory authorities related to the Agreement.
+
+# ARTICLE XX: PROCUREMENT OF SYNTHETIC NUCLEIC ACIDS OR BENCHTOP SYNTHESIZERS
+HHS funds may only be used to procure synthetic nucleic acids or benchtop nucleic acid synthesis equipment from sources adhering to the Office of Science and Technology Policy Framework for Nucleic Acid Synthesis Screening.
+
+# ARTICLE XXI: DANGEROUS GAIN-OF-FUNCTION RESEARCH
+HHS funds may not be used to conduct any dangerous gain-of-function research per Executive Order 14292, Improving the Safety and Security of Biological Research. Further, HHS funds may not be used for life science research with foreign entities in countries of concern (e.g., China) pursuant to 42. U.S.C. § 6627(c), or in other countries where there is not adequate oversight to ensure that the countries are compliant with U.S. oversight standards and policies.
+
+# ARTICLE XXII: SPECIAL TERMS & CONDITIONS
+
+### A. Salary Rate Limitations
+The Performer shall not use program funds (under this Agreement) to pay the direct salary of an individual at a rate in excess of the Federal Executive Schedule Level II in effect on the date the funding was obligated. For the purposes of the salary rate limitation, "Direct salary," "salary", and "institutional base salary", have the same meaning and are collectively referred to as "direct salary.” An individual's direct salary is the annual compensation that the Performer pays for an individual's direct effort (costs) under the Agreement. Direct salary excludes any income that an individual may be permitted to earn outside of duties to the Performer. Direct salary also excludes fringe benefits, overhead, and general and administrative expenses (also referred to as indirect costs or facilities and administrative [F&A] costs).
+NOTE: The salary rate limitation does not restrict the salary that an organization may pay an individual working under the Agreement, it merely limits the portion of that salary that may be paid with Federal funds.
+The salary rate limitation also applies to individuals under subawards.
+
+### B.  Human Subjects Research
+The Performer agrees that any engagement in human subjects involved in research under this Agreement shall occur in accordance with 45 CFR Part 46 and the Performer's current Federalwide Assurance (FWA) on file with the HHS Office for Human Research Protections (OHRP). Similarly, Performer agrees that any human subjects research under this Agreement shall occur in accordance with any applicable law, regulation, or rule enforced by the U.S. Food and Drug Administration including, but not limited to 21 CFR 50, 56, 312, and 812. The Performer further agrees to provide certification to the AOR that an overseeing Institutional Review Board has reviewed and approved, as required by applicable law and regulation, any human subjects research occurring under this Agreement prior to the engagement in such research.
+The Performer shall retain full responsibility for the performance of all work and services involving human subjects research under this Agreement in accordance with the terms of this award.
+If at any time during the performance of this Agreement, the AO determines that the Performer is not in compliance with any of the requirements and/or standards stated in paragraphs (1) and (2) above, the AO may immediately suspend, in whole or in part, work and further payments under this Agreement until the Performer corrects the noncompliance. Notice of the suspension may be communicated by telephone and confirmed in writing. If the Performer fails to complete corrective action within the period of time designated in the AO's written notice of suspension, the AO may terminate this Agreement in a whole or in part.
+Human Subjects Research on this award is restricted, as outlined in the table below. Funds obligated on this award may not be spent on Human Subjects Research until the restriction is lifted.
+
+[TABLE]
+| Team Member | Federal Wide Assurance Number | Approved IRB Protocol | Restriction Status |
+|---|---|---|---|
+|  |  |  |  |
+|  |  |  |  |
+[/TABLE]
+
+Human Materials
+The acquisition and supply of all human specimen material (including fetal material) used under this Agreement shall be obtained by Performer in full compliance with applicable Federal, State and Local laws and no undue inducements, monetary or otherwise, will be offered to any person to influence their donation of human material.
+The Performer shall provide written documentation that all human materials obtained as a result of engagement in non-exempt research involving human subjects conducted under this Agreement or by subawards identified under this Agreement, were obtained after acceptance and approval by the Office for Human Research Protections (OHRP) of the engaged entity’s FWA. This restriction applies to all collaborating sites, whether domestic or foreign, and compliance must be ensured by the Performer.
+The Performer shall provide to the AO a properly completed "Protection of Human Subjects Assurance Identification/IRB Certification/Declaration of Exemption", Form OMB No. 09900263 (formerly Optional Form 310), certifying IRB review and approval of the protocol from which the human materials, were obtained constitutes the written documentation required. The human subject certification can be met by submission of a self-designated form provided that it contains the information required by the "Protection of Human Subjects Assurance Identification/IRB Certification/ Declaration of Exemption", Form OMB No. 0990-0263 (formerly Optional Form 310).
+Research Involving Human Fetal Tissue
+All research involving human fetal tissue shall be conducted in accordance with 42 U.S.C. 289g-2 and 45 CFR 46.206. Additionally, all research involving the transplantation of human fetal tissue shall be conducted in accordance with 42 U.S.C. 289g-1, and for such research the Performer shall make available, for audit by the Secretary, HHS, the physician statements, and informed consents required by 42 USC 289g-1(b) and (c), or ensure HHS access to those records, if maintained by an entity other than the Performer.
+Human Embryo Research and Cloning
+HHS funds may not be used to support human embryo research. In addition, no funding may be used for cloning human beings.
+
+### C. Animal Subjects Research
+  - Care of Live Vertebrate Animals
+  - Before undertaking performance of any OT involving animal related activities, the Performer shall register with the Secretary of Agriculture of the United States in accordance with 7 U.S.C. 2136 and 9 CFR 2.25 through 2.27. The Performer shall furnish evidence of the registration to the Agreement Officer.
+  - The Performer shall acquire vertebrate animals used in research from a dealer licensed by the Secretary of Agriculture under 7 U.S.C. 2133 and 9 CFR 2.1 through 2.13, or from a source that is exempt from licensing under those sections.
+  - The Performer agrees that the care and use of any live vertebrate animals used or intended for use in the performance of this OT will conform with the PHS Policy on Humane Care of Use of Laboratory Animals, the current Animal Welfare Assurance, the Guide for the Care and Use of Laboratory Animals prepared by the National Academy of Sciences Institute of Laboratory Animal Resources, the U.S. Government Principles for the Utilization and Care of Vertebrate Animals Used in Testing, Research and Training and the pertinent laws and regulations of the United States Department of Agriculture (see 7 U.S.C. 2131 et seq. and 9 CFR Subchapter A, Parts 1- 4). In case of conflict between standards, the more stringent standard shall be used.
+  - If at any time during performance of this Agreement, the AO's determines, in consultation with the Office of Laboratory Animal Welfare (OLAW), National Institutes of Health (NIH), that the Performer is not in compliance with any of the requirements and/or standards stated in paragraphs (1) through (3) above, the AO's may immediately suspend, in whole or in part, work and further payments under this Agreement until the Performer corrects the noncompliance. Notice of the suspension may be communicated by telephone and confirmed in writing. If the Performer fails to complete corrective action within the period of time designated in the AO's written notice of suspension, the AO's may, in consultation with OLAW, terminate this Agreement in whole or in part, and the Performer’s name may be removed from the list of those organizations with approved PHS Animal Welfare Assurances.
+Note: The Performer may request registration of its facility and a current listing of licensed dealers from the Regional Office of the Animal and Plant Health Inspection Service (APHIS), USDA, for the region in which its research facility is located. Information concerning this project may be obtained by contacting your regional office below or the Animal Care Staff, USDA/APHIS, 4700 River Road, Riverdale, Maryland 20737.
+  - Animal Welfare
+All research involving live, vertebrate animals shall be conducted in accordance with the Public Health Service Policy on Humane Care and Use of Laboratory Animals, the Animal Welfare Act (7 U.S.C. 2131 et. seq.), the U.S. Government Principles and the Guide for the Care and Use of Laboratory Animals.
+  - Protection of Personnel Who Work with Nonhuman Primates
+All Performer personnel who work with nonhuman primates or enter rooms or areas containing nonhuman primates shall comply with the procedures set forth in NIH Policy Manual 3044-2, entitled, "Protection of NIH Personnel Who Work with Nonhuman Primates.”
+  - Information and Compliance with Animal Care Requirements
+Registration with the U.S. Dept. of Agriculture (USDA) is required to use regulated species of animals for biomedical purposes. USDA is responsible for the enforcement of the Animal Welfare Act (7 U.S.C. 2131 et. seq.).  The Public Health Service (PHS) Policy is administered by the Office of Laboratory Animal Welfare (OLAW).  An essential requirement of the PHS Policy is that every institution using live vertebrate animals must obtain an approved assurance from OLAW before they can receive funding from any component of the U.S. Public Health Service. If the Performer does not have an assurance and will be utilizing a subaward to perform the animal work, then the Performer and subaward must have an Inter-Institutional Assurance in place to allow the Performer to utilize the assurance of the subaward to meet the HHS requirements for assurance. The request for this negotiation of this assurance must be submitted to OLAW by NIH on behalf of the Performer.
+The PHS Policy requires that Assured institutions base their programs of animal care and use on the Guide for the Care and Use of Laboratory Animals and that they comply with the regulations (9 CFR, Subchapter A) issued by the U.S. Department of Agriculture (USDA) under the Animal Welfare Act. The Guide may differ from USDA regulations in some respects. Compliance with the USDA regulations is an absolute requirement of this Policy.  The Association for Assessment and Accreditation of Laboratory Animal Care International (AAALAC) is a professional organization that inspects and evaluates programs of animal care for institutions at their request. Those that meet the high standards are given" the accredited status. As of the 2002 revision of the PHS Policy, the only accrediting body recognized by PHS is the AAALAC. While AAALAC accreditation is not required to conduct biomedical research, it is highly desirable. AAALAC uses the Guide as their primary evaluation tool. They also use the Guide for the Care and Use of Agricultural Animals in Agricultural Research and Teaching. It is published by the Federated of Animal Science Societies.
+  - Approval of Required Assurance Law
+Funds shall not be expended by the Performer for research involving live vertebrate animals, nor shall live vertebrate animals be involved in research activities by the Performer under this award unless a satisfactory assurance of compliance with the Animal Welfare Act, including 7 U.S.C. 2136 and 9 CFR Sections 2.25-2.28, the  Public Health Service (PHS) Policy on Humane Care and Use of Laboratory Animals, the U.S. Government Principles and the Guide for the Care and Use of Laboratory Animals is submitted by Performer 30 days prior to commencing research involving live vertebrate animals and approved by the Office of Laboratory Animal Welfare (OLAW). Each performance site (if any) must also assure compliance with 7 U.S.C. 2136 and 9 CFR Sections 2.25-2.28 with the following restriction: Only activities which do not directly involve live vertebrate animals (i.e. are clearly severable and independent from those activities that do involve Jive vertebrate animals) may be conducted by individual performance sites pending OLAW approval of their respective assurance of compliance with 7 U.S.C. 2136 and 9 CFR Sections 2.25-2.28.
+Animal Welfare Assurance Requirement. This restriction applies to the recipient organization and all performance sites (e.g., collaborating institutions, subawardees) lacking OLAW-approved Assurances, whether domestic, foreign, or interinstitutional. If the recipient organization does not have an Assurance and the animal research will be conducted at an institution with an Assurance, the recipient must obtain an Interinstitutional Assurance from OLAW. Only activities that do not involve live vertebrate animals may be conducted at any performance site until OLAW has approved an Assurance for that site. The Assurance documents must be submitted to OLAW no later than 90 days prior to the involvement of animals, and the Assurance must be approved by OLAW before conducting the animal activity. Failure to submit the Assurance to OLAW within the required timeframe or to otherwise comply with the above requirements can result in suspension and/or termination of this award, withholding of support, audit disallowances, and/or other appropriate action.
+When OLAW approves the necessary Assurance(s), ARPA-H will lift the restriction via unilateral modification tohe award.
+
+## Reporting Matters Involving Fraud, Waste and Abuse
+The HHS Office of the Inspector General (OIG) maintains a toll-free number (1-800-HHS-TIPS [1-800-447-8477]) for receiving information concerning fraud, waste, or abuse under grants and cooperative agreements. Information may also be submitted online at https://tips.oig.hhs.gov/ or by mail to U.S. Department of Health and Human Services, Office of the Inspector General, Attn: OIG HOTLINE OPERATIONS, P.O. Box 23489, Washington, DC 20026. Such reports are treated as sensitive material and submitters may decline to give their names if they choose to remain anonymous. For additional information, see: https://oig.hhs.gov/fraud/report-fraud/.
+
+## Prohibition on Contract Involvement with Terrorist Activities
+The Performer acknowledges that U.S. Executive Orders and Laws, including but not limited to E.O. 13224 and P.L. 107-56, prohibit transactions with, and the provision of resources and support to, individuals and organizations associated with terrorism. It is the legal responsibility of the Performer to ensure compliance with these Executive Orders and Laws. This clause must be included in all subawards issued under this Agreement.
+
+## Research Misconduct
+Title 42 CFR 93, PHS Policies on Research Misconduct, Subpart C, “Responsibilities of Institutions” specifies awardee responsibilities to have written policies and procedures for addressing allegations of research misconduct and take all reasonable and practical steps to foster research integrity. Research misconduct is defined as the fabrication, falsification, or plagiarism in proposing, performing, or reviewing research, or in reporting research results. The HHS Office of Research Integrity (ORI) has responsibility for addressing research integrity and misconduct, monitoring institutional investigations of research misconduct, and facilitating the responsible conduct of research through education, preventive, and regulatory activities.
+
+## Associate Performer Agreement
+It is recognized that the success of the IGoR Program’s research effort depends in part upon the open exchange of information between the various Associate Performers involved in the effort. This is intended to ensure that there will be appropriate coordination and integration of work by the Associate Performers to achieve complete compatibility and to prevent unnecessary duplication of effort. By executing this Agreement, the Performer assumes the responsibilities of an Associate Performer. For the purpose of this APA, the term Performer includes subsidiaries, affiliates, and organizations under the control of the performer (e.g. subperformers).
+Work under this contract may involve access to proprietary or confidential data from an Associate Performer. To the extent that such data is received by the Performer from any Associate Performer for the performance of this contract, the Performer hereby agrees that any proprietary information received shall remain the property of the Associate Performer and shall be used solely for the purpose of the IGoR Program’s research effort. Only that information which is received from another performer in writing, and which is clearly identified as proprietary or confidential shall be protected in accordance with this provision. The obligation to retain such information in confidence will be satisfied if the Performer receiving such information utilizes the same controls as it employs to avoid disclosure, publication, or dissemination of its own proprietary information. The receiving Performer agrees to hold such information in confidence as provided herein so long as such information is of a proprietary/confidential or limited rights nature.
+The Performer hereby agrees to closely cooperate as an Associate Performer with the other Associate Performers on this research effort. This involves as a minimum:
+  - maintenance of a close liaison and working relationship;
+  - maintenance of a free and open information network with all Government-identified associate Performers;
+  - delineation of detailed interface responsibilities;
+  - entering into a written agreement with the other Associate Performers setting forth the substance and procedures relating to the foregoing, and promptly providing the Agreements Officer with a copy of same; and,
+  - receipt of proprietary information from the Associate Performer and transmittal of Performer proprietary information to the Associate Performers subject to any applicable proprietary information exchange agreements between associate performers when, in either case, those actions are necessary for the performance of either.
+In the event that the Performer and the Associate Performer are unable to agree upon any such interface matter of substance, or if the technical data identified is not provided as scheduled, the Performer shall promptly notify the ARPA-H PM. The Government will determine the appropriate corrective action and will issue guidance to the affected Performer.
+The Performer agrees to insert in all subawards hereunder which require access to proprietary information belonging to the Associate Performer, a clause which shall conform substantially to this language, including this paragraph (e).
+No human subjects research data can be shared between IGoR Program performers without prior IRB and OHRP approval.
+Associate Performers for this research effort include: (to be completed at the time of award)
+
+# ATTACHMENT 1: TASK DESCRIPTION DOCUMENT (TDD)
+For
+<<Enter Title Of Project, Identify Technical AREA(s)>>
+(AN ARPA-H __________ Project)
+
+# ATTACHMENT 2: REPORT REQUIREMENTS
+All reporting requirements under this Agreement, and in accordance with this Attachment, shall be provided, electronically, to the Government individuals identified in Article IV. One (1) copy of the report shall be provided.
+
+## TECHNICAL STATUS REPORTS
+
+### On or before ninety (90) days after the effective date of the Agreement and thereafter every ninety (90) days throughout the term of the Agreement, the Performer shall submit or otherwise provide a technical status report. The report will detail technical progress to date and report on all problems, technical issues, major developments, and the status of external collaborations during the reporting period.
+
+## PROGRAM PLAN DOCUMENT
+
+### The Performer, with ARPA-H Program Manager (PM) participation and review, will prepare an overall Program Plan for the active phase that will be delivered within fourteen (14) days prior to the phase kickoff meeting. The Program Plan may be presented and reviewed initially at the phase kickoff meeting, and subsequent program review meetings, at the discretion of the ARPA-H PM.
+
+### The Program Plan provides a detailed schedule of research activities, commits the Performer to meet specific performance objectives and describes the program/technical milestones. The Program Plan will consolidate all prior adjustments in the research schedule, including revisions/modifications to prospective milestones. Recommendations for changes and technical revisions or modifications to the Agreement which result from the phase kickoff meeting or subsequent program review meetings, shall be made in accordance with the provisions of Article III (C).
+
+## SPECIAL TECHNICAL REPORTS
+
+### As agreed to by the Performer and the AOR, the Performer shall submit special technical reports on significant events such as significant target accomplishments by the Performer, significant tests, experiments, or symposia. Email submissions are encouraged and maybe password protected if deemed necessary.
+
+## MILESTONE REPORTS
+
+### The Performer shall submit documentation describing the accomplishment of Attachment 3 payment milestones. This information shall be as required by Article V (B) and shall be sufficient for the ARPA-H PM and/or AOR to reasonably verify the accomplishment of the milestone in accordance with the TDD (Attachment 1).
+
+## FINAL REPORT
+
+### The Performer shall submit or otherwise provide a Final Report making full disclosure of all major developments by the Performer upon completion of the Agreement or within sixty (60) days of termination of this Agreement.
+
+## Patent and Invention Disclosure and Reporting
+
+### See Article VII, Intellectual Property Rights. For all reports/communications not submitted via iEdison, email submission is encouraged and may be password-protected if necessary.
+
+### (Note: The above data deliverables shall also be marked per Article VII (B), as applicable)
+
+## PROPERTY REPORT
+
+### The performer shall submit a report identifying all items of property procured with an acquisition value greater than $10,000 prior to completion of the Agreement. See Article IX, Title to and Disposition of Tangible Property.
+
+# ATTACHMENT 3: MILESTONE PAYMENT SCHEDULE WITH ASSOCIATED DELIVERABLES
+[Document Date]
+Phase 1
+
+[TABLE]
+|  |  |  |  |  |  |
+|---|---|---|---|---|---|
+| Milestone | Task(s) | Due Date (Months after award) | Milestone Description | ARPA-H Payment | Amount Funded |
+| 1 | 1.1 | 3 | Milestone Name/Description / Exit Criteria: / Brief explanation of what technical event needs to be achieved or completed to accomplish this milestone / Deliverables: / Bulleted List (add in DATA rights assignment as applicable) | $ | $ |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+| 2 | 1.2 | 6 | Milestone Name/Description / Exit Criteria: / Brief explanation of what technical event must be achieved or completed to accomplish this milestone / Deliverables: / Bulleted List | $ | $ |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+| 3 | 1.3 | 10 | Milestone Name/Description / Exit Criteria: / Brief explanation of what technical event must be achieved or completed to accomplish this milestone / Deliverables: / Bulleted List | $ | $ |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+| 4 | 1.4 | 12 | Milestone Name/Description / Exit Criteria: / Brief explanation of what technical event must be achieved or completed to accomplish this milestone / Deliverables: / Bulleted List | $ | $ |
+|  |  |  |  |  |  |
+[/TABLE]
+
+
+# ATTACHMENT 4: BACKGROUND INTELLECTUAL PROPERTY ASSERTIONS
+
+[TABLE]
+| IP Category (Trade Secret, Patent, Copyright, or Technical Data) | USPTO# and Docket # and Application # | IP Title | Summary of Intended Use in Project | Asserted rights category* / (Government Purpose, Limited, Unlimited, Commercial License) | Name of Person or Entity / Asserting Restrictions (who owns the IP) | Funding Source (Federal Government, Privately Funded, or Mixed) |
+|---|---|---|---|---|---|---|
+| FILL-IN | FILL-IN | FILL-IN | FILL-IN | FILL-IN | FILL-IN | FILL-IN |
+|  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |
+[/TABLE]
+
+*See Definitions
+
+[EXTRACTION NOTE]
+Two cover-page text boxes contain the placeholder label "FOR [INSERT PERFORMER NAME]"
+(25 chars each). These are graphical text boxes on the title page and are not part of
+the linear body flow above. All articles, clauses, and tables are captured in order.
+[/EXTRACTION NOTE]

@@ -1,0 +1,116 @@
+{
+  "title": "IGoR Research Master: Scientific and Technical Source of Record",
+  "subtitle": "ARPA-H IGoR (ARPA-H-SOL-26-155); internal consolidation of methods landscape and our key contributions",
+  "date": "2026-06-14",
+  "profiles": {
+    "internal": "All sections, including restricted (proprietary and personal). Never distribute outside Cytognosis.",
+    "shareable": "Excludes restricted sections (proprietary IP, personal-genomic, and internal decisions). An internal working draft; review before any external or partner use."
+  },
+  "sections": [
+    {
+      "file": "00_executive_overview.md",
+      "title": "Executive overview",
+      "restricted": false
+    },
+    {
+      "file": "10_thesis_disease_as_perturbation.md",
+      "title": "Core thesis: disease as the causal perturbation operator",
+      "restricted": false
+    },
+    {
+      "file": "20_landscape_TA1_virtual_cell.md",
+      "title": "Landscape: TA1 disease models and virtual-cell methods",
+      "restricted": false
+    },
+    {
+      "file": "21_landscape_TA2_agentic_science.md",
+      "title": "Landscape: TA2 agentic-science and orchestration systems",
+      "restricted": false
+    },
+    {
+      "file": "22_landscape_TA3_TA4_standards_labs.md",
+      "title": "Landscape: TA3 protocol standards and TA4 lab automation",
+      "restricted": false
+    },
+    {
+      "file": "23_causal_representation_theory.md",
+      "title": "Theory: causal representation learning and identifiability",
+      "restricted": false
+    },
+    {
+      "file": "24_landscape_disease_and_model_standards.md",
+      "title": "Landscape: standards for disease knowledge and cellular models",
+      "restricted": false
+    },
+    {
+      "file": "30_contrib_TA1_architecture.md",
+      "title": "Our contribution: TA1 four-pillar disease-model architecture",
+      "restricted": false
+    },
+    {
+      "file": "31_contrib_TA1_factorized_PRS_PROPRIETARY.md",
+      "title": "Our contribution: TA1 Pillar 2b factorized-PRS (PROPRIETARY)",
+      "restricted": true
+    },
+    {
+      "file": "32_contrib_SPEAR_PROPRIETARY.md",
+      "title": "Our contribution: SPEAR perturbation model (UNDER REVIEW)",
+      "restricted": true
+    },
+    {
+      "file": "33_contrib_TA2_engine.md",
+      "title": "Our contribution: TA2 New Science Engine",
+      "restricted": false
+    },
+    {
+      "file": "34_contrib_TA3_TA4_execution.md",
+      "title": "Our contribution: TA3 and TA4 execution stack",
+      "restricted": false
+    },
+    {
+      "file": "35_contrib_standards_stack.md",
+      "title": "Our contribution: the IGoR standards stack",
+      "restricted": false
+    },
+    {
+      "file": "40_disease_strategy_and_evidence.md",
+      "title": "Disease strategy and evidence base",
+      "restricted": false
+    },
+    {
+      "file": "41_phase1_anchor_experiment_RESTRICTED.md",
+      "title": "Phase I anchor experiment (RESTRICTED: personal genomic data)",
+      "restricted": true
+    },
+    {
+      "file": "42_penetrant_schizophrenia_genetics.md",
+      "title": "Penetrant schizophrenia genetics and the familial-disease rationale for cellular models",
+      "restricted": false
+    },
+    {
+      "file": "50_metrics_and_targets.md",
+      "title": "Metrics, milestones, and quantitative targets",
+      "restricted": false
+    },
+    {
+      "file": "60_team_consortium_and_cost.md",
+      "title": "Team, consortium, and cost model",
+      "restricted": false
+    },
+    {
+      "file": "70_proposal_evolution_crosswalk.md",
+      "title": "Proposal evolution: variants as key contributions",
+      "restricted": true
+    },
+    {
+      "file": "90_open_decisions_and_gaps.md",
+      "title": "Open decisions, gaps, and pre-submission actions",
+      "restricted": true
+    },
+    {
+      "file": "99_references.md",
+      "title": "Consolidated references and verification status",
+      "restricted": false
+    }
+  ]
+}

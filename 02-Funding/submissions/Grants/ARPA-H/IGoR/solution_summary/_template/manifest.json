@@ -1,0 +1,15 @@
+{
+  "title": "ARPA-H IGoR Solution Summary",
+  "output_basename": "IGoR_Solution_Summary",
+  "date": "2026-06-14",
+  "note": "Appendix B. Sections 1-4 limited to 5 pages; cover, Basis of Estimate, and References are excluded from the limit.",
+  "sections": [
+    {"file": "0_cover.md", "counts_toward_limit": false},
+    {"file": "1_concept_summary.md", "counts_toward_limit": true},
+    {"file": "2_innovation_and_impact.md", "counts_toward_limit": true},
+    {"file": "3_proposed_work.md", "counts_toward_limit": true},
+    {"file": "4_team.md", "counts_toward_limit": true},
+    {"file": "5_basis_of_estimate.md", "counts_toward_limit": false},
+    {"file": "6_references.md", "counts_toward_limit": false}
+  ]
+}

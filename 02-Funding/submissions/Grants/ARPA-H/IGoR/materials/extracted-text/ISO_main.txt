@@ -1,0 +1,276 @@
+INNOVATIVE SOLUTIONS OPENING FOR
+
+  INTELLIGENT GENERATOR OF RESEARCH
+
+                IGOR
+
+       PROACTIVE HEALTH OFFICE
+
+        ARPA-H-SOL-26-155
+
+            MAY 5, 2026
+                                                               TABLE OF CONTENTS
+
+1.     PROPOSERS DAY.............................................................................................................................................. 3
+2.     INTRODUCTION TO IGoR .............................................................................................................................. 3
+3.     ELIGIBILITY INFORMATION ............................................................................................................................ 3
+     3.1        ELIGIBLE PROPOSERS........................................................................................................................... 3
+       3.1.1 PROHIBITION ON PARTICIPATION BY FEDERALLY FUNDED RESEARCH AND
+       DEVELOPMENT CENTERS (FFRDCS) AND GOVERNMENT ENTITIES.................................................... 4
+       3.1.2        CURRENT PROFESSIONAL SUPPORT TO ARPA-H ...................................................................... 4
+       3.1.3        FOREIGN ENTITIES ........................................................................................................................... 4
+     3.2        SYSTEM FOR AWARD MANAGEMENT (SAM.GOV) ........................................................................ 5
+4.     SUBMISSION PROCESS .................................................................................................................................. 5
+     4.1        OVERVIEW ............................................................................................................................................... 5
+     4.2        SOLUTION SUMMARIES ....................................................................................................................... 5
+     4.3        SOLUTION SUMMARY REVIEW ........................................................................................................... 6
+     4.4        PROPOSAL SUBMISSION REVIEW ...................................................................................................... 6
+     4.5        PROPRIETARY INFORMATION ............................................................................................................. 6
+
+
+
+
+APPENDIX A: PROGRAM AND TECHNICAL DESCRIPTION
+
+APPENDIX B: SOLUTIONS SUMMARY MODEL
+
+APPENDIX C: PROPOSAL FORMAT, INSTRUCTIONS, AND EVALUATION
+
+           APPENDIX C.1: TECHNICAL & MANAGEMENT PROPOSAL
+
+           APPENDIX C.2: TASK DESCRIPTION DOCUMENT (TDD)
+
+           APPENDIX C.3: PRICE PROPOSAL
+
+           APPENDIX C.4: PRICE PROPOSAL SPREADSHEET
+
+APPENDIX D: ADMINISTRATVE & NATIONAL POLICY REQUIREMENTS DOCUMENT FOR
+OTHER TRANSACTION AGREEMENTS
+
+APPENDIX E: DRAFT OT AGREEMENT
+            INNOVATIVE SOLUTIONS OPENING (ISO) SUMMARY INFORMATION
+
+FEDERAL AGENCY: Advanced Research Projects Agency for Health (ARPA-H)
+
+PROGRAM TITLE: Intelligent Generator of Research (IGoR)
+
+ANNOUNCEMENT TYPE: Innovative Solutions Opening (ISO)
+
+ISO NUMBER: ARPA-H-SOL-26-155
+
+ISO CONTACT: IGoR@arpa-h.gov
+
+ANTICIPATED AWARD(S):
+      Multiple Other Transaction (OTs) Agreements
+
+DATES: (All times listed are Eastern Time)
+
+       Proposers’ Day: T.B.D.
+       Solution Summaries due date: 06/25/2026, 12:00 PM
+       Proposals due date: 08/06/2026, 12:00 PM (Noon)
+
+WHERE TO SUBMIT:
+
+       Solution Summaries:           https://solutions.arpa-h.gov/Submit-Solution/
+       Questions:                    https://solutions.arpa-h.gov/Ask-A-Question/
+       Proposals:                    https://solutions.arpa-h.gov/Submit-Proposal/
+
+       Registration is required to submit documents via the ARPA-H Solutions site. Plan to
+       register well in advance of the Solution Summary submission deadline; late submissions
+       resulting solely from delays with registration may not be considered.
+
+RESOURCE SHARING: Resource sharing is encouraged.
+
+
+
+
+                                                                                           2
+1.   PROPOSERS’ DAY
+     ARPA-H will host a Proposers’ Day in support of the IGoR program described in this ISO.
+     The purpose of the engagement is to provide information, promote discussion, and
+     encourage teaming and networking. Attendance is voluntary (but highly encouraged).
+     A recording of the event will be posted to the ARPA-H IGoR program webpage. ARPA-
+     H will not reimburse entities for the cost of attendance.
+
+2.   INTRODUCTION TO IGoR
+     The Intelligent Generator of Research (IGoR) program aims to eliminate longstanding
+     ineﬃciencies in research and accelerate the development of eﬀective therapies for
+     complex diseases by creating an AI-enabled interoperable research ecosystem. IGoR
+     would develop: 1) mechanistic disease models that encode causal biological
+     relationships across scales, 2) an AI orchestration layer that identies knowledge gaps
+     and designs optimal experiments, 3) a layered protocol architecture that enables any
+     qualied laboratory to execute the same experiment reproducibly, and 4) a distributed
+     marketplace of validated laboratories that execute standardized protocols and return
+     gold-standard data. Together, these components form a cycle of hypothesis generation,
+     experimentation, and model renement that enables researchers to create validated
+     knowledge at least 10x more rapidly than conventional approaches. Ultimately, IGoR will
+     empower researchers at every level to pursue bold, unconventional research directions
+     that are currently too slow, too complex, or too resource intensive.
+
+     IGoR is a 5-year, 3-phase program. ARPA-H anticipates awarding to approximately three
+     multidisciplinary teams, each addressing all four components. A complete description
+     of the program vision, technical requirements, milestones, metrics, and collaboration
+     expectations is provided in Appendix A: Program and Technical Description.
+
+3.   ELIGIBILITY INFORMATION
+
+
+     3.1    ELIGIBLE PROPOSERS
+            Except as noted herein, all sources that can satisfy the government’s needs and
+            that are neither debarred nor suspended from doing business with the
+            government may respond to this ISO. Universities, non-profit organizations, small
+            businesses and other commercial entities are encouraged to respond. Any
+            submission received will be fairly considered against the terms and conditions of
+            the solicitation and may be selected for award.
+
+
+
+
+                                                                                           3
+3.1.1   PROHIBITION ON PARTICIPATION BY FEDERALLY FUNDED RESEARCH
+        AND DEVELOPMENT CENTERS (FFRDCS) AND GOVERNMENT
+        ENTITIES
+
+
+        (a)       ARPA-H is primarily interested in responses to this solicitation from
+                  commercial entities, academia, and non-profit organizations, not
+                  from federal or state governments. As such, Federally Funded
+                  Research and Development Centers (FFRDCs) and government
+                  entities (which includes government employees) will not be
+                  considered as either the prime or a sub-performer.
+
+        (b)       However, an FFRDC or government entity may have unique
+                  capabilities that are not otherwise available. Accordingly, when a
+                  potential prime performer believes an FFRDC has a unique
+                  capability without which its solution is unachievable, it may
+                  provide documentation demonstrating it has exhausted all other
+                  options as part of its submission(s). ARPA-H will determine
+                  whether inclusion of the FFRDC is necessary for the solution.
+
+        (c)       If an FFRDC or government entity is interested in working directly
+                  with the ARPA-H team supporting the research described by this
+                  ISO, contact IGoR@arpa-h.gov for guidance.
+
+
+3.1.2   CURRENT PROFESSIONAL SUPPORT TO ARPA-H
+        Support services involve contracted labor providing technical,
+        professional, and/or nancial expertise, and/or administrative assistance.
+        Individuals and entities providing support services to ARPA-H are
+        ineligible for an award stemming from this ISO.
+
+
+3.1.3   FOREIGN ENTITIES
+        While ARPA-H prioritizes awards to entities (organizations and/or
+        individuals) that conduct funded work in the United States, foreign entities
+        may participate to the extent that they comply with non-disclosure
+        agreements, security regulations, export control laws, and other
+        governing statutes applicable under the circumstances. In no case will
+        award be made to:
+
+              •   An entity of concern meeting any of the criteria in Section 10638(3)
+                  of the CHIPS and Science Act of 2022;
+
+
+
+                                                                                     4
+                      •   An individual who is a party to a malign foreign talent recruitment
+                          program (MFTRP) as dened in Section 10638(4) of the CHIPS and
+                          Science Act of 2022;
+                      •   Non-domestic entities organized under the laws of a “covered”
+                          foreign country (as dened in 50 U.S.C. § 3059); or
+
+
+     3.2   SYSTEM FOR AWARD MANAGEMENT (SAM.GOV)
+           At the time of proposal submission, the proposer must be registered in the
+           System for Award Management (SAM.gov) and have a valid Unique Entity
+           Identifier (UEI). Proposers must also have an active, accurate registration in
+           SAM.gov at the time of award and through its expiration. SAM.gov requires
+           certain information to register and obtain a UEI (e.g., Taxpayer Identification
+           Number, Electronic Funds Transfer info, etc.); go to SAM.gov and click the “Get
+           Started” button on the home screen to begin the registration process. New
+           registrations take an average of 7-10 business days.
+
+4.   SUBMISSION PROCESS
+
+
+     4.1   OVERVIEW
+           Non-Gated Solution Summary processes involve:
+                Step 1: Submit Solution Summary through the Solutions site.
+                Step 2: Potential proposers are provided feedback encouraging or
+                discouraging the submission of a proposal.
+                Step 3: Submit Proposals (Potential proposers may submit proposals,
+                regardless of whether encouraged in Step 2).
+
+           NOTE: ARPA-H will not reimburse entities for costs incurred in responding to this
+           ISO.
+
+
+     4.2   SOLUTION SUMMARIES
+           Solution Summary submissions are required, and due by the date listed in the
+           ISO Summary Information Section. (See Appendix B for the Solution Summary
+           Format and Instructions.) All Solution Summaries must be in English with a sans
+           serif font type NO smaller than 11-point and with a readability similar to that of
+           Calibri, Arial, or Avenir Next Pro Light. Narrow or condensed fonts should not be
+           used. Solution Summaries have a limit of ve (5) pages. (The cover pages,
+           including company prole pages, and the References Cited section do not count
+           toward the ve-page limit.) Content in blue font is not recommended for use and
+           should be deleted by the proposer before submitting a Solution Summary.
+
+
+                                                                                           5
+4.3   SOLUTION SUMMARY REVIEW
+      ARPA-H will review and respond to each Solution Summary submission. Solution
+      Summaries will be reviewed for the purpose of providing feedback regarding
+      whether ARPA-H is interested in the Solution Summary concept. At a minimum,
+      the government’s response will indicate whether submission of a proposal is
+      encouraged or discouraged. Although a proposal may be submitted regardless
+      of the feedback provided, potential proposers are advised to give the
+      government’s decision signicant weight when determining whether to invest
+      time and resources in the development of a proposal.
+
+      It is ARPA-H’s intent to protect all solution summaries and to disclose their
+      contents only for the purpose of review, and only to screened personnel for
+      authorized reasons, in accordance with applicable federal laws and regulations,
+      including the Freedom of Information Act (FOIA). Restrictive notices
+      notwithstanding, submissions may be handled by ARPA-H support contractors
+      during the review process for administrative purposes and/or to assist with
+      technical review.
+
+      ARPA-H support contractors are expressly prohibited from performing ARPA-H-
+      sponsored technical research and are bound by appropriate non-disclosure
+      agreements. Input on technical aspects of Solution Summaries may be solicited
+      by ARPA-H from non-government consultants/experts who are strictly bound by
+      appropriate non-disclosure requirements.
+
+      When large language models (LLMs) are used (to extract data elements,
+      summarize text, and generate text), all data will be transmitted exclusively
+      through secure API calls, with external tool calls such as web searches disabled.
+      Vendor contracts and technical controls enforce strict security measures: data
+      sent for inference is never used to train public models, and all access, retention,
+      and logging are tightly restricted and fully auditable.
+
+
+4.4   PROPOSAL SUBMISSION REVIEW
+      After completing a Solution Summary review, ARPA-H will notify each proposer
+      whether it is ‘encouraged’ to or ‘discouraged’ from submitting a proposal. Please
+      see Appendix C for additional details.
+
+
+4.5   PROPRIETARY INFORMATION
+      The originator of a submission is responsible for identifying all proprietary
+      information therein. Submissions containing proprietary information must clearly
+      mark the cover page and each page that contains such information with a label
+
+                                                                                       6
+such as “Proprietary”.
+
+       NOTE: “Condential” is a classication marking used to control the
+       dissemination of information related to national security and should not
+       be used to identify proprietary business information. ARPA-H handles
+       submissions in accordance with applicable federal law, including FOIA.
+
+
+
+
+                                                                             7
+

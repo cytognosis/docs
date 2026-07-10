@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" font-family="Inter, 'DejaVu Sans', Arial, sans-serif">
+  <defs>
+    <radialGradient id="disc" cx="50%" cy="38%" r="60%"><stop offset="0%" stop-color="#E7F7FB"/><stop offset="64%" stop-color="#F3FAFD"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient>
+    <linearGradient id="topbar" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1F7E91"/><stop offset="55%" stop-color="#45C3DD"/><stop offset="100%" stop-color="#8B3FC7"/></linearGradient>
+    <radialGradient id="dz" cx="35%" cy="30%" r="78%"><stop offset="0%" stop-color="#F8AAD4"/><stop offset="100%" stop-color="#E0309E"/></radialGradient>
+    <filter id="ndsh" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#13314a" flood-opacity="0.16"/></filter>
+    <marker id="ahV" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#8B3FC7"/></marker>
+    <marker id="ahA" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#3B7DD6"/></marker>
+    <marker id="ahM" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#E0309E"/></marker>
+    <marker id="ahT" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1F7E91"/></marker>
+  </defs>
+
+  <rect width="600" height="600" fill="#FFFFFF"/>
+  <rect x="1" y="1" width="598" height="598" fill="none" stroke="#E6EDF3" stroke-width="2"/>
+  <rect width="600" height="10" fill="url(#topbar)"/>
+  <circle cx="300" cy="210" r="200" fill="url(#disc)"/>
+
+  <rect x="40" y="40" width="116" height="46" rx="23" fill="#1F7E91"/>
+  <text x="98" y="71" text-anchor="middle" fill="#FFFFFF" font-size="25" font-weight="700" letter-spacing="1.5">TA 1</text>
+
+  <!-- genetic variant = soft intervention -->
+  <g stroke="#2C9DB5" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M74,150 C92,166 92,188 74,204 C56,220 56,242 74,258"/>
+    <path d="M108,150 C90,166 90,188 108,204 C126,220 126,242 108,258"/>
+    <line x1="80" y1="160" x2="102" y2="160"/><line x1="84" y1="178" x2="98" y2="178"/><line x1="84" y1="230" x2="98" y2="230"/><line x1="80" y1="248" x2="102" y2="248"/>
+  </g>
+  <circle cx="91" cy="204" r="5.5" fill="#E0309E"/>
+  <text x="91" y="284" text-anchor="middle" fill="#5A6B86" font-size="13" font-weight="600">genetic variant</text>
+  <path d="M126,204 L150,204" stroke="#14284A" stroke-width="3.5" fill="none" marker-end="url(#ahT)"/>
+
+  <!-- latent pathway space -->
+  <rect x="156" y="120" width="270" height="166" rx="16" fill="#F4FAFD" stroke="#CFE6EE" stroke-width="2"/>
+  <text x="170" y="140" fill="#1F7E91" font-size="12.5" font-weight="700">latent pathway space</text>
+
+  <!-- sparse mask (few axes active) -->
+  <g>
+    <rect x="170" y="150" width="16" height="14" rx="3" fill="#DDE7EE"/>
+    <rect x="170" y="167" width="16" height="14" rx="3" fill="#8B3FC7"/>
+    <rect x="170" y="184" width="16" height="14" rx="3" fill="#DDE7EE"/>
+    <rect x="170" y="201" width="16" height="14" rx="3" fill="#3B7DD6"/>
+    <rect x="170" y="218" width="16" height="14" rx="3" fill="#DDE7EE"/>
+    <rect x="170" y="235" width="16" height="14" rx="3" fill="#E0309E"/>
+    <rect x="170" y="252" width="16" height="14" rx="3" fill="#DDE7EE"/>
+  </g>
+  <text x="178" y="278" text-anchor="middle" fill="#7C8DA6" font-size="10.5" font-weight="600">sparse</text>
+
+  <!-- faint causal DAG -->
+  <g stroke="#14284A" stroke-width="1.8" opacity="0.22" fill="#14284A">
+    <line x1="244" y1="150" x2="292" y2="150" marker-end="url(#ahT)"/>
+    <line x1="244" y1="150" x2="320" y2="166" marker-end="url(#ahT)"/>
+    <circle cx="244" cy="150" r="4"/><circle cx="296" cy="150" r="4"/><circle cx="324" cy="166" r="4"/>
+  </g>
+
+  <!-- basal state -->
+  <circle cx="226" cy="210" r="12" fill="#9BB7C2"/>
+  <text x="226" y="214" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">z&#8320;</text>
+
+  <!-- sparse additive "disease axes" (basal -> disease state) -->
+  <g stroke-width="3.6" fill="none" stroke-linecap="round">
+    <path d="M236,202 C286,176 330,176 372,196" stroke="#8B3FC7" marker-end="url(#ahV)"/>
+    <path d="M240,210 L372,206" stroke="#3B7DD6" marker-end="url(#ahA)"/>
+    <path d="M236,220 C286,248 330,246 372,216" stroke="#E0309E" marker-end="url(#ahM)"/>
+  </g>
+  <text x="300" y="166" text-anchor="middle" fill="#5A6B86" font-size="11.5" font-weight="600">disease axes</text>
+
+  <!-- disease cell state -->
+  <circle cx="388" cy="206" r="14" fill="#FFFFFF" stroke="#E0309E" stroke-width="3"/>
+  <circle cx="388" cy="206" r="5.5" fill="#E0309E"/>
+
+  <!-- decode to readout cell -->
+  <path d="M426,206 L452,206" stroke="#14284A" stroke-width="3.5" fill="none" marker-end="url(#ahT)"/>
+  <circle cx="486" cy="206" r="20" fill="#EAF7FA" stroke="#1F7E91" stroke-width="2.4"/>
+  <g fill="#2C9DB5"><circle cx="479" cy="200" r="3.4"/><circle cx="492" cy="201" r="3.4"/><circle cx="483" cy="212" r="3.4"/><circle cx="494" cy="212" r="3.4"/></g>
+  <text x="486" y="246" text-anchor="middle" fill="#5A6B86" font-size="12" font-weight="600">readout</text>
+
+  <!-- joint cellular + clinical alignment -->
+  <line x1="206" y1="330" x2="394" y2="330" stroke="#1F7E91" stroke-width="2.6"/>
+  <g fill="#2C9DB5"><circle cx="206" cy="330" r="4"/><circle cx="300" cy="330" r="4"/><circle cx="394" cy="330" r="4"/></g>
+  <!-- dish (cellular) -->
+  <ellipse cx="240" cy="306" rx="16" ry="7" fill="#E8F7FB" stroke="#2C9DB5" stroke-width="2"/>
+  <circle cx="234" cy="305" r="2.6" fill="#8B3FC7"/><circle cx="244" cy="307" r="2.6" fill="#3B7DD6"/>
+  <path d="M240,313 L240,328" stroke="#9AB0C8" stroke-width="2" stroke-dasharray="3 3"/>
+  <text x="240" y="300" text-anchor="middle" fill="#5A6B86" font-size="11.5" font-weight="600">cellular</text>
+  <!-- person (clinical) -->
+  <circle cx="360" cy="302" r="6" fill="#16385B"/>
+  <path d="M349,320 q0,-12 11,-12 q11,0 11,12 z" fill="#16385B"/>
+  <path d="M360,322 L360,328" stroke="#9AB0C8" stroke-width="2" stroke-dasharray="3 3"/>
+  <text x="360" y="300" text-anchor="middle" fill="#5A6B86" font-size="11.5" font-weight="600">clinical</text>
+  <text x="300" y="350" text-anchor="middle" fill="#1F7E91" font-size="12" font-weight="700">aligned in one pathway space</text>
+
+  <!-- text block -->
+  <text x="300" y="452" text-anchor="middle" fill="#14284A" font-size="27" font-weight="700">Comprehensive Disease Models</text>
+  <text x="300" y="487" text-anchor="middle" fill="#1F7E91" font-size="16.5" font-weight="600">Disease as a causal perturbation on cell state</text>
+  <text x="300" y="510" text-anchor="middle" fill="#1F7E91" font-size="16.5" font-weight="600">Sparse disease axes; multiscale, mechanistic</text>
+  <text x="300" y="550" text-anchor="middle" fill="#5A6B86" font-size="15.5" font-weight="500">Lead: Cytognosis &#160;&#183;&#160; Clinical co-lead: McLean / HMS</text>
+</svg>

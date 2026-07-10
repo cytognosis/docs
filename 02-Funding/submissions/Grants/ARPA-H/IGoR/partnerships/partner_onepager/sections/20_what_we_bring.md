@@ -1,0 +1,5 @@
+## What the anchor team brings (TA1 and TA2)
+
+- **TA1, comprehensive disease models** (Cytognosis with IPAI): a cell-type-aware, mechanistic, multiscale causal model that turns **pretrained genomic foundation models into interpretable disease-axis factors**, ingests single-cell atlases and perturbation data, and **updates automatically** as new results arrive, built on open standards.
+- **TA2, the New Science Engine** (Cytognosis and IPAI): an orchestration layer that interrogates the **TA1 model itself**, not just the literature, runs competing hypotheses, and designs the highest-value next experiment. It is explicitly **not a wrapper around a single large language model**.
+- **A partner-ready Phase I experiment: a phenotypic-triage screen.** Using **isogenic iPSC pairs** (a healthy line with each variant introduced by CRISPR, the matched controls patient lines lack), we screen the penetrant-variant panel for **transcriptomic, morphological, and functional calcium-imaging** phenotypes, extending the published 22q11 Cell Painting work to more variants and readouts to select the lines that anchor the model.

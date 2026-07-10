@@ -1,0 +1,402 @@
+# NSF X-Labs Initial Submission Template Definition
+# Machine-readable specification for template validation and automation
+
+template:
+  name: "NSF X-Labs Written Proposal (Initial Submission)"
+  version: "1.0.0"
+  created: "2025-05-24"
+  source_document:
+    title: "NSF-OTASO-FY26-XLabsInitiative-AttachmentA"
+    filename: "NSF-OTASO-FY26-XLabsInitiative-AttachmentA.pdf"
+    solicitation: "NSF-OTASO-FY26-XLabsInitiative"
+    template_reference: "Attachment A"
+  output_format: "PDF"
+  mechanism: "Other Transaction (OT) Agreement"
+  program: "NSF X-Labs Initiative"
+  stage: "Written Proposal (Step 1 of 2-step evaluation)"
+
+formatting:
+  page_limit: 8
+  page_limit_excludes:
+    - "Conflicts of Interest (COI) Statement"
+  spacing: "single"
+  font_size_pt: 12
+  font_size_tables_pt_min: 8
+  paper_size: "8.5in x 11in"
+  margins_inches:
+    top: 1.0
+    bottom: 1.0
+    left: 1.0
+    right: 1.0
+  submission_format: "PDF"
+  cover_letter: false
+  coi_format: "separate PDF"
+  coi_page_limit: null  # No page limit
+
+sections:
+  - id: "header"
+    name: "Proposal Header"
+    required: true
+    page_count: false  # Not counted toward page limit
+    fields:
+      - name: "proposal_title"
+        type: "text"
+        required: true
+        description: "Title of the proposed NSF X-Lab"
+        max_length: null
+      - name: "lead_institution"
+        type: "text"
+        required: true
+        description: "Name of the lead organization (OT contractor)"
+        constraints:
+          - "Must be registered in SAM.gov"
+
+  - id: "mission"
+    name: "1. Mission"
+    required: true
+    description: >
+      Describe one or more novel platform technologies the proposed NSF X-Lab is
+      uniquely suited to advance. Include a clear vision statement for how the work
+      will reshape an entire field of scientific inquiry or technology sector.
+    evaluation_criteria:
+      criterion: "Mission Clarity and Outcomes (Section 11.2)"
+      weight: "Roughly equal with Team Qualifications"
+      sub_criteria:
+        - "Appropriately ambitious, technically sound, and well-defined"
+        - "Aligned with NSF X-Labs strategic objectives (Section 3.0)"
+    fields:
+      - name: "vision_statement"
+        type: "text"
+        required: true
+        description: >
+          Clear vision statement of how the work will result in an end-state that
+          reshapes an entire field of scientific inquiry or a sector of technology.
+      - name: "platform_technology_description"
+        type: "text"
+        required: true
+        description: >
+          Description of one or more novel platform technologies the X-Lab is
+          uniquely suited to advance.
+      - name: "unmet_need_justification"
+        type: "text"
+        required: true
+        description: >
+          Explanation of how the Mission is currently unmet by existing
+          organizational structures and funding mechanisms.
+
+  - id: "technology_landscape"
+    name: "2. Technology Landscape"
+    required: true
+    description: >
+      Analysis of the current technology landscape that justifies how the proposed
+      platform technology would accelerate the emergence of new technologies and
+      lines of research.
+    evaluation_criteria:
+      criterion: "Mission Clarity and Outcomes (Section 11.2)"
+      sub_criteria:
+        - >
+          The extent to which the technology landscape justifies a dedicated,
+          full-time team to develop the proposed platform technology and achieve
+          high-impact breakthroughs
+    fields:
+      - name: "current_state_of_art"
+        type: "text"
+        required: true
+        description: "Analysis comparing current state-of-the-art technology."
+      - name: "technology_gaps"
+        type: "text"
+        required: true
+        description: "Identification of key technology gaps and bottlenecks."
+      - name: "proposed_advancement"
+        type: "text"
+        required: true
+        description: >
+          Description of how the team will progress the technology and unlock
+          fundamentally new capabilities.
+      - name: "technology_landscape_figure"
+        type: "figure"
+        required: false
+        recommended: true
+        description: >
+          Quantitative plot or figure depicting the current technology landscape
+          and desired goal(s) of the NSF X-Lab.
+        constraints:
+          - "May use a smaller font than body text"
+
+  - id: "outcomes"
+    name: "3. Outcomes"
+    required: true
+    description: >
+      Describe ambitious target outcomes over a 5- to 7-year timescale including
+      scientific and technical performance benchmarks.
+    evaluation_criteria:
+      criterion: "Mission Clarity and Outcomes (Section 11.2)"
+      sub_criteria:
+        - "Appropriately ambitious, technically sound, and well-defined"
+        - "Aligned with NSF X-Labs strategic objectives"
+    fields:
+      - name: "outcomes_table"
+        type: "table"
+        required: true
+        description: "Table of target outcomes with performance benchmarks and timelines."
+        columns:
+          - name: "outcome"
+            type: "text"
+            required: true
+          - name: "benchmark"
+            type: "text"
+            required: true
+          - name: "timeline"
+            type: "text"
+            required: true
+        min_rows: 2
+      - name: "performance_benchmarks"
+        type: "text"
+        required: true
+        description: "Scientific and technical performance benchmarks needed to achieve outcomes."
+      - name: "field_reshaping_impact"
+        type: "text"
+        required: true
+        description: "Description of how outcomes reshape the field or technology sector."
+    constraints:
+      - "Outcomes must span a 5- to 7-year timescale"
+      - "Outcomes must be high-impact and measurable"
+      - "Must go beyond papers and datasets"
+
+  - id: "personnel"
+    name: "4. Senior/Key Personnel Qualifications"
+    required: true
+    description: >
+      Brief description of qualifications of Senior/Key Personnel, including
+      technical expertise, commercialization experience, and past efforts.
+    evaluation_criteria:
+      criterion: "Team Qualifications and Structure (Section 11.1)"
+      weight: "Roughly equal with Mission Clarity and Outcomes"
+      sub_criteria:
+        - >
+          Necessary and complementary expertise in scientific, technical,
+          interdisciplinary, and strategic leadership
+        - "Demonstrated record of success"
+    fields:
+      - name: "personnel_entries"
+        type: "list"
+        required: true
+        min_items: 2
+        item_fields:
+          - name: "name"
+            type: "text"
+            required: true
+          - name: "title"
+            type: "text"
+            required: true
+          - name: "affiliation"
+            type: "text"
+            required: true
+          - name: "role"
+            type: "text"
+            required: true
+          - name: "qualifications"
+            type: "text"
+            required: true
+            description: >
+              Technical expertise, experience commercializing technology, past
+              efforts, and other relevant qualifications.
+    constraints:
+      - "Must include ALL Senior/Key Personnel, including those at partner organizations"
+      - "Personnel may appear on a maximum of one proposal per Topic Announcement"
+      - "Must be dedicated full-time by Phase 1 start (unless NSF-approved)"
+      - "Must comply with CHIPS and Science Act Sections 10636 and 10632"
+
+  - id: "team_capabilities"
+    name: "5. Team Capabilities Statement"
+    required: true
+    description: >
+      How the leadership team brings together complementary expertise, governance
+      structure, and available partnerships and resources.
+    evaluation_criteria:
+      criterion: "Team Qualifications and Structure (Section 11.1)"
+      sub_criteria:
+        - >
+          Intended governance structure is appropriate for proposed work and
+          provides autonomy and flexibility
+        - >
+          Prepared to leverage novel partnerships across industry, government,
+          academia, and philanthropy
+    fields:
+      - name: "complementary_expertise"
+        type: "text"
+        required: true
+        description: >
+          How the team collectively demonstrates experience, adaptability, and
+          collaborative approach necessary to execute the Mission.
+      - name: "governance_structure"
+        type: "text"
+        required: true
+        description: >
+          Intended governance structure and autonomy during Phase 0 and Phase 1.
+          Must address the Autonomy Factor Test requirements.
+      - name: "partnerships_table"
+        type: "table"
+        required: false
+        description: "Overview of networks, partnerships, and capital resources."
+        columns:
+          - name: "partner"
+            type: "text"
+            required: true
+          - name: "type"
+            type: "text"
+            required: true
+            description: "e.g., Industry, Academic, Government, Philanthropy"
+          - name: "contribution"
+            type: "text"
+            required: true
+
+  - id: "coi_statement"
+    name: "Conflicts of Interest Statement"
+    required: true
+    separate_document: true
+    format: "PDF"
+    page_limit: null
+    description: >
+      Potential financial conflicts of the lead organization and Senior/Key
+      Personnel, with description of avoidance, neutralization, or mitigation.
+    fields:
+      - name: "lead_org_conflicts"
+        type: "text"
+        required: true
+        description: "Potential financial interests of the lead organization."
+      - name: "personnel_conflicts"
+        type: "text"
+        required: true
+        description: "Potential financial interests of Senior/Key Personnel."
+      - name: "coi_mitigation_plan"
+        type: "text"
+        required: true
+        description: "How the team will avoid, neutralize, or mitigate conflicts."
+    constraints:
+      - "Applies to lead organization, employees, and subcontractors/consultants"
+      - "Use FAR Subpart 9.5 as framework for identifying OCIs"
+      - "Post-award OCIs must be promptly disclosed to NSF"
+
+evaluation:
+  method: "Two-step competitive evaluation"
+  step_1: "Written Proposal review"
+  step_2: "Oral Proposal Package and oral presentation (invitation only)"
+  criteria:
+    - id: "team_qualifications"
+      name: "Team Qualifications and Structure"
+      reference: "Section 11.1"
+      weight: "Roughly equal with Mission Clarity and Outcomes"
+      sub_criteria:
+        - >
+          Necessary and complementary expertise in scientific, technical,
+          interdisciplinary, and strategic leadership; demonstrated record of success
+        - >
+          Intended governance structure appropriate for proposed work; prepared to
+          leverage novel partnerships; provides structure, resources, autonomy, and
+          flexibility for large-scale scientific advancements
+    - id: "mission_clarity"
+      name: "Mission Clarity and Outcomes"
+      reference: "Section 11.2"
+      weight: "Roughly equal with Team Qualifications"
+      sub_criteria:
+        - "Mission and outcomes are appropriately ambitious, technically sound, and well-defined"
+        - >
+          Technology landscape justifies a dedicated, full-time team for high-impact
+          breakthroughs
+        - "Mission and outcomes aligned with NSF X-Labs strategic objectives (Section 3.0)"
+
+funding:
+  phase_0:
+    duration_months: "9-12"
+    max_funding_usd: 1500000
+    payment_structure: "Milestone-based, quarterly schedule"
+  phase_1:
+    duration_months: "24-36"
+    payment_structure: "Milestone-based (Reporting + Progress milestones)"
+    budget_tiers:
+      - "Essential (small)"
+      - "Mid-range (medium)"
+      - "Comprehensive (large)"
+  phase_2:
+    duration: "Variable"
+    payment_structure: "Milestone-based"
+
+eligibility:
+  sam_registration: true
+  lead_organization: "Single OT contractor (may include subcontractors)"
+  entity_types: "All (academia, industry, nonprofits, etc.)"
+  research_security:
+    - "CHIPS and Science Act Section 10636 (person/entity of concern prohibition)"
+    - "CHIPS and Science Act Section 10632 (malign foreign talent program prohibition)"
+  excluded_entities:
+    - "U.S. proscribed parties (BIS Entity List, OFAC, DoS, FCC lists)"
+    - "Foreign entities of concern (DPRK, PRC, Russia, Iran)"
+    - "Individuals party to Malign Foreign Talent Recruitment Programs"
+  personnel_constraints:
+    - "Senior/Key Personnel: max one proposal per Topic Announcement"
+    - "Full-time dedication required by Phase 1 start"
+    - "Citizens of DPRK, PRC, Russia, or Iran ineligible as Senior/Key Personnel"
+
+validation_rules:
+  - id: "page_limit"
+    description: "Written Proposal must not exceed 8 single-sided pages (excluding COI)"
+    type: "page_count"
+    max_value: 8
+    excludes: ["coi_statement"]
+
+  - id: "required_sections"
+    description: "All five sections plus COI must be present"
+    type: "section_presence"
+    required_sections:
+      - "mission"
+      - "technology_landscape"
+      - "outcomes"
+      - "personnel"
+      - "team_capabilities"
+      - "coi_statement"
+
+  - id: "font_size"
+    description: "Body text must be 12-point; tables/graphs may be smaller"
+    type: "formatting"
+    body_font_size_pt: 12
+    table_font_exception: true
+
+  - id: "margins"
+    description: "1-inch margins on all sides"
+    type: "formatting"
+    margin_inches: 1.0
+
+  - id: "spacing"
+    description: "Single-spaced"
+    type: "formatting"
+    line_spacing: "single"
+
+  - id: "coi_separate"
+    description: "COI statement must be a separate PDF document"
+    type: "document_structure"
+    separate_files:
+      - section: "coi_statement"
+        format: "PDF"
+
+  - id: "no_cover_letter"
+    description: "Written Proposal must be submitted without a cover letter"
+    type: "document_structure"
+    cover_letter: false
+
+  - id: "sam_registration"
+    description: "Lead organization must be registered in SAM.gov"
+    type: "eligibility"
+    requirement: "SAM.gov registration"
+
+  - id: "outcomes_timescale"
+    description: "Outcomes must describe a 5- to 7-year timescale"
+    type: "content"
+    section: "outcomes"
+    timescale_years_min: 5
+    timescale_years_max: 7
+
+  - id: "personnel_completeness"
+    description: "Must include ALL Senior/Key Personnel including those at partner organizations"
+    type: "content"
+    section: "personnel"
