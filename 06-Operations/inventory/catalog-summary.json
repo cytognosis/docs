@@ -1,10 +1,10 @@
 {
-  "generated": "2026-07-09",
-  "total_files": 3605,
-  "non_symlink": 3605,
+  "generated": "2026-07-10",
+  "total_files": 3964,
+  "non_symlink": 3964,
   "symlinks": 0,
   "by_root": {
-    "project:Science and Platform": 1736,
+    "project:Science and Platform": 2095,
     "docs": 1418,
     "project:Website": 163,
     "project:Grants": 132,
@@ -31,22 +31,22 @@
     ".github": 1
   },
   "by_doc_type": {
-    "diagram/asset": 996,
-    "design": 786,
+    "diagram/asset": 1186,
+    "design": 923,
     "funding": 439,
     "engineering": 283,
     "other": 255,
+    "code": 177,
     "research": 160,
-    "code": 154,
     "product-spec": 147,
-    "readme": 82,
-    "config/schema": 76,
+    "readme": 87,
+    "config/schema": 79,
     "strategy": 70,
     "operations": 60,
     "data-table": 57,
     "evaluation": 15,
     "module-spec": 7,
-    "changelog": 5,
+    "changelog": 6,
     "adr": 4,
     "architecture": 3,
     "grant-section": 3,
@@ -55,12 +55,12 @@
     "rfc": 1
   },
   "by_variant": {
-    "primary": 3255,
-    "archive": 278,
+    "primary": 3600,
+    "archive": 289,
     "simple": 32,
-    "agent": 24,
+    "agent": 27,
     "readable": 16
   },
-  "md_with_std_header": 891,
-  "md_total": 1671
+  "md_with_std_header": 890,
+  "md_total": 1739
 }
