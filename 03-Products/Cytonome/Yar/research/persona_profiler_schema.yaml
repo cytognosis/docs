@@ -1,0 +1,1055 @@
+id: https://cytognosis.org/schema/persona
+name: persona_profiler
+title: Cytognosis Persona Profiler Schema
+description: >-
+  A LinkML schema for representing a person's personality, dark-side traits, values,
+  motivation and goals, vocational interests, character strengths, affect, and wellbeing,
+  together with measurement provenance, ontology and standards crosswalks, cofounder
+  matching constructs, and the Yar / Cytonome social-interaction tracking model.
+  Design principles: measure dimensions not types; attach provenance to every score;
+  match values and goals on similarity, skills and roles on complementarity, and
+  personality mostly on neither; treat clinical, dark-side, and third-party inferences
+  as high-risk data requiring consent. See persona_profiler_frameworks_reference.md
+  for the rationale and citations.
+license: CC-BY-4.0
+version: 0.1.0
+created_by: https://orcid.org/0000-0000-0000-0000
+created_on: "2026-05-30"
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  persona: https://cytognosis.org/schema/persona/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  schema: http://schema.org/
+  loinc: http://loinc.org/
+  BFO: http://purl.obolibrary.org/obo/BFO_
+  MF: http://purl.obolibrary.org/obo/MF_
+  MFOEM: http://purl.obolibrary.org/obo/MFOEM_
+  PATO: http://purl.obolibrary.org/obo/PATO_
+  SCTID: http://snomed.info/id/
+  wikidata: http://www.wikidata.org/entity/
+  phenx: https://www.phenxtoolkit.org/protocols/view/
+
+default_prefix: persona
+default_range: string
+imports:
+  - linkml:types
+
+# ---------------------------------------------------------------------------
+# TYPES
+# ---------------------------------------------------------------------------
+types:
+  UnitInterval:
+    typeof: float
+    description: A float constrained to the closed interval 0.0 to 1.0.
+    minimum_value: 0.0
+    maximum_value: 1.0
+  SignedUnitInterval:
+    typeof: float
+    description: A float constrained to the closed interval -1.0 to 1.0.
+    minimum_value: -1.0
+    maximum_value: 1.0
+
+# ---------------------------------------------------------------------------
+# SHARED SLOTS
+# ---------------------------------------------------------------------------
+slots:
+  construct:
+    description: The named psychological construct being scored. Overridden per family.
+    range: string
+    required: true
+  construct_curie:
+    description: Optional ontology or vocabulary identifier for the construct.
+    range: curie
+  framework:
+    description: The framework or model the construct belongs to.
+    range: Framework
+  raw_score:
+    description: The raw score on the instrument's native scale.
+    range: float
+  score_metric:
+    description: The metric in which the score is expressed.
+    range: ScoreMetric
+  t_score:
+    description: Normative T-score (mean 50, SD 10) relative to a stated reference sample.
+    range: float
+  percentile:
+    description: Normative percentile relative to a stated reference sample.
+    range: float
+    minimum_value: 0.0
+    maximum_value: 100.0
+  ci_lower:
+    description: Lower bound of the score confidence or credibility interval.
+    range: float
+  ci_upper:
+    description: Upper bound of the score confidence or credibility interval.
+    range: float
+  sensitivity:
+    description: Data-sensitivity level governing consent and access controls.
+    range: SensitivityLevel
+    ifabsent: SensitivityLevel(STANDARD)
+  assessment:
+    description: Reference to the administration event that produced this score.
+    range: Assessment
+    inlined: false
+
+# ---------------------------------------------------------------------------
+# CONTAINER
+# ---------------------------------------------------------------------------
+classes:
+  PersonaKnowledgeBase:
+    tree_root: true
+    description: Top-level container for profiles, instruments, interactions, and matches.
+    attributes:
+      profiles:
+        range: PersonaProfile
+        multivalued: true
+        inlined_as_list: true
+      instruments:
+        range: Instrument
+        multivalued: true
+        inlined_as_list: true
+      assessments:
+        range: Assessment
+        multivalued: true
+        inlined_as_list: true
+      interaction_events:
+        range: SocialInteractionEvent
+        multivalued: true
+        inlined_as_list: true
+      persona_type_effects:
+        range: PersonaTypeEffect
+        multivalued: true
+        inlined_as_list: true
+      dyad_matches:
+        range: DyadMatch
+        multivalued: true
+        inlined_as_list: true
+      matching_policies:
+        range: DimensionMatchingPolicy
+        multivalued: true
+        inlined_as_list: true
+
+  # -------------------------------------------------------------------------
+  # PROVENANCE
+  # -------------------------------------------------------------------------
+  Instrument:
+    description: A descriptive registry entry for a measurement instrument.
+    attributes:
+      id:
+        identifier: true
+        range: uriorcurie
+      name:
+        required: true
+      abbreviation: {}
+      version: {}
+      publisher: {}
+      license: {}
+      is_free:
+        range: boolean
+        description: True if the instrument is public domain or free for research use.
+      item_count:
+        range: integer
+      framework:
+        range: Framework
+      primary_construct:
+        description: The main construct family the instrument measures.
+        range: ConstructFamily
+      loinc_code:
+        range: string
+        description: LOINC panel code where one exists (mostly affect and distress instruments).
+        slot_uri: skos:exactMatch
+      validity_tier:
+        range: ValidityTier
+      see_also:
+        range: uri
+        multivalued: true
+
+  Assessment:
+    description: >-
+      A measurement administration event. Carries the provenance required to interpret
+      and compare any score: instrument, version, mode, respondent, norms, reliability,
+      metric, consent, and purpose.
+    class_uri: schema:Action
+    attributes:
+      id:
+        identifier: true
+        range: uriorcurie
+      subject_id:
+        description: Pseudonymous identifier of the person assessed.
+        range: string
+        required: true
+      instrument:
+        range: Instrument
+        inlined: false
+        required: true
+      instrument_version: {}
+      administration_date:
+        range: date
+      administration_mode:
+        range: AdministrationMode
+      respondent_type:
+        range: RespondentType
+        required: true
+      normative_reference:
+        description: The norm sample used for T-scores or percentiles (name, n, population).
+        range: string
+      reliability_omega:
+        description: McDonald's omega for the scale in the relevant sample (preferred over alpha).
+        range: float
+      score_metric:
+        range: ScoreMetric
+      invariance_established:
+        description: Whether measurement invariance was verified for any cross-group comparison.
+        range: boolean
+      consent:
+        range: ConsentRecord
+        inlined: false
+      purpose:
+        description: The specific declared purpose of this assessment (purpose limitation).
+        range: string
+      notes: {}
+
+  ConsentRecord:
+    description: A record of informed consent for a specific purpose, supporting GDPR-style controls.
+    attributes:
+      id:
+        identifier: true
+        range: uriorcurie
+      data_subject_id:
+        range: string
+        required: true
+      granted:
+        range: boolean
+        required: true
+      purpose:
+        range: string
+        multivalued: true
+      scope:
+        description: The construct families or processing activities the consent covers.
+        range: ConstructFamily
+        multivalued: true
+      granted_on:
+        range: date
+      withdrawable:
+        range: boolean
+        ifabsent: "true"
+      withdrawn_on:
+        range: date
+
+  # -------------------------------------------------------------------------
+  # SCORE MIXIN AND FAMILY SCORE CLASSES
+  # -------------------------------------------------------------------------
+  ScoredConstruct:
+    mixin: true
+    description: >-
+      Reusable scoring fields. Personality traits are modeled as BFO dispositions
+      (BFO:0000016); current affective states are better modeled as qualities or processes.
+    broad_mappings:
+      - BFO:0000016
+    slots:
+      - construct
+      - construct_curie
+      - framework
+      - raw_score
+      - score_metric
+      - t_score
+      - percentile
+      - ci_lower
+      - ci_upper
+      - sensitivity
+      - assessment
+
+  HexacoFacetScore:
+    mixins:
+      - ScoredConstruct
+    description: A score on a HEXACO domain or facet.
+    slot_usage:
+      construct:
+        range: HexacoConstruct
+
+  BigFiveFacetScore:
+    mixins:
+      - ScoredConstruct
+    description: A score on a Big Five domain or BFI-2 facet.
+    slot_usage:
+      construct:
+        range: BigFiveConstruct
+
+  Pid5Score:
+    mixins:
+      - ScoredConstruct
+    description: A score on a PID-5 maladaptive domain or facet. High sensitivity by default.
+    slot_usage:
+      construct:
+        range: Pid5Construct
+      sensitivity:
+        ifabsent: SensitivityLevel(HIGH_RISK_CLINICAL)
+
+  SchwartzValueScore:
+    mixins:
+      - ScoredConstruct
+    description: A score on a Schwartz basic value (refined 19-value theory).
+    slot_usage:
+      construct:
+        range: SchwartzValue
+
+  MoralFoundationScore:
+    mixins:
+      - ScoredConstruct
+    description: A score on a Moral Foundations Theory foundation (MFQ-2).
+    slot_usage:
+      construct:
+        range: MoralFoundation
+
+  NeedScore:
+    mixins:
+      - ScoredConstruct
+    description: A score on a Self-Determination Theory basic need (satisfaction or frustration).
+    slot_usage:
+      construct:
+        range: SdtNeed
+
+  RiasecScore:
+    mixins:
+      - ScoredConstruct
+    description: A score on a Holland RIASEC interest type.
+    slot_usage:
+      construct:
+        range: RiasecType
+
+  WorkValueScore:
+    mixins:
+      - ScoredConstruct
+    description: A score on an O*NET work value.
+    slot_usage:
+      construct:
+        range: OnetWorkValue
+
+  ViaStrengthScore:
+    mixins:
+      - ScoredConstruct
+    description: A score on a VIA character strength.
+    slot_usage:
+      construct:
+        range: ViaStrength
+
+  # -------------------------------------------------------------------------
+  # PROFILE
+  # -------------------------------------------------------------------------
+  PersonaProfile:
+    description: >-
+      An aggregate persona profile for one pseudonymous subject. Aligns with schema:Person
+      for identity, but stores no direct personal identifiers (data minimization).
+    class_uri: schema:Person
+    attributes:
+      subject_id:
+        identifier: true
+        range: string
+      age_band:
+        description: Coarse age band; profiles for under-25 subjects warrant wider uncertainty.
+        range: AgeBand
+      profile_date:
+        range: date
+      personality:
+        range: PersonalityProfile
+        inlined: true
+      dark_side:
+        range: DarkSideProfile
+        inlined: true
+      values:
+        range: ValueProfile
+        inlined: true
+      motivation:
+        range: MotivationProfile
+        inlined: true
+      vocational:
+        range: VocationalProfile
+        inlined: true
+      strengths:
+        range: StrengthsProfile
+        inlined: true
+      affect_baseline:
+        range: AffectState
+        inlined: true
+      wellbeing:
+        range: WellbeingProfile
+        inlined: true
+      consent:
+        range: ConsentRecord
+        inlined: false
+
+  PersonalityProfile:
+    description: Normal-range personality. HEXACO is primary; Big Five is the interoperable common language.
+    broad_mappings:
+      - MF:0000001
+    close_mappings:
+      - wikidata:Q378132
+    attributes:
+      hexaco:
+        range: HexacoFacetScore
+        multivalued: true
+        inlined_as_list: true
+      big_five:
+        range: BigFiveFacetScore
+        multivalued: true
+        inlined_as_list: true
+      interpersonal_agency:
+        description: Interpersonal Circumplex Agency (dominance vs submission).
+        range: SignedUnitInterval
+      interpersonal_communion:
+        description: Interpersonal Circumplex Communion (warmth vs coldness).
+        range: SignedUnitInterval
+
+  DarkSideProfile:
+    description: >-
+      Maladaptive and aversive traits. HIGH-RISK data. Consent-gated, subclinical framing,
+      never a sole gate for any decision. Dark Factor D is the recommended unifying screen.
+    comments:
+      - "Do not apply to non-consenting third parties. Do not use clinical labels outside formal assessment."
+    close_mappings:
+      - SCTID:225760008
+    attributes:
+      dark_factor_d:
+        description: Dark Factor of Personality (D16/D35/D70).
+        range: float
+      dark_factor_metric:
+        range: ScoreMetric
+      pid5:
+        range: Pid5Score
+        multivalued: true
+        inlined_as_list: true
+      dark_triad_narcissism:
+        range: float
+      dark_triad_machiavellianism:
+        range: float
+      dark_triad_psychopathy:
+        range: float
+      dark_tetrad_sadism:
+        range: float
+      hitop_spectra:
+        description: Optional HiTOP spectrum scores (e.g., Antagonistic Externalizing, Detachment).
+        range: string
+        multivalued: true
+      consent_required:
+        range: boolean
+        ifabsent: "true"
+      clinical_oversight:
+        description: Whether a qualified clinician oversees interpretation.
+        range: boolean
+      sensitivity:
+        range: SensitivityLevel
+        ifabsent: SensitivityLevel(HIGH_RISK_CLINICAL)
+
+  ValueProfile:
+    description: Values via Schwartz refined theory plus optional Moral Foundations.
+    attributes:
+      schwartz_values:
+        range: SchwartzValueScore
+        multivalued: true
+        inlined_as_list: true
+      openness_to_change:
+        range: float
+      conservation:
+        range: float
+      self_enhancement:
+        range: float
+      self_transcendence:
+        range: float
+      moral_foundations:
+        range: MoralFoundationScore
+        multivalued: true
+        inlined_as_list: true
+
+  MotivationProfile:
+    description: Motivation and goals via Self-Determination Theory and supplements.
+    attributes:
+      need_satisfaction:
+        range: NeedScore
+        multivalued: true
+        inlined_as_list: true
+      need_frustration:
+        range: NeedScore
+        multivalued: true
+        inlined_as_list: true
+      intrinsic_aspirations:
+        description: Aspirations Index intrinsic goal emphasis (growth, relationships, community).
+        range: float
+      extrinsic_aspirations:
+        description: Aspirations Index extrinsic goal emphasis (wealth, fame, image).
+        range: float
+      achievement_goal_orientation:
+        range: AchievementGoal
+        multivalued: true
+      regulatory_focus_promotion:
+        range: float
+      regulatory_focus_prevention:
+        range: float
+      stated_goals:
+        description: Free-text personal strivings or goals, optionally coded.
+        range: string
+        multivalued: true
+
+  VocationalProfile:
+    description: Vocational interests (RIASEC) and work values, for skill and role complementarity.
+    attributes:
+      riasec:
+        range: RiasecScore
+        multivalued: true
+        inlined_as_list: true
+      riasec_code:
+        description: Three-letter Holland summary code (e.g., IER).
+        range: string
+        pattern: "^[RIASEC]{1,3}$"
+      work_values:
+        range: WorkValueScore
+        multivalued: true
+        inlined_as_list: true
+      expertise_domains:
+        description: Declared areas of expertise, for complementary-skill matching.
+        range: string
+        multivalued: true
+
+  StrengthsProfile:
+    description: VIA character strengths.
+    attributes:
+      via_strengths:
+        range: ViaStrengthScore
+        multivalued: true
+        inlined_as_list: true
+      signature_strengths:
+        description: The subject's top 5 to 7 strengths.
+        range: ViaStrength
+        multivalued: true
+
+  WellbeingProfile:
+    description: Trait and outcome wellbeing anchors (slow cadence, not event sampling).
+    attributes:
+      swls:
+        description: Satisfaction With Life Scale total (5 to 35).
+        range: float
+        minimum_value: 5.0
+        maximum_value: 35.0
+      perma_positive_emotion:
+        range: float
+      perma_engagement:
+        range: float
+      perma_relationships:
+        range: float
+      perma_meaning:
+        range: float
+      perma_accomplishment:
+        range: float
+      promis_anxiety_t:
+        range: float
+        slot_uri: skos:exactMatch
+        comments: ["LOINC 77862-1 (PROMIS Anxiety T-score)."]
+      promis_depression_t:
+        range: float
+      promis_positive_affect_t:
+        range: float
+
+  # -------------------------------------------------------------------------
+  # YAR / CYTONOME INTERACTION TRACKING
+  # -------------------------------------------------------------------------
+  AffectState:
+    description: >-
+      A momentary core-affect state for ecological momentary assessment. Valence x arousal
+      (Russell circumplex) plus state PANAS. Modeled as an affective phenomenon (MFOEM).
+    comments:
+      - "Affect is a state (quality/process), distinct from personality traits (dispositions)."
+    attributes:
+      timestamp:
+        range: datetime
+      valence:
+        description: Pleasant (positive) to unpleasant (negative).
+        range: SignedUnitInterval
+      arousal:
+        description: Activated (high) to deactivated (low).
+        range: UnitInterval
+      panas_positive:
+        range: float
+      panas_negative:
+        range: float
+      context:
+        description: Brief situational context of the report.
+        range: string
+      assessment:
+        range: Assessment
+        inlined: false
+
+  Counterpart:
+    description: >-
+      A pseudonymous representation of another person in the user's social graph.
+      Stores only relationship metadata and the USER'S PERCEPTION, never a diagnosis
+      or trait inference about the non-consenting third party.
+    comments:
+      - "perceived_persona_type is the user's experience, not a clinical or dark-side label."
+    attributes:
+      pseudonymous_id:
+        identifier: true
+        range: string
+      relationship_type:
+        range: string
+      consent_status:
+        description: Whether this counterpart has consented to any processing.
+        range: CounterpartConsentStatus
+        ifabsent: CounterpartConsentStatus(NOT_CONSENTED)
+      perceived_persona_type:
+        description: User-assigned, experience-based label (free text, not a diagnosis).
+        range: string
+
+  SocialInteractionEvent:
+    description: >-
+      An event-contingent EMA record of one social interaction and its effect on the user.
+      Stores effects ON THE USER, not traits of the counterpart.
+    attributes:
+      id:
+        identifier: true
+        range: uriorcurie
+      subject_id:
+        range: string
+        required: true
+      counterpart:
+        range: Counterpart
+        inlined: false
+      interaction_type:
+        range: InteractionType
+      start_time:
+        range: datetime
+      duration_minutes:
+        range: float
+      affect_before:
+        range: AffectState
+        inlined: true
+      affect_after:
+        range: AffectState
+        inlined: true
+      need_satisfaction:
+        range: NeedScore
+        multivalued: true
+        inlined_as_list: true
+      need_frustration:
+        range: NeedScore
+        multivalued: true
+        inlined_as_list: true
+      cognitive_focus:
+        description: Self-reported focus or clarity after the interaction.
+        range: UnitInterval
+      rumination:
+        description: Self-reported rumination after the interaction.
+        range: UnitInterval
+      consent:
+        range: ConsentRecord
+        inlined: false
+
+  PersonaTypeEffect:
+    description: >-
+      Aggregated, multilevel-modeled effect of interacting with a given persona type on the
+      user's affect, needs, and cognition. Framed as the user's experience.
+    attributes:
+      id:
+        identifier: true
+        range: uriorcurie
+      subject_id:
+        range: string
+        required: true
+      persona_type_label:
+        range: string
+      n_events:
+        range: integer
+      mean_valence_change:
+        range: SignedUnitInterval
+      mean_arousal_change:
+        range: SignedUnitInterval
+      mean_need_frustration:
+        range: float
+      effect_ci_lower:
+        range: float
+      effect_ci_upper:
+        range: float
+      interpretation:
+        range: string
+      framing_note:
+        range: string
+        ifabsent: string("Describes how interactions affect this user, not the traits of any other person.")
+
+  # -------------------------------------------------------------------------
+  # MATCHING
+  # -------------------------------------------------------------------------
+  DimensionMatchingPolicy:
+    description: >-
+      Policy for how a construct family contributes to a match: similarity (values, goals),
+      complementarity (interests, skills), or a neutral risk screen (personality, integrity).
+    attributes:
+      id:
+        identifier: true
+        range: uriorcurie
+      construct_family:
+        range: ConstructFamily
+        required: true
+      matching_mode:
+        range: MatchingMode
+        required: true
+      weight:
+        range: UnitInterval
+      rationale:
+        range: string
+
+  DyadMatch:
+    description: >-
+      A decision-support match between two profiles. Reports component scores, risk flags,
+      and an overall estimate WITH explicit uncertainty and rationale. Not an oracle:
+      dyadic compatibility is only weakly predictable from self-report.
+    attributes:
+      id:
+        identifier: true
+        range: uriorcurie
+      profile_a:
+        range: PersonaProfile
+        inlined: false
+        required: true
+      profile_b:
+        range: PersonaProfile
+        inlined: false
+        required: true
+      value_similarity:
+        description: Schwartz value congruence (e.g., 1 minus normalized angular distance).
+        range: UnitInterval
+      goal_similarity:
+        description: Aspiration and goal congruence.
+        range: UnitInterval
+      interest_complementarity:
+        description: RIASEC and role complementarity.
+        range: UnitInterval
+      skill_complementarity:
+        description: Expertise-domain complementarity.
+        range: UnitInterval
+      integrity_risk_flag:
+        description: Raised when either party shows low Honesty-Humility or high Dark Factor D.
+        range: boolean
+      bad_apple_risk_flag:
+        description: Raised when either party is very low on Agreeableness, Conscientiousness, or Emotional Stability.
+        range: boolean
+      overall_compatibility:
+        range: UnitInterval
+      uncertainty:
+        description: Explicit uncertainty on the overall estimate.
+        range: UnitInterval
+      rationale:
+        range: string
+      policies_applied:
+        range: DimensionMatchingPolicy
+        multivalued: true
+        inlined: false
+
+# ---------------------------------------------------------------------------
+# ENUMS (controlled vocabularies)
+# ---------------------------------------------------------------------------
+enums:
+  Framework:
+    permissible_values:
+      HEXACO: {}
+      BIG_FIVE_FFM: {}
+      INTERPERSONAL_CIRCUMPLEX: {}
+      PID5_AMPD: {}
+      ICD11_PD: {}
+      HITOP: {}
+      DARK_FACTOR_D: {}
+      DARK_TRIAD: {}
+      DARK_TETRAD: {}
+      SCHWARTZ_VALUES: {}
+      MORAL_FOUNDATIONS: {}
+      SELF_DETERMINATION_THEORY: {}
+      ACHIEVEMENT_GOAL_THEORY: {}
+      REGULATORY_FOCUS: {}
+      RIASEC_HOLLAND: {}
+      ONET_WORK_VALUES: {}
+      VIA_STRENGTHS: {}
+      PANAS: {}
+      PROMIS: {}
+      PERMA: {}
+      SWLS: {}
+      RDOC: {}
+
+  ConstructFamily:
+    permissible_values:
+      PERSONALITY: {}
+      DARK_SIDE: {}
+      VALUES: {}
+      MOTIVATION_GOALS: {}
+      VOCATIONAL_INTERESTS: {}
+      WORK_VALUES: {}
+      CHARACTER_STRENGTHS: {}
+      AFFECT: {}
+      WELLBEING: {}
+      EXPERTISE_SKILLS: {}
+
+  ValidityTier:
+    permissible_values:
+      TIER_A:
+        description: Strong structural, cross-cultural, and predictive validity; primary measure.
+      TIER_B:
+        description: Useful with caveats or for specific purposes.
+      TIER_C:
+        description: Not recommended as a quantitative measure (e.g., MBTI, DISC, Enneagram).
+
+  ScoreMetric:
+    permissible_values:
+      RAW: {}
+      LIKERT_MEAN: {}
+      T_SCORE: {}
+      PERCENTILE: {}
+      STEN: {}
+      Z_SCORE: {}
+      IRT_THETA: {}
+
+  RespondentType:
+    permissible_values:
+      SELF_REPORT: {}
+      INFORMANT_REPORT: {}
+      OBSERVER_RATING: {}
+      CLINICIAN_RATED: {}
+      INFERRED_DIGITAL:
+        description: Inferred from digital traces; weak signal, use with caution and disclosure.
+
+  AdministrationMode:
+    permissible_values:
+      ONLINE_SELF: {}
+      SUPERVISED: {}
+      INTERVIEW: {}
+      FORCED_CHOICE: {}
+      EMA_PROMPT: {}
+      PAPER: {}
+
+  SensitivityLevel:
+    permissible_values:
+      STANDARD: {}
+      SENSITIVE: {}
+      HIGH_RISK_CLINICAL:
+        description: Clinical or dark-side constructs; consent-gated, special-category data.
+
+  AgeBand:
+    permissible_values:
+      UNDER_25: {}
+      AGE_25_34: {}
+      AGE_35_49: {}
+      AGE_50_64: {}
+      AGE_65_PLUS: {}
+
+  MatchingMode:
+    permissible_values:
+      SIMILARITY:
+        description: Closer is better (values, goals).
+      COMPLEMENTARITY:
+        description: Difference is an asset (interests, skills, roles).
+      NEUTRAL_RISK_SCREEN:
+        description: Not matched on distance; screened for risk (personality, integrity).
+
+  CounterpartConsentStatus:
+    permissible_values:
+      NOT_CONSENTED: {}
+      CONSENTED: {}
+      WITHDRAWN: {}
+
+  InteractionType:
+    permissible_values:
+      ONE_ON_ONE: {}
+      GROUP_MEETING: {}
+      CASUAL_SOCIAL: {}
+      CONFLICT: {}
+      NEGOTIATION: {}
+      FEEDBACK: {}
+      COLLABORATION: {}
+      DIGITAL_MESSAGE: {}
+
+  AchievementGoal:
+    permissible_values:
+      MASTERY_APPROACH: {}
+      MASTERY_AVOIDANCE: {}
+      PERFORMANCE_APPROACH: {}
+      PERFORMANCE_AVOIDANCE: {}
+
+  HexacoConstruct:
+    description: HEXACO domains and the 24 facets plus interstitial Altruism.
+    permissible_values:
+      HONESTY_HUMILITY: {}
+      H_SINCERITY: {}
+      H_FAIRNESS: {}
+      H_GREED_AVOIDANCE: {}
+      H_MODESTY: {}
+      EMOTIONALITY: {}
+      E_FEARFULNESS: {}
+      E_ANXIETY: {}
+      E_DEPENDENCE: {}
+      E_SENTIMENTALITY: {}
+      EXTRAVERSION: {}
+      X_SOCIAL_SELF_ESTEEM: {}
+      X_SOCIAL_BOLDNESS: {}
+      X_SOCIABILITY: {}
+      X_LIVELINESS: {}
+      AGREEABLENESS: {}
+      A_FORGIVINGNESS: {}
+      A_GENTLENESS: {}
+      A_FLEXIBILITY: {}
+      A_PATIENCE: {}
+      CONSCIENTIOUSNESS: {}
+      C_ORGANIZATION: {}
+      C_DILIGENCE: {}
+      C_PERFECTIONISM: {}
+      C_PRUDENCE: {}
+      OPENNESS: {}
+      O_AESTHETIC_APPRECIATION: {}
+      O_INQUISITIVENESS: {}
+      O_CREATIVITY: {}
+      O_UNCONVENTIONALITY: {}
+      ALTRUISM_INTERSTITIAL: {}
+
+  BigFiveConstruct:
+    description: Big Five domains and the 15 BFI-2 facets.
+    permissible_values:
+      OPENNESS: {}
+      CONSCIENTIOUSNESS: {}
+      EXTRAVERSION: {}
+      AGREEABLENESS: {}
+      NEGATIVE_EMOTIONALITY: {}
+      E_SOCIABILITY: {}
+      E_ASSERTIVENESS: {}
+      E_ENERGY_LEVEL: {}
+      A_COMPASSION: {}
+      A_RESPECTFULNESS: {}
+      A_TRUST: {}
+      C_ORGANIZATION: {}
+      C_PRODUCTIVENESS: {}
+      C_RESPONSIBILITY: {}
+      N_ANXIETY: {}
+      N_DEPRESSION: {}
+      N_EMOTIONAL_VOLATILITY: {}
+      O_INTELLECTUAL_CURIOSITY: {}
+      O_AESTHETIC_SENSITIVITY: {}
+      O_CREATIVE_IMAGINATION: {}
+
+  Pid5Construct:
+    description: PID-5 / AMPD 5 domains and 25 facets.
+    permissible_values:
+      NEGATIVE_AFFECTIVITY: {}
+      DETACHMENT: {}
+      ANTAGONISM: {}
+      DISINHIBITION: {}
+      PSYCHOTICISM: {}
+      ANHEDONIA: {}
+      ANXIOUSNESS: {}
+      ATTENTION_SEEKING: {}
+      CALLOUSNESS: {}
+      DECEITFULNESS: {}
+      DEPRESSIVITY: {}
+      DISTRACTIBILITY: {}
+      ECCENTRICITY: {}
+      EMOTIONAL_LABILITY: {}
+      GRANDIOSITY: {}
+      HOSTILITY: {}
+      IMPULSIVITY: {}
+      INTIMACY_AVOIDANCE: {}
+      IRRESPONSIBILITY: {}
+      MANIPULATIVENESS: {}
+      PERCEPTUAL_DYSREGULATION: {}
+      PERSEVERATION: {}
+      RESTRICTED_AFFECTIVITY: {}
+      RIGID_PERFECTIONISM: {}
+      RISK_TAKING: {}
+      SEPARATION_INSECURITY: {}
+      SUBMISSIVENESS: {}
+      SUSPICIOUSNESS: {}
+      UNUSUAL_BELIEFS_EXPERIENCES: {}
+      WITHDRAWAL: {}
+
+  SchwartzValue:
+    description: Schwartz refined theory, 19 basic values.
+    permissible_values:
+      SELF_DIRECTION_THOUGHT: {}
+      SELF_DIRECTION_ACTION: {}
+      STIMULATION: {}
+      HEDONISM: {}
+      ACHIEVEMENT: {}
+      POWER_DOMINANCE: {}
+      POWER_RESOURCES: {}
+      FACE: {}
+      SECURITY_PERSONAL: {}
+      SECURITY_SOCIETAL: {}
+      TRADITION: {}
+      CONFORMITY_RULES: {}
+      CONFORMITY_INTERPERSONAL: {}
+      HUMILITY: {}
+      BENEVOLENCE_CARE: {}
+      BENEVOLENCE_DEPENDABILITY: {}
+      UNIVERSALISM_CONCERN: {}
+      UNIVERSALISM_NATURE: {}
+      UNIVERSALISM_TOLERANCE: {}
+
+  MoralFoundation:
+    description: Moral Foundations Theory (MFQ-2 six foundations plus Liberty).
+    permissible_values:
+      CARE: {}
+      EQUALITY: {}
+      PROPORTIONALITY: {}
+      LOYALTY: {}
+      AUTHORITY: {}
+      PURITY: {}
+      LIBERTY: {}
+
+  SdtNeed:
+    description: Self-Determination Theory basic psychological needs.
+    permissible_values:
+      AUTONOMY: {}
+      COMPETENCE: {}
+      RELATEDNESS: {}
+
+  RiasecType:
+    description: Holland RIASEC vocational interest types.
+    permissible_values:
+      REALISTIC: {}
+      INVESTIGATIVE: {}
+      ARTISTIC: {}
+      SOCIAL: {}
+      ENTERPRISING: {}
+      CONVENTIONAL: {}
+
+  OnetWorkValue:
+    description: O*NET work values (Theory of Work Adjustment).
+    permissible_values:
+      ACHIEVEMENT: {}
+      INDEPENDENCE: {}
+      RECOGNITION: {}
+      RELATIONSHIPS: {}
+      SUPPORT: {}
+      WORKING_CONDITIONS: {}
+
+  ViaStrength:
+    description: VIA Classification, 24 character strengths under 6 virtues.
+    permissible_values:
+      CREATIVITY: {}
+      CURIOSITY: {}
+      JUDGMENT: {}
+      LOVE_OF_LEARNING: {}
+      PERSPECTIVE: {}
+      BRAVERY: {}
+      PERSEVERANCE: {}
+      HONESTY: {}
+      ZEST: {}
+      LOVE: {}
+      KINDNESS: {}
+      SOCIAL_INTELLIGENCE: {}
+      TEAMWORK: {}
+      FAIRNESS: {}
+      LEADERSHIP: {}
+      FORGIVENESS: {}
+      HUMILITY: {}
+      PRUDENCE: {}
+      SELF_REGULATION: {}
+      APPRECIATION_OF_BEAUTY: {}
+      GRATITUDE: {}
+      HOPE: {}
+      HUMOR: {}
+      SPIRITUALITY: {}
