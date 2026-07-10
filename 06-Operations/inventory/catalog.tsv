@@ -492,10 +492,10 @@ docs	06-Operations	operations	primary	no		3.3	Active	2026-06-14	operations, lega
 docs	06-Operations	operations	primary	no		2.5				Communications & Workspace Infrastructure	repos/cytognosis/docs/06-Operations/COMMUNICATIONS_AND_WORKSPACE.md
 docs	06-Operations	operations	primary	no		1073.6					repos/cytognosis/docs/06-Operations/inventory/provenance-archives.tsv
 docs	06-Operations	code	primary	no		7.5					repos/cytognosis/docs/06-Operations/inventory/build_catalog.py
-docs	06-Operations	operations	primary	no		1.5					repos/cytognosis/docs/06-Operations/inventory/catalog-tables.md
+docs	06-Operations	operations	primary	no		1.4					repos/cytognosis/docs/06-Operations/inventory/catalog-tables.md
 docs	06-Operations	operations	primary	no		9.0	Active	2026-07-10	inventory, catalog, taxonomy, provenance, knowledge-management	Master Catalog — Everything We Have and Where It Lives	repos/cytognosis/docs/06-Operations/inventory/MASTER-CATALOG.md
-docs	06-Operations	operations	primary	no		730.6					repos/cytognosis/docs/06-Operations/inventory/catalog.tsv
-docs	06-Operations	config/schema	primary	no		1.4					repos/cytognosis/docs/06-Operations/inventory/catalog-summary.json
+docs	06-Operations	operations	primary	no		730.4					repos/cytognosis/docs/06-Operations/inventory/catalog.tsv
+docs	06-Operations	config/schema	primary	no		1.3					repos/cytognosis/docs/06-Operations/inventory/catalog-summary.json
 docs	06-Operations	operations	simple	no		2.1				The Master Map, in Plain Words	repos/cytognosis/docs/06-Operations/inventory/simple/MASTER-CATALOG.md
 docs	06-Operations	operations	primary	no		6.1				Cytognosis Foundation — Organizational Context (Technical)	repos/cytognosis/docs/06-Operations/org/org-context.md
 docs	06-Operations	operations	agent	no		3.2				Cytognosis Foundation — Org Context (Agent Brief)	repos/cytognosis/docs/06-Operations/org/org-context_prompt.md
@@ -934,30 +934,31 @@ docs	05-Research	data-table	primary	no		61.9					repos/cytognosis/docs/05-Resear
 docs	05-Research	data-table	primary	no		58.9					repos/cytognosis/docs/05-Research/foundational/dimensional/rdoc-harmonization/reference_tables/reference_hitop_associations_extended.csv
 docs	05-Research	data-table	primary	no		43.0					repos/cytognosis/docs/05-Research/foundational/dimensional/rdoc-harmonization/reference_tables/reference_self_report.csv
 docs	05-Research	data-table	primary	no		21.5					repos/cytognosis/docs/05-Research/foundational/dimensional/rdoc-harmonization/reference_tables/reference_physiology.csv
-docs	05-Research	research	primary	no		58.1				Molecular and Cellular Cross-Cutting Biotypes for the Cytognosis + Marie-Nelly Mental-Health Coordinate Proposal	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/molecular-cellular-biotypes.md
-docs	05-Research	research	primary	no		37.0				Multi-Scale and Multimodal Biomarker Studies: Prior Art for a Genome-Connectome-Phenotype Platform	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/multiscale-biomarkers.md
+docs	05-Research	research	primary	no		58.3	Active	2026-07-10	literature-synthesis, disease-biotypes, molecular-cellular	Molecular and Cellular Cross-Cutting Biotypes for the Cytognosis + Marie-Nelly Mental-Health Coordinate Proposal	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/molecular-cellular-biotypes.md
+docs	05-Research	research	primary	no		37.3	Active	2026-07-10	literature-synthesis, disease-biotypes, multiscale-biomarkers	Multi-Scale and Multimodal Biomarker Studies: Prior Art for a Genome-Connectome-Phenotype Platform	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/multiscale-biomarkers.md
 docs	05-Research	research	primary	no		14.8					repos/cytognosis/docs/05-Research/foundational/disease-biotypes/transdiagnostic/BRAIN_MAP.html
-docs	05-Research	research	primary	no		27.8				Transdiagnostic MACRO synthesis: symptom dimensions across 14 psychiatric disorders	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/transdiagnostic/transdiagnostic-macro.md
-docs	05-Research	research	primary	no		32.6				Transdiagnostic MESO-scale synthesis: connectomic nodes and edges across 14 psychiatric disorders	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/transdiagnostic/transdiagnostic-meso.md
-docs	05-Research	research	primary	no		36.8				Transdiagnostic MICRO synthesis: molecular, genetic, cellular, and immune biotypes across 14 psychiatric disorders	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/transdiagnostic/transdiagnostic-micro.md
-docs	05-Research	research	primary	no		40.7				Transdiagnostic Connectomic Synthesis: A Mental Health Coordinate Map for Adaptive Spectroscopy Sensing	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/transdiagnostic/transdiagnostic-connectomic-synthesis.md
-docs	05-Research	research	primary	no		37.1				Biotypes: Anorexia Nervosa (AN)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/anorexia.md
-docs	05-Research	research	primary	no		33.1				Biotypes: Anxiety Disorders (GAD, panic disorder, social anxiety disorder)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/anxiety.md
-docs	05-Research	research	primary	no		38.7				Biotypes: Tourette syndrome (and chronic tic disorders)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/tourette.md
-docs	05-Research	research	primary	no		41.5				Biotypes: Autism Spectrum Disorder	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/asd.md
-docs	05-Research	research	primary	no		36.1				Biotypes: Post-Traumatic Stress Disorder (PTSD)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/ptsd.md
-docs	05-Research	research	primary	no		30.2				Biotypes: ADHD (attention-deficit/hyperactivity disorder)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/adhd.md
-docs	05-Research	research	primary	no		36.3				Biotypes: Nicotine / Tobacco Use Disorder	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/sud-nicotine.md
-docs	05-Research	research	primary	no		30.1				Mental Health Biotypes: Cheat Sheet v2	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/BIOTYPES_CHEATSHEET_v2.md
-docs	05-Research	research	primary	no		32.3				Biotypes: Obsessive-Compulsive Disorder (OCD)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/ocd.md
-docs	05-Research	research	primary	no		43.2				Biotypes: Alcohol Use Disorder (AUD)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/sud-alcohol.md
-docs	05-Research	research	primary	no		36.0				Biotypes: Schizophrenia	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/schizophrenia.md
-docs	05-Research	research	primary	no		36.5				Biotypes: Major Depressive Disorder	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/mdd.md
-docs	05-Research	research	primary	no		61.8				Biotypes of Autism Spectrum Disorder: Multi-Modal Evidence for a Mental Health Coordinate System	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/asd-research-brief.md
-docs	05-Research	research	primary	no		6.7				Disease biotype docs: shared template and conventions	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/_TEMPLATE_AND_CONVENTIONS.md
-docs	05-Research	research	primary	no		30.8				Biotypes: Bipolar Disorder (BD-I and BD-II)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/bipolar.md
-docs	05-Research	research	primary	no		34.9				Biotypes: Cannabis Use Disorder (CUD)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/sud-cannabis.md
-docs	05-Research	research	primary	no		36.9				Biotypes: Opioid Use Disorder (OUD)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/sud-opioid.md
+docs	05-Research	research	primary	no		28.1	Active	2026-07-10	literature-synthesis, disease-biotypes, transdiagnostic	Transdiagnostic MACRO synthesis: symptom dimensions across 14 psychiatric disorders	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/transdiagnostic/transdiagnostic-macro.md
+docs	05-Research	research	primary	no		32.8	Active	2026-07-10	literature-synthesis, disease-biotypes, transdiagnostic	Transdiagnostic MESO-scale synthesis: connectomic nodes and edges across 14 psychiatric disorders	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/transdiagnostic/transdiagnostic-meso.md
+docs	05-Research	research	primary	no		37.1	Active	2026-07-10	literature-synthesis, disease-biotypes, transdiagnostic	Transdiagnostic MICRO synthesis: molecular, genetic, cellular, and immune biotypes across 14 psychiatric disorders	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/transdiagnostic/transdiagnostic-micro.md
+docs	05-Research	research	primary	no		41.0	Active	2026-07-10	literature-synthesis, disease-biotypes, transdiagnostic	Transdiagnostic Connectomic Synthesis: A Mental Health Coordinate Map for Adaptive Spectroscopy Sensing	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/transdiagnostic/transdiagnostic-connectomic-synthesis.md
+docs	05-Research	research	primary	no		37.4	Active	2026-07-10	literature-synthesis, disease-biotypes, anorexia	Biotypes: Anorexia Nervosa (AN)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/anorexia.md
+docs	05-Research	research	primary	no		33.4	Active	2026-07-10	literature-synthesis, disease-biotypes, anxiety	Biotypes: Anxiety Disorders (GAD, panic disorder, social anxiety disorder)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/anxiety.md
+docs	05-Research	research	primary	no		38.9	Active	2026-07-10	literature-synthesis, disease-biotypes, tourette	Biotypes: Tourette syndrome (and chronic tic disorders)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/tourette.md
+docs	05-Research	research	primary	no		41.8	Active	2026-07-10	literature-synthesis, disease-biotypes, asd	Biotypes: Autism Spectrum Disorder	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/asd.md
+docs	05-Research	research	primary	no		36.4	Active	2026-07-10	literature-synthesis, disease-biotypes, ptsd	Biotypes: Post-Traumatic Stress Disorder (PTSD)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/ptsd.md
+docs	05-Research	research	primary	no		30.5	Active	2026-07-10	literature-synthesis, disease-biotypes, adhd	Biotypes: ADHD (attention-deficit/hyperactivity disorder)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/adhd.md
+docs	05-Research	research	primary	no		36.6	Active	2026-07-10	literature-synthesis, disease-biotypes, sud-nicotine	Biotypes: Nicotine / Tobacco Use Disorder	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/sud-nicotine.md
+docs	05-Research	research	primary	no		32.1	Active	2026-07-10	literature-synthesis, disease-biotypes, index, cheatsheet	Mental Health Biotypes: Cheat Sheet v2	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/BIOTYPES_CHEATSHEET_v2.md
+docs	05-Research	research	primary	no		32.6	Active	2026-07-10	literature-synthesis, disease-biotypes, ocd	Biotypes: Obsessive-Compulsive Disorder (OCD)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/ocd.md
+docs	05-Research	research	primary	no		43.5	Active	2026-07-10	literature-synthesis, disease-biotypes, sud-alcohol	Biotypes: Alcohol Use Disorder (AUD)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/sud-alcohol.md
+docs	05-Research	research	primary	no		36.2	Active	2026-07-10	literature-synthesis, disease-biotypes, schizophrenia	Biotypes: Schizophrenia	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/schizophrenia.md
+docs	05-Research	research	primary	no		36.8	Active	2026-07-10	literature-synthesis, disease-biotypes, mdd	Biotypes: Major Depressive Disorder	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/mdd.md
+docs	05-Research	research	primary	no		62.1	Active	2026-07-10	literature-synthesis, disease-biotypes, asd-research-brief	Biotypes of Autism Spectrum Disorder: Multi-Modal Evidence for a Mental Health Coordinate System	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/asd-research-brief.md
+docs	05-Research	research	primary	no		31.1	Active	2026-07-10	literature-synthesis, disease-biotypes, bipolar	Biotypes: Bipolar Disorder (BD-I and BD-II)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/bipolar.md
+docs	05-Research	research	primary	no		35.1	Active	2026-07-10	literature-synthesis, disease-biotypes, sud-cannabis	Biotypes: Cannabis Use Disorder (CUD)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/sud-cannabis.md
+docs	05-Research	research	primary	no		37.2	Active	2026-07-10	literature-synthesis, disease-biotypes, sud-opioid	Biotypes: Opioid Use Disorder (OUD)	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/sud-opioid.md
+docs	05-Research	research	archive	no		6.9				Disease biotype docs: shared template and conventions	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/diseases/_archive/_TEMPLATE_AND_CONVENTIONS.md
+docs	05-Research	readme	simple	no		1.0				Disease Biotypes, in Plain Words	repos/cytognosis/docs/05-Research/foundational/disease-biotypes/simple/README.md
 docs	05-Research	data-table	primary	no		132.3					repos/cytognosis/docs/05-Research/foundational/treatment/neuroplastogens/nbn/NbN.csv
 docs	05-Research	research	primary	no		11.5				NbN Glossary	repos/cytognosis/docs/05-Research/foundational/treatment/neuroplastogens/nbn/NbN_Glossary.md
 docs	05-Research	data-table	primary	no		27.2					repos/cytognosis/docs/05-Research/foundational/treatment/neuroplastogens/nbn/NbN_extended.csv
@@ -1603,7 +1604,7 @@ project:Refactor	(root)	other	primary	no		6.9				Master Drive Plan — Consolida
 project:Refactor	(root)	other	primary	no		3.2				Consolidation Status — 2026-07-07 (after Antigravity round 2)	Claude/Projects/Refactor/STATUS_2026-07-07.md
 project:Refactor	(root)	other	primary	no		4.4				Duplicate Document Manifest (Claude Projects, non-design)	Claude/Projects/Refactor/DEDUP-MANIFEST_2026-07-09.md
 project:Refactor	(root)	other	primary	no		10.9				Pre-Antigravity-Update Repo Checkpoint Prompt	Claude/Projects/Refactor/repo-checkpoint-prompt.md
-project:Refactor	(root)	other	primary	no		2.5				Where We Are, in Plain Words	Claude/Projects/Refactor/STATUS-SIMPLE.md
+project:Refactor	(root)	other	primary	no		2.0				Where We Are, in Plain Words	Claude/Projects/Refactor/STATUS-SIMPLE.md
 project:Refactor	(root)	other	primary	no		18.2				Antigravity Wave-1 Review: Comments Before Execution	Claude/Projects/Refactor/ANTIGRAVITY-WAVE1-REVIEW_2026-07-08.md
 project:Refactor	(root)	other	primary	no		19.4				Cytognosis Consolidation Program; Full History Reconstruction	Claude/Projects/Refactor/CONSOLIDATION-TIMELINE_2026-07-08.md
 project:Refactor	(root)	other	primary	no		1.4				Finalize Blueprint A: within-project cleanup (deterministic; no docs-repo writes)	Claude/Projects/Refactor/FINALIZE-BLUEPRINT-A.md
