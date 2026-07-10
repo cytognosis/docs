@@ -1,14 +1,14 @@
 {
   "generated": "2026-07-09",
-  "total_files": 3762,
-  "non_symlink": 3762,
+  "total_files": 3764,
+  "non_symlink": 3764,
   "symlinks": 0,
   "by_root": {
     "project:Science and Platform": 1912,
     "docs": 978,
     "project:Grants": 580,
     "project:Website": 163,
-    "project:Refactor": 63,
+    "project:Refactor": 65,
     "project:Infrastructure and Tooling": 28,
     "project:Yar": 20,
     "project:Cytos": 12,
@@ -32,7 +32,7 @@
   "by_doc_type": {
     "diagram/asset": 996,
     "design": 786,
-    "other": 636,
+    "other": 638,
     "engineering": 277,
     "funding": 165,
     "research": 160,
@@ -54,12 +54,12 @@
     "rfc": 1
   },
   "by_variant": {
-    "primary": 3490,
-    "archive": 203,
-    "simple": 29,
+    "primary": 3479,
+    "archive": 215,
+    "simple": 30,
     "agent": 24,
     "readable": 16
   },
-  "md_with_std_header": 463,
-  "md_total": 1808
+  "md_with_std_header": 464,
+  "md_total": 1810
 }

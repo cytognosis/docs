@@ -494,7 +494,7 @@ docs	06-Operations	operations	primary	no		1073.6					repos/cytognosis/docs/06-Op
 docs	06-Operations	code	primary	no		7.5					repos/cytognosis/docs/06-Operations/inventory/build_catalog.py
 docs	06-Operations	operations	primary	no		1.4					repos/cytognosis/docs/06-Operations/inventory/catalog-tables.md
 docs	06-Operations	operations	primary	no		9.0	Active	2026-07-10	inventory, catalog, taxonomy, provenance, knowledge-management	Master Catalog — Everything We Have and Where It Lives	repos/cytognosis/docs/06-Operations/inventory/MASTER-CATALOG.md
-docs	06-Operations	operations	primary	no		737.6					repos/cytognosis/docs/06-Operations/inventory/catalog.tsv
+docs	06-Operations	operations	primary	no		738.0					repos/cytognosis/docs/06-Operations/inventory/catalog.tsv
 docs	06-Operations	operations	primary	no		5.0	Active	2026-07-10	inventory, consolidation, catalog	Consolidation Inventory — What Was Consolidated and Where	repos/cytognosis/docs/06-Operations/inventory/CONSOLIDATION-INVENTORY.md
 docs	06-Operations	config/schema	primary	no		1.3					repos/cytognosis/docs/06-Operations/inventory/catalog-summary.json
 docs	06-Operations	operations	simple	no		2.1				The Master Map, in Plain Words	repos/cytognosis/docs/06-Operations/inventory/simple/MASTER-CATALOG.md
@@ -977,22 +977,22 @@ docs	05-Research	research	primary	no		21.0				Comparative Review of Noninvasive 
 docs	05-Research	research	primary	no		48.2				Noninvasive Molecular Measurement in the Human Brain: MRS, PET, SPECT, and Emerging Modalities	repos/cytognosis/docs/05-Research/foundational/neurosensing/molecular-imaging-update.md
 docs	05-Research	research	primary	no		35.1				Technology Deep-Dive Update: Noninvasive fNIRS and Optical Wearables (2024 to 2026)	repos/cytognosis/docs/05-Research/foundational/neurosensing/fnirs-optical-update.md
 docs	05-Research	research	primary	no		42.1				Targeted Noninvasive Optical Scanning: Toward a PET-Free Path to Molecular Brain Readouts	repos/cytognosis/docs/05-Research/foundational/neurosensing/targeted-noninvasive-scanning.md
-project:Cytognosis	(root)	other	primary	no		3.3				Placement Manifest — Cytognosis	Claude/Projects/Cytognosis/PLACEMENT-MANIFEST.md
 project:Cytognosis	(root)	other	primary	no		1.5				Cytognosis Foundation — General Context	Claude/Projects/Cytognosis/CLAUDE.md
 project:Cytognosis	_context	readme	primary	no		0.4				Live context from the docs repo (do not edit here)	Claude/Projects/Cytognosis/_context/README.md
 project:Cytognosis	_archive	other	archive	no		3.8				Cytognosis Consolidation — Master Drive Plan	Claude/Projects/Cytognosis/_archive/MASTER_DRIVE_PLAN.md
-project:Cytos	(root)	other	primary	no		2.2				CONSOLIDATION AGENT: Cytos (Cytoverse engineering)	Claude/Projects/Cytos/CONSOLIDATION-AGENT.md
-project:Cytos	(root)	other	primary	no		8.7				CONSOLIDATION PROMPT: Cytos	Claude/Projects/Cytos/CONSOLIDATION-PROMPT.md
-project:Cytos	(root)	other	primary	no		3.5				PLACEMENT-MANIFEST: Cytos	Claude/Projects/Cytos/PLACEMENT-MANIFEST.md
+project:Cytognosis	_archive	other	archive	no		3.3				Placement Manifest — Cytognosis	Claude/Projects/Cytognosis/_archive/pre-integration-2026-07-10/PLACEMENT-MANIFEST.md
 project:Cytos	_context	readme	primary	no		0.4				Live context from the docs repo (do not edit here)	Claude/Projects/Cytos/_context/README.md
-project:Cytos	00-CONSOLIDATION	other	primary	no		3.7				STATE: Cytos consolidation (living navigation backbone)	Claude/Projects/Cytos/00-CONSOLIDATION/STATE.md
-project:Cytos	00-CONSOLIDATION	other	primary	no		2.4				NEXT STEPS: Cytos consolidation	Claude/Projects/Cytos/00-CONSOLIDATION/NEXT_STEPS.md
-project:Cytos	00-CONSOLIDATION	other	primary	no		7.0				NEXT-SESSION PROMPT: finish Cytos three-variant docs	Claude/Projects/Cytos/00-CONSOLIDATION/NEXT-SESSION-PROMPT.md
-project:Cytos	00-CONSOLIDATION	other	primary	no		2.9				CONFLICTS: Cytos consolidation	Claude/Projects/Cytos/00-CONSOLIDATION/CONFLICTS.md
-project:Cytos	00-CONSOLIDATION	other	primary	no		2.2				OPEN QUESTIONS: Cytos consolidation	Claude/Projects/Cytos/00-CONSOLIDATION/OPEN_QUESTIONS.md
-project:Cytos	00-CONSOLIDATION	other	primary	no		14.0					Claude/Projects/Cytos/00-CONSOLIDATION/CLASSIFICATION.tsv
-project:Cytos	00-CONSOLIDATION	other	primary	no		3.6				DATA MANIFEST: Cytos (non-doc artifacts)	Claude/Projects/Cytos/00-CONSOLIDATION/DATA-MANIFEST.md
-project:Cytos	00-CONSOLIDATION	other	primary	no		3.3				Cytos — project entry doc (start here)	Claude/Projects/Cytos/00-CONSOLIDATION/INDEX.md
+project:Cytos	_archive	other	archive	no		2.2				CONSOLIDATION AGENT: Cytos (Cytoverse engineering)	Claude/Projects/Cytos/_archive/pre-integration-2026-07-10/CONSOLIDATION-AGENT.md
+project:Cytos	_archive	other	archive	no		8.7				CONSOLIDATION PROMPT: Cytos	Claude/Projects/Cytos/_archive/pre-integration-2026-07-10/CONSOLIDATION-PROMPT.md
+project:Cytos	_archive	other	archive	no		3.5				PLACEMENT-MANIFEST: Cytos	Claude/Projects/Cytos/_archive/pre-integration-2026-07-10/PLACEMENT-MANIFEST.md
+project:Cytos	_archive	other	archive	no		3.7				STATE: Cytos consolidation (living navigation backbone)	Claude/Projects/Cytos/_archive/pre-integration-2026-07-10/00-CONSOLIDATION/STATE.md
+project:Cytos	_archive	other	archive	no		2.4				NEXT STEPS: Cytos consolidation	Claude/Projects/Cytos/_archive/pre-integration-2026-07-10/00-CONSOLIDATION/NEXT_STEPS.md
+project:Cytos	_archive	other	archive	no		7.0				NEXT-SESSION PROMPT: finish Cytos three-variant docs	Claude/Projects/Cytos/_archive/pre-integration-2026-07-10/00-CONSOLIDATION/NEXT-SESSION-PROMPT.md
+project:Cytos	_archive	other	archive	no		2.9				CONFLICTS: Cytos consolidation	Claude/Projects/Cytos/_archive/pre-integration-2026-07-10/00-CONSOLIDATION/CONFLICTS.md
+project:Cytos	_archive	other	archive	no		2.2				OPEN QUESTIONS: Cytos consolidation	Claude/Projects/Cytos/_archive/pre-integration-2026-07-10/00-CONSOLIDATION/OPEN_QUESTIONS.md
+project:Cytos	_archive	other	archive	no		14.0					Claude/Projects/Cytos/_archive/pre-integration-2026-07-10/00-CONSOLIDATION/CLASSIFICATION.tsv
+project:Cytos	_archive	other	archive	no		3.6				DATA MANIFEST: Cytos (non-doc artifacts)	Claude/Projects/Cytos/_archive/pre-integration-2026-07-10/00-CONSOLIDATION/DATA-MANIFEST.md
+project:Cytos	_archive	other	archive	no		3.3				Cytos — project entry doc (start here)	Claude/Projects/Cytos/_archive/pre-integration-2026-07-10/00-CONSOLIDATION/INDEX.md
 project:Grants	(root)	data-table	primary	no		23.3					Claude/Projects/Grants/MANIFEST_2026-06-12.csv
 project:Grants	(root)	readme	primary	no		3.2				Cytognosis Grants, Project Index	Claude/Projects/Grants/README.md
 project:Grants	(root)	other	primary	no		112.6					Claude/Projects/Grants/PsychIGoR_Solution_Summary_SUBMISSION_2026-06-19_branded.docx
@@ -1608,7 +1608,7 @@ project:Refactor	(root)	other	primary	no		6.9				Master Drive Plan — Consolida
 project:Refactor	(root)	other	primary	no		3.2				Consolidation Status — 2026-07-07 (after Antigravity round 2)	Claude/Projects/Refactor/STATUS_2026-07-07.md
 project:Refactor	(root)	other	primary	no		4.4				Duplicate Document Manifest (Claude Projects, non-design)	Claude/Projects/Refactor/DEDUP-MANIFEST_2026-07-09.md
 project:Refactor	(root)	other	primary	no		10.9				Pre-Antigravity-Update Repo Checkpoint Prompt	Claude/Projects/Refactor/repo-checkpoint-prompt.md
-project:Refactor	(root)	other	primary	no		2.6				Where We Are, in Plain Words	Claude/Projects/Refactor/STATUS-SIMPLE.md
+project:Refactor	(root)	other	primary	no		1.4				Where We Are, in Plain Words	Claude/Projects/Refactor/STATUS-SIMPLE.md
 project:Refactor	(root)	other	primary	no		18.2				Antigravity Wave-1 Review: Comments Before Execution	Claude/Projects/Refactor/ANTIGRAVITY-WAVE1-REVIEW_2026-07-08.md
 project:Refactor	(root)	other	primary	no		19.4				Cytognosis Consolidation Program; Full History Reconstruction	Claude/Projects/Refactor/CONSOLIDATION-TIMELINE_2026-07-08.md
 project:Refactor	(root)	other	primary	no		1.4				Finalize Blueprint A: within-project cleanup (deterministic; no docs-repo writes)	Claude/Projects/Refactor/FINALIZE-BLUEPRINT-A.md
@@ -1617,6 +1617,7 @@ project:Refactor	(root)	other	primary	no		2.5				Placement Pass Blueprint v1 (de
 project:Refactor	(root)	other	primary	no		1.7					Claude/Projects/Refactor/NEXT-CHAT-PROMPT.md
 project:Refactor	(root)	other	primary	no		17.4				Master Consolidation Plan (comprehensive, 2026-07-09)	Claude/Projects/Refactor/MASTER-DRIVE-PLAN_2026-07-09.md
 project:Refactor	(root)	other	primary	no		6.5				Consolidation Finalization — Complete Walkthrough	Claude/Projects/Refactor/FINALIZATION-WALKTHROUGH_2026-07-07.md
+project:Refactor	(root)	other	primary	no		2.9	Active	2026-07-10	consolidation, integration, master-drive-plan	Master Drive Plan — Full Project Integration (2026-07-10)	Claude/Projects/Refactor/MASTER-DRIVE-PLAN_integration-2026-07-10.md
 project:Refactor	(root)	other	primary	no		10.0				Consolidation Handoff (2026-07-10)	Claude/Projects/Refactor/HANDOFF-2026-07-10.md
 project:Refactor	(root)	other	primary	no		17.2				Antigravity Handoff Prompt — Cytognosis Multi-Repo Documentation Consolidation & Checkpoint	Claude/Projects/Refactor/antigravity-cytocast-consolidation-prompt.md
 project:Refactor	(root)	other	primary	no		0.7				Refactor / Agent Work — Claude Project Context	Claude/Projects/Refactor/CLAUDE.md
@@ -1664,6 +1665,7 @@ project:Refactor	spec-driven-stack_2026-07	other	simple	no		2.5	Ready	2026-07-08
 project:Refactor	spec-driven-stack_2026-07	other	simple	no		2.5	Ready to start	2026-07-09		The Master Plan, Simply	Claude/Projects/Refactor/spec-driven-stack_2026-07/simple/MASTER-IMPLEMENTATION-PLAN.md
 project:Refactor	spec-driven-stack_2026-07	evaluation	simple	no		2.7	Done	2026-07-08		The Contest, Simply: Which Spec Tool Won and Why	Claude/Projects/Refactor/spec-driven-stack_2026-07/simple/EVAL-spec-driven-stack.md
 project:Refactor	simple	other	simple	no		2.0				The Consolidation, in Plain Words (July 9)	Claude/Projects/Refactor/simple/MASTER-DRIVE-PLAN_2026-07-09.md
+project:Refactor	simple	other	simple	no		0.9				Big Cleanup Plan (Projects to One Home), in Plain Words	Claude/Projects/Refactor/simple/MASTER-DRIVE-PLAN_integration-2026-07-10.md
 project:Refactor	simple	other	simple	no		1.1				Handoff, in Plain Words	Claude/Projects/Refactor/simple/HANDOFF-2026-07-10.md
 project:Science and Platform	(root)	data-table	primary	no		38.3					Claude/Projects/Science and Platform/NeuroSTORM_datasets.csv
 project:Science and Platform	(root)	other	primary	no		92.5					Claude/Projects/Science and Platform/braincellatlas_datasets_cellxgene_7.1.0.xlsx
