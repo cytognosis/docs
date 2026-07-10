@@ -1,11 +1,11 @@
 {
   "generated": "2026-07-09",
-  "total_files": 3758,
-  "non_symlink": 3758,
+  "total_files": 3760,
+  "non_symlink": 3760,
   "symlinks": 0,
   "by_root": {
     "project:Science and Platform": 1912,
-    "docs": 974,
+    "docs": 976,
     "project:Grants": 580,
     "project:Website": 163,
     "project:Refactor": 63,
@@ -21,7 +21,7 @@
     "02-Funding": 187,
     "03-Products": 154,
     "01-Strategy": 117,
-    "05-Research": 105,
+    "05-Research": 107,
     "06-Operations": 40,
     "00-Inbox": 6,
     "07-Design": 5,
@@ -35,7 +35,7 @@
     "other": 636,
     "engineering": 277,
     "funding": 163,
-    "research": 160,
+    "research": 162,
     "code": 156,
     "product-spec": 147,
     "strategy": 144,
@@ -54,12 +54,12 @@
     "rfc": 1
   },
   "by_variant": {
-    "primary": 3488,
+    "primary": 3489,
     "archive": 202,
-    "simple": 25,
+    "simple": 26,
     "agent": 24,
     "readable": 19
   },
-  "md_with_std_header": 309,
-  "md_total": 1804
+  "md_with_std_header": 312,
+  "md_total": 1806
 }
