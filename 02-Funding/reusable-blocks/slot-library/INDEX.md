@@ -1,5 +1,12 @@
 # Cytognosis Canonical Template System — Master Index
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `slot-library`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Status:** Draft (under `_draft/canonical/` until promoted to `01_framework/` root).
 **Schema version:** 1.1 (2026-04-25)
 **Maintainer:** mohammadi@cytognosis.org

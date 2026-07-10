@@ -1,5 +1,12 @@
 # ARPA-H PROSPR Program: Innovative Solutions Opening (ISO)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Program:** PROactive Solutions for Preserving Resilience (PROSPR)  
 **Agency:** Advanced Research Projects Agency for Health (ARPA-H), Proactive Health Office (PHO)  
 **Solicitation Number:** ARPA-H-SOL-25-125  

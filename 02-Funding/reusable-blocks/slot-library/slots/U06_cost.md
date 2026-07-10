@@ -92,6 +92,13 @@ status: stub
 
 # U06 — Cost
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U06.1 — Total ask (USD) and period
 
 The program's total headline ask for the current cycle lives here, anchored to the Three Horizons roadmap so ambitious and moderate tiers stay comparable across funders. Numbers render from `data/<proposal>/budget.yaml` at author time; this slot holds the narrative framing and the USD band, not the line-items.

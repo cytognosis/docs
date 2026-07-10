@@ -1,5 +1,12 @@
 # ARPA-H Cost Proposal Workbook (Other Transactions, Resource Sharing)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 # ARPA-H COST PROPOSAL WORKBOOK - OTs (Resource Sharing).xlsx
 
 ## Change Notes

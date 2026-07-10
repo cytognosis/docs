@@ -1,5 +1,12 @@
 # Cytognosis Funding Opportunities — Master Index
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-12 · **Reading time:** ~10 min
 **Sources:** _DRIVE_PLAN_Three_Grants_2026-06-12.md (authoritative action doc); Strategy_and_Grant_Alignment_Map_2026-06-11.md (framing fork); Funding_Reprioritization_2026-06-06.md (tier rankings); Individual_Runway_Shortlist_2026-06-06.md (runway detail); Coefficient_and_EA_Funds_Research_and_Strategy_2026-06-11.md (EA ask calibration).
 

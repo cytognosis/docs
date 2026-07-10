@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Foresight Institute — AI for Science & Safety Nodes
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Researchers and builders working on AI-powered science or AI safety. Foresight prioritizes projects that want to be active members of the Nodes hubs (San Francisco, Berlin, opening April 1 2026). Funding-only applications considered only in exceptional cases.
 

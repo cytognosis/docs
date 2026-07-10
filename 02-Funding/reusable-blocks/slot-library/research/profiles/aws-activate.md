@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # AWS Activate
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 - Self-funded OR pre-Series B (most recent funding round within last 12 months)
 - Fully functioning company website

@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Anthropic AI for Science Program
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 - Researchers in academia and nonprofit organizations
 - Must work on scientific research topics Anthropic considers high priority (focus on biology / life sciences)

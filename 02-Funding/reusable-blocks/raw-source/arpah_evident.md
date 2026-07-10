@@ -1,5 +1,12 @@
 # ARPA-H EVIDENT Program: Request for Solutions (TAs 1-3)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Program:** Evidence-Based Validation & Innovation for Rapid Therapeutics in Behavioral Health (EVIDENT)  
 **Agency:** Advanced Research Projects Agency for Health (ARPA-H)  
 **Consortium:** Customer Experience (CX) Hub  

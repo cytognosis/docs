@@ -1,5 +1,12 @@
 # Extracted Grant Requirements — NSF Tech Labs, ARPA-H Mission Office ISOs, DoE Genesis Mission
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Source files are in `/home/mohammadi/Documents/Strategy/Grants/`. Raw text/markdown dumps are in `./raw/` alongside this file. This document is the authoritative, exhaustive extraction of every prompt, limit, and phase-specific requirement across the three opportunities. Downstream template generation depends on it.
 
 Conventions:

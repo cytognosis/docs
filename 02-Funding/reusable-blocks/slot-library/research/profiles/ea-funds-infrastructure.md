@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # EA Funds — Infrastructure Fund (EAIF)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Same as LTFF: individuals, non-profit organizations, academic institutions, other entities. Global eligibility. Focuses on projects that improve the EA ecosystem (talent development, research infrastructure, fundraising, profession-specific networks).
 

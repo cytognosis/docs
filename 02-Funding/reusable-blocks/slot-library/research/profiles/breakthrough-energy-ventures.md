@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Breakthrough Energy Ventures (BEV)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Climate technology companies. Any stage, any geography, any size. Hard criteria: technology must (1) potentially reduce ≥0.5 gigaton GHG/yr (~1% of 2050 global emissions), (2) be scientifically feasible at scale, (3) be capable of attracting additional investors.
 

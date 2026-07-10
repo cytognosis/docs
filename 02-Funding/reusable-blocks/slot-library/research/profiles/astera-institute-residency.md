@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Astera Institute Residency (Fall 2026 Cohort)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 High-agency individuals: scientists, engineers, entrepreneurs. Must be able to work on-site at Astera's Emeryville, California campus. 12-18 month commitment. Project must be early-stage and well-scoped. Open to individuals globally; visa sponsorship considered.
 

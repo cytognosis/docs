@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # ARPA-H Health Science Futures (HSF) ISO
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 All responsible sources: academia, non-profits, for-profit entities, hospitals, community health centers, non-federal research centers, individuals, small businesses. US-based generally preferred but non-US allowed via teaming. Foreign participation subject to research-security review.
 

@@ -69,6 +69,13 @@ status: stub
 
 # U05 — Risks
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U05.1 — Technical risks
 
 <!-- STUB: fill with Cytognosis canonical content. See cytognosis_anchor. -->

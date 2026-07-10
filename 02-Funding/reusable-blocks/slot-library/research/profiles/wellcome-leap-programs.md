@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Wellcome Leap Programs
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Open globally. All entity types eligible: academic, nonprofit, for-profit, individual researchers, government labs. Membership in Wellcome Leap Health Breakthrough Network is NOT required. Single-PI or multi-PI/team applications. Consortium NOT required — small teams encouraged to apply on thrust areas matching their expertise.
 

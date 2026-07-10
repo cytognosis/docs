@@ -1,5 +1,12 @@
 # Grant Pipeline — Implementation Plan
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Status:** Proposed
 **Last updated:** 2026-05-24
 

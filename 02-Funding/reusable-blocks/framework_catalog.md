@@ -1,5 +1,12 @@
 # Framework Catalog: Research, Grant, and Moonshot Proposal Rubrics
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 A catalog of structured frameworks that complement the DARPA Heilmeier Catechism, assembled to inform a universal grant-application template for a bio + AI nonprofit (Cytognosis). Each entry is concise (roughly 150 words) and cites sources.
 
 ---

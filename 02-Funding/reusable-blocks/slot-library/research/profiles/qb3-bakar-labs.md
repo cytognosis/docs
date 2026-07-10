@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # QB3 / Bakar Labs (UC Berkeley)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Early-stage life-science companies. **No UC Berkeley affiliation required.** Companies from all sectors of life science with need for specialized wet-lab operations. Capacity for ~40 companies. Global eligibility.
 

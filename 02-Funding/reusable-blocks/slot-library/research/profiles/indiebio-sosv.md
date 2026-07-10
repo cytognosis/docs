@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # IndieBio / SOSV NY+SF (2026 rebrand: SOSV NY / SOSV SF)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 - Early-stage biotech / life-sciences startups
 - Must be legally in California or New York during program (4-month residential)

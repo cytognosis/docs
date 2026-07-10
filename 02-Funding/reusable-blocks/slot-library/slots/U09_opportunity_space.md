@@ -50,6 +50,13 @@ status: stub
 
 # U09 — Bold thesis & opportunity-space framing
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U09.1 — Opportunity-space thesis (consequential · under-explored · ripe)
 
 <!-- STUB: fill with Cytognosis canonical content. See cytognosis_anchor. -->

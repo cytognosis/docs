@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Wellcome Trust Discovery Awards
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 **Lead applicant**: Established researcher with permanent / open-ended / long-term rolling contract, or guarantee of one (not conditional on this award). Must contribute ≥20% of research time to the project. If <3 years contract remaining, must have secured next position with letter of support.
 

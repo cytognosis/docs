@@ -1,5 +1,12 @@
 # NIMH BRAIN — RFA-MH-26-140 — summary + first-draft materials
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Solicitation:** RFA-MH-26-140 — *BRAIN Initiative: Brain Behavior Quantification and Synchronization (BBQS) — Next Generation Sensor Technology Development* (**U01**, Clinical Trial Optional)
 **Link:** https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-26-140.html · Funding opps: https://braininitiative.nih.gov/funding/funding-opportunities
 

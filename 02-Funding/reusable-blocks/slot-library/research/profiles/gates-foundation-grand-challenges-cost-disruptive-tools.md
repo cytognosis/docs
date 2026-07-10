@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Gates Foundation Grand Challenges — Cost-Disruptive Tools for Diagnosis and Screening
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Open globally. Eligible: research institutes, nonprofit orgs, for-profit companies, international organizations, government agencies, academic institutions. Multi-stakeholder partnerships encouraged. LMIC-relevance is mandatory.
 

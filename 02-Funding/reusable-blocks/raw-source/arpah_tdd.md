@@ -1,3 +1,10 @@
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 When submitting a proposal to ARPA-H, use of this template to describe
 the planned technical tasks and subtasks is strongly encouraged. All
 text in blue font may be deleted. There is no page limit to this

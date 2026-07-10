@@ -86,6 +86,13 @@ status: stub
 
 # U11 — Team & founder fit
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U11.1 — Founder / PI obsession & origin story
 
 <!-- STUB: fill with Cytognosis canonical content. See cytognosis_anchor. -->

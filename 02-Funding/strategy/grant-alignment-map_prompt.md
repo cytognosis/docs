@@ -1,5 +1,12 @@
 # Grant-Alignment Map (agent brief)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Audience:** a fresh agent about to draft or edit a Cytognosis funding application.
 > **Variants**: Agent seed (this doc) - Technical (grant-alignment-map.md) - Readable (grant-alignment-map.md in Obsidian vault: 02-Funding/strategy/)
 

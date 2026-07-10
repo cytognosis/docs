@@ -1,5 +1,12 @@
 # Funder Crosswalk Matrix
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Status:** Authoritative reference. Pairs every funder question with its universal slot(s) and every universal slot with its funder obligations.
 **Purpose:** Reverse rendering — given a funder, know which slots to assemble; given a slot, know which funders will consume it.
 **Source of truth:** `canonical/funders/*.yaml` (forward) and `canonical/slots/*.md` frontmatter `funder_hooks` (forward). This file is the reader-friendly aggregation.

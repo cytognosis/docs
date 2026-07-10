@@ -9,6 +9,13 @@ source_doc: input/applications/Astera/Astera_submited_application_responses.md
 
 # U10 — Why-not-academia / why-Cytognosis (Astera 2026 overlay)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `proposal`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U10.1 — Why not a standard academic lab
 
 The work spans three full PhD's worth of expertise (foundation-model engineering at sequence scale; single-cell genomics + ontology engineering; cross-disorder phenotypic neuropsychiatry) and demands sustained shipping cadence rather than publication cadence. A traditional PI lab optimizes for the next paper; the asset Cytognosis is building is the **shipped artifacts** — open models, open atlases, open evaluation benchmarks — that are downstream of any one paper. Academic lab structure also struggles with the engineering rigor required: continuous-integration training pipelines, model registry hygiene, FAIR-compliant data infrastructure, public model cards. These are operations functions that academic labs systematically under-resource.

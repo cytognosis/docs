@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Mixpanel for Startups
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Startups <5 years old, <$8M raised. Note: not nonprofit-targeted; this is a startup discount.
 

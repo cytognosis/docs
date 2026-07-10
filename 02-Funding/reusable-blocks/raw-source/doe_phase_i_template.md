@@ -1,5 +1,12 @@
 # DOE Genesis Mission: Phase I Application Template
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 # Genesis_Mission_Phase_I_Application_Template.xlsx
 
 ## Phase I Summary

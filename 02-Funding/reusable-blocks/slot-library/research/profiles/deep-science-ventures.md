@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Deep Science Ventures (DSV)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Scientists transitioning to entrepreneurship. DSV's core model is "venture science": working backward from a key bottleneck in a sector to design a startup, recruit founder-scientists, and incubate. Open to global PhD-trained scientists.
 

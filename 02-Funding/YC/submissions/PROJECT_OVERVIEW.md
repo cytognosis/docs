@@ -1,5 +1,12 @@
 # Project Overview
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Yar is a local-first capture and graph-coordination prototype for people who collect ideas across notes, webpages, papers, datasets, and conversations.
 
 The problem is not a lack of note apps. The problem is that scattered captures often remain unstructured, hard to retrieve, and risky to send to external systems by default. Yar accepts messy input, proposes typed graph objects, validates them against local schema metadata, applies CAP-Lite guardrails, and stores the result in a local SQLite graph store.

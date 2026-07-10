@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Y Combinator
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 - All companies eligible (for-profit; some nonprofit cohorts historically)
 - Founders typically full-time

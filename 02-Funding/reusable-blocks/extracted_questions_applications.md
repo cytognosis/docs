@@ -1,5 +1,12 @@
 # Extracted Questions — Existing Applications
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Questions extracted verbatim (or normalized) from the 5 existing Cytognosis applications, with word/character limits where specified, ordered as they appear in each application. Used as inputs for the universal template (see `universal_template.md`).
 
 Source files (all under `/home/mohammadi/Documents/Strategy/Applications/`):

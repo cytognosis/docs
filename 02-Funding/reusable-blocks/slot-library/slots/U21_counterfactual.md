@@ -49,6 +49,13 @@ added_in: "1.1"
 
 # U21 — Counterfactual & impact-without-funder
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U21.1 — Counterfactual narrative
 
 <!-- STUB: 2-3 paragraph answer to "what happens if we don't get this funding?" — name the specific work that does not happen, the specific people who do not get hired, the specific publications/datasets/models that never exist. Distinguish from U10 (why this org form is right) — this slot is about the work itself, not the org. -->

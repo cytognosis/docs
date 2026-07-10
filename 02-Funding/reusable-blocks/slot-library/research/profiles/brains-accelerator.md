@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Brains Accelerator (Speculative Technologies)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 - Deep technical background, PhD or PhD-level research, several years work experience
 - Has ambitious ideas that don't fit existing institutions

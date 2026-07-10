@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # NSF Convergence Accelerator
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 US institutions of higher education + multi-sector partners (must include partners from multiple sectors: colleges/universities, industry, non-profits, community orgs, government). Letter of Intent step required identifying multidisciplinary team. Foreign partners allowed but not as lead.
 

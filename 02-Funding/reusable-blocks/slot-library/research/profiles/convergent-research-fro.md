@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Convergent Research — Focused Research Organization (FRO)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Open globally to founding teams pursuing scientific ideas that fit the FRO model: well-defined milestones, 5–7 year timeframe, $20–80M scale, requiring engineering-heavy team, with public-good outputs unlikely to be funded by academia or VC. No formal entity required to start; team / individual proposers welcome.
 

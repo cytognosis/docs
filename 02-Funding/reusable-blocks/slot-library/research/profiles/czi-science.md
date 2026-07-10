@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Chan Zuckerberg Initiative — Science Grants
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Domestic (US) and foreign nonprofit organizations, public and private institutions (universities, hospitals, laboratories), state/local government, eligible federal agencies. **For-profit organizations not eligible** to receive funding directly but may collaborate. Grants awarded to institutions, not individuals. Each application designates a Coordinating Principal Investigator. Foreign collaborators welcome.
 

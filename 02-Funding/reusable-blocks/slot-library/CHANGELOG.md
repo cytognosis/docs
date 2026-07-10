@@ -1,5 +1,12 @@
 # CHANGELOG — Cytognosis Canonical Template
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `slot-library`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 All notable changes to the canonical template system are tracked here. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) with semantic-ish versioning (`major.minor`).
 
 ---

@@ -1,5 +1,12 @@
 # Compute & Credits Applications — Anthropic AI for Science · NAIRR Pilot · Cohere Catalyst (DRAFTS v1)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Compiled 2026-05-31.** Lowest-priority funnel items (non-dilutive compute/credits). All three are rolling; none is deadline-critical. Cytognosis org facts for every form: **Cytognosis Foundation, Delaware 501(c)(3), EIN 39-4383634, Daly City CA; use an institutional `@cytognosis.org` email** (NAIRR rejects personal/gmail).
 
 | Program | What you get | Channel | Cadence | Fit | Verify |

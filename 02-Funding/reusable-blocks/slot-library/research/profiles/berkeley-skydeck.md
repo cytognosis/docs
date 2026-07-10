@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Berkeley SkyDeck
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 - At least one team member must be UC-affiliated (UC student, alumni, faculty, staff, postdoc, visiting scholar — any UC campus or Berkeley Lab) OR qualify as a "global" founder.
 - Multiple program tracks: Cohort (selective), Pad-13 (alumni), HotDesk (early-stage, broader)

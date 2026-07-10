@@ -68,6 +68,13 @@ status: stub
 
 # U07 — Schedule
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U07.1 — Start/end dates and period of performance
 
 <!-- STUB: fill with Cytognosis canonical content. See cytognosis_anchor. -->

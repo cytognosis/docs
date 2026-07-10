@@ -63,6 +63,13 @@ status: stub
 
 # U16 — Regulatory, dual-use & biosecurity
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U16.1 — FDA / SaMD / IVD pathway
 
 <!-- STUB: fill with Cytognosis canonical content. See cytognosis_anchor. -->

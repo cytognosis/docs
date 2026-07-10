@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # DOE Genesis Mission
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Interdisciplinary teams from US institutions: universities, national labs, nonprofits, for-profit research orgs, hospitals, and certain government entities. DOE Office of Science (SC), CMEI, EM, NE, OE, HGEO co-lead. Some institutions limited-submission (only 1 application per institution as lead). Foreign collaboration via subaward subject to research-security review.
 

@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # UNESCO/WHO Open Science Projects
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 UNESCO Participation Grant Programme: applications submitted by UNESCO Member States and NGOs in official partnership with UNESCO. Routing via National Commission for UNESCO required (national-government channel). Open-science-aligned projects across education, science, culture, communication priorities.
 

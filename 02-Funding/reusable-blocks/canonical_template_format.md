@@ -1,5 +1,12 @@
 # Canonical Template Format Specification
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Status:** Authoritative. Defines the single source-of-truth format for every Cytognosis grant, application, proposal, white paper, LOI, and pitch.
 **Version:** 1.0 (2026-04-23)
 **Rationale:** One format, rendered many ways. Content is authored once and assembled into any funder's required shape by selecting slots, applying length limits, and reordering sections.

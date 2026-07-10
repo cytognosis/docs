@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # AWS Imagine Grant — Pathfinder GenAI
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 US-based nonprofits with registered 501(c) status (501c3, credit unions, public utility orgs, etc). Annual budget — any size. UK/Ireland and other regional variants exist. **Pathfinder-specific**: organizations with strong existing data practice already in planning phase of AI project.
 

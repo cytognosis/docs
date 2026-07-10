@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # NSF Tech Labs
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Independent research teams (FROs, nonprofit research orgs, novel institutional forms). RFI welcomed responses from across R&D ecosystem; full solicitation expected spring 2026 with team selections in first half of 2026. US-based. Researchers must be full-time after the 9-month Phase 0; can be achieved by reimbursing the researcher's employer for their salary and benefits (i.e., secondment-style allowed).
 

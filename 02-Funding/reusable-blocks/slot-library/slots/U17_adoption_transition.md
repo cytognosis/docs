@@ -68,6 +68,13 @@ status: stub
 
 # U17 — End-user narrative / adoption / transition-to-practice
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U17.1 — Customer / user segment
 
 <!-- STUB: fill with Cytognosis canonical content. See cytognosis_anchor. -->

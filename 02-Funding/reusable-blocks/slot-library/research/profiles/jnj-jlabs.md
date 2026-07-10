@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Johnson & Johnson JLABS
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Life-sciences companies (pharma, medtech, consumer health, biotech, diagnostics, digital health). No equity taken. Pay monthly license fee for space.
 

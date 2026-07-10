@@ -48,6 +48,13 @@ English.
 
 #  {#section .TOC-Heading}
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 1.  **[Team Member Identification]{.smallcaps}**
 
 > List the organizations/institutions that will comprise your team. Add

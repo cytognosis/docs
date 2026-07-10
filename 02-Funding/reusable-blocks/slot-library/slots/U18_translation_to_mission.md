@@ -57,6 +57,13 @@ status: stub
 
 # U18 — Translation-to-Mission (Market · Manufacturing · IP · Funding)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U18.1 — Mission — real-world value for adoption
 
 <!-- STUB: fill with Cytognosis canonical content. See cytognosis_anchor. -->

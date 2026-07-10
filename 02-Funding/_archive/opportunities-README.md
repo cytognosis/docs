@@ -1,4 +1,14 @@
+> [!NOTE]
+> **RETIRED (2026-07-10).** The funding system of record is `../reusable-blocks/slot-library/` (slots + funders + profiles). This stub is archived.
+
 # Funding Opportunities
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 
 > **Status:** In-progress · **Date:** 2026-07-01
 

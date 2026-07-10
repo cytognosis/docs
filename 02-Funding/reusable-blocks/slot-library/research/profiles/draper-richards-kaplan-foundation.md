@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Draper Richards Kaplan Foundation
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Early-stage social impact organizations: post-pilot, pre-scale (program/product/service already deployed with early impact signals). Founder must be full-time or intend to go full-time. Geographic focus: Africa, Europe, India, United States, occasionally Latin America. Both nonprofit and for-profit social enterprises eligible.
 

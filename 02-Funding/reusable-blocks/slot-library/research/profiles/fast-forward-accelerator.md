@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Fast Forward Accelerator (Tech Nonprofit)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 - Early-stage **tech nonprofits** with MVP (minimum viable product). Idea/research-only stage NOT eligible.
 - Legally registered nonprofit in any country (501(c)(3) NOT required; non-US OK).

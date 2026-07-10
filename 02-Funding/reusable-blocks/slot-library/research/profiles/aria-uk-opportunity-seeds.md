@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # ARIA (UK) — Opportunity Seeds
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Same as ARIA Full Programmes: individuals (including unaffiliated), universities (incl. students/postdocs/staff), research institutions, SMEs and large companies, charities, public organisations. UK-based or willing to conduct >50% of project from UK. Foreign applicants permitted via UK partner.
 

@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Google.org AI for Science Impact Challenge
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Nonprofit organizations, academic and research institutions, for-profit social enterprises with clear social impact purpose. Global eligibility (must demonstrate organizational legal status). Inventory deadline 2026-05-01; published deadline appears to be 2026-04-17 (use earlier).
 

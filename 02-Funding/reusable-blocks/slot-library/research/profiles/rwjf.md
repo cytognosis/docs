@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Robert Wood Johnson Foundation (RWJF)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 US-based applicants only. Preference for 501(c)(3) tax-exempt organizations (not private foundations or Type III supporting orgs). State/local government and academic institutions also eligible. Most opportunities US-only.
 

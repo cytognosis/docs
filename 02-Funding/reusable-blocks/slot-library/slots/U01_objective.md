@@ -64,6 +64,13 @@ status: stub
 
 # U01 — Objective, in plain language
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U01.1 — Bold one-sentence thesis
 
 Cytognosis is building GPS for Health: a cellular-intelligence platform that makes disease interception possible before symptoms appear.

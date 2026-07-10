@@ -1,5 +1,12 @@
 # NSF Tech Labs Initiative: Webinar Slides (December 17, 2025)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 The Tech Labs Initiative Webinar
 Agenda
 The Tech Labs Vision       Erwin Gianchandani

@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Horizon Europe — Cluster 1 Health
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 **Consortium required** for most calls: at least 3 independent legal entities, each established in a different country, of which at least 1 in an EU Member State and ≥2 others in Member States or Horizon Europe Associated Countries. Eligible legal entities: universities, research institutions, SMEs, large companies, NGOs, public bodies, hospitals, individual researchers (rarely as standalone). UK is currently associated. US entities can participate but typically not funded — contribute their own resources or via subcontract.
 

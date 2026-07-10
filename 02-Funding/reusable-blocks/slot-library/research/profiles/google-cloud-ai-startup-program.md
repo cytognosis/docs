@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Google for Startups Cloud Program — AI Tier
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 - Use or plan to use Vertex AI or Gemini as foundation of primary product
 - Have received qualifying VC funding from seed to Series A

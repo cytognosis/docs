@@ -1,5 +1,12 @@
 # Grant & Funding Opportunity Pipeline — Documentation Hub
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 This folder is the single documentation hub for all grant-related infrastructure in Cytos. It covers the canonical template system, the extraction/harmonization pipeline, testing strategy, and roadmap.
 
 ## Contents

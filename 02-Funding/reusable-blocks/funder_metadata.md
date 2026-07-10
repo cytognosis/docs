@@ -1,5 +1,12 @@
 # Funder Metadata Schema (F-series)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Status:** Authoritative reference for F01–F38 funder-metadata fields.
 **Authored:** 2026-04-26 (manifest v1.2; groups v1.0).
 **Companion to:** [`universal_template.md`](universal_template.md) (U-side) and [`canonical/groups.yaml`](slot-library/groups.yaml) (inheritance taxonomy).

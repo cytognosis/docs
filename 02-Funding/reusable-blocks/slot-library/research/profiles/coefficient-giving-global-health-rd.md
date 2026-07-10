@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Coefficient Giving (formerly Open Philanthropy) — Science and Global Health R&D
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Open globally to research orgs, nonprofits, academic institutions, for-profit orgs (with public-good outputs). No geographic restriction. Grant historically went to ~1-2% of unsolicited proposals. Mostly proactive grant-making (Coefficient reaches out to shape proposals); minority of funded grants from cold inbound.
 

@@ -58,6 +58,13 @@ added_in: "1.1"
 
 # U22 — Theory of change
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U22.1 — Causal chain
 
 <!-- STUB: 1-2 paragraphs walking the standard ToC chain: problem statement → key activities → near-term outputs → medium-term outcomes → long-term impact. For Cytognosis, follows the GPS-for-Health chain noted in cytognosis_anchor. -->

@@ -1,5 +1,12 @@
 # ARPA-H Health Science Futures (HSF) Mission Office Innovative Solutions Opening (ISO)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Solicitation Number:** ARPA-H-SOL-24-104
 **Amendment:** 03 (October 14, 2025)
 **Agency:** Advanced Research Projects Agency for Health (ARPA-H)

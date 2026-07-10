@@ -59,6 +59,13 @@ status: stub
 
 # U12 — Open science & openness commitments
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U12.1 — Output inventory
 
 <!-- STUB: fill with Cytognosis canonical content. See cytognosis_anchor. -->

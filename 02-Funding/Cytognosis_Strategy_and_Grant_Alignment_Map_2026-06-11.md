@@ -1,5 +1,12 @@
 # Cytognosis: Strategy + Grant-Alignment Map
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-11 · Reading time: ~8 min · Birds-eye reference for aligning each application to both our direction and the funder's values. Built from the current strategy files and a live verification of each funder. Strategy, not legal/financial advice.
 
 > **If you only read one thing:** There is one **framing fork**. Biswas hears the **health** story (open AI model for bipolar biotyping). Coefficient (both programs), LTFF, and Manifund hear the **AI-safety** story (Cytonome on-device safety layer, cognitive liberty, data capture). It is the **same work**, told in the vocabulary each funder already values. Keep the two families in separate documents.

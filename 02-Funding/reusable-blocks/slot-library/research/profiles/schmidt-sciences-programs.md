@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # Schmidt Sciences Programs
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Schmidt Sciences runs many distinct programs each with own eligibility. Major buckets:
 - **AI in Science Postdocs Program** — postdoc fellowships at partner universities (UCSD, Michigan, Chicago, Toronto, Oxford)

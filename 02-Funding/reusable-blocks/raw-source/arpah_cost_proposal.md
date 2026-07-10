@@ -121,6 +121,13 @@ being applied to other cost elements requested herein.
 
 # **[Level of Effort and Labor Costs]{.smallcaps}**
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Provide the levels of effort and associated costs related to personnel
 > who will contribute to the project. The levels of effort may be
 > substantiated by defining key labor categories aligned to fully

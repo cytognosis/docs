@@ -62,6 +62,13 @@ status: stub
 
 # U14 — Responsible AI / AI safety
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U14.1 — AI system description
 
 <!-- STUB: fill with Cytognosis canonical content. See cytognosis_anchor. -->

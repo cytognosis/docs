@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # NIH PRIMED-AI (Precision Medicine with AI: Integrating Imaging with Multimodal Data)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 US institutions of higher education, research institutes, eligible nonprofits, hospitals, and (for Academic-Industrial Partnerships initiative) industrial partners. Several initiatives have specific eligibility — Translating Models to Clinic, Multi-use Framework Playbooks, Academic-Industrial Partnerships. Multidisciplinary teams (AI/ML, clinical imaging, EHR, biostatistics, ethics) expected.
 

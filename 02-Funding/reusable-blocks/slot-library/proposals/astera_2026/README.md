@@ -1,5 +1,12 @@
 # Astera Residency 2026 Submission — Per-proposal overlay
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `proposal`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Status:** Submitted 2026-04-19; outcome pending.
 **Funder profile:** [`canonical/funders/astera_residency.yaml`](../../funders/astera_residency.yaml).
 **Funding Opp:** Monday item 11813491505.

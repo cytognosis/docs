@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # NSF-NIH Smart Health Program (NSF 25-542)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 US institutions of higher education, non-profit research orgs, certain other entities (per NSF Proposal & Award Policies & Procedures Guide PAPPG). Multidisciplinary teams required: must include at least two of {fundamental science/engineering, biomedical/health/clinical research, technology vendors, client/end-user groups}. Foreign collaboration permitted.
 

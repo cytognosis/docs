@@ -9,6 +9,13 @@ source_doc: input/applications/Astera/Astera_submited_application_responses.md
 
 # U03 — Novelty & approach (Astera 2026 overlay)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `proposal`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U03.1 — Core insight / thesis of novelty
 
 Current genome-regulatory foundation models (AlphaGenome, variantFormer) treat tissue and cell type as either independent output channels or as free-parameter learnable embeddings. Neither approach exploits the **known hierarchical similarity structure** across cellular contexts (Cell Ontology, UBERON, Gene Ontology), and neither generalizes to unseen contexts. We replace one-hot or learnable embeddings with **TransBox-pretrained semantic embeddings** of GO-Plus ontology terms, projected into the model as attention-layer conditioning. Because conditioning preserves cross-context similarity, the model interpolates to unseen cellular contexts via their ontology-manifold neighbors.

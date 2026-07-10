@@ -1,5 +1,12 @@
 # Universal Grant/Application Template (Cytognosis)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Purpose.** A harmonized, funder-agnostic superset of sections that every Cytognosis grant, application, or proposal can be assembled from. Authored content lives once in canonical slots (U01…U22 + A01…A05); each funder's template is a *sink* that selects, reorders, and length-limits a subset of those slots. Funders compose their schemas via group inheritance (see [`canonical/groups.yaml`](slot-library/groups.yaml) and `canonical_template_format.md` §13).
 
 **Companion docs:**

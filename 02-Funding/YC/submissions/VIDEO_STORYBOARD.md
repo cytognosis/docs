@@ -1,5 +1,12 @@
 # Video Storyboard
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Shot 1: Opening Slide/Text
 
 Screen: Title text, "Yar: Local-first knowledge capture."  

@@ -1,5 +1,12 @@
 # DOE Genesis Mission: Transforming Science and Energy with AI
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **RFA Number:** DE-FOA-0003612  
 **Total Funding:** $294 million  
 **Agency:** U.S. Department of Energy (DOE)  

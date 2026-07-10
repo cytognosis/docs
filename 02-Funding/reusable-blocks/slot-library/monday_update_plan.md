@@ -1,5 +1,12 @@
 # Monday Board Update Plan — Strategic Planning + Funding Opportunities
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `slot-library`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Status:** Plan only — no Monday writes yet (per user instruction). This document is the playbook for the next implementation pass.
 **Authored:** 2026-04-25
 **Scope:** Two folders in Main workspace (id `14426768`):

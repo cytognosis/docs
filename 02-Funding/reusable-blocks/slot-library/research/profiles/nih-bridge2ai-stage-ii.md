@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # NIH Bridge2AI Initiative (Stage II)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 US institutions of higher education, research institutes, eligible nonprofits. Researchers with expertise in both AI/ML methods and specific disease areas. Bridge2AI explicitly values interdisciplinary teams (AI + clinical + ethics + standards). Foreign collaboration permitted as sub-recipients.
 

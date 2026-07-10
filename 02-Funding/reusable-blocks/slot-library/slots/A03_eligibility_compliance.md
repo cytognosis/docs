@@ -56,6 +56,13 @@ status: stub
 
 # A03 — Eligibility & compliance
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## A03.1 — Government ties / foreign influence disclosures
 
 <!-- STUB: fill with Cytognosis canonical content. See cytognosis_anchor. -->

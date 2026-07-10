@@ -9,6 +9,13 @@ source_doc: input/applications/Astera/Astera_submited_application_responses.md
 
 # U01 — Objective (Astera 2026 overlay)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `proposal`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U01.1 — Bold one-sentence thesis (300 char limit)
 
 > We are building genotype-to-regulation foundation models that predict cell-type-specific gene regulation from genome sequence and reveal continuous, ontology-grounded disease axes underlying neuropsychiatric diagnoses, all on open data, code, and weights.

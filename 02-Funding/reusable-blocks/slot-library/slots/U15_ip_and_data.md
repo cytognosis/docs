@@ -58,6 +58,13 @@ status: stub
 
 # U15 — IP & data governance
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U15.1 — Background IP inventory
 
 <!-- STUB: fill with Cytognosis canonical content. See cytognosis_anchor. -->

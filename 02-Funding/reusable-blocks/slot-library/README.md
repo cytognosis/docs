@@ -1,5 +1,15 @@
 # Cytognosis Canonical Template System
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team, leadership
+> **Tags**: `funding`, `slot-library`, `system-of-record`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
+> [!IMPORTANT]
+> **Funding system of record.** The slot-library (slots + funders + profiles + proposals) is canonical for all Cytognosis funding. Funder profiles follow the Funding Opportunity Profile template (cytognosis-doc skill v5.6.0).
+
 **Status:** Draft (lives under `_draft/canonical/` until promoted to `01_framework/` root).
 **Authored:** 2026-04-23. **Last updated:** 2026-04-26 (manifest v1.2, groups v1.0).
 **Maintainer:** mohammadi@cytognosis.org.

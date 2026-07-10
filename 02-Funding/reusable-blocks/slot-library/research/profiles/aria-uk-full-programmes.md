@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # ARIA (UK) — Full Programmes
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Solicited applications welcomed from across R&D ecosystem: individuals, universities, research institutions, SMEs and large companies, charities, public sector research organisations. Primary focus on UK-based applicants. Requires majority of project work conducted in the UK (>50% of project costs and personnel time). Non-UK orgs can participate as part of a UK-led consortium. No restriction on prior funding history.
 

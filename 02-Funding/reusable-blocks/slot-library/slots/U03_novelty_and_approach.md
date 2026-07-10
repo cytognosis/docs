@@ -88,6 +88,13 @@ status: stub
 
 # U03 — Novelty & approach
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U03.1 — Core insight / thesis of novelty
 
 Cytognosis treats disease as a geometry problem inside the cell. The core novelty is a three-part architecture — Cytoverse, Cytoscope, Cytonome — that together turn cellular state into an addressable, continuously-updated map rather than a sequence of episodic snapshots. Strategy and execution are coupled via a four-layer hybrid (Three Horizons, OGSM, Hoshin, OKRs), which keeps long-horizon research and near-term delivery on the same spine.

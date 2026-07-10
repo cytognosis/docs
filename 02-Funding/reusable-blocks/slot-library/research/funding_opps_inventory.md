@@ -1,5 +1,12 @@
 # Funding Opportunities Inventory (Monday Board 18409744388)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `slot-library`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Source:** Monday Main workspace → Fundraising → Funding Opportunities (board id 18409744388)
 **Total items:** 71 opportunities
 **Pulled:** 2026-04-25

@@ -13,6 +13,13 @@ researched: 2026-04-25
 
 # EA Funds — Long-Term Future Fund (LTFF)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`, `opportunity-profile`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Eligibility
 Individuals, non-profit organizations, academic institutions, other entities. Global eligibility (no US/UK requirement). Particular interest in small teams / individuals trying to get projects off the ground or needing less than typical institutional grant size.
 

@@ -65,6 +65,13 @@ status: stub
 
 # U08 — Mid-term & final exams (quantitative go/no-go)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: grant team
+> **Tags**: `funding`, `reusable-slot`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## U08.1 — Quantitative success metrics
 
 Success metrics are authored as numeric, ambitious targets tied to OKRs — the kind of 4×/100× framing a reviewer can cite without re-reading the proposal. Each metric ties to a layer of the platform (Cytoverse coverage in cell-states catalogued; Cytoscope sensitivity in detectable perturbations per sample; Cytonome latency and accuracy per on-device inference) and has a stated baseline so year-over-year progress is falsifiable.

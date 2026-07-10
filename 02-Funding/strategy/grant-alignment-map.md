@@ -1,5 +1,12 @@
 # Grant-Alignment Map (technical)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Variants**: Technical (this doc) - Readable (grant-alignment-map.md in Obsidian vault: 02-Funding/strategy/) - Agent (grant-alignment-map_prompt.md)
 
 > **Status:** Active · **Date:** 2026-07-01 · **Author:** Funding & Grants (canonicalized from `Grants/01-strategy/funding/Cytognosis_Strategy_and_Grant_Alignment_Map_2026-06-11.md`, 2026-06-11)
