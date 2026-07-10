@@ -494,7 +494,7 @@ docs	06-Operations	operations	primary	no		1073.6					repos/cytognosis/docs/06-Op
 docs	06-Operations	code	primary	no		7.5					repos/cytognosis/docs/06-Operations/inventory/build_catalog.py
 docs	06-Operations	operations	primary	no		1.4					repos/cytognosis/docs/06-Operations/inventory/catalog-tables.md
 docs	06-Operations	operations	primary	no		9.0	Active	2026-07-10	inventory, catalog, taxonomy, provenance, knowledge-management	Master Catalog — Everything We Have and Where It Lives	repos/cytognosis/docs/06-Operations/inventory/MASTER-CATALOG.md
-docs	06-Operations	operations	primary	no		732.6					repos/cytognosis/docs/06-Operations/inventory/catalog.tsv
+docs	06-Operations	operations	primary	no		733.1					repos/cytognosis/docs/06-Operations/inventory/catalog.tsv
 docs	06-Operations	config/schema	primary	no		1.3					repos/cytognosis/docs/06-Operations/inventory/catalog-summary.json
 docs	06-Operations	operations	simple	no		2.1				The Master Map, in Plain Words	repos/cytognosis/docs/06-Operations/inventory/simple/MASTER-CATALOG.md
 docs	06-Operations	operations	primary	no		6.1				Cytognosis Foundation — Organizational Context (Technical)	repos/cytognosis/docs/06-Operations/org/org-context.md
@@ -525,147 +525,147 @@ docs	06-Operations	operations	primary	no		6.1				Controlled Data Access Policy	r
 docs	06-Operations	readme	primary	no		1.0				06-Operations / audits	repos/cytognosis/docs/06-Operations/audits/README.md
 docs	06-Operations	operations	primary	no		1.6				Workspace AI Features Setup	repos/cytognosis/docs/06-Operations/communications/workspace-ai-setup.md
 docs	06-Operations	operations	archive	no		13.7				GCP Infrastructure Audit Report	repos/cytognosis/docs/06-Operations/_archive/audits/gcp-infrastructure-audit-2026-05-25.md
-docs	02-Funding	funding	primary	no		13.8				Cytognosis Funding Opportunities — Master Index	repos/cytognosis/docs/02-Funding/INDEX_funding_opportunities_2026-06-12.md
-docs	02-Funding	readme	primary	no		2.4				Grant & Funding Opportunity Pipeline — Documentation Hub	repos/cytognosis/docs/02-Funding/README.md
-docs	02-Funding	funding	primary	no		8.2				Cytognosis: Strategy + Grant-Alignment Map	repos/cytognosis/docs/02-Funding/Cytognosis_Strategy_and_Grant_Alignment_Map_2026-06-11.md
+docs	02-Funding	funding	primary	no		14.0	Active	2026-07-10	funding	Cytognosis Funding Opportunities — Master Index	repos/cytognosis/docs/02-Funding/INDEX_funding_opportunities_2026-06-12.md
+docs	02-Funding	readme	primary	no		2.6	Active	2026-07-10	funding	Grant & Funding Opportunity Pipeline — Documentation Hub	repos/cytognosis/docs/02-Funding/README.md
+docs	02-Funding	funding	primary	no		8.4	Active	2026-07-10	funding	Cytognosis: Strategy + Grant-Alignment Map	repos/cytognosis/docs/02-Funding/Cytognosis_Strategy_and_Grant_Alignment_Map_2026-06-11.md
 docs	02-Funding	funding	primary	no		2.0	Active	2026-06-14	funding, grants, gdrive, index, applications	Google Drive: Funding and Grant Document Index	repos/cytognosis/docs/02-Funding/gdrive-funding-index.md
-docs	02-Funding	grant-section	primary	no		15.8				Grant & Funding Opportunity Pipeline — Deep Research Report	repos/cytognosis/docs/02-Funding/grant-deep-research.md
-docs	02-Funding	funding	primary	no		5.0				NIMH BRAIN — RFA-MH-26-140 — summary + first-draft materials	repos/cytognosis/docs/02-Funding/NIMH_BRAIN_RFA-MH-26-140_summary_and_materials.md
-docs	02-Funding	funding	primary	no		7.0				Compute & Credits Applications — Anthropic AI for Science · NAIRR Pilot · Cohere Catalyst (DRAFTS v1)	repos/cytognosis/docs/02-Funding/Compute_Credits_Applications_Anthropic_NAIRR_Cohere.md
-docs	02-Funding	funding	primary	no		10.6				Grant Pipeline — Implementation Plan	repos/cytognosis/docs/02-Funding/plans/implementation_plan.md
-docs	02-Funding	funding	primary	no		0.3				SUPERSEDED: moved to canonical location	repos/cytognosis/docs/02-Funding/architecture/deep_research_report.md
-docs	02-Funding	funding	primary	no		6.5				Grant Pipeline — Architecture & Data Flow	repos/cytognosis/docs/02-Funding/architecture/pipeline_architecture.md
-docs	02-Funding	funding	primary	no		0.6				Roadmap	repos/cytognosis/docs/02-Funding/YC/submissions/ROADMAP.md
-docs	02-Funding	funding	primary	no		1.8				Project Overview	repos/cytognosis/docs/02-Funding/YC/submissions/PROJECT_OVERVIEW.md
-docs	02-Funding	funding	primary	no		2.2				Video Storyboard	repos/cytognosis/docs/02-Funding/YC/submissions/VIDEO_STORYBOARD.md
-docs	02-Funding	funding	primary	no		1.7				Safety and Trust	repos/cytognosis/docs/02-Funding/YC/submissions/SAFETY_AND_TRUST.md
-docs	02-Funding	funding	primary	no		1.4				Evaluation	repos/cytognosis/docs/02-Funding/YC/submissions/EVALUATION.md
-docs	02-Funding	funding	primary	no		2.8				Architecture	repos/cytognosis/docs/02-Funding/YC/submissions/ARCHITECTURE.md
-docs	02-Funding	funding	primary	no		2.5				Limitations	repos/cytognosis/docs/02-Funding/YC/submissions/LIMITATIONS.md
-docs	02-Funding	funding	primary	no		5.1				Grant Pipeline — Component Status Matrix	repos/cytognosis/docs/02-Funding/status/component_status.md
-docs	02-Funding	funding	primary	no		3.8				Funding Submission Registry	repos/cytognosis/docs/02-Funding/status/submission-registry.md
+docs	02-Funding	grant-section	primary	no		16.0	Active	2026-07-10	funding	Grant & Funding Opportunity Pipeline — Deep Research Report	repos/cytognosis/docs/02-Funding/grant-deep-research.md
+docs	02-Funding	funding	primary	no		5.3	Active	2026-07-10	funding	NIMH BRAIN — RFA-MH-26-140 — summary + first-draft materials	repos/cytognosis/docs/02-Funding/NIMH_BRAIN_RFA-MH-26-140_summary_and_materials.md
+docs	02-Funding	funding	primary	no		7.2	Active	2026-07-10	funding	Compute & Credits Applications — Anthropic AI for Science · NAIRR Pilot · Cohere Catalyst (DRAFTS v1)	repos/cytognosis/docs/02-Funding/Compute_Credits_Applications_Anthropic_NAIRR_Cohere.md
+docs	02-Funding	funding	primary	no		10.8	Active	2026-07-10	funding	Grant Pipeline — Implementation Plan	repos/cytognosis/docs/02-Funding/plans/implementation_plan.md
+docs	02-Funding	funding	primary	no		0.5	Active	2026-07-10	funding	SUPERSEDED: moved to canonical location	repos/cytognosis/docs/02-Funding/architecture/deep_research_report.md
+docs	02-Funding	funding	primary	no		6.7	Active	2026-07-10	funding	Grant Pipeline — Architecture & Data Flow	repos/cytognosis/docs/02-Funding/architecture/pipeline_architecture.md
+docs	02-Funding	funding	primary	no		0.8	Active	2026-07-10	funding	Roadmap	repos/cytognosis/docs/02-Funding/YC/submissions/ROADMAP.md
+docs	02-Funding	funding	primary	no		2.0	Active	2026-07-10	funding	Project Overview	repos/cytognosis/docs/02-Funding/YC/submissions/PROJECT_OVERVIEW.md
+docs	02-Funding	funding	primary	no		2.5	Active	2026-07-10	funding	Video Storyboard	repos/cytognosis/docs/02-Funding/YC/submissions/VIDEO_STORYBOARD.md
+docs	02-Funding	funding	primary	no		2.0	Active	2026-07-10	funding	Safety and Trust	repos/cytognosis/docs/02-Funding/YC/submissions/SAFETY_AND_TRUST.md
+docs	02-Funding	funding	primary	no		1.6	Active	2026-07-10	funding	Evaluation	repos/cytognosis/docs/02-Funding/YC/submissions/EVALUATION.md
+docs	02-Funding	funding	primary	no		3.0	Active	2026-07-10	funding	Architecture	repos/cytognosis/docs/02-Funding/YC/submissions/ARCHITECTURE.md
+docs	02-Funding	funding	primary	no		2.8	Active	2026-07-10	funding	Limitations	repos/cytognosis/docs/02-Funding/YC/submissions/LIMITATIONS.md
+docs	02-Funding	funding	primary	no		5.3	Active	2026-07-10	funding	Grant Pipeline — Component Status Matrix	repos/cytognosis/docs/02-Funding/status/component_status.md
+docs	02-Funding	funding	primary	no		4.0	Active	2026-07-10	funding	Funding Submission Registry	repos/cytognosis/docs/02-Funding/status/submission-registry.md
 docs	02-Funding	funding	primary	no		28.0	Active	2026-06-03	cytonome, funding, grant, foresight	Foresight — AI for Science & Safety Nodes (2026 submission)	repos/cytognosis/docs/02-Funding/foresight/foresight-cytonome-2026-submit.md
-docs	02-Funding	readme	primary	no		0.6				Funding Opportunities	repos/cytognosis/docs/02-Funding/opportunities/README.md
-docs	02-Funding	funding	primary	no		25.2				Universal Grant/Application Template (Cytognosis)	repos/cytognosis/docs/02-Funding/reusable-blocks/universal_template.md
-docs	02-Funding	funding	primary	no		18.6				Canonical Template Format Specification	repos/cytognosis/docs/02-Funding/reusable-blocks/canonical_template_format.md
-docs	02-Funding	funding	primary	no		31.1				Framework Catalog: Research, Grant, and Moonshot Proposal Rubrics	repos/cytognosis/docs/02-Funding/reusable-blocks/framework_catalog.md
-docs	02-Funding	funding	primary	no		18.1				Funder Crosswalk Matrix	repos/cytognosis/docs/02-Funding/reusable-blocks/funder_crosswalk_matrix.md
-docs	02-Funding	funding	primary	no		45.7				Extracted Grant Requirements — NSF Tech Labs, ARPA-H Mission Office ISOs, DoE Genesis Mission	repos/cytognosis/docs/02-Funding/reusable-blocks/extracted_grants.md
-docs	02-Funding	funding	primary	no		11.7				Funder Metadata Schema (F-series)	repos/cytognosis/docs/02-Funding/reusable-blocks/funder_metadata.md
-docs	02-Funding	funding	primary	no		21.9				Extracted Questions — Existing Applications	repos/cytognosis/docs/02-Funding/reusable-blocks/extracted_questions_applications.md
-docs	02-Funding	changelog	primary	no		12.0				CHANGELOG — Cytognosis Canonical Template	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/CHANGELOG.md
-docs	02-Funding	readme	primary	no		7.8				Cytognosis Canonical Template System	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/README.md
+docs	02-Funding	readme	simple	no		0.7				Funding, in Plain Words	repos/cytognosis/docs/02-Funding/simple/README.md
+docs	02-Funding	funding	primary	no		25.4	Active	2026-07-10	funding	Universal Grant/Application Template (Cytognosis)	repos/cytognosis/docs/02-Funding/reusable-blocks/universal_template.md
+docs	02-Funding	funding	primary	no		18.8	Active	2026-07-10	funding	Canonical Template Format Specification	repos/cytognosis/docs/02-Funding/reusable-blocks/canonical_template_format.md
+docs	02-Funding	funding	primary	no		31.3	Active	2026-07-10	funding	Framework Catalog: Research, Grant, and Moonshot Proposal Rubrics	repos/cytognosis/docs/02-Funding/reusable-blocks/framework_catalog.md
+docs	02-Funding	funding	primary	no		18.3	Active	2026-07-10	funding	Funder Crosswalk Matrix	repos/cytognosis/docs/02-Funding/reusable-blocks/funder_crosswalk_matrix.md
+docs	02-Funding	funding	primary	no		46.0	Active	2026-07-10	funding	Extracted Grant Requirements — NSF Tech Labs, ARPA-H Mission Office ISOs, DoE Genesis Mission	repos/cytognosis/docs/02-Funding/reusable-blocks/extracted_grants.md
+docs	02-Funding	funding	primary	no		11.9	Active	2026-07-10	funding	Funder Metadata Schema (F-series)	repos/cytognosis/docs/02-Funding/reusable-blocks/funder_metadata.md
+docs	02-Funding	funding	primary	no		22.1	Active	2026-07-10	funding	Extracted Questions — Existing Applications	repos/cytognosis/docs/02-Funding/reusable-blocks/extracted_questions_applications.md
+docs	02-Funding	changelog	primary	no		12.2	Active	2026-07-10	funding, slot-library	CHANGELOG — Cytognosis Canonical Template	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/CHANGELOG.md
+docs	02-Funding	readme	primary	no		8.3	Active	2026-07-10	funding, slot-library, system-of-record	Cytognosis Canonical Template System	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/README.md
 docs	02-Funding	config/schema	primary	no		137.3					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/opportunity_mapping.yaml
 docs	02-Funding	config/schema	primary	no		24.1					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/manifest.yaml
-docs	02-Funding	funding	primary	no		16.9				Opportunity Mapping — Reader's Index	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/opportunity_mapping_index.md
-docs	02-Funding	funding	primary	no		15.0				Monday Board Update Plan — Strategic Planning + Funding Opportunities	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/monday_update_plan.md
+docs	02-Funding	funding	primary	no		17.2	Active	2026-07-10	funding, slot-library	Opportunity Mapping — Reader's Index	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/opportunity_mapping_index.md
+docs	02-Funding	funding	primary	no		15.2	Active	2026-07-10	funding, slot-library	Monday Board Update Plan — Strategic Planning + Funding Opportunities	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/monday_update_plan.md
 docs	02-Funding	data-table	primary	no		40.3					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/opportunity_mapping.csv
 docs	02-Funding	config/schema	primary	no		14.7					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/groups.yaml
-docs	02-Funding	funding	primary	no		10.2				Cytognosis Canonical Template System — Master Index	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/INDEX.md
-docs	02-Funding	readme	primary	no		3.3				Astera Residency 2026 Submission — Per-proposal overlay	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/proposals/astera_2026/README.md
-docs	02-Funding	funding	primary	no		2.8				U10 — Why-not-academia / why-Cytognosis (Astera 2026 overlay)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/proposals/astera_2026/slots/U10_org_form_fit.md
-docs	02-Funding	funding	primary	no		1.2				U01 — Objective (Astera 2026 overlay)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/proposals/astera_2026/slots/U01_objective.md
-docs	02-Funding	funding	primary	no		5.1				U03 — Novelty & approach (Astera 2026 overlay)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/proposals/astera_2026/slots/U03_novelty_and_approach.md
-docs	02-Funding	funding	primary	no		3.4					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U06_cost.md
-docs	02-Funding	funding	primary	no		2.1					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U12_open_science.md
-docs	02-Funding	funding	primary	no		2.6					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U22_theory_of_change.md
-docs	02-Funding	funding	primary	no		1.7					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/A01_org_identity.md
-docs	02-Funding	funding	primary	no		2.0					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/A04_supplementary_artifacts.md
-docs	02-Funding	funding	primary	no		1.8					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U10_org_form_fit.md
-docs	02-Funding	funding	primary	no		2.3					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U18_translation_to_mission.md
-docs	02-Funding	funding	primary	no		1.9					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/A03_eligibility_compliance.md
-docs	02-Funding	funding	primary	no		2.3					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U14_responsible_ai.md
-docs	02-Funding	funding	primary	no		2.5					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U21_counterfactual.md
-docs	02-Funding	funding	primary	no		3.2					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U08_exams_and_gates.md
-docs	02-Funding	funding	primary	no		2.5					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U17_adoption_transition.md
-docs	02-Funding	funding	primary	no		1.9					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U09_opportunity_space.md
-docs	02-Funding	funding	primary	no		2.2					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U07_schedule.md
-docs	02-Funding	funding	primary	no		2.3					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U05_risks.md
-docs	02-Funding	funding	primary	no		1.3					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/A02_points_of_contact.md
-docs	02-Funding	funding	primary	no		1.8					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U02_sota_and_limits.md
-docs	02-Funding	funding	primary	no		1.9					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U19_sustainability.md
-docs	02-Funding	funding	primary	no		2.1					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U04_stakes_and_beneficiaries.md
-docs	02-Funding	funding	primary	no		2.9					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U11_team_fit.md
-docs	02-Funding	funding	primary	no		2.2					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U20_partnerships.md
-docs	02-Funding	funding	primary	no		2.1					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U13_equity_access.md
-docs	02-Funding	funding	primary	no		2.0					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U15_ip_and_data.md
-docs	02-Funding	funding	primary	no		2.2					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U16_regulatory_biosecurity.md
-docs	02-Funding	funding	primary	no		1.4					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/A05_intake_meta.md
-docs	02-Funding	funding	primary	no		2.6					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U01_objective.md
-docs	02-Funding	funding	primary	no		3.8					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U03_novelty_and_approach.md
-docs	02-Funding	funding	primary	no		19.4				Funding Opportunities Inventory (Monday Board 18409744388)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/funding_opps_inventory.md
-docs	02-Funding	funding	primary	no		24.0				Funding Opportunities Research — Summary	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/research_summary.md
-docs	02-Funding	funding	primary	no		0.7				Adobe for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/adobe-for-nonprofits.md
-docs	02-Funding	funding	primary	no		1.8				Breakthrough Energy Ventures (BEV)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/breakthrough-energy-ventures.md
-docs	02-Funding	funding	primary	no		2.8				ARPA-H Proactive Health Office (PHO) ISO	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/arpa-h-proactive-health-iso.md
-docs	02-Funding	funding	primary	no		4.0				ARPA-H Health Science Futures (HSF) ISO	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/arpa-h-health-science-futures-iso.md
-docs	02-Funding	funding	primary	no		0.7				Mixpanel for Startups	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/mixpanel-for-startups.md
-docs	02-Funding	funding	primary	no		2.9				Robert Wood Johnson Foundation (RWJF)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/rwjf.md
-docs	02-Funding	funding	primary	no		3.0				Google.org AI for Science Impact Challenge	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/google-org-ai-for-science-impact-challenge.md
-docs	02-Funding	funding	primary	no		3.2				Draper Richards Kaplan Foundation	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/draper-richards-kaplan-foundation.md
-docs	02-Funding	funding	primary	no		1.7				Google for Startups Cloud Program — AI Tier	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/google-cloud-ai-startup-program.md
-docs	02-Funding	funding	primary	no		0.6				Atlassian for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/atlassian-for-nonprofits.md
-docs	02-Funding	funding	primary	no		2.9				Coefficient Giving (formerly Open Philanthropy) — Science and Global Health R&D	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/coefficient-giving-global-health-rd.md
-docs	02-Funding	funding	primary	no		3.5				Chan Zuckerberg Initiative — Science Grants	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/czi-science.md
-docs	02-Funding	funding	primary	no		3.9				Convergent Research — Focused Research Organization (FRO)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/convergent-research-fro.md
-docs	02-Funding	funding	primary	no		3.5				DOE Genesis Mission	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/doe-genesis-mission.md
-docs	02-Funding	funding	primary	no		2.8				Astera Institute Residency (Fall 2026 Cohort)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/astera-institute-residency.md
-docs	02-Funding	funding	primary	no		2.8				AWS Imagine Grant — Pathfinder GenAI	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/aws-imagine-grant-pathfinder-genai.md
-docs	02-Funding	funding	primary	no		2.2				Y Combinator	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/y-combinator.md
-docs	02-Funding	funding	primary	no		0.8				Claude for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/claude-for-nonprofits.md
-docs	02-Funding	funding	primary	no		1.5				MATLAB Startup Program	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/matlab-startup-program.md
-docs	02-Funding	funding	primary	no		2.5				UNESCO/WHO Open Science Projects	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/unesco-who-open-science.md
-docs	02-Funding	funding	primary	no		2.1				QB3 / Bakar Labs (UC Berkeley)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/qb3-bakar-labs.md
-docs	02-Funding	funding	primary	no		0.5				Lenovo for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/lenovo-for-nonprofits.md
-docs	02-Funding	funding	primary	no		2.6				ARIA (UK) — Opportunity Seeds	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/aria-uk-opportunity-seeds.md
-docs	02-Funding	funding	primary	no		1.6				Google Health AI Developer Foundations (HAI-DEF)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/google-hai-def.md
-docs	02-Funding	funding	primary	no		3.5				NIH PRIMED-AI (Precision Medicine with AI: Integrating Imaging with Multimodal Data)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/nih-primed-ai.md
-docs	02-Funding	funding	primary	no		0.7				AWS Nonprofit Credit Program	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/aws-nonprofit-credit-program.md
-docs	02-Funding	funding	primary	no		0.6				Cisco / Meraki for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/cisco-meraki-for-nonprofits.md
-docs	02-Funding	funding	primary	no		2.2				Foresight Institute — AI for Science & Safety Nodes	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/foresight-ai-safety-science-nodes.md
-docs	02-Funding	funding	primary	no		3.2				Gates Foundation Grand Challenges — Cost-Disruptive Tools for Diagnosis and Screening	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/gates-foundation-grand-challenges-cost-disruptive-tools.md
-docs	02-Funding	funding	primary	no		0.7				OpenAI for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/openai-for-nonprofits.md
-docs	02-Funding	funding	primary	no		2.1				Brains Accelerator (Speculative Technologies)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/brains-accelerator.md
-docs	02-Funding	funding	primary	no		0.5				HP Inc. for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/hp-for-nonprofits.md
-docs	02-Funding	funding	primary	no		1.0				The Next Sequence VC	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/the-next-sequence.md
-docs	02-Funding	funding	primary	no		3.6				ARIA (UK) — Full Programmes	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/aria-uk-full-programmes.md
-docs	02-Funding	funding	primary	no		0.6				GitHub for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/github-for-nonprofits.md
-docs	02-Funding	funding	primary	no		4.4				NIH Bridge2AI Initiative (Stage II)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/nih-bridge2ai-stage-ii.md
-docs	02-Funding	funding	primary	no		0.6				Zoom for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/zoom-for-nonprofits.md
-docs	02-Funding	funding	primary	no		0.8				Microsoft for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/microsoft-for-nonprofits.md
-docs	02-Funding	funding	primary	no		0.6				Google Workspace for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/google-workspace-for-nonprofits.md
-docs	02-Funding	funding	primary	no		2.5				Fast Forward Accelerator (Tech Nonprofit)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/fast-forward-accelerator.md
-docs	02-Funding	funding	primary	no		2.2				Johnson & Johnson JLABS	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/jnj-jlabs.md
-docs	02-Funding	funding	primary	no		2.9				EA Funds — Long-Term Future Fund (LTFF)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/ea-funds-long-term-future-fund.md
-docs	02-Funding	funding	primary	no		2.0				Microsoft Azure + NVIDIA Healthcare (joint program)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/microsoft-azure-nvidia-healthcare.md
-docs	02-Funding	funding	primary	no		0.6				Monday.com for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/monday-for-nonprofits.md
-docs	02-Funding	funding	primary	no		2.2				EA Funds — Infrastructure Fund (EAIF)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/ea-funds-infrastructure.md
-docs	02-Funding	funding	primary	no		0.5				Notion for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/notion-for-nonprofits.md
-docs	02-Funding	funding	primary	no		4.2				Wellcome Trust Discovery Awards	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/wellcome-trust-discovery-awards.md
-docs	02-Funding	funding	primary	no		0.6				Dell Technologies for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/dell-for-nonprofits.md
-docs	02-Funding	funding	primary	no		1.8				Anthropic Anthology Fund (Menlo Ventures)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/anthropic-anthology-fund.md
-docs	02-Funding	funding	primary	no		2.0				IndieBio / SOSV NY+SF (2026 rebrand: SOSV NY / SOSV SF)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/indiebio-sosv.md
-docs	02-Funding	funding	primary	no		1.0				Foresite Labs	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/foresite-labs.md
-docs	02-Funding	funding	primary	no		1.8				Berkeley SkyDeck	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/berkeley-skydeck.md
-docs	02-Funding	funding	primary	no		3.3				Schmidt Sciences Programs	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/schmidt-sciences-programs.md
-docs	02-Funding	funding	primary	no		1.6				NVIDIA Inception Program	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/nvidia-inception.md
-docs	02-Funding	funding	primary	no		3.7				Wellcome Leap Programs	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/wellcome-leap-programs.md
-docs	02-Funding	funding	primary	no		1.8				AWS Activate	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/aws-activate.md
-docs	02-Funding	funding	primary	no		0.6				LinkedIn for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/linkedin-for-nonprofits.md
-docs	02-Funding	funding	primary	no		3.4				NSF Convergence Accelerator	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/nsf-convergence-accelerator.md
-docs	02-Funding	funding	primary	no		2.8				AstraZeneca CHANGE (Creating Health Access for Next Generation Equity)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/astrazeneca-change.md
-docs	02-Funding	funding	primary	no		0.6				Slack for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/slack-for-nonprofits.md
-docs	02-Funding	funding	primary	no		0.6				Canva for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/canva-for-nonprofits.md
-docs	02-Funding	funding	primary	no		0.5				Otter.ai for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/otter-for-nonprofits.md
-docs	02-Funding	funding	primary	no		3.9				NSF-NIH Smart Health Program (NSF 25-542)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/nsf-nih-smart-health.md
-docs	02-Funding	funding	primary	no		5.1				Horizon Europe — Cluster 1 Health	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/horizon-europe-cluster-1-health.md
-docs	02-Funding	funding	primary	no		1.8				Anthropic AI for Science Program	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/anthropic-ai-for-science.md
-docs	02-Funding	funding	primary	no		1.6				Deep Science Ventures (DSV)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/deep-science-ventures.md
-docs	02-Funding	funding	primary	no		0.5				DocuSign for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/docusign-for-nonprofits.md
-docs	02-Funding	funding	primary	no		3.5				NSF Tech Labs	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/nsf-tech-labs.md
-docs	02-Funding	funding	primary	no		2.0				Emergent Ventures (Mercatus Center / Tyler Cowen)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/emergent-ventures.md
-docs	02-Funding	funding	primary	no		1.7				Fifty Years VC — 5050 Fellowship	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/fifty-years-vc-5050.md
-docs	02-Funding	funding	primary	no		1.6				Lux Capital	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/lux-capital.md
+docs	02-Funding	funding	primary	no		10.5	Active	2026-07-10	funding, slot-library	Cytognosis Canonical Template System — Master Index	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/INDEX.md
+docs	02-Funding	readme	primary	no		3.5	Active	2026-07-10	funding, proposal	Astera Residency 2026 Submission — Per-proposal overlay	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/proposals/astera_2026/README.md
+docs	02-Funding	funding	primary	no		3.0	Active	2026-07-10	funding, proposal	U10 — Why-not-academia / why-Cytognosis (Astera 2026 overlay)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/proposals/astera_2026/slots/U10_org_form_fit.md
+docs	02-Funding	funding	primary	no		1.5	Active	2026-07-10	funding, proposal	U01 — Objective (Astera 2026 overlay)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/proposals/astera_2026/slots/U01_objective.md
+docs	02-Funding	funding	primary	no		5.3	Active	2026-07-10	funding, proposal	U03 — Novelty & approach (Astera 2026 overlay)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/proposals/astera_2026/slots/U03_novelty_and_approach.md
+docs	02-Funding	funding	primary	no		3.7					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U06_cost.md
+docs	02-Funding	funding	primary	no		2.3					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U12_open_science.md
+docs	02-Funding	funding	primary	no		2.9					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U22_theory_of_change.md
+docs	02-Funding	funding	primary	no		1.9					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/A01_org_identity.md
+docs	02-Funding	funding	primary	no		2.2					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/A04_supplementary_artifacts.md
+docs	02-Funding	funding	primary	no		2.1					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U10_org_form_fit.md
+docs	02-Funding	funding	primary	no		2.5					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U18_translation_to_mission.md
+docs	02-Funding	funding	primary	no		2.2					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/A03_eligibility_compliance.md
+docs	02-Funding	funding	primary	no		2.5					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U14_responsible_ai.md
+docs	02-Funding	funding	primary	no		2.7					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U21_counterfactual.md
+docs	02-Funding	funding	primary	no		3.5					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U08_exams_and_gates.md
+docs	02-Funding	funding	primary	no		2.7					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U17_adoption_transition.md
+docs	02-Funding	funding	primary	no		2.1					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U09_opportunity_space.md
+docs	02-Funding	funding	primary	no		2.4					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U07_schedule.md
+docs	02-Funding	funding	primary	no		2.5					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U05_risks.md
+docs	02-Funding	funding	primary	no		1.5					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/A02_points_of_contact.md
+docs	02-Funding	funding	primary	no		2.0					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U02_sota_and_limits.md
+docs	02-Funding	funding	primary	no		2.1					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U19_sustainability.md
+docs	02-Funding	funding	primary	no		2.3					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U04_stakes_and_beneficiaries.md
+docs	02-Funding	funding	primary	no		3.2					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U11_team_fit.md
+docs	02-Funding	funding	primary	no		2.4					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U20_partnerships.md
+docs	02-Funding	funding	primary	no		2.4					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U13_equity_access.md
+docs	02-Funding	funding	primary	no		2.2					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U15_ip_and_data.md
+docs	02-Funding	funding	primary	no		2.4					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U16_regulatory_biosecurity.md
+docs	02-Funding	funding	primary	no		1.6					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/A05_intake_meta.md
+docs	02-Funding	funding	primary	no		2.8					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U01_objective.md
+docs	02-Funding	funding	primary	no		4.0					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/slots/U03_novelty_and_approach.md
+docs	02-Funding	funding	primary	no		19.7	Active	2026-07-10	funding, slot-library	Funding Opportunities Inventory (Monday Board 18409744388)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/funding_opps_inventory.md
+docs	02-Funding	funding	primary	no		24.2	Active	2026-07-10	funding, slot-library	Funding Opportunities Research — Summary	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/research_summary.md
+docs	02-Funding	funding	primary	no		0.9	Active	2026-07-10	funding, opportunity-profile	Adobe for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/adobe-for-nonprofits.md
+docs	02-Funding	funding	primary	no		2.0	Active	2026-07-10	funding, opportunity-profile	Breakthrough Energy Ventures (BEV)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/breakthrough-energy-ventures.md
+docs	02-Funding	funding	primary	no		3.0	Active	2026-07-10	funding, opportunity-profile	ARPA-H Proactive Health Office (PHO) ISO	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/arpa-h-proactive-health-iso.md
+docs	02-Funding	funding	primary	no		4.3	Active	2026-07-10	funding, opportunity-profile	ARPA-H Health Science Futures (HSF) ISO	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/arpa-h-health-science-futures-iso.md
+docs	02-Funding	funding	primary	no		0.9	Active	2026-07-10	funding, opportunity-profile	Mixpanel for Startups	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/mixpanel-for-startups.md
+docs	02-Funding	funding	primary	no		3.2	Active	2026-07-10	funding, opportunity-profile	Robert Wood Johnson Foundation (RWJF)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/rwjf.md
+docs	02-Funding	funding	primary	no		3.2	Active	2026-07-10	funding, opportunity-profile	Google.org AI for Science Impact Challenge	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/google-org-ai-for-science-impact-challenge.md
+docs	02-Funding	funding	primary	no		3.5	Active	2026-07-10	funding, opportunity-profile	Draper Richards Kaplan Foundation	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/draper-richards-kaplan-foundation.md
+docs	02-Funding	funding	primary	no		1.9	Active	2026-07-10	funding, opportunity-profile	Google for Startups Cloud Program — AI Tier	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/google-cloud-ai-startup-program.md
+docs	02-Funding	funding	primary	no		0.9	Active	2026-07-10	funding, opportunity-profile	Atlassian for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/atlassian-for-nonprofits.md
+docs	02-Funding	funding	primary	no		3.1	Active	2026-07-10	funding, opportunity-profile	Coefficient Giving (formerly Open Philanthropy) — Science and Global Health R&D	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/coefficient-giving-global-health-rd.md
+docs	02-Funding	funding	primary	no		3.8	Active	2026-07-10	funding, opportunity-profile	Chan Zuckerberg Initiative — Science Grants	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/czi-science.md
+docs	02-Funding	funding	primary	no		4.2	Active	2026-07-10	funding, opportunity-profile	Convergent Research — Focused Research Organization (FRO)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/convergent-research-fro.md
+docs	02-Funding	funding	primary	no		3.7	Active	2026-07-10	funding, opportunity-profile	DOE Genesis Mission	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/doe-genesis-mission.md
+docs	02-Funding	funding	primary	no		3.0	Active	2026-07-10	funding, opportunity-profile	Astera Institute Residency (Fall 2026 Cohort)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/astera-institute-residency.md
+docs	02-Funding	funding	primary	no		3.1	Active	2026-07-10	funding, opportunity-profile	AWS Imagine Grant — Pathfinder GenAI	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/aws-imagine-grant-pathfinder-genai.md
+docs	02-Funding	funding	primary	no		2.4	Active	2026-07-10	funding, opportunity-profile	Y Combinator	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/y-combinator.md
+docs	02-Funding	funding	primary	no		1.0	Active	2026-07-10	funding, opportunity-profile	Claude for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/claude-for-nonprofits.md
+docs	02-Funding	funding	primary	no		1.7	Active	2026-07-10	funding, opportunity-profile	MATLAB Startup Program	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/matlab-startup-program.md
+docs	02-Funding	funding	primary	no		2.7	Active	2026-07-10	funding, opportunity-profile	UNESCO/WHO Open Science Projects	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/unesco-who-open-science.md
+docs	02-Funding	funding	primary	no		2.3	Active	2026-07-10	funding, opportunity-profile	QB3 / Bakar Labs (UC Berkeley)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/qb3-bakar-labs.md
+docs	02-Funding	funding	primary	no		0.7	Active	2026-07-10	funding, opportunity-profile	Lenovo for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/lenovo-for-nonprofits.md
+docs	02-Funding	funding	primary	no		2.8	Active	2026-07-10	funding, opportunity-profile	ARIA (UK) — Opportunity Seeds	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/aria-uk-opportunity-seeds.md
+docs	02-Funding	funding	primary	no		1.9	Active	2026-07-10	funding, opportunity-profile	Google Health AI Developer Foundations (HAI-DEF)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/google-hai-def.md
+docs	02-Funding	funding	primary	no		3.8	Active	2026-07-10	funding, opportunity-profile	NIH PRIMED-AI (Precision Medicine with AI: Integrating Imaging with Multimodal Data)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/nih-primed-ai.md
+docs	02-Funding	funding	primary	no		0.9	Active	2026-07-10	funding, opportunity-profile	AWS Nonprofit Credit Program	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/aws-nonprofit-credit-program.md
+docs	02-Funding	funding	primary	no		0.9	Active	2026-07-10	funding, opportunity-profile	Cisco / Meraki for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/cisco-meraki-for-nonprofits.md
+docs	02-Funding	funding	primary	no		2.4	Active	2026-07-10	funding, opportunity-profile	Foresight Institute — AI for Science & Safety Nodes	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/foresight-ai-safety-science-nodes.md
+docs	02-Funding	funding	primary	no		3.4	Active	2026-07-10	funding, opportunity-profile	Gates Foundation Grand Challenges — Cost-Disruptive Tools for Diagnosis and Screening	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/gates-foundation-grand-challenges-cost-disruptive-tools.md
+docs	02-Funding	funding	primary	no		0.9	Active	2026-07-10	funding, opportunity-profile	OpenAI for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/openai-for-nonprofits.md
+docs	02-Funding	funding	primary	no		2.4	Active	2026-07-10	funding, opportunity-profile	Brains Accelerator (Speculative Technologies)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/brains-accelerator.md
+docs	02-Funding	funding	primary	no		0.7	Active	2026-07-10	funding, opportunity-profile	HP Inc. for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/hp-for-nonprofits.md
+docs	02-Funding	funding	primary	no		1.2	Active	2026-07-10	funding, opportunity-profile	The Next Sequence VC	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/the-next-sequence.md
+docs	02-Funding	funding	primary	no		3.8	Active	2026-07-10	funding, opportunity-profile	ARIA (UK) — Full Programmes	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/aria-uk-full-programmes.md
+docs	02-Funding	funding	primary	no		0.8	Active	2026-07-10	funding, opportunity-profile	GitHub for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/github-for-nonprofits.md
+docs	02-Funding	funding	primary	no		4.7	Active	2026-07-10	funding, opportunity-profile	NIH Bridge2AI Initiative (Stage II)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/nih-bridge2ai-stage-ii.md
+docs	02-Funding	funding	primary	no		0.8	Active	2026-07-10	funding, opportunity-profile	Zoom for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/zoom-for-nonprofits.md
+docs	02-Funding	funding	primary	no		1.0	Active	2026-07-10	funding, opportunity-profile	Microsoft for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/microsoft-for-nonprofits.md
+docs	02-Funding	funding	primary	no		0.9	Active	2026-07-10	funding, opportunity-profile	Google Workspace for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/google-workspace-for-nonprofits.md
+docs	02-Funding	funding	primary	no		2.7	Active	2026-07-10	funding, opportunity-profile	Fast Forward Accelerator (Tech Nonprofit)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/fast-forward-accelerator.md
+docs	02-Funding	funding	primary	no		2.4	Active	2026-07-10	funding, opportunity-profile	Johnson & Johnson JLABS	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/jnj-jlabs.md
+docs	02-Funding	funding	primary	no		3.2	Active	2026-07-10	funding, opportunity-profile	EA Funds — Long-Term Future Fund (LTFF)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/ea-funds-long-term-future-fund.md
+docs	02-Funding	funding	primary	no		2.2	Active	2026-07-10	funding, opportunity-profile	Microsoft Azure + NVIDIA Healthcare (joint program)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/microsoft-azure-nvidia-healthcare.md
+docs	02-Funding	funding	primary	no		0.8	Active	2026-07-10	funding, opportunity-profile	Monday.com for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/monday-for-nonprofits.md
+docs	02-Funding	funding	primary	no		2.4	Active	2026-07-10	funding, opportunity-profile	EA Funds — Infrastructure Fund (EAIF)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/ea-funds-infrastructure.md
+docs	02-Funding	funding	primary	no		0.7	Active	2026-07-10	funding, opportunity-profile	Notion for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/notion-for-nonprofits.md
+docs	02-Funding	funding	primary	no		4.5	Active	2026-07-10	funding, opportunity-profile	Wellcome Trust Discovery Awards	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/wellcome-trust-discovery-awards.md
+docs	02-Funding	funding	primary	no		0.9	Active	2026-07-10	funding, opportunity-profile	Dell Technologies for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/dell-for-nonprofits.md
+docs	02-Funding	funding	primary	no		2.1	Active	2026-07-10	funding, opportunity-profile	Anthropic Anthology Fund (Menlo Ventures)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/anthropic-anthology-fund.md
+docs	02-Funding	funding	primary	no		2.3	Active	2026-07-10	funding, opportunity-profile	IndieBio / SOSV NY+SF (2026 rebrand: SOSV NY / SOSV SF)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/indiebio-sosv.md
+docs	02-Funding	funding	primary	no		1.2	Active	2026-07-10	funding, opportunity-profile	Foresite Labs	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/foresite-labs.md
+docs	02-Funding	funding	primary	no		2.1	Active	2026-07-10	funding, opportunity-profile	Berkeley SkyDeck	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/berkeley-skydeck.md
+docs	02-Funding	funding	primary	no		3.6	Active	2026-07-10	funding, opportunity-profile	Schmidt Sciences Programs	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/schmidt-sciences-programs.md
+docs	02-Funding	funding	primary	no		1.8	Active	2026-07-10	funding, opportunity-profile	NVIDIA Inception Program	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/nvidia-inception.md
+docs	02-Funding	funding	primary	no		4.0	Active	2026-07-10	funding, opportunity-profile	Wellcome Leap Programs	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/wellcome-leap-programs.md
+docs	02-Funding	funding	primary	no		2.1	Active	2026-07-10	funding, opportunity-profile	AWS Activate	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/aws-activate.md
+docs	02-Funding	funding	primary	no		0.9	Active	2026-07-10	funding, opportunity-profile	LinkedIn for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/linkedin-for-nonprofits.md
+docs	02-Funding	funding	primary	no		3.6	Active	2026-07-10	funding, opportunity-profile	NSF Convergence Accelerator	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/nsf-convergence-accelerator.md
+docs	02-Funding	funding	primary	no		3.0	Active	2026-07-10	funding, opportunity-profile	AstraZeneca CHANGE (Creating Health Access for Next Generation Equity)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/astrazeneca-change.md
+docs	02-Funding	funding	primary	no		0.9	Active	2026-07-10	funding, opportunity-profile	Slack for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/slack-for-nonprofits.md
+docs	02-Funding	funding	primary	no		0.8	Active	2026-07-10	funding, opportunity-profile	Canva for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/canva-for-nonprofits.md
+docs	02-Funding	funding	primary	no		0.8	Active	2026-07-10	funding, opportunity-profile	Otter.ai for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/otter-for-nonprofits.md
+docs	02-Funding	funding	primary	no		4.2	Active	2026-07-10	funding, opportunity-profile	NSF-NIH Smart Health Program (NSF 25-542)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/nsf-nih-smart-health.md
+docs	02-Funding	funding	primary	no		5.4	Active	2026-07-10	funding, opportunity-profile	Horizon Europe — Cluster 1 Health	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/horizon-europe-cluster-1-health.md
+docs	02-Funding	funding	primary	no		2.0	Active	2026-07-10	funding, opportunity-profile	Anthropic AI for Science Program	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/anthropic-ai-for-science.md
+docs	02-Funding	funding	primary	no		1.8	Active	2026-07-10	funding, opportunity-profile	Deep Science Ventures (DSV)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/deep-science-ventures.md
+docs	02-Funding	funding	primary	no		0.7	Active	2026-07-10	funding, opportunity-profile	DocuSign for Nonprofits	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/docusign-for-nonprofits.md
+docs	02-Funding	funding	primary	no		3.8	Active	2026-07-10	funding, opportunity-profile	NSF Tech Labs	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/nsf-tech-labs.md
+docs	02-Funding	funding	primary	no		2.2	Active	2026-07-10	funding, opportunity-profile	Emergent Ventures (Mercatus Center / Tyler Cowen)	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/emergent-ventures.md
+docs	02-Funding	funding	primary	no		1.9	Active	2026-07-10	funding, opportunity-profile	Fifty Years VC — 5050 Fellowship	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/fifty-years-vc-5050.md
+docs	02-Funding	funding	primary	no		1.8	Active	2026-07-10	funding, opportunity-profile	Lux Capital	repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/research/profiles/lux-capital.md
 docs	02-Funding	config/schema	primary	no		3.3					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/funders/arpah_mission_office.yaml
 docs	02-Funding	config/schema	primary	no		2.1					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/funders/google_impact_challenge.yaml
 docs	02-Funding	config/schema	primary	no		1.4					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/funders/brains_accelerator.yaml
@@ -676,42 +676,44 @@ docs	02-Funding	config/schema	primary	no		2.1					repos/cytognosis/docs/02-Fundi
 docs	02-Funding	config/schema	primary	no		2.1					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/funders/foresight_nodes.yaml
 docs	02-Funding	config/schema	primary	no		3.4					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/funders/doe_genesis.yaml
 docs	02-Funding	config/schema	primary	no		1.5					repos/cytognosis/docs/02-Funding/reusable-blocks/slot-library/funders/heilmeier.yaml
-docs	02-Funding	funding	primary	no		405.3				DOE Genesis Mission: Transforming Science and Energy with AI	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_foa.md
-docs	02-Funding	funding	primary	no		51.7				ARPA-H Health Science Futures (HSF) Mission Office Innovative Solutions Opening (ISO)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_hsf_iso.md
-docs	02-Funding	funding	primary	no		181.4				NSF Other Arrangements/Transactions Guide (OA/T Guide)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/nsf_ot_guide.md
+docs	02-Funding	funding	primary	no		405.5	Active	2026-07-10	funding	DOE Genesis Mission: Transforming Science and Energy with AI	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_foa.md
+docs	02-Funding	funding	primary	no		52.0	Active	2026-07-10	funding	ARPA-H Health Science Futures (HSF) Mission Office Innovative Solutions Opening (ISO)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_hsf_iso.md
+docs	02-Funding	funding	primary	no		181.7	Active	2026-07-10	funding	NSF Other Arrangements/Transactions Guide (OA/T Guide)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/nsf_ot_guide.md
 docs	02-Funding	funding	primary	no		415.8					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_cost_workbook_resource_sharing.txt
 docs	02-Funding	funding	primary	no		445.9					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_foa.txt
 docs	02-Funding	funding	primary	no		13.6					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_phase_i_template.txt
-docs	02-Funding	funding	primary	no		9.8				NSF Tech Labs Initiative: Webinar Slides (December 17, 2025)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/nsf_webinar_slides.md
+docs	02-Funding	funding	primary	no		10.0	Active	2026-07-10	funding	NSF Tech Labs Initiative: Webinar Slides (December 17, 2025)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/nsf_webinar_slides.md
 docs	02-Funding	funding	primary	no		16.9					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_rfa_announcement.txt
-docs	02-Funding	funding	primary	no		23.0				ARPA-H PROSPR Program: Innovative Solutions Opening (ISO)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_prospr.md
+docs	02-Funding	funding	primary	no		23.2	Active	2026-07-10	funding	ARPA-H PROSPR Program: Innovative Solutions Opening (ISO)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_prospr.md
 docs	02-Funding	code	primary	no		17.6					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/convert_to_md.py
-docs	02-Funding	funding	primary	no		16.4					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_tech_mgmt_proposal.md
+docs	02-Funding	funding	primary	no		16.6					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_tech_mgmt_proposal.md
 docs	02-Funding	funding	primary	no		63.0					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_st_challenges.txt
 docs	02-Funding	funding	primary	no		415.4					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_cost_workbook.txt
-docs	02-Funding	funding	primary	no		481.7				ARPA-H Cost Proposal Workbook (Other Transactions, Resource Sharing)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_cost_workbook_resource_sharing.md
-docs	02-Funding	funding	primary	no		13.9				DOE Genesis Mission: Phase I Application Template	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_phase_i_template.md
-docs	02-Funding	funding	primary	no		43.7				ARPA-H Proactive Health Office (PHO) Mission Office Innovative Solutions Opening (ISO)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_pho_iso.md
+docs	02-Funding	funding	primary	no		482.0	Active	2026-07-10	funding	ARPA-H Cost Proposal Workbook (Other Transactions, Resource Sharing)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_cost_workbook_resource_sharing.md
+docs	02-Funding	funding	primary	no		14.1	Active	2026-07-10	funding	DOE Genesis Mission: Phase I Application Template	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_phase_i_template.md
+docs	02-Funding	funding	primary	no		43.9	Active	2026-07-10	funding	ARPA-H Proactive Health Office (PHO) Mission Office Innovative Solutions Opening (ISO)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_pho_iso.md
 docs	02-Funding	funding	primary	no		68.2					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_pho_iso.txt
-docs	02-Funding	funding	primary	no		24.1					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_admin_national_policy.md
-docs	02-Funding	funding	primary	no		28.4				ARPA-H EVIDENT Program: Request for Solutions (TAs 1-3)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_evident.md
-docs	02-Funding	funding	primary	no		20.7				NSF Tech Labs Initiative: Request for Information	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/nsf_tech_labs_rfi.md
-docs	02-Funding	funding	primary	no		14.1				DOE Genesis Mission: Transforming Science and Energy with AI	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_rfa_announcement.md
-docs	02-Funding	funding	primary	no		12.6					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_appendix_a_solution_summary.md
+docs	02-Funding	funding	primary	no		24.4					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_admin_national_policy.md
+docs	02-Funding	funding	primary	no		28.6	Active	2026-07-10	funding	ARPA-H EVIDENT Program: Request for Solutions (TAs 1-3)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_evident.md
+docs	02-Funding	funding	primary	no		20.9	Active	2026-07-10	funding	NSF Tech Labs Initiative: Request for Information	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/nsf_tech_labs_rfi.md
+docs	02-Funding	funding	primary	no		14.3	Active	2026-07-10	funding	DOE Genesis Mission: Transforming Science and Energy with AI	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_rfa_announcement.md
+docs	02-Funding	funding	primary	no		12.9	Active	2026-07-10	funding		repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_appendix_a_solution_summary.md
+docs	02-Funding	funding	primary	no		0.3	Archived	2026-07-10	funding, raw-source, archived	Raw source (archived, not reformatted)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/_ARCHIVED.md
 docs	02-Funding	funding	primary	no		206.1					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/nsf_ot_guide.txt
 docs	02-Funding	funding	primary	no		11.6					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_phase_ii_loi_template.txt
-docs	02-Funding	funding	primary	no		22.3					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_tdd.md
+docs	02-Funding	funding	primary	no		22.5	Active	2026-07-10	funding		repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_tdd.md
 docs	02-Funding	funding	primary	no		12.4					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/nsf_webinar_slides.txt
-docs	02-Funding	funding	primary	no		481.1				ARPA-H Cost Proposal Workbook (Other Transactions)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_cost_workbook.md
-docs	02-Funding	funding	primary	no		12.6					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_cost_proposal.md
-docs	02-Funding	funding	primary	no		11.9				DOE Genesis Mission: Phase II Letter of Intent Template	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_phase_ii_loi_template.md
-docs	02-Funding	funding	primary	no		56.3				DOE Genesis Mission: National Science and Technology Challenges	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_st_challenges.md
+docs	02-Funding	funding	primary	no		481.3	Active	2026-07-10	funding	ARPA-H Cost Proposal Workbook (Other Transactions)	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_cost_workbook.md
+docs	02-Funding	funding	primary	no		12.9					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_cost_proposal.md
+docs	02-Funding	funding	primary	no		12.1	Active	2026-07-10	funding	DOE Genesis Mission: Phase II Letter of Intent Template	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_phase_ii_loi_template.md
+docs	02-Funding	funding	primary	no		56.5	Active	2026-07-10	funding	DOE Genesis Mission: National Science and Technology Challenges	repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/doe_st_challenges.md
 docs	02-Funding	funding	primary	no		70.2					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_hsf_iso.txt
 docs	02-Funding	code	primary	no		21.8					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/convert_isos_v2.py
 docs	02-Funding	funding	primary	no		20.6					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/nsf_tech_labs_rfi.txt
-docs	02-Funding	grant-section	agent	no		3.5				Grant-Alignment Map (agent brief)	repos/cytognosis/docs/02-Funding/strategy/grant-alignment-map_prompt.md
-docs	02-Funding	grant-section	primary	no		7.8				Grant-Alignment Map (technical)	repos/cytognosis/docs/02-Funding/strategy/grant-alignment-map.md
-docs	02-Funding	funding	primary	no		12.3				Grant Pipeline — Testing Strategy	repos/cytognosis/docs/02-Funding/testing/testing_strategy.md
+docs	02-Funding	grant-section	agent	no		3.7	Active	2026-07-10	funding	Grant-Alignment Map (agent brief)	repos/cytognosis/docs/02-Funding/strategy/grant-alignment-map_prompt.md
+docs	02-Funding	grant-section	primary	no		8.0	Active	2026-07-10	funding	Grant-Alignment Map (technical)	repos/cytognosis/docs/02-Funding/strategy/grant-alignment-map.md
+docs	02-Funding	funding	primary	no		12.5	Active	2026-07-10	funding	Grant Pipeline — Testing Strategy	repos/cytognosis/docs/02-Funding/testing/testing_strategy.md
+docs	02-Funding	funding	archive	no		1.0	Active	2026-07-10	funding	Funding Opportunities	repos/cytognosis/docs/02-Funding/_archive/opportunities-README.md
 docs	03-Products	product-spec	primary	no		2.8				Cytoverse: science foundation	repos/cytognosis/docs/03-Products/Cytoverse/science-foundation.md
 docs	03-Products	product-spec	primary	no		15.8				Integration Details: DagsHub, LaminDB, redun, DVC, scDataLoader, TileDB	repos/cytognosis/docs/03-Products/Cytoverse/integration-details.md
 docs	03-Products	product-spec	primary	no		36.5				Cytognosis Platform: Unified Design & Requirements	repos/cytognosis/docs/03-Products/Cytoverse/platform-design.md
@@ -885,19 +887,17 @@ docs	05-Research	research	primary	no		14.5				Cytognosis fMRI pipeline: nominate
 docs	05-Research	readme	primary	no		7.0				Neuroverse Program	repos/cytognosis/docs/05-Research/neuroverse/README.md
 docs	05-Research	research	primary	no		87.5				Cytognosis Neurobehavioral Phenotype Feature Space: Design Reference (Part 2)	repos/cytognosis/docs/05-Research/neuroverse/neurobehavioral-phenotype-feature-space.md
 docs	05-Research	research	primary	no		6.0				Neuroverse — Action Plan	repos/cytognosis/docs/05-Research/neuroverse/action-plan.md
-docs	05-Research	research	readable	no		2.5				Multimodal co-embedding (readable)	repos/cytognosis/docs/05-Research/neuroverse/multimodal-coembedding.readable.md
-docs	05-Research	research	readable	no		2.4				Neurobehavioral phenotype feature space (readable)	repos/cytognosis/docs/05-Research/neuroverse/neurobehavioral-phenotype-feature-space.readable.md
+docs	05-Research	research	agent	no		2.7				Multimodal co-embedding (agent brief)	repos/cytognosis/docs/05-Research/neuroverse/multimodal-coembedding_prompt.md
 docs	05-Research	research	primary	no		22.6				Cytognosis Python defaults for neuroimaging and neuroelectrophysiology (2026)	repos/cytognosis/docs/05-Research/neuroverse/neuroimaging-python-stack-defaults.md
 docs	05-Research	research	primary	no		78.4				CDISC Questionnaires, Ratings and Scales (QRS): Comprehensive Reference	repos/cytognosis/docs/05-Research/neuroverse/cdisc-qrs-instrument-reference.md
 docs	05-Research	research	primary	no		191.5				Cytognosis Foundation Master Dataset Curation	repos/cytognosis/docs/05-Research/neuroverse/master-dataset-curation.md
 docs	05-Research	research	primary	no		23.5	Active	2026-06-14	neuroverse, pipeline, research, report	Cytognosis / Neuroverse Real-Data Phenotype Projection and Archetypal-Analysis Report — v0	repos/cytognosis/docs/05-Research/neuroverse/pipeline-report-v0.md
-docs	05-Research	research	agent	no		2.6				Multimodal co-embedding (agent brief)	repos/cytognosis/docs/05-Research/neuroverse/multimodal-coembedding.agent.md
 docs	05-Research	research	primary	no		9.0				Neuroverse — Datasets, Cohorts & Modalities	repos/cytognosis/docs/05-Research/neuroverse/datasets-cohorts.md
 docs	05-Research	research	primary	no		42.5					repos/cytognosis/docs/05-Research/neuroverse/fmri-methods-review.md
 docs	05-Research	research	primary	no		41.1				Addendum: Four Deep Dives	repos/cytognosis/docs/05-Research/neuroverse/multimodal-coembedding-addendum.md
 docs	05-Research	research	primary	no		50.9				Multimodal Co-Embedding for Multi-Scale Patient Data	repos/cytognosis/docs/05-Research/neuroverse/multimodal-coembedding-methods-review.md
+docs	05-Research	research	agent	no		2.7				Neurobehavioral phenotype feature space (agent brief)	repos/cytognosis/docs/05-Research/neuroverse/neurobehavioral-phenotype-feature-space_prompt.md
 docs	05-Research	research	primary	no		8.3				Neuroverse — Infrastructure & Data Environment	repos/cytognosis/docs/05-Research/neuroverse/infrastructure.md
-docs	05-Research	research	agent	no		2.6				Neurobehavioral phenotype feature space (agent brief)	repos/cytognosis/docs/05-Research/neuroverse/neurobehavioral-phenotype-feature-space.agent.md
 docs	05-Research	research	primary	no		50.1				Unified Schema Architecture for Cytognosis: Body, Sensors, Data, Models	repos/cytognosis/docs/05-Research/neuroverse/schema-survey/unified-report.md
 docs	05-Research	readme	primary	no		9.2				Schemas for Models, Sensors, Data, and the Human Body: Survey and Recommended Stack	repos/cytognosis/docs/05-Research/neuroverse/schema-survey/README.md
 docs	05-Research	research	primary	no		18.1				The Human Body as Reference: HRA, HuBMAP, and the Spatial Scaffold	repos/cytognosis/docs/05-Research/neuroverse/schema-survey/human-body.md
@@ -1606,7 +1606,7 @@ project:Refactor	(root)	other	primary	no		6.9				Master Drive Plan — Consolida
 project:Refactor	(root)	other	primary	no		3.2				Consolidation Status — 2026-07-07 (after Antigravity round 2)	Claude/Projects/Refactor/STATUS_2026-07-07.md
 project:Refactor	(root)	other	primary	no		4.4				Duplicate Document Manifest (Claude Projects, non-design)	Claude/Projects/Refactor/DEDUP-MANIFEST_2026-07-09.md
 project:Refactor	(root)	other	primary	no		10.9				Pre-Antigravity-Update Repo Checkpoint Prompt	Claude/Projects/Refactor/repo-checkpoint-prompt.md
-project:Refactor	(root)	other	primary	no		1.8				Where We Are, in Plain Words	Claude/Projects/Refactor/STATUS-SIMPLE.md
+project:Refactor	(root)	other	primary	no		2.1				Where We Are, in Plain Words	Claude/Projects/Refactor/STATUS-SIMPLE.md
 project:Refactor	(root)	other	primary	no		18.2				Antigravity Wave-1 Review: Comments Before Execution	Claude/Projects/Refactor/ANTIGRAVITY-WAVE1-REVIEW_2026-07-08.md
 project:Refactor	(root)	other	primary	no		19.4				Cytognosis Consolidation Program; Full History Reconstruction	Claude/Projects/Refactor/CONSOLIDATION-TIMELINE_2026-07-08.md
 project:Refactor	(root)	other	primary	no		1.4				Finalize Blueprint A: within-project cleanup (deterministic; no docs-repo writes)	Claude/Projects/Refactor/FINALIZE-BLUEPRINT-A.md

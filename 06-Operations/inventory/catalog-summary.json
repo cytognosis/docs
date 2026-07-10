@@ -18,10 +18,10 @@
   },
   "docs_by_section": {
     "04-Engineering": 353,
-    "02-Funding": 187,
+    "02-Funding": 189,
     "03-Products": 154,
     "01-Strategy": 117,
-    "05-Research": 107,
+    "05-Research": 105,
     "06-Operations": 40,
     "00-Inbox": 6,
     "07-Design": 5,
@@ -34,8 +34,8 @@
     "design": 786,
     "other": 636,
     "engineering": 277,
-    "funding": 163,
-    "research": 162,
+    "funding": 165,
+    "research": 160,
     "code": 156,
     "product-spec": 146,
     "strategy": 144,
@@ -55,11 +55,11 @@
   },
   "by_variant": {
     "primary": 3489,
-    "archive": 202,
-    "simple": 27,
+    "archive": 203,
+    "simple": 28,
     "agent": 24,
-    "readable": 18
+    "readable": 16
   },
-  "md_with_std_header": 334,
+  "md_with_std_header": 462,
   "md_total": 1806
 }
