@@ -1,0 +1,32 @@
+flowchart TB
+    subgraph T1["Tier 1 · Perception · phone"]
+        T1A["On-device LLM<br/>Gemma family or equivalent ≤3B"]
+        T1B["Bidirectional voice interface<br/>speech-to-speech model class"]
+        T1C["Crisis-detection<br/>hard-coded"]
+        T1D["Conversational memory<br/>structured, time-tagged"]
+    end
+    subgraph T2["Tier 2 · Local compute · personal node"]
+        T2A["Dedicated local-compute device<br/>personal computer, laptop,<br/>or future Alexa-style appliance"]
+        T2B["Long-term semantic memory<br/>vector store + reasoning"]
+        T2C["Causal recommendation engine"]
+        T2D["Sensor aggregation<br/>+ multimodal fusion"]
+    end
+    subgraph T3["Tier 3 · Distributed substrate · community"]
+        T3A["Decentralized storage<br/>BitTorrent / IPFS class"]
+        T3B["Consensus-based<br/>peer-to-peer distribution"]
+        T3C["Federated-learning<br/>encrypted-embedding aggregation"]
+    end
+    subgraph T4["Tier 4 · Cytognosis layer · central"]
+        T4A["Foundation training<br/>cluster"]
+        T4B["Cross-patient pattern<br/>discovery"]
+        T4C["Map updates → all tiers<br/>periodic + event-driven"]
+    end
+    T1 -->|local-only by default<br/>opt-in to share derived signals| T2
+    T2 -->|encrypted, anonymized<br/>embeddings only<br/>granular consent| T3
+    T3 -->|aggregated, DP-bounded,<br/>post-quantum encrypted| T4
+    T4 -.->|model updates<br/>open releases| T1
+    T4 -.->|model updates<br/>open releases| T2
+    style T1 fill:#3B7DD6,color:#fff
+    style T2 fill:#14A3A3,color:#fff
+    style T3 fill:#8B3FC7,color:#fff
+    style T4 fill:#5145A8,color:#fff

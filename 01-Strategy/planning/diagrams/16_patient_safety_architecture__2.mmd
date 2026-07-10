@@ -1,0 +1,11 @@
+flowchart LR
+    USER[User]
+    USER -->|writes consent records| CON[Consent ledger<br/>on user device<br/>also synced encrypted]
+    CON -->|enforces at runtime| TIER[Tier 2 navigator<br/>checks consent<br/>before any data flow]
+    TIER --> TIER3[Tier 3 substrate<br/>only sees what<br/>consent permits]
+    TIER --> TIER4[Tier 4 central<br/>only receives what<br/>consent permits]
+    USER -->|can revoke| CON
+    CON -.->|revocation propagates<br/>to derived data deletion| TIER3
+    CON -.-> TIER4
+    style USER fill:#E0309E,color:#fff
+    style CON fill:#14A3A3,color:#fff

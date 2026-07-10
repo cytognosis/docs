@@ -1,0 +1,17 @@
+flowchart TB
+    subgraph MODES["Three navigation modes"]
+        DEF["<b>Defensive · protective</b><br/>What to avoid<br/>(prevent worsening)"]
+        COR["<b>Corrective · therapeutic</b><br/>How to reverse<br/>(restore desired state)"]
+        SUP["<b>Supportive</b><br/>How to cope<br/>(when reversal isn't possible)"]
+    end
+    INPUTS[Health-state coordinates<br/>+ personal history<br/>+ population priors<br/>+ genetic factors]
+    INPUTS --> DEF
+    INPUTS --> COR
+    INPUTS --> SUP
+    DEF --> OUTPUT[Personalized<br/>causal navigation]
+    COR --> OUTPUT
+    SUP --> OUTPUT
+    style DEF fill:#3B7DD6,color:#fff
+    style COR fill:#8B3FC7,color:#fff
+    style SUP fill:#E0309E,color:#fff
+    style OUTPUT fill:#14A3A3,color:#fff

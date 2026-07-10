@@ -1,0 +1,23 @@
+flowchart LR
+    subgraph INPUTS["Three forms of data feed the platform"]
+        I1[Phenotypic outputs<br/>neurobehavioral shifts<br/>physical symptoms<br/>physiological readouts]
+        I2[Intermediate endophenotypes<br/>connectomics<br/>molecular biomarkers<br/>cellular signatures]
+        I3[Interventions<br/>lifestyle choices<br/>medications<br/>therapy<br/>environmental factors]
+    end
+    subgraph PLATFORM["The platform"]
+        direction TB
+        MAP["<b>Cytoverse</b> · the map<br/>continuous multimodal coordinates<br/>across micro · meso · macro scales"]
+        SENSOR["<b>Cytoscope</b> · the sensor<br/>universal sensor adapter<br/>clinical-grade + wearable"]
+        NAV["<b>Cytonome</b> · the navigator<br/>causal recommendation<br/>defensive · corrective · supportive"]
+        SENSOR -->|individual coordinates| MAP
+        MAP -->|map state| NAV
+        NAV -->|recommendations| OUT
+        I1 --> SENSOR
+        I2 --> SENSOR
+        I3 --> NAV
+    end
+    OUT[Personalized<br/>health navigation<br/>across decades]
+    style MAP fill:#3B7DD6,color:#fff
+    style SENSOR fill:#14A3A3,color:#fff
+    style NAV fill:#8B3FC7,color:#fff
+    style OUT fill:#E0309E,color:#fff

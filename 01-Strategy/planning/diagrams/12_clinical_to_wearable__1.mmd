@@ -1,0 +1,22 @@
+flowchart LR
+    subgraph PERSON["Same individual"]
+        FMRI["fMRI session<br/>(quarterly)"]
+        EEG_R["Research EEG<br/>g.Nautilus<br/>(quarterly)"]
+        FNIRS["fNIRS headset<br/>(daily)"]
+        EEG_C["Consumer EEG<br/>Muse / Emotiv<br/>(daily)"]
+        WEAR["Oura, Apple Watch<br/>(continuous)"]
+        VOICE["Conversation<br/>(daily, on Cytonome)"]
+        SCALES["PHQ-9, GAD-7<br/>(weekly)"]
+    end
+    FMRI --> ALIGN1[fMRI ↔ fNIRS<br/>alignment model]
+    FNIRS --> ALIGN1
+    EEG_R --> ALIGN2[Research ↔ consumer EEG<br/>alignment model]
+    EEG_C --> ALIGN2
+    SCALES --> ALIGN3[Scales ↔ conversation<br/>alignment model]
+    VOICE --> ALIGN3
+    WEAR --> ALIGN4[Multimodal physiology<br/>fusion model]
+    style PERSON fill:#3B7DD6,color:#fff
+    style ALIGN1 fill:#8B3FC7,color:#fff
+    style ALIGN2 fill:#8B3FC7,color:#fff
+    style ALIGN3 fill:#8B3FC7,color:#fff
+    style ALIGN4 fill:#8B3FC7,color:#fff

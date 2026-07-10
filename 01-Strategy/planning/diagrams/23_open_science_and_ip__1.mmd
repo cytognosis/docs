@@ -1,0 +1,35 @@
+flowchart LR
+    subgraph PRE["Pre-36m artifacts"]
+        P1[All code · Apache 2.0]
+        P2[All weights · Apache 2.0 / OpenRAIL-M]
+        P3[All datasets · CC0 / CC BY 4.0 / controlled access for sensitive subjects]
+        P4[Documentation · CC BY 4.0]
+        P5[UBAP spec · perpetual open]
+    end
+    subgraph BIF["36m boundary"]
+        BR[Foundation Board ratifies<br/>PAC sign-off<br/>Bylaws Article VI applies]
+    end
+    subgraph POST["Post-36m artifacts"]
+        direction TB
+        subgraph OPEN["Foundation track · OPEN"]
+            O1[Cytoverse map releases · annual<br/>Apache 2.0 / CC BY 4.0]
+            O2[Disease-axis discoveries · open<br/>publication]
+            O3[Open clinical software · Apache 2.0]
+            O4[Cross-modal alignment models<br/>public-data plus core-team-pilot trained]
+        end
+        subgraph PROP["PBC track · PROPRIETARY"]
+            P6[Continuous individual<br/>tracking dataset]
+            P7[Personalized navigation engine<br/>cohort-trained]
+            P8[Cytoscope wearable v1+ hardware]
+            P9[Cytonome regulated product]
+        end
+    end
+    PRE --> BIF
+    BIF --> OPEN
+    BIF --> PROP
+    PROP -.->|royalty stream| FOUND[Foundation operations]
+    PROP -.->|aggregated insights<br/>DP-bounded · PAC-approved| OPEN
+    style PRE fill:#3B7DD6,color:#fff
+    style OPEN fill:#3B7DD6,color:#fff
+    style PROP fill:#8B3FC7,color:#fff
+    style BIF fill:#E0309E,color:#fff

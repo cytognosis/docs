@@ -1,0 +1,29 @@
+flowchart LR
+    subgraph CAT["Risk severity matrix"]
+        L["Likelihood<br/>(Low / Med / High)"]
+        I["Impact<br/>(Low / Med / High / Catastrophic)"]
+    end
+    subgraph H["High priority (likelihood × impact)"]
+        H1[Scientific: cross-scale imputation fails]
+        H2[Regulatory: FDA pathway unclear]
+        H3[Financial: single-source concentration]
+        H4[Helix: H1 to H2 transition fails]
+        H5[Talent: cross-scale expertise rare]
+        H6[Bifurcation policy not Board-ratified]
+    end
+    subgraph M["Medium priority"]
+        M1[Privacy single re-ID incident]
+        M2[Mission drift post-PBC]
+        M3[fNIRS-to-fMRI alignment too lossy]
+        M4[Equity gap in alignment models]
+        M5[Cellular FM bandwidth constraint]
+        M6[PAC and operational deadlock]
+    end
+    subgraph L_PRI["Lower priority"]
+        L1[UBAP versioning fragmentation]
+        L2[Plug-in store moderation burden]
+        L3[Hardware partner pivots]
+    end
+    style H fill:#E0309E,color:#fff
+    style M fill:#8B3FC7,color:#fff
+    style L_PRI fill:#3B7DD6,color:#fff

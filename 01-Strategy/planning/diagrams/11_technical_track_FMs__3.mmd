@@ -1,0 +1,17 @@
+flowchart LR
+    subgraph SCPRINT["scPrint2 / TranscriptFormer · static dictionary"]
+        direction TB
+        ESM1[Molecular FM<br/>FROZEN]
+        CELL1[Cellular FM]
+        ESM1 -->|gene embeddings<br/>looked up at train time| CELL1
+    end
+    subgraph CYTOG["Cytognosis · end-to-end multi-scale"]
+        direction TB
+        ESM2[Molecular FM<br/>TRAINABLE]
+        CROSS[Cross-resolution<br/>attention bridges]
+        CELL2[Cellular FM]
+        ESM2 <-->|gradient flow<br/>both directions| CROSS
+        CROSS <-->|gradient flow<br/>both directions| CELL2
+    end
+    style SCPRINT fill:#757575,color:#fff
+    style CYTOG fill:#8B3FC7,color:#fff

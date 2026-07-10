@@ -1,0 +1,22 @@
+flowchart TB
+    subgraph SHARED["Shared package · neuroconnectomics-core"]
+        WGC[WaveGC<br/>multi-resolution<br/>graph diffusion]
+        ALPHA[AlphaGenome-style<br/>cross-resolution<br/>attention]
+        EMBED[Standardized<br/>embedding layer<br/>interface]
+        TRAIN[Training infra:<br/>masking · objectives · eval]
+        WGC --> ALPHA
+        EMBED --> WGC
+        WGC --> TRAIN
+        ALPHA --> TRAIN
+    end
+    subgraph CELLULAR["Cellular track"]
+        CELL_MODEL[Cellular FM<br/>genes-as-units<br/>scRNA + ATAC]
+    end
+    subgraph CONNECTOMIC["Connectomic track"]
+        CONN_MODEL[Connectomic FM<br/>voxels-as-units<br/>fMRI + dMRI + PET]
+    end
+    SHARED --> CELLULAR
+    SHARED --> CONNECTOMIC
+    style SHARED fill:#3B7DD6,color:#fff
+    style CELLULAR fill:#8B3FC7,color:#fff
+    style CONNECTOMIC fill:#14A3A3,color:#fff

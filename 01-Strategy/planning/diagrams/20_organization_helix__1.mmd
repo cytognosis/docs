@@ -1,0 +1,29 @@
+flowchart TB
+    subgraph FOUND["501c3 Foundation · USA + UK"]
+        FB[Foundation Board]
+        F_CEO[CEO Mohammadi]
+        F_OPS[US HQ South San Francisco]
+        F_UK[UK office Manchester area]
+        F_PAC[Patient Advocacy Council<br/>binding rights]
+        F_SAB[Scientific Advisory Board<br/>5-7 external experts]
+        F_LEAC[Lived Experience Advisory Council]
+    end
+    subgraph PBC["PBC Subsidiary · post-Gate 1"]
+        PB[PBC Board<br/>Foundation-controlled<br/>governance majority]
+        P_CEO["PBC CEO<br/>may be Foundation CEO<br/>or separate hire"]
+        P_OPS[PBC operations<br/>continuous tracking<br/>regulated products]
+        P_VC[VC investors<br/>preferred non-control]
+    end
+    subgraph REGIONAL["Regional sister orgs · H3 line of sight"]
+        R1[LATAM]
+        R2[EU]
+        R3[Africa]
+        R4[SE Asia]
+    end
+    FOUND -->|perpetual IP license<br/>governance majority<br/>royalty stream| PBC
+    PBC -->|royalty stream funds<br/>Foundation mission| FOUND
+    FOUND -.->|federation: licensing<br/>shared infrastructure| REGIONAL
+    REGIONAL -.->|local trust + local data<br/>per regional consent| FOUND
+    style FOUND fill:#3B7DD6,color:#fff
+    style PBC fill:#8B3FC7,color:#fff
+    style REGIONAL fill:#5145A8,color:#fff

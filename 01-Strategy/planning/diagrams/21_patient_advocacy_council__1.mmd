@@ -1,0 +1,18 @@
+flowchart LR
+    PAC[Patient Advocacy Council<br/>binding governance entity]
+    BOARD[Foundation Board]
+    LEAC[Lived Experience<br/>Advisory Council]
+    SAB[Scientific Advisory<br/>Board]
+    OPS[Operations team]
+    PARTS[Participants<br/>across studies and platform]
+    PARTS -.->|representation| PAC
+    PARTS -.->|study advice| LEAC
+    PAC -->|binding decisions on<br/>participant-impacting matters| OPS
+    PAC -->|escalates on policy| BOARD
+    LEAC -->|study design input| OPS
+    SAB -->|scientific input| OPS
+    BOARD -->|charter, oversight| PAC
+    style PAC fill:#E0309E,color:#fff
+    style BOARD fill:#5145A8,color:#fff
+    style LEAC fill:#8B3FC7,color:#fff
+    style SAB fill:#3B7DD6,color:#fff

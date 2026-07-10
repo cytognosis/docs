@@ -1,0 +1,35 @@
+flowchart TB
+    subgraph PRE["Pre-36m · OPEN TRACK · Foundation perpetually owns"]
+        direction LR
+        P1A["Cytoverse foundation models<br/>(cellular + connectomic + behavioral)<br/>Apache 2.0 + CC BY 4.0"]
+        P1B["Clinical/research datasets<br/>(public + consortium-derived)<br/>CC BY 4.0 / OpenRAIL-M as appropriate"]
+        P1C["Cross-modal alignment models<br/>(fMRI ↔ fNIRS, etc.)<br/>Apache 2.0"]
+        P1D["UBAP universal sensor adapter spec"]
+        P1E["Open methods, schemas,<br/>release-checklist tooling"]
+    end
+    subgraph BIF["36-month bifurcation gate · Year 4 quarter 1"]
+        BG["Foundation Board ratifies bifurcation policy<br/>Patient Advocacy Council confirms boundary<br/>IP licensing terms vetted by counsel"]
+    end
+    subgraph POST["Post-36m · DUAL TRACK"]
+        direction LR
+        subgraph OPEN["OPEN clinical track · Foundation continues"]
+            O1["Cytoverse map<br/>annual major releases"]
+            O2["Disease-axis discoveries<br/>and biotype validation"]
+            O3["Open clinical software<br/>and adoption support"]
+        end
+        subgraph PROP["PROPRIETARY tracking + navigation · PBC after Gate 1"]
+            P2A["Continuous individual<br/>tracking dataset<br/>(paired clinical + wearable)"]
+            P2B["Personalized navigation<br/>engine + memory module"]
+            P2C["Cytoscope wearable<br/>hardware lineage"]
+            P2D["Cytonome on-device<br/>regulated product"]
+        end
+    end
+    PRE --> BIF
+    BIF --> OPEN
+    BIF --> PROP
+    OPEN -.->|Map updates feed back to navigator| PROP
+    PROP -.->|Aggregated, consented insights<br/>flow back to open map| OPEN
+    style PRE fill:#3B7DD6,color:#fff
+    style OPEN fill:#3B7DD6,color:#fff
+    style PROP fill:#8B3FC7,color:#fff
+    style BIF fill:#E0309E,color:#fff

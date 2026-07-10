@@ -1,0 +1,24 @@
+flowchart TB
+    subgraph H1["H1 funding · Foundation only · non-dilutive"]
+        H1F["Y1-Y5 target<br/>$30 to 50M cumulative"]
+        H1P[Astera · Google.org Impact ·<br/>EA Fund · Convergent · Wellcome ·<br/>ARPA-H · NIH · NSF · Gates]
+    end
+    subgraph G1["Gate 1 · Y5"]
+        G1B[Foundation continues non-dilutive]
+        G1V[PBC opens VC raise]
+    end
+    subgraph H2["H2 funding · dual-track"]
+        H2F["Foundation Y5-Y10 target<br/>$25 to 75M (continues non-dilutive)"]
+        H2P["PBC Y5-Y10 target<br/>$50 to 100M VC"]
+        H2R[Royalty stream from PBC<br/>to Foundation begins]
+    end
+    subgraph H3["H3 funding · regional federation"]
+        H3F[Foundation: stable mission funding]
+        H3P[PBC: self-sustaining]
+        H3R[Regional: regional philanthropy<br/>+ Foundation pass-through]
+    end
+    H1 --> G1 --> H2 --> H3
+    style H1 fill:#3B7DD6,color:#fff
+    style G1 fill:#E0309E,color:#fff
+    style H2 fill:#8B3FC7,color:#fff
+    style H3 fill:#5145A8,color:#fff

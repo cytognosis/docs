@@ -1,0 +1,22 @@
+flowchart TB
+    subgraph DATA["Three forms of data the platform integrates"]
+        direction LR
+        OUT["<b>Phenotypic outputs</b><br/>(observable consequences)<br/>neurobehavioral shifts<br/>physical symptoms<br/>physiological state<br/>cognitive performance"]
+        MED["<b>Intermediate endophenotypes</b><br/>(mediator variables)<br/>connectomics<br/>cellular signatures<br/>molecular biomarkers<br/>neurochemistry"]
+        IN["<b>Interventions</b><br/>(actions and exposures)<br/>lifestyle choices<br/>medications<br/>therapy<br/>environmental factors<br/>social interactions"]
+    end
+    GENO[Genetic factors<br/>WGS at baseline<br/>distilled per individual<br/>via centralized genotypic FM]
+    MAP["<b>Cytoverse</b><br/>universal multimodal<br/>multiscale coordinates<br/>(mediator)"]
+    NAV[Causal navigation<br/>recommendations]
+    GENO --> MAP
+    IN --> MAP
+    MED --> MAP
+    OUT --> MAP
+    MAP --> NAV
+    GENO -.->|context for personalization| NAV
+    IN -.->|input space| NAV
+    OUT -.->|target space| NAV
+    style DATA fill:#3B7DD6,color:#fff
+    style MAP fill:#8B3FC7,color:#fff
+    style GENO fill:#14A3A3,color:#fff
+    style NAV fill:#E0309E,color:#fff

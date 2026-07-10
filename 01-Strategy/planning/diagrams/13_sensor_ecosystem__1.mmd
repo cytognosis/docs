@@ -1,0 +1,23 @@
+flowchart TB
+    subgraph SOURCES["Any sensor source"]
+        S1["Wearable<br/>(consumer)"]
+        S2["Wearable<br/>(research)"]
+        S3["Clinical lab<br/>(EHR or direct)"]
+        S4["Imaging center<br/>(BIDS/DICOM)"]
+        S5["LLM-based<br/>passive sensing"]
+        S6["Future programmable<br/>biosensor (Delphi)"]
+        S7["Third-party plug-in<br/>(via app store)"]
+    end
+    subgraph UBAP["UBAP · open standard"]
+        SPEC[Measurement type · unit ·<br/>uncertainty · sampling regime ·<br/>biological meaning · ontology link ·<br/>provenance · consent metadata]
+    end
+    subgraph CYTOG["Cytognosis platform"]
+        MAP[Cytoverse map]
+        NAV[Cytonome navigator]
+    end
+    SOURCES --> UBAP
+    UBAP --> MAP
+    UBAP --> NAV
+    style SOURCES fill:#3B7DD6,color:#fff
+    style UBAP fill:#14A3A3,color:#fff
+    style CYTOG fill:#8B3FC7,color:#fff

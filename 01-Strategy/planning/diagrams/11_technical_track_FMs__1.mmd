@@ -1,0 +1,18 @@
+flowchart TB
+    subgraph FRAMEWORK["Phenotypic assay framework"]
+        UNITS["Measurement units<br/>(genes for cells,<br/>voxels for connectome)"]
+        EMBED["Context-independent<br/>unit embeddings<br/>(from molecular FM, etc.)"]
+        SIGNAL["Context-specific<br/>measurements<br/>(scRNA-seq, fMRI BOLD)"]
+        EVENT["Event / condition<br/>(intervention, stimulus)"]
+        UNITS --> EMBED
+        EMBED --> NETWORK["Differentiable<br/>weighted network<br/>(KNN-sparsified for scale)"]
+        SIGNAL --> NETWORK
+        NETWORK --> WGC["WaveGC multi-resolution<br/>diffusion (Chebyshev)"]
+        WGC --> ATTENTION["AlphaGenome-style<br/>cross-resolution<br/>attention blocks"]
+        ATTENTION --> EMBEDDING["Per-sample / per-individual<br/>embedding"]
+        EVENT -.->|conditioning| ATTENTION
+    end
+    EMBEDDING --> DOWNSTREAM[Downstream task:<br/>disease label · phenotype prediction ·<br/>perturbation effect · cross-scale alignment]
+    style WGC fill:#3B7DD6,color:#fff
+    style ATTENTION fill:#8B3FC7,color:#fff
+    style EMBEDDING fill:#E0309E,color:#fff

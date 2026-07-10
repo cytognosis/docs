@@ -1,0 +1,20 @@
+flowchart TB
+    L0["L0 · Identity<br/>Vision · Mission · Values"]
+    L1["L1 · 15-year shell<br/><b>Three Horizons</b><br/>Horizons H1 H2 H3 with Gates G1 G2 G3"]
+    L2["L2 · per-horizon strategy<br/><b>OGSM</b><br/>Strategic Objectives SO-Hn.k<br/>Strategic Goals Hx.Py.Gz<br/>Strategies (Tracks T1..T15 under M1..M5)<br/>Measures KPIs · Strategic Initiatives SI-* · Milestones"]
+    L3["L3 · annual catch-ball<br/><b>Hoshin Kanri</b> X-matrix<br/>Breakthroughs × annual × priorities × targets × means"]
+    L4["L4 · quarterly execution<br/><b>OKRs</b><br/>Px.Oy.KRz"]
+    L0 --> L1 --> L2 --> L3 --> L4
+    M12["McKinsey 12-element overlay<br/>(operating model lens)"]
+    M12 -.-> L2
+    M12 -.-> L3
+    SCAN["Annual environment scan<br/>SWOT · PESTLE · VRIO"]
+    SCAN -.-> L1
+    SCAN -.-> L2
+    TRL["TRL / CRL ladders<br/>per Strategic Initiative"]
+    TRL -.-> L2
+    style L0 fill:#5145A8,color:#fff
+    style L1 fill:#8B3FC7,color:#fff
+    style L2 fill:#3B7DD6,color:#fff
+    style L3 fill:#14A3A3,color:#fff
+    style L4 fill:#E0309E,color:#fff

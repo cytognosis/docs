@@ -1,0 +1,10 @@
+flowchart LR
+    USER[Primary user]
+    USER --> ADULT[Adult relatives<br/>partner · parents · siblings]
+    USER --> KIDS[Kids · infants]
+    USER --> PETS[Pets · primarily dogs]
+    KIDS --> KIDS_NOTE[Often more vulnerable<br/>cannot speak about pain<br/>video + ambient sensing<br/>+ developmental scales]
+    PETS --> PETS_NOTE[Open datasets available<br/>genotyping accessible<br/>psychiatric manifestations<br/>often map to human]
+    style USER fill:#8B3FC7,color:#fff
+    style KIDS fill:#E0309E,color:#fff
+    style PETS fill:#3B7DD6,color:#fff

@@ -1,0 +1,22 @@
+flowchart LR
+    subgraph PARTNERS["Plug-in builders"]
+        P1[Sensor company]
+        P2[Hospital lab]
+        P3[Academic group]
+        P4[Indie developer]
+        P5[Patient community]
+    end
+    subgraph STORES["Plug-in stores"]
+        OS[Open store<br/>community-maintained]
+        LIC[Licensed store<br/>Cytognosis-curated]
+    end
+    subgraph USER["End user"]
+        APP[Cytonome app]
+    end
+    PARTNERS --> OS
+    PARTNERS --> LIC
+    OS --> APP
+    LIC --> APP
+    style PARTNERS fill:#3B7DD6,color:#fff
+    style STORES fill:#14A3A3,color:#fff
+    style USER fill:#8B3FC7,color:#fff
