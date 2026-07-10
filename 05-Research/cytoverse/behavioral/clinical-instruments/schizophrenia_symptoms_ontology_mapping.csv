@@ -1,0 +1,21 @@
+Symptom,Type,HPO term,HPO ID,SNOMED CT term,SNOMED CT ID,Core dimension (direction-stripped),Direction of change,Notes
+Hallucinations (general),Positive,Hallucinations,HP:0000738,Hallucinations,7011001,Sensory perception / Perceptual processing,Generation of percepts without external stimulus (false-positive perception),Sensory experience without veridical input
+Auditory hallucinations,Positive,Auditory hallucinations,HP:0008765,Hearing voices,45846000,Auditory perception,Generation of auditory percepts without stimulus,Most common modality in schizophrenia
+Visual hallucinations,Positive,Visual hallucinations,HP:0002367,Visual hallucinations,64269007,Visual perception,Generation of visual percepts without stimulus,
+Delusions (general),Positive,Delusions,HP:0000746,Delusions,2073000,Belief formation / Reality testing,Fixation of beliefs despite disconfirming evidence,Distortion of belief content + impaired updating
+Paranoid / Persecutory delusions,Positive,Paranoid ideation,HP:0011999,Persecutory delusion,79823003,Threat appraisal / Social trust,Over-attribution of malevolent intent to others,
+Grandiose delusions,Positive,,,Grandiose delusion,28669007,Self-appraisal / Self-evaluation,Inflation of self-importance / capabilities,
+Delusions of reference,Positive,,,Delusion of reference,79955004,Self-relevance detection / Salience attribution,Over-attribution of personal relevance to neutral stimuli,Linked to aberrant salience model
+Disorganized thinking (formal thought disorder),Positive,Abnormality of mental function,HP:0011446,Disorder of thought content,29164008,Thought organization / Logical coherence,Decreased coherence and goal-directedness of thought,No specific HPO term; broader concept used
+Disorganized speech,Positive,,,Disordered speech,229723005,Verbal output organization,Decreased coherence of linguistic output,"Includes derailment, tangentiality, word salad"
+Grossly disorganized / abnormal motor behavior,Positive,Stereotypy,HP:0000733,Bizarre posturing,32392009,Goal-directed motor behavior,Loss of normal organization (purposeless / inappropriate),
+Catatonia,Positive,Catatonia,HP:0012090,Catatonia,9826008,Psychomotor activity / Motor reactivity,Severe disturbance (hypokinetic stupor OR hyperkinetic excitement),Bi-directional within the same dimension
+Psychomotor agitation,Positive,Restlessness,HP:0000711,Restlessness and agitation,274647009,Psychomotor activity / Motor arousal,Increase (excess motor activity),
+Blunted / Flat affect,Negative,,,Blunted affect,6140007,Affective expression / Emotional reactivity,Decrease (reduced facial / vocal / gestural expression),HPO has no specific blunted-affect term
+Alogia (poverty of speech),Negative,,,Poverty of speech,62024009,Verbal output / Quantity of speech,Decrease in spontaneous speech production,
+Avolition,Negative,Apathy,HP:0000741,Lack of motivation,38149007,Goal-directed motivation / Initiation of action,Decrease in initiation and persistence of behavior,HPO collapses avolition under Apathy
+Anhedonia,Negative,Anhedonia,HP:0010522,Anhedonia,91138005,Hedonic capacity / Pleasure response,Decrease in capacity to experience pleasure,"Includes both anticipatory and consummatory components"
+Asociality / Social withdrawal,Negative,,,Social withdrawal,60575008,Social engagement / Affiliative motivation,Decrease in interest in and pursuit of social interaction,
+Apathy,Negative,Apathy,HP:0000741,Apathy,84229001,Drive / Affective and motivational tone,Decrease in interest / responsiveness across domains,Overlaps with avolition; HPO uses one umbrella term
+Attentional impairment,Cognitive,Impaired ability to concentrate,HP:0030212,Difficulty concentrating,8412003,Selective and sustained attention,Decrease in attentional control,Often classed separately as cognitive symptoms
+Working memory impairment,Cognitive,Impaired working memory,HP:0012828,Impaired short-term memory,52683004,Working memory capacity,Decrease in temporary information maintenance,

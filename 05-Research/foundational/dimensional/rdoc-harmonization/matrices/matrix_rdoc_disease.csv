@@ -1,0 +1,61 @@
+Domain,Construct,Subconstruct,Psychotic,Psychotic,Mood,Mood,Mood,Mood,Anxiety/OCD/Stress,Anxiety/OCD/Stress,Anxiety/OCD/Stress,Anxiety/OCD/Stress,Anxiety/OCD/Stress,Anxiety/OCD/Stress,Neurodev / SUD / PD / Tic,Neurodev / SUD / PD / Tic,Neurodev / SUD / PD / Tic,Neurodev / SUD / PD / Tic,Neurodev / SUD / PD / Tic,Neurodev / SUD / PD / Tic,Neurodev / SUD / PD / Tic,Neurodev / SUD / PD / Tic,Neurodev / SUD / PD / Tic,Neurodegenerative,Neurodegenerative,Neurodegenerative,Neurodegenerative,Neurodegenerative,Neurodegenerative,Neurodegenerative,Epilepsy,Epilepsy,Epilepsy,Epilepsy,Epilepsy
+,,,Schizophrenia,Schizoaffective disorder,Bipolar I disorder,Bipolar II disorder,Major depressive disorder,Persistent depressive disorder (dysthymia),Generalized anxiety disorder,Panic disorder,Social anxiety disorder,Specific phobia,Post-traumatic stress disorder,Obsessive-compulsive disorder,Attention deficit hyperactivity disorder,Autism spectrum disorder,Anorexia nervosa,Bulimia nervosa,Alcohol use disorder,Opioid use disorder,Borderline personality disorder,Antisocial personality disorder,Tourette syndrome,Alzheimer disease,Parkinson disease,Huntington disease,Frontotemporal dementia,Dementia with Lewy bodies,Amyotrophic lateral sclerosis,Multiple sclerosis,Epilepsy,Temporal lobe epilepsy,Idiopathic generalized epilepsy,Juvenile myoclonic epilepsy,Dravet syndrome
+,,,MONDO:0005090,MONDO:0005220,MONDO:0004985,MONDO:0008996,MONDO:0002009,MONDO:0001942,MONDO:0005618,MONDO:0005340,MONDO:0002052,MONDO:0005570,MONDO:0005711,MONDO:0005491,MONDO:0007743,MONDO:0005258,MONDO:0005351,MONDO:0005509,MONDO:0007079,MONDO:0005617,MONDO:0005482,MONDO:0005232,MONDO:0005222,MONDO:0004975,MONDO:0005180,MONDO:0007739,MONDO:0017276,MONDO:0007488,MONDO:0004976,MONDO:0005301,MONDO:0005027,MONDO:0019320,MONDO:0021018,MONDO:0008419,MONDO:0100135
+Negative Valence Systems,"Acute Threat (""Fear"")",,0,0,0,0,0,0,0,+0.850,+0.600,+0.900,+0.850,0,0,0,+0.700,0,0,0,+0.850,-0.750,0,0,0,0,0,0,0,0,+0.450,+0.700,0,0,0
+Negative Valence Systems,"Potential Threat (""Anxiety"")",,0,0,0,0,0,0,+0.900,+0.550,+0.850,+0.400,0,+0.700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,+0.500,0,0,0,+0.400
+Negative Valence Systems,Sustained Threat,,0,0,0,+0.600,+0.650,+0.550,+0.550,0,0,0,+0.900,0,0,0,0,0,0,+0.700,+0.700,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Negative Valence Systems,Loss,,0,+0.750,+0.750,+0.750,+0.850,+0.650,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Negative Valence Systems,Frustrative Nonreward,,0,0,+0.700,+0.550,0,0,0,0,0,0,0,0,0,0,0,+0.550,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Responsiveness,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Responsiveness,Reward Anticipation,-0.850,-0.550,+0.150,-0.050,-0.900,-0.550,0,0,0,0,0,0,0,0,0,0,-0.750,-0.650,0,0,0,-0.500,-0.700,-0.600,-0.700,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Responsiveness,Initial Response to Reward,-0.500,0,+0.100,-0.050,-0.850,-0.500,0,0,0,0,0,0,0,0,-0.800,+0.700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Responsiveness,Reward Satiation,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.650,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Learning,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Learning,Probabilistic and Reinforcement Learning,0,0,0,0,-0.750,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Learning,Reward Prediction Error,-0.750,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,+0.750,0,0,+0.650,0,0,0,0,0,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Learning,Habit - PVS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,+0.900,+0.850,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Valuation,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Valuation,Reward (probability),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Valuation,Delay,0,0,-0.650,-0.550,0,0,0,0,0,0,0,0,+0.850,0,0,0,+0.800,+0.800,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Valuation,Effort,-0.800,0,+0.550,0,-0.700,0,0,0,0,0,0,0,0,0,-0.600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cognitive Systems,Attention,,-0.900,-0.800,-0.700,-0.600,-0.700,0,-0.550,0,0,+0.350,-0.850,0,-0.950,0,0,0,0,0,0,0,0,-0.700,-0.550,0,0,-0.850,0,-0.700,-0.500,0,-0.350,-0.350,-0.750
+Cognitive Systems,Perception,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cognitive Systems,Perception,Visual Perception,-0.550,0,0,0,0,0,0,0,0,0,0,0,0,+0.550,0,0,0,0,0,0,0,+0.400,+0.600,0,0,+0.200,0,-0.750,0,+0.400,0,0,0
+Cognitive Systems,Perception,Auditory Perception,+0.950,+0.900,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cognitive Systems,Perception,Olfactory/Somatosensory/Multimodal Perception,0,0,0,0,0,0,0,0,0,0,0,0,0,+0.700,-0.600,0,0,0,0,0,+0.650,0,0,0,0,0,0,0,0,+0.650,0,0,0
+Cognitive Systems,Declarative Memory,,-0.950,-0.850,-0.750,-0.650,-0.550,0,0,0,0,0,-0.200,0,0,0,0,0,0,0,0,0,0,-0.950,0,0,0,-0.500,0,0,-0.550,-0.800,-0.300,0,-0.850
+Cognitive Systems,Language,,-0.700,-0.600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.700,0,0,0,0,0,0,0,-0.500,0,0,-0.850
+Cognitive Systems,Cognitive Control,,0,0,-0.750,-0.650,-0.750,-0.500,0,-0.350,0,0,-0.650,-0.600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cognitive Systems,Cognitive Control,"Goal Selection; Updating, Representation, and Maintenance",-0.900,-0.750,0,0,0,0,-0.400,0,0,0,0,0,-0.800,0,0,0,0,0,0,0,0,0,-0.700,0,0,-0.700,-0.500,0,-0.500,-0.350,-0.400,-0.600,0
+Cognitive Systems,Cognitive Control,Response Selection; Inhibition/Suppression,-0.700,0,0,0,0,0,0,0,0,0,0,-0.900,-0.900,0,+0.700,-0.850,-0.850,-0.750,-0.700,-0.750,-0.550,0,0,-0.750,-0.850,0,0,0,0,0,0,-0.600,0
+Cognitive Systems,Cognitive Control,Performance Monitoring,-0.750,0,0,0,0,0,0,0,0,0,0,+0.700,-0.700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cognitive Systems,Working Memory,,0,0,-0.700,-0.600,-0.600,0,0,0,0,0,-0.600,0,0,0,0,0,0,0,0,0,0,0,0,-0.650,0,0,0,-0.700,-0.450,0,0,0,-0.800
+Cognitive Systems,Working Memory,Active Maintenance,-0.950,-0.800,0,0,0,0,0,0,0,0,0,0,-0.850,0,0,0,0,0,0,0,0,-0.700,0,0,0,0,0,0,0,0,0,0,0
+Cognitive Systems,Working Memory,Flexible Updating,-0.750,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cognitive Systems,Working Memory,Limited Capacity,-0.800,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cognitive Systems,Working Memory,Interference Control,0,0,0,0,0,0,0,0,0,0,0,-0.400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Social Processes,Affiliation and Attachment,,-0.750,0,+0.550,+0.450,-0.550,0,0,0,-0.550,0,0,0,0,-0.800,0,0,0,0,0,-0.750,0,0,0,0,-0.750,0,0,0,0,0,0,0,0
+Social Processes,Social Communication,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.650
+Social Processes,Social Communication,Reception of Facial Communication,-0.850,-0.700,-0.600,0,0,0,0,0,-0.850,0,0,0,0,-0.850,0,0,0,0,0,0,0,0,0,0,-0.700,0,0,0,0,-0.550,0,0,0
+Social Processes,Social Communication,Production of Facial Communication,-0.750,0,0,0,0,0,0,0,-0.350,0,0,0,0,-0.700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Social Processes,Social Communication,Reception of Non-Facial Communication,-0.700,0,0,0,0,0,0,0,0,0,0,0,0,-0.750,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Social Processes,Social Communication,Production of Non-Facial Communication,-0.650,0,0,0,0,0,0,0,0,0,0,0,0,-0.700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Social Processes,Perception and Understanding of Self,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Social Processes,Perception and Understanding of Self,Agency,+0.750,+0.650,0,0,0,0,0,0,0,0,0,0,0,0,-0.650,0,0,0,-0.550,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Social Processes,Perception and Understanding of Self,Self-Knowledge,-0.600,0,0,0,+0.550,0,0,0,0,0,0,0,0,0,+0.750,0,0,0,-0.850,0,0,0,0,0,-0.600,0,0,0,0,0,0,0,0
+Social Processes,Perception and Understanding of Others,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Social Processes,Perception and Understanding of Others,Animacy Perception,+0.450,0,0,0,0,0,0,0,0,0,0,0,0,-0.700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Social Processes,Perception and Understanding of Others,Action Perception,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.650,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Social Processes,Perception and Understanding of Others,Understanding Mental States,-0.950,-0.800,0,0,0,0,0,0,0,0,0,0,0,-0.900,0,0,0,0,-0.550,-0.500,0,-0.500,0,0,-0.850,0,-0.450,0,0,-0.700,0,0,0
+Arousal and Regulatory Systems,Arousal,,+0.550,0,+0.750,+0.650,0,0,0,+0.650,0,0,+0.850,0,0,0,0,0,+0.550,+0.650,+0.900,-0.850,0,0,0,0,0,0,0,-0.750,0,0,0,0,0
+Arousal and Regulatory Systems,Circadian Rhythms,,+0.650,+0.600,+0.650,+0.600,-0.550,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.550,0,0,0,0,0,0,0,0,0,0,0
+Arousal and Regulatory Systems,Sleep-Wakefulness,,+0.800,+0.800,-0.850,-0.750,-0.850,-0.550,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.600,-0.700,0,0,-0.850,0,-0.550,0,0,0,0,-0.500
+Sensorimotor Systems,Motor Actions,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sensorimotor Systems,Motor Actions,Action Planning and Selection,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sensorimotor Systems,Motor Actions,Sensorimotor Dynamics,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sensorimotor Systems,Motor Actions,Initiation,-0.700,-0.550,+0.800,+0.650,-0.650,-0.450,0,0,0,0,0,0,+0.850,0,0,0,0,0,0,0,+0.850,0,-0.950,0,0,-0.700,-0.800,0,0,0,0,0,0
+Sensorimotor Systems,Motor Actions,Execution,-0.650,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.800,0,0,0,-0.950,-0.700,0,0,0,0,-0.750
+Sensorimotor Systems,Motor Actions,Inhibition and Termination,0,0,-0.650,0,0,0,0,0,0,0,0,-0.600,-0.850,0,+0.850,0,0,0,0,-0.600,-0.850,0,0,-0.850,0,0,0,0,0,0,0,0,0
+Sensorimotor Systems,Agency and Ownership,,+0.650,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.600,0,0,0,0,0,0,0,0,0,0,0,0
+Sensorimotor Systems,Habit - Sensorimotor,,0,0,0,0,0,0,0,0,0,0,0,+0.550,0,+0.800,0,0,0,0,0,0,+0.850,0,-0.700,0,0,0,0,0,0,0,0,0,0
+Sensorimotor Systems,Innate Motor Patterns,,+0.550,0,0,0,0,0,0,0,0,+0.400,0,0,0,+0.900,0,+0.700,0,0,0,0,+0.950,0,+0.850,+0.950,+0.550,0,+0.500,0,+0.700,+0.550,+0.700,+0.850,+0.900

@@ -1,0 +1,135 @@
+element_id,rdoc_label,mapping_quality_tier,mapping_quality_score,snomed_conceptid,snomed_fsn,semantic_tag,match_quality,flag_poor_map,notes
+151347,Autonomic nervous system,High,30,78291007,Autonomic nervous system function (observable entity),observable entity,exact,no,ANS function observable entity
+158096,Bereitschaftspotential,High,30,251634004,"Bereitschafts potential, function (observable entity)",observable entity,exact,no,Bereitschaftspotential = Bereitschafts potential function
+151904,Blood pressure,High,30,364075005,Blood pressure (observable entity),observable entity,exact,no,Blood pressure observable (75367002)
+151343,Corticotropin,High,30,40789008,Adrenocorticotropic hormone (substance),substance,exact,no,ACTH = adrenocorticotropic hormone; 398662008 Corticotropin (substance) is also exact synonym
+151428,Corticotropin-releasing hormone,High,30,71971001,Corticotropin releasing factor (substance),substance,exact,no,CRH = corticotropin releasing factor/hormone substance
+151424,Electroencephalography,High,30,146484006,Electroencephalography (procedure),procedure,exact,no,Direct match
+149941,Electromyography,High,30,42803009,Electromyography (procedure),procedure,exact,no,Direct match
+151539,Galvanic skin response,High,30,24672009,"Galvanic skin response, function (observable entity)",observable entity,exact,no,Direct match
+151432,Gene expression,High,30,89551006,Gene expression (finding),finding,exact,no,Direct match
+149940,Heart Rate,High,30,364075005,Heart rate (observable entity),observable entity,exact,no,Direct match
+151348,Hypothalamic-pituitary-adrenal axis,High,30,442320004,Hypothalamic-pituitary-adrenal axis (body structure),body structure,exact,no,Direct match (body structure)
+158097,Movement-related Cortical Potentials,High,30,251633005,"Movement-related potentials, function (observable entity)",observable entity,exact,no,Direct match
+151416,Near-Infrared Spectroscopy,High,30,786901003,Near-infrared spectroscopy (procedure),procedure,exact,no,Direct match
+151433,Neural transmitters,High,30,35069000,Neurotransmitter (substance),substance,exact,no,Neural transmitters = neurotransmitter substance
+151785,Neuronal ceroid-lipofuscinoses,High,30,42012007,Neuronal ceroid lipofuscinosis (disorder),disorder,exact,no,Direct match (disorder)
+151404,Pupil dilation,High,30,123101006,Pupil dilation (finding),finding,exact,no,Direct match
+151538,Pupil size,High,30,363953003,Size of pupil (observable entity),observable entity,exact,no,Pupil size = size of pupil observable
+149947,pupillometry,High,30,1303494002,Pupillometry (procedure),procedure,exact,no,Direct match
+151387,Pupilometry,High,30,1303494002,Pupillometry (procedure),procedure,exact,no,Pupilometry = pupillometry
+151417,Tear production,High,30,64702000,"Tear production, function (observable entity)",observable entity,exact,no,Tear production function
+151442,wakefulness,High,30,27625002,Wakefulness (observable entity),observable entity,exact,no,Direct match
+151366,Adaptation/ habituation,Medium,20,416436007,"Habituation, function (observable entity)",observable entity,close,no,Habituation function; adaptation aspect not separately coded
+150912,Average cortisol levels,Medium,20,62037009,Cortisol measurement (procedure),procedure,close,no,Cortisol measurement procedure; 'average levels' not separately coded
+151905,Breathing,Medium,20,78064003,Respiratory function (observable entity),observable entity,close,no,Breathing -> respiratory function observable
+151345,Dysregulated hypothalamic-pituitary-adrenal axis,Medium,20,442762009,Hypothalamic-pituitary-adrenal axis dysfunction (disorder),disorder,close,no,HPA dysregulation -> HPA axis dysfunction disorder
+151418,Electroencephalography features,Medium,20,363859000,Electroencephalogram feature (observable entity),observable entity,close,no,EEG features -> EEG feature observable
+151363,ERP,Medium,20,251630008,"Event-related potentials, function (observable entity)",observable entity,close,no,ERP = event-related potentials function
+151365,Event-related brain potentials components,Medium,20,251630008,"Event-related potentials, function (observable entity)",observable entity,close,no,ERP components -> event-related potentials function
+149943,Eye Tracking,Medium,20,838278005,Assessment using eye tracking technology (procedure),procedure,close,no,Procedure for eye tracking assessment; closest to eye-tracking method
+157913,Eye-blink Reflex,Medium,20,363829005,Blink reflex (observable entity),observable entity,close,no,Eye-blink reflex = blink reflex observable
+151374,Functional magnetic resonance imaging,Medium,20,241603006,Magnetic resonance imaging of brain with functional imaging (procedure),procedure,close,no,fMRI -> MRI brain with functional imaging
+151427,Glucocorticoids,Medium,20,363735001,Glucocorticoids and synthetic analogs (product),product,close,no,Glucocorticoids -> product class (no plain substance hierarchy hit)
+151462,Heart Rate Change,Medium,20,361134000,Alteration in heart rate (finding),finding,close,no,Heart rate change -> alteration in heart rate finding
+157911,Hoffman Reflex,Medium,20,251560006,H-reflex (observable entity),observable entity,close,no,Hoffman reflex = H-reflex (observable entity); Hoffman's reflex (74229007) is a different finger-flexion sign
+151399,immune responses (“sickness”),Medium,20,35024006,"Immune response, function (observable entity)",observable entity,close,no,Immune response function observable
+151369,Intracortical electroencephalography,Medium,20,81906003,Electrocorticogram (procedure),procedure,close,no,Intracortical/intracranial EEG -> electrocorticography
+151410,Local cerebral blood flow changes,Medium,20,250847003,Cerebral blood flow (observable entity),observable entity,close,no,Local cerebral blood flow changes -> cerebral blood flow observable
+151431,Neural activity,Medium,20,263689005,Brain activity (observable entity),observable entity,close,no,Neural activity -> brain activity observable
+151415,Photoplethysmography (skin color measure of capillary dilation; temperature),Medium,20,72075005,Photoplethysmography (procedure),procedure,close,no,Photoplethysmography procedure
+158112,Readiness Potential,Medium,20,251634004,"Bereitschafts potential, function (observable entity)",observable entity,close,no,Readiness potential = Bereitschaftspotential = Bereitschafts potential function
+149946,Respiration,Medium,20,78064003,Respiratory function (observable entity),observable entity,close,no,Respiration as physiological function
+149944,Response accuracy,Medium,20,311545008,Processing accuracy (observable entity),observable entity,close,no,Generic processing/response accuracy observable
+151420,Scalp Motor Potentials,Medium,20,251635003,"Motor-potential, function (observable entity)",observable entity,close,no,Scalp motor potentials -> motor-potential function
+151402,Skin conductance response,Medium,20,364560009,Skin response (observable entity),observable entity,close,no,Skin conductance response -> skin response observable; galvanic skin response (24672009) also close
+151445,sleep latency,Medium,20,252567006,Sleep latency test (procedure),procedure,close,no,Sleep latency -> sleep latency test procedure
+151412,Superior colliculus,Medium,20,362395009,Entire superior colliculus of corpora quadrigemina (body structure),body structure,close,no,Superior colliculus body structure
+151368,Auditory steady-state response (ASSR),Low,10,102969006,"Auditory evoked potential, function (observable entity)",observable entity,broad,yes,ASSR specifically not coded; mapped to broader auditory evoked potential function
+151788,Blood-oxygen level-dependent activation of cortical regions,Low,10,241603006,Magnetic resonance imaging of brain with functional imaging (procedure),procedure,broad,yes,BOLD activation -> closest is functional MRI procedure; BOLD signal itself not coded
+151437,Brain metabolic activity,Low,10,263689005,Brain activity (observable entity),observable entity,broad,yes,Brain metabolic activity -> closest is brain activity observable (metabolic aspect not coded)
+151446,Capacity for wakefulness under low stimulation,Low,10,27625002,Wakefulness (observable entity),observable entity,broad,yes,Capacity for wakefulness under low stimulation -> closest is wakefulness observable
+151351,Cortical slow waves,Low,10,60984000,"Non-rapid eye movement sleep, function (observable entity)",observable entity,broad,yes,Cortical slow waves loosely relate to NREM/slow-wave sleep; not a direct match
+151423,Corticospinal facilitation (transcranial magnetic stimulation),Low,10,264603002,Transcranial magnetic stimulation of brain (procedure),procedure,broad,yes,Corticospinal facilitation not coded; mapped to TMS procedure used to elicit it
+158098,Corticospinal Tract Excitability,Low,10,1296738007,Structure of corticospinal tract (body structure),body structure,broad,yes,"Corticospinal tract excitability -> only the tract structure is coded, not excitability measure"
+151409,Electrocorticography frontal brain asymmetry,Low,10,81906003,Electrocorticogram (procedure),procedure,broad,yes,ECoG frontal asymmetry -> electrocorticography procedure (asymmetry aspect not coded)
+151434,Electroencephalography asleep sleep spindles,Low,10,18648009,Sleep electroencephalogram (procedure),procedure,broad,yes,Sleep spindles specifically not coded; mapped to sleep EEG procedure
+151509,Electroencephalography Delta Rhythms,Low,10,251499000,Frontal intermittent rhythmic delta activity (finding),finding,broad,yes,No generic 'delta rhythm' concept; closest is FIRDA (a specific pathological delta finding)
+151435,Electroencephalography slow waves,Low,10,60984000,"Non-rapid eye movement sleep, function (observable entity)",observable entity,broad,yes,EEG slow waves -> closest is NREM/slow-wave sleep function; not a direct signal concept
+151438,Electrooculography,Low,10,468523004,Electrooculograph (physical object),physical object,broad,yes,"Only the device (electrooculograph) is coded, not the EOG procedure/signal"
+149945,Facial electromyography,Low,10,42803009,Electromyography (procedure),procedure,broad,yes,"No facial-specific EMG concept; mapped to generic Electromyography. Facial muscle structure (25903009) is a body structure, not the method"
+151726,Heart rate deceleration,Low,10,361134000,Alteration in heart rate (finding),finding,broad,yes,No generic HR deceleration concept (only fetal); mapped to alteration in heart rate finding
+151403,Heart rate/blood pressure/respiration,Low,10,304495004,"Monitoring of blood pressure, temperature, pulse rate and respiratory rate (regime/therapy)",regime/therapy,broad,yes,Composite HR/BP/respiration -> closest is multi-parameter vital sign monitoring
+151789,Hypothalamic-pituitary-adrenal axis activation,Low,10,442320004,Hypothalamic-pituitary-adrenal axis (body structure),body structure,broad,yes,HPA axis activation -> mapped to HPA axis structure (activation event not coded)
+151396,Hypothalamic-pituitary-adrenal axis down-regulation,Low,10,442762009,Hypothalamic-pituitary-adrenal axis dysfunction (disorder),disorder,broad,yes,HPA down-regulation -> closest is HPA axis dysfunction disorder
+151720,N100 evoked potentials,Low,10,252776002,Evoked potentials (observable entity),observable entity,broad,yes,N100/N1 component not coded; mapped to generic evoked potentials
+151406,N170 evoked potentials,Low,10,252776002,Evoked potentials (observable entity),observable entity,broad,yes,N170 component not coded; mapped to generic evoked potentials
+151393,N200 evoked potentials,Low,10,252776002,Evoked potentials (observable entity),observable entity,broad,yes,N200/N2 component not coded; mapped to generic evoked potentials
+151407,N250 evoked potentials,Low,10,252776002,Evoked potentials (observable entity),observable entity,broad,yes,N250 component not coded; mapped to generic evoked potentials
+151383,N400 evoked potentials,Low,10,252776002,Evoked potentials (observable entity),observable entity,broad,yes,N400 component not coded; mapped to generic evoked potentials observable
+151394,N450 evoked potentials,Low,10,252776002,Evoked potentials (observable entity),observable entity,broad,yes,N450 component not coded; mapped to generic evoked potentials
+151441,Non-rapid eye movement sleep and rapid eye movement sleep,Low,10,60984000,"Non-rapid eye movement sleep, function (observable entity)",observable entity,broad,yes,Composite NREM+REM; mapped to NREM sleep function (REM not jointly coded)
+151721,P300,Low,10,260220003,P300 (P3) (qualifier value),qualifier value,broad,yes,"P300 exists only as a qualifier value, not an observable/finding"
+151421,P300s to self-relevant stimuli,Low,10,260220003,P300 (P3) (qualifier value),qualifier value,broad,yes,P300 exists only as a qualifier value; 'to self-relevant stimuli' not coded
+151370,P3a event-related potentials,Low,10,251630008,"Event-related potentials, function (observable entity)",observable entity,broad,yes,P3a subcomponent not coded; mapped to generic ERP function
+151810,P50 evoked potentials,Low,10,252776002,Evoked potentials (observable entity),observable entity,broad,yes,P50 component not coded; mapped to generic evoked potentials
+151384,P600 evoked potentials/late positivities,Low,10,252776002,Evoked potentials (observable entity),observable entity,broad,yes,P600/late positivities not coded; mapped to generic evoked potentials
+151723,Selection modulations of sensory ERP components,Low,10,251630008,"Event-related potentials, function (observable entity)",observable entity,broad,yes,Selection modulations of sensory ERP components -> generic ERP function
+151391,Short interval cortical inhibition (transcranial magnetic stimulation),Low,10,264603002,Transcranial magnetic stimulation of brain (procedure),procedure,broad,yes,Short interval cortical inhibition not coded; mapped to the TMS procedure used to measure it
+149939,Skin Conductance,Low,10,465346002,Skin electrical conductivity meter (physical object),physical object,broad,yes,Only a device concept exists; no observable for skin conductance signal itself. Closest is the measuring instrument
+151439,sleep hormones,Low,10,41199001,Melatonin (substance),substance,broad,yes,'Sleep hormones' -> represented by melatonin substance (the principal sleep hormone)
+151725,slow waves,Low,10,60984000,"Non-rapid eye movement sleep, function (observable entity)",observable entity,broad,yes,Slow waves -> closest is NREM/slow-wave sleep function
+151405,Startle reflex,Low,10,1495009,Moro reflex (observable entity),observable entity,broad,yes,Startle reflex -> closest coded reflex is Moro reflex (the infantile startle reflex)
+151786,Steady state visual evoked potential,Low,10,102966004,"Visual evoked potential, function (observable entity)",observable entity,broad,yes,Steady-state VEP specifically not coded; mapped to generic visual evoked potential function
+151787,Transient visual evoked potential,Low,10,102966004,"Visual evoked potential, function (observable entity)",observable entity,broad,yes,Transient VEP specifically not coded; mapped to generic visual evoked potential function
+151400,activation of sympathetic activity,None/Flagged,0,,,,none,yes,"'Activation of sympathetic activity' not coded (sympathetic structure exists, not the activation measure)"
+151377,Alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid-related synaptic plasticity,None/Flagged,0,,,,none,yes,AMPA-related synaptic plasticity not in SNOMED
+151385,anterior negativities,None/Flagged,0,,,,none,yes,Anterior negativities (ERP) not in SNOMED (only an unrelated anterior drawer test surfaced)
+151379,conjunction codes,None/Flagged,0,,,,none,yes,Conjunction codes (neural coding concept) not in SNOMED
+149938,Context Startle,None/Flagged,0,,,,none,yes,No SNOMED concept for context startle (research paradigm)
+158113,Efference Copy,None/Flagged,0,,,,none,yes,Efference copy / corollary discharge not in SNOMED
+151390,Electroencephalography Alfa Rhythms,None/Flagged,0,,,,none,yes,"EEG alpha rhythms as a signal not coded (only alpha biofeedback therapy exists, not the measure)"
+151507,Electroencephalography Gamma Rhythms,None/Flagged,0,,,,none,yes,EEG gamma rhythms as a signal not coded
+151388,Electroencephalography Theta Rhythms,None/Flagged,0,,,,none,yes,"EEG theta rhythms as a signal not coded (only theta biofeedback therapy exists, not the measure)"
+151436,Electroencephalography Theta Rhythms,None/Flagged,0,,,,none,yes,EEG theta rhythms as a signal not coded
+151508,Electroencephalography Theta Rhythms,None/Flagged,0,,,,none,yes,EEG theta rhythms as a signal not coded
+151346,Error-related negativity,None/Flagged,0,,,,none,yes,Error-related negativity is a research ERP component; no SNOMED concept
+151392,Error-related negativity,None/Flagged,0,,,,none,yes,Error-related negativity (ERN) is a research ERP component; no SNOMED concept
+149937,Fear Potentiated Startle,None/Flagged,0,,,,none,yes,"SOURCE NOTE: ihtsdotools Snowstorm browser host was IP-blocked (Access Denied) from this environment; mappings sourced from CSIRO Ontoserver (r4.ontoserver.csiro.au) querying the SNOMED CT International edition (900000000000207008) - authoritative, real conceptIds+FSNs. | No SNOMED concept for fear-potentiated startle (research paradigm); only 'Startle epilepsy (disorder)' which is unrelated"
+151381,frontal/temporal coordinated oscillations,None/Flagged,0,,,,none,yes,Frontal/temporal coordinated oscillations not in SNOMED
+151386,Gamma synchrony,None/Flagged,0,,,,none,yes,Gamma synchrony not in SNOMED
+151413,Heart rate variability,None/Flagged,0,,,,none,yes,Heart rate variability (adult) not coded; only fetal HRV exists (251671002). Adult HRV absent
+151398,Immune markers,None/Flagged,0,,,,none,yes,'Immune markers' not coded as a specific concept
+151375,Long-term potentiation/long-term depression,None/Flagged,0,,,,none,yes,Long-term potentiation/depression (cellular plasticity) not in SNOMED
+158101,Measurements of Cortical Inhibition,None/Flagged,0,,,,none,yes,Measurements of cortical inhibition not in SNOMED (search returned unrelated cortisol assays)
+151371,Metabolic changes,None/Flagged,0,,,,none,yes,Generic 'metabolic changes' not coded (only an unrelated hair-color disorder surfaced)
+151809,Mismatch negativity (MMN),None/Flagged,0,,,,none,yes,"Mismatch negativity (MMN, ERP) not in SNOMED (only unrelated transfusion mismatch surfaced)"
+151422,MU Suppression,None/Flagged,0,,,,none,yes,Mu suppression (mu rhythm desynchronization) not in SNOMED
+151376,N-methyl-D-aspartic acid-related synaptic plasticity,None/Flagged,0,,,,none,yes,NMDA-related synaptic plasticity not in SNOMED
+151722,N2pc,None/Flagged,0,,,,none,yes,N2pc (attention ERP component) not in SNOMED
+151724,negativity (SN),None/Flagged,0,,,,none,yes,"Selection negativity (SN, ERP) not in SNOMED"
+151411,Network dynamics,None/Flagged,0,,,,none,yes,Network dynamics (brain network) not in SNOMED
+151373,Neural oscillations,None/Flagged,0,,,,none,yes,Neural oscillations (research signal) not in SNOMED
+151349,neuroimmune,None/Flagged,0,,,,none,yes,'neuroimmune' has no specific SNOMED concept
+151364,"Oscillations (scalp EEG, LFP, and single/multi-unit)",None/Flagged,0,,,,none,yes,Composite EEG/LFP/single-unit oscillations construct; no single SNOMED concept (local field potential not coded)
+158111,Oscillatory Rhythms,None/Flagged,0,,,,none,yes,Generic 'oscillatory rhythms' (neural) not in SNOMED
+151719,P1,None/Flagged,0,,,,none,yes,P1 (visual ERP component) not in SNOMED (only blood-group P1 surfaced)
+151447,"Physiologic measures of sleepiness, homeostatic sleep drive during waking",None/Flagged,0,,,,none,yes,Physiologic measures of sleepiness/homeostatic drive during waking not coded as a unit
+151378,place cell activity,None/Flagged,0,,,,none,yes,Place cell activity not in SNOMED
+151344,Potentiated startle,None/Flagged,0,,,,none,yes,No SNOMED concept for potentiated startle (research paradigm)
+157912,Prepulse Inhibition,None/Flagged,0,,,,none,yes,Prepulse inhibition (research paradigm) not in SNOMED
+151718,processing negativity,None/Flagged,0,,,,none,yes,Processing negativity (ERP) not in SNOMED
+151350,Prolonged psychophysiological reactivity,None/Flagged,0,,,,none,yes,Prolonged psychophysiological reactivity not in SNOMED (only an unrelated depression code surfaced)
+151717,Sensory areas from peripheral to central,None/Flagged,0,,,,none,yes,'Sensory areas from peripheral to central' is not a SNOMED concept
+151395,Sex steroid changes,None/Flagged,0,,,,none,yes,Sex steroid changes not coded as a physiological measure (only transsexual/SHBG surfaced)
+151429,Sex-Specific differences in arousal,None/Flagged,0,,,,none,yes,Sex-specific differences in arousal not coded
+151448,Sex-specific sleep physiology,None/Flagged,0,,,,none,yes,Sex-specific sleep physiology not in SNOMED
+157910,Short Afferent Inhibition,None/Flagged,0,,,,none,yes,Short afferent inhibition (TMS measure) not in SNOMED
+151372,Startle and prepulse inhibition,None/Flagged,0,,,,none,yes,Startle and prepulse inhibition (research paradigm); no SNOMED concept
+151382,"subsequent memory effect (fMRI, ERP)",None/Flagged,0,,,,none,yes,Subsequent memory effect (research fMRI/ERP measure) not in SNOMED
+151444,Temporal and topographic organization of homeostatic sleep drive during sleep,None/Flagged,0,,,,none,yes,Temporal/topographic organization of homeostatic sleep drive not in SNOMED
+151443,Temporal and topographic organization of sleep dynamics,None/Flagged,0,,,,none,yes,Temporal/topographic organization of sleep dynamics not in SNOMED
+151380,up/down states,None/Flagged,0,,,,none,yes,Up/down states (cortical) not in SNOMED
+158100,Use-dependent Placticity,None/Flagged,0,,,,none,yes,Use-dependent plasticity not in SNOMED
+151397,Vagal tone,None/Flagged,0,,,,none,yes,Vagal tone not in SNOMED (only unrelated vagus disorders surfaced)
+151401,vagal withdrawal,None/Flagged,0,,,,none,yes,Vagal withdrawal not in SNOMED

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>A Plain-Language Primer: Brains, Biotypes, Sensing, and Treatment</title>
+<style>
+  :root{
+    --bg:#fafaf7;--surface:#fff;--text:#1c1c1a;--muted:#555;--faint:#888;--border:rgba(0,0,0,.12);
+    --accent:#6E62C8;--accent-d:#3C3489;
+    --c1:#378ADD;--c1b:#E6F1FB;--c2:#1D9E75;--c2b:#E1F5EE;--c3:#D85A30;--c3b:#FAECE7;--c4:#BA7517;--c4b:#FAEEDA;
+    --pos:#1D9E75;--neg:#E24B4A;--mix:#378ADD;
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --bg:#191917;--surface:#232321;--text:#f0eee8;--muted:#b6b4ac;--faint:#7a7873;--border:rgba(255,255,255,.13);
+    --accent:#AFA9EC;--accent-d:#CECBF6;
+    --c1:#85B7EB;--c1b:#16243a;--c2:#5DCAA5;--c2b:#0e2820;--c3:#F0997B;--c3b:#3a1d10;--c4:#EF9F27;--c4b:#3a2d10;
+    --pos:#5DCAA5;--neg:#F09595;--mix:#85B7EB;
+  }}
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:2rem 1rem;line-height:1.6;font-size:16px}
+  .wrap{max-width:900px;margin:0 auto}
+  h1{font-size:30px;font-weight:600;margin:0 0 .4rem;line-height:1.2}
+  h2{font-size:23px;font-weight:600;margin:2.6rem 0 .3rem;padding-top:1.2rem;border-top:2px solid var(--border)}
+  h3{font-size:18px;font-weight:600;margin:1.6rem 0 .4rem}
+  .part-num{display:inline-block;background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:2px 11px;border-radius:20px;margin-bottom:.4rem}
+  @media (prefers-color-scheme:dark){.part-num{color:#1a1a18}}
+  .lede{font-size:18px;color:var(--muted);margin:.3rem 0 1.2rem}
+  p{margin:.6rem 0}
+  .tldr{background:var(--c2b);border-left:4px solid var(--c2);border-radius:0 8px 8px 0;padding:.7rem 1rem;margin:1rem 0;font-size:15.5px}
+  .tldr b{color:var(--c2)}
+  .key{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin:1rem 0}
+  .key h4{margin:0 0 .4rem;font-size:15px;font-weight:600;color:var(--accent-d)}
+  .analogy{background:var(--c1b);border-left:4px solid var(--c1);border-radius:0 8px 8px 0;padding:.7rem 1rem;margin:1rem 0;font-size:15.5px}
+  .analogy b{color:var(--c1)}
+  .warn{background:var(--c3b);border-left:4px solid var(--c3);border-radius:0 8px 8px 0;padding:.7rem 1rem;margin:1rem 0;font-size:15.5px}
+  .warn b{color:var(--c3)}
+  table{width:100%;border-collapse:collapse;margin:1.1rem 0;font-size:14.5px}
+  th,td{text-align:left;padding:.5rem .7rem;border-bottom:1px solid var(--border);vertical-align:top}
+  th{font-weight:600;color:var(--muted);font-size:13px;background:var(--surface)}
+  svg{width:100%;height:auto;display:block;background:var(--surface);border:1px solid var(--border);border-radius:12px;margin:1rem 0}
+  .cap{font-size:13px;color:var(--faint);margin:-.4rem 0 1rem;text-align:center}
+  .toc{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;font-size:15px;columns:2;column-gap:2rem}
+  .toc a{color:var(--accent-d);text-decoration:none;line-height:1.9;display:block}
+  .toc a:hover{text-decoration:underline}
+  @media(max-width:640px){.toc{columns:1}}
+  .big-num{font-size:28px;font-weight:700;color:var(--accent)}
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:1rem 0}
+  .stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:.9rem}
+  .stat .n{font-size:24px;font-weight:700;color:var(--accent)}
+  .stat .l{font-size:13px;color:var(--muted);margin-top:2px}
+  text{font-family:inherit}
+  .glossary dt{font-weight:600;margin-top:.7rem}
+  .glossary dd{margin:0 0 .3rem;color:var(--muted);font-size:15px}
+  ul{margin:.5rem 0;padding-left:1.3rem}
+  li{margin:.3rem 0}
+  strong{font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Brains, biotypes, sensing, and treatment: a plain-language primer</h1>
+<p class="lede">Everything you need to follow the science behind a personalized brain-sensing platform, starting from zero. No prior background in neuroscience, physics, or medicine assumed.</p>
+
+<div class="tldr"><b>The one big idea.</b> People differ from each other at every biological scale: in their genes, in how their brain regions are wired together, and in the symptoms they experience. Psychiatric diagnoses are just the extreme, visible tip of this natural variation (this is the idea behind "neurodiversity"). The same diversity shows up in who responds to which treatment. The problem: medicine measures these three layers separately and crudely. The opportunity: line them up, person by person, so the right treatment reaches the right brain. This primer explains every concept you need to understand why that is hard and why it is now becoming possible.</p>
+
+<nav class="toc">
+<a href="#thesis">The big picture: three layers of diversity</a>
+<a href="#anatomy">Part 1. Neuroanatomy 101</a>
+<a href="#scales">Part 2. The three scales (micro, meso, macro)</a>
+<a href="#sensing">Part 3. How we measure the brain</a>
+<a href="#limits">Part 4. What drives the limits</a>
+<a href="#modulation">Part 5. How we change the brain</a>
+<a href="#discoveries">Part 6. The key discoveries</a>
+<a href="#multiscale">Part 7. What the big studies found</a>
+<a href="#synthesis">Part 8. Putting it together</a>
+<a href="#glossary">Glossary</a>
+</nav>
+
+<h2 id="thesis">The big picture: three layers of diversity</h2>
+<p>Imagine three transparent maps of a person, stacked on top of each other.</p>
+<svg viewBox="0 0 800 430" role="img" aria-label="Three stacked layers: molecular biology, brain circuits, and symptoms, with a treatment-response arrow connecting them.">
+  <!-- layer 1 molecules -->
+  <g>
+  <rect x="120" y="40" width="560" height="90" rx="10" fill="var(--c4b)" stroke="var(--c4)" stroke-width="1.5"/>
+  <text x="145" y="72" font-size="16" font-weight="600" fill="var(--c4)">Layer 1: Molecules and genes (micro)</text>
+  <text x="145" y="98" font-size="13.5" fill="var(--text)">BDNF / plasticity, excitation vs inhibition balance, dopamine, serotonin,</text>
+  <text x="145" y="116" font-size="13.5" fill="var(--text)">inflammation, mitochondria. The chemistry each person inherits and lives.</text>
+  </g>
+  <!-- layer 2 circuits -->
+  <g>
+  <rect x="120" y="165" width="560" height="90" rx="10" fill="var(--c1b)" stroke="var(--c1)" stroke-width="1.5"/>
+  <text x="145" y="197" font-size="16" font-weight="600" fill="var(--c1)">Layer 2: Brain circuits (meso)</text>
+  <text x="145" y="223" font-size="13.5" fill="var(--text)">Which regions are over- or under-active, and how strongly they are</text>
+  <text x="145" y="241" font-size="13.5" fill="var(--text)">wired together (the "connectome": nodes = regions, edges = connections).</text>
+  </g>
+  <!-- layer 3 symptoms -->
+  <g>
+  <rect x="120" y="290" width="560" height="90" rx="10" fill="var(--c3b)" stroke="var(--c3)" stroke-width="1.5"/>
+  <text x="145" y="322" font-size="16" font-weight="600" fill="var(--c3)">Layer 3: Symptoms and behavior (macro)</text>
+  <text x="145" y="348" font-size="13.5" fill="var(--text)">Anhedonia, anxiety, compulsions, attention. The "diagnosis" is a label</text>
+  <text x="145" y="366" font-size="13.5" fill="var(--text)">placed on a cluster of these. Extreme variation becomes a clinical name.</text>
+  </g>
+  <!-- alignment arrows -->
+  <line x1="400" y1="130" x2="400" y2="165" stroke="var(--accent)" stroke-width="2.5" marker-end="url(#ar)"/>
+  <line x1="400" y1="255" x2="400" y2="290" stroke="var(--accent)" stroke-width="2.5" marker-end="url(#ar)"/>
+  <!-- treatment arrow up the side -->
+  <path d="M60 360 L60 70" stroke="var(--c2)" stroke-width="2.5" fill="none" marker-end="url(#ar2)"/>
+  <text x="40" y="220" font-size="13" font-weight="600" fill="var(--c2)" transform="rotate(-90 40 220)" text-anchor="middle">Treatment acts here, response read everywhere</text>
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="var(--accent)"/></marker>
+    <marker id="ar2" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="var(--c2)"/></marker>
+  </defs>
+</svg>
+<p class="cap">The three layers of a person. Medicine usually measures only the bottom layer (symptoms, by asking questions). The biology that drives those symptoms, and that predicts which treatment will work, lives in the two layers above.</p>
+
+<p>Today, the three layers are measured by different specialists, at different times, with crude tools, and are never lined up for an individual. A psychiatrist sees Layer 3 (a 20-minute conversation). A geneticist might see part of Layer 1. Almost nobody sees Layer 2 (the living circuits) outside a one-time research scan. The treatment you get is chosen mostly from Layer 3 alone, which is why it works only about a third of the time on the first try.</p>
+
+<div class="key"><h4>Why "neurodiversity" is the right frame</h4>Brains vary continuously, the way height does. Most variation is normal and healthy. Clinical diagnoses are the far ends of these continua, where variation starts to cause distress or impairment. The same biological dimensions that make a diagnosis also exist, in milder form, in everyone. So a tool built to read these dimensions is not just a "disease detector"; it is a map of normal human variation, with disease at the extremes.</p></div>
+
+<h2 id="anatomy"><span class="part-num">Part 1</span><br>Neuroanatomy 101</h2>
+<div class="tldr"><b>TL;DR.</b> The brain has an outer wrinkled sheet (the cortex, where thinking and sensing happen) and deep structures buried underneath (emotion, memory, reward, relay). Regions that work together form networks. You only need to know about a dozen players to follow the whole story.</div>
+
+<svg viewBox="0 0 800 380" role="img" aria-label="Simplified side view of the brain showing cortex lobes and a few deep structures.">
+  <path d="M90 230 C90 130 200 70 340 70 C470 70 580 95 620 165 C645 215 635 270 575 295 L470 305 C440 305 410 300 380 305 C300 315 200 300 150 280 C110 262 90 250 90 230 Z" fill="var(--c1b)" stroke="var(--c1)" stroke-width="1.5"/>
+  <text x="200" y="135" font-size="14" font-weight="600" fill="var(--c1)">cortex (outer sheet)</text>
+  <ellipse cx="600" cy="320" rx="60" ry="38" fill="var(--c2b)" stroke="var(--c2)" stroke-width="1.5"/>
+  <text x="560" y="325" font-size="12.5" font-weight="600" fill="var(--c2)">cerebellum</text>
+  <!-- deep structures -->
+  <ellipse cx="300" cy="240" rx="22" ry="15" fill="var(--c4b)" stroke="var(--c4)" stroke-width="1.5"/>
+  <text x="278" y="244" font-size="11" fill="var(--c4)">amygdala</text>
+  <ellipse cx="355" cy="235" rx="26" ry="14" fill="var(--c4b)" stroke="var(--c4)" stroke-width="1.5"/>
+  <text x="333" y="239" font-size="10.5" fill="var(--c4)">hippoc.</text>
+  <circle cx="250" cy="245" r="13" fill="var(--c4b)" stroke="var(--c4)" stroke-width="1.5"/>
+  <text x="225" y="270" font-size="10.5" fill="var(--c4)">striatum (reward)</text>
+  <ellipse cx="390" cy="215" rx="20" ry="13" fill="var(--c4b)" stroke="var(--c4)" stroke-width="1.5"/>
+  <text x="372" y="219" font-size="10.5" fill="var(--c4)">thalamus</text>
+  <!-- labels for cortex front/back -->
+  <text x="120" y="180" font-size="12" fill="var(--text)">front:</text>
+  <text x="120" y="196" font-size="11.5" fill="var(--muted)">planning,</text>
+  <text x="120" y="210" font-size="11.5" fill="var(--muted)">decisions</text>
+  <text x="500" y="150" font-size="11.5" fill="var(--muted)">back: vision, senses</text>
+  <text x="50" y="235" font-size="11" fill="var(--faint)">front</text>
+  <text x="660" y="235" font-size="11" fill="var(--faint)">back</text>
+</svg>
+<p class="cap">Side view. Blue = cortex (the thinking surface). Amber = deep structures (emotion, memory, reward, relay). Green = cerebellum (coordination and timing).</p>
+
+<h3>The dozen players worth knowing</h3>
+<table>
+<tr><th>Region (and nickname)</th><th>What it does, in one line</th></tr>
+<tr><td><strong>Prefrontal cortex (PFC)</strong>, front of brain</td><td>Planning and self-control. The "dlPFC" (top-side part) is the main TMS treatment target.</td></tr>
+<tr><td><strong>Anterior cingulate (ACC)</strong></td><td>Detects what is important and when something is wrong (conflict, errors).</td></tr>
+<tr><td><strong>Subgenual ACC (sgACC)</strong>, deep middle-front</td><td>Sadness and rumination. The depression hot spot.</td></tr>
+<tr><td><strong>Insula</strong>, hidden in a fold</td><td>The "gut feeling" region: sensing your own body, craving, urgency.</td></tr>
+<tr><td><strong>Amygdala</strong>, deep temporal</td><td>The threat alarm. Drives fear and anxiety.</td></tr>
+<tr><td><strong>Hippocampus</strong>, deep temporal</td><td>Memory and context.</td></tr>
+<tr><td><strong>Striatum / nucleus accumbens</strong>, deep center</td><td>Reward, motivation, habit. Central to addiction.</td></tr>
+<tr><td><strong>Thalamus</strong>, center</td><td>The relay station: nearly all signals pass through it.</td></tr>
+<tr><td><strong>Auditory cortex</strong>, side</td><td>Hearing. Specifically disrupted in psychosis.</td></tr>
+<tr><td><strong>Cerebellum</strong>, back-bottom</td><td>Coordination and timing, for movement and also thought.</td></tr>
+</table>
+
+<div class="analogy"><b>Networks, in one analogy.</b> Think of brain regions as cities and the connections between them as highways. A "network" is a set of cities whose traffic rises and falls together. The <strong>default mode network</strong> is the daydreaming network (active when you rest and think about yourself). The <strong>salience network</strong> (insula plus ACC) is the alert system that decides what deserves attention. The <strong>reward circuit</strong> (striatum and front of brain) handles motivation. Psychiatric conditions are often less about one broken city and more about the highways between them carrying the wrong amount of traffic.</div>
+
+<div class="key"><h4>The single most important distinction in this whole primer: nodes vs edges</h4>
+A <strong>node</strong> is a region (a city). An <strong>edge</strong> is the connection between two regions (the highway and how busy it is). It turns out that the <em>edges</em> are usually the better fingerprint of a condition and the better treatment target than the nodes. The flagship example: in depression, the strength of the <em>anticorrelation</em> (one goes up when the other goes down) between the dlPFC and the sgACC predicts who responds to brain stimulation. A famous protocol called SAINT uses each person's own dlPFC-sgACC edge to aim treatment, and reached about 79% remission, versus roughly 30% for one-size-fits-all stimulation.</div>
+
+<h2 id="scales"><span class="part-num">Part 2</span><br>The three scales: micro, meso, macro</h2>
+<div class="tldr"><b>TL;DR.</b> Scientists describe the brain at three zoom levels. Micro = molecules and cells. Meso = circuits and connections. Macro = behavior and symptoms. A useful map of a person needs all three, lined up.</div>
+<table>
+<tr><th>Scale</th><th>What it covers</th><th>How it is measured</th><th>Example finding</th></tr>
+<tr><td><strong>Micro</strong> (molecular)</td><td>genes, proteins, neurotransmitters, immune signals, energy (mitochondria)</td><td>genetics, blood markers, spectroscopy, postmortem tissue</td><td>Low BDNF (a growth/plasticity protein) shows up across depression, schizophrenia, and more</td></tr>
+<tr><td><strong>Meso</strong> (circuit)</td><td>which regions activate, and the connectome (nodes + edges)</td><td>fMRI, EEG, MEG, fNIRS</td><td>The anterior insula is altered in 11 of 14 disorders</td></tr>
+<tr><td><strong>Macro</strong> (behavior)</td><td>symptoms, mood, cognition, sleep, movement, speech</td><td>interviews, questionnaires, wearables (sleep, heart rate)</td><td>Anhedonia (loss of pleasure) recurs across most disorders</td></tr>
+</table>
+<p>This is essentially the logic of the US National Institute of Mental Health's <strong>RDoC</strong> framework: stop sorting people only by symptom labels, and start measuring the underlying dimensions across all scales. One landmark 2025 genetics study of 14 disorders (over a million people) found that just five shared genetic "factors" explain most of the inherited risk, and that the same biology cuts across diagnoses. That is the micro-scale proof that the diagnostic boxes do not match the biology.</p>
+
+<h2 id="sensing"><span class="part-num">Part 3</span><br>How we measure the brain</h2>
+<div class="tldr"><b>TL;DR.</b> Every brain-measurement tool detects one physical signal: light, electricity, magnetism, magnetic resonance, or radioactive tracers. Each sees something different, and each has a hard physical limit. None sees everything.</div>
+
+<h3>The five ways to look at a living brain</h3>
+<table>
+<tr><th>Method</th><th>The plain-language version</th><th>What it sees</th><th>Catch</th></tr>
+<tr><td><strong>EEG</strong> (electricity)</td><td>Stickers on the scalp read the brain's electrical chatter</td><td>millisecond timing of activity</td><td>blurry location, surface only</td></tr>
+<tr><td><strong>fNIRS</strong> (light)</td><td>Harmless near-infrared light shines through the scalp; how it bounces back reveals blood and oxygen</td><td>blood flow and oxygen in the outer brain; wearable</td><td>only reaches ~3 to 4 cm deep</td></tr>
+<tr><td><strong>MEG / OPM-MEG</strong> (magnetism)</td><td>Ultra-sensitive sensors detect the tiny magnetic fields neurons make</td><td>fast timing + decent location</td><td>needs a magnetically shielded room; not wearable</td></tr>
+<tr><td><strong>fMRI / MRS</strong> (magnetic resonance)</td><td>A big magnet maps blood flow (fMRI) or certain molecules (MRS)</td><td>whole-brain location (fMRI); some molecules (MRS)</td><td>huge, costly, immobile; not for daily use</td></tr>
+<tr><td><strong>PET / SPECT</strong> (tracers)</td><td>A tiny dose of a radioactive "dye" sticks to one molecule and lights it up</td><td>specific molecules at very low amounts</td><td>radiation, costly, low detail</td></tr>
+</table>
+
+<div class="analogy"><b>Analogy for the whole field.</b> Looking at a brain is like trying to understand a stadium from outside the walls. EEG is pressing your ear to the wall (you hear the roar instantly but cannot tell who shouted). fNIRS is a flashlight through a frosted window (you see shapes near the glass, nothing deep). PET is a sniffer dog trained to one scent (it finds that one molecule anywhere, but cannot read the scoreboard). fMRI is a blimp camera overhead (great map, but it is parked at the airport and you have to go to it). The dream sensor would combine the ear, the flashlight, and the dog, and you would wear it home. Nothing does that yet.</div>
+
+<svg viewBox="0 0 820 470" role="img" aria-label="Scatter chart placing brain measurement methods by spatial detail and molecular sensitivity, showing the empty wearable region.">
+  <!-- axes -->
+  <line x1="90" y1="400" x2="780" y2="400" stroke="var(--faint)" stroke-width="1.5"/>
+  <line x1="90" y1="400" x2="90" y2="50" stroke="var(--faint)" stroke-width="1.5"/>
+  <text x="435" y="445" font-size="14" font-weight="600" fill="var(--muted)" text-anchor="middle">spatial detail (coarse on left, fine on right)</text>
+  <text x="40" y="225" font-size="14" font-weight="600" fill="var(--muted)" text-anchor="middle" transform="rotate(-90 40 225)">molecular detail (low to high)</text>
+  <!-- wearable zone shading -->
+  <rect x="100" y="300" width="240" height="95" rx="8" fill="var(--c2b)" opacity="0.6"/>
+  <text x="115" y="355" font-size="12.5" font-weight="600" fill="var(--c2)">wearable &amp; continuous zone</text>
+  <text x="115" y="373" font-size="11" fill="var(--c2)">(EEG, fNIRS live here)</text>
+  <!-- points -->
+  <g font-size="13" font-weight="600">
+  <circle cx="150" cy="360" r="9" fill="var(--c1)"/><text x="165" y="364" fill="var(--text)">EEG</text>
+  <circle cx="250" cy="330" r="9" fill="var(--c1)"/><text x="265" y="334" fill="var(--text)">fNIRS</text>
+  <circle cx="330" cy="250" r="9" fill="var(--c1)"/><text x="345" y="254" fill="var(--text)">OPM-MEG</text>
+  <circle cx="600" cy="220" r="9" fill="var(--accent)"/><text x="500" y="210" fill="var(--text)">fMRI (great map,</text><text x="540" y="226" fill="var(--text)">not wearable)</text>
+  <circle cx="430" cy="120" r="9" fill="var(--c3)"/><text x="445" y="124" fill="var(--text)">MRS</text>
+  <circle cx="520" cy="90" r="9" fill="var(--c3)"/><text x="535" y="94" fill="var(--text)">PET (molecules, radiation)</text>
+  </g>
+  <!-- the gap -->
+  <rect x="560" y="290" width="200" height="90" rx="8" fill="none" stroke="var(--neg)" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <text x="660" y="330" font-size="12.5" font-weight="600" fill="var(--neg)" text-anchor="middle">the empty corner:</text>
+  <text x="660" y="348" font-size="11.5" fill="var(--neg)" text-anchor="middle">fine detail + molecular</text>
+  <text x="660" y="364" font-size="11.5" fill="var(--neg)" text-anchor="middle">+ wearable. Nothing here.</text>
+</svg>
+<p class="cap">The tools that are wearable (bottom-left, green) see the least. The tools that see molecules or fine detail (top and right) are big, immobile, or use radiation. The bottom-right corner, fine and molecular and wearable, is empty. That empty corner is the whole opportunity.</p>
+
+<h2 id="limits"><span class="part-num">Part 4</span><br>What drives the limits</h2>
+<div class="tldr"><b>TL;DR.</b> Four physical facts explain almost every limitation: light cannot get through the skull, deeper means blurrier, rarer molecules are harder to see, and the things we most want to find (early protein clumps) are far smaller than any scanner's pixel.</div>
+
+<h3>1. The skull blocks light (the depth wall)</h3>
+<p>Near-infrared light (fNIRS) is the friendliest signal for a wearable: harmless, cheap, no shielding. But the skull and scalp scatter and absorb it brutally. Past about <strong>3 to 4 cm</strong>, essentially no usable light returns. That is why optical wearables read the outer cortex only and cannot see deep structures like the amygdala directly. It is a photon-budget problem, not an engineering laziness problem.</p>
+
+<h3>2. Deeper means blurrier (depth vs focality)</h3>
+<p>For magnetism (MEG) and for brain stimulation alike, signal strength falls steeply with distance. To read or stimulate a deep target, you either lose sharpness or need cleverer physics (like two crossing ultrasound or electrical beams that only add up at depth). You rarely get depth and sharpness together for free.</p>
+
+<h3>3. Rarer molecules are harder to see (the concentration limit)</h3>
+<p>Magnetic resonance spectroscopy (MRS) is wonderful because it needs no dye, but it can only see molecules present in large amounts (roughly millimolar, meaning common metabolites). PET can see molecules a billion times rarer (picomolar) because the radioactive tag screams loudly, but you pay with radiation and poor detail. There is a constant trade between sensitivity and everything else.</p>
+
+<h3>4. The thing we most want to find is too small (the aggregate gap)</h3>
+<p>In diseases like Alzheimer's and Parkinson's, the earliest damage is tiny clumps of misfolded protein. Here is the scale problem, drawn to a logarithmic ruler:</p>
+<svg viewBox="0 0 820 220" role="img" aria-label="Logarithmic size scale comparing protein aggregates to a PET scanner pixel.">
+  <line x1="60" y1="120" x2="780" y2="120" stroke="var(--faint)" stroke-width="2"/>
+  <!-- ticks -->
+  <g font-size="11" fill="var(--muted)" text-anchor="middle">
+  <line x1="120" y1="113" x2="120" y2="127" stroke="var(--faint)"/><text x="120" y="145">1 nm</text>
+  <line x1="270" y1="113" x2="270" y2="127" stroke="var(--faint)"/><text x="270" y="145">10 nm</text>
+  <line x1="420" y1="113" x2="420" y2="127" stroke="var(--faint)"/><text x="420" y="145">100 nm</text>
+  <line x1="570" y1="113" x2="570" y2="127" stroke="var(--faint)"/><text x="570" y="145">1 micron</text>
+  <line x1="720" y1="113" x2="720" y2="127" stroke="var(--faint)"/><text x="720" y="145">1 mm</text>
+  </g>
+  <!-- markers -->
+  <circle cx="120" cy="120" r="6" fill="var(--c2)"/><text x="120" y="95" font-size="11.5" fill="var(--c2)" text-anchor="middle">protein monomer</text>
+  <circle cx="255" cy="120" r="7" fill="var(--c4)"/><text x="255" y="78" font-size="11.5" font-weight="600" fill="var(--c4)" text-anchor="middle">toxic oligomers</text>
+  <text x="255" y="92" font-size="10" fill="var(--c4)" text-anchor="middle">(earliest, want these)</text>
+  <circle cx="600" cy="120" r="9" fill="var(--c3)"/><text x="600" y="95" font-size="11.5" fill="var(--c3)" text-anchor="middle">plaques / tangles</text>
+  <rect x="690" y="105" width="60" height="30" fill="var(--neg)" opacity="0.25" stroke="var(--neg)"/><text x="720" y="180" font-size="11.5" font-weight="600" fill="var(--neg)" text-anchor="middle">one PET pixel</text>
+  <text x="720" y="196" font-size="10" fill="var(--neg)" text-anchor="middle">(~4 mm)</text>
+</svg>
+<p class="cap">A PET pixel is thousands to millions of times bigger than the protein clumps. So PET measures the total <em>amount</em> of clumping in a chunk of tissue, not individual clumps, and the tiny early "oligomers" (the most toxic and the most worth catching) are too sparse to register. This is why early molecular detection is the hardest frontier, and why blood tests (which integrate over the whole brain) currently beat scanners for catching disease early.</p>
+
+<h2 id="modulation"><span class="part-num">Part 5</span><br>How we change the brain</h2>
+<div class="tldr"><b>TL;DR.</b> We can nudge brain activity from outside the skull with magnets (TMS), weak currents (tES), focused ultrasound, or by stimulating the vagus nerve. The big unsolved problem is knowing <em>where</em> to aim in each person, and whether you can target a connection (edge) rather than just a spot (node).</div>
+<table>
+<tr><th>Method</th><th>Plain version</th><th>How deep / focal</th><th>Status</th></tr>
+<tr><td><strong>TMS</strong></td><td>A magnetic coil on the scalp triggers a brief pulse in the cortex beneath it</td><td>2 to 3 cm deep, fairly focal</td><td>FDA-cleared for depression, OCD, smoking</td></tr>
+<tr><td><strong>tDCS / tACS</strong></td><td>A weak electrical current shifts how easily neurons fire</td><td>shallow, diffuse</td><td>home device approved for depression (2025)</td></tr>
+<tr><td><strong>Focused ultrasound</strong></td><td>Sound waves focused to a tiny deep spot</td><td>deepest and most focal; reaches center of brain</td><td>research / early clinical</td></tr>
+<tr><td><strong>Vagus nerve stim (tVNS)</strong></td><td>A clip on the ear stimulates a nerve that calms the brain and body</td><td>indirect, whole-system</td><td>cleared for migraine; tested in depression</td></tr>
+<tr><td><strong>Deep brain stimulation</strong></td><td>Implanted electrodes (surgery)</td><td>any depth, very precise</td><td>the high-precision benchmark; invasive</td></tr>
+</table>
+
+<svg viewBox="0 0 800 250" role="img" aria-label="The closed-loop concept: sense, infer, modulate, then sense again.">
+  <g font-size="13.5" font-weight="600" text-anchor="middle">
+  <circle cx="150" cy="125" r="58" fill="var(--c1b)" stroke="var(--c1)" stroke-width="1.5"/><text x="150" y="120" fill="var(--c1)">1. SENSE</text><text x="150" y="140" font-size="11" font-weight="400" fill="var(--text)">read the circuits</text>
+  <circle cx="400" cy="60" r="55" fill="var(--c4b)" stroke="var(--c4)" stroke-width="1.5"/><text x="400" y="56" fill="var(--c4)">2. INFER</text><text x="400" y="75" font-size="11" font-weight="400" fill="var(--text)">where to aim</text>
+  <circle cx="650" cy="125" r="58" fill="var(--c3b)" stroke="var(--c3)" stroke-width="1.5"/><text x="650" y="120" fill="var(--c3)">3. MODULATE</text><text x="650" y="140" font-size="11" font-weight="400" fill="var(--text)">stimulate the target</text>
+  <circle cx="400" cy="195" r="55" fill="var(--c2b)" stroke="var(--c2)" stroke-width="1.5"/><text x="400" y="191" fill="var(--c2)">4. RE-SENSE</text><text x="400" y="210" font-size="11" font-weight="400" fill="var(--text)">did it work?</text>
+  </g>
+  <path d="M205 100 Q300 55 345 60" fill="none" stroke="var(--accent)" stroke-width="2.2" marker-end="url(#m1)"/>
+  <path d="M455 60 Q560 55 600 100" fill="none" stroke="var(--accent)" stroke-width="2.2" marker-end="url(#m1)"/>
+  <path d="M620 175 Q520 210 455 192" fill="none" stroke="var(--accent)" stroke-width="2.2" marker-end="url(#m1)"/>
+  <path d="M345 192 Q230 200 175 175" fill="none" stroke="var(--accent)" stroke-width="2.2" marker-end="url(#m1)"/>
+  <defs><marker id="m1" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="var(--accent)"/></marker></defs>
+</svg>
+<p class="cap">The "closed loop." Today, step 2 (knowing where to aim) usually needs a one-time MRI scan, and step 4 (checking) happens weeks later in a clinic. A wearable sensor would let the whole loop run continuously. Right now, the full loop exists only with surgically implanted electrodes (approved in 2025 for movement disorders). Doing it noninvasively is the open frontier.</p>
+
+<h2 id="discoveries"><span class="part-num">Part 6</span><br>The key discoveries</h2>
+
+<h3>On biotypes (the biology side)</h3>
+<ul>
+<li><strong>There is not one depression (or one of anything).</strong> Within each diagnosis there are several biologically distinct subtypes, called biotypes. The catch: the most famous attempt (Drysdale's "four biotypes of depression," 2017) failed to replicate when retested. The lesson is humility, not abandonment: the biology of subtypes is real, but the specific clusters are fragile.</li>
+<li><strong>The same circuits keep reappearing across disorders.</strong> The anterior insula is altered in 11 of 14 disorders; the dlPFC in 12. The conditions overlap far more than their separate names suggest.</li>
+<li><strong>One molecule unifies a lot of treatment: BDNF and brain plasticity.</strong> Antidepressants, ketamine, psychedelics, electroconvulsive therapy, and TMS all seem to work by boosting the brain's ability to rewire itself (its "plasticity"), through a growth protein called BDNF and its receptor TrkB. A 2023 study even showed psychedelics bind that receptor directly. "Low plasticity" may be the single most shared biotype.</li>
+</ul>
+
+<h3>On sensing (the measurement side)</h3>
+<ul>
+<li><strong>The 3 to 4 cm depth wall for wearable optics is real and unbroken.</strong> No wearable sees deep structures directly today.</li>
+<li><strong>No wearable reads brain molecules yet,</strong> except indirectly (blood, oxygen, and a mitochondrial energy marker called cytochrome-c-oxidase). Even three decades of trying to read <em>glucose</em> optically through skin has not produced an approved device, which is a sober lesson about how hard noninvasive molecular sensing is.</li>
+<li><strong>Edges beat nodes,</strong> and almost no current device measures edges. That is a clear, addressable gap.</li>
+</ul>
+
+<h3>On treatment (the response side)</h3>
+<div class="stat-grid">
+<div class="stat"><div class="n">~30%</div><div class="l">respond to the first antidepressant tried (one-size-fits-all)</div></div>
+<div class="stat"><div class="n">2x</div><div class="l">remission when treatment is matched to biotype by machine learning (iMAP, 2026)</div></div>
+<div class="stat"><div class="n">79%</div><div class="l">remission with personalized, circuit-targeted brain stimulation (SAINT)</div></div>
+<div class="stat"><div class="n">14</div><div class="l">disorders that share five underlying genetic factors (2025)</div></div>
+</div>
+<p>The pattern is consistent: <strong>when treatment is matched to the individual's biology, response roughly doubles.</strong> Ketamine works best in an anxious-anhedonic biotype; MDMA-assisted therapy works at least as well in the dissociative subtype of PTSD; brain stimulation works far better when aimed at each person's own circuit. The diversity of response mirrors the diversity of biology.</p>
+
+<h2 id="multiscale"><span class="part-num">Part 7</span><br>What the big studies found (and a crucial warning)</h2>
+<div class="tldr"><b>TL;DR.</b> Huge studies have linked genes to brain wiring to behavior, but in the general population the links are real and <em>small</em>. Catching small signals reliably needs either very large groups or, better, many repeated measurements of the same person over time. That second path is exactly what a wearable enables.</div>
+<table>
+<tr><th>Study / consortium</th><th>What it linked</th><th>Scale</th><th>Key takeaway</th></tr>
+<tr><td><strong>UK Biobank</strong> imaging-genetics (Elliott 2018; Smith/BIG40 2021)</td><td>genes to brain structure and wiring</td><td>~22,000 brain scans + genetics</td><td>The living connectome is partly heritable; hundreds of gene-brain links found</td></tr>
+<tr><td><strong>ENIGMA Consortium</strong> (Goodkind 2015 and others)</td><td>brain structure to diagnosis, across disorders</td><td>tens of thousands</td><td>Different disorders share a common loss in the same regions (dACC, insula). Effects are small per person.</td></tr>
+<tr><td><strong>ABCD Study</strong></td><td>genes + brain + behavior + environment, over time</td><td>~12,000 youth, longitudinal</td><td>Developmental trajectories, not snapshots, carry the signal</td></tr>
+<tr><td><strong>Human Connectome Project</strong> (Smith 2015; Finn 2015)</td><td>brain wiring to behavior and lifestyle</td><td>~1,000</td><td>Your connectome is as unique as a fingerprint; one main axis links wiring to life outcomes</td></tr>
+<tr><td><strong>Brain charts</strong> (Bethlehem 2022)</td><td>brain size across the whole lifespan</td><td>~101,000 scans</td><td>You can be placed as a point on a growth curve (a "normative" reference), like a pediatric height chart</td></tr>
+<tr><td><strong>14-disorder genetics</strong> (Grotzinger/Smoller 2025)</td><td>genes across 14 disorders</td><td>over 1,000,000 people</td><td>Five shared genetic factors cut across the diagnostic boxes</td></tr>
+</table>
+<div class="warn"><b>The reproducibility warning (Marek &amp; Dosenbach, 2022).</b> A landmark analysis pooling about 48,000 scans showed that brain-to-behavior correlations are much smaller than early studies claimed, and that small studies wildly overstated them. The largest reliable single-measure correlation was only about 0.14. This is why the famous depression biotypes failed to replicate. The fix is either enormous sample sizes, or a different strategy: measure the <em>same person</em> densely and repeatedly, turning a weak one-shot signal into a strong personal trend. Continuous wearables are the natural way to do that.</div>
+
+<div class="key"><h4>Normative modeling: the friendliest way to think about biotypes</h4>Instead of forcing people into clusters (which proved fragile), modern work places each person as a <strong>point on a reference curve</strong>, exactly like a child's height-for-age chart. Your brain measures are compared to what is typical for your age and sex, and what matters is your <em>deviation</em> from the curve. This reframes "biotype" from a rigid box into a personal coordinate, which is both more honest and more useful.</div>
+
+<h2 id="synthesis"><span class="part-num">Part 8</span><br>Putting it together</h2>
+<p>Now the whole argument fits in a few sentences:</p>
+<ul>
+<li><strong>Diversity is real at every scale.</strong> Genes vary, brain wiring varies, symptoms vary. Diagnoses are the visible extremes of continuous, natural variation.</li>
+<li><strong>The three layers are not aligned today.</strong> Molecules, circuits, and symptoms are measured separately, crudely, and rarely in the same person, so treatment is chosen from the shallowest layer alone.</li>
+<li><strong>When you do align them, treatment response roughly doubles.</strong> SAINT and iMAP prove the principle in the lab.</li>
+<li><strong>The missing piece is the measurement.</strong> No tool is sensitive, detailed, deep, and wearable at once; the connectome (especially its edges) is the most actionable layer and the least measured outside one-time scans.</li>
+<li><strong>The path forward</strong> is a wearable that reads the circuits continuously, places each person on a personal coordinate (a reference curve, not a rigid box), focuses in on the edges that matter for that person, and over time aligns all three layers so the right treatment reaches the right brain.</li>
+</ul>
+<div class="tldr"><b>In one line.</b> Neurodiversity is visible across genes, circuits, and behavior; treatments are just as diverse; and the unmet job is to line those layers up, in each person, with a sensor that does not yet exist but is now physically within reach for the outer brain and improving toward the deep structures.</div>
+
+<h2 id="glossary">Glossary</h2>
+<dl class="glossary">
+<dt>Biotype</dt><dd>A biologically defined subtype of a disorder, based on measurements rather than symptoms alone.</dd>
+<dt>Connectome</dt><dd>The full map of connections between brain regions. Nodes are regions; edges are connections.</dd>
+<dt>Node / Edge</dt><dd>A node is a brain region. An edge is the functional connection between two regions (how their activity relates).</dd>
+<dt>Cortex</dt><dd>The wrinkled outer sheet of the brain, where most thinking and sensing happen.</dd>
+<dt>fNIRS</dt><dd>Functional near-infrared spectroscopy. Uses harmless light through the scalp to read blood and oxygen in the outer brain. Wearable.</dd>
+<dt>EEG / MEG</dt><dd>Electro- and magneto-encephalography. Read the brain's electrical (EEG) or magnetic (MEG) activity. Fast timing, weaker location.</dd>
+<dt>fMRI</dt><dd>Functional MRI. Maps brain activity via blood flow with a large magnet. Excellent location, not portable.</dd>
+<dt>MRS</dt><dd>Magnetic resonance spectroscopy. Reads certain brain molecules without a dye, but only abundant ones.</dd>
+<dt>PET / SPECT</dt><dd>Imaging that uses a tiny radioactive tracer to light up one specific molecule. Very sensitive, low detail, uses radiation.</dd>
+<dt>TMS / tES / focused ultrasound / tVNS</dt><dd>Ways to stimulate or calm the brain from outside the skull (magnetic pulses, weak currents, sound waves, nerve stimulation).</dd>
+<dt>DBS</dt><dd>Deep brain stimulation. Surgically implanted electrodes; the precise but invasive benchmark.</dd>
+<dt>BDNF / TrkB</dt><dd>A growth protein and its receptor, central to the brain's ability to rewire (plasticity). A shared target of many treatments.</dd>
+<dt>Plasticity</dt><dd>The brain's ability to change and rewire its connections.</dd>
+<dt>Excitation / inhibition (E/I) balance</dt><dd>The balance between neurons that activate vs calm their neighbors. Disturbed in autism, schizophrenia, and others.</dd>
+<dt>Closed loop</dt><dd>A system that senses, decides, acts, then senses again, adjusting continuously.</dd>
+<dt>Normative modeling</dt><dd>Placing a person on a reference curve (like a growth chart) and measuring their deviation, instead of sorting into clusters.</dd>
+<dt>RDoC</dt><dd>A research framework that measures mental health along biological dimensions across scales, rather than by diagnostic labels alone.</dd>
+<dt>Anhedonia</dt><dd>Reduced ability to feel pleasure. A symptom shared across many disorders.</dd>
+</dl>
+
+<p class="cap" style="margin-top:2rem">Companion documents in this project: the full neuroanatomy guide (NEUROANATOMY_GUIDE.html), the transdiagnostic brain map (transdiagnostic/BRAIN_MAP.html), the biotype cheat sheet (BIOTYPES_CHEATSHEET_v2.md), the modality comparison (tech-deep-dives/modality-comparison.md), and the multi-scale biomarker review (multiscale-biomarkers.md).</p>
+
+</div>
+</body>
+</html>

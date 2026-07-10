@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Neuroanatomy Guide for the Biotype Docs</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --text-muted: #555;
+    --text-faint: #888;
+    --border: rgba(0,0,0,0.12);
+    --accent: #534AB7;
+    --frontal: #E6F1FB;
+    --frontal-stroke: #185FA5;
+    --parietal: #FAEEDA;
+    --parietal-stroke: #854F0B;
+    --temporal: #FBEAF0;
+    --temporal-stroke: #993556;
+    --occipital: #EAF3DE;
+    --occipital-stroke: #3B6D11;
+    --cerebellum: #E1F5EE;
+    --cerebellum-stroke: #0F6E56;
+    --deep: #EEEDFE;
+    --deep-stroke: #534AB7;
+    --network-dmn: #D85A30;
+    --network-sn: #BA7517;
+    --network-cen: #185FA5;
+    --network-threat: #A32D2D;
+    --network-reward: #0F6E56;
+    --network-van: #534AB7;
+    --network-cstc: #993556;
+    --network-social: #3B6D11;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1a18;
+      --surface: #232321;
+      --text: #f0eee8;
+      --text-muted: #b8b6ae;
+      --text-faint: #777570;
+      --border: rgba(255,255,255,0.12);
+      --frontal: #1a2438;
+      --frontal-stroke: #85B7EB;
+      --parietal: #3a2d10;
+      --parietal-stroke: #EF9F27;
+      --temporal: #3a1a26;
+      --temporal-stroke: #ED93B1;
+      --occipital: #1f2d10;
+      --occipital-stroke: #97C459;
+      --cerebellum: #0e2820;
+      --cerebellum-stroke: #5DCAA5;
+      --deep: #1f1d3a;
+      --deep-stroke: #AFA9EC;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 2rem 1rem;
+    line-height: 1.55;
+    font-size: 15px;
+  }
+  .container { max-width: 980px; margin: 0 auto; }
+  h1 { font-size: 28px; font-weight: 500; margin: 0 0 0.5rem; }
+  h2 { font-size: 20px; font-weight: 500; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+  h3 { font-size: 16px; font-weight: 500; margin: 1.5rem 0 0.5rem; }
+  p { margin: 0.5rem 0; color: var(--text); }
+  .lede { font-size: 16px; color: var(--text-muted); margin: 0.25rem 0 1.5rem; }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0.5rem 0 1rem;
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-swatch { width: 14px; height: 14px; border-radius: 3px; border: 1px solid var(--border); }
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+  }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  @media (max-width: 720px) { .grid-2 { grid-template-columns: 1fr; } }
+  svg.brain { width: 100%; height: auto; display: block; }
+  .region {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+  }
+  .region-name { font-weight: 500; font-size: 15px; margin: 0; }
+  .region-loc { font-size: 13px; color: var(--text-muted); margin: 0.2rem 0; }
+  .region-role { font-size: 14px; margin: 0.35rem 0; }
+  .region-biotypes { font-size: 13px; color: var(--text-faint); margin: 0.25rem 0 0; }
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 11px; margin-right: 4px; }
+  .pill-frontal { background: var(--frontal); color: var(--frontal-stroke); }
+  .pill-parietal { background: var(--parietal); color: var(--parietal-stroke); }
+  .pill-temporal { background: var(--temporal); color: var(--temporal-stroke); }
+  .pill-occipital { background: var(--occipital); color: var(--occipital-stroke); }
+  .pill-cerebellum { background: var(--cerebellum); color: var(--cerebellum-stroke); }
+  .pill-deep { background: var(--deep); color: var(--deep-stroke); }
+  .net-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1rem 0; }
+  .net-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+  .net-title { font-weight: 500; font-size: 15px; margin: 0 0 0.25rem; }
+  .net-sub { font-size: 12px; color: var(--text-muted); margin: 0 0 0.5rem; }
+  .net-body { font-size: 14px; color: var(--text); }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 14px; }
+  th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); }
+  th { font-weight: 500; color: var(--text-muted); font-size: 13px; }
+  .small { font-size: 13px; color: var(--text-muted); }
+  text { font-family: inherit; }
+  .label { font-size: 11px; fill: var(--text); font-weight: 500; }
+  .label-faint { font-size: 10px; fill: var(--text-muted); }
+  .marker { stroke: var(--text); stroke-width: 1; }
+  .lobe-label { font-size: 13px; font-weight: 500; }
+  .toc { font-size: 14px; }
+  .toc a { color: var(--accent); text-decoration: none; margin-right: 14px; line-height: 1.9; display: inline-block; }
+  .toc a:hover { text-decoration: underline; }
+  .small-svg { max-width: 240px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Neuroanatomy guide for the biotype docs</h1>
+<p class="lede">Every brain region and network the biotype docs mention, with a picture, a location, and a plain-language description.</p>
+
+<nav class="toc panel">
+  <strong>Jump to</strong><br>
+  <a href="#orient">Orientation</a>
+  <a href="#lateral">Lateral view</a>
+  <a href="#medial">Medial view</a>
+  <a href="#cortex">Cortical regions</a>
+  <a href="#deep">Deep structures</a>
+  <a href="#networks">Networks</a>
+  <a href="#reach">Wearable reach</a>
+</nav>
+
+<h2 id="orient">Orientation</h2>
+<p>Two halves (hemispheres), each with the same regions. Four cortical lobes (the outside) plus deep structures (the inside).</p>
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch" style="background: var(--frontal); border-color: var(--frontal-stroke);"></div>Frontal lobe</div>
+  <div class="legend-item"><div class="legend-swatch" style="background: var(--parietal); border-color: var(--parietal-stroke);"></div>Parietal lobe</div>
+  <div class="legend-item"><div class="legend-swatch" style="background: var(--temporal); border-color: var(--temporal-stroke);"></div>Temporal lobe</div>
+  <div class="legend-item"><div class="legend-swatch" style="background: var(--occipital); border-color: var(--occipital-stroke);"></div>Occipital lobe</div>
+  <div class="legend-item"><div class="legend-swatch" style="background: var(--cerebellum); border-color: var(--cerebellum-stroke);"></div>Cerebellum</div>
+  <div class="legend-item"><div class="legend-swatch" style="background: var(--deep); border-color: var(--deep-stroke);"></div>Deep (subcortical) structures</div>
+</div>
+
+<p class="small">Direction terms used throughout: <strong>dorsal</strong> = top, <strong>ventral</strong> = bottom, <strong>anterior</strong> (or rostral) = front, <strong>posterior</strong> (or caudal) = back, <strong>medial</strong> = toward the midline, <strong>lateral</strong> = away from midline. So "dorsolateral PFC" = top-and-side of the front lobe.</p>
+
+<h2 id="lateral">Lateral view (looking at the left side of the brain)</h2>
+<div class="panel">
+<svg class="brain" viewBox="0 0 720 440" role="img" aria-labelledby="lat-title lat-desc">
+  <title id="lat-title">Lateral brain view with key regions</title>
+  <desc id="lat-desc">Schematic side view showing frontal, parietal, temporal, and occipital lobes plus cerebellum, with key biotype-relevant regions marked.</desc>
+
+  <!-- Frontal lobe -->
+  <path d="M 80 220 C 80 130, 180 60, 290 60 C 340 60, 370 80, 380 130 L 380 240 L 240 270 C 200 280, 140 270, 110 260 C 90 250, 80 235, 80 220 Z" fill="var(--frontal)" stroke="var(--frontal-stroke)" stroke-width="1.5"/>
+  <!-- Parietal lobe -->
+  <path d="M 290 60 C 380 60, 470 70, 520 110 C 540 130, 545 165, 535 195 L 380 240 L 380 130 C 370 90, 350 60, 290 60 Z" fill="var(--parietal)" stroke="var(--parietal-stroke)" stroke-width="1.5"/>
+  <!-- Temporal lobe -->
+  <path d="M 110 260 C 140 270, 200 280, 240 270 L 380 240 C 380 260, 360 290, 330 305 C 290 320, 240 320, 200 310 C 160 300, 130 285, 115 275 C 105 270, 105 265, 110 260 Z" fill="var(--temporal)" stroke="var(--temporal-stroke)" stroke-width="1.5"/>
+  <!-- Occipital lobe -->
+  <path d="M 535 195 C 555 220, 555 255, 530 280 C 500 305, 450 300, 410 290 L 380 240 Z" fill="var(--occipital)" stroke="var(--occipital-stroke)" stroke-width="1.5"/>
+  <!-- Cerebellum -->
+  <ellipse cx="510" cy="335" rx="65" ry="40" fill="var(--cerebellum)" stroke="var(--cerebellum-stroke)" stroke-width="1.5"/>
+  <!-- Brainstem -->
+  <path d="M 470 360 Q 460 390 455 415 L 475 415 Q 480 390 485 360 Z" fill="var(--cerebellum)" stroke="var(--cerebellum-stroke)" stroke-width="1.5"/>
+
+  <!-- Lobe labels -->
+  <text class="lobe-label" x="180" y="135" fill="var(--frontal-stroke)">Frontal lobe</text>
+  <text class="lobe-label" x="420" y="115" fill="var(--parietal-stroke)">Parietal lobe</text>
+  <text class="lobe-label" x="180" y="305" fill="var(--temporal-stroke)">Temporal lobe</text>
+  <text class="lobe-label" x="465" y="245" fill="var(--occipital-stroke)">Occipital</text>
+  <text class="lobe-label" x="475" y="340" fill="var(--cerebellum-stroke)">Cerebellum</text>
+  <text class="label-faint" x="455" y="430">Brainstem</text>
+
+  <!-- Front of brain indicator -->
+  <text class="label-faint" x="35" y="225">FRONT</text>
+  <text class="label-faint" x="38" y="240">↓</text>
+  <text class="label-faint" x="630" y="225">BACK</text>
+
+  <!-- Region markers (lateral view) -->
+  <!-- DLPFC -->
+  <circle class="marker" cx="200" cy="125" r="6" fill="var(--frontal-stroke)"/>
+  <line x1="206" y1="125" x2="270" y2="105" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="273" y="100">DLPFC</text>
+
+  <!-- vmPFC/OFC -->
+  <circle class="marker" cx="130" cy="240" r="6" fill="var(--frontal-stroke)"/>
+  <line x1="125" y1="246" x2="80" y2="290" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="35" y="305">vmPFC / OFC</text>
+
+  <!-- IFG -->
+  <circle class="marker" cx="155" cy="225" r="6" fill="var(--frontal-stroke)"/>
+  <line x1="161" y1="225" x2="200" y2="200" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="180" y="195">IFG (Broca's)</text>
+
+  <!-- Sensorimotor cortex -->
+  <circle class="marker" cx="335" cy="75" r="6" fill="var(--frontal-stroke)"/>
+  <line x1="335" y1="69" x2="335" y2="35" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="285" y="28">Sensorimotor</text>
+
+  <!-- Anterior insula (deep, dashed circle) -->
+  <circle class="marker" cx="245" cy="220" r="6" fill="var(--temporal-stroke)" stroke-dasharray="2 2"/>
+  <line x1="251" y1="220" x2="290" y2="180" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="265" y="174">Anterior insula (deep)</text>
+
+  <!-- STG / Heschl's -->
+  <circle class="marker" cx="290" cy="270" r="6" fill="var(--temporal-stroke)"/>
+  <line x1="290" y1="276" x2="290" y2="345" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="225" y="358">STG / Heschl's gyrus</text>
+
+  <!-- STS -->
+  <circle class="marker" cx="240" cy="285" r="6" fill="var(--temporal-stroke)"/>
+  <line x1="235" y1="288" x2="190" y2="345" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="140" y="358">STS</text>
+
+  <!-- FFA -->
+  <circle class="marker" cx="200" cy="310" r="6" fill="var(--temporal-stroke)" stroke-dasharray="2 2"/>
+  <line x1="200" y1="316" x2="135" y2="370" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="65" y="383">FFA (ventral fusiform)</text>
+
+  <!-- TPJ -->
+  <circle class="marker" cx="385" cy="225" r="6" fill="var(--parietal-stroke)"/>
+  <line x1="391" y1="225" x2="425" y2="195" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="400" y="190">TPJ (right side)</text>
+
+  <!-- Visual cortex (V1) -->
+  <circle class="marker" cx="490" cy="240" r="6" fill="var(--occipital-stroke)"/>
+  <line x1="496" y1="240" x2="555" y2="220" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="560" y="215">V1 (primary visual)</text>
+
+  <!-- Cerebellar lobules VI/VII (Crus I/II) -->
+  <circle class="marker" cx="510" cy="335" r="6" fill="var(--cerebellum-stroke)"/>
+  <line x1="516" y1="335" x2="590" y2="365" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="585" y="380">Right Crus I/II</text>
+</svg>
+<p class="small" style="margin-top: 0.5rem;">Dashed markers indicate regions that are deep to the cortical surface (insula is hidden in the lateral fissure; FFA is on the ventral temporal surface).</p>
+</div>
+
+<h2 id="medial">Medial view (brain cut in half, looking at the inside)</h2>
+<div class="panel">
+<svg class="brain" viewBox="0 0 720 440" role="img" aria-labelledby="med-title med-desc">
+  <title id="med-title">Medial brain view with deep structures</title>
+  <desc id="med-desc">Sagittal cross-section showing medial cortical regions (cingulate gyrus, vmPFC, sgACC, PCC) and deep structures (thalamus, hippocampus, amygdala, striatum).</desc>
+
+  <!-- Cerebrum outline (medial view) -->
+  <path d="M 100 240 C 100 130, 200 60, 320 50 C 460 50, 560 90, 600 160 C 625 215, 615 285, 555 320 L 470 340 L 410 335 C 380 335, 340 330, 300 320 C 230 310, 160 290, 120 270 C 105 260, 100 250, 100 240 Z" fill="none" stroke="var(--text-muted)" stroke-width="1.2"/>
+
+  <!-- Corpus callosum (the bridge between hemispheres, as a curved band) -->
+  <path d="M 220 230 C 240 180, 280 155, 360 155 C 440 155, 510 175, 530 220" fill="none" stroke="var(--deep-stroke)" stroke-width="3" opacity="0.5"/>
+  <text class="label-faint" x="335" y="148">corpus callosum</text>
+
+  <!-- Cingulate gyrus (above corpus callosum) -->
+  <path d="M 195 220 C 215 155, 270 130, 360 130 C 460 130, 535 155, 555 215" fill="none" stroke="var(--deep-stroke)" stroke-width="2" opacity="0.7"/>
+
+  <!-- dACC marker -->
+  <circle class="marker" cx="320" cy="135" r="6" fill="var(--frontal-stroke)"/>
+  <line x1="320" y1="129" x2="320" y2="95" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="285" y="88">dACC / dmPFC</text>
+
+  <!-- pgACC marker -->
+  <circle class="marker" cx="225" cy="195" r="6" fill="var(--frontal-stroke)"/>
+  <line x1="219" y1="195" x2="170" y2="180" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="100" y="184">pregenual ACC</text>
+
+  <!-- sgACC marker (below the genu) -->
+  <circle class="marker" cx="215" cy="240" r="6" fill="var(--frontal-stroke)"/>
+  <line x1="209" y1="240" x2="160" y2="260" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="60" y="264">sgACC (BA 25)</text>
+
+  <!-- vmPFC marker -->
+  <circle class="marker" cx="155" cy="260" r="6" fill="var(--frontal-stroke)"/>
+  <line x1="155" y1="266" x2="125" y2="305" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="58" y="318">vmPFC / medial OFC</text>
+
+  <!-- PCC/Precuneus marker -->
+  <circle class="marker" cx="510" cy="160" r="6" fill="var(--parietal-stroke)"/>
+  <line x1="516" y1="160" x2="570" y2="130" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="560" y="124">PCC / precuneus</text>
+
+  <!-- Thalamus -->
+  <ellipse cx="370" cy="235" rx="40" ry="22" fill="var(--deep)" stroke="var(--deep-stroke)" stroke-width="1.5"/>
+  <text class="label" x="345" y="240">thalamus</text>
+
+  <!-- Mediodorsal thalamus highlight -->
+  <circle class="marker" cx="358" cy="225" r="4" fill="var(--deep-stroke)"/>
+  <line x1="358" y1="221" x2="358" y2="195" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label-faint" x="335" y="190">MD nucleus</text>
+
+  <!-- Striatum (caudate + putamen + NAc) -->
+  <path d="M 280 220 C 290 200, 310 190, 320 195 C 330 200, 325 215, 320 225 C 315 235, 295 240, 285 235 Z" fill="var(--deep)" stroke="var(--deep-stroke)" stroke-width="1.5"/>
+  <text class="label" x="290" y="215">caudate</text>
+
+  <path d="M 245 250 C 260 240, 280 245, 285 260 C 290 275, 275 285, 260 280 C 250 275, 240 265, 245 250 Z" fill="var(--deep)" stroke="var(--deep-stroke)" stroke-width="1.5"/>
+  <text class="label-faint" x="248" y="265">putamen</text>
+
+  <!-- Nucleus accumbens (NAc) -->
+  <circle cx="230" cy="280" r="9" fill="var(--deep)" stroke="var(--deep-stroke)" stroke-width="1.5"/>
+  <line x1="221" y1="280" x2="195" y2="290" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label" x="130" y="295">NAc / ventral striatum</text>
+
+  <!-- Hippocampus (curled) -->
+  <path d="M 365 290 C 380 275, 405 275, 420 285 C 430 295, 425 310, 410 315 C 390 320, 370 310, 365 295 Z" fill="var(--deep)" stroke="var(--deep-stroke)" stroke-width="1.5"/>
+  <text class="label" x="375" y="305">hippocampus</text>
+  <line x1="395" y1="320" x2="440" y2="375" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label-faint" x="430" y="388">CA1 = front, schizophrenia</text>
+
+  <!-- Amygdala (in front of hippocampus) -->
+  <ellipse cx="320" cy="290" rx="15" ry="11" fill="var(--deep)" stroke="var(--deep-stroke)" stroke-width="1.5"/>
+  <text class="label" x="290" y="293">amygdala</text>
+
+  <!-- BNST (above amygdala) -->
+  <circle class="marker" cx="290" cy="270" r="4" fill="var(--deep-stroke)"/>
+  <line x1="290" y1="266" x2="285" y2="240" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label-faint" x="240" y="235">BNST</text>
+
+  <!-- VTA (midbrain) -->
+  <circle cx="440" cy="320" r="8" fill="var(--deep)" stroke="var(--deep-stroke)" stroke-width="1.5"/>
+  <text class="label-faint" x="450" y="322">VTA</text>
+
+  <!-- Brainstem -->
+  <path d="M 460 340 Q 455 380 450 410 L 475 410 Q 480 380 480 340 Z" fill="var(--cerebellum)" stroke="var(--cerebellum-stroke)" stroke-width="1.2"/>
+  <text class="label-faint" x="490" y="380">brainstem</text>
+
+  <!-- Cerebellum (back) -->
+  <ellipse cx="555" cy="335" rx="50" ry="35" fill="var(--cerebellum)" stroke="var(--cerebellum-stroke)" stroke-width="1.5"/>
+  <text class="label" x="525" y="340">cerebellum</text>
+  <line x1="555" y1="335" x2="600" y2="385" stroke="var(--text-muted)" stroke-width="0.8"/>
+  <text class="label-faint" x="565" y="400">Crus I/II = posterior-lateral</text>
+
+  <!-- Front indicator -->
+  <text class="label-faint" x="55" y="245">FRONT</text>
+  <text class="label-faint" x="62" y="260">↓</text>
+  <text class="label-faint" x="640" y="335">BACK</text>
+</svg>
+<p class="small" style="margin-top: 0.5rem;">This is one hemisphere cut down the middle, looking at the inside surface. The deep structures (in purple) are normally buried under the cortex.</p>
+</div>
+
+<h2 id="cortex">Cortical regions (the outside surface)</h2>
+
+<h3>Frontal lobe</h3>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-frontal">frontal</span>Dorsolateral PFC (DLPFC, Brodmann 9/46)</p>
+<p class="region-loc">Top-and-side of the front lobe. Above your temple, slightly forward.</p>
+<p class="region-role">Working memory, executive function, cognitive control. The "thinking" PFC.</p>
+<p class="region-biotypes">Canonical TMS target. SAINT 79% remission TRD. Cognitive-control biotype across all 6 disorders.</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-frontal">frontal</span>Dorsomedial PFC + dorsal ACC (dmPFC / dACC)</p>
+<p class="region-loc">Top of the front lobe at the midline; dACC sits above the corpus callosum on the medial wall.</p>
+<p class="region-role">Monitoring conflict, errors, salience. The "what's important right now" detector.</p>
+<p class="region-biotypes">Salience network hub. Enhanced ERN here = OCD endophenotype. Frontal midline theta tracks trait anxiety.</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-frontal">frontal</span>Ventromedial PFC (vmPFC)</p>
+<p class="region-loc">Bottom-and-middle of the front lobe, behind and above your eyes.</p>
+<p class="region-role">Value computation, emotion regulation, fear extinction. The "good or bad" calculator.</p>
+<p class="region-biotypes">Inhibits the amygdala (when it fails: threat reactivity goes up). Central in MDD, PTSD, anxiety.</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-frontal">frontal</span>Orbitofrontal cortex (OFC), medial and lateral</p>
+<p class="region-loc">Bottom of the front lobe, sitting on the orbits (eye sockets).</p>
+<p class="region-role">Value-based decisions. Medial OFC handles reward; lateral OFC handles punishment and behavioral inhibition.</p>
+<p class="region-biotypes">Addiction reward-deficit biotype. OCD (medial OFC hyperactivity = CSTC marker).</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-frontal">frontal (deep, midline)</span>Subgenual ACC (sgACC, Brodmann 25)</p>
+<p class="region-loc">Below the genu (front curve) of the corpus callosum. Deep, midline. Hard to reach with surface optics.</p>
+<p class="region-role">Sadness, depressive rumination, emotional pain, autonomic regulation.</p>
+<p class="region-biotypes">Mayberg DBS target. Anticorrelation with DLPFC predicts TMS response (the SAINT trick).</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-frontal">frontal (medial)</span>Pregenual ACC (pgACC)</p>
+<p class="region-loc">Just above sgACC, in front of the genu of the corpus callosum.</p>
+<p class="region-role">Emotion regulation, fear extinction, top-down control of the amygdala.</p>
+<p class="region-biotypes">Threat-dysregulation biotype in anxiety; baseline pgACC reactivity predicts SSRI + CBT response.</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-frontal">frontal</span>Inferior frontal gyrus (IFG)</p>
+<p class="region-loc">Bottom-front of the front lobe, on the lateral surface. Left IFG = Broca's area; right IFG = response inhibition.</p>
+<p class="region-role">Language (left), response inhibition (right), mirror neuron system.</p>
+<p class="region-biotypes">Autism social-brain biotype (mirror neurons). Right IFG in addiction inhibitory control.</p>
+</div>
+
+<h3>Cingulate cortex</h3>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-frontal">cingulate</span>Posterior cingulate cortex (PCC) + precuneus</p>
+<p class="region-loc">Back of the cingulate gyrus, medial wall, behind the corpus callosum. Precuneus sits just above PCC.</p>
+<p class="region-role">Self-referential thinking, autobiographical memory, mind-wandering. "Where am I in my life right now."</p>
+<p class="region-biotypes">Central node of the default mode network. Depression-rumination and PTSD.</p>
+</div>
+
+<h3>Temporal lobe</h3>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-temporal">temporal (deep, lateral fissure)</span>Anterior insula</p>
+<p class="region-loc">Tucked inside the lateral fissure, between frontal and temporal lobes. Hidden from surface view.</p>
+<p class="region-role">Subjective feeling of emotion, craving, salience switching. The "felt sense" hub.</p>
+<p class="region-biotypes">Salience network with dACC. Anxiety panic biotype. Addiction craving (Naqvi insula lesion stops smoking).</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-temporal">temporal</span>Superior temporal gyrus + Heschl's gyrus + planum temporale</p>
+<p class="region-loc">Top of the temporal lobe. Heschl's is the primary auditory cortex.</p>
+<p class="region-role">Hearing, auditory feature extraction, speech perception.</p>
+<p class="region-biotypes">B-SNIP Biotype 2 sensory-hyperresponsive psychosis (reduced 40Hz ASSR here). Psychosis-specific anchor.</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-temporal">temporal</span>Superior temporal sulcus (STS)</p>
+<p class="region-loc">The long groove running along the top of the temporal lobe.</p>
+<p class="region-role">Social perception, biological motion, gaze processing. "Watching other people" hub.</p>
+<p class="region-biotypes">Autism social-brain biotype (STS hypoactivation is one of the most-replicated autism fMRI findings).</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-temporal">temporal (ventral)</span>Fusiform face area (FFA)</p>
+<p class="region-loc">On the bottom (ventral) surface of the temporal lobe, in the fusiform gyrus. Right hemisphere dominates.</p>
+<p class="region-role">Face recognition. Specialized for faces in most people.</p>
+<p class="region-biotypes">Autism social-brain biotype (reduced FFA activation for faces).</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-parietal">parietal/temporal</span>Temporoparietal junction (TPJ)</p>
+<p class="region-loc">Where the temporal and parietal lobes meet, on the lateral surface. Right TPJ is the usual subject.</p>
+<p class="region-role">Attention reorienting, theory of mind, self-other distinction.</p>
+<p class="region-biotypes">VAN-deficit biotype in PTSD (Etkin). Predicts psychotherapy non-response.</p>
+</div>
+
+<h2 id="deep">Deep structures</h2>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-deep">deep, medial temporal</span>Hippocampus</p>
+<p class="region-loc">Curled inside the medial temporal lobe, like a seahorse. Subdivided into CA1, CA2, CA3, CA4, dentate.</p>
+<p class="region-role">Episodic memory formation, spatial maps, contextual fear conditioning.</p>
+<p class="region-biotypes">Depression + PTSD: volume reductions. Schizophrenia: CA1 hyperactivity (Grace lab) drives downstream striatal dopamine.</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-deep">deep, medial temporal</span>Amygdala</p>
+<p class="region-loc">In front of the hippocampus, deep in the medial temporal lobe. Almond-shaped.</p>
+<p class="region-role">Emotional learning, threat detection, salience for fear.</p>
+<p class="region-biotypes">Threat-reactive biotype across anxiety, PTSD, anxious depression. Overmodulated in dissociative PTSD.</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-deep">extended amygdala</span>Bed nucleus of the stria terminalis (BNST)</p>
+<p class="region-loc">Small structure above the amygdala, near the midline, by the anterior commissure.</p>
+<p class="region-role">Sustained threat response (vs amygdala's phasic response). When threat is uncertain or future.</p>
+<p class="region-biotypes">BNST-driven sustained-threat biotype in GAD. Addiction stress-driven negative-affect.</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-deep">deep central</span>Striatum (caudate, putamen, nucleus accumbens)</p>
+<p class="region-loc">Deep, surrounds the thalamus. NAc is the ventral bottom-front; caudate is C-shaped along the lateral ventricle; putamen is lateral to caudate.</p>
+<p class="region-role">Reward (NAc), habit (putamen), goal-directed action (caudate). Big dopamine target.</p>
+<p class="region-biotypes">Addiction (all biotypes). MDD-anhedonic (NAc hypofunction). OCD (caudate head hyperactivity). Schizophrenia Type A (hyperdopaminergic associative striatum).</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-deep">center of brain</span>Thalamus (and mediodorsal nucleus)</p>
+<p class="region-loc">Center of the brain, between the hemispheres.</p>
+<p class="region-role">Sensory relay (nearly all sensory information passes through), prefrontal coordination via MD nucleus.</p>
+<p class="region-biotypes">B-SNIP psychosis (MD thalamus dysconnectivity, Anticevic). CSTC loops route through MD. Sleep-spindle deficits come from thalamic reticular nucleus.</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-deep">midbrain</span>Ventral tegmental area (VTA)</p>
+<p class="region-loc">Top of the brainstem (midbrain).</p>
+<p class="region-role">Produces dopamine. Projects to NAc (mesolimbic reward) and PFC (mesocortical cognition).</p>
+<p class="region-biotypes">Anhedonic and reward-deficit biotypes. Grace's hippocampus-VTA loop in Howes Type A schizophrenia.</p>
+</div>
+
+<div class="region">
+<p class="region-name"><span class="pill pill-cerebellum">cerebellum</span>Cerebellum (especially right Crus I/II, lobules VI/VII)</p>
+<p class="region-loc">Behind the brainstem. Crus I/II are in the lateral cerebellum, posterior lobe.</p>
+<p class="region-role">Motor coordination, but also cognitive and emotional functions (especially lateral cerebellum).</p>
+<p class="region-biotypes">Autism (right Crus I/II added to headset target list). Psychosis cognitive dysmetria (Andreasen). Alcohol-related cerebellar atrophy.</p>
+</div>
+
+<h2 id="networks">Functional networks</h2>
+<p>Groups of regions that activate together. A region can belong to several networks.</p>
+
+<div class="net-grid">
+
+<div class="net-card">
+<svg class="brain small-svg" viewBox="0 0 240 170" role="img">
+  <circle cx="60" cy="50" r="14" fill="var(--network-dmn)" opacity="0.7"/>
+  <circle cx="180" cy="50" r="14" fill="var(--network-dmn)" opacity="0.7"/>
+  <circle cx="120" cy="100" r="14" fill="var(--network-dmn)" opacity="0.7"/>
+  <circle cx="50" cy="130" r="14" fill="var(--network-dmn)" opacity="0.7"/>
+  <circle cx="190" cy="130" r="14" fill="var(--network-dmn)" opacity="0.7"/>
+  <line x1="60" y1="50" x2="120" y2="100" stroke="var(--network-dmn)" stroke-width="1.5"/>
+  <line x1="180" y1="50" x2="120" y2="100" stroke="var(--network-dmn)" stroke-width="1.5"/>
+  <line x1="50" y1="130" x2="120" y2="100" stroke="var(--network-dmn)" stroke-width="1.5"/>
+  <line x1="190" y1="130" x2="120" y2="100" stroke="var(--network-dmn)" stroke-width="1.5"/>
+  <line x1="60" y1="50" x2="180" y2="50" stroke="var(--network-dmn)" stroke-width="1.5"/>
+  <text class="label-faint" x="60" y="35" text-anchor="middle">mPFC</text>
+  <text class="label-faint" x="180" y="35" text-anchor="middle">vmPFC</text>
+  <text class="label-faint" x="120" y="120" text-anchor="middle">PCC</text>
+  <text class="label-faint" x="50" y="155" text-anchor="middle">left ang.</text>
+  <text class="label-faint" x="190" y="155" text-anchor="middle">right ang.</text>
+</svg>
+<p class="net-title">Default Mode Network (DMN)</p>
+<p class="net-sub">PCC, precuneus, medial PFC, vmPFC, angular gyrus</p>
+<p class="net-body">Activates at rest, mind-wandering, self-thinking. Deactivates on task. Depression rumination, PTSD, psychedelic desynchronization.</p>
+</div>
+
+<div class="net-card">
+<svg class="brain small-svg" viewBox="0 0 240 170" role="img">
+  <circle cx="60" cy="100" r="14" fill="var(--network-sn)" opacity="0.7"/>
+  <circle cx="180" cy="100" r="14" fill="var(--network-sn)" opacity="0.7"/>
+  <circle cx="120" cy="50" r="14" fill="var(--network-sn)" opacity="0.7"/>
+  <line x1="60" y1="100" x2="120" y2="50" stroke="var(--network-sn)" stroke-width="1.5"/>
+  <line x1="180" y1="100" x2="120" y2="50" stroke="var(--network-sn)" stroke-width="1.5"/>
+  <line x1="60" y1="100" x2="180" y2="100" stroke="var(--network-sn)" stroke-width="1.5"/>
+  <text class="label-faint" x="60" y="125" text-anchor="middle">left ant. insula</text>
+  <text class="label-faint" x="180" y="125" text-anchor="middle">right ant. insula</text>
+  <text class="label-faint" x="120" y="35" text-anchor="middle">dACC</text>
+</svg>
+<p class="net-title">Salience Network (SN)</p>
+<p class="net-sub">Anterior insula (bilateral) + dACC</p>
+<p class="net-body">Detects salient stimuli, switches between DMN and CEN. Gatekeeper between resting and task brain states. Anxiety panic, addiction craving.</p>
+</div>
+
+<div class="net-card">
+<svg class="brain small-svg" viewBox="0 0 240 170" role="img">
+  <circle cx="60" cy="50" r="14" fill="var(--network-cen)" opacity="0.7"/>
+  <circle cx="180" cy="50" r="14" fill="var(--network-cen)" opacity="0.7"/>
+  <circle cx="60" cy="120" r="14" fill="var(--network-cen)" opacity="0.7"/>
+  <circle cx="180" cy="120" r="14" fill="var(--network-cen)" opacity="0.7"/>
+  <line x1="60" y1="50" x2="60" y2="120" stroke="var(--network-cen)" stroke-width="1.5"/>
+  <line x1="180" y1="50" x2="180" y2="120" stroke="var(--network-cen)" stroke-width="1.5"/>
+  <line x1="60" y1="50" x2="180" y2="50" stroke="var(--network-cen)" stroke-width="1.5"/>
+  <line x1="60" y1="120" x2="180" y2="120" stroke="var(--network-cen)" stroke-width="1.5"/>
+  <text class="label-faint" x="60" y="35" text-anchor="middle">L DLPFC</text>
+  <text class="label-faint" x="180" y="35" text-anchor="middle">R DLPFC</text>
+  <text class="label-faint" x="60" y="145" text-anchor="middle">L parietal</text>
+  <text class="label-faint" x="180" y="145" text-anchor="middle">R parietal</text>
+</svg>
+<p class="net-title">Central Executive Network (CEN)</p>
+<p class="net-sub">DLPFC + posterior parietal cortex</p>
+<p class="net-body">Working memory, cognitive control, goal-directed attention. Cognitive-control biotype across all 6 disorders. Canonical TMS target.</p>
+</div>
+
+<div class="net-card">
+<svg class="brain small-svg" viewBox="0 0 240 170" role="img">
+  <circle cx="120" cy="100" r="14" fill="var(--network-threat)" opacity="0.7"/>
+  <circle cx="50" cy="50" r="14" fill="var(--network-threat)" opacity="0.5"/>
+  <circle cx="120" cy="40" r="14" fill="var(--network-threat)" opacity="0.5"/>
+  <circle cx="190" cy="50" r="14" fill="var(--network-threat)" opacity="0.5"/>
+  <circle cx="190" cy="135" r="11" fill="var(--network-threat)" opacity="0.5"/>
+  <line x1="120" y1="100" x2="50" y2="50" stroke="var(--network-threat)" stroke-width="1.5"/>
+  <line x1="120" y1="100" x2="120" y2="40" stroke="var(--network-threat)" stroke-width="1.5"/>
+  <line x1="120" y1="100" x2="190" y2="50" stroke="var(--network-threat)" stroke-width="1.5"/>
+  <line x1="120" y1="100" x2="190" y2="135" stroke="var(--network-threat)" stroke-width="1.5"/>
+  <text class="label-faint" x="120" y="120" text-anchor="middle">amygdala</text>
+  <text class="label-faint" x="50" y="35" text-anchor="middle">vmPFC</text>
+  <text class="label-faint" x="120" y="25" text-anchor="middle">pgACC</text>
+  <text class="label-faint" x="190" y="35" text-anchor="middle">ant. insula</text>
+  <text class="label-faint" x="190" y="155" text-anchor="middle">BNST</text>
+</svg>
+<p class="net-title">Threat / fear circuit</p>
+<p class="net-sub">Amygdala (hub), vmPFC, pgACC, anterior insula, BNST, hippocampus</p>
+<p class="net-body">vmPFC + pgACC normally inhibit the amygdala. When they fail, threat reactivity stays high. Anxiety, PTSD, anxious-depression biotypes.</p>
+</div>
+
+<div class="net-card">
+<svg class="brain small-svg" viewBox="0 0 240 170" role="img">
+  <circle cx="120" cy="100" r="14" fill="var(--network-reward)" opacity="0.7"/>
+  <circle cx="200" cy="135" r="11" fill="var(--network-reward)" opacity="0.5"/>
+  <circle cx="50" cy="100" r="14" fill="var(--network-reward)" opacity="0.5"/>
+  <circle cx="50" cy="40" r="14" fill="var(--network-reward)" opacity="0.5"/>
+  <circle cx="190" cy="40" r="14" fill="var(--network-reward)" opacity="0.5"/>
+  <line x1="200" y1="135" x2="120" y2="100" stroke="var(--network-reward)" stroke-width="1.5"/>
+  <line x1="120" y1="100" x2="50" y2="40" stroke="var(--network-reward)" stroke-width="1.5"/>
+  <line x1="120" y1="100" x2="190" y2="40" stroke="var(--network-reward)" stroke-width="1.5"/>
+  <line x1="120" y1="100" x2="50" y2="100" stroke="var(--network-reward)" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text class="label-faint" x="120" y="120" text-anchor="middle">NAc</text>
+  <text class="label-faint" x="200" y="155" text-anchor="middle">VTA</text>
+  <text class="label-faint" x="50" y="25" text-anchor="middle">vmPFC</text>
+  <text class="label-faint" x="190" y="25" text-anchor="middle">OFC</text>
+  <text class="label-faint" x="50" y="125" text-anchor="middle">amygdala</text>
+</svg>
+<p class="net-title">Reward circuit (mesolimbic + mesocortical)</p>
+<p class="net-sub">VTA → NAc → vmPFC + OFC</p>
+<p class="net-body">VTA dopamine drives reward prediction. Addiction (Volkow), MDD-anhedonic (Pizzagalli), PTSD-dysphoric, SCZ negative symptoms.</p>
+</div>
+
+<div class="net-card">
+<svg class="brain small-svg" viewBox="0 0 240 170" role="img">
+  <circle cx="60" cy="40" r="14" fill="var(--network-cstc)" opacity="0.7"/>
+  <circle cx="180" cy="40" r="14" fill="var(--network-cstc)" opacity="0.7"/>
+  <circle cx="120" cy="100" r="14" fill="var(--network-cstc)" opacity="0.7"/>
+  <circle cx="120" cy="150" r="11" fill="var(--network-cstc)" opacity="0.7"/>
+  <line x1="60" y1="40" x2="120" y2="100" stroke="var(--network-cstc)" stroke-width="1.5"/>
+  <line x1="180" y1="40" x2="120" y2="100" stroke="var(--network-cstc)" stroke-width="1.5"/>
+  <line x1="120" y1="100" x2="120" y2="150" stroke="var(--network-cstc)" stroke-width="1.5"/>
+  <path d="M 120 150 Q 30 140 60 40" fill="none" stroke="var(--network-cstc)" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text class="label-faint" x="60" y="25" text-anchor="middle">OFC</text>
+  <text class="label-faint" x="180" y="25" text-anchor="middle">dACC</text>
+  <text class="label-faint" x="120" y="120" text-anchor="middle">caudate</text>
+  <text class="label-faint" x="120" y="167" text-anchor="middle">MD thalamus</text>
+</svg>
+<p class="net-title">CSTC loop (cortico-striato-thalamo-cortical)</p>
+<p class="net-sub">OFC + dACC → caudate → MD thalamus → back to cortex</p>
+<p class="net-body">Action selection, habit, repetitive behavior. OCD biotype hyperactivity. FDA-approved OCD deep TMS targets this loop.</p>
+</div>
+
+<div class="net-card">
+<svg class="brain small-svg" viewBox="0 0 240 170" role="img">
+  <circle cx="120" cy="80" r="14" fill="var(--network-van)" opacity="0.7"/>
+  <circle cx="60" cy="120" r="14" fill="var(--network-van)" opacity="0.7"/>
+  <line x1="120" y1="80" x2="60" y2="120" stroke="var(--network-van)" stroke-width="1.5"/>
+  <text class="label-faint" x="120" y="65" text-anchor="middle">right TPJ</text>
+  <text class="label-faint" x="60" y="145" text-anchor="middle">right ventral PFC</text>
+</svg>
+<p class="net-title">Ventral Attention Network (VAN)</p>
+<p class="net-sub">Right TPJ + right ventral frontal cortex</p>
+<p class="net-body">Reorients attention to unexpected events. "Circuit breaker" for the dorsal attention network. VAN-deficit predicts PTSD psychotherapy non-response.</p>
+</div>
+
+<div class="net-card">
+<svg class="brain small-svg" viewBox="0 0 240 170" role="img">
+  <circle cx="60" cy="40" r="13" fill="var(--network-social)" opacity="0.7"/>
+  <circle cx="180" cy="40" r="13" fill="var(--network-social)" opacity="0.7"/>
+  <circle cx="60" cy="100" r="13" fill="var(--network-social)" opacity="0.7"/>
+  <circle cx="180" cy="100" r="13" fill="var(--network-social)" opacity="0.7"/>
+  <circle cx="120" cy="140" r="13" fill="var(--network-social)" opacity="0.7"/>
+  <line x1="60" y1="40" x2="180" y2="40" stroke="var(--network-social)" stroke-width="1.5"/>
+  <line x1="60" y1="40" x2="60" y2="100" stroke="var(--network-social)" stroke-width="1.5"/>
+  <line x1="180" y1="40" x2="180" y2="100" stroke="var(--network-social)" stroke-width="1.5"/>
+  <line x1="60" y1="100" x2="120" y2="140" stroke="var(--network-social)" stroke-width="1.5"/>
+  <line x1="180" y1="100" x2="120" y2="140" stroke="var(--network-social)" stroke-width="1.5"/>
+  <text class="label-faint" x="60" y="25" text-anchor="middle">mPFC</text>
+  <text class="label-faint" x="180" y="25" text-anchor="middle">right TPJ</text>
+  <text class="label-faint" x="60" y="125" text-anchor="middle">STS</text>
+  <text class="label-faint" x="180" y="125" text-anchor="middle">IFG</text>
+  <text class="label-faint" x="120" y="160" text-anchor="middle">FFA + amygdala</text>
+</svg>
+<p class="net-title">Social brain network</p>
+<p class="net-sub">STS, FFA, mPFC, TPJ, IFG, amygdala</p>
+<p class="net-body">Social perception, theory of mind, faces, biological motion. Autism social-brain biotype hypoactivation across all members.</p>
+</div>
+
+</div>
+
+<h2 id="reach">What a wearable optical sensor can reach</h2>
+
+<div class="panel">
+<table>
+<thead><tr><th>Region</th><th>Wearable optical access</th><th>How indexed if not direct</th></tr></thead>
+<tbody>
+<tr><td>DLPFC, dACC, dmPFC, vmPFC, OFC, IFG, STS, STG / Heschl's, FFA, PCC / precuneus, TPJ, anterior insula (via thin temporal cortex), sensorimotor cortex</td><td>Direct</td><td>n/a</td></tr>
+<tr><td>sgACC (Brodmann 25)</td><td>Indirect</td><td>DLPFC anticorrelation (Fox + Cash; the SAINT trick)</td></tr>
+<tr><td>Hippocampus (anterior, CA1)</td><td>Borderline</td><td>Marie-Nelly depth-zoom may partially reach</td></tr>
+<tr><td>Amygdala, BNST</td><td>Indirect</td><td>vmPFC + pgACC connectivity</td></tr>
+<tr><td>Ventral striatum / NAc</td><td>Indirect</td><td>vmPFC + OFC connectivity</td></tr>
+<tr><td>Caudate, putamen, MD thalamus, VTA</td><td>Not reachable noninvasively with optics</td><td>MRI / PET reference; population-level only</td></tr>
+<tr><td>Cerebellar Crus I/II</td><td>Direct (lateral cerebellum is reachable)</td><td>n/a</td></tr>
+</tbody>
+</table>
+<p class="small">The headset target list (DLPFC, dACC, vmPFC/OFC, anterior insula, sgACC, superior temporal/Heschl's, PCC/precuneus, ventral striatum/amygdala via cortical effectors, plus STS, FFA, IFG, and right Crus I/II for autism) covers the directly reachable cortex and the indirectly indexable deep structures.</p>
+</div>
+
+<p class="small" style="margin-top: 2rem;">Companion text reference: <a href="NEUROANATOMY_GUIDE.md">NEUROANATOMY_GUIDE.md</a>. Master biotype reference: <a href="BIOTYPES_CHEATSHEET_v2.md">BIOTYPES_CHEATSHEET_v2.md</a>.</p>
+
+</div>
+</body>
+</html>

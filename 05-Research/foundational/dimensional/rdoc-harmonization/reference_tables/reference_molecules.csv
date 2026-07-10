@@ -1,0 +1,65 @@
+element_id,rdoc_label,mapping_quality_tier,mapping_quality_score,official_name,pubchem_cid,molecular_formula,smiles,entity_type,confidence,notes
+150816,Acetylcholine,High,13,Acetylcholine,187,C7H16NO2+,CC(=O)OCC[N+](C)(C)C,small_molecule,high,Cationic neurotransmitter.
+150812,Adenosine,High,13,Adenosine,60961,C10H13N5O4,C1=NC(=C2C(=N1)N(C=N2)[C@H]3[C@@H]([C@@H]([C@H](O3)CO)O)O)N,small_molecule,high,
+151945,Argipressin,High,13,Argipressin,644077,C46H65N15O12S2,C1C[C@H](N(C1)C(=O)[C@@H]2CSSC[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N2)CC(=O)N)CCC(=O)N)CC3=CC=CC=C3)CC4=CC=C(C=C4)O)N)C(=O)N[C@@H](CCCN=C(N)N)C(=O)NCC(=O)N,peptide,high,Arginine vasopressin (AVP); same compound as element 149907 (Vasopressin).
+150805,Corticotropin,High,13,Corticotropin,16132265,C207H308N56O58S,,peptide,high,ACTH; 39-aa pituitary peptide hormone.
+150804,Corticotropin-releasing hormone,High,13,Corticorelin,16186200,C208H344N60O63S2,,peptide,high,CRH/CRF; 41-aa neuropeptide (PubChem Title 'Corticorelin').
+150802,Cortisol,High,13,Cortisol,5754,C21H30O5,C[C@]12CCC(=O)C=C1CC[C@@H]3[C@@H]2[C@H](C[C@]4([C@H]3CC[C@@]4(C(=O)CO)O)C)O,small_molecule,high,Hydrocortisone.
+151947,Cyclic AMP,High,13,Camp,6076,C10H12N5O6P,C1[C@@H]2[C@H]([C@H]([C@@H](O2)N3C=NC4=C(N=CN=C43)N)O)OP(=O)(O1)O,small_molecule,high,3'
+151948,Cyclic GMP,High,13,Cgmp,135398570,C10H12N5O7P,C1[C@@H]2[C@H]([C@H]([C@@H](O2)N3C=NC4=C3N=C(NC4=O)N)O)OP(=O)(O1)O,small_molecule,high,3'
+149896,Dopamine,High,13,Dopamine,681,C8H11NO2,C1=CC(=C(C=C1CCN)O)O,small_molecule,high,
+151971,Galanin,High,13,Galanin,16133823,C139H210N42O43,,peptide,high,29/30-aa neuropeptide.
+149899,Gamma-aminobutyric acid,High,13,Gamma-Aminobutyric Acid,119,C4H9NO2,C(CC(=O)O)CN,small_molecule,high,GABA.
+150858,Ghrelin,High,13,Ghrelin,16133832,C149H249N47O42,,peptide,high,Acylated 28-aa peptide hormone.
+149895,Glutamate,High,13,L-Glutamic Acid,33032,C5H9NO4,C(CC(=O)O)[C@@H](C(=O)O)N,small_molecule,high,Canonical neurotransmitter L-glutamate; CID 33032 (L-form). Anionic/DL forms also exist (e.g. 611).
+150855,Histamine,High,13,Histamine,774,C5H9N3,C1=C(NC=N1)CCN,small_molecule,high,
+150857,Leptin,High,13,Leptin,157010069,C87H138N22O28S2,,peptide,high,Adipokine protein hormone (PubChem provides a peptide record CID 157010069).
+151951,Melatonin,High,13,Melatonin,896,C13H16N2O2,CC(=O)NCCC1=CNC2=C1C=C(C=C2)OC,small_molecule,high,N-acetyl-5-methoxytryptamine.
+150841,N-Methyl-D-aspartate (NMDA),High,13,Nmda,22880,C5H9NO4,CN[C@H](CC(=O)O)C(=O)O,small_molecule,high,Discrete NMDA receptor agonist compound; distinct from the NMDA receptor protein (element 149894).
+149909,Neuropeptide S,High,13,Neuropeptide S,44123843,C93H155N31O28S,,peptide,high,20-aa neuropeptide.
+149903,Neuropeptide Y,High,13,Neuropeptide Y,16132350,C190H287N55O57,,peptide,high,36-aa neuropeptide.
+151946,Nitric oxide,High,13,Nitric Oxide,145068,NO,[N]=O,small_molecule,high,Gaseous signaling molecule.
+150853,Norepinephrine,High,13,Norepinephrine,439260,C8H11NO3,C1=CC(=C(C=C1[C@H](CN)O)O)O,small_molecule,high,Noradrenaline.
+149906,Oxytocin,High,13,Oxytocin,439302,C43H66N12O12S2,CC[C@H](C)[C@H]1C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@@H](CSSC[C@@H](C(=O)N[C@H](C(=O)N1)CC2=CC=C(C=C2)O)N)C(=O)N3CCC[C@H]3C(=O)N[C@@H](CC(C)C)C(=O)NCC(=O)N)CC(=O)N)CCC(=O)N,peptide,high,Nonapeptide hormone.
+151941,Pituitary adenylate cyclase activating polypeptide,High,13,Pacap-38,91935803,C203H331N63O53S,,peptide,high,PACAP; mapped to the 38-aa form PACAP-38 (CID 91935803).
+149897,Serotonin,High,13,Serotonin,5202,C10H12N2O,C1=CC2=C(C=C1O)C(=CN2)CCN,small_molecule,high,5-hydroxytryptamine.
+151943,Substance P,High,13,Substance P,36511,C63H98N18O13S,,peptide,high,11-aa tachykinin neuropeptide.
+150850,Testosterone,High,13,Testosterone,6013,C19H28O2,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2O)CCC4=CC(=O)CC[C@]34C,small_molecule,high,Androgen steroid hormone.
+151944,Vasoactive intestinal peptide,High,13,Vasoactive intestinal peptide,53314964,C147H237N43O43S,,peptide,high,VIP; 28-aa neuropeptide.
+149907,Vasopressin,High,13,Argipressin,644077,C46H65N15O12S2,C1C[C@H](N(C1)C(=O)[C@@H]2CSSC[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N2)CC(=O)N)CCC(=O)N)CC3=CC=CC=C3)CC4=CC=C(C=C4)O)N)C(=O)N[C@@H](CCCN=C(N)N)C(=O)NCC(=O)N,peptide,high,Arginine vasopressin (AVP); same compound as element 151945 (Argipressin)
+149908,Cholecystokinin,Medium,12,Sincalide,9833444,C49H62N10O16S3,,peptide,medium,"CCK is a peptide family; mapped to the bioactive C-terminal octapeptide CCK-8 (sincalide, CID 9833444). Full-length CCK has no single small-molecule CID."
+150817,Co-released neuromodular glutamate,Medium,12,L-Glutamic Acid,33032,C5H9NO4,C(CC(=O)O)[C@@H](C(=O)O)N,small_molecule,medium,Descriptive label for co-released glutamate; the molecule is glutamate (CID 33032). Label describes a release context rather than a distinct compound.
+150818,dopamine and dopamine-related molecules,Medium,12,Dopamine,681,C8H11NO2,C1=CC(=C(C=C1CCN)O)O,class/family,medium,Grouping label; core member is dopamine (CID 681) plus related catecholamines/metabolites. Not a single compound.
+150856,Hypocretin/Orexin,Medium,12,Orexin A,56842143,C152H243N47O44S4,,peptide,medium,Same neuropeptide system as element 149902. Mapped to representative orexin A peptide (CID 56842143).
+149902,Orexin,Medium,12,Orexin A,56842143,C152H243N47O44S4,,peptide,medium,Orexin/hypocretin is a neuropeptide pair (orexin A + B). Mapped to representative orexin A peptide (CID 56842143). NOTE: PubChem name lookup for bare 'Orexin' returns CID 9815675 (2-phenyl-1
+150809,Androgens,Low,3,,,,,class/family,high,"Class of steroid sex hormones (testosterone, DHT, androstenedione). No single CID; representative: testosterone (CID 6013)."
+150852,Anterior pituitary hormones,Low,3,,,,,class/family,high,"Functional grouping (ACTH, GH, prolactin, TSH, LH, FSH). No single CID."
+149898,Brain-derived neurotrophic factor,Low,3,,,,,growth_factor,high,BDNF secreted protein (neurotrophin); no single CID/SMILES.
+151949,Calbindin,Low,3,,,,,protein,high,Calbindin calcium-binding protein (CALB1/CALB2); no single CID/SMILES.
+150821,Catecholamines,Low,3,,,,,class/family,high,"Class (dopamine, norepinephrine, epinephrine). No single CID; representative: dopamine (CID 681)."
+150851,Contactin,Low,3,,,,,protein,high,Contactin (CNTN) cell-adhesion glycoprotein family; no single CID/SMILES.
+151464,Cyclic AMP-responsive DNA-binding protein,Low,3,,,,,transcription_factor,high,CREB transcription factor protein; no single CID/SMILES.
+150860,Cytokines,Low,3,,,,,class/family,high,Class of secreted signaling proteins (interleukins
+150840,Dopamine D1 receptor,Low,3,,,,,receptor,high,G-protein-coupled receptor protein (DRD1); no single CID/SMILES.
+150842,Dopamine D2 receptor,Low,3,,,,,receptor,high,G-protein-coupled receptor protein (DRD2); no single CID/SMILES.
+150814,Endocannabinoids,Low,3,,,,,class/family,high,"Class of endogenous cannabinoid ligands (anandamide, 2-AG). No single CID; representative: anandamide (CID 5281969)."
+150808,Estrogens,Low,3,,,,,class/family,high,"Class of steroid sex hormones (estradiol, estrone, estriol). No single CID; representative: estradiol (CID 5757)."
+149905,Fibroblast growth factor 2,Low,3,,,,,growth_factor,high,FGF2 protein; no single CID/SMILES.
+150849,Fragile X mental retardation protein,Low,3,,,,,protein,high,FMRP (FMR1 gene product)
+150806,Glucocorticoid receptors,Low,3,,,,,receptor,high,Nuclear hormone receptor protein (NR3C1); no single CID/SMILES.
+150848,Human CRHR2 protein,Low,3,,,,,receptor,high,Corticotropin-releasing hormone receptor 2 (CRHR2) protein; no single CID/SMILES.
+151465,Human FOSB protein,Low,3,,,,,transcription_factor,high,FOSB transcription factor protein (AP-1 component); no single CID/SMILES.
+150803,Hypothalamic-pituitary-adrenal axis hormones,Low,3,,,,,class/family,high,Functional grouping (CRH
+150810,Inflammatory molecules,Low,3,,,,,class/family,high,Heterogeneous functional class (cytokines
+150847,Kappa opioid receptors,Low,3,,,,,receptor,high,GPCR protein (OPRK1); no single CID/SMILES.
+151940,Melanopsin,Low,3,,,,,protein,high,Melanopsin (OPN4) photopigment GPCR protein; no single CID/SMILES.
+150813,Mu and delta opioid,Low,3,,,,,class/family,high,Refers to mu/delta opioid receptors or their ligands; not a discrete compound. No single CID.
+150845,Mu opioid receptor,Low,3,,,,,receptor,high,GPCR protein (OPRM1); no single CID/SMILES.
+149894,N-Methyl-D-Aspartate receptors,Low,3,,,,,receptor,high,Ionotropic glutamate receptor protein (NMDAR); not a discrete compound. Distinct from the agonist NMDA (CID 22880).
+149910,Neurosteroids,Low,3,,,,,class/family,high,Class of endogenous steroids acting on neural targets (e.g. allopregnanolone
+150826,Opioid,Low,3,,,,,class/family,high,Refers to opioid ligands/receptors broadly. No single CID.
+150843,oxytocin receptor,Low,3,,,,,receptor,high,GPCR protein (OXTR); no single CID/SMILES.
+150822,Peptides,Low,3,,,,,class/family,high,Broad structural class. No single CID.
+151950,Steroid hormones,Low,3,,,,,class/family,high,"Class of steroid hormones (cortisol, aldosterone, sex steroids). No single CID."
+150811,steroids,Low,3,,,,,class/family,high,Broad structural class of steroid compounds. No single CID.
+150844,vasopressin 1a receptor,Low,3,,,,,receptor,high,GPCR protein (AVPR1A); no single CID/SMILES.

@@ -1,0 +1,179 @@
+element_id,rdoc_label,mapping_quality_tier,mapping_quality_score,expanded_name,allen_region_name,allen_acronym,allen_structure_id,match_quality,is_network,flag_poor_map,notes
+150934,Amygdala,High,35,Amygdala,amygdaloid complex,AMY,10361,exact,no,no,Amygdaloid complex.
+150865,Bed nucleus of stria terminalis,High,35,Bed nucleus of the stria terminalis (BNST),bed nucleus of stria terminalis,BNST,10384,exact,no,no,BNST.
+149931,Central gray substance of midbrain,High,35,Periaqueductal gray (PAG),periaqueductal gray substance,PAG,12209,exact,no,no,PAG=periaqueductal/central gray of midbrain.
+157907,Cerebellum,High,35,Cerebellum,cerebellum,CB,10656,exact,no,no,Direct match
+158092,Corpus Callosum,High,35,Corpus callosum,corpus callosum,cc,10561,exact,no,no,Direct match (white-matter commissure)
+149919,Dorsomedial periaqueductal gray,High,35,Dorsomedial periaqueductal gray (dPAG),"periaqueductal gray substance,dorsomedial division",PAGdm,12211,exact,no,no,dPAG=dorsal/dorsomedial PAG.
+150928,Hippocampus,High,35,Hippocampus,hippocampal gyrus (formation),HiF,12170,exact,no,no,Hippocampal formation.
+151888,Inferior colliculus,High,35,Inferior colliculus (IC),inferior colliculus,IC,12305,exact,no,no,Direct match
+158086,Inferior Frontal Gyrus,High,35,Inferior frontal gyrus (IFG),inferior frontal gyrus,IFG,12117,exact,no,no,Direct match
+150986,Inferior Parietal Cortex,High,35,Inferior parietal cortex,inferior parietal lobule,IPL,12134,exact,no,no,Inferior parietal lobule.
+149917,Lateral amygdalar nucleus,High,35,Lateral amygdala (LatAmyg),lateral nucleus,La,10367,exact,no,no,LatAmyg=lateral nucleus of amygdala.
+150947,Lateral habenula,High,35,Lateral habenula,lateral habenular nucleus,LHN,10453,exact,no,no,Lateral habenular nucleus.
+149936,Locus ceruleus,High,35,Locus coeruleus (LC),locus coeruleus,LC,12819,exact,no,no,LC=locus coeruleus.
+149930,Medial amygdala,High,35,Medial amygdala,medial nucleus,Me,10376,exact,no,no,Medial nucleus of amygdala.
+151002,Medial dorsal nucleus,High,35,Mediodorsal nucleus of thalamus (MD),mediodorsal nucleus of thalamus,MD,10398,exact,no,no,MD thalamus.
+150976,Medial geniculate body,High,35,Medial geniculate body (MGN),medial geniculate nuclei,MG,10434,exact,no,no,MGN=medial geniculate.
+150951,Nucleus accumbens,High,35,Nucleus accumbens (NAcc),nucleus accumbens,NAC,10339,exact,no,no,NAcc.
+149925,Orbitofrontal cortex,High,35,Orbitofrontal cortex (OFC),orbital frontal cortex,OFC,10194,exact,no,no,OFC=orbitofrontal cortex.
+150927,Paraventricular nucleus of the hypothalamus,High,35,Paraventricular nucleus of the hypothalamus (PVN),paraventricular nucleus of hypothalamus,PV,10476,exact,no,no,PVN=hypothalamic paraventricular nucleus.
+149933,Pons,High,35,Pons,pons,Pn,10661,exact,no,no,Pons.
+150991,Posterior Parietal Cortex,High,35,Posterior parietal cortex (PPC),posterior parietal cortex,PoPC,10214,exact,no,no,PPC.
+151056,precuneus,High,35,Precuneus,precuneus,PrCun,12137,exact,no,no,Direct match
+157902,Premotor Cortex,High,35,Premotor cortex,premotor cortex (area 6),PMC,10168,exact,no,no,Direct match
+151710,pulvinar,High,35,Pulvinar,pulvinar of thalamus,Pul,10409,exact,no,no,Direct match
+150932,Septum,High,35,Septum,septal nuclei,SEP,10350,exact,no,no,Septum=septal nuclei.
+158078,Substantia Nigra,High,35,Substantia nigra (SN),substantia nigra,SN,12251,exact,no,no,Direct match
+151758,Superior colliculus,High,35,Superior colliculus (SC),superior colliculus,SC,12292,exact,no,no,Direct match
+150978,Superior temporal gyrus,High,35,Superior temporal gyrus (STG),superior temporal gyrus,STG,12140,exact,no,no,STG.
+151012,Superior Temporal Sulcus,High,35,Superior temporal sulcus (STS),superior temporal sulcus,sts,10629,exact,no,no,STS (a sulcus; cortex banks).
+151759,Suprachiasmatic nucleus,High,35,Suprachiasmatic nucleus (SCN),suprachiasmatic nucleus,SCN,10480,exact,no,no,SCN=suprachiasmatic nucleus; direct match
+151055,temporal pole,High,35,Temporal pole,temporal pole,TP,12146,exact,no,no,Direct match
+151007,Terminal stria nuclei of preoptic region,High,35,Bed nucleus of the stria terminalis (BNST),bed nucleus of stria terminalis,BNST,10384,exact,no,no,Labelled BNST in assoc; bed nucleus of stria terminalis.
+151709,Thalamic reticular nucleus,High,35,Thalamic reticular nucleus (TRN),reticular nucleus of thalamus,R,10464,exact,no,no,TRN=thalamic reticular nucleus; direct match
+151003,Ventral anterior thalamic nucleus,High,35,Ventral anterior nucleus of thalamus (VA),ventral anterior nucleus of thalamus,VA,10417,exact,no,no,VA thalamus.
+150944,Ventral striatum (nucleus accumbens),High,35,Ventral striatum / nucleus accumbens,nucleus accumbens,NAC,10339,exact,no,no,Ventral striatum ~ nucleus accumbens.
+150946,Ventral tegmental area,High,35,Ventral tegmental area (VTA),ventral tegmental area,VTA,12261,exact,no,no,VTA.
+149918,Ventrolateral periaqueductal gray,High,35,Ventrolateral periaqueductal gray (vPAG),"periaqueductal gray substance, ventrolateral division",PAGvl,12214,exact,no,no,vPAG=ventral/ventrolateral PAG.
+150954,Anterior insula,Medium,25,Anterior insula,short insular gyri,SIG,12178,close,no,no,Anterior insula; closest Allen gross region the anterior (short) insular gyri.
+149916,Basolateral amygdala,Medium,25,Basolateral amygdala (BasAmyg),basolateral nucleus (basal nucleus),BL,10368,close,no,no,BasAmyg=basolateral amygdala; Allen basolateral nuclear group BLN (10366) is the broader group.
+150995,Brodmann area 6/8 (frontal eye fields),Medium,25,Frontal eye fields (BA6/8 FEF),laterodorsal subdivision of area 6,A6ld,10169,close,no,no,FEF in BA6/8; Allen represents via area 6/8 subdivisions; no single FEF node.
+149915,Central Nucleus,Medium,25,Central nucleus of the amygdala,central nuclear group,CEN,10363,close,no,no,Amygdala central nucleus; Allen lists CEN (central nuclear group) with subdivisions CEl/CEm.
+149927,Dorsal anterior cingulate cortex,Medium,25,Dorsal anterior cingulate cortex (dACC),"cingulate gyrus, rostral (anterior) part",CgGr,12157,close,no,no,dACC; rostral cingulate gyrus is closest gross structure.
+158080,Dorsal Cingulate,Medium,25,Dorsal (mid) cingulate cortex,"cingulate gyrus, caudal (posterior) part",CgGc,12158,close,no,no,Dorsal/mid cingulate; mapped to caudal cingulate gyrus
+149924,Dorsomedial prefrontal cortex (prelimbic cortex),Medium,25,"Dorsomedial prefrontal cortex, prelimbic (dmPFC pl)","cingulate gyrus, rostral (anterior) part",CgGr,12157,close,no,no,Prelimbic ~ rostral anterior cingulate/dmPFC (BA32/24) in human.
+150988,Frontopolar/Anterior lateral prefrontal cortex (Brodmann area 10),Medium,25,Frontopolar / anterior lateral prefrontal cortex (BA10),frontal pole,FP,146034888,close,no,no,"BA10 frontopolar; Allen frontal pole (FP) / frontal polar cortex area 10 (A10,10190)."
+150985,Inferior frontal cortex,Medium,25,Inferior frontal cortex,inferior frontal gyrus,IFG,12117,close,no,no,Inferior frontal cortex ~ inferior frontal gyrus.
+150984,Inferior temporal cortex,Medium,25,Inferior temporal cortex,midinferior (fusiform) temporal cortex,MITC,10256,close,no,no,Inferior temporal cortex; closest Allen midinferior/fusiform temporal cortex.
+149923,Infralimbic ventromedial prefrontal cortex,Medium,25,"Ventromedial prefrontal cortex, infralimbic (vmPFC il)",subgenual (subcallosal) cingulate cortex,,,close,no,no,Infralimbic cortex ~ subgenual/subcallosal cingulate (BA25) in human; Allen subgenual cingulate (cSGsg/cCPsg).
+150924,Insula,Medium,25,Insula,short insular gyri,SIG,12178,close,no,no,Insula; Allen subdivides into gyri/cytoarchitectonic fields.
+149935,insular cortex,Medium,25,Insular cortex,short insular gyri,SIG,12178,close,no,no,Insular cortex; Allen represents insula via gyral/cytoarchitectonic subdivisions.
+151756,Koniocellular,Medium,25,Koniocellular (visual pathway / layers),koniocellular layers of the lateral geniculate nucleus,KLGN,10424,close,no,no,Koniocellular interlaminar visual stream layers of LGN
+150955,Lateral hypothalamus,Medium,25,Lateral hypothalamus,"lateral  hypothalamic area, posterior part",LHAp,10504,close,no,no,Lateral hypothalamic area.
+151005,Lateral occipitotemporal gyrus,Medium,25,Lateral occipitotemporal (fusiform) gyrus,"occipitotemporal (fusiform) gyrus, temporal part",FuGt,12143,close,no,no,FF gyrus = fusiform/lateral occipitotemporal gyrus.
+158082,Lateral Premotor Cortex,Medium,25,Lateral premotor cortex,premotor cortex (area 6),PMC,10168,close,no,no,Lateral subdivision of premotor cortex (area 6)
+151048,left inferior frontal cortex,Medium,25,Left inferior frontal cortex,inferior frontal gyrus,IFG,12117,close,no,no,Lateralized; mapped to inferior frontal gyrus (left)
+151754,Magnocellular,Medium,25,Magnocellular (visual pathway / layers),magnocellular layers of the lateral geniculate nucleus,MLGN,10422,close,no,no,Magnocellular visual stream layers of LGN; mapped to LGN magnocellular layers
+150952,Medial orbitofrontal cortex,Medium,25,Medial orbitofrontal cortex,orbital frontal cortex,OFC,10194,close,no,no,Medial OFC; Allen OFC node not subdivided medial/lateral at gross level.
+151013,Medial prefrontal cortex,Medium,25,Medial prefrontal cortex (MPFC),anterior (rostral) cingulate (medial prefrontal) cortex,MFC,10278,close,no,no,MPFC=medial prefrontal cortex; Allen labels this region MFC (medial frontal/prefrontal); approximate cortical match
+158083,Mid-Cingulate Gyrus,Medium,25,Mid-cingulate gyrus,cingulate gyrus,CgG,12156,close,no,no,Mid-cingulate; mapped to cingulate gyrus (between rostral and caudal divisions)
+157906,Motor Cortex,Medium,25,Motor cortex (M1),"primary motor cortex (area M1, area 4)",M1C,10163,close,no,no,Motor cortex; mapped to primary motor cortex (M1)
+150917,Paraventricular thalamic nucleus,Medium,25,Paraventricular thalamic nucleus (PVT),paraventricular nucleus,PaV,10457,close,no,no,PVT=paraventricular nucleus of thalamus; Allen 'paraventricular nucleus' (PaV) is the midline thalamic structure.
+158093,Parietal Association Cortex,Medium,25,Parietal association cortex,posterior parietal cortex,PoPC,10214,close,no,no,Parietal association cortex; mapped to posterior parietal cortex
+151755,Parvocellular,Medium,25,Parvocellular (visual pathway / layers),parvocellular layers of the lateral geniculate nucleus,PLGN,10423,close,no,no,Parvocellular visual stream layers of LGN
+151047,posterior cingulate/precuneus,Medium,25,Posterior cingulate cortex / precuneus,"cingulate gyrus, caudal (posterior) part",CgGc,12158,close,no,no,"Posterior cingulate maps to caudal cingulate gyrus; precuneus (PrCun,12137) is the adjacent partner region"
+150996,Pre-Supplementary Motor Area,Medium,25,Pre-supplementary motor area (pre-SMA),medial subdivision of area 6,A6m,,close,no,no,Pre-SMA in medial BA6; Allen via area 6m (medial premotor); no discrete SMA node.
+150977,Primary auditory cortex,Medium,25,Primary auditory cortex (A1),layer V of area 41,A41-5,11025,close,no,no,"A1=Brodmann 41; Allen represents A1 via area 41 layers, no single gross node."
+151952,Retinal cells,Medium,25,Retinal cells,retina,Ret,11579,close,no,no,Retina (peripheral sensory structure); mapped to retina
+149928,Rostral/ventral anterior cingulate cortex,Medium,25,Rostral/ventral anterior cingulate cortex,"cingulate gyrus, rostral (anterior) part",CgGr,12157,close,no,no,Rostral/ventral ACC.
+149932,RPVM,Medium,25,Rostral ventromedial medulla (RVM),raphe magnus nucleus,RMg,12642,close,no,no,RPVM/RVM=rostral ventromedial medulla; core component is raphe magnus (with adjacent paragigantocellular nuclei).
+157974,Somatosensory Cortex,Medium,25,Somatosensory cortex (S1),postcentral gyrus,PoCG,12132,close,no,no,Primary somatosensory cortex resides in postcentral gyrus
+151956,Suprachiasmatic nucleus core/shell,Medium,25,Suprachiasmatic nucleus (SCN) core / shell,suprachiasmatic nucleus,SCN,10480,close,no,no,"Core/shell subdivisions of SCN; atlas provides SCN (and SCNc 13066, SCNd 13065)"
+157973,Thalamus,Medium,25,Thalamus,dorsal thalamus,DTH,10391,close,no,no,Mapped to dorsal thalamus (principal thalamic mass)
+151049,Ventral anterior cingulate,Medium,25,Ventral (subgenual) anterior cingulate cortex,"cingulate gyrus, rostral (anterior) part",CgGr,12157,close,no,no,Ventral/subgenual ACC; mapped to rostral cingulate gyrus; subgenual cingulate (cSG) is finer subdivision
+150945,Ventral pallidum,Medium,25,Ventral pallidum,globus pallidus,GP,10342,close,no,no,"Ventral pallidum; Allen human atlas has no discrete ventral pallidum node, mapped to globus pallidus (pallidum)."
+151460,Ventral striatum,Medium,25,Ventral striatum (VS),nucleus accumbens,NAC,10339,close,no,no,Ventral striatum primarily comprises nucleus accumbens; Allen has no single 'ventral striatum' label
+151053,ventral/dorsal premotor,Medium,25,Ventral / dorsal premotor cortex,premotor cortex (area 6),PMC,10168,close,no,no,Ventral and dorsal subdivisions of premotor cortex (area 6)
+150993,Ventrolateral prefrontal cortex,Medium,25,Ventrolateral prefrontal cortex (VLPFC),inferior frontal gyrus,IFG,12117,close,no,no,VLPFC ~ inferior frontal gyrus (BA44/45/47).
+150923,Ventromedial prefrontal cortex,Medium,25,Ventromedial prefrontal cortex (vmPFC),subgenual (subcallosal) cingulate cortex,,,close,no,no,vmPFC; closest Allen gross region is medial/subgenual prefrontal-cingulate cortex.
+151961,Basolateral amygdala/ Hippocampus,Low,20,Basolateral amygdala / hippocampus,basolateral nucleus of amygdala,BL,10371,close,yes,yes,"Two-region pairing BLA + hippocampus (HIP,10294); mapped to basolateral amygdala"
+151958,Central extended amygdala (central nucleus of the amygdala / Bed nucleus of the stria terminalis),Low,20,Central extended amygdala (central nucleus of the amygdala / bed nucleus of the stria terminalis),extended amygdala,EXA,10383,close,yes,yes,Comprises CeA and BNST (10384); maps to extended amygdala; multi-component
+150964,Substantia nigra/ventral tegmental area,Low,20,Substantia nigra / ventral tegmental area (SN/VTA),substantia nigra,SN,12251,close,yes,yes,"Compound SN/VTA; mapped to SN, flagged."
+150950,Substantia nigra/VTA,Low,20,Substantia nigra / ventral tegmental area,substantia nigra,SN,12251,close,yes,yes,Conjunction SN+VTA (two regions); mapped to substantia nigra; flagged as compound.
+149920,Anterior hippocampus in rodent (anterior in primate),Low,15,Anterior hippocampus,hippocampal gyrus (formation),HiF,12170,broad,no,yes,Allen has no anterior/posterior hippocampus subdivision; mapped to whole hippocampal formation.
+151716,basal forebrain limbic system,Low,15,Basal forebrain limbic system,basal forebrain,BF,10349,broad,no,yes,Broad system reference; mapped to basal forebrain parent region
+150975,Brainstem,Low,15,Brainstem,pons,Pn,10661,broad,no,yes,Brainstem (midbrain+pons+medulla); no single node; broad.
+149921,Dorsal hippocampus in rodent (posterior in primate),Low,15,Posterior (dorsal) hippocampus,hippocampal gyrus (formation),HiF,12170,broad,no,yes,No A-P hippocampal subdivision in Allen human atlas; mapped to hippocampal formation.
+151513,Dorsal Parietal,Low,15,Dorsal (superior) parietal cortex,MZ in posterodorsal (superior) parietal cortex,pMZpd,11618,broad,no,yes,"Superior/dorsal parietal cortex; no single clean atlas label, mapped broadly"
+150961,dorsal striatum,Low,15,Dorsal striatum,head of caudate,CaH,10335,broad,no,yes,Dorsal striatum=caudate+putamen; no single node; broad.
+150990,Dorsolateral Prefrontal Cortex,Low,15,Dorsolateral prefrontal cortex (DLPFC),posterior parietal cortex,,,broad,no,yes,"DLPFC=BA9/46; Allen represents only as area 9/46 layers, no single gross node; broad."
+150914,Dysregulation of amygdala reactivity,Low,15,Amygdala (reactivity),amygdaloid complex,AMY,10361,broad,no,yes,"Functional description of amygdala reactivity, not a discrete region; mapped to amygdaloid complex."
+150915,Dysregulation of cingulate reactivity,Low,15,Cingulate cortex (reactivity),"cingulate gyrus, rostral (anterior) part",CgGr,12157,broad,no,yes,Functional cingulate reactivity description; mapped broadly to cingulate gyrus.
+151050,extrastriate body area,Low,15,Extrastriate body area (EBA),CP in midlateral extrastriate cortex (area 19),oCPml,11676,broad,no,yes,"EBA is a functional region in lateral occipitotemporal extrastriate cortex; no exact atlas label, mapped broadly to extrastriate cortex"
+158085,Frontal Eyefields,Low,15,Frontal eye fields (FEF),precentral gyrus,PrCG,12114,broad,no,yes,FEF is functional region near precentral/superior frontal sulcus; no atlas FEF label
+151052,fusiform face area,Low,15,Fusiform face area (FFA),"occipitotemporal (fusiform) gyrus, temporal part",FuGt,12143,broad,no,yes,FFA is a functional patch within fusiform gyrus; mapped to fusiform gyrus (temporal part)
+151959,Hypothalamic neuroendocrine cell groups,Low,15,Hypothalamic neuroendocrine cell groups,hypothalamus,HY,10465,broad,no,yes,Diffuse neuroendocrine cell groups; mapped to hypothalamus parent
+150918,Hypothalamic nuclei,Low,15,Hypothalamic nuclei,preoptic region of HTH,HTHpo,,broad,no,yes,Generic set of hypothalamic nuclei; broad.
+149926,Hypothalamus,Low,15,Hypothalamus,preoptic region of HTH,HTHpo,,broad,no,yes,"Whole hypothalamus; Allen represents hypothalamus via many subnuclei, no single 'hypothalamus' node returned; broad."
+150983,Lateral superior and middle temporal cortices,Low,15,Lateral superior and middle temporal cortices,superior temporal gyrus,STG,12140,broad,no,yes,Superior+middle temporal cortices (multiple gyri); broad.
+150962,Medial Prefrontal Cortex,Low,15,Medial prefrontal cortex (mPFC),"cingulate gyrus, rostral (anterior) part",CgGr,12157,broad,no,yes,mPFC spans medial frontal/anterior cingulate; broad.
+151973,Mesopontine nuclei,Low,15,"Mesopontine nuclei (e.g., PPN, LDT)",pedunculopontine tegmental nucleus,PPTg,12487,broad,no,yes,Mesopontine cholinergic nuclei (PPN/LDT); mapped to pedunculopontine tegmental nucleus
+151051,occipital face area,Low,15,Occipital face area (OFA),CP in midlateral extrastriate cortex (area 19),oCPml,11676,broad,no,yes,OFA is a functional region in lateral occipital extrastriate cortex; no exact atlas label
+150926,Parietal cortex,Low,15,Parietal cortex,posterior parietal cortex,PoPC,10214,broad,no,yes,Generic parietal cortex; mapped to posterior parietal cortex region.
+150925,Posterior Cingulate Gyrus,Low,15,Posterior cingulate gyrus,precuneus,PrCun,12137,broad,no,yes,Allen human atlas labels cingulate as rostral cingulate gyrus + precuneus; no discrete 'posterior cingulate gyrus' node; closest gross neighbor precuneus.
+151041,Right parietal,Low,15,Right parietal (cortex),posterior parietal cortex,PoPC,10214,broad,no,yes,Lateralized broad parietal reference; mapped to posterior parietal cortex as closest broad region
+150948,Rostral medial tegmentum,Low,15,Rostromedial tegmental nucleus (RMTg),microcellular tegmental nucleus,MiTg,12281,broad,no,yes,Rostromedial tegmental nucleus/tail of VTA; no exact Allen node; closest is microcellular/ventrolateral tegmental nuclei; broad.
+150937,striatum,Low,15,Striatum,head of caudate,CaH,10335,broad,no,yes,Striatum (caudate+putamen+accumbens); no single 'striatum' node in Allen human atlas; broad.
+158084,Superior Parietal Cortex,Low,15,Superior parietal cortex,MZ in posterodorsal (superior) parietal cortex,pMZpd,11618,broad,no,yes,"Superior parietal lobule; no clean single atlas label, mapped broadly"
+157972,Supplementary Motor Area,Low,15,Supplementary motor area (SMA),premotor cortex (area 6),PMC,10168,broad,no,yes,"SMA is medial area 6; no distinct SMA label in atlas, mapped to premotor cortex"
+151054,Temporoparietal junction,Low,15,Temporoparietal junction (TPJ),posteroventral (inferior) parietal cortex,IPC,10225,broad,no,yes,TPJ=temporoparietal junction; spans inferior parietal / posterior superior temporal; no exact atlas region
+150949,Basal Ganglia,None/Flagged,10,Basal ganglia,head of caudate,CaH,10335,broad,yes,yes,Basal ganglia is a multi-nucleus system; not a single region.
+158079,Cerebello-Olivary-Pontine Complex,None/Flagged,10,Cerebello-olivary-pontine complex,inferior olive,IO,12600,broad,yes,yes,"Spans cerebellum, inferior olive, pontine nuclei; multi-region complex, mapped to inferior olive"
+150981,Extrinsic hippocampal circuitry,None/Flagged,10,Extrinsic hippocampal circuitry,hippocampal gyrus (formation),HiF,12170,broad,yes,yes,External hippocampal connections; a pathway/network.
+150919,Habit systems (Striatum/caudate/accumbens),None/Flagged,10,Habit systems (striatum/caudate/accumbens),head of caudate,CaH,10335,broad,yes,yes,Composite system spanning striatum/caudate/accumbens; treated as multi-region circuit.
+151960,Hypothalamic orexin projections,None/Flagged,10,Hypothalamic orexin (hypocretin) projections,lateral hypothalamic area,LH,10491,broad,yes,yes,"Orexin neurons reside in lateral hypothalamus; describes projections, not a single region"
+150980,Intrinsic hippocampal circuitry,None/Flagged,10,Intrinsic hippocampal circuitry,hippocampal gyrus (formation),HiF,12170,broad,yes,yes,Internal hippocampal circuit (DG-CA fields); a pathway within hippocampus.
+158095,Occulomotor System,None/Flagged,10,Oculomotor system,oculomotor nucleus,3N,12199,broad,yes,yes,"Distributed oculomotor control system (FEF, SC, oculomotor nuclei); mapped to oculomotor nucleus; system not a single region"
+151957,"Paraventricular nucleus, dorsomedial hypothalamic nucleus, subparaventricular zone and paraventricular thalamic nucleus",None/Flagged,10,"Paraventricular nucleus (PVN), dorsomedial hypothalamic nucleus (DMH), subparaventricular zone, and paraventricular thalamic nucleus (PVT)",paraventricular nucleus of hypothalamus,PV,10476,broad,yes,yes,"Lists four regions (PVN,DMH,SPZ,PVT); mapped to hypothalamic paraventricular nucleus; multi-region"
+151806,Periaqueductal gray and anterior commissure regions,None/Flagged,10,Periaqueductal gray (PAG) and anterior commissure (AC) regions,periaqueductal gray substance,PAG,12209,broad,yes,yes,"Groups PAG (12209) and anterior commissure (ac,10559); multiple regions, mapped to PAG"
+151060,Reciprocal hypothalamic,None/Flagged,10,Reciprocal hypothalamic (projections),hypothalamus,HY,10465,broad,yes,yes,Reciprocal hypothalamic connections; broad parent region hypothalamus
+151954,Retinogeniculate tract,None/Flagged,10,Retinogeniculate tract,optic tract,opt,10618,broad,yes,yes,Retina-to-LGN projection; closest tract is optic tract
+150931,Reward circuitry,None/Flagged,10,Reward circuitry,nucleus accumbens,NAC,10339,broad,yes,yes,Distributed reward circuit (VTA-NAcc-PFC etc.); not a single region.
+158094,Sensorimotor-Basal Ganglia,None/Flagged,10,Sensorimotor - basal ganglia,striatum,STR,10333,broad,yes,yes,Sensorimotor cortico-basal ganglia loop; mapped to striatum; describes a circuit
+158091,Sensorimotor-Thalamus,None/Flagged,10,Sensorimotor - thalamus,ventral lateral nucleus of thalamus,VL,10399,broad,yes,yes,Sensorimotor thalamic relay (VL/VPL); mapped to ventral lateral nucleus; describes a relay connection
+150974,Cochlea,None/Flagged,5,Cochlea,,,,none,no,yes,Peripheral sensory organ; not in the brain reference atlas. Allen has cochlear NUCLEI (central) but not the cochlea itself.
+149929,Intracortical microstimulation,None/Flagged,5,Intracortical microstimulation (ICMs),,,,none,no,yes,"ICMs here = intracortical microstimulation (a method), not an anatomical region. No Allen mapping."
+151011,A1-right superior temporal gyrus,None/Flagged,0,Primary auditory cortex - right superior temporal gyrus,superior temporal gyrus,STG,12140,none,yes,yes,A1-RSTG connection between two regions.
+151019,amygdala-brainstem,None/Flagged,0,Amygdala - brainstem,,,,none,yes,yes,Projection pathway between amygdala and brainstem; not a single atlas region
+150997,Anterior cingulate cortex/pre-supplementary motor area insula,None/Flagged,0,ACC / pre-SMA / insula,"cingulate gyrus, rostral (anterior) part",CgGr,12157,none,yes,yes,Compound ACC+pre-SMA+insula; multi-region.
+151712,ascending/descending information pathways,None/Flagged,0,Ascending / descending information pathways,,,,none,yes,yes,Generic projection pathways; not a single atlas region
+150916,Attention network,None/Flagged,0,Attention network,,,,none,yes,yes,"A distributed network, not a single region."
+149934,autonomic nervous system,None/Flagged,0,Autonomic nervous system,,,,none,yes,yes,"Distributed system, not a single brain region."
+150968,Balance between task positive network (TPN) vs DMN,None/Flagged,0,Balance between task-positive network and default mode network,,,,none,yes,yes,Inter-network balance; not a region.
+151974,Basal forebrain and anterior hypothalamus projections to arousal promoting cell groups,None/Flagged,0,Basal forebrain and anterior hypothalamus projections to arousal-promoting cell groups,,,,none,yes,yes,Descending projection to arousal systems; not a single region
+151062,Basal forebrain nuclei to cortical circuits,None/Flagged,0,Basal forebrain nuclei to cortical circuits,,,,none,yes,yes,Basal forebrain-to-cortex projection circuit; not a single atlas region
+151064,Brainstem monoaminergic and cholinergic projections to basal forebrain,None/Flagged,0,Brainstem monoaminergic and cholinergic projections to basal forebrain,,,,none,yes,yes,Ascending neuromodulatory projection; not a single atlas region
+151065,Central Amygdala to monoaminergic and basal forebrain cholinergic nuclei,None/Flagged,0,Central amygdala to monoaminergic and basal forebrain cholinergic nuclei,,,,none,yes,yes,Amygdala output projection; not a single atlas region
+151899,Cholinergic and monoaminergic nuclei projections to thalamic and cortical,None/Flagged,0,Cholinergic and monoaminergic nuclei projections to thalamic and cortical targets,,,,none,yes,yes,Ascending neuromodulatory projection; not a single atlas region
+151067,Circadian and Sleep-related circuits modulate arousal and are modulated by arousal,None/Flagged,0,Circadian and sleep-related circuits (arousal modulation),,,,none,yes,yes,Distributed circadian/sleep-arousal circuitry; not a single atlas region
+151063,Cortical circuits such as fronto-insular and dorsal anterior cingulate,None/Flagged,0,Cortical circuits (fronto-insular and dorsal anterior cingulate),,,,none,yes,yes,Salience-network cortical circuit; not a single atlas region
+151757,Cortico-cortical connections into supra- and infra-granular layers,None/Flagged,0,Cortico-cortical connections into supra- and infra-granular layers,,,,none,yes,yes,Laminar cortico-cortical connectivity; not a single atlas region
+151472,Corticofugal,None/Flagged,0,Corticofugal (projections),,,,none,yes,yes,Descending corticofugal projection class; not a single atlas region
+150930,Default mode network,None/Flagged,0,Default mode network,,,,none,yes,yes,"DMN; distributed network, not a region."
+151714,Dorsal attention network,None/Flagged,0,Dorsal attention network (DAN),,,,none,yes,yes,"Distributed functional network (FEF, IPS); not a single atlas region"
+151471,Dorsal/ventral streams,None/Flagged,0,Dorsal / ventral visual streams,,,,none,yes,yes,Two parallel visual processing pathways; not single atlas regions
+158081,Efferent and Afferent Spinal and Peripheral Pathways,None/Flagged,0,Efferent and afferent spinal and peripheral pathways,,,,none,yes,yes,Peripheral/spinal sensorimotor pathways; not a brain atlas region
+151061,Hypothalamic to thalamic and cortical circuits,None/Flagged,0,Hypothalamic to thalamic and cortical circuits,,,,none,yes,yes,Multi-region projection circuit; not a single atlas region
+151963,Hypothalamic-pituitary-adrenal axis,None/Flagged,0,Hypothalamic-pituitary-adrenal (HPA) axis,,,,none,yes,yes,Neuroendocrine axis (hypothalamus-pituitary-adrenal); not a single brain region
+151016,Inferior frontal gyrus-insular cortex-amygdala/ventral striatum,None/Flagged,0,Inferior frontal gyrus (IFG) - insular cortex (INS) - amygdala / ventral striatum (VS),,,,none,yes,yes,Multi-region circuit; not a single atlas region
+150989,Inhibition of default mode network,None/Flagged,0,Inhibition of default mode network,,,,none,yes,yes,Network-level functional process.
+151760,Lateral interactions,None/Flagged,0,Lateral interactions,,,,none,yes,yes,Lateral inhibition/interaction concept; not a single atlas region
+149922,lateral prefrontal cortex/insula,None/Flagged,0,Lateral prefrontal cortex / insula,posterior parietal cortex,PoPC,,none,yes,yes,Conjunction of lateral PFC and insula (two regions); no single Allen region. latPFC nearest to dorsolateral PFC areas; flagged.
+151711,local circuit interactions,None/Flagged,0,Local circuit interactions,,,,none,yes,yes,Intra-areal microcircuit concept; not a single atlas region
+151017,Orbitofrontal cortex-anterior cingulate cortex-amygdala-striatum,None/Flagged,0,Orbitofrontal cortex (OFC) - anterior cingulate cortex (ACC) - amygdala - striatum,,,,none,yes,yes,Multi-region cortico-limbic-striatal circuit; not a single atlas region
+150987,"Overlap with memory, motor, sensory, and emotional circuits",None/Flagged,0,"Overlap with memory, motor, sensory, and emotional circuits",,,,none,yes,yes,Multi-circuit overlap description; not a region.
+150938,parasympathetic system,None/Flagged,0,Parasympathetic nervous system,,,,none,yes,yes,"Distributed system, not a brain region."
+151805,Posterior parietal cortex-superior colliculus-substantia nigra pars compacta-supplementary eye field-frontal eye fields-cerebellum,None/Flagged,0,Posterior parietal cortex (PPC) - superior colliculus (SC) - substantia nigra pars compacta (SNc) - supplementary eye field (SEF) - frontal eye fields (FEF) - cerebellum,,,,none,yes,yes,Multi-region oculomotor/attention circuit; SNc=substantia nigra pars compacta; not a single atlas region
+150982,Prefrontal cortex and posterior parietal cortex interactions with multiple association cortices,None/Flagged,0,PFC and PPC interactions with multiple association cortices,posterior parietal cortex,PoPC,10214,none,yes,yes,Multi-region interaction/network.
+150998,Prefrontal cortex-parietal-cingulate-dorsal thalamus-dorsal striatum,None/Flagged,0,PFC-parietal-cingulate-dorsal thalamus-dorsal striatum,,,,none,yes,yes,Multi-node circuit/loop.
+151903,Projections to midbrain and pontine monoaminergic and cholinergic nuclei,None/Flagged,0,Projections to midbrain and pontine monoaminergic and cholinergic nuclei,,,,none,yes,yes,Descending projection to brainstem nuclei; not a single atlas region
+151955,Raphe to suprachiasmatic nucleus projection,None/Flagged,0,Raphe nucleus to suprachiasmatic nucleus (SCN) projection,,,,none,yes,yes,Serotonergic projection raphe to SCN; not a single region
+151066,Reciprocal nucleus tractus solitarius-central amygdalar nucleus,None/Flagged,0,Reciprocal nucleus tractus solitarius (NTS) - central amygdalar nucleus,,,,none,yes,yes,"NTS=nucleus tractus solitarius (Allen: solitary nucleus, Sol); reciprocal projection, not a single region"
+151059,Reciprocoal cholinergic and monoaminergic projection,None/Flagged,0,Reciprocal cholinergic and monoaminergic projection,,,,none,yes,yes,Neuromodulatory projection system; not a single atlas region
+151008,Resting state networks,None/Flagged,0,Resting state networks,,,,none,yes,yes,Distributed resting-state networks.
+151953,Retino-hypothalamic tract,None/Flagged,0,Retino-hypothalamic tract (RHT),,,,none,yes,yes,"Axonal tract retina to SCN; pathway, not a single region"
+151039,Right inferior frontal gyrus-right superior temporal gyrus,None/Flagged,0,Right inferior frontal gyrus (IFG) - right superior temporal gyrus (STG),,,,none,yes,yes,Lateralized fronto-temporal connection; not a single atlas region
+151042,Right insula-right inferior frontal,None/Flagged,0,Right insula - right inferior frontal (cortex),,,,none,yes,yes,Lateralized insula-IFG connection; not a single atlas region
+151040,Songbird circuits,None/Flagged,0,Songbird circuits,,,,none,yes,yes,Non-human (avian) song-system circuitry; no human atlas equivalent
+151044,Supplementary motor area-somatosensory-premotor,None/Flagged,0,Supplementary motor area (SMA) - somatosensory cortex - premotor cortex,,,,none,yes,yes,Multi-region motor network; not a single atlas region
+151962,Suprachiasmatic nucleus-hypothalamic paraventricular nucleus-superior cervical ganglion-pineal,None/Flagged,0,Suprachiasmatic nucleus (SCN) - hypothalamic paraventricular nucleus (PVN) - superior cervical ganglion (SCG) - pineal,,,,none,yes,yes,Melatonin circadian output pathway; SCG is peripheral; multi-region pathway
+151964,Sympathetic / parasympathetic nervous system,None/Flagged,0,Sympathetic / parasympathetic (autonomic) nervous system,,,,none,yes,yes,Peripheral autonomic nervous system divisions; not a brain atlas region
+150992,Thalamocortical,None/Flagged,0,Thalamocortical (projections),,,,none,yes,yes,Thalamus-to-cortex pathway; a connection.
+151761,Top-down interactions,None/Flagged,0,Top-down interactions,,,,none,yes,yes,Top-down feedback connectivity concept; not a single atlas region
+151015,V1-FFA-STS-VS,None/Flagged,0,Primary visual cortex (V1) - fusiform face area (FFA) - superior temporal sulcus (STS) - ventral striatum (VS),,,,none,yes,yes,Multi-region pathway; VS=ventral striatum; not a single atlas region
+151715,Ventral attention network,None/Flagged,0,Ventral attention network (VAN),,,,none,yes,yes,"Distributed functional network (TPJ, VFC); not a single atlas region"
+151004,Ventral tegmental area-nucleus accumbens-ventral pallidum-amygdala,None/Flagged,0,VTA-NAcc-ventral pallidum-amygdala,ventral tegmental area,VTA,12261,none,yes,yes,Mesolimbic multi-node pathway.
+150994,Ventrofronto-striatal,None/Flagged,0,Ventrofronto-striatal (circuit),nucleus accumbens,NAC,10339,none,yes,yes,Ventral frontal-to-striatal pathway; a connection.
+150920,Vigilance network,None/Flagged,0,Vigilance network,,,,none,yes,yes,"Distributed network, not a single region."
+151014,Visual area 1-fusiform face area-superior temporal sulcus-amygdala,None/Flagged,0,Primary visual cortex (V1) - fusiform face area (FFA) - superior temporal sulcus (STS) - amygdala,,,,none,yes,yes,Multi-region face-processing pathway (V1-FFA-STS-amygdala); not a single atlas region

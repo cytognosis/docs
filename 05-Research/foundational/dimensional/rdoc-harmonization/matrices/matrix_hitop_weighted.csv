@@ -1,0 +1,60 @@
+Domain,Construct,Subconstruct,Internalizing,Internalizing,Disinhibited Externalizing,Disinhibited Externalizing,Disinhibited Externalizing,Antagonistic Externalizing,Antagonistic Externalizing,Thought Disorder,Detachment,Somatoform
+,,,Fear,Distress,Substance Abuse,Antisocial Behavior,,Antisocial Behavior,,,,
+Negative Valence Systems,"Acute Threat (""Fear"")",,+0.850,0,0,0,0,0,0,0,0,0
+Negative Valence Systems,"Potential Threat (""Anxiety"")",,+0.850,+0.600,0,0,0,0,0,0,0,0
+Negative Valence Systems,Sustained Threat,,0,+0.850,0,0,0,0,0,0,0,0
+Negative Valence Systems,Loss,,0,+0.850,0,0,0,0,0,0,0,0
+Negative Valence Systems,Frustrative Nonreward,,0,+0.510,0,+0.600,0,+0.600,0,0,0,0
+Positive Valence Systems,Reward Responsiveness,,0,0,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Responsiveness,Reward Anticipation,0,-0.935,-0.935,0,0,0,0,-0.600,0,0
+Positive Valence Systems,Reward Responsiveness,Initial Response to Reward,0,-0.935,-0.850,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Responsiveness,Reward Satiation,0,-0.510,-0.510,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Learning,,0,0,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Learning,Probabilistic and Reinforcement Learning,0,-0.935,-0.850,0,0,0,0,-0.600,0,0
+Positive Valence Systems,Reward Learning,Reward Prediction Error,0,0,+0.850,+0.510,0,0,0,-0.600,0,0
+Positive Valence Systems,Reward Learning,Habit - PVS,0,0,+0.850,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Valuation,,0,0,0,0,0,0,0,0,0,0
+Positive Valence Systems,Reward Valuation,Reward (probability),0,0,-0.600,0,0,-0.850,0,0,0,0
+Positive Valence Systems,Reward Valuation,Delay,0,0,-0.935,-0.850,0,0,0,0,0,0
+Positive Valence Systems,Reward Valuation,Effort,0,-0.850,+0.722,0,0,0,0,-0.660,0,0
+Cognitive Systems,Attention,,0,-0.600,-0.850,0,-0.850,0,0,-0.935,-0.510,0
+Cognitive Systems,Perception,,0,0,0,0,0,0,0,0,0,0
+Cognitive Systems,Perception,Visual Perception,0,0,0,0,0,0,0,-0.850,0,0
+Cognitive Systems,Perception,Auditory Perception,0,0,0,0,0,0,0,-0.935,0,0
+Cognitive Systems,Perception,Olfactory/Somatosensory/Multimodal Perception,0,0,0,0,0,0,0,-0.510,0,0
+Cognitive Systems,Declarative Memory,,0,-0.600,0,0,0,0,0,-0.935,0,0
+Cognitive Systems,Language,,0,0,0,0,0,0,0,-0.935,0,0
+Cognitive Systems,Cognitive Control,,0,0,0,0,0,0,0,0,0,0
+Cognitive Systems,Cognitive Control,"Goal Selection; Updating, Representation, and Maintenance",0,0,-0.850,0,-0.935,0,0,-0.935,-0.510,0
+Cognitive Systems,Cognitive Control,Response Selection; Inhibition/Suppression,0,-0.600,-0.850,-0.850,-0.935,0,0,-0.935,-0.510,0
+Cognitive Systems,Cognitive Control,Performance Monitoring,+0.935,0,0,0,-0.935,0,0,-0.297,0,0
+Cognitive Systems,Working Memory,,0,0,-0.850,-0.850,-0.935,0,0,-0.935,-0.510,0
+Cognitive Systems,Working Memory,Active Maintenance,0,0,0,0,0,0,0,0,0,0
+Cognitive Systems,Working Memory,Flexible Updating,0,0,0,0,0,0,0,0,0,0
+Cognitive Systems,Working Memory,Limited Capacity,0,0,0,0,0,0,0,0,0,0
+Cognitive Systems,Working Memory,Interference Control,0,0,0,0,0,0,0,0,0,0
+Social Processes,Affiliation and Attachment,,0,-0.935,0,0,0,-0.935,0,-0.850,-0.850,0
+Social Processes,Social Communication,,0,0,0,0,0,0,0,0,0,0
+Social Processes,Social Communication,Reception of Facial Communication,0,-0.600,0,-0.850,0,0,0,-0.935,-0.850,0
+Social Processes,Social Communication,Production of Facial Communication,0,0,0,-0.510,0,0,0,-0.850,0,0
+Social Processes,Social Communication,Reception of Non-Facial Communication,0,0,0,0,0,0,0,-0.935,0,0
+Social Processes,Social Communication,Production of Non-Facial Communication,0,0,0,0,0,0,0,-0.600,0,0
+Social Processes,Perception and Understanding of Self,,0,0,0,0,0,0,0,0,0,0
+Social Processes,Perception and Understanding of Self,Agency,0,0,0,0,0,0,0,-0.935,0,0
+Social Processes,Perception and Understanding of Self,Self-Knowledge,-0.297,-0.850,0,0,0,0,0,-0.600,-0.510,0
+Social Processes,Perception and Understanding of Others,,0,0,0,0,0,0,0,0,0,0
+Social Processes,Perception and Understanding of Others,Animacy Perception,0,0,0,0,0,0,0,-0.510,0,0
+Social Processes,Perception and Understanding of Others,Action Perception,0,0,0,-0.510,0,0,0,-0.600,0,0
+Social Processes,Perception and Understanding of Others,Understanding Mental States,0,-0.297,0,-0.850,0,0,0,-0.935,-0.600,0
+Arousal and Regulatory Systems,Arousal,,+0.600,+0.722,0,-0.935,-0.935,0,-0.935,0,0,0
+Arousal and Regulatory Systems,Circadian Rhythms,,0,-0.722,-0.722,0,0,0,0,-0.510,0,0
+Arousal and Regulatory Systems,Sleep-Wakefulness,,0,-0.935,-0.660,-0.600,0,0,0,0,0,0
+Sensorimotor Systems,Motor Actions,,0,-0.722,0,0,0,0,0,-0.722,0,0
+Sensorimotor Systems,Motor Actions,Action Planning and Selection,0,0,0,0,0,0,0,-0.510,0,0
+Sensorimotor Systems,Motor Actions,Sensorimotor Dynamics,0,0,0,0,0,0,0,-0.510,0,0
+Sensorimotor Systems,Motor Actions,Initiation,0,-0.510,0,0,0,0,0,-0.510,0,0
+Sensorimotor Systems,Motor Actions,Execution,0,0,0,0,0,0,0,-0.722,0,0
+Sensorimotor Systems,Motor Actions,Inhibition and Termination,0,0,0,-0.510,-0.722,0,0,-0.510,0,0
+Sensorimotor Systems,Agency and Ownership,,0,0,0,0,0,0,0,-0.722,-0.510,-0.510
+Sensorimotor Systems,Habit - Sensorimotor,,0,0,+0.510,0,+0.297,0,0,0,0,0
+Sensorimotor Systems,Innate Motor Patterns,,0,0,0,0,0,0,0,-0.297,0,0

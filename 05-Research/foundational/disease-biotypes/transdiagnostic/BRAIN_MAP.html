@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Transdiagnostic Brain Map (14 disorders, Allen atlas)</title>
+<style>
+  :root{
+    --bg:#fafaf7;--surface:#fff;--text:#1a1a1a;--muted:#555;--faint:#888;--border:rgba(0,0,0,.12);
+    --pos:#1D9E75;--mix:#378ADD;--neg:#E24B4A;--node:#6E62C8;--node-stroke:#3C3489;--silhouette:#ece9f6;--silhouette-stroke:#b9b1e0;
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --bg:#1a1a18;--surface:#232321;--text:#f0eee8;--muted:#b8b6ae;--faint:#777570;--border:rgba(255,255,255,.12);
+    --pos:#5DCAA5;--mix:#85B7EB;--neg:#F09595;--node:#AFA9EC;--node-stroke:#CECBF6;--silhouette:#23213a;--silhouette-stroke:#534AB7;
+  }}
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:1.5rem 1rem;line-height:1.55}
+  .wrap{max-width:1040px;margin:0 auto}
+  h1{font-size:25px;font-weight:500;margin:0 0 .3rem}
+  .lede{color:var(--muted);margin:0 0 1rem;font-size:15px}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 22px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:.8rem 1rem;margin:.5rem 0 1rem;font-size:13px}
+  .legend b{font-weight:500}
+  .lg{display:flex;align-items:center;gap:6px;color:var(--muted)}
+  .ln{width:26px;height:0;border-top-width:4px;border-top-style:solid;display:inline-block}
+  .dot{width:13px;height:13px;border-radius:50%;display:inline-block;background:var(--node);border:1.5px solid var(--node-stroke)}
+  svg{width:100%;height:auto;display:block;background:var(--surface);border:1px solid var(--border);border-radius:12px}
+  .edge{stroke-linecap:round;opacity:.62;transition:opacity .15s}
+  .edge.pos{stroke:var(--pos)} .edge.mix{stroke:var(--mix)} .edge.neg{stroke:var(--neg)}
+  .node-c{fill:var(--node);stroke:var(--node-stroke);stroke-width:1.5;cursor:pointer;transition:opacity .15s}
+  .node-lbl{font-size:10.5px;fill:var(--text);pointer-events:none}
+  .node-glyph{font-size:12px;fill:#fff;font-weight:600;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+  .node-num{font-size:9px;fill:var(--node-stroke);font-weight:600;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+  .silh{fill:var(--silhouette);stroke:var(--silhouette-stroke);stroke-width:1.5}
+  .dimmed{opacity:.08}
+  .tip{position:fixed;pointer-events:none;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 10px;font-size:12.5px;max-width:280px;box-shadow:0 4px 14px rgba(0,0,0,.18);opacity:0;transition:opacity .1s;z-index:10;color:var(--text)}
+  .tip b{font-weight:600} .tip .sub{color:var(--muted);font-size:11.5px}
+  table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:13px}
+  th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid var(--border);vertical-align:top}
+  th{font-weight:500;color:var(--muted);font-size:12px}
+  h2{font-size:18px;font-weight:500;margin:2rem 0 .5rem;border-bottom:1px solid var(--border);padding-bottom:.4rem}
+  .pill{display:inline-block;padding:0 6px;border-radius:9px;font-size:11px;color:#fff;font-weight:500}
+  .small{font-size:12.5px;color:var(--muted)}
+  code{background:var(--silhouette);padding:1px 5px;border-radius:4px;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Transdiagnostic brain map across 14 psychiatric disorders</h1>
+<p class="lede">Most reproducible connectome nodes and edges from the 14 per-disorder biotype docs, named in Allen Human Reference Atlas (2020) anatomical terms. Sagittal glass-brain, front of brain on the left. Hover any region to isolate its connections and see which disorders implicate it.</p>
+
+<div class="legend">
+  <span class="lg"><b>Edges (connections):</b></span>
+  <span class="lg"><span class="ln" style="border-top-color:var(--pos)"></span> positive (co-activate / couple)</span>
+  <span class="lg"><span class="ln" style="border-top-color:var(--mix)"></span> mixed (varies by disorder)</span>
+  <span class="lg"><span class="ln" style="border-top-color:var(--neg)"></span> negative (anticorrelation)</span>
+  <span class="lg">thicker line = more reproducible</span>
+  <span class="lg"><b>Nodes:</b> bigger = more reproducible; glyph = ↑hyper ↓hypo ↕mixed ⊘atrophy; number = how many of 14 disorders</span>
+</div>
+
+<svg id="brain" viewBox="0 0 960 600" role="img" aria-label="Sagittal glass-brain connectome of the most reproducible regions and connections across 14 psychiatric disorders."></svg>
+
+<div class="tip" id="tip"></div>
+
+<h2>Most reproducible regions (and which disorders)</h2>
+<table id="regionTable"><thead><tr><th>Region (Allen / functional)</th><th>Direction</th><th>Disorders (of 14)</th><th>Reprod.</th></tr></thead><tbody></tbody></table>
+
+<h2>Most reproducible edges (the actionable biomarkers)</h2>
+<table id="edgeTable"><thead><tr><th>Edge</th><th>Sign</th><th>Disorders</th><th>Reprod.</th></tr></thead><tbody></tbody></table>
+
+<p class="small">Disorder codes: SCZ schizophrenia, BD bipolar, MDD depression, PTSD, ANX anxiety, ASD autism, ADHD, OCD, TS Tourette, AN anorexia, ALC/OPI/NIC/CAN alcohol/opioid/nicotine/cannabis use disorder. Source: <code>transdiagnostic-meso.md</code>. Sub-parcel regions (cerebellar Crus I/II, habenula, locus coeruleus, BNST, PAG) sit below the Allen 141-region resolution and are placed approximately. The edge biomarker that powers Stanford SAINT (dlPFC vs sgACC, negative) is highlighted in red.</p>
+</div>
+
+<script>
+const REPR={"HIGH":3,"MEDIUM-HIGH":2,"MEDIUM":1};
+const RAD={3:15,2:11.5,1:8.5};
+const WID={3:4.2,2:2.8,1:1.6};
+const GLY={hyper:"↑",hypo:"↓",mixed:"↕",atrophy:"⊘"};
+// x: anterior(left)->posterior(right). y: superior(top)->inferior(bottom)
+const N={
+ dlPFC:{x:150,y:210,dir:"hypo",n:12,r:"HIGH",full:"Dorsolateral PFC (middle/superior frontal gyrus, BA9/46)",dx:[ "SCZ","BD","MDD","PTSD","ANX","ADHD","OCD","AN","ALC","OPI","NIC","CAN"]},
+ vmPFC:{x:120,y:360,dir:"hypo",n:10,r:"HIGH",full:"Ventromedial PFC (medial orbital frontal)",dx:["BD","MDD","PTSD","ANX","ADHD","AN","ALC","OPI","NIC","CAN"]},
+ OFC:{x:135,y:415,dir:"mixed",n:8,r:"HIGH",full:"Orbitofrontal cortex (BA11/47)",dx:["OCD","TS","AN","ADHD","ALC","OPI","NIC","CAN"]},
+ IFG:{x:185,y:300,dir:"hypo",n:4,r:"MEDIUM-HIGH",full:"Inferior frontal gyrus (pars opercularis; inhibition/mirror)",dx:["SCZ","ASD","ADHD","PTSD"]},
+ sgACC:{x:225,y:355,dir:"hyper",n:4,r:"HIGH",full:"Subgenual ACC (cingulate subgenual part, BA25)",dx:["MDD","BD","ANX","PTSD"]},
+ dACC:{x:265,y:235,dir:"hyper",n:10,r:"HIGH",full:"Dorsal ACC / midcingulate (BA24/32)",dx:["SCZ","MDD","PTSD","ANX","OCD","TS","AN","ALC","NIC","CAN"]},
+ SMA:{x:345,y:195,dir:"hyper",n:2,r:"HIGH",full:"Supplementary motor area / pre-SMA (medial superior frontal)",dx:["TS","PTSD"]},
+ SM:{x:435,y:178,dir:"mixed",n:4,r:"MEDIUM-HIGH",full:"Sensorimotor cortex (pre/postcentral gyrus)",dx:["SCZ","TS","ASD","OCD"]},
+ insula:{x:300,y:368,dir:"hyper",n:11,r:"HIGH",full:"Anterior insula (frontoinsular operculum; salience/interoception)",dx:["SCZ","BD","MDD","PTSD","ANX","ASD","AN","ALC","OPI","NIC","CAN"]},
+ STG:{x:330,y:400,dir:"hypo",n:2,r:"HIGH",full:"Superior/transverse temporal gyrus (Heschl's, auditory; 40Hz ASSR)",dx:["SCZ","ASD"]},
+ STS:{x:380,y:425,dir:"hypo",n:1,r:"HIGH",full:"Superior temporal sulcus (social-brain hub)",dx:["ASD"]},
+ FFA:{x:355,y:465,dir:"hypo",n:1,r:"HIGH",full:"Fusiform face area (ventral temporal)",dx:["ASD"]},
+ TPJ:{x:560,y:315,dir:"hypo",n:4,r:"MEDIUM",full:"Temporoparietal junction / angular gyrus (VAN/DMN)",dx:["PTSD","ASD","ADHD","AN"]},
+ PCC:{x:600,y:250,dir:"mixed",n:9,r:"MEDIUM-HIGH",full:"Posterior cingulate / precuneus (DMN hub; P300)",dx:["SCZ","MDD","PTSD","ASD","ADHD","ALC","OPI","NIC","CAN"]},
+ NAc:{x:245,y:350,dir:"mixed",n:11,r:"HIGH",full:"Ventral striatum / nucleus accumbens (reward; RewP)",dx:["SCZ","BD","MDD","PTSD","ADHD","OCD","AN","ALC","OPI","NIC","CAN"]},
+ BNST:{x:268,y:362,dir:"hyper",n:4,r:"MEDIUM",full:"Bed nucleus of stria terminalis (extended amygdala; sustained threat)",dx:["ANX","PTSD","ALC","OPI"]},
+ caudate:{x:305,y:308,dir:"mixed",n:6,r:"HIGH",full:"Caudate nucleus (associative/dorsal striatum)",dx:["SCZ","OCD","TS","ADHD","AN","ALC"]},
+ putamen:{x:322,y:338,dir:"mixed",n:5,r:"MEDIUM-HIGH",full:"Putamen (sensorimotor striatum)",dx:["SCZ","OCD","TS","ADHD","ALC"]},
+ MDthal:{x:395,y:318,dir:"mixed",n:5,r:"HIGH",full:"Mediodorsal thalamus",dx:["SCZ","OCD","TS","ALC","OPI"]},
+ amyg:{x:320,y:398,dir:"hyper",n:11,r:"HIGH",full:"Amygdala (basolateral + centromedial; threat)",dx:["BD","MDD","PTSD","ANX","ASD","ADHD","AN","ALC","OPI","NIC","CAN"]},
+ hipp:{x:368,y:392,dir:"atrophy",n:7,r:"HIGH",full:"Anterior hippocampus (CA1/CA3/dentate)",dx:["SCZ","BD","MDD","PTSD","ADHD","ALC","CAN"]},
+ hypo:{x:345,y:372,dir:"mixed",n:1,r:"MEDIUM",full:"Hypothalamus (homeostatic; appetite)",dx:["AN"]},
+ hab:{x:425,y:330,dir:"hyper",n:1,r:"MEDIUM",full:"Medial habenula (aversion/withdrawal; sub-parcel)",dx:["NIC"]},
+ PAG:{x:450,y:415,dir:"mixed",n:1,r:"MEDIUM",full:"Periaqueductal gray (midbrain; pain/withdrawal)",dx:["OPI"]},
+ LC:{x:480,y:455,dir:"hyper",n:3,r:"MEDIUM",full:"Locus coeruleus (dorsal pons; noradrenergic source)",dx:["PTSD","OPI","ASD"]},
+ cereb:{x:660,y:445,dir:"atrophy",n:6,r:"MEDIUM-HIGH",full:"Cerebellum Crus I/II + vermis (posterior fossa)",dx:["SCZ","PTSD","ASD","ADHD","ALC","CAN"]}
+};
+const E=[
+ ["NAc","vmPFC","pos","HIGH","reward circuit","ALC,OPI,NIC,CAN,ADHD,AN,MDD"],
+ ["NAc","OFC","pos","HIGH","reward circuit","ALC,OPI,NIC,CAN,ADHD,AN,MDD"],
+ ["dlPFC","putamen","pos","HIGH","fronto-striatal control","ADHD,ALC,OPI,NIC,CAN,AN"],
+ ["amyg","vmPFC","neg","HIGH","threat regulation","ANX,PTSD,BD,MDD,ALC"],
+ ["dlPFC","sgACC","neg","HIGH","SAINT TMS target","MDD,BD"],
+ ["PCC","vmPFC","pos","MEDIUM-HIGH","DMN internal","MDD,SCZ,PTSD,ASD"],
+ ["PCC","insula","neg","MEDIUM-HIGH","DMN vs salience switch","ADHD,ALC,OPI,NIC,CAN,ANX"],
+ ["insula","dACC","pos","HIGH","salience network","ANX,NIC,ALC,OPI"],
+ ["insula","NAc","pos","HIGH","craving circuit","NIC,ALC,OPI,CAN"],
+ ["OFC","caudate","pos","MEDIUM-HIGH","CSTC loop (OCD)","OCD,TS"],
+ ["putamen","MDthal","pos","MEDIUM","CSTC closure","OCD,TS"],
+ ["MDthal","SM","pos","HIGH","thalamus-sensorimotor","SCZ,OCD"],
+ ["MDthal","dlPFC","neg","HIGH","thalamo-prefrontal","SCZ"],
+ ["STS","FFA","pos","MEDIUM-HIGH","social brain","ASD"],
+ ["hipp","caudate","pos","MEDIUM","Grace hippocampus-striatum loop","SCZ"],
+ ["BNST","vmPFC","neg","MEDIUM-HIGH","stress circuit","ALC,OPI,PTSD,ANX"],
+ ["SMA","putamen","pos","MEDIUM-HIGH","urge/tic generation","TS"],
+ ["cereb","dlPFC","pos","MEDIUM","cerebro-cerebellar","SCZ,ASD,ADHD"],
+ ["LC","amyg","pos","MEDIUM","noradrenergic arousal","PTSD,OPI"],
+ ["amyg","PCC","mix","MEDIUM","dissociative coupling","PTSD"]
+];
+const SIGN={pos:"positive",mix:"mixed",neg:"negative (anticorrelation)"};
+const svg=document.getElementById("brain");
+const NS="http://www.w3.org/2000/svg";
+function el(t,a){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e;}
+// silhouette: sagittal brain, front-left
+const silh=el("path",{class:"silh",d:"M70 330 C70 200 180 110 320 110 C470 110 600 130 660 210 C700 265 700 300 660 320 C690 330 705 360 700 395 C690 440 650 470 600 470 L470 470 C440 470 410 465 380 480 C350 495 300 495 270 480 C240 470 170 460 130 430 C90 405 70 370 70 330 Z"});
+svg.appendChild(silh);
+// cerebellum lobe
+svg.appendChild(el("ellipse",{class:"silh",cx:660,cy:445,rx:62,ry:42}));
+// brainstem
+svg.appendChild(el("path",{class:"silh",d:"M455 460 Q450 500 446 535 L474 535 Q478 500 482 460 Z"}));
+// front label
+const ft=el("text",{x:60,y:330,"font-size":11,fill:"var(--faint)","text-anchor":"end"});ft.textContent="front";svg.appendChild(ft);
+const bt=el("text",{x:735,y:300,"font-size":11,fill:"var(--faint)"});bt.textContent="back";svg.appendChild(bt);
+// edges
+const edgeEls=[];
+E.forEach(([a,b,s,r,lab,dx])=>{
+  const A=N[a],B=N[b];
+  const ln=el("line",{x1:A.x,y1:A.y,x2:B.x,y2:B.y,class:"edge "+s,"stroke-width":WID[REPR[r]]});
+  ln._info={a,b,s,r,lab,dx};ln._nodes=[a,b];
+  svg.appendChild(ln);edgeEls.push(ln);
+});
+// nodes
+const nodeEls={};
+for(const id in N){
+  const d=N[id],rad=RAD[REPR[d.r]];
+  const g=el("g",{});
+  const c=el("circle",{cx:d.x,cy:d.y,r:rad,class:"node-c"});
+  g.appendChild(c);
+  const gl=el("text",{x:d.x,y:d.y-1,class:"node-glyph"});gl.textContent=GLY[d.dir];g.appendChild(gl);
+  const num=el("text",{x:d.x+rad-1,y:d.y-rad+2,class:"node-num"});num.textContent=d.n;g.appendChild(num);
+  const lx=d.x, ly=d.y+rad+11;
+  const lbl=el("text",{x:lx,y:ly,class:"node-lbl","text-anchor":"middle"});lbl.textContent=id;g.appendChild(lbl);
+  g._id=id;g._c=c;
+  svg.appendChild(g);nodeEls[id]=g;
+  g.addEventListener("mouseenter",e=>focusNode(id,e));
+  g.addEventListener("mousemove",e=>moveTip(e));
+  g.addEventListener("mouseleave",clearFocus);
+}
+edgeEls.forEach(ln=>{
+  ln.addEventListener("mouseenter",e=>{const i=ln._info;showTip(e,`<b>${N[i.a].full.split(" (")[0]} &harr; ${N[i.b].full.split(" (")[0]}</b><br><span class="sub">${i.lab} &middot; ${SIGN[i.s]} &middot; ${i.r}</span><br><span class="sub">disorders: ${i.dx}</span>`);});
+  ln.addEventListener("mousemove",moveTip);
+  ln.addEventListener("mouseleave",hideTip);
+});
+const tip=document.getElementById("tip");
+function showTip(e,html){tip.innerHTML=html;tip.style.opacity=1;moveTip(e);}
+function moveTip(e){tip.style.left=(e.clientX+14)+"px";tip.style.top=(e.clientY+14)+"px";}
+function hideTip(){tip.style.opacity=0;}
+function focusNode(id,e){
+  const d=N[id];
+  showTip(e,`<b>${d.full}</b><br><span class="sub">${{hyper:"hyperactive/hyperconnected",hypo:"hypoactive/hypoconnected",mixed:"mixed (varies by disorder)",atrophy:"atrophy/volume loss"}[d.dir]} &middot; ${d.r} &middot; ${d.n}/14 disorders</span><br><span class="sub">${d.dx.join(", ")}</span>`);
+  const keep=new Set([id]);
+  edgeEls.forEach(ln=>{if(ln._nodes.includes(id)){ln.style.opacity=.95;ln._nodes.forEach(x=>keep.add(x));}else{ln.classList.add("dimmed");}});
+  for(const k in nodeEls){if(!keep.has(k))nodeEls[k].classList.add("dimmed");}
+}
+function clearFocus(){hideTip();edgeEls.forEach(ln=>{ln.classList.remove("dimmed");ln.style.opacity="";});for(const k in nodeEls)nodeEls[k].classList.remove("dimmed");}
+// tables
+const rtb=document.querySelector("#regionTable tbody");
+Object.entries(N).sort((a,b)=>b[1].n-a[1].n).forEach(([id,d])=>{
+  const tr=document.createElement("tr");
+  tr.innerHTML=`<td><b>${id}</b> <span class="small">${d.full.replace(/^[^(]+/,'')}</span></td><td>${GLY[d.dir]} ${d.dir}</td><td class="small">${d.dx.join(", ")}</td><td>${d.r}</td>`;
+  rtb.appendChild(tr);
+});
+const etb=document.querySelector("#edgeTable tbody");
+const COL={pos:"var(--pos)",mix:"var(--mix)",neg:"var(--neg)"};
+E.sort((a,b)=>REPR[b[3]]-REPR[a[3]]).forEach(([a,b,s,r,lab,dx])=>{
+  const tr=document.createElement("tr");
+  tr.innerHTML=`<td><b>${a} &harr; ${b}</b><br><span class="small">${lab}</span></td><td><span class="pill" style="background:${COL[s]}">${SIGN[s]}</span></td><td class="small">${dx}</td><td>${r}</td>`;
+  etb.appendChild(tr);
+});
+</script>
+</body>
+</html>
