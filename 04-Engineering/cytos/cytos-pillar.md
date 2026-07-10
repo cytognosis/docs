@@ -1,5 +1,7 @@
 # Cytos pillar — technical reference
 
+> **Variants**: Technical (this doc) - Readable (cytos-pillar.md in Obsidian vault: 04-Engineering/cytos/) - Agent (cytos-pillar_prompt.md)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Audience:** Engineering (canonical) · **Pillar:** Cytoverse
 
 **BLUF:** Cytos is the Cytognosis engineering substrate under the Cytoverse pillar. It defines the platform's data model as LinkML schemas, ingests source data under DVC, constructs a knowledge graph (GenomeKG and the scholarly KG), and exposes typed artifacts (Pydantic, JSON Schema, OWL, SHACL, SQL, GraphQL) generated from those schemas. This document is the precise, complete engineering reference; the readable and agent variants sit beside it.

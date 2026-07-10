@@ -1,7 +1,9 @@
 # Grant-Alignment Map (technical)
 
+> **Variants**: Technical (this doc) - Readable (grant-alignment-map.md in Obsidian vault: 02-Funding/strategy/) - Agent (grant-alignment-map_prompt.md)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Author:** Funding & Grants (canonicalized from `Grants/01-strategy/funding/Cytognosis_Strategy_and_Grant_Alignment_Map_2026-06-11.md`, 2026-06-11)
-> **Canonical home:** `docs/02-Funding/strategy/grant-alignment-map.technical.md` · **Variants:** [readable](grant-alignment-map.readable.md) · [agent](grant-alignment-map.agent.md)
+> **Canonical home:** `docs/02-Funding/strategy/grant-alignment-map.md` · **Variants:** [readable](grant-alignment-map.md) · [agent](grant-alignment-map_prompt.md)
 > **Scope note:** This is the funder-facing grant-alignment reference. The platform strategy master is owned by Strategic Planning (`01-Strategy`); this doc maps that strategy onto funders. Strategy, not legal or financial advice.
 
 **If you only read one thing:** There is one **framing fork**. Biswas hears the **health** story (open AI model for bipolar biotyping). Coefficient (both programs), LTFF, and Manifund hear the **AI-safety** story (Cytonome on-device safety layer, cognitive liberty, data capture). It is the **same work**, told in the vocabulary each funder already values. Keep the two families in separate documents.

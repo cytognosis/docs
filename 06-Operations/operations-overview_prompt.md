@@ -1,7 +1,9 @@
 # Operations (06-Operations) — Fresh-Agent Brief
 
+> **Variants**: Agent seed (this doc) - Technical (operations-overview.md) - Readable (operations-overview.md in Obsidian vault: 06-Operations/)
+
 > **Status:** Active · **Date:** 2026-07-01 · Self-contained brief for an agent picking up this layer cold.
-> Companions: [technical](operations-overview.technical.md) · [readable](operations-overview.readable.md)
+> Companions: [technical](operations-overview.md) · [readable](operations-overview.md)
 
 ## Goal
 

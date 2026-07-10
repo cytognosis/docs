@@ -1,7 +1,7 @@
 # Operations (06-Operations) — Layer Overview (Technical)
 
 > **Status:** Active · **Date:** 2026-07-01 · **Author:** Operations consolidation · **Pillar:** Operational (org/business ops)
-> **Variants:** technical (this file) · [readable](operations-overview.readable.md) · [agent](operations-overview.agent.md)
+> **Variants**: Technical (this doc) - Readable (operations-overview.md in Obsidian vault: 06-Operations/) - Agent (operations-overview_prompt.md)
 > **Reading time:** ~6 minutes
 
 **If you only read one thing:** `06-Operations` is the canonical home for Cytognosis **org and business operations**: HIPAA and NIH GDS compliance, data-access policy and governance, operational audits, org communications and workspace, and org naming and governance records. The compliance program is **pre-operational** (no PHI ingested), tracking **32 of 38** HIPAA controls complete (see `data-strategy/compliance/HIPAA-STATUS.md`).

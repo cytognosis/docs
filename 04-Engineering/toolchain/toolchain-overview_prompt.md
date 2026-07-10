@@ -1,5 +1,7 @@
 # Toolchain Platform Overview (agent brief)
 
+> **Variants**: Agent seed (this doc) - Technical (toolchain-overview.md) - Readable (toolchain-overview.md in Obsidian vault: 04-Engineering/toolchain/)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Audience:** fresh agent, zero context
 
 ## Goal

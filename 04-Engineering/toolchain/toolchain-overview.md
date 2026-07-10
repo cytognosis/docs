@@ -1,5 +1,7 @@
 # Toolchain Platform Overview (technical)
 
+> **Variants**: Technical (this doc) - Readable (toolchain-overview.md in Obsidian vault: 04-Engineering/toolchain/) - Agent (toolchain-overview_prompt.md)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Author:** Toolchain agent · **Audience:** engineering (canonical)
 
 ## Scope

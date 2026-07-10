@@ -1,7 +1,7 @@
 # Grant-Alignment Map (agent brief)
 
 > **Status:** Active · **Date:** 2026-07-01 · **Audience:** a fresh agent about to draft or edit a Cytognosis funding application.
-> **Variants:** [technical](grant-alignment-map.technical.md) · [readable](grant-alignment-map.readable.md)
+> **Variants**: Agent seed (this doc) - Technical (grant-alignment-map.md) - Readable (grant-alignment-map.md in Obsidian vault: 02-Funding/strategy/)
 
 ## Goal
 Align every funding application to both Cytognosis direction and the funder's values, without changing deliverables and without leaking the moat.

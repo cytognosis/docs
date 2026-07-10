@@ -1,5 +1,7 @@
 # Cytognosis Foundation — Org Context (Agent Brief)
 
+> **Variants**: Agent seed (this doc) - Technical (org-context.md) - Readable (org-context.md in Obsidian vault: 06-Operations/org/)
+
 > **Status:** Active · **Date:** 2026-07-01 · Self-contained brief for a fresh agent working the org/general-context scope.
 
 ## Goal

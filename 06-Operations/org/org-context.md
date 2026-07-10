@@ -1,6 +1,8 @@
 # Cytognosis Foundation — Organizational Context (Technical)
 
-> **Status:** Active · **Date:** 2026-07-01 · **Author:** Cytognosis (Org) consolidation agent · **Layer:** `06-Operations/org` · **Variants:** `org-context.technical.md` (this) · `org-context.readable.md` · `org-context.agent.md`
+> **Variants**: Technical (this doc) - Readable (org-context.md in Obsidian vault: 06-Operations/org/) - Agent (org-context_prompt.md)
+
+> **Status:** Active · **Date:** 2026-07-01 · **Author:** Cytognosis (Org) consolidation agent · **Layer:** `06-Operations/org` · **Variants:** `org-context.md` (this) · `org-context.md` · `org-context_prompt.md`
 
 **If you only read one thing:** This is the canonical, deliberately thin org-level context for Cytognosis Foundation: legal identity, mission framing, structure, voice, and openness posture, plus pointers to where domain content actually lives. It is a reference and routing doc, not a pitch or a platform description; the science and platform narrative is owned by the Neuroverse / science pillar, funding by Funding & Grants, and engineering by the product and toolchain pillars.
 

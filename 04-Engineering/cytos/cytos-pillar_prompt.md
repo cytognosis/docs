@@ -1,5 +1,7 @@
 # Cytos pillar — agent brief
 
+> **Variants**: Agent seed (this doc) - Technical (cytos-pillar.md) - Readable (cytos-pillar.md in Obsidian vault: 04-Engineering/cytos/)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Audience:** Fresh agent, zero context · Self-contained.
 
 **Goal:** Maintain and extend the Cytos engineering platform (the Cytoverse "Map"): LinkML schemas, DVC-managed data, the knowledge graph, generated typed artifacts, and the sensing schema.
