@@ -1,5 +1,12 @@
 # BDNF/TrkB Neuroplasticity Axes: Science Dossier and Publish-vs-Platform Strategy
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `dimensional`, `bdnf-trkb`, `neuroplasticity`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-03 · **Internal, confidential.** Source document for grants (EVIDENT/HSF, IGoR TA1, NIH), for the bipolar paper scoping, and for strategic planning. **Contains platform-confidential IP (Section 5, the factorized PRS) that must be kept OFF the bipolar paper and out of any consortium-facing material.**
 
 **Reading guide:** Sections 1 to 3 are the publishable science (the paper PoC and the grant through-line). Section 5 is the proprietary platform layer. Section 7 is the decision: what goes in the paper vs what stays the moat.

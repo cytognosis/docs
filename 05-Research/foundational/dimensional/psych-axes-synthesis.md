@@ -1,9 +1,37 @@
+# Transdiagnostic Neuropsychiatric Axes — Literature Synthesis / Research Dossier
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `dimensional`, `rdoc`, `hitop`, `transdiagnostic-axes`
+> **Variants**: Technical (this doc) - Readable (`simple/psych-axes-synthesis.md`) - Agent (n/a)
+
 > [!NOTE]
-> **Folded into the canonical synthesis (2026-07-10):** `../../dimensional/psych-axes-synthesis.md`. Kept as raw source (also holds short and ultra-short variants).
+> **TL;DR**: Psychiatric categories (DSM/ICD) map poorly onto biology. Two dimensional frameworks, RDoC (top-down constructs) and HiTOP (bottom-up empirical structure), plus data-driven genomics and neuroimaging, converge on a small set of transdiagnostic axes. This dossier is the canonical prose synthesis; the machine-readable RDoC harmonization (22 matrices) lives under `rdoc-harmonization/`.
 
-# **long version**
+> **Reading time**: ~12 min. **If you only read one thing**: RDoC and HiTOP are complementary (mechanism vs psychometrics); their signed interface (Michelini 2021) plus genomic factor models (Grotzinger 2025) define the axes the platform operationalizes.
 
-# **Converging Evidence for Transdiagnostic Neuropsychiatric Axes**
+---
+
+## 1. Research Question and Scope
+
+**Question**: Along what transdiagnostic axes is human neuropsychiatric variation organized, and how do top-down (construct) and bottom-up (data-driven) approaches converge?
+**Scope**: RDoC, HiTOP, their crosswalk, and genomic/neuroimaging dimensional evidence. Machine-readable harmonization is maintained separately (Section 4).
+**Why it matters**: defines the dimensional coordinate system for the Cytognosis platform and the disease-biotype work.
+
+## 2. Seed Papers / Organizing References
+
+| # | Citation (author year) | Why it anchors | DOI |
+|---|------------------------|----------------|-----|
+| 1 | Insel et al. 2010; Cuthbert & Insel 2013 (RDoC) | Top-down construct framework | 10.1176/appi.ajp.2010.09091379 |
+| 2 | Kotov et al. 2017 (HiTOP) | Bottom-up empirical taxonomy | 10.1037/abn0000258 |
+| 3 | Michelini et al. 2021 (RDoC-HiTOP interface) | The signed crosswalk | 10.1016/j.cpr.2021.102025 |
+| 4 | Grotzinger et al. 2025 (14-disorder genomic factors) | Data-driven axis validation | 10.1038/s41586-025-09820-3 |
+
+## 3. Evidence Synthesis
+
+### 3.1 Converging evidence review (merged full version)
 
 Psychiatric diagnoses in the Diagnostic and Statistical Manual (DSM; APA, 2013\) are typically symptom-driven, leaving a large gap between available disease annotations and therapeutically actionable molecular circuits. Furthermore, these diagnoses treat disorders as discrete and unitary entities, whereas recent research suggests they are highly comorbid, span a continuous spectrum, and exhibit heterogeneous symptomatology among patients sharing the same diagnosis, driven in part by shared molecular and circuit-level mechanisms that cut across traditional diagnostic boundaries (Feczko et al., 2019; Stephan et al., 2016). The need for an alternative, quantitative, and mechanistically grounded representation of human psychopathology is now widely accepted within the field, recently underscored by Steven Hyman, former NIMH Director, in his 2025 keynote address "Precision Psychiatry," titled "Time to Retire the DSM and Begin Again."
 
@@ -11,21 +39,21 @@ Extensive evidence points to five major limitations of categorical classificatio
 
 Two major dimensional frameworks have emerged over the past decade to address these limitations with complementary strategies: the Research Domain Criteria (RDoC) framework and the Hierarchical Taxonomy of Psychopathology (HiTOP). More recently, large-scale data-driven analyses of genomic architecture and neuroimaging activation patterns have begun to validate, refine, and challenge both frameworks from the bottom up. Together, these converging lines of evidence are defining the transdiagnostic axes along which human neuropsychiatric variation is organized, providing the scientific foundation for the multi-scale integration that our platform seeks to operationalize.
 
-## Construct-Driven (Top-Down) Approaches: From Symptoms to Dimensions
+### Construct-Driven (Top-Down) Approaches: From Symptoms to Dimensions
 
-### The Research Domain Criteria (RDoC) Framework
+#### The Research Domain Criteria (RDoC) Framework
 
 The **Research Domain Criteria (RDoC)** framework (Insel et al., 2010; Cuthbert & Insel, 2013), developed by the National Institute of Mental Health (NIMH), is a neuroscience-rooted research framework that aims to further our understanding of transdiagnostic biobehavioral systems underlying psychopathology, ultimately paving the way for refined psychiatric classifications and precision approaches to mental health. RDoC organizes core dimensions of behavior using a **dimensional approach**, viewing mental health and illness on a continuum rather than as binary categories. The framework is operationalized as a matrix: rows represent functional constructs grouped into six higher-order **domains** (Negative Valence Systems, Positive Valence Systems, Cognitive Systems, Systems for Social Processes, Arousal/Regulatory Systems, and Sensorimotor Systems), while columns represent eight **units of analysis** spanning from genes, molecules, and cells through circuits, physiology, behavior, paradigms, and self-reports (Kozak & Cuthbert, 2016). Domains, constructs, and subconstructs were defined through expert consensus by reviewing the scientific literature on major systems relevant to typical and atypical human behavior. This multi-scale structure explicitly encodes the premise that variations along neuropsychiatric axes are driven by factors operating across biological levels, from genomic variation to observable behavior.
 
 RDoC primarily addresses three of the five limitations outlined above: the dimensional nature of psychopathology that categories fail to capture, the absence of etiological and pathophysiological mechanisms from current diagnoses, and the extensive within-disorder heterogeneity that makes individuals sharing the same diagnosis differ greatly from one another (Michelini et al., 2021). By encouraging research organized around biobehavioral systems rather than diagnostic boundaries, RDoC seeks to elucidate the processes underlying mental health problems and inform their future classification.
 
-### The Hierarchical Taxonomy of Psychopathology (HiTOP)
+#### The Hierarchical Taxonomy of Psychopathology (HiTOP)
 
 The **Hierarchical Taxonomy of Psychopathology (HiTOP)** (Kotov et al., 2017; Kotov et al., 2021), developed by a consortium of researchers studying psychiatric nosology, proposes a hierarchical, dimensional classification of mental health problems based on observed covariation among signs, symptoms, maladaptive behaviors, and traits. Constructed through extensive factor-analytic and latent class research, HiTOP organizes psychopathology according to its natural covariance structure at multiple levels of specificity: narrow **symptom components** (e.g., dysphoria, suicidal ideation) aggregate into broader **syndromes** (e.g., depression), which cluster into **subfactors** (e.g., Distress), which in turn compose six **spectra** (Internalizing, Disinhibited Externalizing, Antagonistic Externalizing, Thought Disorder, Detachment, and Somatoform). At the apex sits a general factor of psychopathology, or *p*\-factor (Caspi & Moffitt, 2018). Seven subfactors have been identified within the spectra: Fear, Distress, Mania, and Eating Pathology within Internalizing; Substance Abuse and Antisocial Behavior within Disinhibited Externalizing; and Sexual Problems provisionally linked to Somatoform (Kotov et al., 2017).
 
 HiTOP primarily addresses the first, third, fourth, and fifth limitations: the dimensional nature of psychopathology, widespread comorbidity, within-disorder heterogeneity, and symptom overlap between diagnostic categories. By delineating broader dimensions that explain psychiatric comorbidity alongside specific dimensions that accommodate heterogeneity, the system seeks to provide more informative research and treatment targets than traditional diagnostic categories (Michelini et al., 2021; Mullins-Sweatt et al., 2020).
 
-### Complementary Strengths and Key Differences
+#### Complementary Strengths and Key Differences
 
 Despite their shared commitment to dimensional approaches and their shared recognition of the limitations of categorical diagnosis, RDoC and HiTOP differ in important ways that make them complementary rather than redundant (Michelini et al., 2021).
 
@@ -33,7 +61,7 @@ First, the two frameworks derive their dimensions by different methods. RDoC dom
 
 These complementary gaps create a natural interface: HiTOP can supply psychometrically robust clinical targets for RDoC-informed research, while RDoC provides a transdiagnostic framework for elucidating the neurobiological underpinnings of HiTOP dimensions beyond what categorical diagnoses permit.
 
-### Mapping RDoC Domains onto HiTOP Spectra
+#### Mapping RDoC Domains onto HiTOP Spectra
 
 Michelini et al. (2021) systematically delineated this interface through a comprehensive narrative review linking RDoC constructs and subconstructs to HiTOP spectra and subfactors, drawing on evidence from self-report, behavioral, psychophysiological, and neuroimaging studies. Their analysis revealed numerous associations of varying strengths across the two systems, with several core connections standing out for their consistency across multiple constructs within each RDoC domain.
 
@@ -49,13 +77,13 @@ Michelini et al. (2021) systematically delineated this interface through a compr
 
 Taken together, these mappings demonstrate that although the interplay between biobehavioral systems and clinical dimensions is complex, a set of core connections can be identified that may serve as the foundation for a nosology integrating both clinical presentation and etiological underpinnings.
 
-### Limitations of Construct-Driven Approaches
+#### Limitations of Construct-Driven Approaches
 
 Despite their considerable advances, existing top-down efforts to define neuropsychiatric axes, including both RDoC and HiTOP, share important limitations. Both frameworks begin with clinical symptomatology or expert-defined behavioral constructs and then map them onto underlying biology. However, recent studies suggest that symptom-derived factors may be insufficiently specific or overly broad relative to the underlying brain circuitry they seek to elucidate (Beam et al., 2021; Quah et al., 2025). The many-to-many mapping between biobehavioral systems and clinical dimensions, reflected in the large number of cross-domain associations identified by Michelini et al. (2021), underscores this challenge: most RDoC constructs associate with multiple HiTOP spectra, and most HiTOP dimensions associate with multiple RDoC domains, consistent with high psychiatric comorbidity and limited biomarker specificity (Caspi et al., 2020). Moreover, multiple etiological pathways can contribute to similar clinical presentations in different individuals (Kendler, 2019), and biobehavioral correlates of a given dimension may shift across development (Tseng et al., 2019). These observations motivate complementary data-driven approaches that begin not from symptoms but from biological substrates, allowing dimensional structure to emerge from genomic, connectomic, and cellular data rather than being imposed by clinical observation.
 
-## Data-Driven (Bottom-Up) Approaches: From Biology to Dimensions
+### Data-Driven (Bottom-Up) Approaches: From Biology to Dimensions
 
-### Genomic Architecture of Transdiagnostic Risk
+#### Genomic Architecture of Transdiagnostic Risk
 
 The most comprehensive genomic examination of cross-disorder psychiatric risk to date, Grotzinger et al. (2025) applied genomic structural equation modeling (genomic SEM) to GWAS data from over one million cases across 14 childhood- and adult-onset psychiatric disorders. Their analysis identified five latent genomic factors that collectively explained approximately 66% of the genetic variance across individual disorders: (F1) a Compulsive disorders factor defined by anorexia nervosa, OCD, and (more weakly) Tourette's syndrome and anxiety; (F2) a Schizophrenia-Bipolar (SB) factor; (F3) a Neurodevelopmental factor defined by ASD, ADHD, and Tourette's syndrome; (F4) an Internalizing disorders factor defined by major depression, PTSD, and anxiety; and (F5) a Substance Use Disorders (SUD) factor defined by opioid, cannabis, alcohol use disorders, nicotine dependence, and (to a lesser extent) ADHD.
 
@@ -65,7 +93,7 @@ Several key observations emerged from this work. First, disorders loading on the
 
 These findings establish that the genetic architecture of psychiatric disorders is organized along dimensional axes that cut across diagnostic boundaries, with both shared and factor-specific biological mechanisms operating at distinct levels of the hierarchy.
 
-### Neuroimaging-Derived Dimensional Signatures
+#### Neuroimaging-Derived Dimensional Signatures
 
 Complementing the genomic evidence, a parallel line of data-driven research has used neuroimaging to ask whether the dimensional structure of psychiatric variation can be recovered directly from brain circuitry, rather than imposed by clinical observation. This work addresses a fundamental question: do the axes defined by symptom covariation (HiTOP) or expert consensus (RDoC) correspond to the axes along which brain function actually varies?
 
@@ -77,37 +105,36 @@ Notably, Quah et al. found that no activation maps in their dataset fit within t
 
 These neuroimaging findings converge with the genomic evidence from Grotzinger et al. (2025) on a central point: dimensions defined by clinical observation or expert consensus do not straightforwardly map onto the axes along which biology varies. The genomic factors identified by Grotzinger et al. explained approximately 66% of genetic variance but left a median of 33.5% unexplained, with some disorders (e.g., Tourette's syndrome, 87% residual) showing a substantial unique signal. Similarly, the neuroimaging-derived factors of Quah et al. captured meaningful structure in brain activation patterns but achieved only moderate overall model fit, reflecting the irreducible complexity of brain-behavior relations. Both lines of evidence point to the same conclusion: the true axes of neuropsychiatric variation are only partially captured by existing frameworks, and a more complete mapping will require integration across biological scales rather than reliance on any single level of analysis.
 
-# **short version**
 
-# **Converging Evidence for Transdiagnostic Neuropsychiatric Axes**
+## 4. Machine-readable harmonization (RDoC matrices)
 
-Psychiatric diagnoses in the DSM treat disorders as discrete, unitary entities defined by symptom checklists, leaving a large gap between available disease annotations and therapeutically actionable molecular circuits. Recent research demonstrates that these disorders are highly comorbid, span continuous spectra, and exhibit heterogeneous symptomatology driven by shared molecular and circuit-level mechanisms that cut across traditional diagnostic boundaries (Feczko et al., 2019; Stephan et al., 2016). Two major dimensional frameworks have emerged to address these limitations. The **Research Domain Criteria (RDoC)** framework (Insel et al., 2010), developed by NIMH, organizes behavior along six biobehavioral domains (Negative Valence, Positive Valence, Cognitive, Social Processes, Arousal/Regulatory, and Sensorimotor Systems) spanning eight units of analysis from genes to self-reports, defined through expert consensus. The **Hierarchical Taxonomy of Psychopathology (HiTOP)** (Kotov et al., 2017\) takes a complementary, empirically derived approach, using factor analysis of symptom covariation to organize psychopathology into six hierarchical spectra (Internalizing, Disinhibited Externalizing, Antagonistic Externalizing, Thought Disorder, Detachment, and Somatoform) with a general *p*\-factor at the apex. Michelini et al. (2021) systematically mapped these two frameworks onto each other, identifying robust cross-system connections: Negative Valence Systems align with HiTOP Internalizing, Cognitive Systems dysfunction links to both Thought Disorder and Disinhibited Externalizing, Social Processes deficits associate with Thought Disorder, Detachment, and Antagonistic Externalizing, and Positive Valence Systems show complex relationships with Disinhibited Externalizing and Distress. These mappings demonstrate that a set of core connections between biobehavioral systems and clinical dimensions can be identified, but also reveal pervasive many-to-many relationships reflecting the complexity of psychiatric comorbidity.
+The RDoC units-of-analysis harmonization (6 units, 58 constructs, 922 associations) and the signed RDoC to HiTOP crosswalk are maintained as CSV matrices with an index:
 
-Large-scale data-driven analyses have begun to validate and refine these construct-driven frameworks from the bottom up. Grotzinger et al. (2025) applied genomic structural equation modeling to GWAS data from over one million cases across 14 psychiatric disorders, identifying five latent genomic factors (Compulsive, Schizophrenia-Bipolar, Neurodevelopmental, Internalizing, and Substance Use Disorders) that collectively explained \~66% of genetic variance and show striking correspondence with HiTOP spectra. Functional annotation revealed divergent neurobiological substrates: the Schizophrenia-Bipolar factor was enriched in excitatory neurons, while the Internalizing factor was enriched in oligodendrocytes. Disorders loading on the same factor were largely indistinguishable at the individual variant level, with over 99% of case-case GWAS hits occurring between factors rather than within them. Complementing these genomic findings, neuroimaging studies by Beam et al. (2021) and Quah et al. (2025) demonstrated that data-driven bifactor models of task-based fMRI activation patterns consistently outperform the theory-driven RDoC framework, revealing that some RDoC domains (e.g., Cognitive Systems) require splitting while others (e.g., Negative Valence, Positive Valence, and Arousal/Regulatory) share substantial underlying circuitry.
+- **Index**: `rdoc-harmonization/README.md`
+- **Matrices**: `rdoc-harmonization/matrices/` (construct x unit association matrices, incl. `matrix_hitop*.csv`)
+- **Reference tables**: `rdoc-harmonization/reference_tables/` (ontology mappings: PubChem, Cell Ontology, Allen atlas, SNOMED, HPO/NBO/PATO)
+- **Clinical instruments crosswalk**: `../../cytoverse/behavioral/clinical-instruments/` (PHQ-9/GAD-7, DASS, schizophrenia symptoms)
+- **Neuroplasticity axes**: `BDNF_TrkB_Neuroplasticity_Axes_Dossier_2026-06-03.md`
 
-Both lines of evidence converge on a central conclusion: the true axes of neuropsychiatric variation are partially, but incompletely, captured by existing frameworks, whether defined by symptom covariation or expert consensus. Symptom-derived factors may be insufficiently specific or excessively broad relative to the underlying biology they seek to elucidate (Beam et al., 2021; Quah et al., 2025), and multiple etiological pathways can produce similar clinical presentations in different individuals (Kendler, 2019). A more complete mapping of neuropsychiatric dimensions will require integration across biological scales, from genomic architecture through cellular identity and circuit-level dynamics to behavioral phenotypes, rather than reliance on any single level of analysis. It is this multi-scale integration that our platform is designed to operationalize.
+## 5. Most Defensible Axes (cross-framework)
 
-# **ultra-short version**
+1. **Internalizing / Negative-Valence** (Fear vs Distress subfactors): amygdala-insula-ACC threat circuitry; robust RDoC-HiTOP link. Confidence: HIGH.
+2. **Externalizing / Positive-Valence and disinhibition**: reward-processing and response-inhibition dimensions; substance-abuse reward correlates distinct. Confidence: MEDIUM-HIGH.
+3. **Thought Disorder / Cognitive Systems**: attention, working memory, perception deficits; 40Hz ASSR and spindle signatures (see biotypes). Confidence: MEDIUM-HIGH.
+4. **Detachment / Social Processes**: facial-emotion, empathy, attachment deficits across thought-disorder, detachment, antagonistic spectra. Confidence: MEDIUM.
+5. **Arousal / Regulatory** (incl. circadian): signed links to Distress and externalizing; eveningness tentatively linked to the p-factor. Confidence: MEDIUM.
+6. **Cross-cutting plasticity (BDNF/TrkB)**: strongest single transdiagnostic molecular axis (see disease-biotypes cheat sheet). Confidence: HIGH.
 
-# **Converging Evidence for Transdiagnostic Neuropsychiatric Axes**
+## 6. Gaps and Open Questions
 
-DSM diagnoses treat psychiatric disorders as discrete entities defined by symptom checklists, yet research consistently demonstrates that they are highly comorbid, continuously distributed, and driven by shared molecular and circuit-level mechanisms that cut across diagnostic boundaries (Feczko et al., 2019; Stephan et al., 2016). Two major dimensional frameworks address these limitations from opposite directions. The NIMH's **Research Domain Criteria (RDoC)** (Insel et al., 2010\) organizes behavior along six expert-defined biobehavioral domains spanning genes to self-reports; the **Hierarchical Taxonomy of Psychopathology (HiTOP)** (Kotov et al., 2017\) uses factor analysis of symptom covariation to organize psychopathology into six empirically derived spectra with a general *p*\-factor at the apex. Michelini et al. (2021) mapped these frameworks onto each other, identifying robust cross-system connections (e.g., Negative Valence with Internalizing, Cognitive dysfunction with Thought Disorder and Disinhibited Externalizing) but also pervasive many-to-many relationships reflecting the irreducible complexity of psychiatric comorbidity.
+- RDoC self-report/behavior units have uneven psychometrics; HiTOP is agnostic on etiology. The interface is the value.
+- Drysdale four-biotype result did not replicate (Dinga 2019); prefer Williams six-axis scaffold.
+- Genomic factor structure (Grotzinger 2025) vs construct frameworks: alignment is partial and active.
 
-Large-scale data-driven analyses have begun to validate and challenge both frameworks from the bottom up. Grotzinger et al. (2025) applied genomic SEM to GWAS data from over one million cases across 14 disorders, identifying five latent genomic factors (Compulsive, Schizophrenia-Bipolar, Neurodevelopmental, Internalizing, Substance Use) that explain \~66% of genetic variance and align strikingly with HiTOP spectra, with divergent cell-type enrichments across factors (excitatory neurons for Schizophrenia-Bipolar; oligodendrocytes for Internalizing). Neuroimaging studies similarly demonstrate that data-driven models of brain activation outperform the theory-driven RDoC structure, revealing that some domains require splitting while others share substantial circuitry (Beam et al., 2021; Quah et al., 2025). The convergent message is clear: the true axes of neuropsychiatric variation are only partially captured by any single framework, and a more complete mapping requires integration across biological scales, from genomic architecture through cellular identity and circuit dynamics to behavioral phenotypes. It is this multi-scale integration that our platform is designed to operationalize.
+## 7. Provenance and Maintenance
 
-# **Tab 4**
-
-# **Limitations of the current categorical approach to  psychopathology**
-
-1. **Dimensional nature of psychopathology**: categorical diagnoses do not adequately reflect the extensive evidence that forms of psychopathology and their underlying processes are continuous in nature.   
-2. **Missing causal mechanisms**: traditional diagnoses rely on subjective reports or symptom observations and do not account for etiological and pathophysiological mechanisms that largely cut across diagnostic boundaries.  
-3. **Widespread comorbidity**: traditional classifications focus on individual diagnoses and ignore widespread comorbidity and developmental continuity between disorders, which can substantially undermine predictions of illness course and informed treatment decisions.  
-4. **Within-disorder patient heterogeneity**: DSM and ICD do not provide tools to account for the extensive heterogeneity within each diagnosis, meaning individuals with the same diagnosis can differ greatly from one another and may respond differently to treatment.  
-5. **Manifestation overlap**: Overlapping symptoms across diagnostic categories (e.g., distractibility, anhedonia) can make differential diagnosis especially difficult and contribute to misdiagnosis.
-
-* **Dimensional nature of psychopathology:** RDoC, HiTOP  
-* **Missing causal mechanisms:**  RDoC  
-* **Widespread comorbidity:** HiTOP  
-* **Within-disorder patient heterogeneity:** RDoC, HiTOP  
-* **Manifestation overlap:** HiTOP
-
+- **Folds in**: the SOTA "Converging Evidence for Transdiagnostic Neuropsychiatric Axes" review (long version). Original kept as raw source at `05-Research/foundational/problem-and-gap/original/` with a pointer banner (also holds short and ultra-short variants).
+- **Related synthesis (archived history, not modified)**: `03-Products/Cytonome/Yar/_archive/consolidation_2026-06-21/_research/PSYCH_AXES_SYNTHESIS.md`.
+- **Strategy landscape**: `01-Strategy/ai-ml-dimensional-biotyping-landscape-2026.md`.
+- **Last verified**: 2026-07-10.
+- **Revisit when**: new RDoC/HiTOP crosswalk data or genomic factor release.

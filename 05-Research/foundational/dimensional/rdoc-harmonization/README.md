@@ -1,5 +1,12 @@
 # RDoC Units of Analysis — Extraction & Harmonization
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `dimensional`, `rdoc`, `harmonization`, `data-index`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Source: NIMH Research Domain Criteria (RDoC) matrix, https://www.nimh.nih.gov/research/research-funded-by-nimh/rdoc
 Extracted 2026-05-26. Scope: six units of analysis (Molecules, Cells, Circuits, Physiology, Behavior, Self-Report). Genes and Paradigms excluded per request.
 
@@ -113,3 +120,7 @@ The companion `reference_..._weighted.csv` exposes every factor (`base_score`, `
 - "High-rigor" mappings were verified against the live source for each term; confidence and flag columns mark weak/approximate matches — review flagged rows before downstream use.
 - Allen 141-region 2020 subset is not exposed as a discrete API set; mapping used the parent Allen human structure ontology (graph_id=16), which contains that subset.
 - Behavior Entity/Quality is a first verified pass; social-cognition, language-pragmatics, and sleep-umbrella terms have sparse ontology coverage and are flagged.
+
+## Canonical synthesis
+
+This harmonization backs the dimensional prose synthesis: [`../psych-axes-synthesis.md`](../psych-axes-synthesis.md).
