@@ -1,3 +1,10 @@
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Status:** Active · **Date:** 2026-05-01 (authored), 2026-07-01 (canonicalized) · **Author:** Cytognosis Foundation
 > **Canonical home:** `05-Research/neuroverse/fmri-methods-review.md` · **Consolidated from:** `Science and Platform/resources/fMRI_papers_review_2026.docx` (converted to Markdown; the .docx was a render).
 

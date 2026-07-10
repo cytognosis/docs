@@ -1,5 +1,12 @@
 # Feature Index
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Complete reference of all 85 features across 19 categories in the Cytocast template, with maturity scores and cross-links to documentation, tutorials, and tests.
 
 ## Maturity Scale

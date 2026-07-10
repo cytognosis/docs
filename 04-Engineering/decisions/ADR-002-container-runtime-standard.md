@@ -1,5 +1,12 @@
 # ADR-002: Container Runtime Standard
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 - **Status**: Decided
 - **Date**: 2026-06-01
 - **Decision**: Docker (Docker Compose) is the primary container runtime

@@ -1,5 +1,12 @@
 # 11 — Open Targets Platform Schemas → LinkML
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – take the Open Targets Platform's published schemas and
 > produce a LinkML schema that round-trips with their Parquet data.
 > **Time** – 60 minutes.

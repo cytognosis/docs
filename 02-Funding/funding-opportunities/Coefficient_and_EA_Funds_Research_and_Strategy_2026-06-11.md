@@ -1,5 +1,12 @@
 # Coefficient Giving + EA Funds: Research and Application Strategy
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-11 (revised, second pass) · **Reading time:** ~20 min (or read the Action Card + Second-Pass Calibration + Part 5, ~8 min) · Strategy, not legal or financial advice. Verify present-day amounts and open status at submission.
 
 > **If you only read one thing:** After rendering the **live EA grants database (1,631 grants)** and the BlueDot terms, our asks were **too low**. (1) **LTFF mainline should be ~$250K** (stretch $320K, floor $130K), not $75K to $125K; full PI-plus-engineer sprints in our space are funded at $250K to $275K. (2) **Career Transition rises to ~$100K/12 mo**, anchored to Constellation Astra (~$100,800/yr) and MATS (~$92K/yr) full-time stipends; the real lever is the **sitting-CEO framing**, not the number. (3) **Capacity Building rises to ~$250K** and tilts toward field-building (Coefficient first org grants run $200K to $2M/yr). (4) **Drop the EA Global Health and Development Fund** (closed; confirmed verbatim). (5) Lead every safety ask on **open-source AI-safety infrastructure**, with mental health as the first deployment, not the thesis.

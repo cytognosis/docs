@@ -1,5 +1,12 @@
 # 14 — OLS4 SSSOM: SnomedCT End-to-End
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – take the OLS4 mappings tarball, load the SNOMED CT TSV,
 > validate it, convert it, build a tiny graph from it, and use it for
 > single-cell harmonization.

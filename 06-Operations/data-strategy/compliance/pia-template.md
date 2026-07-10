@@ -1,4 +1,11 @@
 # SOP: Privacy Impact Assessment (PIA) Template
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 **Control**: HIPAA 164.308(a)(1) — Risk Analysis; Best practice for new data onboarding
 **Effective**: 2026-05-19 | **Owner**: Privacy Officer | **Review**: Per cohort + annually
 

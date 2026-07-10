@@ -1,5 +1,12 @@
 # Cytognosis Foundation · Master Strategic Plan
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Version:** 2.0 (May 2026) · **Author:** Shahin Mohammadi · **Compiled:** 2026-05-08
 **Supersedes:** `01_Cytognosis_Strategic_Roadmap_15-Year.md` v1.1 (April 2026) at the synthesis layer; carries forward the OGSM, Hoshin, and OKR cascades from `02_Cytognosis_Phase1_Operational_Plan.md`.
 **Companions retained:** Phase 1 OKR cascade, SI Registry, Framework Synthesis, Roadmap Diagrams.

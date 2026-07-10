@@ -1,5 +1,12 @@
 # Consolidated Milestones and KPIs
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** all horizon documents (`03_*`, `04_*`, `05_*`), the platform documents (`10_*`, `11_*`, `12_*`), and the funding strategy (`30_*`)
 
 This document gives the consolidated view of the milestone roadmap and the KPIs that govern progress. It is the dashboard reference for Board reviews, advisor briefings, and grant reviewer questions about timeline.

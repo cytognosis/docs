@@ -8,6 +8,13 @@ scope: choose controlled vocabularies for tagging agent skills on two distinct a
 
 # Skill-Tagging Ontologies — Recommendation
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## 1. Problem framing
 
 We need to tag the agent-skill library on **two orthogonal axes**, because the skills carry two kinds of meaning that don't reduce to each other:

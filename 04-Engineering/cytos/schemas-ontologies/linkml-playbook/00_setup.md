@@ -1,5 +1,12 @@
 # 00 — Environment Setup
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – have a clean Python env with every tool the rest of this
 > playbook calls, plus a project skeleton.
 > **Time** – 20 minutes.

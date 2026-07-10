@@ -1,5 +1,12 @@
 # Yar Product Docs, in Plain Words
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `product`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Reading time: about 1 minute.**
 
 > **Full/technical versions:** the specs live in `../spec/` and `../mvp/`; the feature catalog is `../YAR_FEATURE_CATALOG.md`.

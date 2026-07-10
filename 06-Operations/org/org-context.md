@@ -1,5 +1,12 @@
 # Cytognosis Foundation — Organizational Context (Technical)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Variants**: Technical (this doc) - Readable (org-context.md in Obsidian vault: 06-Operations/org/) - Agent (org-context_prompt.md)
 
 > **Status:** Active · **Date:** 2026-07-01 · **Author:** Cytognosis (Org) consolidation agent · **Layer:** `06-Operations/org` · **Variants:** `org-context.md` (this) · `org-context.md` · `org-context_prompt.md`

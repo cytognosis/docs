@@ -1,5 +1,12 @@
 # Domain Semantic-Quality Evaluation Harness
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 This package prepares evaluation of model/domain output quality separately from CAP structural conformance. It is for domain experts, reviewers, and profile owners who need to judge whether outputs are useful, bounded, and appropriate for a target task.
 
 It does not replace `cap-check-v1-conformance`, and it does not establish clinical, regulated, production, or broad domain validity. Synthetic fixtures in this repository are onboarding examples only.

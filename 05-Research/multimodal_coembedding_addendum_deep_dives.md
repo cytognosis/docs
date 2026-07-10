@@ -1,4 +1,11 @@
 # Addendum: Four Deep Dives
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 ### Companion to `multimodal_coembedding_review_2025_2026.md`
 
 > **Topics:**

@@ -2,6 +2,13 @@
 
 # OMI AI Deep Dive: Open-Source Wearable Memory Platform and Yar Mapping
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Owner**: Shahin Mohammadi · **Created**: 2026-05-30 · **Status**: DRAFT
 > **Canonical location**: `~/repos/cytognosis/docs/cytonome/yar/research/omi-ai-deep-dive.md`
 > **Purpose**: Exhaustive feature analysis of OMI AI wearable for Cytonome/Yar feature prioritization, with focus on ambient capture, open-source architecture, and neurodivergent applicability

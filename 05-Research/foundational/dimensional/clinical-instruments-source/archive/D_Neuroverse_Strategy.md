@@ -1,5 +1,12 @@
 # Neuroverse: A Multiscale, Multimodal Foundation Model and Universal Coordinate System for the Human Brain and Psyche
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **A Cytognosis Foundation research program**
 **In collaboration with McLean Hospital / Mass General Brigham and Purdue University**
 

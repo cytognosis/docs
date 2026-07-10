@@ -1,5 +1,12 @@
 # Production KMS/HSM Operations Plan
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 This plan defines the deployment-facing responsibilities for CAP production signing keys. It does not implement a production KMS/HSM integration, and it does not close the production KMS/HSM release gate in [CAP_RELEASE_GATES.md](../CAP_RELEASE_GATES.md).
 
 The current repository uses deterministic or caller-supplied signing material for local tests, scaffolds, and compatibility evidence. Runtime-generated keys from `generate_runtime_keyset(...)`, deterministic attestation providers, local Biscuit warrant keys, and in-memory or test callbacks are non-production material. They must not be reused as production authority, policy, audit, transparency, evidence, or release-signing keys.

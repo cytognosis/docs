@@ -1,5 +1,12 @@
 # Cytonome Sensor Documentation — Yar's Sensing Component
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > [!IMPORTANT]
 > **TL;DR**: This is Yar's **sensing component**, nested at `docs/cytonome/yar/sensors/`. It defines the **sensor protocol** that lets any sensor (voice, wearables, self-report, future connectomics) plug into Yar as a typed, consent-governed adapter. The protocol is referred to here as **USAP (Universal Sensor Adapter Protocol)**; the Yar master and strategy docs call the same protocol **CSP (Cytonome Sensor Protocol)**. They are the same thing. It is a standalone sensor architecture, integrated as Yar's input layer (Yar master `§4B`) and governed by **CAP** (every adapter needs per-sensor consent; raw data stays on-device by default).
 

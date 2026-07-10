@@ -1,5 +1,12 @@
 # Multi-Organization MCP/A2A Interop Plan
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 This package prepares the external live MCP/A2A interoperability gate. It is a runbook and evidence format for partner organizations. It does not close the gate by itself: local simulation and repository-maintainer-only execution remain local evidence.
 
 The release-gate status is tracked in [CAP_RELEASE_GATES.md](../CAP_RELEASE_GATES.md). Integration mappings are described in [CAP_05_integrations.md](../CAP_05_integrations.md).

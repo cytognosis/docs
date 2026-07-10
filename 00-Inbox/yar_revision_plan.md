@@ -1,5 +1,12 @@
 # Yar Revision Plan — Status Tracker
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: stakeholders
+> **Tags**: `inbox`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Updated**: 2026-05-17
 > **Scope**: Yar as an independent repo/package. Schema/CAP/interface modularization into separate repos is a future phase.
 

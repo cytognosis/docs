@@ -1,5 +1,12 @@
 # LinkML Schema Field Inventory for CodeRepository & Software
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Purpose**: Comprehensive field listing for building a unified LinkML schema covering software and code repositories based on CodeMeta, CFF, Schema.org, Zenodo, and Software Heritage standards.
 
 **Status**: Ready for LinkML implementation

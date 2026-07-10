@@ -1,5 +1,12 @@
 # Targeted Noninvasive Optical Scanning: Toward a PET-Free Path to Molecular Brain Readouts
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Background research for the Cytognosis Foundation and Hervé Marie-Nelly NSF X-Labs Phase 0 proposal. Compiled May 2026.
 
 ## 1. The Molecular-Imaging Analog in PET

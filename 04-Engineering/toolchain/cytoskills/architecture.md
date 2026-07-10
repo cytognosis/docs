@@ -1,5 +1,12 @@
 # Agents Repo Architecture
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 This repo holds the runtime skills catalog, profile-based deployment system,
 and the typed Python overlay that turns SKILL.md bundles into validated
 `BaseSkill` instances. It does not scaffold projects (that's

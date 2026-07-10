@@ -1,5 +1,12 @@
 # Cytoderma Design
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Master Cytognosis copier template for all user-facing applications.
 > Generates four root templates (phone, web, desktop, browser extension) that downstream products fork from.
 > Plays for Cytonome the role that `cytos` plays for Cytoverse: the substrate every user-facing product inherits.

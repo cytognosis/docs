@@ -1,4 +1,11 @@
 # SOP: DUC IAM Provisioning Pattern
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 **Control**: HIPAA 164.308(a)(3)(ii)(A) — Access Authorization
 **Effective**: 2026-05-19 | **Owner**: Privacy Officer | **Review**: Annual
 

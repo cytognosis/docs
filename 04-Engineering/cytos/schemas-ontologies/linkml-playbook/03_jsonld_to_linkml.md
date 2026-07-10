@@ -1,5 +1,12 @@
 # 03 — schema.org and Bioschemas → LinkML
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – pull schema.org and Bioschemas into LinkML form so you can
 > import them into the Cytognosis schema instead of redefining classes.
 > **Time** – 45 minutes.

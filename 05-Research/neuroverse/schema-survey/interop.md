@@ -1,5 +1,12 @@
 # Interop: How Models, Sensors, and Data Compose into a Matchable System
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 The previous three documents survey each entity in isolation. This one is about the join: given a model card, a dataset manifest, and an assay manifest, how do you decide they fit, and what is the minimum machinery required to enforce that fit at runtime?
 
 ## The matching problem stated formally

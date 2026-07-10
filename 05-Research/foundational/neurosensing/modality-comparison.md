@@ -1,5 +1,12 @@
 # Cross-Modality Comparison: Brain Sensing, Molecular Imaging, and Neuromodulation
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > One table per question, across every modality in the four tech deep-dives. Numbers are best-achievable unless marked "routine". Sources: `fnirs-optical-update.md`, `opm-meg-update.md`, `molecular-imaging-update.md`, `neuromodulation-update.md`, plus `wearables-comparative.md`. Confidence and research-vs-clinical status are flagged where they matter.
 
 ## How to read this

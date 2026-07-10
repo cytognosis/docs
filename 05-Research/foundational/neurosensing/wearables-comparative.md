@@ -1,5 +1,12 @@
 # Comparative Review of Noninvasive Wearable Brain-Sensing Technologies
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 *Prepared for Cytognosis Foundation X-Labs Phase 0 proposal (Marie-Nelly / Cytognosis), May 2026.*
 
 ## Scope

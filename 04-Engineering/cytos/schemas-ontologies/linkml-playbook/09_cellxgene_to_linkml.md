@@ -1,5 +1,12 @@
 # 09 — CZI CELLxGENE Schema → LinkML
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – encode the CELLxGENE single-cell schema as a LinkML schema,
 > so we can validate AnnData `obs` declaratively while still running
 > `cellxgene-schema validate` for structural checks (the hybrid pattern).

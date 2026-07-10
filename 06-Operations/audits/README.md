@@ -1,5 +1,12 @@
 # 06-Operations / audits
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Author:** Operations consolidation
 
 Operational audit findings are indexed here. **Technical infrastructure audits are canonical in the Infrastructure layer** and are not duplicated in Operations.

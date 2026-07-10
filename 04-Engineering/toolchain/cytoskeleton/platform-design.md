@@ -1,5 +1,12 @@
 # Cytognosis Platform: Unified Design & Requirements
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Comprehensive architecture for infrastructure, compute orchestration,
 > specialized storage, and data lifecycle management.
 

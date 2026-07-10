@@ -11,6 +11,13 @@ tags:
 
 # Experiment Orchestration: Definition, Execution, and Provenance
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Cytognosis Foundation, 2026-05-24 (draft v0.1)**
 **Status**: Research complete, ready for architectural decisions
 

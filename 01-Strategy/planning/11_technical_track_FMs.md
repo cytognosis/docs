@@ -1,5 +1,12 @@
 # Technical Track: Parallel Cellular and Connectomic Foundation Models
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** `10_platform_architecture.md`, `12_clinical_to_wearable.md`, `appendix/A_cell_state_meeting_synthesis.md`
 **Source meeting:** Cell-State / Perturbation Modeling, 2026-05-07 (Shourya Verma, Mango Wang, Nadia Atallah Lanman, Ananth Grama, Shahin Mohammadi)
 

@@ -1,4 +1,11 @@
 # Neuroverse — Datasets, Cohorts & Modalities
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 **Maintained by**: Shahin Mohammadi | **Last updated**: 2026-05-22
 **Live tracker**: Google Sheets (Cytognosis Shared Drive → `02-Scientific-Platform`)
 

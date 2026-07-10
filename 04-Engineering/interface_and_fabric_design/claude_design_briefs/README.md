@@ -1,5 +1,12 @@
 # Claude Design Briefs
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Self-contained briefs to share with Claude Design. Each brief instructs Claude Design on what to produce for a particular Cytognosis deliverable: the Design System itself, or one of the four interface templates that consume it.
 
 ## Reading order

@@ -1,4 +1,11 @@
 # SOP: Deferred Security Controls
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 **Status**: Documented intent — Controls 1, 6, 7 implemented; others deferred
 **Owner**: Engineering | **Review**: Quarterly; implement when trigger condition met
 **Last verified**: 2026-06-19

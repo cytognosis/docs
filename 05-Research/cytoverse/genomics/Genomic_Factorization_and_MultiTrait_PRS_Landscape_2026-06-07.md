@@ -1,5 +1,12 @@
 # Genomic Factorization, Multi-Trait PRS, and Genome Foundation Models for Neuropsychiatric Indications: Landscape and State of the Art (June 2026)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Purpose.** One reference map for how to factorize and embed GWAS summary statistics across related neuro indications, compute factor-level polygenic scores, reconcile summary statistics with individual genotypes, and bridge all of this to genomic foundation models, sparse-LD infrastructure, the pangenome, and pathway-anchored interpretability. Built to sharpen Cytognosis grants (NIH, ARPA-H HSF/IGoR, NSF, AWS) and to guide the real Cytoverse and factorized-PRS build.
 
 **Reading time.** About 18 minutes full; 4 minutes if you read only Sections 0, 1, and 11.

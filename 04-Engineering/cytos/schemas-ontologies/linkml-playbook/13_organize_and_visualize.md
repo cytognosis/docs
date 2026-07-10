@@ -1,5 +1,12 @@
 # 13 — Organize and Visualize Your Schemas
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – pick a layout that scales (per-entity vs master-file vs
 > hybrid), then *see* the inheritance tree to find gaps.
 > **Time** – 40 minutes.

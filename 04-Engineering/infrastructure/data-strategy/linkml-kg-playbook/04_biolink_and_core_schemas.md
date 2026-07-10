@@ -1,5 +1,12 @@
 # 04 — Biolink Model and Other Key LinkML Schemas
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – pull every "canonical" LinkML schema (Biolink, SSSOM, NMDC,
 > MIxS, GA4GH, Bioregistry) so you can `import:` them rather than
 > redefine them.

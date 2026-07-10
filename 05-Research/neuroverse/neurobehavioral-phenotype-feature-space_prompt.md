@@ -1,5 +1,12 @@
 # Neurobehavioral phenotype feature space (agent brief)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Variants**: Agent seed (this doc) - Technical (see docs repo 05-Research/neuroverse/) - Readable (neurobehavioral-phenotype-feature-space.md in Obsidian vault)
 
 > **Status:** Active · **Date:** 2026-07-01 · **Variant:** agent (self-contained). **Technical source:** [neurobehavioral-phenotype-feature-space.md](neurobehavioral-phenotype-feature-space.md).

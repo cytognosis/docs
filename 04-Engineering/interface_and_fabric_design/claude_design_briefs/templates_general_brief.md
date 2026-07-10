@@ -1,5 +1,12 @@
 # Claude Design Brief: Cytognosis Interface Templates (General)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Read this brief end-to-end before producing or revising ANY of the four Cytognosis interface templates (phone, web, desktop, browser extension). Then read the matching delta (`template_<name>_delta.md`).
 > The four templates live in `cytoskeleton/templates/app-<name>/`. Each is consumed via `copier copy cytoskeleton/templates/<name> <downstream-app>`.
 

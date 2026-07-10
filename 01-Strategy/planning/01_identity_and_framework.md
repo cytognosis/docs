@@ -1,5 +1,12 @@
 # Identity and Framework
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** `00_executive_summary.md`, `02_horizons_and_bifurcation.md`
 
 ## Identity (L0)

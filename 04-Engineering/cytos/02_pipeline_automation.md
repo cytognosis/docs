@@ -1,5 +1,12 @@
 # Cytos Pipeline Automation
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Companion to `01_cytos_package_design.md`. Specifies the exact automation surfaces (nox sessions, Prefect flows, GitHub Actions workflows, CLI subcommands) and the IO contract per stage.
 
 ## 1. Stage IO contracts

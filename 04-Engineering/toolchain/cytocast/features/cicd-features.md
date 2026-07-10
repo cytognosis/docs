@@ -1,5 +1,12 @@
 # CI/CD Features & Git Hooks
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Cytocast generates a complete CI/CD pipeline that enforces code quality at four escalating tiers, from permissive local development to strict release gating. Every generated project ships with GitHub Actions workflows, pre-commit hooks, and tiered ruff configurations.
 
 ## Architecture Overview

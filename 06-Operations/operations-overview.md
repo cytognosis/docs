@@ -1,5 +1,12 @@
 # Operations (06-Operations) — Layer Overview (Technical)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Author:** Operations consolidation · **Pillar:** Operational (org/business ops)
 > **Variants**: Technical (this doc) - Readable (operations-overview.md in Obsidian vault: 06-Operations/) - Agent (operations-overview_prompt.md)
 > **Reading time:** ~6 minutes

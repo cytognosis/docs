@@ -1,5 +1,12 @@
 # Claude Design Brief: Cytognosis Design System
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Read this brief end-to-end before producing or revising the Cytognosis Design System.
 > The Cytognosis Design System lives authoritatively in Claude Design. Cytognosis backs it up in `branding` for offline use, human-readable browsing, and consumption by repos that cannot reach Claude Design (CI, downstream apps at build time).
 

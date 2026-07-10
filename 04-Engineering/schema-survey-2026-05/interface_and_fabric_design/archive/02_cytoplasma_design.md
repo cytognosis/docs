@@ -1,5 +1,12 @@
 # Cytoplasma Design
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > The distributed multi-agent fabric for Cytognosis. A library/SDK consumed by repos across Cytonome, Cytoverse, and Cytoscope.
 > Provides agent discovery, role descriptors, schema-enforced events, mesh networking, CRDT state, tiered orchestration (phone / laptop / cloud), reliability constraints, and privacy-preserving primitives.
 > The interviewer agent on phone and the supervisor agent on laptop both run on top of this fabric.

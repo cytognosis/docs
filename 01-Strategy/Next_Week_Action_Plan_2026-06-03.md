@@ -1,5 +1,12 @@
 # Next-Week Action Plan
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-03 (Wed), updated · For Shahin · **Reading time: 2 min.**
 
 ## BLUF

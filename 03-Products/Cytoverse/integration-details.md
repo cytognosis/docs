@@ -1,5 +1,12 @@
 # Integration Details: DagsHub, LaminDB, redun, DVC, scDataLoader, TileDB
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `product`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > All code examples are from actual documentation or verified repos, not invented.
 
 ---

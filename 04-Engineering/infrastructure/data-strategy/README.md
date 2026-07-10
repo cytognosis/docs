@@ -1,5 +1,12 @@
 # Data Strategy & Compliance
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Single source of truth** for Cytognosis Foundation data governance, privacy and security architecture, regulated dataset acquisition, schemas, and the scholarly knowledge graph that ties research artifacts together.
 
 This subtree was previously split across the `cytognosis/data-strategy` repository and this directory. As of May 2026 it is consolidated here. Older `data-strategy.md` content has been merged into [`master-data-strategy.md`](master-data-strategy.md); the historical `data-strategy` repository now redirects here.

@@ -1,5 +1,12 @@
 # Framing: Verifiability/Interpretability vs Cognitive-Liberty (and the carve)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-11 · **Reading time:** ~6 min · Companion to the Coefficient + EA Funds dossier.
 
 > **If you only read one thing:** Lead the **technical** claim with **verifiability and deployment control**, with **CAP/Cytoplex as the crown-jewel artifact**, and keep **cognitive-liberty as the values motivation**. Do **not** label Cytoverse "interpretability" (to these funders that means mechanistic interpretability of frontier LLMs, and the mismatch will hurt). Your healthcare-can't-be-a-black-box thesis is correct and fundable, but it must be anchored to specific technical-safety problems (faithfulness, activation monitoring, control), not to "healthcare AI ethics," a category EA funders avoid.

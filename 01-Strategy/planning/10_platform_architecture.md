@@ -1,5 +1,12 @@
 # Platform Architecture: GPS for Health
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** `11_technical_track_FMs.md`, `13_sensor_ecosystem.md`, `14_navigation_recommendations.md`, `15_app_design.md`, `16_patient_safety_architecture.md`
 
 The Cytognosis Platform is what we build. It has three components, in plain language: a **map** (Cytoverse), a **sensor** (Cytoscope), and a **navigator** (Cytonome). Together they are GPS for Human Health. Everything else in the plan, scientific bets, organizational design, funding structure, exists to make this platform real and to make it serve the mission.

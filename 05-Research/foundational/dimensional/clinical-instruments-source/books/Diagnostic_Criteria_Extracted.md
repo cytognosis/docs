@@ -1,3 +1,10 @@
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Childhood-Onset Fluency Disorder (Stuttering) Diagnostic Criteria [ICD: F80.81, F98.5]
 
 A. Disturbances in the normal fluency and time patterning of speech that are inappropriate for the individual's age and language skills, persist over time, and are characterized by frequent and marked occurrences of one (or more) of the following:

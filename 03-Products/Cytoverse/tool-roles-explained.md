@@ -1,5 +1,12 @@
 # What Each Tool Actually Does: The Definitive Guide
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `product`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Purpose**: End the confusion. One document. Every tool mapped to exactly one job.
 
 ---

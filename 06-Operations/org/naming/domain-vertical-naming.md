@@ -11,6 +11,13 @@ tags:
 
 # Domain Vertical Naming Analysis
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Cytognosis Foundation**
 **Research Document — Phase 0 Infrastructure Planning**
 **Date:** 2025-05-24

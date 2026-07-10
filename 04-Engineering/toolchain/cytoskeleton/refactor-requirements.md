@@ -1,5 +1,12 @@
 # Cytoskeleton Structural Refactor: Requirements & Architecture
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Executive Summary
 
 This document captures the full requirements, assumptions, and architectural design for restructuring `cytoskeleton` from its current state (ad-hoc mix of generated assets, Python scripts, and cross-cutting concerns) into a clean, principled foundation for the Cytognosis ecosystem's data and asset management layer.

@@ -9,6 +9,13 @@ license: CC BY 4.0
 
 # Openness as Operational Discipline
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Astera, Arcadia, OpenBCI, and What "Open Science" Looks Like When It Is a Contract Term
 
 Almost every mission-driven research organization claims to support open science. Most of them do so in a value statement, a mission paragraph, or a blog post. A much smaller number have made openness a *structural* feature of their operations: something contractually required, operationally enforced, and unable to be quietly dropped when it becomes inconvenient.

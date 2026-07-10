@@ -1,4 +1,11 @@
 # Neuroverse — Action Plan
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 **Owner**: Shahin Mohammadi | **Last updated**: 2026-05-22
 
 This document tracks the sequential steps required to move from the current state

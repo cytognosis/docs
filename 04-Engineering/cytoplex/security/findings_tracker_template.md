@@ -1,5 +1,12 @@
 # Security Review Findings Tracker Template
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Use this template during an independent security review. It is intentionally empty; filling it out records review evidence but does not by itself close the external review gate in [CAP_RELEASE_GATES.md](../CAP_RELEASE_GATES.md).
 
 ## Review Metadata

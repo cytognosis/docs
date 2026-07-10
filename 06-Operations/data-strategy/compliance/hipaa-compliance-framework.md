@@ -1,5 +1,12 @@
 # HIPAA Compliance Framework
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > [!NOTE]
 > **For a live control-by-control status view, see [HIPAA-STATUS.md](HIPAA-STATUS.md).**
 > This document is the authoritative narrative; HIPAA-STATUS.md is the operational tracker.

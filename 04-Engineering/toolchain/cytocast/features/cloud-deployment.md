@@ -1,5 +1,12 @@
 # Cloud & Deployment
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Cytocast generates cloud deployment configurations for running ML workloads on remote infrastructure, including SkyPilot task definitions for multi-cloud GPU job orchestration and Docker image management for container registries.
 
 ## Architecture

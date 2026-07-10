@@ -1,5 +1,12 @@
 # Neuroplastogen Differential Response: Trials, Mechanisms, and Biotype Predictors
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 A landscape review for the Cytognosis Foundation and Hervé Marie-Nelly NSF X-Labs / ARPA-H PHO proposal. Compiled May 25, 2026.
 
 ## Scope and thesis

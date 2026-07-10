@@ -1,5 +1,12 @@
 # Neuroverse Infrastructure Compliance: What the Four Sources Actually Require
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Document owner:** Shahin Mohammadi, CEO, Cytognosis Foundation **Audience:** Internal; shared with Duane and infrastructure decision-makers **Status:** Working reference for SAE design decisions
 
 ------

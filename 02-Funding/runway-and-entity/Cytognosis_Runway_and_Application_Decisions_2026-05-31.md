@@ -1,5 +1,12 @@
 # Cytognosis — Runway and Application Decisions
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-05-31 · **For:** Shahin · **Status:** decision memo (read this, then we lock the forks)
 **Covers:** the Oct 1 income cliff, and go/no-go on Foresight (today), YC (overdue), EA/LTFF, and the two Coefficient Giving applications.
 

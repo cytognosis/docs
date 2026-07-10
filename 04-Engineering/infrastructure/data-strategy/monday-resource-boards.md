@@ -1,5 +1,12 @@
 # Monday.com Resource Boards
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > The Cytognosis Foundation Monday.com workspace mirrors the [scholarly knowledge graph schema](scholarly-knowledge-graph.md) at human-friendly resolution. Until the Neo4j stack is fully online, the Resources folder on Monday.com is the operational registry for papers, models, code, datasets, workflows, protocols, and the typed relationships between them.
 
 ## Workspace coordinates

@@ -1,5 +1,12 @@
 # Noninvasive Neuromodulation: Status, Personalization, and the Sensing Gap
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Research brief prepared for the Cytognosis Foundation + Hervé Marie-Nelly NSF X-Labs Phase 0 proposal.
 Last updated 25 May 2026.
 

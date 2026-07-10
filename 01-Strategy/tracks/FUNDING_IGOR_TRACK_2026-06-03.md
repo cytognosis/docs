@@ -1,5 +1,12 @@
 # Funding & Partnerships / IGoR Track
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-03 · Stage 5, Track 1 (p0) · Consolidated from cytomem corpus and X-Labs funding docs.
 **Reading time:** ~10 min. **If you only read one thing:** see §2, Priority 1 — the IGoR Solution Summary (Jun 25) must be reframed IPAI-prime / Cytognosis-sub before submission; the current draft is still framed Cytognosis-prime.
 

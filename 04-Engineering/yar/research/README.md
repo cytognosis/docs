@@ -1,5 +1,12 @@
 # Yar research (tool and technology evaluations)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Status:** Active · **Date:** 2026-07-01 · Canonical home for Yar tool/tech evaluations.
 
 **If you only read one thing:** For each evaluated tool, read the concise `EVAL-<topic>.md` first (BLUF, fit for Yar, verdict). The longer companion file is the full research reference. The 12 `EVAL-*.md` files were consolidated here from `03-Products/Cytonome/Yar/research/` on 2026-07-01 so tool evaluations have one home.

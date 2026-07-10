@@ -1,5 +1,12 @@
 # 16 — Koza and the Monarch Initiative Ecosystem
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – understand the Koza ingest tool, the broader Monarch
 > Initiative ecosystem, the `monarch-ingest` pipeline, the Monarch
 > Knowledge Graph itself, and how Cytognosis can plug in.

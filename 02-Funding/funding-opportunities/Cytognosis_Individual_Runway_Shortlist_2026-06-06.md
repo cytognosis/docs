@@ -1,5 +1,12 @@
 # Individual Runway Shortlist: Fast, Remote, You-Can-Apply Funding (Alternatives to the Ananth Visiting-Scholar Path)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Compiled:** 2026-06-06 · **Method:** 4 research threads (prior-funnel mining + 3 web scans), deadlines verified against primary sources · **Status:** Active. Decisions flagged, ordered no-outreach-first.
 
 ---

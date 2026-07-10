@@ -1,5 +1,12 @@
 # Unified Schema Architecture for Cytognosis: Body, Sensors, Data, Models
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Version:** 2026-05-07 (consolidated)
 **Supersedes:** the per-entity files in this folder, which are retained as deeper references.
 **Audience:** Cytognosis Foundation platform/architecture and grant-writing teams.

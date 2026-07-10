@@ -1,5 +1,12 @@
 # Cytognosis Platform — Integrated Hands-On Tutorial
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `product`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > A complete, worked guide to the Cytognosis toolchain: managing assets,
 > environments, datasets, containers, services, and skills across all packages.
 

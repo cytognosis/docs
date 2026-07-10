@@ -1,4 +1,11 @@
 # SOP: Contingency Plan (Disaster Recovery)
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 **Control**: HIPAA 164.308(a)(7) — Contingency Plan
 **Effective**: 2026-05-19 | **Owner**: Engineering + Privacy Officer | **Review**: Annual + after DR test
 

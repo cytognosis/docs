@@ -8,6 +8,13 @@ Consolidated platform tooling map
 
 # **30-second TL;DR**
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Cytognosis tooling research spans 19 internal tabs. This document harmonizes them into 11 component groups arranged across three product surfaces: Cytonome (the on-device navigator), Cytoverse (the AI map), and a Foundation Spine (FAIR, lineage, repos). Every primary pick is permissively licensed (Apache 2.0, MIT, or BSD-3) and aligned with the Cytognosis open-science mission.
 
 **If you read nothing else, read these seven decisions:**

@@ -1,5 +1,12 @@
 # Cytognosis Foundation — Funding & Opportunity Strategy (Master)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Compiled:** 2026-05-30 · **Last status update:** 2026-06-01 · **Method:** hierarchical funnel with iterative pruning · **Status:** Stage 1 (docs) — **iteration 4**
 
 > **Iteration 2 (2026-05-30) added:** real application history (YC, Foresight, QB3, Brains, Astera — all rejected; Nucleate — alumnus); the **Eli Lilly** ecosystem via the **Ananth Grama / Purdue $250M alliance** (warmest high-fit path); **Mayo** Platform; the **Nucleate×Lilly** Grand Challenge; the **autism cluster** (BRAIN Foundation, Autism Society, SPARK) reached via **Sarika Agrawal**; **MRI** (Mental Research Institute); the **MGH Center for Digital Mental Health**; the **APA** App-Evaluation + **Future-DSM** influence path; **Mt Sinai (Roussos)** & **MGH (Smoller)** academic partners; and a new **Network & Warm-Intro Map** (workbook tab + §5A here). The workbook now carries **Prior Status** and **Access / Warm-Intro Path** columns. See §1B.

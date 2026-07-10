@@ -1,5 +1,12 @@
 # MCP/A2A Interop Evidence Report Template
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Use this template for live external MCP/A2A interoperability runs. Local simulation output can be attached, but it does not close the external gate.
 
 ## Run Metadata

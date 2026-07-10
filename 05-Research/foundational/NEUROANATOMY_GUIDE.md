@@ -1,5 +1,12 @@
 # Neuroanatomy Guide for the Biotype Docs
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Plain-language reference for every brain region and network the biotype docs mention.** Use it whenever a term like "subgenual ACC" or "default mode network" shows up and you want to know what it actually is, where it sits, and what it does. ADHD-friendly: every region is a one-paragraph card; tables let you scan.
 
 ---

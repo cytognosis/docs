@@ -1,5 +1,12 @@
 # Appendix A: Cell-State / Perturbation Modeling Meeting Synthesis
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-05-07
 **Source:** [Google Meet notes](https://docs.google.com/document/d/16slm-XKv_Hejr4gby7OpLFcPqqUIa6UMK07pzKWbkts/edit)
 **Attendees:** Shourya Verma (Purdue, lead RA), Nadia Atallah Lanman (Purdue), Ananth Grama (Purdue, faculty), Shahin Mohammadi (Cytognosis), Mango Wang (Meta, contributor), additional Purdue IPAI team members

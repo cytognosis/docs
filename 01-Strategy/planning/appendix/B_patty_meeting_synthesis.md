@@ -1,5 +1,12 @@
 # Appendix B: Patty Purcell Strategic Meeting Synthesis
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-05-08
 **Source:** [Google Meet notes](https://docs.google.com/document/d/1nr4lfNSD1JrHhq5fIaEoZAQuimlEAFFtS3L0wNUUFkw/edit)
 **Attendees:** Patricia Purcell PhD (consultant), Shahin Mohammadi (Cytognosis)

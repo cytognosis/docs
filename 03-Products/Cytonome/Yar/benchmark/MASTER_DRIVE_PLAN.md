@@ -1,5 +1,12 @@
 # Yar Feature Consolidation — Master Drive Plan
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `product`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Owner:** Shahin Mohammadi · **Started:** 2026-06-21 · **Status:** ACTIVE
 **Reading time:** ~4 min · **If you only read one thing:** the Phase Plan table and the Decisions Log.
 

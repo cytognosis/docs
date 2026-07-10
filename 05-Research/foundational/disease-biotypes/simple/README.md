@@ -1,5 +1,12 @@
 # Disease Biotypes, in Plain Words
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Reading time: about 1 minute.**
 
 > **Full/technical version:** the canonical index is `../diseases/BIOTYPES_CHEATSHEET_v2.md`, with one dossier per disorder.

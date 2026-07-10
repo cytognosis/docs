@@ -1,4 +1,11 @@
 # HIPAA Compliance Status Dashboard
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 **Owner**: Shahin Mohammadi (Security Officer) | **Review**: Quarterly
 **Last updated**: 2026-05-26 | **Next review**: 2026-08-26
 

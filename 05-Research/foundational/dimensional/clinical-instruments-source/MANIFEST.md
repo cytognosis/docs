@@ -1,5 +1,12 @@
 # Clinical Instruments Source — Import Manifest
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Imported:** 2026-07-07 from `~/Documents/drafts/Science/psych/`
 **Provenance:** Shahin Mohammadi personal research collection
 **Excluded:** `RDoC_harmonization/` (superseded by Projects copy in Science and Platform)

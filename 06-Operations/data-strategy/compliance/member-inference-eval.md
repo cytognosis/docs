@@ -1,4 +1,11 @@
 # SOP: Member-Inference Evaluation Methodology
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 **Control**: NIH GDS Policy 2025 — Privacy-preserving model release
 **Effective**: 2026-05-19 | **Owner**: ML Engineering + Privacy Officer | **Review**: Per model release
 

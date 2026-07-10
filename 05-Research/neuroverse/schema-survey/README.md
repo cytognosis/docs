@@ -1,5 +1,12 @@
 # Schemas for Models, Sensors, Data, and the Human Body: Survey and Recommended Stack
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-05-07 (updated)
 **Audience:** Cytognosis Foundation platform/architecture
 **Goal:** Identify best-of-breed schemas, frameworks, and ontologies for representing, validating, and matching the four coupled entities Cytognosis cares about, and propose a primary stack.

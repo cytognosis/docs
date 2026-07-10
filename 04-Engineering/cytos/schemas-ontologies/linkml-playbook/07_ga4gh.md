@@ -1,5 +1,12 @@
 # 07 — GA4GH: VRS, VA, Phenopackets, Pedigree, Beacon → LinkML
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – inventory and convert the GA4GH schema family (genotype +
 > phenotype + clinical) to LinkML so you know what's already covered
 > before extending Cytognosis.

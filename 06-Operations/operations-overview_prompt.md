@@ -1,5 +1,12 @@
 # Operations (06-Operations) — Fresh-Agent Brief
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Variants**: Agent seed (this doc) - Technical (operations-overview.md) - Readable (operations-overview.md in Obsidian vault: 06-Operations/)
 
 > **Status:** Active · **Date:** 2026-07-01 · Self-contained brief for an agent picking up this layer cold.

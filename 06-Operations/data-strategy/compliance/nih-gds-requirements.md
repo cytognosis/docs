@@ -1,4 +1,11 @@
 # NIH Genomic Data Sharing — Operational Requirements
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 **Effective for Cytognosis**: All new/renewed DUCs from 2025-01-25 onward
 **Primary regulation**: [NOT-OD-24-157](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-24-157.html) + [NOT-OD-25-083](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-083.html)
 **Companion doc**: [HIPAA-STATUS.md](HIPAA-STATUS.md) — full 45 CFR control matrix

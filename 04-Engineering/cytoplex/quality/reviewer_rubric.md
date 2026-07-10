@@ -1,5 +1,12 @@
 # Domain Semantic-Quality Reviewer Rubric
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Use this rubric for human review sessions. It defines score anchors for each criterion family. Profile owners may add criteria, but should preserve the 1 to 5 scale.
 
 ## Score Anchors

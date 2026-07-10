@@ -1,5 +1,12 @@
 # Master Drive Plan — Genomic Factorization & Multi-Trait PRS Synthesis
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Started:** 2026-06-07 · **Owner:** Shahin (via Cowork) · **Status:** in progress
 
 ## Goal

@@ -1,5 +1,12 @@
 # 06 — BioThings: APIs, biothings_schema.py, and the Data Discovery Engine
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – know what BioThings is (it's four things), figure out which
 > piece you need, and use them alongside (not instead of) LinkML.
 > **Time** – 50 minutes.

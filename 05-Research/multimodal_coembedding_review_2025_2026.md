@@ -1,4 +1,11 @@
 # Multimodal Co-Embedding for Multi-Scale Patient Data
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 ### A 2025-2026 Methods Review, Tailored to Paired Cross-Scale Patient Integration
 
 > **Built for:** Cytognosis-style platforms where each individual has many views (phenotypic, genotypic, single-cell/omic, connectomic, imaging, EHR) and the goal is one consistent geometry that respects biological scale and patient identity.

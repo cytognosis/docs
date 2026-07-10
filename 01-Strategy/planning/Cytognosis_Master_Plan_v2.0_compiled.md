@@ -1,5 +1,12 @@
 # Cytognosis Foundation · Master Strategic Plan
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Version 2.0 · May 2026 · Compiled single-document edition**
 
 **Author:** Shahin Mohammadi · **Compilation date:** 2026-05-08

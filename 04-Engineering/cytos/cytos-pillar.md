@@ -1,5 +1,12 @@
 # Cytos pillar — technical reference
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Variants**: Technical (this doc) - Readable (cytos-pillar.md in Obsidian vault: 04-Engineering/cytos/) - Agent (cytos-pillar_prompt.md)
 
 > **Status:** Active · **Date:** 2026-07-01 · **Audience:** Engineering (canonical) · **Pillar:** Cytoverse

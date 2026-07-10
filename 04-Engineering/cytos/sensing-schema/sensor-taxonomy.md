@@ -1,5 +1,12 @@
 # Sensors and Phenotypic Assays: Schemas, Frameworks, and Ontologies
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Scope: how to describe a phenotypic measurement (the assay or sensor) so that another system can match it to a model input, a downstream analysis, or co-register it with another modality. Six sub-questions:
 
 0. What is the *generic grammar* of "a sensor made an observation about a feature of interest using a procedure and produced a result", before any biomedical specifics?

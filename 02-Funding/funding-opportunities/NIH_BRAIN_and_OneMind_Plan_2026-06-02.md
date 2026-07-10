@@ -1,5 +1,12 @@
 # NIH BRAIN + One Mind: Opportunities and Plan
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-02 · **Reading time: ~5 min.**
 
 **If you read one thing:** the three RFAs you named are all **expired**; the live flagship is **RFA-DA-27-004 (Theories, Models and Methods, R01), due Oct 6, 2026**, best submitted multi-PI with **Ananth Grama (Purdue as lead applicant, Cytognosis subaward)**. NIH money lands in **2027**, so this is the medium-term track, not survival.

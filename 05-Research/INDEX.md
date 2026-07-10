@@ -1,5 +1,12 @@
 # 04-research: Master Index
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Last updated:** 2026-06-12 (automated reorg)
 **Maintainer:** Shahin Mohammadi, Cytognosis Foundation
 

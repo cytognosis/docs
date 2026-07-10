@@ -1,5 +1,12 @@
 # Compute Orchestration & Resource Limits
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Cytocast includes a built-in resource orchestration layer that enforces CPU, memory, and GPU limits on all compute-intensive operations. This enables consistent behavior across laptops, workstations, shared servers, and cloud instances.
 
 ## Resource Orchestrator

@@ -1,5 +1,12 @@
 # Meeting Transcription, Storage, and Synthesis: Recommended System for Cytognosis
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Reading time:** about 7 minutes. **If you only read one thing:** the **Decisions** table, then "Part 1: Fix Google Meet."
 
 ## BLUF

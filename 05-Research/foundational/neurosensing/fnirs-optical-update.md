@@ -1,5 +1,12 @@
 # Technology Deep-Dive Update: Noninvasive fNIRS and Optical Wearables (2024 to 2026)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 *Prepared for Cytognosis Foundation NSF X-Labs / ARPA-H work. Compiled May 25, 2026. This file extends three existing seed documents (fnirs-deep-dive.md, wearables-comparative.md, and the CGM section of targeted-noninvasive-scanning.md). It does not repeat their full contents; it consolidates the engineering parameters that those documents treat in scattered form, adds 2024 to 2026 advances, and answers the specific questions of spatial resolution, temporal resolution, depth, tissue penetration profile, depth/location adjustability, commercial availability with prices, and known biases. It then covers the non-brain optical wearable landscape, anchored on optical continuous glucose monitoring (CGM), and asks what transfers to brain optical sensing.*
 
 A note on terminology and honesty. Optical neuroimaging has a long history of strong claims followed by quiet retractions of scope (the fast optical signal, see below; transcranial single-cell readout; noninvasive glucose). Throughout, demonstrations are marked RESEARCH-only vs CLINICAL-cleared, single-lab findings are flagged as such, and company press claims are separated from peer-reviewed primary endpoints. Where a number is a best-case single demonstration rather than a routine capability, that is stated.

@@ -1,5 +1,12 @@
 # Claude Design Brief: Desktop Template (Delta)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Read `templates_general_brief.md` first. Read `template_web_delta.md` second; the desktop template wraps the web template via Tauri v2.
 > Output destination: `cytoskeleton/templates/app-desktop/`.
 

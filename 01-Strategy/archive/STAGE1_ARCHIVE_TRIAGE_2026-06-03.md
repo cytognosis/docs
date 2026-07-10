@@ -1,5 +1,12 @@
 # Stage 1 — Archive Audit & Triage
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-03 · Metadata-only inventory of the archives and in-project scratch folders, scoped per the agreed Stage 1 plan. Manifests live in the session scratch dir (`stage1/*.tsv`). **No files moved, ingested, or deleted yet.** This is the triage list for your sign-off.
 
 ## BLUF

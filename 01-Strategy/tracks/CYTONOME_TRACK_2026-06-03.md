@@ -1,5 +1,12 @@
 # Cytonome Track — Navigator: On-Device + Causal AI, ND App, PBC / Dual Entity, YC
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-03 · Stage 5, Track 4 (p2) · Consolidated from cytomem corpus, repos `cytoplex` + `Yar` + `docs/cytonome`, and X-Labs project files.
 **Reading time:** ~12 min. **If you only read one thing:** see §3, Priority 1 — Yar needs real users before Demo Day; the MVP runs, the user pipeline does not yet. Ship the TestFlight beta first.
 

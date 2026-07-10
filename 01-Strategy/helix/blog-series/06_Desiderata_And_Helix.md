@@ -9,6 +9,13 @@ license: CC BY 4.0
 
 # What's Still Missing
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Structural Desiderata for Healthcare Moonshots in the Age of AI, and a First Sketch of the Helix Framework
 
 We opened this series with a specific claim: no existing institutional structure is designed to carry a healthcare moonshot through its full 15-year arc. Over four posts we have looked at four categories of organization, ARPA-like, FROs, hybrids, and alternatives, each of which has produced genuine institutional innovation, and each of which covers a different slice of the arc. This final post does two things. First, it names the structural capabilities that remain unaddressed when we put all four categories together. Second, it introduces the Helix Framework as one candidate answer, with explicit acknowledgment that others are possible.

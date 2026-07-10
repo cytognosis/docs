@@ -1,5 +1,12 @@
 # fMRI foundation-model methodologies and architectures (2025 to 2026)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Six papers reviewed: Taylor et al. (HCP / lifespan, *Nature* 2026), NeuroSTORM (Wang et al., *Nat. Biomed. Eng.* 2026), Brain-Semantoks (Gijsen et al., arXiv 2025), SLIM-Brain (Wang et al., arXiv 2026), Omni-fMRI (Wang et al., arXiv 2026), and BrainGFM (Wei et al., ICLR 2026). Taylor is included for the lifespan FC-gradient methodology; the other five are foundation models.
 
 ---

@@ -2,6 +2,13 @@ Before I give any comments, I want to provide further clarification before we pr
 
 # phenotypic diversity of patients
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 We propose to represent diseases not as single labels, but using their precise phenotypic manifestations/dysregulations (gain/loss of neuro/behavioral symptoms). In the context neuropsychiatric/neurodegenerative disorders, these would be a curated set of neuro-behavioral phenotypes, capturing relevant shifts across Mood, Anxiety, Psychosis, Cognition, Attention, Memory, Motor, Sleep, Social, Personality, Substance Use axes, to name a few. In other words, instead of using “a minimum of X out Y symptoms” from a given list of diagnostic symptoms, which is the approach used in DSM, we represent each disease as the full phenotypic representations, originally extracted/inferred from diagnostic manuals, but then refined based on their population-scale manifestions and covariation. This is key to point out that DSM-diagnostics and clinical intruments/tests (either self-reported such as PHQ-9 or clinician-rated, such as CGI-S), are probing the same set of axes that psychiatric diagnostics are, but often are also applicable for nondiagnostic uses and also for temporal tracking of shifts on these axes. We will use collection of  available de-identified tests to infer population-scale variation/covariation across these phenotypes. These phenotypic representations allow us to:
 
 1. **Disentangle phenotypic components of disorders**, by representing individual "components" of disease and study components (both shared across or unique in different disorders) … e.g., as our early studies are indicating distinct mechanisms are driving the mood vs thought components of bipolar disorders (ongoing work), where the mood component overlaps with MDD-specific dysregulations while the though-axes overlaps with SZ.

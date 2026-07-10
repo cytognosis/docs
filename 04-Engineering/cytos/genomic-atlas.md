@@ -1,5 +1,12 @@
 # Genomic Atlas Interface
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > v1.0 | Last updated: 2026-05-26
 
 The genomic subsystem in Cytos handles gene queries, variant annotation, GWAS associations, eQTL lookups, linkage disequilibrium, and polygenic risk scores. All genomic data integrates with the Knowledge Graph via standard ontology CURIEs (HGNC, MONDO, SO, HANCESTRO).

@@ -1,5 +1,12 @@
 # Organization and Helix Structure
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** `21_patient_advocacy_council.md`, `22_people_and_consultants.md`, `23_open_science_and_ip.md`, `02_horizons_and_bifurcation.md`
 
 This document captures the operating-model layer using the McKinsey 12-element overlay. Where the strategic plan elsewhere asks "what are we doing," this document answers "how are we organized to do it."

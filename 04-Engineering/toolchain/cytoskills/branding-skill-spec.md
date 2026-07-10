@@ -1,5 +1,12 @@
 # cytognosis-branding Skill Specification
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Version:** 5.0.0 | **Status:** Production | **Last Revised:** 2026-05-31
 
 ## Overview

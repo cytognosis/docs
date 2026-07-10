@@ -1,5 +1,12 @@
 # ARPA-H IGoR Teaming — TA3/TA4 teams seeking TA1/TA2 partners
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Source: https://arpa-h.gov/explore-funding/programs/igor/teaming (retrieved 2026-06-03). 120 profiles screened.
 
 TA1 = Comprehensive Disease Models; TA2 = New Science Engine; TA3 = Interoperable Experimental Procedures; TA4 = Experiment Marketplace.

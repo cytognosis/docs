@@ -1,5 +1,12 @@
 # Claude Design Bidirectional Sync Protocol
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: designers, stakeholders
+> **Tags**: `design`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Overview
 
 The Cytognosis Design System has three canonical locations that must stay synchronized:

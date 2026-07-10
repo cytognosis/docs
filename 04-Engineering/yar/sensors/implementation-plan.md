@@ -1,5 +1,12 @@
 # Consolidated Sensor Documentation and Semantic Alignment
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Goal
 
 Consolidate all sensor-related documentation scattered across Yar (product), Cytos (schemas), and archived neuro-pheno research into a coherent, cross-linked system. Then create a dedicated semantic alignment specification for the four target standards (SOSA/SSN, IEEE 1752/Open mHealth, FHIR R5, AWARE) with concrete implementation steps.

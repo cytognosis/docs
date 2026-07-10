@@ -1,4 +1,11 @@
 # SOP: Audit Log Retention (7 Years)
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 **Control**: HIPAA 164.312(b) — Audit Controls; 164.316(b)(2)(i) — Retention
 **Effective**: 2026-05-19 | **Owner**: Privacy Officer | **Review**: Annual
 

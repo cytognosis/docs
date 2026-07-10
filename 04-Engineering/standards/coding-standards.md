@@ -1,5 +1,12 @@
 # Cytos Standards Reference
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Canonical coding standards for all Cytognosis Python projects.
 > Derived from the cytos repo, which serves as the reference implementation.
 

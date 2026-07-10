@@ -1,5 +1,12 @@
 # Research Summary: Software Metadata Standards Analysis
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date**: April 4, 2026
 **Topic**: Comprehensive metadata standards for research software and code repositories
 **Deliverables**: 3 detailed reference documents

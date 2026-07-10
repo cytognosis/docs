@@ -1,5 +1,12 @@
 # Comparative Study: Cytocast vs 19 External Templates
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Comprehensive feature-by-feature comparison of the Cytocast Copier template against 19 external Python project templates.
 
 ## Repository Master Table

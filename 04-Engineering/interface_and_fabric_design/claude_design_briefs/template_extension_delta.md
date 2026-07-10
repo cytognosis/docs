@@ -1,5 +1,12 @@
 # Claude Design Brief: Browser Extension Template (Delta)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Read `templates_general_brief.md` first. This file only carries what is unique to the extension template.
 > Output destination: `cytoskeleton/templates/app-extension/`.
 

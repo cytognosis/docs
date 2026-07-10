@@ -1,5 +1,12 @@
 # Separating Phenotype from Direction of Change: A Dimension–Deviation Model for the Cytognosis Neurobehavioral Feature Space (Part 3)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Companion to `cdisc-qrs-comprehensive-reference.md` (Part 1, instruments and external-standard crosswalks) and `cdisc-qrs-feature-space-design.md` (Part 2, the six-layer feature stack). This document tackles a problem the first two left implicit:
 
 > A clinical "symptom" silently bundles two logically independent things — **the neurobehavioral dimension being measured** (the bearer: a behavior, emotion, motivation, perception, or cognitive function) and **the direction/type of deviation** on that dimension (decreased, increased, distorted, released, dysregulated, mistimed). To build a feature space that tracks *change* — especially subclinical change, and especially the positive/negative polarity we saw in schizophrenia — we must represent these two facets separately and recombine them by post-coordination.

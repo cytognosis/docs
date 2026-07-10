@@ -1,5 +1,12 @@
 # Cytognosis Master Plan & Consolidation Program
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-03 · The harmonized track taxonomy, the doc-home map, and the program to consolidate all tracks (strategy + implementation) across the four systems, using **cytomem** as the spine. **FOR AGREEMENT before the heavy build.**
 
 ## 0. BLUF

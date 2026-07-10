@@ -11,6 +11,13 @@ tags:
 
 # Extras & Naming Conventions Research
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > For cytoskeleton, cytos, and all downstream packages
 
 ---

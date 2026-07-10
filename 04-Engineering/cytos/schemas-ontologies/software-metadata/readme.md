@@ -1,5 +1,12 @@
 # Research Software Metadata Standards Documentation
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Complete reference materials for implementing a unified LinkML schema for CodeRepository and Software entities based on CodeMeta, CFF, Schema.org, Zenodo, and Software Heritage standards.
 
 **Research Date**: April 4, 2026

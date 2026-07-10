@@ -1,5 +1,12 @@
 # Navigation: Causal Recommendation Framework
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** `10_platform_architecture.md`, `13_sensor_ecosystem.md`, `15_app_design.md`, `16_patient_safety_architecture.md`
 
 Cytonome converts a person's continuous health-state coordinates into actionable recommendations. The recommendation taxonomy in this document, defensive, corrective, supportive, is the canonical framework across the entire master plan and is what we use in app design, clinical trial protocols, grant narratives, and PAC review.

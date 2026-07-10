@@ -1,5 +1,12 @@
 # The Master Map, in Plain Words
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Reading time: about 2 minutes.**
 
 > **Technical version:** `06-Operations/inventory/MASTER-CATALOG.md` (this is its easy-read twin).

@@ -1,5 +1,12 @@
 # 15 — BioCypher: schema-driven KG ingestion
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – understand BioCypher both as a *tool* (the
 > `biocypher/biocypher` Python package) and as an *ecosystem* of
 > related repos (adapters, biochatter, project templates), build

@@ -1,5 +1,12 @@
 # The Helix Series: Structural Lessons for Healthcare Moonshots
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 A six-part essay series on how mission-driven research organizations are structured, what the first generation of metascience experiments has taught us, and what healthcare-specific structures still need to address.
 
 These posts are the companion to our open commentary paper, *The Helix Framework*, which we are sharing with Astera Institute, Convergent Research, and Speculative Technologies for joint publication. Each post stands alone; the series reads best in order.

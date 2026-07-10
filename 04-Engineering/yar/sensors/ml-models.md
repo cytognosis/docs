@@ -1,5 +1,12 @@
 # Models: Schemas, Frameworks, and Ontologies
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Scope: how to describe a trained model so that another system can validate inputs, predict outputs, understand its effect, and decide whether to use it. Five sub-questions, each with its own contenders.
 
 1. How is the input/output shape and dtype declared?

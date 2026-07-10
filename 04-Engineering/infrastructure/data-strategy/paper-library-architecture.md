@@ -1,5 +1,12 @@
 # Sovereign Paper Library Architecture
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Cytognosis treats its scholarly corpus the same way it treats clinical data: every canonical artifact lives on Cytognosis-controlled infrastructure, with third-party SaaS tolerated only as a synchronization layer when the canonical copy already lives in our own storage.
 
 This document specifies the four-layer architecture that replaces the previous ReadCube Papers / generic Zotero-cloud workflow with a sovereign, FAIR-aligned paper library.

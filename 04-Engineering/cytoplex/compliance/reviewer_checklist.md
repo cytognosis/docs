@@ -1,5 +1,12 @@
 # Regulated-Profile Reviewer Checklist
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Use this checklist when reviewing CAP-Med or another regulated profile. Mark each item as pass, needs revision, blocked, or out of scope.
 
 ## Profile Scope

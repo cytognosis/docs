@@ -1,5 +1,12 @@
 # Software Engineering Best Practices
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Cytocast codifies software engineering standards into every generated project, covering branching strategy, commit conventions, code review workflows, and progressive quality enforcement.
 
 ## Branching Strategy

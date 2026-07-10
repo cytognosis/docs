@@ -1,5 +1,12 @@
 # Yar Product Spec (canonical)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `product`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Author:** @mohammadi · **Audience:** engineers, stakeholders, funders
 > **Variants**: Technical (this doc) - Readable (yar-product-spec.md in Obsidian vault, same filename) - Agent (yar-product-spec_prompt.md)
 > **Supersedes:** `yar-product-feature-master.md`, `yar-product-implementation.md`, `cytonome-master-reference.md`, `feature-comparison.md` (all archived with forward links). **Feature index:** `YAR_FEATURE_CATALOG.md` (62 features). **Evidence base:** `research/yar-unified-feature-comparison-v4.md`.

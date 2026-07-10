@@ -1,5 +1,12 @@
 # Cytoverse Track: Science Foundation (ADHD Edition)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-03 | **Reading time:** ~3 min
 
 **BLUF:** The science foundation is real. The BDNF/TrkB axis paper has a clear, bounded scope with strong grant alignment (EVIDENT/HSF, IGoR TA1). The KG/cytos platform is production-ready. The cellular micro-to-meso causal bridge is the spine that connects all three funding tracks; it is the single most important concept to communicate in any grant narrative.

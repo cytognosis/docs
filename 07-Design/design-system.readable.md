@@ -1,5 +1,12 @@
 # Cytognosis Design System — Readable Guide
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: designers, stakeholders
+> **Tags**: `design`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Variant:** readable (ADHD-friendly) · **Technical source:** `branding-design-system-spec.md` · **Agent brief:** `design-system.agent.md`
 
 **If you only read one thing:** One design system, six surfaces. Colors come from real fluorescent dye wavelengths; the display font is **Inter**; the public website runs a calmer, warm-light version of it. The single source of truth is the branding repo, mirrored to a Claude Design project, this spec, and the agent skill.

@@ -1,5 +1,12 @@
 # Cytos–Neuros Architectural Separation
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Defining the boundary between `cytos` (general biomedical data platform) and `neuros` (neuro/psych-specific functionality)
 
 **Author**: Cytognosis Foundation Architecture Team

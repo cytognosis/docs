@@ -1,5 +1,12 @@
 # Project Scaffolding
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Cytocast dynamically generates project structures based on user-provided parameters, creating consistent, well-organized codebases with configurable source modules, project directories, and metadata injection.
 
 ## Profiles

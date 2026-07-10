@@ -1,5 +1,12 @@
 # Playbook Chapter to Cytos Module Map
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Companion to `01_cytos_package_design.md`. Maps each chapter of the linkml_kg_playbook to the cytos modules, schemas, and source descriptors that implement it. The chapter prose becomes the notebook narrative; the cytos library does the work.
 
 ## How to read this table

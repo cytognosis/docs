@@ -1,5 +1,12 @@
 # Multimodal co-embedding (agent brief)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Variants**: Agent seed (this doc) - Technical (see docs repo 05-Research/neuroverse/) - Readable (multimodal-coembedding.md in Obsidian vault)
 
 > **Status:** Active · **Date:** 2026-07-01 · **Variant:** agent (self-contained). **Technical sources:** [methods review](multimodal-coembedding-methods-review.md) + [addendum](multimodal-coembedding-addendum.md).

@@ -4,6 +4,13 @@
 
 # Cytognosis Neurobehavioral Phenotype Feature Space: Design Reference (Part 2)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Companion to `cdisc-qrs-comprehensive-reference.md`. Where Part 1 catalogued CDISC QRS instruments and external standards, this document tackles three design problems:
 
 1. **Choose or construct a universal neurobehavioral phenotype feature set** (cognition, mood, attention, affect, perception, motor, sleep, social, personality, substance, eating, sexual, somatic, QoL), to which DSM/ICD diagnoses map cleanly and every major instrument projects.

@@ -1,4 +1,11 @@
 # SOP: Confidential Compute Rollout Plan
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 **Control**: NIH GDS 2025 §4 — Hardware-level isolation for Tier 4 ML workloads
 **Effective**: 2026-05-19 (planned) | **Status**: DEFERRED — see deferred-controls.md
 **Owner**: Engineering | **Trigger**: First PHI ML training workload

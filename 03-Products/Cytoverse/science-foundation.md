@@ -1,5 +1,12 @@
 # Cytoverse: science foundation
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `product`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Author:** Cytognosis Foundation (Neuroverse consolidation)
 > **Owns:** science framing for Cytoverse. Engineering of the `cytos` platform lives in [04-Engineering/cytos](../../04-Engineering/cytos/). The research corpus lives in [05-Research/neuroverse](../../05-Research/neuroverse/README.md).
 > **Reading time:** ~2 minutes

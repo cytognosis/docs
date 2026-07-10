@@ -1,5 +1,12 @@
 # Short-Term Plan (Years 1 to 2)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Target window:** April 2026 to March 2028
 **Companion to:** `02_horizons_and_bifurcation.md`, `11_technical_track_FMs.md`, `12_clinical_to_wearable.md`, `30_funding_strategy.md`
 **Authoritative OKR cascade:** `02_Cytognosis_Phase1_Operational_Plan.md`. This document gives the strategic narrative; the OKR cascade gives the quarterly KRs. They must agree.

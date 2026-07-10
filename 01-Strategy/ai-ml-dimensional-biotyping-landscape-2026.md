@@ -1,5 +1,12 @@
 # Dimensional Biotyping with Deep Learning: Landscape & State of the Art (2026)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Purpose.** A reference map of the cutting-edge AI/ML for finding disease-related dimensional signatures ("biotypes," "archetypes," "endophenotypes," "axes") across connectomic, genomic, single-omics, and phenotypic data, and for combining them when modalities are only partially paired. Built to sharpen Cytognosis grants (AWS, NIH, ARPA-H, NSF) and to guide the real Cytoverse/Psychoverse build.
 
 **Reading guide.** If you read one thing, read Section 1 (the gap we fill) and Section 8 (recommended architecture). Tables list, per model: training paradigm, loss, output type, and citation.

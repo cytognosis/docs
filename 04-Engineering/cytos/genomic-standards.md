@@ -1,5 +1,12 @@
 # Genomic Standards and Protocols
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Research notes on all external standards used in Cytos GenomeKG.
 > Consolidated from multiple Antigravity sessions (b591c0f4, cd6537fc).
 

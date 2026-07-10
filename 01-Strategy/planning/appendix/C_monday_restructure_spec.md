@@ -1,5 +1,12 @@
 # Appendix C: Monday Workspace Restructure Specification
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** `01_identity_and_framework.md`, `02_horizons_and_bifurcation.md`, `21_patient_advocacy_council.md`
 
 This appendix specifies the Monday.com workspace changes required to align the operational source of truth with the v2.0 master plan. The restructure is mandatory: without it, the bifurcation tagging, parallel FM tracks, PAC governance, and three-time-horizon framing cannot be operationalized.

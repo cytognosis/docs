@@ -1,5 +1,12 @@
 # CAP Threat Model
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 CAP addresses structural authority and accountability. It does not eliminate the need for sandboxing, network controls, model safety evaluation, secure coding, or human governance.
 
 CAP v1 adds explicit Local PEP and Edge PEP enforcement assumptions. A deployment that claims Local PEP bypass resistance must publish its trust mode and attestation or proxy controls. The Therapist/Supervisor scenario is a profile scenario: the Therapist is a local interviewer persona, `raw_data_egress.raw_audio` and `raw_data_egress.raw_transcript` are false by default, and the central/main Supervisor receives only redacted context, evidence references, dimension vectors, and safety flags through a Supervisor Gateway.

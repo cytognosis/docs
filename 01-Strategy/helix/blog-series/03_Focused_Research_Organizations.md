@@ -9,6 +9,13 @@ license: CC BY 4.0
 
 # Focused Research Organizations
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## What Convergent Research Got Right, and Where FROs Stop by Design
 
 In 2020, a group of researchers led by Adam Marblestone published a short paper at the Federation of American Scientists proposing a new institutional form: the Focused Research Organization, or FRO. The paper argued that a surprisingly large class of scientific bottlenecks were of a very specific shape, and that this shape fit neither academic grants nor commercial R-and-D, and that the correct response was to build a new kind of organization. Five years later, several FROs have shipped, Convergent Research has become the operational spine supporting them, NSF Tech Labs is giving the model federal funding, and FROs are probably the single most successful new institutional form in the recent metascience wave.

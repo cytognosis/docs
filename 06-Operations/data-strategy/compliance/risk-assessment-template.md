@@ -1,4 +1,11 @@
 # SOP: Risk Assessment Template
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 **Control**: HIPAA 164.308(a)(1)(ii)(A) — Risk Analysis
 **Effective**: 2026-05-19 | **Owner**: Privacy Officer | **Review**: Annual + after major system change
 

@@ -1,5 +1,12 @@
 # Brain Atlas Infrastructure
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > v1.0 | Last updated: 2026-05-26
 
 Cytos integrates multiple brain atlas systems to provide unified access to anatomical structures, cell types, gene expression, and connectivity data. All brain region references map through the Knowledge Graph using standardized UBERON and Cell Ontology CURIEs.

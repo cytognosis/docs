@@ -1,5 +1,12 @@
 # fMRI tools, libraries, and standards (FAIR, open, community-curated)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Tools, libraries, and standards used for storage, preprocessing, harmonisation, and FAIR sharing of fMRI data, organised by the standard and ecosystem that owns each piece. Synthesised from the six reviewed papers (Taylor 2026 HCP, NeuroSTORM, Brain-Semantoks, SLIM-Brain, Omni-fMRI, BrainGFM) and from the curated catalogues at <https://nwb.org>, <https://bids.neuroimaging.io>, and <https://www.hedtags.org>.
 
 The emphasis throughout is on the FAIR-compliant, openly licensed, community-curated stack that the field has converged on. Where the curated catalogues nominate a specific tool for a specific stage, that nomination is the default below.

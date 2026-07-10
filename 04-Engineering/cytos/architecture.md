@@ -1,5 +1,12 @@
 # Cytos System Architecture
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > v4.0 | Last updated: 2026-05-26
 
 Cytos is the foundation kernel of the Cytognosis platform. It handles data engineering, knowledge graph construction, genomic infrastructure, and cross-modal harmonization. Cytos is a Python library and CLI consumed by Cytoverse (The Map), Cytoscope (The Sensor), and Cytonome (The Navigator).

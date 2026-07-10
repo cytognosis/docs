@@ -1,5 +1,12 @@
 # Cytos pillar — agent brief
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Variants**: Agent seed (this doc) - Technical (cytos-pillar.md) - Readable (cytos-pillar.md in Obsidian vault: 04-Engineering/cytos/)
 
 > **Status:** Active · **Date:** 2026-07-01 · **Audience:** Fresh agent, zero context · Self-contained.

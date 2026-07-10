@@ -1,5 +1,12 @@
 # LinkML + Knowledge Graph Playbook
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > A 22-chapter, group-organized, hands-on playbook covering everything from "what is LinkML" to "how do I run an LLM RAG agent over the Cytognosis KG". This is the standard reference for any new schema, ontology mapping, or KG ingestion task at Cytognosis.
 
 The playbook itself is a directory of markdown chapters and supporting code, not a single document. The full playbook was migrated into this repo on 2026-07-02 (Infrastructure consolidation) and now lives alongside this pointer document.

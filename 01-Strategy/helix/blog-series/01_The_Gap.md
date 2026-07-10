@@ -9,6 +9,13 @@ license: CC BY 4.0
 
 # The Gap Between Where Healthcare Moonshots Start and Where They Need to End
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 A decade of metascience writing has taught us how to start a healthcare moonshot. It has told us comparatively little about how to finish one.
 
 This is the first in a six-part series on how mission-driven research organizations are structured, what the first generation of metascience experiments has taught us, and what healthcare-specific organizations still need to address. The series is the shorter, faster companion to our open commentary paper, *The Helix Framework*. Each post stands alone.

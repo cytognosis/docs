@@ -1,5 +1,12 @@
 # Stage 4 — Meta-Strategy: Finalized Taxonomy, Convergence, and Canonical-Home Reconciliation
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-03 · Built from the now-complete cytomem corpus (10,006 artifacts / 27 sources). Validates the taxonomy, fixes canonical homes for redundant strategy content, and briefs the Stage 5 per-track build. Reading time ~6 min. **If you only read one thing: the taxonomy holds as-is; the work now is reconciling redundant strategy copies to one canonical home per cluster, then running the per-track consolidation.**
 
 ## BLUF

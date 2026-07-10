@@ -1,5 +1,12 @@
 # ML Functionalities & Experiment Tracking
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Cytocast integrates MLflow, PyTorch Lightning, and Hydra into a cohesive experiment tracking system. Every experiment run is bound to a Git commit hash, ensuring full provenance from code to results.
 
 ## Architecture

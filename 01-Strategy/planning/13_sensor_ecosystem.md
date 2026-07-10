@@ -1,5 +1,12 @@
 # Sensor Ecosystem and Universal Biosensor Adapter Protocol (UBAP)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** `10_platform_architecture.md`, `12_clinical_to_wearable.md`, `15_app_design.md`
 
 Cytoscope is not one device. It is a universal interface plus a specific lineage of hardware we develop directly or co-develop with partners. The interface is open; the standard is owned by the Foundation; specific hardware implementations may be open or proprietary depending on the partner.

@@ -1,5 +1,12 @@
 # Scholarly Extraction & Grant Harmonization Pipeline
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 The `src/cytos/scholarly/grants/` subpackage processes unstructured grant documents (PDFs, DOCX, XLSX) and transforms them into standardized, structured data ready for proposal generation.
 
 ## 1. Parsing (`parser.py` & `grobid.py`)

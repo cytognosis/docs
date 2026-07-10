@@ -1,5 +1,12 @@
 # Toolchain engineering layer
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Owner:** Toolchain pillar · **Canonical for:** cross-cutting toolchain engineering docs
 
 **If you only read one thing:** This layer is the canonical home for cross-cutting documentation of the four Toolchain repos (cytoskeleton, cytocast, cytoskills, cytomem). Repo-internal user guides stay in each repo's own `docs/` (they power that repo's MkDocs site); the authoritative, cross-cutting, and decision-level docs live here.

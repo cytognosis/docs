@@ -1,5 +1,12 @@
 # Controlled Data Access Policy
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## 1. Overview and Purpose
 
 This document establishes the official Cytognosis Foundation policy and standard operating procedures (SOP) for acquiring, managing, and utilizing controlled-access biological and clinical datasets.

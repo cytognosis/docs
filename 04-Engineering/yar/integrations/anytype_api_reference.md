@@ -1,5 +1,12 @@
 # Anytype API & MCP Reference for Yar
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > [!NOTE]
 > Extracted from [developers.anytype.io](https://developers.anytype.io) (v2025-11-08) and [anytype-mcp](https://github.com/anyproto/anytype-mcp) v1.2.7. Scoped to Yar's cognitive companion use cases.
 

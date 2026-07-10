@@ -1,5 +1,12 @@
 # 17 — BioCypher vs Monarch (Koza): a side-by-side ingest comparison
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – decide which framework to use when, with concrete
 > side-by-side examples on Open Targets and protein-protein
 > interactions (STRING).

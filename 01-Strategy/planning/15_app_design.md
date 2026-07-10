@@ -1,5 +1,12 @@
 # App Design: Cytonome User Experience
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** `10_platform_architecture.md`, `13_sensor_ecosystem.md`, `14_navigation_recommendations.md`, `16_patient_safety_architecture.md`
 
 The Cytonome app is the user-facing component of the platform for most users. This document captures the design principles, primary sections, and the loved-ones extension. Implementation specifics evolve; the structure here is the durable framing.

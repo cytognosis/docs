@@ -1,5 +1,12 @@
 # Sensor Documentation Consolidation — Walkthrough
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## What Was Done
 
 Consolidated all sensor-related documentation from three fragmented locations (Yar product docs, Cytos schemas, archived neuro-pheno research) into a unified, cross-linked documentation system with dedicated implementation guides.

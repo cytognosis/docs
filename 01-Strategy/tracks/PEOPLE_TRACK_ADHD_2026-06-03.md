@@ -1,5 +1,12 @@
 # People Track (ADHD) — Cytognosis Foundation
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-03 · Stage 5, Track 2 · Reading time ~3 min.
 
 **BLUF:** Patty is the most urgent relationship: she is unpaid and job-hunting, so formalize her engagement this week before she is unavailable. Ananth is second: one answer from him (which IPAI grant funds your salary) gates both your Oct 1 runway and IGoR. Everything else follows those two.

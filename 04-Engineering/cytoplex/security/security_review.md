@@ -1,5 +1,12 @@
 # Independent Security Review Packet
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 This packet prepares CAP for independent third-party security review. It is a reviewer starting point, not evidence that the review has happened.
 
 The external review gate remains open until qualified external reviewers complete the review and any critical findings in authority, signing, privacy, PEP bypass, policy update, evidence, or audit behavior are resolved. The supported status labels remain those listed in [CAP_RELEASE_GATES.md](../CAP_RELEASE_GATES.md).

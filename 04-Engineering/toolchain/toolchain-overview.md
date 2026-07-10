@@ -1,5 +1,12 @@
 # Toolchain Platform Overview (technical)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Variants**: Technical (this doc) - Readable (toolchain-overview.md in Obsidian vault: 04-Engineering/toolchain/) - Agent (toolchain-overview_prompt.md)
 
 > **Status:** Active · **Date:** 2026-07-01 · **Author:** Toolchain agent · **Audience:** engineering (canonical)

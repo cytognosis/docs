@@ -1,5 +1,12 @@
 # 01 — LinkML in an Hour
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – read any LinkML schema, write a small one, validate data,
 > and codegen Pydantic + JSON Schema + OWL + ERD.
 > **Time** – 60 minutes.

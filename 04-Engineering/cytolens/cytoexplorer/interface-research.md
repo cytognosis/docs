@@ -11,6 +11,13 @@ tags:
 
 # CytoExplorer Interface Research
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Research document for the CytoExplorer web interface: the browsing, search, and discovery layer for the Cytognosis central asset repository.
 
 ---

@@ -1,5 +1,12 @@
 # Cytognosis Foundation — Patient Advocacy Council & Partnership Companion
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Compiled:** 2026-05-30 · **Companion to** `Cytognosis_Funding_Strategy_Master_2026-05-30.md` and the workbook's **PAC & Advocacy** tab (`Cytognosis_Funding_Funnel_2026-05-30.xlsx`).
 
 This is the **separate companion list** you asked for: organizations for building the **Patient Advocacy Council (PAC)** — the binding governance body in the v2.0 master plan with decision rights over study design, release pace, and the open/proprietary boundary — plus the patient-recruitment and research-partnership network around our mental-health pilot. It is deliberately kept apart from the funding master so "money" and "voice/partnership" don't blur. **OneMind is cross-listed** here and in the funding master because it is uniquely funder + accelerator + advocacy-council all at once.

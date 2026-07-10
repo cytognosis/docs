@@ -9,6 +9,13 @@ license: CC BY 4.0
 
 # The Seam
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## How do you wire a nonprofit and a for-profit together so the mission survives contact with capital?
 
 Almost everyone building mission-driven science agrees on the values. Open by default. Equitable access. Patients before shareholders. You will not find an argument about whether those are good things.

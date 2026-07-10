@@ -1,5 +1,12 @@
 # Complete Index - Research Software Metadata Standards
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Research Package**: Comprehensive metadata standards analysis for CodeRepository & Software LinkML schema
 **Delivery Date**: April 4, 2026
 **Total Files**: 6 documents

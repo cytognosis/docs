@@ -11,6 +11,13 @@ tags:
 
 # TileDB Cloud Analysis: Architecture, Data Ingestion, and Compute Infrastructure
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Owner**: Shahin Mohammadi · **Created**: 2026-05-24 · **Status**: DRAFT
 > **Canonical location**: `~/repos/cytognosis/org/plans/research/tiledb-cloud-analysis.md`
 

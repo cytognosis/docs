@@ -1,5 +1,12 @@
 # Executive Summary
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Cytognosis Foundation · Master Strategic Plan v2.0 · May 2026**
 
 ## The problem we exist to solve

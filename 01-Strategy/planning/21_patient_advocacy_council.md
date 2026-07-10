@@ -1,5 +1,12 @@
 # Patient Advocacy Council (PAC)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** `20_organization_helix.md`, `02_horizons_and_bifurcation.md`, `15_app_design.md`
 **Subtrack:** T14 (new in v2.0) under M4 Organization
 

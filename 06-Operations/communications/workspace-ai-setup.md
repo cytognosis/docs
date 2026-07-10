@@ -1,5 +1,12 @@
 # Workspace AI Features Setup
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 This document covers the required steps to enable Gemini Enterprise or Business AI features (such as "Take notes for me" in Google Meet, or live translated captions) for the Cytognosis Foundation Google Workspace.
 
 **Status**: 🔵 Active · **Owner**: `mohammadi@cytognosis.org`

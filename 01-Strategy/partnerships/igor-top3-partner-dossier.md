@@ -1,5 +1,12 @@
 # ARPA-H IGoR — Top-3 TA3/TA4 Partner Dossier
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Prepared for Cytognosis Foundation (TA1/TA2 prime candidate). Sources: ARPA-H IGoR teaming page (retrieved 2026-06-03) + web research (2026-06-04). All three list themselves as **TA3 (Interoperable Experimental Procedures) + TA4 (Experiment Marketplace)** and seek a TA1/TA2 prime.
 
 **Reading time: ~7 min. If you read one thing:** all three are complementary, not competing. Cellanome = functional single-cell + CRISPR phenotyping; Panome Bio = multi-omics CRO (metabolomics/proteomics); Transfyr = lab-execution capture / reproducibility, founded by the former ARPA-H director.

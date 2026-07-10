@@ -1,5 +1,12 @@
 # Noninvasive Neuromodulation: Resolution, Depth, Node-vs-Edge Targeting, and Sensing-Paired Closed-Loop Systems
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Technology deep-dive prepared for the Cytognosis Foundation NSF X-Labs / ARPA-H program.
 Compiled 25 May 2026. This document extends the two prior briefs (neuromodulation.md and neuromodulation-response.md) and does not repeat the modality-by-disorder efficacy tables already laid out there. It concentrates on the four engineering axes that the proposal must defend: how focal stimulation can get (spatial resolution), how fast it can adjust (temporal resolution), how deep it reaches noninvasively, and whether it can engage a single circuit node or a network edge or subnetwork. A long dedicated section then covers the state of the art in pairing neuromodulation with a sensing technology in adaptive, interactive closed-loop systems, with an honest accounting of which claims rest on a single study.
 

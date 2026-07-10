@@ -1,5 +1,12 @@
 # Toolchain + Operational Track — Cytognosis Foundation
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-03 · Built from cytomem corpus (10,006 artifacts / 27 sources) + direct file reads.
 **Track pillar:** Toolchain (cytoskeleton, cytocast, cytoskills, cytomem) + Operational (infrastructure, branding, website, org, docs)
 **Cross-track link:** Toolchain LinkML KG schemas directly support IGoR TA1 ontology asks.

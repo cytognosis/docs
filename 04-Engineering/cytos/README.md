@@ -1,5 +1,12 @@
 # Cytos (Cytoverse engineering platform) — layer index
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Pillar:** Cytoverse (The Map) · **Owner:** Cytos consolidation agent · **Reading time:** ~4 min
 
 **If you only read one thing:** This layer is the canonical home for **Cytos engineering and platform** docs. Cytos is the data-and-modeling substrate: LinkML schemas, DVC-managed ingestion, knowledge-graph construction (GenomeKG), multimodal modeling, and the sensing schema. The code lives in `~/repos/cytognosis/cytos`; the schema outputs in `cytos/artifacts/` are **generated** and gitignored (regenerate with `nox -s schema_generate`). Research narrative (the science foundation) belongs to **Neuroverse** (`05-Research/neuroverse`), not here.

@@ -1,5 +1,12 @@
 # What We Consolidated, in Plain Words
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Reading time: about 1 minute.**
 
 > **Full/technical version:** `../CONSOLIDATION-INVENTORY.md`.

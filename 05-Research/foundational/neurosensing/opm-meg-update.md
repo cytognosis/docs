@@ -1,5 +1,12 @@
 # OPM-MEG and the Wearable Magnetoencephalography Landscape: A 2024 to 2026 Technology Deep-Dive
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Prepared for: Cytognosis Foundation, NSF X-Labs Phase 0 and ARPA-H PHO/HSF work
 Author context: Herve Marie-Nelly / Cytognosis
 Date: 25 May 2026

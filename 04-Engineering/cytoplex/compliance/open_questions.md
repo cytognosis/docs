@@ -1,5 +1,12 @@
 # Regulated-Profile Open Questions
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 These questions should be answered by domain experts, profile owners, privacy/legal reviewers, and deployment owners before a regulated-profile review gate can close.
 
 ## CAP-Med Profile Scope

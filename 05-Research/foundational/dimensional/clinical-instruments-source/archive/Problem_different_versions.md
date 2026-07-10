@@ -1,5 +1,12 @@
 # Problem / Gap (Neuro-focused) – Prior evidence/published reports on current gaps in neuropsych
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 These critical gaps, representing the fundamental **limitations of the current categorical approach to  psychopathology**, are directly adopted directly from: “Linking RDoC and HiTOP: A new interface for advancing psychiatricnosology and neuroscience”:
 
 1. **Dimensional nature of psychopathology**: categorical diagnoses do not adequately reflect the extensive evidence that forms of psychopathology and their underlying processes are continuous in nature.   

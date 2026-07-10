@@ -1,5 +1,12 @@
 # Cytoverse Track: Science Foundation State
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-03 | **Classification:** Internal, confidential. Contains platform-confidential IP references (Section 5). | **Reading time:** ~10 min.
 
 **If you only read one thing:** The science foundation is real and defensible. The BDNF/TrkB axis paper has a clear publishable scope and strong grant alignment (EVIDENT/HSF, IGoR TA1). The KG/cytos platform is production-ready at 9.3M nodes. The cellular micro-to-meso causal bridge is the convergence spine connecting all three funding tracks. The factorized PRS remains confidential platform IP and must stay off the bipolar paper.

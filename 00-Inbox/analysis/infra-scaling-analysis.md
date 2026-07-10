@@ -1,5 +1,12 @@
 # Cytognosis Infrastructure: On-Demand Scaling Analysis
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: stakeholders
+> **Tags**: `inbox`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Comprehensive evaluation of GCP options for cost-efficient, on-demand infrastructure
 > that supports neo4j serving, Jupyter notebooks, dataset ingestion, and dockerized services.
 

@@ -1,5 +1,12 @@
 # YAR Architecture (v1.0)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: stakeholders
+> **Tags**: `inbox`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 YAR (Your AI Representative) is a cognitive companion.
 
 ## System Overview

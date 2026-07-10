@@ -1,5 +1,12 @@
 # Data: Storage, Format, and Metadata Mapping
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Scope: how to describe a dataset so a system can find it, load it, validate it, and feed it to a model. Five sub-questions:
 
 1. Where does the data live (storage location and access)?

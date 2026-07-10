@@ -1,5 +1,12 @@
 # Regulated-Profile Review Report Template
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Use this template to record an external regulated-profile review. The report should cite evidence and findings, not replace the evidence itself.
 
 ## Run Metadata

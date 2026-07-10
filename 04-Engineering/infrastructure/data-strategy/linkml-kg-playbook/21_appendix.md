@@ -1,5 +1,12 @@
 # 21 — Appendix: cheat sheets, common errors, and links
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – fast lookup when you forget a flag.
 > **Prereqs** – none.
 

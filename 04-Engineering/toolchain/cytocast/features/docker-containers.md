@@ -1,5 +1,12 @@
 # Docker & Containers
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Cytocast generates a complete containerization stack when `use_docker=True`: a multi-stage Dockerfile, DevContainer configuration, docker-compose for local orchestration, and a configurable base image.
 
 ## Architecture

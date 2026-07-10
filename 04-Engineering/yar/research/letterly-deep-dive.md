@@ -1,5 +1,12 @@
 # Letterly Deep Dive: AI Voice-to-Text for Neurodivergent Writers
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Document Type:** Product Research Deep Dive
 > **Author:** Cytognosis AI Agent
 > **Date:** 2026-05-30

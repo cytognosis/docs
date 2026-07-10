@@ -1,5 +1,12 @@
 # Clinical-to-Wearable Alignment
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Subtrack:** T15 (new in v2.0) under M5 Learning
 **Companion to:** `04_mid_term_5to6y.md`, `11_technical_track_FMs.md`, `13_sensor_ecosystem.md`
 

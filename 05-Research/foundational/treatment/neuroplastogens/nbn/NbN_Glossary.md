@@ -1,5 +1,12 @@
 # NbN Glossary
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Parsed from `NbN_Glossary.pdf` (Neuroscience-based Nomenclature). The original PDF contains two reference tables linking indication-based drug categories to the NbN pharmacology-based classification system.
 
 ---

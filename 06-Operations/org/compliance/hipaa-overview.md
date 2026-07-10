@@ -1,5 +1,12 @@
 # HIPAA Compliance Overview
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > ADHD-friendly quick reference. For full details, see the [compliance docs](../../data-strategy/compliance/).
 
 ## Current Status: Pre-Operational

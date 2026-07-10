@@ -1,5 +1,12 @@
 # End-to-End Platform Validation & Tutorial Generation
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Status:** DEFERRED — Resume after Cytoskeleton Structural Refactor is complete.
 > **Depends on:** Cytoskeleton Refactor (assets/, VFS, manifests, adapter system)
 

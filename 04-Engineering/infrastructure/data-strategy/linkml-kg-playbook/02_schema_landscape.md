@@ -1,5 +1,12 @@
 # 02 — The Schema Landscape
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – get a map of every schema family relevant to Cytognosis,
 > decide which you actually need, and pre-stage the folder layout
 > you'll fill in chapters 03–12.

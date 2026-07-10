@@ -1,5 +1,12 @@
 # fMRI data, cohorts, and sample sizes (2025 to 2026)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Coverage of every dataset used as pretraining or downstream evaluation across six papers (Taylor 2026 HCP lifespan, NeuroSTORM, Brain-Semantoks, SLIM-Brain, Omni-fMRI, BrainGFM), plus the HCP family, the ENIGMA fMRI working groups, the OpenNeuro datasets that enter the foundation-model corpora, NeuroGAP-Psychosis, and the Reproducible Brain Corpus.
 
 All counts are cited as in the original publications. Sample-size discrepancies between papers reflect different access dates and QC criteria.

@@ -1,5 +1,12 @@
 # Long-Term Plan (Years 7 to 10, with line-of-sight to Year 15)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Target window:** April 2032 to March 2036, with strategic line of sight to 2041
 **Companion to:** `04_mid_term_5to6y.md`, `02_horizons_and_bifurcation.md`, `20_organization_helix.md`
 

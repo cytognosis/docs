@@ -1,5 +1,12 @@
 # Open Science and IP Strategy
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** `02_horizons_and_bifurcation.md`, `20_organization_helix.md`, `21_patient_advocacy_council.md`
 
 The Cytognosis open-science and IP strategy is straightforward in principle and disciplined in operation. The principle: open by default; the bifurcation is the only structured exception. The discipline: every artifact carries explicit license terms, every license is enforced through the release pipeline, and every closed component traces to a documented mission-protective rationale.

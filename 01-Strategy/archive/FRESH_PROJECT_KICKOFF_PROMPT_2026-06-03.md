@@ -1,5 +1,12 @@
 # Fresh Cowork Project — Kickoff / Orientation Prompt
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Use:** paste this as the **first message** in the brand-new Claude Cowork project (or keep it as that project's onboarding doc). It tells a clean-slate Claude everything it needs to start the Cytognosis consolidation.
 
 **cytomem status (verified 2026-06-03): FULLY READY.** Built, hardened (84 tests pass), **MCP connected and verified natively in Cowork** (`cytomem_*` and `obsidian_*` respond), and **the docs are ingested: 8,029 artifacts across 21 sources** (repos + Obsidian + the 6 active Cowork projects; verified, semantic search reaches the strategy corpus). **Stage 0 is done, go straight to Stage 1.** Two usage notes: use **semantic search** (`semantic=True`) for content/meaning queries (plain keyword matches title/path/repo only); and a few artifacts appear twice with path variants, so an early `duplicates`/canonical pass is worth it.

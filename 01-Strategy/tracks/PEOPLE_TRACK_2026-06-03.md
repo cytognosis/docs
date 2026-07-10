@@ -1,5 +1,12 @@
 # People Track — Cytognosis Foundation
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-03 · Stage 5, Track 2 · Canonical home: `X-Labs/01-strategy/tracks/` · Part of the Stage 5 per-track consolidation program. Reading time ~7 min.
 
 **If you only read one thing:** Patty is the most time-sensitive relationship: she is interviewing for full-time roles and working unpaid; formalize her engagement this week, before bringing Duane in. Ananth is second: the appointment funding answer (which IPAI grant) gates both salary bridge and IGoR.

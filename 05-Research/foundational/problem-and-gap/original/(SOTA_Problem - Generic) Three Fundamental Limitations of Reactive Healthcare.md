@@ -1,5 +1,12 @@
 # **The Crisis of Imprecision: Three Fundamental Limitations of Reactive Healthcare**
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Despite monumental advances in treating monogenic and infectious diseases, modern medicine remains fundamentally limited when addressing complex, chronic conditions. These conditions now consume 90% of the nation's $5.3 trillion in annual healthcare expenditures (CMS, 2025). Current standards of care suffer from three critical forms of blindness that prevent the necessary transition from reactive treatment to proactive healthspan preservation: **Mechanistic Blindness**, treating symptoms rather than causes; **Complexity Blindness**, reducing biological systems to single targets; and **Temporal Blindness**, intervening only after symptoms emerge. Each represents a distinct failure mode; together, they constitute a systematic barrier to precision health.
 
 ## Mechanistic Blindness: The Trial-and-Error Tax

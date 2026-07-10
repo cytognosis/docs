@@ -1,5 +1,12 @@
 # Documentation Framework
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Cytocast generates a complete documentation pipeline supporting MkDocs (API reference) and Quarto (interactive notebooks), with automated deployment to GitHub Pages.
 
 ## Documentation Architecture

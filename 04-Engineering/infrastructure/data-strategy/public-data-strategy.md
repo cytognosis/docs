@@ -1,5 +1,12 @@
 # Public Data Strategy
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Executive Summary
 
 Cytognosis Foundation is committed to advancing global health through open science and responsible data sharing. Our public data strategy balances the imperative to accelerate medical research with the highest standards of privacy protection, regulatory compliance, and ethical data stewardship.

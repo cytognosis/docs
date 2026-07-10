@@ -1,5 +1,12 @@
 # 19 — LLMs and RAG over the Cytognosis KG
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – wire LLMs to the schemas and KG you've built — natural-
 > language query, conversational assistants, agentic workflows — using
 > BioCypher's biochatter, Monarch's phenomics-assistant /

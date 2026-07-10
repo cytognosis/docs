@@ -1,5 +1,12 @@
 # Neo4j — GenomeKG Graph Database
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Running at: `bolt://localhost:7687`
 > Auth: `neo4j` / `cytognosis2026`
 > Version: Neo4j 2026.04.0

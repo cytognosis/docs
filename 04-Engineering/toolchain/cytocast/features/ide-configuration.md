@@ -1,5 +1,12 @@
 # IDE Configuration
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Cytocast generates optimized IDE configurations for VS Code, Cursor, Windsurf, Positron, and Antigravity when `preferred_ide` is set. All configurations integrate with the project's Nox sessions, ruff rules, and ty type checker.
 
 ## Preferred IDE Selection (F69)

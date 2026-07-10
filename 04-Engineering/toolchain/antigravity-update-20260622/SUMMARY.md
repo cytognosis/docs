@@ -1,5 +1,12 @@
 # Antigravity Update + Launcher Consolidation — 2026-06-22
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **BLUF:** Both apps are updated to the newer builds you extracted (**Antigravity agent 2.0.6 to 2.1.4**, **Antigravity IDE 2.0.3 to 2.0.4**), with root ownership and the setuid `chrome-sandbox` restored. Your launcher customizations were preserved and consolidated into one aligned set, and a **broken path in your patch script was fixed and re-applied**. Full rollback backups are saved; nothing is lost.
 
 ## Done

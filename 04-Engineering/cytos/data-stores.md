@@ -1,5 +1,12 @@
 # Specialized Data Stores
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > v1.0 | Last updated: 2026-05-26
 
 Cytos uses three specialized data stores for measurement data. These stores handle high-volume, modality-specific data. The Knowledge Graph stores only the *meaning* of measurements (ontology terms, cell types, tissues), while raw counts, genotypes, and signals live here.

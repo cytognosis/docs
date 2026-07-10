@@ -1,4 +1,11 @@
 # SOP: BAA Inventory & Vendor HIPAA Compliance
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 **Control**: HIPAA 164.308(b)(1) — Business Associate Contracts
 **Effective**: 2026-05-19 | **Owner**: Privacy Officer | **Review**: Annual + before new vendor
 

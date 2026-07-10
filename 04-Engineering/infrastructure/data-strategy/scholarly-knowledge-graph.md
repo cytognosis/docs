@@ -1,5 +1,12 @@
 # Scholarly Knowledge Graph Schema
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Cytognosis maintains a single LinkML schema that unifies bibliographic metadata, scholarly graph data, biomedical entities, research artifacts (code, data, models, workflows, protocols), licenses, and personal annotations — and is interoperable with SemOpenAlex SPARQL, the UMLS Metathesaurus, the NCATS Translator ecosystem, and RO-Crate packaging.
 
 The canonical schema YAML was migrated into this repo on 2026-07-02 (Infrastructure consolidation) and lives under [`schemas/`](schemas/). Codegen outputs (Pydantic, JSON Schema, OWL, SHACL, SQL DDL) are large and stay out of git; regenerate them on demand. This document is the authoritative description of what the schema is for, where to find it, and how it is structured.

@@ -1,5 +1,12 @@
 # SSSOM Tooling for the Cytognosis Scholarly KG
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 A LinkML-native reference for cross-ontology mapping in the Cytognosis stack,
 with single-cell (CELLxGENE) integration patterns and a worked example using
 SNOMED CT mappings from OLS4.

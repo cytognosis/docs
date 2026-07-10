@@ -1,5 +1,12 @@
 # SSSOM Cross-Ontology Mapping
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Cross-ontology mapping at Cytognosis lives as data, not as bespoke code. We use the Simple Standard for Sharing Ontology Mappings (SSSOM) to round-trip between UMLS, MONDO, HP, CL, CHEBI, NCBITaxon, SNOMED CT and the Cytognosis [scholarly knowledge graph](scholarly-knowledge-graph.md), and we hand SSSOM tables to downstream consumers (NCATS Translator, CELLxGENE, internal LLMs) without rewriting them.
 
 The full hands-on writeup with worked examples (download SNOMED CT exports, validate, convert to RDF, apply SNOMED → MONDO mappings before CELLxGENE schema validation) was migrated into this repo on 2026-07-02 and lives at:

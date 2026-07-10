@@ -1,5 +1,12 @@
 # Cytognosis Interface and Fabric Design
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 This folder holds the consolidated architectural design for the Cytognosis platform repo topology: which repos exist, what they own, how skills flow, how CI/CD works, and how upstream template changes propagate to downstream packages.
 
 > **Update 2026-05-13**: this design has been **finalized** with the addition of concrete repo organizations, two new master skills, and three Claude Design instruction prompts. The concrete production layouts live in `../../design-system-consolidation-2026-05/`. See "Related work, finalization layer" below.

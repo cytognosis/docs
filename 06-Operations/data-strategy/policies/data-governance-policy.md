@@ -1,5 +1,12 @@
 # Data Governance Policy
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Policy Statement
 
 Cytognosis Foundation is committed to the highest standards of data governance, ensuring that all data collection, processing, storage, and sharing activities support our mission to transform healthcare through AI-driven preventive technologies while maintaining strict privacy protections, regulatory compliance, and ethical standards.

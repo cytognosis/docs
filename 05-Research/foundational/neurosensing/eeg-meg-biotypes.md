@@ -1,5 +1,12 @@
 # EEG and MEG Biotypes Across Six Psychiatric Disorders: A Deep Review for the Cytoscope Headset Proposal
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Prepared for: Cytognosis Foundation and Hervé Marie-Nelly, NSF X-Labs Phase 0 and ARPA-H PHO submissions
 Date: 25 May 2026
 Scope: Replicated and contested EEG and MEG signatures across depression (MDD, TRD), anxiety (GAD, panic, social, OCD), psychosis (schizophrenia, FEP, prodromal), PTSD, addiction (SUDs), and autism (ASD). Organized by signal type first, then per-disorder mapping under each signal, so the reader can compare across disorders before drawing per-disorder conclusions.

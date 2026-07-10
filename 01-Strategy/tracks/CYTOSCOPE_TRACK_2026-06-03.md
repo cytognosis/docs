@@ -1,5 +1,12 @@
 # Cytoscope Track — Sensor Strategy and NSF X-Labs
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-03 · Stage 5, Track 5 (p2) · Consolidated from cytomem corpus, NSF X-Labs materials, and X-Labs strategy docs.
 **Reading time:** ~9 min. **If you only read one thing:** the NSF X-Labs Phase 0 proposal (Psychoscope) is the primary funding vehicle for the sensor track; the Jul 13 deadline is firm; the citizenship-eligibility question for Shahin as Senior/Key Personnel must be resolved with NSF counsel and Hervé before submission.
 

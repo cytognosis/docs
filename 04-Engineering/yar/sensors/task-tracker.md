@@ -1,5 +1,12 @@
 # Sensor Documentation Consolidation
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Phase 1: Master Documents (Self)
 - [x] Consolidated sensor reference (replaces `unified-sensor-report.md`) — 434 lines
 - [x] Semantic alignment specification (SOSA/IEEE 1752/FHIR/AWARE crosswalk) — 326 lines

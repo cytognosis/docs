@@ -9,6 +9,13 @@ license: CC BY 4.0
 
 # The Hybrid Experiment
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Mozilla, OpenAI, Arc, and What Mission-Lock Actually Means
 
 If Focused Research Organizations are purpose-built to deliver one specific scientific artifact and then dissolve, hybrid organizations are trying to do something harder: sustain mission-aligned operation across both research and commercial phases, inside a single organizational family. Five hybrids are worth studying closely, because each one has tested a different structural answer, and their outcomes have diverged sharply enough that the lessons are clear.

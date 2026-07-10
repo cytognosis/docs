@@ -1,5 +1,12 @@
 # 20 — Structured Extraction with Schemas and Ontologies
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – pull structured, ontology-grounded data out of free text
 > using LinkML schemas: OntoGPT for templated extraction, Instructor /
 > PydanticAI for general-purpose Pydantic-typed LLM extraction, and

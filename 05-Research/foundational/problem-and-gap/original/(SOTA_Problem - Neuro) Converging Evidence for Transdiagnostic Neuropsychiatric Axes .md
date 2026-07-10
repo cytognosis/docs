@@ -3,6 +3,13 @@
 
 # **long version**
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 # **Converging Evidence for Transdiagnostic Neuropsychiatric Axes**
 
 Psychiatric diagnoses in the Diagnostic and Statistical Manual (DSM; APA, 2013\) are typically symptom-driven, leaving a large gap between available disease annotations and therapeutically actionable molecular circuits. Furthermore, these diagnoses treat disorders as discrete and unitary entities, whereas recent research suggests they are highly comorbid, span a continuous spectrum, and exhibit heterogeneous symptomatology among patients sharing the same diagnosis, driven in part by shared molecular and circuit-level mechanisms that cut across traditional diagnostic boundaries (Feczko et al., 2019; Stephan et al., 2016). The need for an alternative, quantitative, and mechanistically grounded representation of human psychopathology is now widely accepted within the field, recently underscored by Steven Hyman, former NIMH Director, in his 2025 keynote address "Precision Psychiatry," titled "Time to Retire the DSM and Begin Again."

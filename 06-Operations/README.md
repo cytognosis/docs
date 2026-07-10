@@ -1,5 +1,12 @@
 # 06-Operations
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Pillar:** Operational (org and business operations)
 
 Canonical home for Cytognosis **org and business operations**: HIPAA and NIH GDS compliance, data-access policy and governance, operational audits, communications and workspace, and org governance records. **Not** technical infrastructure (see `04-Engineering/infrastructure`) and **not** mission or general org context (see the Cytognosis project).

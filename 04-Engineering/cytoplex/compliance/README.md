@@ -1,5 +1,12 @@
 # Regulated-Profile Review Packet
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 This packet prepares CAP-Med, and future regulated profiles, for external domain review. It is a reviewer starting point, not evidence that regulatory, clinical, safety, or domain approval has happened.
 
 CAP-Med is used here as the primary example because it is the motivating regulated profile in this repository. The same packet shape can be reused for other regulated profiles by replacing the profile constraints, forbidden behaviors, evidence examples, and reviewer roster.

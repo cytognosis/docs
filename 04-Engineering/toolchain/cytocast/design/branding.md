@@ -1,4 +1,11 @@
 # Cytognosis Brand Design Guide
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 ## Master Reference — Complete Visual Identity & Implementation Standards
 
 **Version:** 6.0 Proprietary | **Last Updated:** January 2025 | **Organization:** Cytognosis Foundation, Inc.

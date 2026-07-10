@@ -1,5 +1,12 @@
 # LinkML + KG Playbook for Cytognosis
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 A hands-on, end-to-end tutorial for building, organizing, validating,
 ingesting, and applying biomedical knowledge graphs with LinkML,
 Biolink, BioCypher, Koza, SSSOM, OntoGPT, biochatter and friends.

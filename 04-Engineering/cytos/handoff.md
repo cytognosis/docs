@@ -1,5 +1,12 @@
 # Cytos Platform — Complete Agent Handoff
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Written:** 2026-05-22 | **Conversation IDs:** b591c0f4 (GenomeKG), cd6537fc (GWAS/PGC), f78b85f5 (Cytoskeleton/FAIR)
 >
 > This document is the single entry point for a new agent picking up the Cytos project.

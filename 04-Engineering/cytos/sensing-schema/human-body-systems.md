@@ -1,5 +1,12 @@
 # The Human Body as Reference: HRA, HuBMAP, and the Spatial Scaffold
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Scope: how to describe *where in the body* a measurement was taken, *what biological structures* it covers, and *how it relates to canonical references* of healthy human anatomy. This is the missing scaffold layer in the previous documents, and it is what makes "match a model to a dataset" a tractable question across micro, meso, and macro scales.
 
 Two coupled efforts dominate this space:

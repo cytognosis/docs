@@ -1,5 +1,12 @@
 # **Molecular**
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 * AlphaGenome (predicts functional genomic tracks)  
   * Original  
     * [https://huggingface.co/google/alphagenome-all-folds](https://huggingface.co/google/alphagenome-all-folds)  

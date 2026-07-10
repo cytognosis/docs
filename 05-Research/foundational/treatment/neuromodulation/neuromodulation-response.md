@@ -1,5 +1,12 @@
 # Differential Response to Noninvasive Neuromodulation by Connectomic Biotype
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Research dossier for Cytognosis Foundation + Hervé Marie-Nelly NSF X-Labs / ARPA-H PHO proposal.**
 **Compiled 25 May 2026. Author: Claude (research subagent).**
 

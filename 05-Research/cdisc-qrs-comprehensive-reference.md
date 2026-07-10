@@ -1,5 +1,12 @@
 # CDISC Questionnaires, Ratings and Scales (QRS): Comprehensive Reference
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 A working reference for the CDISC QRS standard, where its files and supplemental terminology are published, what each psychiatric / behavioural instrument actually measures (including item text where public domain), and how to map QRS instruments and their individual items to external standards: LOINC, SNOMED CT, HPO, MONDO, DOID, ICD-10 / ICD-11, DSM-5-TR, NIH CDEs, RDoC, HiTOP, PROMIS / NIH Toolbox, PhenX, ICF, UMLS, and OMOP / OHDSI.
 
 Author: drafted for Cytognosis Foundation, 2026-05-13. Status: living reference.

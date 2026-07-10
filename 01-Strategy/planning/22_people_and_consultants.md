@@ -1,5 +1,12 @@
 # People and Consultants
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** `20_organization_helix.md`, `30_funding_strategy.md`
 
 This document captures the team, named consultants and rates, and the hiring trajectory across the next 24 months. Detail-level planning is in the operational plan (`02_Cytognosis_Phase1_Operational_Plan.md`); this document carries the strategic narrative on people decisions.

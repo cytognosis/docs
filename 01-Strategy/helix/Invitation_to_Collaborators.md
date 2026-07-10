@@ -1,5 +1,12 @@
 # Invitation to Collaborators (outreach note)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 *A short, adaptable note to send alongside the Helix paper and the companion essay. Personalize the first line per recipient. Keep it warm and specific; the ask is feedback first, co-authorship only if they want it.*
 
 ---

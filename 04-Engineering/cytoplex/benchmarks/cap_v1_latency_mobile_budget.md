@@ -1,5 +1,12 @@
 # CAP v1 Latency and Mobile Resource Budget Benchmark
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Generated:** 2026-05-25T08:17:39+00:00
 **Benchmark id:** `cap-v1-latency-mobile-resource-local`
 **Scope:** local deterministic microbenchmark evidence, not production certification.

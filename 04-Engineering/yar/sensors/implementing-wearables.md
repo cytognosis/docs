@@ -1,5 +1,12 @@
 # Implementing Wearable Sensor Integration: Oura Ring and Fitbit
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Cytonome Sensor Docs** · Version 0.1.0 · Last updated 2026-05-30
 >
 > This guide covers end-to-end integration of Oura Ring and Fitbit wearable data into the Cytos universal sensor schema, with complete API-to-FHIR mapping, Python adapters, and neurodivergent-specific feature analysis.

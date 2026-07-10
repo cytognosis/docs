@@ -1,5 +1,12 @@
 # Research Software Metadata Standards - Comprehensive Analysis
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date**: April 4, 2026
 **Purpose**: Reference guide for building a LinkML schema covering CodeRepository and Software entity types
 

@@ -4,6 +4,13 @@
 
 # Cytognosis Python defaults for neuroimaging and neuroelectrophysiology (2026)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Org-wide nominated Python defaults for the connectomic layer (MRI, fMRI, EEG, fNIRS, and future ephys / ophys), synthesised from the six-paper review, the BIDS / HED / NWB curated catalogues, the LinkML and LaminDB architecture discussions, and the Cytos / Cytocast design notes.
 
 The initial five groups suggested (storage, preprocessing, nwb, bids, ml) are extended to eight because three roles do not belong inside any of those five: **schemas and standards** (LinkML, ontology, GA4GH), **HED event annotation** (a cross-cutting BIDS extension that also lives inside NWB), and **provenance and catalog** (LaminDB, DataLad, DANDI). The eight groups, ordered from source-of-truth to model training, are:

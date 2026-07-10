@@ -1,5 +1,12 @@
 # Cytos Module Map
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > All `src/cytos/` Python modules, status, and purpose.
 > Last audited: 2026-05-22 | Total files: ~170
 

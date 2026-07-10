@@ -1,5 +1,12 @@
 # Datasets
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 # 22q11
 NGN2 neurons
 intolerent DE genes: UF1DL, HIRA, DGCR8, ZDHHC8, MED15, TBX1, SEPT5

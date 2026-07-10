@@ -1,5 +1,12 @@
 # 10 — HDMF and NWB: schema-driven hierarchical scientific data
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Goal** – understand HDMF (the Hierarchical Data Modeling Framework
 > behind NWB), where it overlaps with LinkML, and how to integrate it
 > into a LinkML-first Cytognosis stack for HDF5/Zarr-backed scientific

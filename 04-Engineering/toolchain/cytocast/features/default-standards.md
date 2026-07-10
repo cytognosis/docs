@@ -1,5 +1,12 @@
 # Default Standards & Consistency
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Cytocast enforces organizational standards across all generated projects through locked environments, consistent tooling configurations, and a 4-tier code quality architecture. This document covers the mechanisms that ensure every project meets Cytognosis Foundation quality baselines.
 
 ## Dependency Management

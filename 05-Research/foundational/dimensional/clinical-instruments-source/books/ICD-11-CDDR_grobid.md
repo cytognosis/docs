@@ -1,5 +1,12 @@
 # Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Abstract
 
 Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders  ISBN 978-92-4-007727-0 (print version)

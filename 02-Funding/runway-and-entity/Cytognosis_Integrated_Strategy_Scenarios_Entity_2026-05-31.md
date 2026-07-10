@@ -1,5 +1,12 @@
 # Cytognosis — Integrated Strategy: Tracks, Scenarios, Entity Architecture, Adaptive Plan
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-05-31 · **For:** Shahin · **Status:** master decision doc (supersedes the runway memo's scope; reads with it)
 **Answers:** the three questions you handed back to me (Foresight/EA/CG alignment, YC, and "assess all paths"), plus the entity/role/contract and IP/Yar-open vision.
 

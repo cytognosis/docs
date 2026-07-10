@@ -9,6 +9,13 @@ license: CC BY 4.0
 
 # Pasteur's Quadrant and the Heilmeier Catechism
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## What ARPA-like Models Got Right, and Where Even the Best Ones Run Out
 
 If you asked a hundred people in metascience which institutional model has produced the most per-dollar scientific impact in the last 50 years, the plurality answer would be DARPA. The internet, GPS, stealth, drone autonomy, mRNA vaccine platforms: an unreasonable fraction of the technologies we now take for granted trace back through a DARPA program somewhere. So it is not surprising that the post-COVID wave of institutional experimentation has produced several ARPA-shaped attempts to replicate the magic elsewhere: ARPA-H (health), Wellcome Leap (global health philanthropy), ARIA (UK general-purpose), and an emerging federal push toward funding independent research organizations through NSF Tech Labs.

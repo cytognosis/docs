@@ -1,5 +1,12 @@
 # Mid-Term Plan (Years 3 to 6)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Target window:** April 2028 to March 2032
 **Companion to:** `03_short_term_1to2y.md`, `05_long_term_10y.md`, `02_horizons_and_bifurcation.md`, `12_clinical_to_wearable.md`, `30_funding_strategy.md`
 

@@ -1,5 +1,12 @@
 # Organization OPA/Cedar Policy Deployment Guide
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 This guide prepares organizations to replace the repository's deterministic OPA-shaped and Cedar-shaped policy scaffolds with owned policy runtimes, policy bundles, promotion controls, and operational evidence. It does not deploy production OPA or Cedar, and it does not close the organization-specific policy deployment gate in [CAP_RELEASE_GATES.md](../CAP_RELEASE_GATES.md).
 
 The checked-in policies and adapter tests are local scaffold evidence. They are not production policy, not a regulated-profile approval, and not a substitute for organization-owned policy review.

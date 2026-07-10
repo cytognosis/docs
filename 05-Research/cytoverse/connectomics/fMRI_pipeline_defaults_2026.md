@@ -1,5 +1,12 @@
 # Cytognosis fMRI pipeline: nominated defaults (2026)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Synthesised from the five-paper review (`fMRI_papers_review_2026.md`) and the curated tool catalogues at the BIDS, HED, and NWB community sites (`nwb.org/tools/core`, `nwb.org/tools/community`, `nwb.org/nwb-software`, `nwb-overview.readthedocs.io`, `bids.neuroimaging.io`, `hedtags.org/hed-resources`).
 
 For each pipeline stage there is one nominated default. Alternatives are listed only where the choice is genuinely live. Tools are split into two groups:

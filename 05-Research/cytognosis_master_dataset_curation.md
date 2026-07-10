@@ -1,4 +1,11 @@
 # Cytognosis Foundation Master Dataset Curation
+
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 ## Critical Datasets for Neuro Foundation-Model Training
 
 **Author:** Cytognosis Foundation (curation orchestrated by Claude with deep-dive subagent research)

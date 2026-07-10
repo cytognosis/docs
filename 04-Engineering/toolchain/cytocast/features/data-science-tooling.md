@@ -1,5 +1,12 @@
 # Data Science Tooling & Notebooks
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Cytocast provides a unified approach to interactive computing, supporting three notebook ecosystems (Jupyter, Marimo, Quarto) through dedicated Nox sessions. Each session automatically loads the project's optimized environment so developers can start working immediately.
 
 ## Supported Notebook Environments

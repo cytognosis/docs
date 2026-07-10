@@ -1,5 +1,12 @@
 # PHI Security Controls Checklist
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 ## Overview
 
 This checklist is the **operational companion** to the [HIPAA Compliance Framework](hipaa-compliance-framework.md). The Framework is the authoritative narrative; this document is the runnable checklist used during quarterly reviews, internal audits, and onboarding new PHI-handling systems.

@@ -1,5 +1,12 @@
 # Cytognosis Master View
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-03 · The consolidation program's capstone: per-track top priorities, one unified timeline, the cross-track spine, and links to every canonical track doc. Built on the cytomem corpus (10,006 artifacts / 27 sources) and the frozen taxonomy. Reading time ~8 min.
 
 ## BLUF

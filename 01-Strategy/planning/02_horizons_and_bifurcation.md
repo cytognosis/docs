@@ -1,5 +1,12 @@
 # Three Horizons and the 36-Month Bifurcation
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** `01_identity_and_framework.md`, `03_short_term_1to2y.md`, `04_mid_term_5to6y.md`, `05_long_term_10y.md`, `23_open_science_and_ip.md`
 
 ## Three Horizons at a glance

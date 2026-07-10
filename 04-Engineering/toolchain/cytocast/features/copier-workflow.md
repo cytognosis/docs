@@ -1,5 +1,12 @@
 # Copier Workflow
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Cytocast is built on [Copier](https://copier.readthedocs.io/), a project templating engine that supports native 3-way Git merges for template updates. This means you can keep your project synchronized with the latest Cytocast improvements without losing your customizations.
 
 ## Architecture

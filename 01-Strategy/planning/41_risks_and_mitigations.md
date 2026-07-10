@@ -1,5 +1,12 @@
 # Risks and Mitigations
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** all horizon documents and `40_milestones_and_kpis.md`
 
 The Cytognosis risk register is maintained on the Risks Register Monday board. This document presents the strategic-level risk picture and the new risks introduced by the v2.0 changes (bifurcation, parallel FM track, PAC, clinical-to-wearable subtrack).

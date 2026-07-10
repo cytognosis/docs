@@ -1,5 +1,12 @@
 # Cytognosis Foundation $1M First-Milestone Funding Strategy
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Report Date:** May 24, 2026 | **Target:** $1M by September-October 2026
 
 ---

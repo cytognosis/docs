@@ -1,5 +1,12 @@
 # Anytype Integration Refactor Plan
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > [!NOTE]
 > Updated 2026-05-17. All docs consolidated into `docs/` within the Yar repo.
 

@@ -1,3 +1,10 @@
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 * Read this deep research doc (/home/mohammadi/Downloads/Multi-Trait GWAS Analysis Methods.md), generated in response to the prompt "Find best and/or most recent/well-cited methods to factorize/embed GWAS summary stats across multiple related indications, computing polygenic risk scores for factors, reconciling GWAS sumstats (including per individual symptoms/phenotypes of a disease, particularly related to mental health and neuro-indications), and/or methods that do the same using individual level genotypes (WGS or SNP arrays), or, methods jointly analysing GWAS sumstats and individual genotypes)"
 
 * Then read /home/mohammadi/Claude/Projects/Grants/04-research/AI_ML_dimensional_biotyping_landscape_2026.md and focus on the parts relevant to genomics

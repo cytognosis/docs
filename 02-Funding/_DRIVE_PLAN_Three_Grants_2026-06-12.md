@@ -1,5 +1,12 @@
 # Drive Plan: Three-Grant Revision (Biswas, Career Transition, LTFF)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership, grant team
+> **Tags**: `funding`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Updated:** 2026-06-12 · **Reading time:** ~3 min
 **If you only read one thing:** Biswas is due **June 15 (3 days)**. Ask the full **$100K**; the tiers are fixed pools, so a full ask does **not** hurt the odds.
 

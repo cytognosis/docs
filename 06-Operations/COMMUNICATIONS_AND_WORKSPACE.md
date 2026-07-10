@@ -1,5 +1,12 @@
 # Communications & Workspace Infrastructure
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Last Updated**: May 2026
 **Ecosystem**: Google Workspace for Nonprofits
 

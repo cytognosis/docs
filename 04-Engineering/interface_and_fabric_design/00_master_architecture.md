@@ -1,5 +1,12 @@
 # Cytognosis Platform Architecture: Master Design
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Consolidated reference covering repos, naming, dependencies, scopes, skill model, CI/CD posture, change propagation, and roadmap.
 > Supersedes `archive/01_cytoderma_design.md` and `archive/02_cytoplasma_design.md`.
 > Status: design, 2026-05-13 (finalized).

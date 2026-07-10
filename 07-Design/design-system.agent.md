@@ -1,5 +1,12 @@
 # Cytognosis Design System — Agent Brief
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: designers, stakeholders
+> **Tags**: `design`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Status:** Active · **Date:** 2026-07-01 · **Variant:** agent (self-contained) · **Technical source:** `branding-design-system-spec.md` · **Readable:** `design-system.readable.md`
 
 **If you only read one thing:** You are editing a token-based design system whose source of truth is the `cytognosis/branding` repo. This docs spec (`07-Design/branding-design-system-spec.md`) is the downstream reference. Never hardcode Tailwind or Bootstrap colors, never use Space Grotesk, always use the fluorophore palette and Inter. Confirm the open gradient-drift item before shipping brand-critical gradients.

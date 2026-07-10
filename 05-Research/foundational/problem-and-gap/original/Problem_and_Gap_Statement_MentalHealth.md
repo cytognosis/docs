@@ -1,5 +1,12 @@
 # Problem and Gap Statement: Mental Health
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 *Cytognosis Foundation, in collaboration with Hervé Marie-Nelly. Prepared for NSF X-Labs (Phase 0, May 2026) and the parallel ARPA-H PHO submission.*
 
 ---

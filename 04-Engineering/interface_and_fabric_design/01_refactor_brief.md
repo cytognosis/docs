@@ -1,5 +1,12 @@
 # Refactor Brief: cytoskeleton, cytocast, cytoagent (plus the branding repo)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers
+> **Tags**: `engineering`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Self-contained brief for coding agents (Antigravity, Claude Code, or human contributors). Read this end-to-end before opening any PR.
 > Companion to `00_master_architecture.md` (the full design rationale). This brief is operational: what to change, in what order, and how to keep downstream packages in sync afterwards.
 > Status: brief, 2026-05-13 (updated to reflect finalization).

@@ -1,5 +1,12 @@
 # Yar v1.0 Refactor Report
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: stakeholders
+> **Tags**: `inbox`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Date**: 2026-05-18
 > **Author**: Shahin Mohammadi (Cytognosis Foundation)
 > **Baseline**: `firstVersion` branch (5 commits, initial MVP)

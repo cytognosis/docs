@@ -1,5 +1,12 @@
 # ADHD and Neurodiversity Design Research
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: designers, stakeholders
+> **Tags**: `design`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > Cytognosis Foundation Design System Reference
 > **Version:** 1.0 · **Date:** 2026-05-31 · **Status:** Canonical reference
 > **Maintainer:** Cytognosis Design System Team

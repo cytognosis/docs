@@ -1,5 +1,12 @@
 # NIH NIMH Data Archive (NDA) Access Procedures
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: operators
+> **Tags**: `operations`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 This document outlines the strict regulatory pathway required for the Cytognosis Foundation (and any collaborating entities) to submit a Data Access Request (eDAR) for Controlled Access datasets within the NIH NIMH Data Archive (NDA), specifically targeting collections such as PsychENCODE.
 
 ## 1. Core Institutional Prerequisites

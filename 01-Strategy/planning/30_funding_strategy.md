@@ -1,5 +1,12 @@
 # Funding Strategy
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: leadership
+> **Tags**: `strategy`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Companion to:** `20_organization_helix.md`, `02_horizons_and_bifurcation.md`, `40_milestones_and_kpis.md`
 
 The Cytognosis Foundation funding strategy is a portfolio across three categories: active grants, planned grants, and the post-Gate-1 PBC capital. The portfolio is structured so no single source determines whether the mission survives, and so the dual nature of the open Cytoverse map and the proprietary tracking layer maps cleanly to funder types.
