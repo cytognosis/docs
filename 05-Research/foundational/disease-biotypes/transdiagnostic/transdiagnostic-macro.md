@@ -1,5 +1,12 @@
 # Transdiagnostic MACRO synthesis: symptom dimensions across 14 psychiatric disorders
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `transdiagnostic`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Scope: this document synthesizes the MACRO (symptom, behavior, phenotype) sections of the 14 per-disorder biotype docs in `../disease-biotypes/`, harmonized to SNOMED CT and the Human Phenotype Ontology (HPO). It identifies the symptom dimensions that recur across disorders, maps which disorders express each, and aligns those dimensions to Research Domain Criteria (RDoC) domains, Hierarchical Taxonomy of Psychopathology (HiTOP) spectra, and the five genomic factors from Grotzinger et al., "Mapping the genetic landscape across 14 psychiatric disorders," Nature 2025 (doi:10.1038/s41586-025-09820-3).
 
 The 14 disorders: schizophrenia, bipolar disorder, major depressive disorder (MDD), PTSD, anxiety disorders, autism spectrum disorder (ASD), ADHD, OCD, Tourette syndrome (TS), anorexia nervosa (AN), and four substance use disorders (alcohol, opioid, nicotine, cannabis).

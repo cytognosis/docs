@@ -1,5 +1,41 @@
 # Mental Health Biotypes: Cheat Sheet v2
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `index`, `cheatsheet`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
+## Canonical per-disorder index
+
+> This cheat sheet is the **canonical index** for disease biotypes. Each per-disorder dossier follows the Literature Synthesis template (cytognosis-doc skill v5.6.0).
+
+| Disorder | Dossier |
+|----------|---------|
+| ADHD | [adhd.md](adhd.md) |
+| Anorexia nervosa | [anorexia.md](anorexia.md) |
+| Anxiety disorders | [anxiety.md](anxiety.md) |
+| Autism (ASD) | [asd.md](asd.md) |
+| Autism research brief | [asd-research-brief.md](asd-research-brief.md) |
+| Bipolar disorder | [bipolar.md](bipolar.md) |
+| Major depressive disorder | [mdd.md](mdd.md) |
+| OCD | [ocd.md](ocd.md) |
+| PTSD | [ptsd.md](ptsd.md) |
+| Schizophrenia | [schizophrenia.md](schizophrenia.md) |
+| SUD: alcohol | [sud-alcohol.md](sud-alcohol.md) |
+| SUD: cannabis | [sud-cannabis.md](sud-cannabis.md) |
+| SUD: nicotine | [sud-nicotine.md](sud-nicotine.md) |
+| SUD: opioid | [sud-opioid.md](sud-opioid.md) |
+| Tourette syndrome | [tourette.md](tourette.md) |
+| Cross-scale: molecular/cellular | [../molecular-cellular-biotypes.md](../molecular-cellular-biotypes.md) |
+| Cross-scale: multiscale biomarkers | [../multiscale-biomarkers.md](../multiscale-biomarkers.md) |
+| Transdiagnostic: micro | [../transdiagnostic/transdiagnostic-micro.md](../transdiagnostic/transdiagnostic-micro.md) |
+| Transdiagnostic: meso | [../transdiagnostic/transdiagnostic-meso.md](../transdiagnostic/transdiagnostic-meso.md) |
+| Transdiagnostic: macro | [../transdiagnostic/transdiagnostic-macro.md](../transdiagnostic/transdiagnostic-macro.md) |
+| Transdiagnostic: connectomic synthesis | [../transdiagnostic/transdiagnostic-connectomic-synthesis.md](../transdiagnostic/transdiagnostic-connectomic-synthesis.md) |
+
+
 > **The expanded, multi-modal, transdiagnostic biotype reference.** Now covers 6 disorders (added autism), 4 evidence layers (connectomic, EEG/MEG, molecular/cellular, treatment-response), and explicit links between layers. ADHD-friendly format: scan first, drill down only where needed.
 >
 > **Sources (all in `research/`):**

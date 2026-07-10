@@ -1,5 +1,12 @@
 # Biotypes: Major Depressive Disorder
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `mdd`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Genomic factor loading (Nature 2025): **Internalizing factor** (major depression + PTSD + anxiety), the factor that Grotzinger and colleagues uniquely associated with **oligodendrocyte biology** rather than excitatory-neuron biology [1]. This places MDD in the same genomic neighborhood as PTSD and anxiety and reframes the long-standing glial / myelin findings in depression (section MICRO) as the cell-type signature of a shared internalizing liability.
 
 This document harmonizes molecular findings to Gene Ontology (GO), connectomic findings to the Allen Human Reference Atlas 3D (2020), and phenotype findings to SNOMED CT and the Human Phenotype Ontology (HPO). It follows the shared template in `_TEMPLATE_AND_CONVENTIONS.md`. MDD biotyping is unusually mature in some respects (CRP-stratified inflammation, sgACC-dlPFC anticorrelation for TMS targeting) and unusually fragile in others (the Drysdale four-biotype clustering failed external replication). Both states are flagged explicitly.

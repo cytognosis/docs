@@ -1,5 +1,12 @@
 # Biotypes: Cannabis Use Disorder (CUD)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `sud-cannabis`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Genomic factor loading (Nature 2025): **Substance use factor** (alcohol + opioid + nicotine + cannabis use disorders), the cross-disorder genetic axis shared across the four substance use disorders. Cannabis use disorder is the smallest and most weakly powered loader on this factor, and the cannabis biotype literature is correspondingly the thinnest of any substance use disorder covered in this set. Where the alcohol and opioid docs can anchor biotypes in PET dopamine, structural ENIGMA mega-analyses, and treatment-stratified imaging, the cannabis evidence base is dominated by single-lab or single-cohort findings, mixed replication, and a near-total absence of approved pharmacotherapy to provide treatment-response validation. This document states that limitation throughout (Grotzinger et al., Nature 2025, doi:10.1038/s41586-025-09820-3).
 
 This document harmonizes cannabis use disorder biotype evidence across three scales: MICRO (molecular/genetic/cellular/immune, mapped to Gene Ontology), MESO (connectomic fMRI/EEG/MEG, mapped to the Allen Human Reference Atlas 3D 2020), and MACRO (phenotype, mapped to SNOMED CT and HPO). It reuses findings from the parent substance use disorder review (biotypes-addiction.md) and updates them with 2023 to 2026 literature. The defining and best-replicated molecular feature of CUD is exogenous overdrive and adaptive downregulation of the endocannabinoid (eCB) system, which I mark explicitly as a distinct neuromodulatory system alongside the classical neurotransmitter families.

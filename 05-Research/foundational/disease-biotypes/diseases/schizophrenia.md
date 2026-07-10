@@ -1,5 +1,12 @@
 # Biotypes: Schizophrenia
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `schizophrenia`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Genomic factor loading (Nature 2025): **SB factor** (schizophrenia + bipolar disorder), the cross-disorder genetic axis whose shared signal is enriched in genes expressed in excitatory neurons. Schizophrenia is the prototypical loader on this factor; its factor-specific genetic signal converges on synaptic and excitatory-neuronal biology rather than glia or peripheral immune cells (Grotzinger et al., Nature 2025, doi:10.1038/s41586-025-09820-3).
 
 This document harmonizes schizophrenia biotype evidence across three scales: MICRO (molecular/genetic/cellular/immune, mapped to Gene Ontology), MESO (connectomic fMRI/EEG/MEG, mapped to the Allen Human Reference Atlas 3D 2020), and MACRO (phenotype, mapped to SNOMED CT and HPO). It reuses findings from the parent psychosis review and the EEG/MEG and molecular/cellular cross-cutting reviews, and updates them with 2024 to 2026 literature.

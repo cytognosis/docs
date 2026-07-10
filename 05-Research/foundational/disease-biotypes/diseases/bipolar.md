@@ -1,5 +1,12 @@
 # Biotypes: Bipolar Disorder (BD-I and BD-II)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `bipolar`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Genomic factor loading (Nature 2025): **SB factor** (shared with schizophrenia). In Grotzinger et al., "Mapping the genetic landscape across 14 psychiatric disorders," Nature 2025 (doi:10.1038/s41586-025-09820-3, 1,056,201 cases), bipolar disorder co-loads with schizophrenia on the SB factor, whose shared signal is enriched in genes expressed in excitatory neurons. This is consistent with the Mullins et al. 2021 finding that bipolar risk alleles concentrate in synaptic-signaling genes with high expression specificity in prefrontal and hippocampal neurons (doi:10.1038/s41588-021-00857-4). The signal shared across all 14 disorders was enriched for broad transcriptional regulation; the SB-factor-specific pathways are more synaptic and ion-channel-specific.
 
 This document follows the shared template (`_TEMPLATE_AND_CONVENTIONS.md`). Confidence ratings: HIGH (multi-cohort replication), MEDIUM (single-consortium or moderate effect), LOW (single-lab or failed external replication). Replication problems are flagged explicitly.

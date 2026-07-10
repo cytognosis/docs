@@ -1,5 +1,12 @@
 # Biotypes: ADHD (attention-deficit/hyperactivity disorder)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `adhd`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Genomic factor loading (Nature 2025): **Neurodevelopmental factor** (ASD + ADHD + Tourette; childhood-onset). ADHD is a defining member of this factor, which spans into other disorders and is enriched for genes expressed in early brain development.
 
 ADHD is a heritable neurodevelopmental disorder of inattention, hyperactivity, and impulsivity. The genetics point firmly toward catecholamine biology and early neural development, the connectomics point toward weak fronto-striatal control circuits and intrusive default-mode activity during tasks, and the structural data point toward delayed maturation rather than fixed lesion. This document harmonizes molecular findings to Gene Ontology (GO), connectomic findings to the Allen Human Reference Atlas 3D (2020), and phenotypes to SNOMED CT and the Human Phenotype Ontology (HPO). We flag two contested markers explicitly: the theta-beta ratio (TBR) and theta-beta neurofeedback.

@@ -1,3 +1,6 @@
+> [!WARNING]
+> **SUPERSEDED (2026-07-10).** Folded into the canonical Literature Synthesis / Research Dossier template in the cytognosis-doc skill (`references/literature-synthesis-template.md`, Appendix A). Kept for history only.
+
 # Disease biotype docs: shared template and conventions
 
 > Every per-disorder doc in this folder follows this exact structure so the 14 docs harmonize and the transdiagnostic synthesis is mechanical. Read this before writing any disease doc.

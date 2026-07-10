@@ -1,5 +1,12 @@
 # Biotypes: Autism Spectrum Disorder
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `asd`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Genomic factor loading (Nature 2025): **Neurodevelopmental factor** (ASD + ADHD + Tourette; childhood-onset). ASD anchors this factor alongside ADHD and Tourette syndrome, with the shared signal enriched in genes governing neurodevelopment and broad transcriptional regulation. Per Grotzinger et al., the neurodevelopmental factor also spans into other conditions, consistent with the extensive polygenic overlap between ASD, ADHD, schizophrenia, and educational attainment (Grotzinger et al., Nature 2025, doi:10.1038/s41586-025-09820-3).
 
 ## Framing note

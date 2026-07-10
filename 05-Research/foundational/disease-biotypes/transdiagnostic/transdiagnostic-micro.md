@@ -1,5 +1,12 @@
 # Transdiagnostic MICRO synthesis: molecular, genetic, cellular, and immune biotypes across 14 psychiatric disorders
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `transdiagnostic`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Prepared for Cytognosis Foundation. Date: 25 May 2026. This document synthesizes the MICRO-scale sections of the 14 per-disorder biotype docs (schizophrenia, bipolar disorder, MDD, PTSD, anxiety, ASD, ADHD, OCD, Tourette, anorexia nervosa, and alcohol/opioid/nicotine/cannabis use disorders). It identifies the molecular and cellular dysregulations that recur ACROSS disorders, harmonizes them to Gene Ontology (GO), maps each axis onto the Nature 2025 five-factor genomic structure, and ranks the most reproducible transdiagnostic molecular biotypes. Confidence ratings follow the shared convention: HIGH (multi-cohort/multi-site replication), MEDIUM (single-consortium or moderate effect), LOW (single-lab or failed external replication). Replication failures are flagged. No em dashes are used.
 
 ---

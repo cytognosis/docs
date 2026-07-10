@@ -1,5 +1,12 @@
 # Biotypes: Obsessive-Compulsive Disorder (OCD)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `ocd`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Genomic factor loading (Nature 2025): **Compulsive / eating factor** (OCD + anorexia nervosa + Tourette syndrome). Grotzinger et al. 2025 (doi:10.1038/s41586-025-09820-3). This factor is distinct from the internalizing factor on which anxiety disorders load, which is why the cortico-striato-thalamo-cortical (CSTC) circuit is treated here rather than in the anxiety document.
 
 Scope: DSM-5/ICD-11 obsessive-compulsive disorder, organized by the empirically replicated symptom dimensions (contamination/washing, harm/checking, symmetry/ordering, taboo/forbidden thoughts, and hoarding, which DSM-5 split into a separate hoarding disorder). The hereditary continuity with Tourette syndrome and trichotillomania/excoriation (body-focused repetitive behaviors) is noted where it shapes the molecular and circuit signal.

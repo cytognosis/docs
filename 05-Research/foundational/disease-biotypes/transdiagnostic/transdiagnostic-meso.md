@@ -1,5 +1,12 @@
 # Transdiagnostic MESO-scale synthesis: connectomic nodes and edges across 14 psychiatric disorders
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `transdiagnostic`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Prepared for Cytognosis Foundation. This document synthesizes the MESO (connectomic: fMRI, EEG, MEG, structural) sections of the 14 per-disorder biotype docs (schizophrenia, bipolar disorder, major depression, PTSD, anxiety, ASD, ADHD, OCD, Tourette, anorexia nervosa, and the four substance use disorders: alcohol, opioid, nicotine, cannabis). All regions are named in Allen Human Reference Atlas 3D (2020, 141 anatomical regions) terms, with functional labels in parentheses. The goal is to identify the most reproducible NODES (regions) and EDGES (connections) that recur across disorders, tag direction (hyper / hypo / atrophy), and flag where the evidence is fragile. This directly feeds a downstream brain-map visual; the machine-readable `VISUAL_DATA` block at the end is the load-bearing output.
 
 Date: May 25, 2026. Style notes: confidence ratings (HIGH multi-cohort replication, MEDIUM single-consortium or moderate effect, LOW single-lab or failed external replication) appear throughout; replication failures are flagged explicitly.

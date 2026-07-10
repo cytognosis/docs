@@ -1,5 +1,12 @@
 # Biotypes: Anorexia Nervosa (AN)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `anorexia`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Genomic factor loading (Nature 2025): **Compulsive / eating factor** (shared with OCD and Tourette syndrome). In Grotzinger et al., "Mapping the genetic landscape across 14 psychiatric disorders," Nature 2025 (doi:10.1038/s41586-025-09820-3, 1,056,201 cases), anorexia nervosa co-loads with obsessive-compulsive disorder and Tourette on the compulsive/eating factor, whose factor-specific pathways are more narrowly defined than the broad transcriptional-regulation signal shared across all 14 disorders. What sets anorexia apart from its compulsive-factor neighbors is a second axis of risk that is metabolic rather than psychiatric. The Watson et al. 2019 GWAS reframed anorexia as a partly metabolic disorder, showing that its genetic architecture correlates negatively with insulin resistance, fasting insulin, and fasting glucose to a degree that exceeds the BMI signal (doi:10.1038/s41588-019-0439-2). This document treats that metabo-psychiatric reframing as the organizing idea of the MICRO scale.
 
 This document follows the shared template (`_TEMPLATE_AND_CONVENTIONS.md`). Confidence ratings: HIGH (multi-cohort/multi-site replication), MEDIUM (single-consortium or moderate effect), LOW (single-lab or failed external replication). Replication problems are flagged explicitly. Framing is person-first and weight-stigma-aware throughout; anorexia nervosa is a serious psychiatric illness with one of the highest mortality rates in psychiatry, not a lifestyle or a choice.

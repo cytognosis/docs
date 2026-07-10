@@ -1,5 +1,12 @@
 # Biotypes: Opioid Use Disorder (OUD)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `sud-opioid`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Genomic factor loading (Nature 2025): **Substance use factor** (shared with alcohol, nicotine, and cannabis use disorders). Grotzinger et al., Mapping the genetic landscape across 14 psychiatric disorders, Nature 2025 (doi:10.1038/s41586-025-09820-3, 1,056,201 cases). The substance use factor groups alcohol, opioid, nicotine, and cannabis use disorders; the shared signal across all 14 disorders was enriched for broad transcriptional regulation, while the substance use factor carries more specific reward and addiction biology.
 
 Opioid use disorder is distinctive among substance use disorders because its primary pharmacological lever, the mu-opioid receptor, is also its strongest genetic signal, and because the syndrome is dominated by a physiologically severe withdrawal state driven by central noradrenergic hyperactivity. This combination makes OUD the substance use disorder with the clearest molecular target (OPRM1), the clearest medication-defined biotypes (response to methadone, buprenorphine, and naltrexone), and a withdrawal phenotype that maps onto a specific brainstem node (locus coeruleus) rather than only cortical and striatal circuitry. The document harmonizes molecular, connectomic, and phenotypic evidence to Gene Ontology, the Allen Human Reference Atlas 3D (2020), and SNOMED CT/HPO respectively, and ends with the most defensible cross-scale biotypes. Replication status is flagged throughout. Person-first language is used: people with opioid use disorder, not "addicts."

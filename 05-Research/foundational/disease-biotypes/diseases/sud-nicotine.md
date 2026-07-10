@@ -1,5 +1,12 @@
 # Biotypes: Nicotine / Tobacco Use Disorder
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `sud-nicotine`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Genomic factor loading (Nature 2025): **Substance-use factor** (shared with alcohol, opioid, and cannabis use disorders; the factor groups the four addictive disorders and is the most distinct of the five). Grotzinger et al., Mapping the genetic landscape across 14 psychiatric disorders, Nature 2025 (doi:10.1038/s41586-025-09820-3, 1,056,201 cases, 5 genomic factors, 238 pleiotropic loci).
 
 Nicotine use disorder occupies a privileged place in addiction biology for two reasons that the other substance docs cannot match. First, the strongest, most replicated addiction-genetics association anywhere is the CHRNA5 missense variant rs16969968 in the chromosome-15 nicotinic receptor cluster, a finding that converges molecular pharmacology, GWAS, and the receptor mechanism nicotine acts on directly. Second, a single pharmacogenetic axis, the rate of nicotine metabolism set largely by CYP2A6, has produced one of the few prospective, biomarker-stratified randomized trials in all of psychiatry (Lerman et al. 2015), giving nicotine use disorder a deployable treatment-matching biotype that most psychiatric disorders lack. The insula provides the connectomic anchor: the Naqvi lesion study showed that damage to the insula abolishes the urge to smoke, and the insula is the explicit target of the only FDA-cleared deep TMS device for an addiction. This document harmonizes the molecular, connectomic, and phenotypic evidence to Gene Ontology, the Allen Human Reference Atlas 3D (2020), and SNOMED CT / HPO respectively, and closes with the most defensible cross-scale biotypes. Replication status is explicit throughout.

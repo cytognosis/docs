@@ -1,5 +1,12 @@
 # Biotypes: Post-Traumatic Stress Disorder (PTSD)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `ptsd`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Genomic factor loading (Nature 2025): **Internalizing factor** (shared with major depression and anxiety; the factor is associated with oligodendrocyte biology). Grotzinger et al., Mapping the genetic landscape across 14 psychiatric disorders, Nature 2025 (doi:10.1038/s41586-025-09820-3).
 
 PTSD is among the most biologically heterogeneous DSM-5 and ICD-11 diagnoses. Two people with the same diagnosis can show opposite autonomic tone, opposite prefrontal activity profiles, opposite endocrine signatures, and divergent treatment responses. The dissociative subtype is the only PTSD subtype with a formal DSM-5 and ICD-11 home, and it inverts much of the canonical circuit picture. This document harmonizes the molecular, connectomic, and phenotypic evidence to Gene Ontology, the Allen Human Reference Atlas 3D (2020), and SNOMED CT/HPO respectively, and ends with the most defensible cross-scale biotypes. Throughout, replication status is explicit; PTSD biotype work is in an early and contested phase, and at least one prominent acute-imaging biotype set failed independent replication (Ben-Zion 2023).

@@ -1,5 +1,12 @@
 # Biotypes: Alcohol Use Disorder (AUD)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `sud-alcohol`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Genomic factor loading (Nature 2025): **Substance-use factor** (shared with opioid, nicotine, and cannabis use disorders). The substance-use factor is the cleanest of the five Grotzinger factors in clinical terms because its four constituents share both reward-circuit substrate and a metabolic/pharmacogenetic layer that the other factors lack. Grotzinger, Werme, Peyrot, ... Smoller, Mapping the genetic landscape across 14 psychiatric disorders, Nature 2025 (doi:10.1038/s41586-025-09820-3, 1,056,201 cases; 5 genomic factors explaining ~66 percent of genetic variance; 238 pleiotropic loci). Factor-specific pathways for the substance-use factor are more specific than the broad transcriptional-regulation signal shared across all 14 disorders.
 
 Alcohol use disorder is biologically distinctive among substance use disorders in three respects that recur throughout this document. First, AUD carries the strongest and most mechanistically clean pharmacogenetic story of any psychiatric diagnosis: the alcohol-metabolizing genes ADH1B and ALDH2 are protective by directly changing the aversive load of drinking, an effect that is anatomy-independent and ancestry-stratified. Second, AUD has the most developed neuroinflammatory case of any SUD, built largely by Crews and colleagues on TLR4/HMGB1/microglia signaling. Third, alcohol produces a regionally specific cerebellar atrophy signature that is disproportionate to other substances. Throughout, replication status is explicit and contested findings are flagged.

@@ -1,5 +1,12 @@
 # Molecular and Cellular Cross-Cutting Biotypes for the Cytognosis + Marie-Nelly Mental-Health Coordinate Proposal
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `molecular-cellular`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Author: Cytognosis Foundation research synthesis (NSF X-Labs Phase 0 / ARPA-H PHO supporting evidence)
 Date: 25 May 2026
 

@@ -1,5 +1,12 @@
 # Transdiagnostic Connectomic Synthesis: A Mental Health Coordinate Map for Adaptive Spectroscopy Sensing
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `transdiagnostic`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Prepared for: Cytognosis Foundation + Hervé Marie-Nelly NSF X-Labs Phase 0 proposal
 Date: 25 May 2026
 Scope: Synthesis across five per-disorder biotype reviews (depression, anxiety, psychosis, PTSD, substance use disorders) compiled for this proposal. The goal is to identify shared and disjoint connectomic patterns that justify a coarse-to-fine "zoom" sensing strategy for a wearable optical headset.

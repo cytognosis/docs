@@ -1,5 +1,12 @@
 # Biotypes of Autism Spectrum Disorder: Multi-Modal Evidence for a Mental Health Coordinate System
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `asd-research-brief`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 *Research brief prepared for the Cytognosis Foundation + Hervé Marie-Nelly NSF X-Labs and ARPA-H PHO submission.*
 
 *Date: 25 May 2026.*

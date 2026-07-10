@@ -1,5 +1,12 @@
 # Biotypes: Tourette syndrome (and chronic tic disorders)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `tourette`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Genomic factor loading (Nature 2025): **Neurodevelopmental factor** (ASD + ADHD + Tourette, childhood-onset) with a substantial secondary loading on the **compulsive/eating factor** (OCD + anorexia + Tourette). Tourette is one of the few disorders in the Grotzinger et al. analysis that loads meaningfully on two factors, which mirrors its clinical reality: childhood-onset neurodevelopmental motor disorder with heavy obsessive-compulsive and attentional comorbidity.
 
 Tourette syndrome (TS) is a childhood-onset neurodevelopmental disorder defined by multiple motor tics and at least one phonic/vocal tic persisting more than one year. The biology converges on the cortico-striato-thalamo-cortical (CSTC) motor loop: a dopaminergic and GABAergic imbalance inside the striatum that releases motor programs the cortex cannot adequately suppress. The genetics point to striatal interneuron development and a small number of high-penetrance rare variants (the histamine gene HDC being the landmark example). The connectomics point to a hyperactive sensorimotor CSTC loop with reduced striatal and motor-cortical inhibition. This document harmonizes molecular findings to Gene Ontology (GO), connectomic findings to the Allen Human Reference Atlas 3D (2020), and phenotypes to SNOMED CT and the Human Phenotype Ontology (HPO). The OCD CSTC framing (excluded from the anxiety document and deferred to OCD) is the natural circuit backbone here, because TS and OCD share both the loop and a genomic factor. We flag two contested areas explicitly: the PANDAS/PANS streptococcal-autoimmune subtype, and the recently negative VMAT2-inhibitor pivotal trials.

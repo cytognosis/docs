@@ -1,5 +1,12 @@
 # Multi-Scale and Multimodal Biomarker Studies: Prior Art for a Genome-Connectome-Phenotype Platform
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `multiscale-biomarkers`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Prepared for: Cytognosis Foundation, X-Labs platform positioning
 Date: 25 May 2026
 Scope: A documented review of prior work that links biological scales (genome, connectome, phenotype) in the same individuals. The goal is to position a new multi-scale, continuous, individual-level platform against the existing literature and to integrate the key quantitative findings (sample sizes, effect sizes, reproducibility) into an honest educational summary. Citation style is inline Vancouver-like with DOI or URL. Effect sizes and reproducibility limits are reported plainly, because they are the load-bearing facts for any platform claim.

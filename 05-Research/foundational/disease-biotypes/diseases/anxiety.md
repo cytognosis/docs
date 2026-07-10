@@ -1,5 +1,12 @@
 # Biotypes: Anxiety Disorders (GAD, panic disorder, social anxiety disorder)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: researchers, stakeholders
+> **Tags**: `literature-synthesis`, `disease-biotypes`, `anxiety`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 Genomic factor loading (Nature 2025): **Internalizing factor** (major depression + PTSD + anxiety; shared signal enriched in oligodendrocyte biology). Grotzinger et al. 2025 (doi:10.1038/s41586-025-09820-3).
 
 Scope: generalized anxiety disorder (GAD), panic disorder (PD), and social anxiety disorder (SAD). Obsessive-compulsive disorder loads on the separate compulsive/eating factor and is treated in its own document; the cortico-striato-thalamo-cortical (CSTC) circuit is therefore excluded here. PTSD-adjacent contextual-fear circuitry is mentioned only where it differentiates anxiety from PTSD, and has its own document.
