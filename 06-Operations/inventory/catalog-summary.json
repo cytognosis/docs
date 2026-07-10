@@ -1,14 +1,14 @@
 {
   "generated": "2026-07-09",
-  "total_files": 3604,
-  "non_symlink": 3604,
+  "total_files": 3605,
+  "non_symlink": 3605,
   "symlinks": 0,
   "by_root": {
     "project:Science and Platform": 1736,
     "docs": 1418,
     "project:Website": 163,
     "project:Grants": 132,
-    "project:Refactor": 69,
+    "project:Refactor": 70,
     "project:Infrastructure and Tooling": 24,
     "project:Personal": 22,
     "project:Yar": 17,
@@ -35,7 +35,7 @@
     "design": 786,
     "funding": 439,
     "engineering": 283,
-    "other": 254,
+    "other": 255,
     "research": 160,
     "code": 154,
     "product-spec": 147,
@@ -55,12 +55,12 @@
     "rfc": 1
   },
   "by_variant": {
-    "primary": 3254,
+    "primary": 3255,
     "archive": 278,
     "simple": 32,
     "agent": 24,
     "readable": 16
   },
-  "md_with_std_header": 475,
-  "md_total": 1670
+  "md_with_std_header": 891,
+  "md_total": 1671
 }
