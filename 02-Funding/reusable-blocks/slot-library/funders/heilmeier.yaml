@@ -1,0 +1,43 @@
+funder_id: heilmeier
+display_name: DARPA Heilmeier Catechism
+kind: universal_baseline
+version: "1.0"
+source_doc: ../universal_template.md
+notes: |
+  The Heilmeier Catechism is the reference baseline — not a real funder. Every other
+  funder file in canonical/funders/ is a variant of this 8-question structure.
+  There is no submission artifact; it is an internal Q-by-Q narrative used for
+  Cytognosis reviews and to seed new funder mappings.
+
+primary_artifacts:
+  - id: narrative
+    name: Heilmeier Narrative (internal review format)
+    format: google_docs
+    word_limit: null
+    sections:
+      - heading: "Q1. What are you trying to do? (no jargon)"
+        slots: [U01]
+      - heading: "Q2. How is it done today, and what are the limits?"
+        slots: [U02]
+      - heading: "Q3. What is new in your approach, and why will it succeed?"
+        slots: [U03]
+      - heading: "Q4. Who cares? If successful, what difference will it make?"
+        slots: [U04]
+      - heading: "Q5. What are the risks?"
+        slots: [U05]
+      - heading: "Q6. How much will it cost?"
+        slots: [U06]
+      - heading: "Q7. How long will it take?"
+        slots: [U07]
+      - heading: "Q8. What are the mid-term and final exams to check for success?"
+        slots: [U08]
+
+render_targets:
+  - id: google_docs
+    kind: google_docs
+    doc_id_env: HEILMEIER_REVIEW_DOC_ID
+    mapping: narrative
+  - id: quarto_pdf
+    kind: quarto
+    template_path: lib/quarto/heilmeier_review.qmd
+    mapping: narrative

@@ -1,0 +1,93 @@
+funder_id: nih_r01
+display_name: NIH R01 Research Strategy
+kind: federal_grant
+version: "2026.1"
+source_doc: ../extracted_grants.md
+notes: |
+  NIH R01 structure guessed from framework_catalog (Significance / Innovation /
+  Approach / Investigators / Environment) and the standard SF-424 R&R bundle.
+  Page limits reflect the 12-page Research Strategy for R01 as of FY2026.
+
+primary_artifacts:
+  - id: specific_aims
+    name: Specific Aims
+    format: docx
+    page_limit: 1
+    sections:
+      - heading: "Specific Aims"
+        slots: [U01, U04, U08.1]
+
+  - id: research_strategy
+    name: Research Strategy
+    format: docx
+    page_limit: 12
+    sections:
+      - heading: "Significance"
+        slots: [U02, U04]
+      - heading: "Innovation"
+        slots: [U03.1, U03.3]
+      - heading: "Approach"
+        slots: [U03.2, U03.4, U03.5, U07, U08, U05]
+
+  - id: sf424
+    name: SF-424 (R&R) + PHS 398 components
+    format: pdf
+    sections:
+      - heading: "Cover / Applicant Info"
+        slots: [A01, A02]
+      - heading: "Budget / Budget Justification"
+        slots: [U06.1, U06.2, U06.3]
+      - heading: "Facilities / Environment"
+        slots: [U11.4]
+
+  - id: biosketches
+    name: Biosketches
+    format: pdf
+    sections:
+      - heading: "Key Personnel Biosketches"
+        slots: [U11.1, U11.2, A04.2]
+
+  - id: human_subjects
+    name: Human Subjects / Vertebrate Animals
+    format: docx
+    sections:
+      - heading: "Human Subjects"
+        slots: [U16.2]
+      - heading: "Vertebrate Animals"
+        slots: [U16.3]
+
+  - id: resource_sharing
+    name: Resource Sharing / Data Management Plan
+    format: docx
+    sections:
+      - heading: "Data Management & Sharing"
+        slots: [U12.1, U12.2, U12.3, U12.5, U15.3]
+
+  - id: bibliography
+    name: Bibliography & References Cited
+    format: docx
+    sections:
+      - heading: "References"
+        slots: [A04.4]
+
+render_targets:
+  - id: google_docs_strategy
+    kind: google_docs
+    doc_id_env: NIH_R01_STRATEGY_DOC_ID
+    mapping: research_strategy
+  - id: google_docs_aims
+    kind: google_docs
+    doc_id_env: NIH_R01_AIMS_DOC_ID
+    mapping: specific_aims
+  - id: docxtpl_strategy
+    kind: docxtpl
+    template_path: raw/nih_r01_research_strategy.docx
+    mapping: research_strategy
+  - id: docxtpl_aims
+    kind: docxtpl
+    template_path: raw/nih_r01_specific_aims.docx
+    mapping: specific_aims
+  - id: docxtpl_dmp
+    kind: docxtpl
+    template_path: raw/nih_r01_dmp.docx
+    mapping: resource_sharing

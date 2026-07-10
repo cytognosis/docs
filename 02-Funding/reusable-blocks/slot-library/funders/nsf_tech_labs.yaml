@@ -1,0 +1,61 @@
+funder_id: nsf_tech_labs
+display_name: NSF Tech Labs RFI
+kind: federal_grant
+version: "2026.1"
+source_doc: ../extracted_grants.md
+notes: |
+  This is a Request for Information, not a full solicitation — response is a
+  white paper answering Q1–Q7. Structure below guessed from framework_catalog
+  and universal_template.md Part C.6.
+
+primary_artifacts:
+  - id: rfi_response
+    name: NSF Tech Labs RFI Response
+    format: docx
+    page_limit: 10
+    sections:
+      - heading: "Q1. Organization overview"
+        slots: [A01, U11.2]
+      - heading: "Q2. Comparative advantage"
+        slots: [U10.3, U10.4]
+      - heading: "Q3a.i. Plain-language objective / opportunity space"
+        slots: [U01.2, U09.1, U10.3]
+      - heading: "Q3a.ii. Technical approach / track record"
+        slots: [U11.2, U03.2]
+      - heading: "Q3a.iii. Governance / continuity"
+        slots: [U11.6, U19.2]
+      - heading: "Q3a.iv–v. Industry / philanthropy engagement"
+        slots: [U20.3, U20.5, U17.1, U17.5, U18.1, U18.2]
+      - heading: "Q3b.i–ii. Ecosystem view"
+        slots: [U11.4, U11.6]
+      - heading: "Q4a. Eligibility design feedback"
+        slots: [U11.6]
+      - heading: "Q4b. Phased structure"
+        slots: [U07.2]
+      - heading: "Q4c. IP & licensing"
+        slots: [U15.2, U12.2]
+      - heading: "Q4d. Governance / operating entity"
+        slots: [U11.6, U19.2]
+      - heading: "Q4e. Funding levels (Phase 0/1/2)"
+        slots: [U06.1, U06.5]
+      - heading: "Q5. Industry partnerships"
+        slots: [U20.3]
+      - heading: "Q6. Downstream impact (Strategic Objectives 1-4: sector-defining platform, outcomes beyond papers, TRL progression, market adoption)"
+        slots: [U04.4, U09.1, U17.3, U17.5, U18.1, U18.3, U18.4]
+      - heading: "Q7. Meta feedback"
+        slots: []
+        notes: Out-of-slot — meta feedback on the RFI itself
+
+render_targets:
+  - id: google_docs_authoring
+    kind: google_docs
+    doc_id_env: NSF_TECH_LABS_DOC_ID
+    mapping: rfi_response
+  - id: docxtpl_rfi
+    kind: docxtpl
+    template_path: raw/nsf_tech_labs_rfi.docx
+    mapping: rfi_response
+  - id: quarto_review
+    kind: quarto
+    template_path: lib/quarto/nsf_tech_labs_review.qmd
+    mapping: rfi_response

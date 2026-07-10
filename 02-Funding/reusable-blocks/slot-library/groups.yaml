@@ -1,0 +1,359 @@
+# Cytognosis Canonical Schema — Groups & Inheritance
+# -----------------------------------------------------------------------------
+# Groups bundle related slots/fields so funder profiles can compose a schema
+# by inheriting one or more groups instead of listing every member explicitly.
+#
+# A group references slot IDs (U01-U22, A01-A05) and/or funder-metadata field
+# IDs (F01-F38). A funder profile inherits multiple groups via `inherit_groups`
+# and may then add or remove individual members via `add_slots` / `remove_slots`
+# / `add_fields` / `remove_fields`.
+#
+# Three group families exist:
+#   - u_*  : proposal-content slot bundles (U-side)
+#   - a_*  : administrative-section bundles (A-side)
+#   - f_*  : funder-metadata-field bundles (F-side, drives Monday columns)
+#
+# See canonical_template_format.md §13 for the inheritance algorithm.
+# -----------------------------------------------------------------------------
+
+version: "1.0"
+last_updated: 2026-04-26
+maintainer: mohammadi@cytognosis.org
+spec: ../canonical_template_format.md
+manifest: manifest.yaml
+
+# =============================================================================
+# U-side groups (proposal-content slot bundles)
+# =============================================================================
+u_groups:
+
+  u_heilmeier_core:
+    description: |
+      The DARPA Heilmeier Catechism, in order. Every proposal answers all eight
+      regardless of what the funder explicitly asks. Foundation of every
+      assembled funder profile.
+    members: [U01, U02, U03, U04, U05, U06, U07, U08]
+    rationale: Universal spine; required by every funder profile.
+
+  u_extensions_minimal:
+    description: |
+      Minimum extension set that any external-facing application benefits from,
+      including accelerator and VC-light pitches.
+    members: [U11, U17, U19]
+    rationale: Team fit, adoption story, sustainability — the questions every
+      reviewer asks regardless of funder type.
+
+  u_extensions_research:
+    description: |
+      Extensions typical of research-grant funders (federal, philanthropic
+      programs, FRO/moonshot bodies). Adds opportunity-space framing, openness,
+      IP, translation-to-mission, and partnerships.
+    members: [U09, U12, U15, U18, U20]
+    rationale: Research funders ask why-this-matters and what-becomes-of-it
+      questions beyond the Heilmeier core.
+
+  u_extensions_values:
+    description: |
+      Values-driven extensions. Required when the funder evaluates ethics,
+      equity, AI safety, or regulatory posture (Foresight, Google.org, ARPA-H,
+      Horizon Europe).
+    members: [U13, U14, U16, U22]
+    rationale: Equity, responsible AI, regulatory/biosecurity, and theory of
+      change — the Cytognosis values that should ship by default with any
+      external proposal even when the funder is silent on them.
+
+  u_org_form_fit:
+    description: |
+      Why-this-org questions. Required for FRO-style, EA, philanthropic, and
+      counterfactual-sensitive funders (Astera, Brains, EA Funds, DRK).
+    members: [U10, U21, U22]
+    rationale: Why-not-academia, why-not-VC, counterfactual impact, theory of
+      change. Answers the "why does this organization need to exist" question.
+
+  u_full:
+    description: |
+      Full proposal-content set — every U-slot. Use for heavy federal / OT
+      contracts and FRO concept proposals.
+    members: [U01, U02, U03, U04, U05, U06, U07, U08, U09, U10, U11, U12,
+              U13, U14, U15, U16, U17, U18, U19, U20, U21, U22]
+    rationale: Convenience alias for "everything" when authoring a maximal
+      Cytognosis canonical render.
+
+# =============================================================================
+# A-side groups (administrative-section bundles)
+# =============================================================================
+a_groups:
+
+  a_baseline:
+    description: |
+      Always-required administrative content for any external submission.
+    members: [A01, A02]
+    rationale: Org identity and primary points of contact. Required by every
+      funder regardless of grant type.
+
+  a_compliance:
+    description: |
+      Eligibility, compliance, and intake metadata. Required for federal /
+      regulated funders and any funder asking research-security, sanctioned-
+      country, or government-ties questions.
+    members: [A03, A05]
+    rationale: Adds eligibility/compliance attestation and intake meta
+      (referrals, expedited-review, batch preference).
+
+  a_artifacts:
+    description: |
+      Supplementary artifacts (CVs, biosketches, letters of support, video,
+      resumes, demo URLs).
+    members: [A04]
+    rationale: Required by most heavy funders and by funders asking for video
+      or resume submissions (Astera, YC, Foresight).
+
+  a_full:
+    description: All administrative slots.
+    members: [A01, A02, A03, A04, A05]
+    rationale: Convenience alias when assembling a complete administrative
+      package for a federal grant.
+
+# =============================================================================
+# F-side groups (funder-metadata-field bundles)
+# =============================================================================
+# These groups describe properties of the FUNDING OPPORTUNITY itself, not
+# proposal content. Each F-group typically maps to a Monday "Funding
+# Opportunities" board column cluster.
+
+f_groups:
+
+  f_classification:
+    description: |
+      Categorical buckets that classify the opportunity for filtering and
+      search. Drives Monday status / dropdown / text columns.
+    members: [F01, F04, F05, F06, F07, F12, F33]
+    rationale: Funding category, source type, type/subtype, focus areas,
+      instrument, thematic tags. Lets us filter "show me all federal grants
+      tagged #Moonshot in healthcare."
+    monday_column_cluster: classification
+
+  f_pipeline:
+    description: |
+      Where the opportunity sits in our internal pipeline (from discovery
+      through decision through application).
+    members: [F02, F03, F10, F21]
+    rationale: Maturity stage, pipeline status, mission-alignment score,
+      funder-process type (proactive vs reactive). The "what should we be
+      doing about this" cluster.
+    monday_column_cluster: pipeline
+
+  f_timeline:
+    description: |
+      Temporal characteristics — when, for how long, in what stages.
+    members: [F08, F09, F13, F19]
+    rationale: Deadline, deadline type, submission stages, award period.
+      Drives Monday calendar/timeline view.
+    monday_column_cluster: timeline
+
+  f_financial:
+    description: |
+      Money in, money out — award size, horizon, cost-share, indirect-cost
+      rule.
+    members: [F23, F24, F15, F17, F18]
+    rationale: Min/max award, investment horizon, cost-share required,
+      indirect-cost rule. Drives Budget Planning cross-board links.
+    monday_column_cluster: financial
+
+  f_application:
+    description: |
+      What the application process looks like — required formats, effort,
+      gates, review criteria, Heilmeier requirement, review mechanism.
+    members: [F11, F14, F16, F28, F29, F35, F36]
+    rationale: Initial submission format, application effort, application
+      required, written-feedback gate, review criteria, Heilmeier-required
+      flag (new), review mechanism (new).
+    monday_column_cluster: application
+
+  f_eligibility:
+    description: |
+      Who can apply — residency, partners, confidentiality, academic
+      affiliation, joint-program partners.
+    members: [F25, F26, F27, F30, F37, F20]
+    rationale: Residency required, residency location, confidentiality
+      policy, required partners count, academic-affiliation-required (new),
+      joint-program partners. Cross-references the A03 administrative slot.
+    monday_column_cluster: eligibility
+
+  f_relationships:
+    description: |
+      Cross-references and relationships to other entities — canonical funder
+      file, strategic insider connections, sub-programs, strategic pairings
+      with other opportunities.
+    members: [F22, F31, F32, F34, F38]
+    rationale: Canonical funder reference, strategic connection (new),
+      strategic pairing (new), sub-programs (new), funding-score rationale
+      (new). Captures the human-relationship and program-companion data that
+      a flat opportunity record misses.
+    monday_column_cluster: relationships
+
+  f_full:
+    description: All funder-metadata fields.
+    members: [F01, F02, F03, F04, F05, F06, F07, F08, F09, F10, F11, F12,
+              F13, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24,
+              F25, F26, F27, F28, F29, F30, F31, F32, F33, F34, F35, F36,
+              F37, F38]
+    rationale: Convenience alias for the complete funder-metadata schema.
+
+# =============================================================================
+# Composite presets — common funder-kind compositions
+# =============================================================================
+# These presets bundle U / A / F groups for a given `funder_kind`. A funder
+# profile can either inherit a single preset (shorthand) or list groups
+# individually for fine-grained control.
+
+presets:
+
+  preset_federal_grant:
+    description: |
+      Federal grant under FAR (NIH R01, NSF traditional, DOE conventional).
+      Heavy proposal content + full administrative + complete funder metadata.
+    inherits:
+      u: [u_heilmeier_core, u_extensions_research, u_extensions_values]
+      a: [a_full]
+      f: [f_classification, f_pipeline, f_timeline, f_financial,
+          f_application, f_eligibility, f_relationships]
+
+  preset_federal_OT:
+    description: |
+      Federal Other Transaction or Mission Office ISO (ARPA-H ISOs, NSF Tech
+      Labs OT, DOE Genesis if structured as OT). Adds research-security and
+      phased-budget specifics.
+    inherits:
+      u: [u_heilmeier_core, u_extensions_research, u_extensions_values,
+          u_org_form_fit]
+      a: [a_full]
+      f: [f_classification, f_pipeline, f_timeline, f_financial,
+          f_application, f_eligibility, f_relationships]
+
+  preset_intergovernmental_grant:
+    description: |
+      Multilateral / intergovernmental program (Horizon Europe, UNESCO, WHO).
+      Same as federal grant plus mandatory consortium partnership treatment.
+    inherits:
+      u: [u_heilmeier_core, u_extensions_research, u_extensions_values]
+      a: [a_full]
+      f: [f_classification, f_pipeline, f_timeline, f_financial,
+          f_application, f_eligibility, f_relationships]
+
+  preset_private_grant:
+    description: |
+      Single-grant philanthropic award (Google.org, Schmidt Sciences, Wellcome
+      Trust Discovery).
+    inherits:
+      u: [u_heilmeier_core, u_extensions_research, u_extensions_values]
+      a: [a_baseline, a_compliance]
+      f: [f_classification, f_pipeline, f_timeline, f_financial,
+          f_application, f_relationships]
+
+  preset_philanthropic_proactive:
+    description: |
+      Funder primarily reaches out (Coefficient Giving, Wellcome Leap thrusts,
+      Gates by-invitation Grand Challenges).
+    inherits:
+      u: [u_heilmeier_core, u_extensions_research, u_org_form_fit]
+      a: [a_baseline]
+      f: [f_classification, f_pipeline, f_timeline, f_financial,
+          f_relationships]
+
+  preset_ea_micro_grant:
+    description: |
+      Effective-altruism micro-grant funders with counterfactual emphasis
+      (EA LTFF, EAIF, Emergent Ventures, DRK).
+    inherits:
+      u: [u_heilmeier_core, u_extensions_minimal, u_org_form_fit]
+      a: [a_baseline]
+      f: [f_classification, f_pipeline, f_timeline, f_financial,
+          f_application]
+
+  preset_private_fellowship:
+    description: |
+      Residency / fellowship structures (Astera, Brains, Foresight, Schmidt
+      postdocs).
+    inherits:
+      u: [u_heilmeier_core, u_extensions_minimal, u_extensions_values,
+          u_org_form_fit]
+      a: [a_baseline, a_artifacts]
+      f: [f_classification, f_pipeline, f_timeline, f_financial,
+          f_application, f_eligibility, f_relationships]
+
+  preset_accelerator:
+    description: |
+      Cohort-based accelerator / incubator (YC, IndieBio, JLABS, Bakar Labs,
+      SkyDeck, Fast Forward).
+    inherits:
+      u: [u_heilmeier_core, u_extensions_minimal]
+      a: [a_baseline, a_artifacts, a_compliance]
+      f: [f_classification, f_pipeline, f_timeline, f_financial,
+          f_application, f_eligibility]
+
+  preset_vc_investment:
+    description: |
+      Venture-capital investment (Lux, BEV, 5050 Fellowship, Anthology Fund,
+      IndieBio).
+    inherits:
+      u: [u_heilmeier_core, u_extensions_minimal]
+      a: [a_baseline]
+      f: [f_classification, f_pipeline, f_financial, f_application,
+          f_relationships]
+
+  preset_venture_builder:
+    description: |
+      Operator-building model (Deep Science Ventures, Foresite Labs,
+      The Next Sequence).
+    inherits:
+      u: [u_heilmeier_core, u_extensions_minimal, u_org_form_fit]
+      a: [a_baseline]
+      f: [f_classification, f_pipeline, f_financial, f_application,
+          f_relationships]
+
+  preset_corporate_credit:
+    description: |
+      Cloud / API / software credits, often programmatically issued (AWS
+      Activate, Google Cloud AI Startup, Anthropic AI for Science, NVIDIA
+      Inception, Microsoft for Startups).
+    inherits:
+      u: []        # no proposal content; verification + short pitch
+      a: [a_baseline]
+      f: [f_classification, f_pipeline, f_financial, f_application]
+
+  preset_nonprofit_discount:
+    description: |
+      Free / discounted SaaS or hardware for verified 501(c)(3)s, mostly
+      TechSoup-mediated (Canva, Zoom, Slack, Adobe, GitHub, Notion, etc.).
+    inherits:
+      u: []
+      a: [a_baseline, a_compliance]
+      f: [f_classification, f_pipeline, f_application]
+
+# =============================================================================
+# Inheritance algorithm (informative — see canonical_template_format.md §14)
+# =============================================================================
+inheritance:
+  algorithm: |
+    1. If the funder profile names a `preset:`, expand the preset into its
+       three group lists (u/a/f).
+    2. If the funder profile lists `inherit_groups: {u: [...], a: [...],
+       f: [...]}`, merge those into the preset lists (deduplicating).
+    3. Expand each group to its members (slot IDs / field IDs).
+    4. Apply `add_slots`, `remove_slots`, `add_fields`, `remove_fields`
+       overrides from the funder profile.
+    5. The resulting flat lists are the funder's effective slot/field set.
+
+  conflict_resolution: |
+    - Group-vs-group conflicts: union (additive).
+    - Override-vs-group conflicts: overrides win (remove_slots wins over an
+      inherited group adding the slot back).
+    - Multiple presets: not allowed; declare one preset, then add groups.
+
+  validation: |
+    - All referenced groups must exist in this file.
+    - All referenced slot IDs must exist in manifest.yaml.
+    - All referenced field IDs must exist in manifest.yaml
+      funder_metadata_fields.
+    - A preset's `inherits` must refer only to defined groups.

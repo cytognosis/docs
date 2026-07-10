@@ -1,0 +1,58 @@
+funder_id: foresight_nodes
+display_name: Foresight Institute AI for Safety & Science Nodes
+kind: private_fellowship
+version: "2026.1"
+source_doc: ../extracted_questions_applications.md
+
+primary_artifacts:
+  - id: application_form
+    name: Foresight Nodes Application
+    format: web_form
+    sections:
+      - heading: "About you (F1–F8)"
+        slots: [A01, A02]
+      - heading: "F9. Track record"
+        slots: [U11.2]
+      - heading: "F10. Team / strategic partners"
+        slots: [U11.4, U20.1]
+      - heading: "F11. Team artifacts"
+        slots: [A04.2]
+      - heading: "F12. Ask / intake"
+        slots: [U06.1, A05.1]
+      - heading: "F13. Focus-area tag"
+        slots: [U01.2]
+      - heading: "F14. Project title"
+        slots: [U01.4]
+      - heading: "F15. Bold thesis (350 char)"
+        slots: [U01.1, U01.2]
+        max_chars: 350
+      - heading: "F16. SOTA + novelty + why-now + downstream"
+        slots: [U02.1, U02.2, U03.1, U03.3, U04.4]
+      - heading: "F17. Safety-first differential (risks + dual-use + mitigation)"
+        slots: [U14.5, U14.2, U14.3, U14.6, U05.1, U05.3, U05.5]
+      - heading: "F18. Milestones & gates"
+        slots: [U07.2, U07.3, U08.2]
+      - heading: "F19. Scalability & sustainability"
+        slots: [U19.5, U19.4, U04.3]
+      - heading: "F20. Supplementary artifacts + open-science commitments"
+        slots: [A04.2, U12.1, U12.2, U12.3]
+      - heading: "F21–F26. Node residency requests"
+        slots: [U06.2, U20.2]
+      - heading: "F27–F30. Budget & justification"
+        slots: [U06.1, U06.2, U06.3]
+      - heading: "F31. Ambitious vs. moderate"
+        slots: [U06.5]
+      - heading: "F32–F34. Compute / privacy architecture"
+        slots: [U06.2, U15.4]
+      - heading: "F35–F39. Consent, review preferences, intake"
+        slots: [A03, A05.2, A05.3]
+
+render_targets:
+  - id: google_docs_authoring
+    kind: google_docs
+    doc_id_env: FORESIGHT_NODES_DOC_ID
+    mapping: application_form
+  - id: quarto_review
+    kind: quarto
+    template_path: lib/quarto/foresight_nodes_review.qmd
+    mapping: application_form

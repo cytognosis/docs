@@ -1,0 +1,129 @@
+funder_id: doe_genesis
+display_name: DOE Genesis Mission (Focus Area 2)
+kind: federal_grant
+version: "2026.1"
+source_doc: ../extracted_grants.md
+
+primary_artifacts:
+  - id: project_abstract
+    name: Project Abstract
+    format: docx
+    page_limit: 1
+    sections:
+      - heading: "Project Abstract"
+        slots: [U01, U04.1, U04.3]
+
+  - id: sf424
+    name: SF-424 (R&R) + Budget Pages
+    format: pdf
+    sections:
+      - heading: "Cover / Applicant Info"
+        slots: [A01, A02]
+      - heading: "Budget"
+        slots: [U06.1, U06.2, U06.3, U06.4]
+      - heading: "Compliance attestations"
+        slots: [A03.1, A03.3]
+
+  - id: project_narrative
+    name: Project Narrative
+    format: docx
+    page_limit: 15
+    sections:
+      - heading: "§1 Significance"
+        slots: [U02, U04, U09.1, U09.2]
+      - heading: "§2 Innovation / Approach"
+        slots: [U03.1, U03.2, U03.3]
+      - heading: "§3 Technical Approach & Milestones"
+        slots: [U03.2, U07, U08.1, U08.2]
+      - heading: "§4 Team & Management"
+        slots: [U11, U20.1, U20.2]
+      - heading: "§5 Go/No-Go + Expected Outcomes"
+        slots: [U08.2, U04.4, U17.5, U18.1, U19.1, U19.5]
+      - heading: "§6 Risk & Mitigation"
+        slots: [U05, U16.4, U16.6]
+
+  - id: biosketches
+    name: Biosketches
+    format: pdf
+    sections:
+      - heading: "Senior / Key Personnel Biosketches"
+        slots: [U11.1, U11.2, A04.2]
+
+  - id: facilities
+    name: Facilities & Equipment
+    format: docx
+    sections:
+      - heading: "Facilities & Equipment"
+        slots: [U11.4]
+
+  - id: data_management_plan
+    name: Data Management Plan
+    format: docx
+    page_limit: 2
+    sections:
+      - heading: "Data Management Plan"
+        slots: [U12.1, U12.2, U12.3, U12.4, U12.5, U15.3]
+
+  - id: bibliography
+    name: Bibliography & References Cited
+    format: docx
+    sections:
+      - heading: "References"
+        slots: [A04.4]
+
+  - id: budget_justification
+    name: Budget Justification
+    format: docx
+    sections:
+      - heading: "Budget Justification"
+        slots: [U06.2, U06.3]
+
+  - id: current_and_pending
+    name: Current & Pending Support
+    format: docx
+    sections:
+      - heading: "Current & Pending Support"
+        slots: [A03.3, U20.5, U15.1, U15.5]
+
+  - id: compliance
+    name: Compliance Appendices
+    format: docx
+    sections:
+      - heading: "Human Subjects"
+        slots: [U16.2]
+      - heading: "Animal Use"
+        slots: [U16.3]
+      - heading: "DURC / Biosecurity"
+        slots: [U16.4, U16.5, U16.6]
+      - heading: "Research Security"
+        slots: [A03.4]
+
+render_targets:
+  - id: google_docs_narrative
+    kind: google_docs
+    doc_id_env: DOE_GENESIS_NARRATIVE_DOC_ID
+    mapping: project_narrative
+  - id: google_docs_abstract
+    kind: google_docs
+    doc_id_env: DOE_GENESIS_ABSTRACT_DOC_ID
+    mapping: project_abstract
+  - id: google_docs_dmp
+    kind: google_docs
+    doc_id_env: DOE_GENESIS_DMP_DOC_ID
+    mapping: data_management_plan
+  - id: docxtpl_narrative
+    kind: docxtpl
+    template_path: raw/doe_genesis_narrative.docx
+    mapping: project_narrative
+  - id: docxtpl_abstract
+    kind: docxtpl
+    template_path: raw/doe_genesis_abstract.docx
+    mapping: project_abstract
+  - id: docxtpl_dmp
+    kind: docxtpl
+    template_path: raw/doe_genesis_dmp.docx
+    mapping: data_management_plan
+  - id: openpyxl_budget
+    kind: openpyxl_jinja
+    template_path: raw/doe_genesis_budget.xlsx
+    mapping: sf424

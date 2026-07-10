@@ -1,0 +1,50 @@
+funder_id: astera_residency
+display_name: Astera Institute Residency
+kind: private_fellowship
+version: "2026.1"
+source_doc: ../extracted_questions_applications.md
+
+primary_artifacts:
+  - id: application_form
+    name: Astera Residency Application
+    format: web_form
+    sections:
+      - heading: "Intake"
+        slots: [A05.1]
+      - heading: "Q1. Project summary (300 char)"
+        slots: [U01.1, U01.2]
+        max_chars: 300
+      - heading: "Q2. Approach, plan, budget"
+        slots: [U03.2, U06.2, U07.3]
+      - heading: "Q3. Why you / track record / non-legible accomplishments"
+        slots: [U11.1, U11.2, U11.3, U03.4]
+      - heading: "Q4. State of the art & stakes"
+        slots: [U02.1, U02.2, U04.2]
+      - heading: "Q5. Beneficiaries / adoption"
+        slots: [U04.1, U17.1, U17.3]
+      - heading: "Q6. Why not academia / why not VC"
+        slots: [U10.1, U10.2, U10.3]
+      - heading: "Q7. In-scope / out-of-scope"
+        slots: [U09.4, U07.2]
+      - heading: "Q8. Openness commitments"
+        slots: [U12.1, U12.2, U12.4]
+
+  - id: supplementary
+    name: Supplementary (video + resume)
+    format: pdf
+    sections:
+      - heading: "2-min video"
+        slots: [A04.1]
+      - heading: "Founder resume"
+        slots: [A04.2]
+
+render_targets:
+  - id: google_docs_authoring
+    kind: google_docs
+    doc_id_env: ASTERA_RESIDENCY_DOC_ID
+    mapping: application_form
+    notes: Authored in Google Docs, copy-pasted into Astera web form.
+  - id: quarto_review
+    kind: quarto
+    template_path: lib/quarto/astera_residency_review.qmd
+    mapping: application_form

@@ -1,0 +1,3403 @@
+# Cytognosis canonical-schema → Monday opportunity mapping
+# -----------------------------------------------------------------------------
+# Generated: 2026-04-25
+# Spec: ../canonical_template_format.md
+# Manifest: ./manifest.yaml (v1.1)
+# Inventory source: ./research/funding_opps_inventory.md  (Monday board 18409744388)
+# Profiles: ./research/profiles/*.md
+# Summary: ./research/research_summary.md
+#
+# One block per opportunity. Each opportunity carries:
+#   - identity:        monday_id, slug, name, funder_org
+#   - canonical link:  canonical_funder_ref (filename in funders/, or null)
+#   - kind & subset:   funder_kind + canonical_subset (heavy | medium | light)
+#   - funder_metadata: F01..F30 (every opportunity gets all 30 fields, null OK)
+#   - slot mapping:    required_slots, required_sub_slots, useful_slots
+#   - submission_notes
+# -----------------------------------------------------------------------------
+
+version: "1.1"
+generated: 2026-04-25
+total_opportunities: 71
+monday_board_id: 18409744388
+
+opportunities:
+
+  # ---------------------------------------------------------------------------
+  # 1 — ARIA (UK) — Full Programmes
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600602"
+    slug: aria-uk-full-programmes
+    name: "ARIA (UK) — Full Programmes"
+    funder_org: "ARIA (UK)"
+    canonical_funder_ref: null
+    funder_kind: federal_OT
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Late
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Government
+      F05_funding_type: Grants
+      F06_funding_subtype: Programmes
+      F07_focus_areas: [AI for Science, AI Safety]
+      F08_deadline: 2026-05-08
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "Programme-specific online form (concept paper → full proposal)"
+      F12_instrument: grant
+      F13_submission_stages: [concept, full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: fEC
+      F19_award_period_months: 60
+      F20_joint_program_partners: []
+      F21_funder_process_type: hybrid
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 5000000
+      F24_max_award_usd: 50000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Programme-fit", "Technical novelty", "ARIA-style ambition", "Team & consortium fit"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U09, U11, U15, U18, U20, A01, A02, A03, A04]
+    required_sub_slots: [U03.4, U06.5, U07.2, U08.2]
+    useful_slots: [U10, U13, U14, U17]
+    submission_notes: |
+      ARIA programmes are mostly proactive — teams are matched to a Programme Director and a programme-specific call.
+      Programme Directors author the call, so requirements vary per programme. Default to ARIA's "ambitious + uneven"
+      framing rather than conventional academic-grant style. Two-stage: concept paper → invited full proposal.
+
+  # ---------------------------------------------------------------------------
+  # 2 — ARPA-H Health Science Futures (HSF) ISO
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600727"
+    slug: arpa-h-health-science-futures-iso
+    name: "ARPA-H Health Science Futures (HSF) ISO"
+    funder_org: "ARPA-H"
+    canonical_funder_ref: arpah_mission_office.yaml
+    funder_kind: federal_OT
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Late
+      F03_pipeline_status: Under Consideration
+      F04_funding_source_type: Government
+      F05_funding_type: Grants
+      F06_funding_subtype: ISO (Innovative Solutions Opening)
+      F07_focus_areas: [Healthcare]
+      F08_deadline: 2029-03-05
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "Solution Summary → written-feedback gate → Full Proposal"
+      F12_instrument: hybrid
+      F13_submission_stages: [summary, full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: OT_negotiated
+      F19_award_period_months: 60
+      F20_joint_program_partners: []
+      F21_funder_process_type: hybrid
+      F22_canonical_funder_ref: arpah_mission_office.yaml
+      F23_min_award_usd: 0
+      F24_max_award_usd: null
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: true
+      F29_review_criteria: ["Mission relevance", "Technical approach", "Team capability", "Cost realism"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U09, U11, U13, U14, U15, U16, U17, U18, U19, U20, A01, A02, A03, A04]
+    required_sub_slots: [U06.5, U07.2, U08.2, U16.7, A03.6]
+    useful_slots: [U10, U12, U21]
+    submission_notes: |
+      ARPA-H HSF is one of three Mission Offices. Submit Solution Summary first; ARPA-H provides written feedback
+      before any full proposal is accepted. Phased budget structure with optional periods. Research-security/NSPM-33
+      disclosures required. SAM.gov registration required.
+
+  # ---------------------------------------------------------------------------
+  # 3 — NSF Tech Labs
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813491582"
+    slug: nsf-tech-labs
+    name: "NSF Tech Labs"
+    funder_org: "NSF"
+    canonical_funder_ref: nsf_tech_labs.yaml
+    funder_kind: federal_OT
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Late
+      F03_pipeline_status: Under Consideration
+      F04_funding_source_type: Government
+      F05_funding_type: Grants
+      F06_funding_subtype: Tech Labs OT
+      F07_focus_areas: [AI for Science]
+      F08_deadline: null
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "RFI → solicited concept → full proposal"
+      F12_instrument: hybrid
+      F13_submission_stages: [concept, full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: OT_negotiated
+      F19_award_period_months: 60
+      F20_joint_program_partners: []
+      F21_funder_process_type: hybrid
+      F22_canonical_funder_ref: nsf_tech_labs.yaml
+      F23_min_award_usd: 10000000
+      F24_max_award_usd: 50000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Intellectual merit", "Broader impacts", "Phased technical plan", "Translation pathway"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U09, U10, U11, U12, U15, U17, U18, U20, A01, A02, A03, A04]
+    required_sub_slots: [U06.5, U07.2, U07.5, U08.2, U16.7, A03.6]
+    useful_slots: [U13, U14, U16, U21]
+    submission_notes: |
+      NSF Tech Labs is structured as an OT with phase-envelope budgets ($10–50M/yr × ≥4y). NSF Broader Impacts is
+      a separate review criterion. Translation pathway is load-bearing.
+
+  # ---------------------------------------------------------------------------
+  # 4 — NIH Bridge2AI Initiative (Stage II)
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600729"
+    slug: nih-bridge2ai-stage-ii
+    name: "NIH Bridge2AI Initiative (Stage II)"
+    funder_org: "NIH"
+    canonical_funder_ref: nih_r01.yaml
+    funder_kind: federal_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Late
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Government
+      F05_funding_type: Grants
+      F06_funding_subtype: Cooperative Agreement (UG3/UH3)
+      F07_focus_areas: [AI for Science]
+      F08_deadline: 2026-07-01
+      F09_deadline_type: Single Deadline
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "NIH ASSIST / Grants.gov"
+      F12_instrument: grant
+      F13_submission_stages: [LOI, full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: F&A_negotiated
+      F19_award_period_months: 60
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: nih_r01.yaml
+      F23_min_award_usd: 0
+      F24_max_award_usd: 25000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Significance", "Investigator(s)", "Innovation", "Approach", "Environment"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U11, U12, U13, U14, U15, U16, U17, U20, A01, A02, A03, A04]
+    required_sub_slots: [U03.6, U08.5, U12.6, U12.7, U14.7, U16.7]
+    useful_slots: [U09, U10, U18, U19]
+    submission_notes: |
+      Bridge2AI Stage II builds on the Stage I data-generation projects. Heavy emphasis on AI-readiness
+      (datasets AI-ready by design) and ELSI plan. Phase transition (UG3→UH3) go/no-go criteria required.
+
+  # ---------------------------------------------------------------------------
+  # 5 — NSF-NIH Smart Health Program
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600649"
+    slug: nsf-nih-smart-health-program
+    name: "NSF-NIH Smart Health Program"
+    funder_org: "NSF / NIH"
+    canonical_funder_ref: null
+    funder_kind: federal_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Late
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Government
+      F05_funding_type: Grants
+      F06_funding_subtype: Joint NSF/NIH solicitation
+      F07_focus_areas: [AI for Science]
+      F08_deadline: 2026-09-10
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "Research.gov / NSF FastLane"
+      F12_instrument: grant
+      F13_submission_stages: [full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: F&A_negotiated
+      F19_award_period_months: 48
+      F20_joint_program_partners: [NIH]
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: null
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Intellectual merit", "Broader impacts", "Smart Health relevance"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U11, U13, U14, U15, U16, U17, U20, A01, A02, A03, A04]
+    required_sub_slots: [U13.7, U14.7, U16.7, A04.11]
+    useful_slots: [U09, U10, U12, U18, U21]
+    submission_notes: |
+      Joint NSF + NIH Smart Health solicitation. Includes mandatory publication acknowledgment template
+      for joint-program awards. NSF Broader Impacts review criterion applies.
+
+  # ---------------------------------------------------------------------------
+  # 6 — NSF Convergence Accelerator
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600707"
+    slug: nsf-convergence-accelerator
+    name: "NSF Convergence Accelerator"
+    funder_org: "NSF"
+    canonical_funder_ref: null
+    funder_kind: federal_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Late
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Government
+      F05_funding_type: Grants
+      F06_funding_subtype: Phase 1 / Phase 2 cooperative
+      F07_focus_areas: [Healthcare]
+      F08_deadline: null
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "Track-aligned solicitation via Research.gov"
+      F12_instrument: grant
+      F13_submission_stages: [round1, round2]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: F&A_negotiated
+      F19_award_period_months: 36
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 750000
+      F24_max_award_usd: 5000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Convergence research", "Use-inspired research", "Team formation", "Translation potential"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U11, U17, U18, U20, A01, A02, A03, A04]
+    required_sub_slots: [U07.5, U08.5, U17.7, U20.6]
+    useful_slots: [U09, U10, U12, U13, U14, U21]
+    submission_notes: |
+      Convergence Accelerator runs Phase 1 (planning, ~$750k) → Phase 2 (build, ~$5M). Customer discovery /
+      human-centered-design plan is a hard requirement. Track-alignment narrative is load-bearing.
+
+  # ---------------------------------------------------------------------------
+  # 7 — Convergent Research — FRO
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600599"
+    slug: convergent-research-fro
+    name: "Convergent Research — FRO"
+    funder_org: "Convergent Research"
+    canonical_funder_ref: null
+    funder_kind: philanthropic_grant_proactive
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Late
+      F03_pipeline_status: Under Consideration
+      F04_funding_source_type: FRO / Moonshot
+      F05_funding_type: Grants
+      F06_funding_subtype: FRO incubation
+      F07_focus_areas: [AI for Science]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "Idea submission via convergentresearch.org/get-involved"
+      F12_instrument: grant
+      F13_submission_stages: [concept, full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: capped_negotiated
+      F19_award_period_months: 60
+      F20_joint_program_partners: []
+      F21_funder_process_type: hybrid
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 10000000
+      F24_max_award_usd: 100000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: no_confidential_ip
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["FRO-fit", "Coordination dividend", "Capital-intensive necessity", "Open-output commitment"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U09, U11, U12, U15, U17, U18, U19, U20, A01, A02, A03, A04]
+    required_sub_slots: [U06.5, U07.2, U08.2, A04.9]
+    useful_slots: [U10, U13, U14, U21, U22]
+    submission_notes: |
+      Convergent Research incubates Focused Research Organizations (FROs) — ~$50M, 5y, open-output, capital-intensive
+      coordination problems. Funder reaches out proactively after idea submission. Confidentiality marker for unfiled IP.
+
+  # ---------------------------------------------------------------------------
+  # 8 — NIH PRIMED-AI Program
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600650"
+    slug: nih-primed-ai-program
+    name: "NIH PRIMED-AI Program"
+    funder_org: "NIH"
+    canonical_funder_ref: nih_r01.yaml
+    funder_kind: federal_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Late
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Government
+      F05_funding_type: Grants
+      F06_funding_subtype: Common Fund — PRIMED-AI
+      F07_focus_areas: [AI for Science]
+      F08_deadline: 2026-02-11
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "NIH ASSIST / Grants.gov"
+      F12_instrument: grant
+      F13_submission_stages: [LOI, full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: F&A_negotiated
+      F19_award_period_months: 60
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: nih_r01.yaml
+      F23_min_award_usd: 0
+      F24_max_award_usd: 25000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Significance", "Investigators", "Innovation", "Approach", "Environment"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U11, U12, U13, U14, U15, U16, U17, U20, A01, A02, A03, A04]
+    required_sub_slots: [U03.6, U12.6, U12.7, U14.7, U16.7, U20.1]
+    useful_slots: [U09, U10, U18, U19, U21]
+    submission_notes: |
+      PRIMED-AI emphasizes multimodal data integration, AI-readiness, federated learning, and ELSI plan.
+      EHR vendor partnership narrative load-bearing.
+
+  # ---------------------------------------------------------------------------
+  # 9 — Wellcome Leap Programs
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600588"
+    slug: wellcome-leap-programs
+    name: "Wellcome Leap Programs"
+    funder_org: "Wellcome Leap"
+    canonical_funder_ref: null
+    funder_kind: philanthropic_grant_proactive
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Late
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Philanthropic Foundation
+      F05_funding_type: Grants
+      F06_funding_subtype: Thrust-aligned program
+      F07_focus_areas: [AI for Science, Healthcare, Proactive Health]
+      F08_deadline: 2026-04-23
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "Abstract → full proposal via wellcomeleap.smapply.org"
+      F12_instrument: grant
+      F13_submission_stages: [abstract, full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: F&A_negotiated
+      F19_award_period_months: 36
+      F20_joint_program_partners: []
+      F21_funder_process_type: hybrid
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 1000000
+      F24_max_award_usd: 10000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Thrust-fit", "Quantitative ambition", "Technical approach", "Open-output commitment"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U09, U11, U12, U15, U17, U18, U20, A01, A02, A03, A04]
+    required_sub_slots: [U04.5, U07.2, U08.2, A03.6]
+    useful_slots: [U10, U13, U14, U22]
+    submission_notes: |
+      Wellcome Leap runs DARPA-style thrust programs. Two-stage: mandatory abstract → invited 25-page full proposal.
+      Quantitative magnitude framing (3x, 10x). MARFA (academic) / CORFA (commercial) contract instrument.
+      Open-by-default for outputs.
+
+  # ---------------------------------------------------------------------------
+  # 10 — Schmidt Sciences Programs
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813491581"
+    slug: schmidt-sciences-programs
+    name: "Schmidt Sciences Programs"
+    funder_org: "Schmidt Sciences"
+    canonical_funder_ref: null
+    funder_kind: private_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Late
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Philanthropic Foundation
+      F05_funding_type: Grants
+      F06_funding_subtype: Multi-program (AI for Science, Postdocs, etc.)
+      F07_focus_areas: [AI for Science, General Tech]
+      F08_deadline: 2026-05-17
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "Program-specific portal"
+      F12_instrument: grant
+      F13_submission_stages: [LOI, full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: capped_negotiated
+      F19_award_period_months: 36
+      F20_joint_program_partners: []
+      F21_funder_process_type: hybrid
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 100000
+      F24_max_award_usd: 5000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Scientific ambition", "AI-for-science fit", "Team", "Open science"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U11, U12, U15, U18, U20, A01, A02, A03, A04]
+    required_sub_slots: [U11.8, A03.7]
+    useful_slots: [U09, U10, U13, U14, U17, U21]
+    submission_notes: |
+      Multi-program funder; per-program eligibility varies (AI for Science, Postdoc programs, etc.).
+      Postdoc IDP and mentor/sponsor letter required for fellowship-track programs.
+
+  # ---------------------------------------------------------------------------
+  # 11 — ARIA (UK) — Opportunity Seeds
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813491585"
+    slug: aria-uk-opportunity-seeds
+    name: "ARIA (UK) — Opportunity Seeds"
+    funder_org: "ARIA (UK)"
+    canonical_funder_ref: null
+    funder_kind: federal_OT
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Government
+      F05_funding_type: Grants
+      F06_funding_subtype: Seed (single-stage)
+      F07_focus_areas: [AI for Science, General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "ARIA grant platform single-stage"
+      F12_instrument: grant
+      F13_submission_stages: [full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: fEC
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 50000
+      F24_max_award_usd: 250000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Opportunity-space fit", "Feasibility", "Team"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U09, U11, U15, A01, A02, A03, A04]
+    required_sub_slots: [U03.4, U08.2]
+    useful_slots: [U10, U18, U20, U21]
+    submission_notes: |
+      ARIA Opportunity Seeds are smaller (~£250k) single-stage grants attached to existing opportunity spaces.
+      Lighter than full programmes. UK-resident PI / consortium preference.
+
+  # ---------------------------------------------------------------------------
+  # 12 — ARPA-H Proactive Health Office (PHO) ISO
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600669"
+    slug: arpa-h-proactive-health-office-iso
+    name: "ARPA-H Proactive Health Office (PHO) ISO"
+    funder_org: "ARPA-H"
+    canonical_funder_ref: arpah_mission_office.yaml
+    funder_kind: federal_OT
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Late
+      F03_pipeline_status: Under Consideration
+      F04_funding_source_type: Government
+      F05_funding_type: Grants
+      F06_funding_subtype: ISO (Innovative Solutions Opening)
+      F07_focus_areas: [Proactive Health]
+      F08_deadline: 2029-03-05
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "Solution Summary → written-feedback gate → Full Proposal"
+      F12_instrument: hybrid
+      F13_submission_stages: [summary, full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: OT_negotiated
+      F19_award_period_months: 60
+      F20_joint_program_partners: []
+      F21_funder_process_type: hybrid
+      F22_canonical_funder_ref: arpah_mission_office.yaml
+      F23_min_award_usd: 0
+      F24_max_award_usd: null
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: true
+      F29_review_criteria: ["Mission relevance", "Population-level intervention", "Technical approach", "Team"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U09, U11, U13, U14, U15, U16, U17, U18, U19, U20, A01, A02, A03, A04]
+    required_sub_slots: [U06.5, U07.2, U08.2, U16.7, U17.7, A03.6]
+    useful_slots: [U10, U12, U21]
+    submission_notes: |
+      Same ISO mechanics as HSF (written-feedback gate, phased budgets, NSPM-33 disclosures). PHO-specific:
+      population-level intervention design and proactive-health framing.
+
+  # ---------------------------------------------------------------------------
+  # 13 — Horizon Europe — Cluster 1 Health
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600652"
+    slug: horizon-europe-cluster-1-health
+    name: "Horizon Europe — Cluster 1 Health"
+    funder_org: "European Commission"
+    canonical_funder_ref: null
+    funder_kind: intergovernmental_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Late
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Intergovernmental
+      F05_funding_type: Grants
+      F06_funding_subtype: RIA / IA / CSA
+      F07_focus_areas: [Healthcare]
+      F08_deadline: 2026-04-16
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "EU Funding & Tenders Portal"
+      F12_instrument: grant
+      F13_submission_stages: [full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: 30
+      F18_indirect_cost_rule: flat_25pct
+      F19_award_period_months: 48
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 1500000
+      F24_max_award_usd: 10000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Excellence", "Impact", "Implementation"]
+      F30_required_partners_count: 3
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U11, U12, U13, U14, U15, U16, U17, U18, U19, U20, A01, A02, A03, A04]
+    required_sub_slots: [U13.6, A03.6, A03.10]
+    useful_slots: [U09, U10, U21, U22]
+    submission_notes: |
+      Horizon Europe consortium required: ≥3 independent legal entities from ≥3 different EU/Associated countries.
+      Three-pillar evaluation (Excellence/Impact/Implementation). CDE Plan, Gender-in-research-content, Ethics
+      self-assessment (13-issue checklist), 25% flat-rate indirect.
+
+  # ---------------------------------------------------------------------------
+  # 14 — Google.org AI for Science Impact Challenge
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600710"
+    slug: google-org-ai-for-science-impact-challenge
+    name: "Google.org AI for Science Impact Challenge"
+    funder_org: "Google"
+    canonical_funder_ref: google_impact_challenge.yaml
+    funder_kind: private_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Intermediate
+      F03_pipeline_status: Under Preparation
+      F04_funding_source_type: Corporate
+      F05_funding_type: Grants
+      F06_funding_subtype: Impact Challenge
+      F07_focus_areas: [AI for Science]
+      F08_deadline: 2026-05-01
+      F09_deadline_type: Single Deadline
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "Online challenge form"
+      F12_instrument: grant
+      F13_submission_stages: [full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: capped_negotiated
+      F19_award_period_months: 36
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: google_impact_challenge.yaml
+      F23_min_award_usd: 500000
+      F24_max_award_usd: 1500000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Mission alignment", "Use of AI", "Feasibility", "Team", "Impact"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U09, U11, U12, U13, U14, U15, U17, U19, U20, A01, A02, A03, A04, A05]
+    required_sub_slots: []
+    useful_slots: [U10, U16, U18, U21]
+    submission_notes: |
+      Google.org Impact Challenge — competitive, single-stage, ~$1.5M typical. Heavy focus on AI use,
+      mission alignment, and demonstrated impact.
+
+  # ---------------------------------------------------------------------------
+  # 15 — Chan Zuckerberg Initiative (CZI)
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600629"
+    slug: czi-science
+    name: "Chan Zuckerberg Initiative (CZI)"
+    funder_org: "CZI"
+    canonical_funder_ref: null
+    funder_kind: private_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Small Grants
+      F02_maturity_stage: Intermediate
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Philanthropic Foundation
+      F05_funding_type: Small Grants
+      F06_funding_subtype: Science RFA
+      F07_focus_areas: [AI for Science]
+      F08_deadline: 2026-06-05
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "CZI portal RFA"
+      F12_instrument: grant
+      F13_submission_stages: [full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: flat_15pct
+      F19_award_period_months: 36
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 100000
+      F24_max_award_usd: 5000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Scientific impact", "Open science", "Diversity", "Feasibility"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U11, U12, U13, U15, U17, U20, A01, A02, A03, A04]
+    required_sub_slots: [U12.7, A03.6]
+    useful_slots: [U09, U10, U14, U18, U19, U22]
+    submission_notes: |
+      CZI Science RFAs vary by program. 15% indirect-cost cap. Open Science is load-bearing — preprints, FAIR data.
+      No funds to mainland China.
+
+  # ---------------------------------------------------------------------------
+  # 16 — Wellcome Trust Discovery Programs
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813501684"
+    slug: wellcome-trust-discovery-awards
+    name: "Wellcome Trust Discovery Programs"
+    funder_org: "Wellcome Trust"
+    canonical_funder_ref: null
+    funder_kind: private_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Late
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Philanthropic Foundation
+      F05_funding_type: Grants
+      F06_funding_subtype: Discovery Award
+      F07_focus_areas: [Healthcare]
+      F08_deadline: 2026-03-31
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "Preliminary application → Full application"
+      F12_instrument: grant
+      F13_submission_stages: [LOI, full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: fEC
+      F19_award_period_months: 84
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 1000000
+      F24_max_award_usd: 5000000
+      F25_residency_required: false
+      F26_residency_location: "UK / Ireland / LMIC (excl. mainland China & India)"
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Research vision", "Novelty", "Methodology", "Team & environment", "EDI"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U11, U12, U13, U15, U16, U17, U19, U20, A01, A02, A03, A04]
+    required_sub_slots: [U12.7, A03.6, A03.9, A03.10]
+    useful_slots: [U09, U10, U14, U21, U22]
+    submission_notes: |
+      Wellcome Discovery Awards are 5-8y, £1-3M, UK-fEC or LMIC-equivalent. PI must commit ≥20% of time
+      and have a permanent contract. Cannot fund mainland China; LMIC eligibility list applies.
+
+  # ---------------------------------------------------------------------------
+  # 17 — Draper Richards Kaplan Foundation
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813491466"
+    slug: draper-richards-kaplan-foundation
+    name: "Draper Richards Kaplan Foundation"
+    funder_org: "DRK Foundation"
+    canonical_funder_ref: null
+    funder_kind: private_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Small Grants
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Philanthropic Foundation
+      F05_funding_type: Small Grants
+      F06_funding_subtype: 3-year cohort engagement
+      F07_focus_areas: [Healthcare]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 3
+      F11_initial_submission_format: "Online application + pitch deck/business plan"
+      F12_instrument: TBD-at-closing
+      F13_submission_stages: [full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: 3
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: direct_only
+      F19_award_period_months: 36
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 100000
+      F24_max_award_usd: 300000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Problem urgency", "Systems thinking", "Scalability (10k lives in 5y)", "Team", "Theory of change"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U11, U17, U18, U19, U22, A01, A02, A03, A04]
+    required_sub_slots: [U04.5, U11.7, A04.7]
+    useful_slots: [U09, U10, U12, U13, U21]
+    submission_notes: |
+      DRK chooses instrument (grant vs. equity vs. SAFE) at closing. 3-year structured engagement, board placement.
+      Theory of change required. Scalability bar: ≥10,000 lives in 5 years.
+
+  # ---------------------------------------------------------------------------
+  # 18 — Genesis Mission (DOE)
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600697"
+    slug: doe-genesis-mission
+    name: "Genesis Mission"
+    funder_org: "DoE"
+    canonical_funder_ref: doe_genesis.yaml
+    funder_kind: federal_OT
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Grants
+      F02_maturity_stage: Late
+      F03_pipeline_status: Under Preparation
+      F04_funding_source_type: Government
+      F05_funding_type: Grants
+      F06_funding_subtype: Genesis Mission Focus Area 2
+      F07_focus_areas: [AI for Science]
+      F08_deadline: null
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "Concept paper → full proposal via DOE portal"
+      F12_instrument: hybrid
+      F13_submission_stages: [concept, full]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: OT_negotiated
+      F19_award_period_months: 60
+      F20_joint_program_partners: []
+      F21_funder_process_type: hybrid
+      F22_canonical_funder_ref: doe_genesis.yaml
+      F23_min_award_usd: 5000000
+      F24_max_award_usd: 50000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Genesis-mission fit", "Phased technical plan", "Team", "Translation"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U09, U11, U12, U13, U14, U15, U16, U17, U18, U19, U20, A01, A02, A03, A04]
+    required_sub_slots: [U06.5, U07.2, U07.5, U08.2, U08.5, U16.7, A03.6, A03.13]
+    useful_slots: [U10, U21, U22]
+    submission_notes: |
+      Genesis Mission is structured as Phase I/Phase II OT. 1 lead per institution (limited submission).
+      NSPM-33 research-security disclosures required. Heavy phased-budget structure.
+
+  # ---------------------------------------------------------------------------
+  # 19 — Coefficient Giving — Global Health R&D
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600712"
+    slug: coefficient-giving-global-health-rd
+    name: "Coefficient Giving — Global Health R&D"
+    funder_org: "Coefficient Giving"
+    canonical_funder_ref: null
+    funder_kind: philanthropic_grant_proactive
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Small Grants
+      F02_maturity_stage: Intermediate
+      F03_pipeline_status: Under Consideration
+      F04_funding_source_type: Philanthropic Foundation
+      F05_funding_type: Small Grants
+      F06_funding_subtype: Science & Global Health R&D Fund
+      F07_focus_areas: [Healthcare]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "Email pitch (1-2 pp) to science@coefficientgiving.org"
+      F12_instrument: grant
+      F13_submission_stages: [concept, full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: capped_negotiated
+      F19_award_period_months: 36
+      F20_joint_program_partners: []
+      F21_funder_process_type: proactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 100000
+      F24_max_award_usd: 50000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Counterfactual", "Cost-effectiveness (DALY/$)", "Team", "Open output"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U11, U12, U17, U18, U21, U22, A01, A02, A03, A04]
+    required_sub_slots: [U18.6, U18.7, U21.1]
+    useful_slots: [U09, U10, U13, U14, U15, U19]
+    submission_notes: |
+      Coefficient Giving (formerly Open Philanthropy) is primarily proactive. Email-first; counterfactual and
+      cost-effectiveness (DALYs/$) are load-bearing. Existing-proposal-from-another-funder is acceptable.
+
+  # ---------------------------------------------------------------------------
+  # 20 — EA Funds — Long-Term Future Fund
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813501604"
+    slug: ea-funds-long-term-future-fund
+    name: "EA Funds - Long-term Future Fund"
+    funder_org: "Effective Altruism"
+    canonical_funder_ref: null
+    funder_kind: ea_micro_grant
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Small Grants
+      F02_maturity_stage: Early
+      F03_pipeline_status: Under Consideration
+      F04_funding_source_type: EA / Longtermist
+      F05_funding_type: Small Grants
+      F06_funding_subtype: LTFF
+      F07_focus_areas: [AI Safety]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "EA Funds online form"
+      F12_instrument: grant
+      F13_submission_stages: [full]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: direct_only
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 1000
+      F24_max_award_usd: 500000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Counterfactual", "Theory of impact", "Cost-effectiveness", "Honest weaknesses"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U05, U06, U07, U11, U21, U22, A01, A02, A03]
+    required_sub_slots: [U05.4, U21.1]
+    useful_slots: [U02, U09, U10, U12, U14, U15]
+    submission_notes: |
+      LTFF is light-touch: ~10k-char application; rolling. Counterfactual and theory-of-impact load-bearing.
+      Individual or org grantee. ~4-month review cycles.
+
+  # ---------------------------------------------------------------------------
+  # 21 — Emergent Ventures
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813512971"
+    slug: emergent-ventures
+    name: "Emergent Ventures"
+    funder_org: "Mercatus Center"
+    canonical_funder_ref: null
+    funder_kind: ea_micro_grant
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Small Grants
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Philanthropic Foundation
+      F05_funding_type: Small Grants
+      F06_funding_subtype: Micro-grant / Tyler Cowen
+      F07_focus_areas: []
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 3
+      F11_initial_submission_format: "Online form via mercatus.org"
+      F12_instrument: grant
+      F13_submission_stages: [full]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: direct_only
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 5000
+      F24_max_award_usd: 100000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Talent", "Bold ideas", "Counterfactual"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U11, U21, A01, A02, A03]
+    required_sub_slots: [A03.12]
+    useful_slots: [U05, U06, U07, U22]
+    submission_notes: |
+      Emergent Ventures runs as Tyler Cowen's discretionary micro-grant program. Light-touch (1-2 page proposal).
+      Min applicant age 13+. Strong on talent/counterfactual; minimal admin.
+
+  # ---------------------------------------------------------------------------
+  # 22 — Robert Wood Johnson Foundation (RWJF)
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600725"
+    slug: rwjf
+    name: "Robert Wood Johnson Foundation (RWJF)"
+    funder_org: "RWJF"
+    canonical_funder_ref: null
+    funder_kind: private_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Small Grants
+      F02_maturity_stage: Intermediate
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Philanthropic Foundation
+      F05_funding_type: Small Grants
+      F06_funding_subtype: Active funding opportunities (multi-program)
+      F07_focus_areas: [Healthcare]
+      F08_deadline: 2026-04-13
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 3
+      F11_initial_submission_format: "RWJF online (program-specific RFA)"
+      F12_instrument: grant
+      F13_submission_stages: [LOI, full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: capped_negotiated
+      F19_award_period_months: 24
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 50000
+      F24_max_award_usd: 500000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Health-equity fit", "Theory of change", "Community engagement", "Sustainability"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U11, U13, U17, U19, U22, A01, A02, A03, A04]
+    required_sub_slots: [U13.7, A04.8]
+    useful_slots: [U09, U10, U12, U18, U21]
+    submission_notes: |
+      RWJF runs many sub-programs, all requiring 501(c)(3) determination letter. Theory of change and
+      community-co-design are load-bearing. ~25% indirect.
+
+  # ---------------------------------------------------------------------------
+  # 23 — EA Funds — Infrastructure
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600589"
+    slug: ea-funds-infrastructure
+    name: "EA Funds - Infrastructure"
+    funder_org: "Effective Altruism"
+    canonical_funder_ref: null
+    funder_kind: ea_micro_grant
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Small Grants
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: EA / Longtermist
+      F05_funding_type: Small Grants
+      F06_funding_subtype: EAIF
+      F07_focus_areas: [AI for Science, AI Safety, Open Science]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 3
+      F11_initial_submission_format: "EA Funds online form"
+      F12_instrument: grant
+      F13_submission_stages: [full]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: direct_only
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 1000
+      F24_max_award_usd: 250000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Counterfactual", "Theory of impact", "Cost-effectiveness", "Honest weaknesses"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U05, U06, U07, U11, U21, U22, A01, A02, A03]
+    required_sub_slots: [U05.4, U21.1]
+    useful_slots: [U02, U09, U10, U12, U14, U15]
+    submission_notes: |
+      Same form/cycle as LTFF but funds EA-ecosystem infrastructure (talent dev, profession networks).
+
+  # ---------------------------------------------------------------------------
+  # 24 — AWS Imagine Grant — Pathfinder GenAI
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813512997"
+    slug: aws-imagine-grant-pathfinder-genai
+    name: "AWS Imagine Grant — Pathfinder GenAI"
+    funder_org: "AWS"
+    canonical_funder_ref: null
+    funder_kind: private_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Small Grants
+      F02_maturity_stage: Intermediate
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Small Grants
+      F06_funding_subtype: Imagine Grant Pathfinder
+      F07_focus_areas: [AI for Science]
+      F08_deadline: 2026-06-06
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "Two-round online portal (Round 2 by invitation)"
+      F12_instrument: hybrid
+      F13_submission_stages: [round1, round2]
+      F14_application_effort: heavy
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: capped_negotiated
+      F19_award_period_months: 24
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 100000
+      F24_max_award_usd: 300000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Mission alignment", "Frontier AI use case", "Data readiness", "Implementation"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U11, U14, U15, U17, U20, A01, A02, A03, A04]
+    required_sub_slots: [A04.8, U20.6]
+    useful_slots: [U09, U10, U12, U13, U18, U19]
+    submission_notes: |
+      US 501(c) only; UK/Ireland regional variants exist. Pathfinder requires GenAI/agentic AI as core workload
+      plus AWS technical reference architecture. Round 2 by invitation.
+
+  # ---------------------------------------------------------------------------
+  # 25 — Gates Foundation Grand Challenges — Cost-Disruptive Tools
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600600"
+    slug: gates-foundation-grand-challenges-cost-disruptive-tools
+    name: "Gates Foundation Grand Challenges - Cost-Disruptive Tools for Diagnosis and Screening"
+    funder_org: "Gates Foundation"
+    canonical_funder_ref: null
+    funder_kind: private_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Small Grants
+      F02_maturity_stage: Intermediate
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Philanthropic Foundation
+      F05_funding_type: Small Grants
+      F06_funding_subtype: Grand Challenges challenge
+      F07_focus_areas: [Healthcare]
+      F08_deadline: 2026-04-28
+      F09_deadline_type: Single Deadline
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "Grand Challenges portal"
+      F12_instrument: grant
+      F13_submission_stages: [full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: flat_10pct
+      F19_award_period_months: 24
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 100000
+      F24_max_award_usd: 1000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Cost-disruption magnitude", "Global access", "LMIC implementation", "Team"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U11, U13, U17, U18, U19, A01, A02, A03, A04]
+    required_sub_slots: [U04.5, U18.7, U19.6, A04.8]
+    useful_slots: [U09, U10, U12, U14, U15, U22]
+    submission_notes: |
+      Gates GC: cost-disruptive framing required; 10% indirect cap; Global Access Policy commitment;
+      LMIC implementation pathway load-bearing.
+
+  # ---------------------------------------------------------------------------
+  # 26 — Astera Institute Residency
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813491505"
+    slug: astera-institute-residency
+    name: "Astera Institute Residency"
+    funder_org: "Astera"
+    canonical_funder_ref: astera_residency.yaml
+    funder_kind: private_fellowship
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Accelerators & Incubators
+      F02_maturity_stage: Early
+      F03_pipeline_status: Under Preparation
+      F04_funding_source_type: Philanthropic Foundation
+      F05_funding_type: Accelerators & Incubators
+      F06_funding_subtype: Residency
+      F07_focus_areas: [AI for Science, Open Science]
+      F08_deadline: 2026-04-19
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "Astera online application"
+      F12_instrument: fellowship
+      F13_submission_stages: [full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: direct_only
+      F19_award_period_months: 24
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: astera_residency.yaml
+      F23_min_award_usd: 100000
+      F24_max_award_usd: 200000
+      F25_residency_required: true
+      F26_residency_location: "Emeryville, CA"
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Astera-fit", "Anti-goals/out-of-scope clarity", "Team", "Open science"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U06, U07, U09, U10, U11, U12, U17, A01, A02, A03, A04, A05]
+    required_sub_slots: [U09.4, A03.8, A04.6]
+    useful_slots: [U05, U08, U13, U14, U15, U18, U19, U20]
+    submission_notes: |
+      Astera Residency requires in-person Emeryville residency. Includes 2-min demo video gate.
+      Out-of-scope/anti-goals (U09.4) is explicitly required (Astera Q7).
+
+  # ---------------------------------------------------------------------------
+  # 27 — Fast Forward Accelerator
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813491457"
+    slug: fast-forward-accelerator
+    name: "Fast Forward Accelerator"
+    funder_org: "Fast Forward"
+    canonical_funder_ref: null
+    funder_kind: accelerator
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Accelerators & Incubators
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Philanthropic Foundation
+      F05_funding_type: Accelerators & Incubators
+      F06_funding_subtype: Tech-nonprofit accelerator
+      F07_focus_areas: [Open Science, General Tech]
+      F08_deadline: 2026-09-08
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 3
+      F11_initial_submission_format: "Online application via apply.ffwd.org"
+      F12_instrument: hybrid
+      F13_submission_stages: [full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: direct_only
+      F19_award_period_months: 6
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 25000
+      F24_max_award_usd: 25000
+      F25_residency_required: true
+      F26_residency_location: "In-person events (US)"
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Founder proximity", "MVP demonstrated", "Software-first scaling", "Mission impact"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U11, U17, U19, A01, A02, A03, A04]
+    required_sub_slots: [U11.7, A04.6]
+    useful_slots: [U02, U05, U06, U10, U18, U22]
+    submission_notes: |
+      Fast Forward funds early-stage tech nonprofits with MVP. Founder lived-experience/proximity to problem
+      is load-bearing. MVP demo gate. In-person events required.
+
+  # ---------------------------------------------------------------------------
+  # 28 — AstraZeneca CHANGE Program
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600709"
+    slug: astrazeneca-change
+    name: "AstraZeneca CHANGE Program"
+    funder_org: "AstraZeneca Foundation"
+    canonical_funder_ref: null
+    funder_kind: private_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Small Grants
+      F02_maturity_stage: Intermediate
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Small Grants
+      F06_funding_subtype: Health-equity grant
+      F07_focus_areas: [Healthcare]
+      F08_deadline: 2026-04-29
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 2
+      F11_initial_submission_format: "Initial application → invited full via CyberGrants"
+      F12_instrument: grant
+      F13_submission_stages: [LOI, full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: capped_negotiated
+      F19_award_period_months: 24
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 50000
+      F24_max_award_usd: 500000
+      F25_residency_required: false
+      F26_residency_location: "CA / DE / MD / MA / TX"
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Health equity", "Social drivers of health", "Partnership", "Sustainability"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U05, U06, U07, U11, U13, U17, U19, U22, A01, A02, A03, A04]
+    required_sub_slots: [U13.7, A03.10, A03.11, A04.8]
+    useful_slots: [U02, U09, U10, U18, U21]
+    submission_notes: |
+      US-only, 501(c)(3) (no 509(a)(3)), revenue ≤$12M, served populations in CA/DE/MD/MA/TX. Theory of change
+      required. Two-stage with CyberGrants platform for full proposal.
+
+  # ---------------------------------------------------------------------------
+  # 29 — UNESCO/WHO Open Science Projects
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497870"
+    slug: unesco-who-open-science
+    name: "UNESCO/WHO Open Science Projects"
+    funder_org: "UNESCO / WHO"
+    canonical_funder_ref: null
+    funder_kind: intergovernmental_grant
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Small Grants
+      F02_maturity_stage: Intermediate
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Intergovernmental
+      F05_funding_type: Small Grants
+      F06_funding_subtype: Open Science Participation Grant
+      F07_focus_areas: [Healthcare, Open Science]
+      F08_deadline: 2026-04-19
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 3
+      F11_initial_submission_format: "UNESCO portal"
+      F12_instrument: grant
+      F13_submission_stages: [full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: capped_negotiated
+      F19_award_period_months: 24
+      F20_joint_program_partners: [WHO]
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 50000
+      F24_max_award_usd: 250000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Open science alignment", "Member-state benefit", "Feasibility"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U06, U07, U11, U12, U13, U17, U19, U20, A01, A02, A03, A04]
+    required_sub_slots: [U12.7, A03.10]
+    useful_slots: [U05, U08, U09, U14, U15, U18]
+    submission_notes: |
+      UNESCO Participation Programme grants follow biennial cycles aligned to UNESCO Member States. WHO program
+      details unconfirmed. Open Science Recommendation alignment is load-bearing.
+
+  # ---------------------------------------------------------------------------
+  # 30 — QB3 / Bakar Labs (UC Berkeley)
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600696"
+    slug: qb3-bakar-labs
+    name: "QB3 / Bakar Labs (UC Berkeley)"
+    funder_org: "QB3 / UC Berkeley"
+    canonical_funder_ref: null
+    funder_kind: accelerator
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Accelerators & Incubators
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Accelerators & Incubators
+      F06_funding_subtype: Wet-lab incubator
+      F07_focus_areas: [AI for Science, Healthcare, Biotech/Pharma]
+      F08_deadline: 2026-05-29
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 2
+      F11_initial_submission_format: "QB3-Berkeley application"
+      F12_instrument: in-kind
+      F13_submission_stages: [full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 24
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: true
+      F26_residency_location: "Berkeley, CA (Bakar Bio Labs)"
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Wet-lab fit", "Stage", "Team"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U11, A01, A02, A03, A04]
+    required_sub_slots: [A04.10]
+    useful_slots: [U02, U05, U06, U07, U17, U18]
+    submission_notes: |
+      Bakar Bio Labs is in-kind only (lab space + equipment, subsidized rent). Wet-lab needs assessment
+      required. Cytognosis fit low — software/AI-first.
+
+  # ---------------------------------------------------------------------------
+  # 31 — Adobe for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497887"
+    slug: adobe-for-nonprofits
+    name: "Adobe for Nonprofits"
+    funder_org: "Adobe"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Rejected
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: SaaS discount (TechSoup-mediated)
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 2
+      F11_initial_submission_format: "TechSoup verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      Adobe nonprofit discount via TechSoup. Verification-only. Inventory marks Rejected (likely Cytognosis
+      stack already covered by other discounts).
+
+  # ---------------------------------------------------------------------------
+  # 32 — AWS Activate
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600651"
+    slug: aws-activate
+    name: "AWS Activate"
+    funder_org: "AWS"
+    canonical_funder_ref: null
+    funder_kind: corporate_credit
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Accelerators & Incubators
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Accelerators & Incubators
+      F06_funding_subtype: Cloud credits (Activate Portfolio)
+      F07_focus_areas: [AI for Science, General Tech]
+      F08_deadline: 2026-06-05
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 3
+      F11_initial_submission_format: "AWS Activate online form"
+      F12_instrument: credits
+      F13_submission_stages: [full]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 1000
+      F24_max_award_usd: 100000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Stage eligibility", "Activate Provider relationship"]
+      F30_required_partners_count: 0
+    required_slots: [A01, A02, A03]
+    required_sub_slots: [A03.12]
+    useful_slots: [U01, U03]
+    submission_notes: |
+      Activate has Founders Package (self-funded, $1k) and Portfolio Package ($100k) gated by Activate Provider
+      Org ID. Cytognosis 501(c)(3) status may not qualify; AWS Imagine Grant or Nonprofit Credit Program is the
+      stronger fit.
+
+  # ---------------------------------------------------------------------------
+  # 33 — IndieBio (SOSV)
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600586"
+    slug: indiebio-sosv
+    name: "IndieBio (SOSV)"
+    funder_org: "SOSV / IndieBio"
+    canonical_funder_ref: null
+    funder_kind: vc_investment
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Investment
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Venture Capital
+      F05_funding_type: Investment
+      F06_funding_subtype: Cohort-based biotech accelerator + VC
+      F07_focus_areas: [Biotech/Pharma]
+      F08_deadline: null
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 2
+      F11_initial_submission_format: "IndieBio online application"
+      F12_instrument: investment
+      F13_submission_stages: [full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: 10
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 4
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 350000
+      F24_max_award_usd: 525000
+      F25_residency_required: true
+      F26_residency_location: "SF or NY"
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Bio thesis", "Founder team", "Wet-lab feasibility"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U10, U11, A01, A02, A03, A04]
+    required_sub_slots: [A03.8, A04.7]
+    useful_slots: [U02, U05, U06, U07, U17, U18]
+    submission_notes: |
+      IndieBio takes equity (~$525k for ~8%) for a 4-month cohort program in SF or NY. Cytognosis 501(c)(3)
+      is a poor fit (for-profit-oriented).
+
+  # ---------------------------------------------------------------------------
+  # 34 — Y Combinator
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813512974"
+    slug: y-combinator
+    name: "Y Combinator"
+    funder_org: "Y Combinator"
+    canonical_funder_ref: yc_nonprofit.yaml
+    funder_kind: accelerator
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Investment
+      F02_maturity_stage: Early
+      F03_pipeline_status: Rejected
+      F04_funding_source_type: Venture Capital
+      F05_funding_type: Investment
+      F06_funding_subtype: YC core / nonprofit cohort
+      F07_focus_areas: [AI for Science, Healthcare, General Tech]
+      F08_deadline: 2026-05-04
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 3
+      F11_initial_submission_format: "YC online application + 1-min video"
+      F12_instrument: investment
+      F13_submission_stages: [full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: 10
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 3
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: yc_nonprofit.yaml
+      F23_min_award_usd: 500000
+      F24_max_award_usd: 500000
+      F25_residency_required: true
+      F26_residency_location: "SF Bay Area"
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Founder team", "Product/market fit", "Why-now"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U09, U10, U11, U17, A01, A02, A03, A04, A05]
+    required_sub_slots: [A03.8, A04.6]
+    useful_slots: [U02, U05, U06, U07, U18, U19]
+    submission_notes: |
+      Cytognosis path is YC nonprofit cohort (covered by yc_nonprofit canonical funder). 1-min video required.
+      Inventory status Rejected — strategic decision not to apply this cycle.
+
+  # ---------------------------------------------------------------------------
+  # 35 — Anthropic AI for Science Program
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600626"
+    slug: anthropic-ai-for-science
+    name: "Anthropic AI for Science Program"
+    funder_org: "Anthropic"
+    canonical_funder_ref: null
+    funder_kind: corporate_credit
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Credits
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Credits
+      F06_funding_subtype: API credits for science
+      F07_focus_areas: [AI for Science, AI Safety, Biotech/Pharma]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "Google Form (linked from program page)"
+      F12_instrument: credits
+      F13_submission_stages: [full]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 6
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 20000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Scientific merit", "Impact", "Technical feasibility", "Team credentials"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U11, A01, A02, A03]
+    required_sub_slots: []
+    useful_slots: [U02, U04, U14]
+    submission_notes: |
+      $20k API credits, 6-month redemption. Academic/nonprofit only. Strong direct fit for Cytognosis.
+
+  # ---------------------------------------------------------------------------
+  # 36 — Berkeley SkyDeck
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497863"
+    slug: berkeley-skydeck
+    name: "Berkeley SkyDeck"
+    funder_org: "UC Berkeley"
+    canonical_funder_ref: null
+    funder_kind: accelerator
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Accelerators & Incubators
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Venture Capital
+      F05_funding_type: Accelerators & Incubators
+      F06_funding_subtype: University accelerator
+      F07_focus_areas: [AI for Science, Healthcare, General Tech]
+      F08_deadline: null
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 2
+      F11_initial_submission_format: "SkyDeck online application"
+      F12_instrument: investment
+      F13_submission_stages: [full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: 10
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 6
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 75000
+      F24_max_award_usd: 200000
+      F25_residency_required: true
+      F26_residency_location: "Berkeley, CA"
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Berkeley affiliation (preferred)", "Founder team", "Stage"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U10, U11, A01, A02, A03, A04]
+    required_sub_slots: [A03.8, A04.7]
+    useful_slots: [U05, U06, U07, U17]
+    submission_notes: |
+      SkyDeck is UC Berkeley's accelerator. Mostly Berkeley-affiliated startups. Cytognosis fit low (501c3).
+
+  # ---------------------------------------------------------------------------
+  # 37 — Google Health AI Developer Foundations (HAI-DEF)
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600587"
+    slug: google-hai-def
+    name: "Google Health AI Developer Foundations (HAI-DEF)"
+    funder_org: "Google"
+    canonical_funder_ref: null
+    funder_kind: corporate_credit
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Credits
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Credits
+      F06_funding_subtype: Health AI developer access
+      F07_focus_areas: [AI for Science, Healthcare, Digital Health]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "Google developer signup"
+      F12_instrument: credits
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A02, A03]
+    required_sub_slots: []
+    useful_slots: []
+    submission_notes: |
+      HAI-DEF gives developer access to Google's health AI foundation models. Verification-only.
+
+  # ---------------------------------------------------------------------------
+  # 38 — Foresight Institute — AI for Science & Safety Nodes
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813491465"
+    slug: foresight-ai-safety-science-nodes
+    name: "Foresight Institute — AI for Science & Safety Nodes"
+    funder_org: "Foresight Institute"
+    canonical_funder_ref: foresight_nodes.yaml
+    funder_kind: private_fellowship
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Accelerators & Incubators
+      F02_maturity_stage: Early
+      F03_pipeline_status: Rejected
+      F04_funding_source_type: EA / Longtermist
+      F05_funding_type: Accelerators & Incubators
+      F06_funding_subtype: Node residency
+      F07_focus_areas: [AI Safety]
+      F08_deadline: null
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "Foresight grants portal"
+      F12_instrument: fellowship
+      F13_submission_stages: [full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: direct_only
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: foresight_nodes.yaml
+      F23_min_award_usd: 50000
+      F24_max_award_usd: 250000
+      F25_residency_required: true
+      F26_residency_location: "SF / Berlin"
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["AI safety relevance", "Open science", "Team", "Theory of change"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U06, U07, U08, U11, U12, U14, U15, U17, U19, U20, A01, A02, A03, A04, A05]
+    required_sub_slots: [A03.8, U21.1, U22.1]
+    useful_slots: [U09, U10, U13, U18]
+    submission_notes: |
+      Foresight Nodes are 6-12 month residencies in SF or Berlin. Strong on AI safety + open science.
+      Cytognosis previously rejected per inventory.
+
+  # ---------------------------------------------------------------------------
+  # 39 — Atlassian for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497936"
+    slug: atlassian-for-nonprofits
+    name: "Atlassian for Nonprofits"
+    funder_org: "Atlassian"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: SaaS discount
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 1
+      F11_initial_submission_format: "Atlassian Foundation verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      Atlassian community license for verified nonprofits. Verification-only.
+
+  # ---------------------------------------------------------------------------
+  # 40 — MATLAB Startup Program
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600627"
+    slug: matlab-startup-program
+    name: "MATLAB Startup Program"
+    funder_org: "MathWorks"
+    canonical_funder_ref: null
+    funder_kind: corporate_credit
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Accelerators & Incubators
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Accelerators & Incubators
+      F06_funding_subtype: Software license discount
+      F07_focus_areas: [AI for Science, General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 2
+      F11_initial_submission_format: "MathWorks startup application"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A02, A03]
+    required_sub_slots: []
+    useful_slots: []
+    submission_notes: |
+      MathWorks discounted MATLAB license for early-stage startups.
+
+  # ---------------------------------------------------------------------------
+  # 41 — Microsoft Azure + NVIDIA Healthcare
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813612467"
+    slug: microsoft-azure-nvidia-healthcare
+    name: "Microsoft Azure + NVIDIA Healthcare"
+    funder_org: "Microsoft / NVIDIA"
+    canonical_funder_ref: null
+    funder_kind: corporate_credit
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Credits
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Credits
+      F06_funding_subtype: Joint Microsoft+NVIDIA healthcare program
+      F07_focus_areas: [AI for Science, Healthcare, Biotech/Pharma]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 3
+      F11_initial_submission_format: "Microsoft for Startups application"
+      F12_instrument: credits
+      F13_submission_stages: [full]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: [NVIDIA]
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 200000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A02, A03]
+    required_sub_slots: []
+    useful_slots: [U01, U03]
+    submission_notes: |
+      Joint Microsoft + NVIDIA healthcare cloud-credit program. Up to ~$200k Azure credits + NVIDIA tooling.
+
+  # ---------------------------------------------------------------------------
+  # 42 — Brains Accelerator (Spec.tech)
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813491463"
+    slug: brains-accelerator
+    name: "Brains Accelerator (Spec.tech)"
+    funder_org: "Speculative Technologies"
+    canonical_funder_ref: brains_accelerator.yaml
+    funder_kind: private_fellowship
+    canonical_subset: heavy
+    funder_metadata:
+      F01_funding_category: Accelerators & Incubators
+      F02_maturity_stage: Early
+      F03_pipeline_status: Rejected
+      F04_funding_source_type: Philanthropic Foundation
+      F05_funding_type: Accelerators & Incubators
+      F06_funding_subtype: Hard-tech accelerator
+      F07_focus_areas: []
+      F08_deadline: null
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "Spec.tech online application"
+      F12_instrument: fellowship
+      F13_submission_stages: [full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: direct_only
+      F19_award_period_months: 6
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: brains_accelerator.yaml
+      F23_min_award_usd: 50000
+      F24_max_award_usd: 250000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Bold thesis", "Why-now", "Team", "Translation"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U02, U03, U04, U05, U08, U09, U10, U11, U17, U18, U19, A01, A02, A03, A04, A05]
+    required_sub_slots: []
+    useful_slots: [U06, U07, U12, U13, U14, U15, U22]
+    submission_notes: |
+      Brains Accelerator focuses on bold tech thesis + opportunity-space framing. Cytognosis previously rejected.
+
+  # ---------------------------------------------------------------------------
+  # 43 — NVIDIA Inception Program
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497869"
+    slug: nvidia-inception
+    name: "NVIDIA Inception Program"
+    funder_org: "NVIDIA"
+    canonical_funder_ref: null
+    funder_kind: corporate_credit
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Credits
+      F02_maturity_stage: Early
+      F03_pipeline_status: Rejected
+      F04_funding_source_type: Corporate
+      F05_funding_type: Credits
+      F06_funding_subtype: GPU credits + ecosystem
+      F07_focus_areas: [AI for Science, Healthcare, General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 3
+      F11_initial_submission_format: "NVIDIA Inception application"
+      F12_instrument: credits
+      F13_submission_stages: [full]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A02, A03]
+    required_sub_slots: []
+    useful_slots: [U01, U03]
+    submission_notes: |
+      NVIDIA Inception is for AI startups; eligibility historically excluded most nonprofits — reflected
+      in inventory Rejected status.
+
+  # ---------------------------------------------------------------------------
+  # 44 — Johnson & Johnson JLABS
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600628"
+    slug: jnj-jlabs
+    name: "Johnson & Johnson JLABS"
+    funder_org: "Johnson & Johnson"
+    canonical_funder_ref: null
+    funder_kind: accelerator
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Accelerators & Incubators
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Accelerators & Incubators
+      F06_funding_subtype: Pharma-anchored incubator (no equity)
+      F07_focus_areas: [Healthcare, Biotech/Pharma]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 2
+      F11_initial_submission_format: "JLABS online application"
+      F12_instrument: in-kind
+      F13_submission_stages: [full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 24
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 200000
+      F25_residency_required: true
+      F26_residency_location: "JLABS site (multi-city)"
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Healthcare innovation", "Strategic alignment with J&J", "Stage", "Wet-lab needs"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U11, U17, U20, A01, A02, A03, A04]
+    required_sub_slots: [A04.10, U20.6]
+    useful_slots: [U02, U05, U06, U07, U18]
+    submission_notes: |
+      JLABS is no-strings (no equity) but co-located with J&J. Strategic-alignment narrative load-bearing.
+      Wet-lab needs assessment required.
+
+  # ---------------------------------------------------------------------------
+  # 45 — AWS Nonprofit Credit Program
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497915"
+    slug: aws-nonprofit-credit-program
+    name: "AWS Nonprofit Credit Program"
+    funder_org: "AWS"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: Nonprofit cloud credits
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "AWS Nonprofit Credit application"
+      F12_instrument: credits
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 2000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      $2k AWS credits for verified 501(c)(3). Verification-only.
+
+  # ---------------------------------------------------------------------------
+  # 46 — Google Cloud AI Startup Program
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497864"
+    slug: google-cloud-ai-startup-program
+    name: "Google Cloud AI Startup Program"
+    funder_org: "Google"
+    canonical_funder_ref: null
+    funder_kind: corporate_credit
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Credits
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Credits
+      F06_funding_subtype: Cloud + AI credits
+      F07_focus_areas: [AI for Science]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "Google for Startups Cloud Program application"
+      F12_instrument: credits
+      F13_submission_stages: [full]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 350000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A02, A03]
+    required_sub_slots: []
+    useful_slots: [U01, U03]
+    submission_notes: |
+      Up to $350k Google Cloud credits for AI startups (tiered). Self-serve eligibility via VC/accelerator partner.
+
+  # ---------------------------------------------------------------------------
+  # 47 — Canva for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813512999"
+    slug: canva-for-nonprofits
+    name: "Canva for Nonprofits"
+    funder_org: "Canva"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Approved / Granted
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: Free SaaS
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 2
+      F11_initial_submission_format: "Goodstack/Percent verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      Canva Pro free for verified nonprofits (up to ~50 users). Already approved.
+
+  # ---------------------------------------------------------------------------
+  # 48 — Cisco / Meraki for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813512972"
+    slug: cisco-meraki-for-nonprofits
+    name: "Cisco / Meraki for Nonprofits"
+    funder_org: "Cisco"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: Hardware + SaaS discount (TechSoup)
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 1
+      F11_initial_submission_format: "TechSoup verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      Cisco/Meraki discount via TechSoup. Verification-only.
+
+  # ---------------------------------------------------------------------------
+  # 49 — Dell Technologies for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813612379"
+    slug: dell-for-nonprofits
+    name: "Dell Technologies for Nonprofits"
+    funder_org: "Dell"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Approved / Granted
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: Hardware discount (TechSoup)
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 1
+      F11_initial_submission_format: "TechSoup verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      Dell hardware discount via TechSoup. Already approved.
+
+  # ---------------------------------------------------------------------------
+  # 50 — Claude for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497855"
+    slug: claude-for-nonprofits
+    name: "Claude for Nonprofits"
+    funder_org: "Anthropic"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Approved / Granted
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: SaaS discount (Claude Pro/Team)
+      F07_focus_areas: [AI for Science, AI Safety]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "Anthropic nonprofit verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      Claude for Nonprofits — discounted Pro/Team. Already approved.
+
+  # ---------------------------------------------------------------------------
+  # 51 — Google Workspace for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813513009"
+    slug: google-workspace-for-nonprofits
+    name: "Google Workspace for Nonprofits"
+    funder_org: "Google"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Approved / Granted
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: Workspace free tier
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "Google for Nonprofits verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      Google Workspace for Nonprofits — free tier. Already approved (primary render target).
+
+  # ---------------------------------------------------------------------------
+  # 52 — DocuSign for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813513006"
+    slug: docusign-for-nonprofits
+    name: "DocuSign for Nonprofits"
+    funder_org: "DocuSign"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: SaaS discount
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 1
+      F11_initial_submission_format: "DocuSign IAM nonprofit application"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      DocuSign nonprofit plan. Verification-only.
+
+  # ---------------------------------------------------------------------------
+  # 53 — HP Inc. for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813512931"
+    slug: hp-for-nonprofits
+    name: "HP Inc. for Nonprofits"
+    funder_org: "HP Inc."
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Approved / Granted
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: Hardware discount (TechSoup)
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 1
+      F11_initial_submission_format: "TechSoup verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      HP hardware discount via TechSoup. Already approved.
+
+  # ---------------------------------------------------------------------------
+  # 54 — LinkedIn for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813512998"
+    slug: linkedin-for-nonprofits
+    name: "LinkedIn for Nonprofits"
+    funder_org: "LinkedIn / Microsoft"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Approved / Granted
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: SaaS discount
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 2
+      F11_initial_submission_format: "LinkedIn Nonprofit verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      LinkedIn for Nonprofits (recruiter / learning discounts). Already approved.
+
+  # ---------------------------------------------------------------------------
+  # 55 — GitHub for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813491485"
+    slug: github-for-nonprofits
+    name: "GitHub for Nonprofits"
+    funder_org: "GitHub"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Approved / Granted
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: SaaS discount
+      F07_focus_areas: [Open Science, General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "GitHub for Nonprofits verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      GitHub Team free for verified nonprofits. Already approved (primary code-hosting platform).
+
+  # ---------------------------------------------------------------------------
+  # 56 — Zoom for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497941"
+    slug: zoom-for-nonprofits
+    name: "Zoom for Nonprofits"
+    funder_org: "Zoom"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Approved / Granted
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: SaaS discount
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 3
+      F11_initial_submission_format: "Zoom for Nonprofits verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      Zoom for Nonprofits — discounted Pro/Business. Already approved.
+
+  # ---------------------------------------------------------------------------
+  # 57 — Monday.com for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497972"
+    slug: monday-for-nonprofits
+    name: "Monday.com for Nonprofits"
+    funder_org: "Monday.com"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Approved / Granted
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: SaaS discount
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 5
+      F11_initial_submission_format: "Monday.com nonprofit verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      Monday.com for Nonprofits — discounted plan. Already approved (primary workspace platform).
+
+  # ---------------------------------------------------------------------------
+  # 58 — Slack for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497974"
+    slug: slack-for-nonprofits
+    name: "Slack for Nonprofits"
+    funder_org: "Slack / Salesforce"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Approved / Granted
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: SaaS discount
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "Slack for Nonprofits verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      Slack for Nonprofits — Standard plan free or 85% off. Already approved.
+
+  # ---------------------------------------------------------------------------
+  # 59 — Lenovo for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813612358"
+    slug: lenovo-for-nonprofits
+    name: "Lenovo for Nonprofits"
+    funder_org: "Lenovo"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Approved / Granted
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: Hardware discount (TechSoup)
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 1
+      F11_initial_submission_format: "TechSoup verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      Lenovo hardware discount via TechSoup. Already approved.
+
+  # ---------------------------------------------------------------------------
+  # 60 — Otter.ai for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497938"
+    slug: otter-for-nonprofits
+    name: "Otter.ai for Nonprofits"
+    funder_org: "Otter.ai"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: SaaS discount (TechSoup)
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 2
+      F11_initial_submission_format: "TechSoup verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      Otter.ai discount via TechSoup. Verification-only.
+
+  # ---------------------------------------------------------------------------
+  # 61 — Microsoft for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497868"
+    slug: microsoft-for-nonprofits
+    name: "Microsoft for Nonprofits"
+    funder_org: "Microsoft"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: SaaS + Azure discount
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 3
+      F11_initial_submission_format: "Microsoft Cloud for Nonprofit verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      Microsoft for Nonprofits — Cloud + M365 discounts.
+
+  # ---------------------------------------------------------------------------
+  # 62 — OpenAI for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497940"
+    slug: openai-for-nonprofits
+    name: "OpenAI for Nonprofits"
+    funder_org: "OpenAI"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Approved / Granted
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: SaaS discount (ChatGPT Team)
+      F07_focus_areas: [AI for Science, AI Safety]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 4
+      F11_initial_submission_format: "OpenAI nonprofit verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      OpenAI ChatGPT Team discount for nonprofits. Already approved.
+
+  # ---------------------------------------------------------------------------
+  # 63 — Notion for Nonprofits
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497886"
+    slug: notion-for-nonprofits
+    name: "Notion for Nonprofits"
+    funder_org: "Notion"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: SaaS discount
+      F07_focus_areas: [General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 1
+      F11_initial_submission_format: "Notion nonprofit verification"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: [A04.8]
+    useful_slots: []
+    submission_notes: |
+      Notion Plus plan free for verified nonprofits.
+
+  # ---------------------------------------------------------------------------
+  # 64 — Fifty Years VC — 5050 Fellowship
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813512932"
+    slug: fifty-years-vc-5050-fellowship
+    name: "Fifty Years VC - 5050 Fellowship"
+    funder_org: "Fifty Years"
+    canonical_funder_ref: null
+    funder_kind: vc_investment
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Investment
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Venture Capital
+      F05_funding_type: Investment
+      F06_funding_subtype: Fellowship-to-investment
+      F07_focus_areas: [AI for Science, AI Safety, Biotech/Pharma]
+      F08_deadline: 2026-06-30
+      F09_deadline_type: Recurring Annual
+      F10_mission_alignment: 2
+      F11_initial_submission_format: "5050 online application"
+      F12_instrument: hybrid
+      F13_submission_stages: [round1, round2]
+      F14_application_effort: medium
+      F15_investment_horizon_years: 10
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 4
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 0
+      F25_residency_required: true
+      F26_residency_location: "SF (cohort kickoff + camp)"
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Founder readiness", "PhD-stage credibility", "Bold idea"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U10, U11, A01, A02, A03, A04]
+    required_sub_slots: [A03.8, A03.12]
+    useful_slots: [U02, U04, U17, U18]
+    submission_notes: |
+      Phase I (Explore) → Phase II (Build) with potential investment. PhD/early-company stage.
+      Cytognosis fit low (already established 501c3).
+
+  # ---------------------------------------------------------------------------
+  # 65 — Mixpanel for Startups
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600708"
+    slug: mixpanel-for-startups
+    name: "Mixpanel for Startups"
+    funder_org: "Mixpanel"
+    canonical_funder_ref: null
+    funder_kind: nonprofit_discount
+    canonical_subset: light
+    funder_metadata:
+      F01_funding_category: Discounts
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Corporate
+      F05_funding_type: Discounts
+      F06_funding_subtype: SaaS startup discount
+      F07_focus_areas: [Digital Health, General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 1
+      F11_initial_submission_format: "Mixpanel startups application"
+      F12_instrument: discount
+      F13_submission_stages: [verification_only]
+      F14_application_effort: light
+      F15_investment_horizon_years: null
+      F16_application_required: verification_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 12
+      F20_joint_program_partners: []
+      F21_funder_process_type: reactive
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 0
+      F24_max_award_usd: 150000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [A01, A03]
+    required_sub_slots: []
+    useful_slots: []
+    submission_notes: |
+      Mixpanel Startups (analytics credits up to ~$150k value). Verification-only.
+
+  # ---------------------------------------------------------------------------
+  # 66 — Anthropic Anthology Fund
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813491455"
+    slug: anthropic-anthology-fund
+    name: "Anthropic Anthology Fund"
+    funder_org: "Anthropic / Menlo Ventures"
+    canonical_funder_ref: null
+    funder_kind: vc_investment
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Investment
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Venture Capital
+      F05_funding_type: Investment
+      F06_funding_subtype: Anthology Fund (Menlo-led)
+      F07_focus_areas: [AI for Science, Healthcare, Digital Health]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 2
+      F11_initial_submission_format: "Online application + demo video"
+      F12_instrument: investment
+      F13_submission_stages: [full]
+      F14_application_effort: medium
+      F15_investment_horizon_years: 10
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: 24
+      F20_joint_program_partners: [Menlo Ventures]
+      F21_funder_process_type: hybrid
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 100000
+      F24_max_award_usd: 5000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["AI complementarity to Anthropic", "Team", "Why-now", "Demo"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U10, U11, A01, A02, A03, A04]
+    required_sub_slots: [A04.6, A04.7]
+    useful_slots: [U02, U05, U06, U17, U18]
+    submission_notes: |
+      Demo video required. Pre-Seed/Seed/Series A. Cytognosis fit low (501c3).
+
+  # ---------------------------------------------------------------------------
+  # 67 — Breakthrough Energy Ventures
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813512975"
+    slug: breakthrough-energy-ventures
+    name: "Breakthrough Energy Ventures"
+    funder_org: "Breakthrough Energy"
+    canonical_funder_ref: null
+    funder_kind: vc_investment
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Investment
+      F02_maturity_stage: Late
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Venture Capital
+      F05_funding_type: Investment
+      F06_funding_subtype: Patient-capital climate VC
+      F07_focus_areas: [Climate/Energy]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 1
+      F11_initial_submission_format: "Warm intro / direct outreach"
+      F12_instrument: investment
+      F13_submission_stages: [invitation_only]
+      F14_application_effort: medium
+      F15_investment_horizon_years: 20
+      F16_application_required: invitation_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: null
+      F20_joint_program_partners: []
+      F21_funder_process_type: hybrid
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 5000000
+      F24_max_award_usd: 50000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: nda_required
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["≥0.5 Gt/yr GHG reduction", "Scientific feasibility", "Affordability at scale"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U10, U11, A01, A02, A03, A04]
+    required_sub_slots: [U04.5, A04.7]
+    useful_slots: [U02, U05, U06, U17, U18, U19]
+    submission_notes: |
+      ≥0.5 Gt/yr GHG-reduction threshold. 20-year ROI horizon. Cytognosis fit very low (health, not climate).
+
+  # ---------------------------------------------------------------------------
+  # 68 — Lux Capital
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497867"
+    slug: lux-capital
+    name: "Lux Capital"
+    funder_org: "Lux Capital"
+    canonical_funder_ref: null
+    funder_kind: vc_investment
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Investment
+      F02_maturity_stage: Intermediate
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Venture Capital
+      F05_funding_type: Investment
+      F06_funding_subtype: Deep-tech VC
+      F07_focus_areas: [AI for Science, Biotech/Pharma, General Tech]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 2
+      F11_initial_submission_format: "Warm intro + pitch deck"
+      F12_instrument: investment
+      F13_submission_stages: [invitation_only]
+      F14_application_effort: medium
+      F15_investment_horizon_years: 10
+      F16_application_required: invitation_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: null
+      F20_joint_program_partners: []
+      F21_funder_process_type: hybrid
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 100000
+      F24_max_award_usd: 100000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Deep-tech moat", "Technical founder", "Contrarian thesis"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U10, U11, A01, A02, A03, A04]
+    required_sub_slots: [A04.7]
+    useful_slots: [U02, U05, U09, U17, U18]
+    submission_notes: |
+      Deep-tech / contrarian thesis VC. Cytognosis fit low (501c3).
+
+  # ---------------------------------------------------------------------------
+  # 69 — Deep Science Ventures
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600692"
+    slug: deep-science-ventures
+    name: "Deep Science Ventures"
+    funder_org: "Deep Science Ventures"
+    canonical_funder_ref: null
+    funder_kind: venture_builder
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Investment
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Venture Capital
+      F05_funding_type: Investment
+      F06_funding_subtype: Venture studio + VC
+      F07_focus_areas: [AI for Science, Biotech/Pharma]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 1
+      F11_initial_submission_format: "DSV scientist application"
+      F12_instrument: investment
+      F13_submission_stages: [round1, round2]
+      F14_application_effort: medium
+      F15_investment_horizon_years: 10
+      F16_application_required: yes
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: null
+      F20_joint_program_partners: []
+      F21_funder_process_type: hybrid
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 500000
+      F24_max_award_usd: 2000000
+      F25_residency_required: true
+      F26_residency_location: "London / NY"
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: ["Scientific background", "Sector fit", "Founder readiness"]
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U10, U11, A01, A02, A03, A04]
+    required_sub_slots: [A04.7]
+    useful_slots: [U02, U05, U06, U17, U18]
+    submission_notes: |
+      Venture builder model. Sectors: climate, computation, agriculture, pharma. Cytognosis fit low (501c3).
+
+  # ---------------------------------------------------------------------------
+  # 70 — The Next Sequence VC
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813497971"
+    slug: the-next-sequence-vc
+    name: "The Next Sequence VC"
+    funder_org: "The Next Sequence"
+    canonical_funder_ref: null
+    funder_kind: vc_investment
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Investment
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Venture Capital
+      F05_funding_type: Investment
+      F06_funding_subtype: AI + biotech VC
+      F07_focus_areas: [AI for Science, Biotech/Pharma]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 1
+      F11_initial_submission_format: "Direct outreach + pitch deck"
+      F12_instrument: investment
+      F13_submission_stages: [invitation_only]
+      F14_application_effort: medium
+      F15_investment_horizon_years: 10
+      F16_application_required: invitation_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: null
+      F20_joint_program_partners: []
+      F21_funder_process_type: hybrid
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 1000000
+      F24_max_award_usd: 5000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U10, U11, A01, A02, A03, A04]
+    required_sub_slots: [A04.7]
+    useful_slots: [U02, U05, U06, U17, U18]
+    submission_notes: |
+      Profile partial — limited public detail. Treat as standard early-stage AI/biotech VC. Cytognosis fit low.
+
+  # ---------------------------------------------------------------------------
+  # 71 — Foresite Labs
+  # ---------------------------------------------------------------------------
+  - monday_id: "11813600630"
+    slug: foresite-labs
+    name: "Foresite Labs"
+    funder_org: "Foresite Labs"
+    canonical_funder_ref: null
+    funder_kind: venture_builder
+    canonical_subset: medium
+    funder_metadata:
+      F01_funding_category: Investment
+      F02_maturity_stage: Early
+      F03_pipeline_status: Not Started
+      F04_funding_source_type: Venture Capital
+      F05_funding_type: Investment
+      F06_funding_subtype: Health-data venture studio
+      F07_focus_areas: [AI for Science, Healthcare, Digital Health]
+      F08_deadline: null
+      F09_deadline_type: Ongoing / Rolling
+      F10_mission_alignment: 1
+      F11_initial_submission_format: "Direct outreach + pitch deck"
+      F12_instrument: investment
+      F13_submission_stages: [invitation_only]
+      F14_application_effort: medium
+      F15_investment_horizon_years: 10
+      F16_application_required: invitation_only
+      F17_cost_share_required: false
+      F18_indirect_cost_rule: null
+      F19_award_period_months: null
+      F20_joint_program_partners: []
+      F21_funder_process_type: hybrid
+      F22_canonical_funder_ref: null
+      F23_min_award_usd: 1000000
+      F24_max_award_usd: 10000000
+      F25_residency_required: false
+      F26_residency_location: null
+      F27_confidentiality_policy: standard
+      F28_written_feedback_gate: false
+      F29_review_criteria: []
+      F30_required_partners_count: 0
+    required_slots: [U01, U03, U04, U10, U11, A01, A02, A03, A04]
+    required_sub_slots: [A04.7]
+    useful_slots: [U02, U05, U06, U17, U18]
+    submission_notes: |
+      Health-data venture studio (Foresite Capital affiliate). Cytognosis fit low (501c3).

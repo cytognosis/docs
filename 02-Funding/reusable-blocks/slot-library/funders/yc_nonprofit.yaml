@@ -1,0 +1,64 @@
+funder_id: yc_nonprofit
+display_name: Y Combinator Nonprofit Program
+kind: accelerator
+version: "2026.1"
+source_doc: ../extracted_questions_applications.md
+
+primary_artifacts:
+  - id: application_form
+    name: YC Nonprofit Application
+    format: web_form
+    sections:
+      - heading: "Founders (YC1–YC7)"
+        slots: [U11.2, U11.3, U11.4, U11.5]
+      - heading: "YC8. Company name"
+        slots: [U01.4]
+      - heading: "YC9. Tagline (50 char)"
+        slots: [U01.3]
+        max_chars: 50
+      - heading: "YC10–YC12. Demo / working link"
+        slots: [A04.1, A04.3]
+      - heading: "YC13. What does it do?"
+        slots: [U01.2, U03.2]
+      - heading: "YC14–YC15. Location / incorporation"
+        slots: [A01]
+      - heading: "YC16–YC21. Users / progress"
+        slots: [U03.4, U17.3]
+      - heading: "YC22. Re-application diff"
+        slots: []
+        notes: Out-of-slot — proposal-level meta
+      - heading: "YC23. Prior YC referrals"
+        slots: [U20.5]
+      - heading: "YC24. Why you / who cares"
+        slots: [U02.2, U04.1, U11.1]
+      - heading: "YC25. Why not competitors"
+        slots: [U02.1, U10.4]
+      - heading: "YC26. Post-YC sustainability"
+        slots: [U18.1, U19.1]
+      - heading: "YC27. One-sentence what-it-does"
+        slots: [U01.2]
+      - heading: "YC28. Alternatives considered"
+        slots: [U09.4]
+      - heading: "YC29. Technical novelty"
+        slots: [U03.1, U03.2]
+      - heading: "YC30. Phases & budget"
+        slots: [U07.2, U07.3, U06.5]
+      - heading: "YC31. Regulatory / FDA"
+        slots: [U16.1, U06.3, U07.3]
+      - heading: "YC32. Proof of traction"
+        slots: [U03.4]
+      - heading: "YC33–YC36. Compliance / ownership"
+        slots: [A01, A03.1, A03.2]
+      - heading: "YC37–YC38. Intake / referrals"
+        slots: [A05.1, A05.2]
+
+render_targets:
+  - id: google_docs_authoring
+    kind: google_docs
+    doc_id_env: YC_NONPROFIT_DOC_ID
+    mapping: application_form
+    notes: Authored in Google Docs; copy-pasted into YC web form at submission.
+  - id: quarto_review
+    kind: quarto
+    template_path: lib/quarto/yc_nonprofit_review.qmd
+    mapping: application_form

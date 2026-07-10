@@ -1,0 +1,54 @@
+funder_id: google_impact_challenge
+display_name: Google.org AI Impact Challenge
+kind: private_grant
+version: "2026.1"
+source_doc: ../extracted_questions_applications.md
+
+primary_artifacts:
+  - id: application_form
+    name: Online Application Form
+    format: web_form
+    sections:
+      - heading: "Part I — Organization & Contacts (Q1–Q10)"
+        slots: [A01, A02, A05.1]
+      - heading: "Project basics (Q11–Q15)"
+        slots: [U01.4, U01.2, U12.1, U12.2, U13.1, U03.4]
+      - heading: "Problem & Approach (Q16a–Q17d)"
+        slots: [U01.2, U02.1, U02.2, U03.1, U03.2, U03.3, U03.4, U04.4]
+      - heading: "Beneficiaries & Equity (Q18a–Q18c)"
+        slots: [U04.1, U13.1, U13.3, U13.5, U04.3]
+      - heading: "Measurement (Q19a–Q19c)"
+        slots: [U08.1, U05.4, U08.3, U08.4]
+      - heading: "Technical Approach (Q20–Q22)"
+        slots: [U03.2, U03.1, U03.3, U15.3]
+      - heading: "Responsible AI (Q23)"
+        slots: [U14.1, U14.2, U14.3, U14.4, U14.6]
+      - heading: "Openness (Q24)"
+        slots: [U12.2]
+      - heading: "Team & Hiring (Q25–Q27, Q30)"
+        slots: [U11.4, U11.5, U10.4, U11.1, U11.2, U20.3]
+      - heading: "Feasibility & Risks (Q28–Q29)"
+        slots: [U03.4, U08.1, U05.1, U05.2, U05.3, U05.5]
+      - heading: "Partnerships (Q31a–Q31e)"
+        slots: [U20.1]
+      - heading: "Sustainability (Q32–Q35)"
+        slots: [U19.5, U11.5, U19.2, U19.1, U19.3, U12.3, U17.5]
+      - heading: "Community & Prior Relationships (Q36)"
+        slots: [U11.2, U20.4]
+      - heading: "Budget (Q37–Q42)"
+        slots: [U06.1, U06.2, U06.3]
+      - heading: "Timeline & Milestones (Q43–Q47)"
+        slots: [U07.2, U07.3, U08.2]
+      - heading: "Compliance (Q48–Q53)"
+        slots: [A03]
+
+render_targets:
+  - id: google_docs_authoring
+    kind: google_docs
+    doc_id_env: GOOGLE_IMPACT_CHALLENGE_DOC_ID
+    mapping: application_form
+    notes: Authored in Google Docs, then copy-pasted into Google.org web form at submission.
+  - id: quarto_review
+    kind: quarto
+    template_path: lib/quarto/google_impact_review.qmd
+    mapping: application_form

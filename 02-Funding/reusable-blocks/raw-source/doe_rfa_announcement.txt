@@ -1,0 +1,266 @@
+Funding Opportunity: DOE Releases First Solicitation for Genesis
+Mission to Advance Science and Technology Challenges
+Lewis-Burke Associates LLC – March 19, 2026
+
+On March 17, 2026, the Department of Energy (DOE) released a $294 million Request for Application – the
+‘Genesis Mission: Transforming Science and Energy with AI’ – to support multi-institutional and
+interdisciplinary teams applying novel artificial intelligence (AI) models and frameworks to accelerate
+scientific discovery and R&D workflows across DOE’s energy, environmental, and nuclear missions. This is
+DOE’s first investment to advance 19 of the 26 Genesis Mission Science and Technology challenges to
+accelerate innovation and discovery through AI, originally announced on February 12. Applications are due
+April 28, 2026 for Phase I and May 19, 2026 for Phase II. DOE will host an informational webinar on March
+26, 2026 at 3:00 PM ET. Lewis-Burke strongly encourages all researchers interested in applying to attend.
+
+Genesis is structured as a two-phase competition. Phase I supports smaller, proof-of-concept teams for
+six months, while Phase II funds large, multi-institutional teams for three-year deployments. Phase I
+awardees from FY 2026 will be reviewed after their initial six months, and those approved for the next
+phase can then apply for Phase II awards by December 17, 2026. For this first solicitation, DOE expects
+most awards will be Phase I. Phase I awards not approved will be provided a three-month extension to
+close out their work. DOE currently plans to issue a separate competition for a second round of Phase I
+and Phase II applications in FY 2027.
+
+                                       Phase I                                 Phase II
+
+                              Small, focused teams (2–3           Large, interdisciplinary teams (3+
+     Team Size
+                               institutions with 2-3 PIs)                    institutions)
+                                                                    3–5x Phase I award (~$1.5M –
+     Award Amount                $500,000 – $750,000
+                                                                             $3.75M)
+     Period of
+                                   Up to 9 months                              3 years
+     Performance
+     Deadline (FY26)          April 28, 2026 11:59 PM ET              May 19, 2026 11:59 PM ET
+     LOI Required?                        No                       Yes – April 28, 2026 5:00 PM ET
+                            Proof-of-concept AI models &          Scale and deploy AI solutions for
+     Purpose
+                                      workflows                            DOE mission
+                                                                     Required: National Labs and
+                          At least two out of National Labs,
+     Eligibility                                                   Industry; Highly Recommended:
+                               Universities, or Industry.
+                                                                              Universities
+                           Cost Share for industry partners:       Cost Share for industry partners:
+     Cost Share          20% for R&D activities, up to 50% for   20% for R&D activities, up to 50% for
+                              demonstration activities                demonstration activities
+This is a cross-cutting solicitation jointly funded by the Office of Science (SC), Office of Critical Minerals
+and Energy Innovation (CMEI), Office of Environmental Management (EM), Office of Electricity (OE), Office
+of Nuclear Energy (NE), and the Hydrocarbons and Geothermal Energy Office (HGEO). Teams are
+encouraged to leverage the scientific data, computing resources, and facilities of DOE’s National
+Laboratories, industry, and academia. Successful AI models and workflows may ultimately be integrated
+into the American Science Cloud, launched in November 2025 and led by Oak Ridge National Lab, to
+create a science-optimized cloud environment that integrates DOE's high-performance computing,
+experimental facilities, and data resources to increase research and development productivity.
+
+Eligibility and Key Requirements
+
+All domestic applicant types are eligible, including universities, national laboratories, and for-profit
+entities. Multi-institutional teams are required for both Phase I and Phase II submissions. Lead
+institutions are limited to one application per focus area (either Phase I or II), though institutions may
+participate as non-lead partners on an unlimited number of additional applications. A PI can be the lead-
+PI on only one Phase I or Phase II application. For-profit entities serving as prime or subrecipient must
+provide a minimum 20 percent cost share on R&D activities. DOE plans to set aside about 20 percent or
+approximately $59 million of the $294 million for industry partners. No cost share is required for
+universities or national laboratories. Applications must also satisfy a new Research, Technology, and
+Economic Security due diligence standard and are subject to a due diligence review. Teams may still
+submit proposals after the deadline, but DOE reserves the right to decline late applications without review
+and may wait to make awards until the next solicitation. A foreign institution may be a team member on an
+application but there must be a detailed description of how the proposed non-domestic institution
+possesses skills, resources, and abilities that do not exist domestically.
+
+Review Process and Other Considerations
+
+Review criteria for projects include:
+   • Scientific and technical merit and impact
+   • Technical approach, methods, and feasibility
+   • Team, resources, and management
+   • Budget and cost-effectiveness
+   • (only for applied technology applications) Commercialization potential for energy applications
+
+DOE will also consider additional program policy factors including:
+  • Relevance of the proposed activity to DOE priorities
+  • Ensuring an appropriate balance of activities within DOE programs
+  • Performance under current awards
+  • Strengthening partnerships between DOE/NNSA laboratories, universities, non-profits, and
+       industry
+  • Commitment to sharing the results of research
+For Phase I projects to move to Phase II, the team must provide a quantitative assessment of whether the
+proposed approach of the team is on a trajectory toward a transformative scientific capability, justifying
+further investment. Success criteria include:
+    • “demonstrating increased predictive power or scientific insight from appropriately-curated data,
+    • more tightly coupling data and experiments to validate hypotheses,
+    • building new models and analyzing their impact on discovery speedup,
+    • identifying scaling metrics that show how performance improves with more data or computing
+         resources, and
+    • improving and speeding up experimental workflows (e.g., through automation or AI-informed
+         parameters). The goal is to provide quantitative analysis of whether a proposed approach is on a
+         trajectory toward a transformative scientific capability, justifying further investment.”
+
+Topics and Focus Areas
+
+DOE has organized the Genesis solicitation into nine broad topic domains – advanced manufacturing,
+biotechnology, critical materials, nuclear fission, nuclear fusion, quantum information science,
+semiconductors and microelectronics, discovery science, and energy – with 21 challenge areas and 99
+specific focus areas. Phase I applications must target a single focus area; Phase II applications must
+identify a primary focus area but may address a secondary one. The table below lists each focus area.
+
+ #     Challenge Area                Focus Areas for FY 2026
+
+                                      •   Agentic AI-Driven Chemical Manufacturing
+                                      •   AI-Driven Materials Processing
+       Advanced Manufacturing &       •   AI-Enabled Manufacturing for Extreme Energy Systems
+ 1
+       Industrial Productivity        •   Digitalization of Industrial Processes
+                                      •   AI-Enabled Smart Manufacturing
+                                      •   Energy Material Manufacturing
+
+                                      •   Biomolecular Science
+                                      •   Genotype to Phenotype
+                                      •   Predictive Engineering of Microbial Communities
+ 2     Biotechnology Revolution
+                                      •   Bio Design
+                                      •   AI-Enabled Biological Reaction Engineering, Bioreactor Design,
+                                          Process Scale-up and Integration
+
+                                      •   Resource Mapping and Development
+                                      •   AI-Enabled Materials Discovery and Engineering
+                                      •   Economic Modeling and Market Analysis
+       Securing America's Critical
+ 3                                    •   Extraction and Processing Technologies
+       Minerals Supply
+                                      •   Geological Finders/Keepers
+                                      •   Connections for Isolation
+                                      •   Biological Pathways to CMM
+
+                                      •   Accelerated Nuclear Power Plant Design and Licensing
+                                      •   Autonomous Power Plant Operations
+                                      •   AI-Assisted Manufacturing and Construction
+       Delivering Nuclear Energy:     •   Autonomous Research and Development
+ 4
+       Faster, Safer, Cheaper         •   Accelerated Fuel Cycle Facility Design and Licensing to Secure the
+                                          Domestic Fuel Supply
+                                      •   AI-Assisted Site Characterization
+                                      •   AI-Assisted End Disposition Design
+                                    •   Development, Utilization and/or Adoption of AI and ML Tools to
+                                        Support the Efficient Review, Classification and Release of Legacy
+                                        Documents to the Nuclear Industry
+
+                                    •   Structural Materials
+                                    •   Plasma-Facing Materials
+                                    •   Advancing Confinement Approaches
+     Accelerating Delivery of
+5                                   •   Fuel Cycle and Tritium Processing
+     Fusion Energy
+                                    •   Tritium Breeding Blankets
+                                    •   Fusion Plant Engineering and System Integration
+                                    •   Plasma Science and Technology
+
+                                    •   EM AI R&D Roadmap Implementation
+     Transforming Nuclear
+6                                   •   Scale-Bridging AI Foundation Model
+     Restoration & Revitalization
+                                    •   Treatment Process Optimization
+
+                                    •   Application-Aware Error Correction
+                                    •   Computational Tools for Fault Tolerant Quantum Science
+     Discovering Quantum
+7                                   •   Hybrid Quantum-Classical Optimization Algorithms
+     Algorithms with AI
+                                    •   Quantum Algorithms for Nonlinear Plasma Physics
+                                    •   Quantum Advantage for Nuclear and Hadronic Systems
+
+                                    •   AI for Quantum Systems Design
+     Realizing Quantum Systems      •   AI for Control of Quantum Systems
+8
+     for Discovery                  •   AI for Quantum Imaging and Sensing
+                                    •   AI for Quantum Computing and Networking
+
+                                    •   Angstrom-Scale Microelectronics Manufacturing
+                                    •   Materials and Architectures for Non-von Neumann Computing
+                                        Devices
+                                    •   AI-Driven Architecture Design
+                                    •   3D Non-Volatile Compute-in-Memory Technology
+     Recentering Microelectronics   •   Physics-Based Circuit Design, Simulation, and Emulation
+9
+     in America                     •   Microelectronics in Harsh Environments
+                                    •   Plasma-Enabled Microelectronics Manufacturing
+                                    •   Power Electronics and Communication Networks
+                                    •   Low-temperature Electronics for Sensors and Computation
+                                    •   Transform Neuromorphic Computing Connectivity, Communication,
+                                        and System Hardware Integration
+
+     Securing U.S. Leadership in    •   Data Center Load Flexibility
+10
+     Data Centers                   •   Data Center Thermal Management
+
+                                    •   Advanced Robotics for Dynamic Laboratory Environments
+                                    •   AIOps – AI for Network Operations
+     Achieving AI-Driven            •   AI-Accelerated Science: Correlation to Understanding
+11
+     Autonomous Laboratories        •   AI-Enabled Diagnostics and Remote Handling
+                                    •   Accelerate the design and prototyping of neuromorphic computing
+                                        circuit primitives for robotic embodied physical artificial intelligence
+
+                                    •   Functional to Quantum Materials
+                                    •   Structural Materials
+     Designing Materials with       •   Biomolecular Materials
+12
+     Predictable Functionality      •   Plasma-Facing Materials
+                                    •   Targetry by Design
+                                    •   AI-Enabled Materials Discovery and Development
+                                     •   Electrochemical Energy Conversion Catalyst Discovery and Scale up
+
+     Enhancing Particle              •   AI-Driven Accelerator Facilities
+13
+     Accelerators for Discovery      •   Integration of Digital Twins for Fusion Systems and Actuators
+
+                                     •   Foundation Models of Particle Interactions and Cosmic Physics
+     Unifying Physics from Quarks    •   AI-Accelerated DUNE Science
+14
+     to the Cosmos                   •   Expedited Discovery from High Complexity and Petabyte-Scale
+                                         Datasets
+
+                                     •   Cloud Microphysics and Atmospheric Turbulence
+     Predicting U.S. Water for
+15                                   •   Water and Energy
+     Energy
+                                     •   Weeks to Years Prediction
+
+                                     •   Grid Modeling and Analysis
+     Scaling the Grid to Power the
+16                                   •   Grid Operations Optimization
+     American Economy
+                                     •   Uncertainty Quantification
+
+                                     •   Chemical and Hydrologic Transport in Subsurface
+     Unleashing Subsurface
+17                                   •   Evolution of Fractures in the Upper Crust
+     Strategic Energy Assets
+                                     •   Control of Subsurface Fractures
+
+                                     •   AI-Driven Code Porting and Optimization
+                                     •   Automated Scientific Problem-to-Code Generation
+                                     •   Neuro-Symbolic Agents for Code Development
+     HPC Code Curation,
+18                                   •   Performance Prediction and Feedback Loops
+     Translation & Development
+                                     •   Trustworthy AI for Scientific Software
+                                     •   Multi-Modal Data Integration for Code Intelligence
+                                     •   Partnerships for HPC AI Advancement
+
+                                     •   Trustworthy Mathematical and Symbolic Reasoning
+19   AI for Scientific Reasoning     •   Hypothesis Generation from Multi-Modal Data
+                                     •   Composable and Modular Foundation Models
+
+                                     •   AI for Adversarial Robustness and Resilience
+     Cybersecurity for AI-Driven
+20                                   •   Data Provenance and Integrity Verification
+     Science Workflows
+                                     •   Real-Time Attack Detection and Mitigation for AI Models
+
+                                     •   Physics-Informed AI for Complex Flow Modeling
+     AI in Fluid Flow for Energy
+21                                   •   AI-Driven Design and Control for Performance and Durability
+     Components & Technologies
+                                     •   Data-Driven Operational Intelligence and System Resilience
+

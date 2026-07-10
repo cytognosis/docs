@@ -1,0 +1,608 @@
+# Cytognosis Canonical Template Manifest
+# -----------------------------------------------------------------------------
+# Authoritative inventory of universal slots, sub-slots, and funder sinks.
+# Every slot maps to a file under slots/. Every funder maps to a file under funders/.
+# See canonical_template_format.md for the full spec.
+# -----------------------------------------------------------------------------
+
+version: "1.2"
+last_updated: 2026-04-26
+maintainer: mohammadi@cytognosis.org
+spec: ../canonical_template_format.md
+changelog: ../CHANGELOG.md
+groups_file: groups.yaml          # added in v1.2 — multi-group inheritance
+funder_metadata_doc: ../funder_metadata.md   # human-readable F-side companion
+
+# -----------------------------------------------------------------------------
+# Slot families
+# -----------------------------------------------------------------------------
+slot_families:
+  heilmeier_core:
+    description: DARPA Heilmeier Catechism, in order. The spine of every proposal.
+    ids: [U01, U02, U03, U04, U05, U06, U07, U08]
+  extensions:
+    description: Recurring extensions Heilmeier does not cover (team, openness, equity, AI safety, IP, regulatory, adoption, translation, sustainability, partnerships, counterfactual, theory of change).
+    ids: [U09, U10, U11, U12, U13, U14, U15, U16, U17, U18, U19, U20, U21, U22]
+  administrative:
+    description: Not proposal content — org identity, POC, compliance, artifacts, intake meta.
+    ids: [A01, A02, A03, A04, A05]
+  funder_metadata:
+    description: Properties of the FUNDING OPPORTUNITY itself (not proposal content). Live on the funder file or the Funding Opportunities board row, not in slot files. Drives Monday columns.
+    ids: [F01, F02, F03, F04, F05, F06, F07, F08, F09, F10, F11, F12, F13, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, F26, F27, F28, F29, F30, F31, F32, F33, F34, F35, F36, F37, F38]
+
+# -----------------------------------------------------------------------------
+# Slot inventory
+# required_by: funders that explicitly prompt for this slot's content (● in heatmap)
+# useful_for:  funders where the slot is advisory/implicit (○ in heatmap)
+# -----------------------------------------------------------------------------
+slots:
+  # ---- Heilmeier core ----
+  U01:
+    name: Objective, in plain language
+    family: heilmeier_core
+    file: slots/U01_objective.md
+    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_nonprofit]
+  U02:
+    name: State of the art & its limits
+    family: heilmeier_core
+    file: slots/U02_sota_and_limits.md
+    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_nonprofit]
+  U03:
+    name: Novelty & approach
+    family: heilmeier_core
+    file: slots/U03_novelty_and_approach.md
+    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_nonprofit]
+  U04:
+    name: Stakes & beneficiaries
+    family: heilmeier_core
+    file: slots/U04_stakes_and_beneficiaries.md
+    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_nonprofit]
+  U05:
+    name: Risks
+    family: heilmeier_core
+    file: slots/U05_risks.md
+    required_by: [heilmeier, nih_r01, arpah_mission_office, doe_genesis, brains_accelerator, foresight_nodes, google_impact_challenge]
+    useful_for: [nsf_tech_labs, astera_residency, yc_nonprofit]
+  U06:
+    name: Cost
+    family: heilmeier_core
+    file: slots/U06_cost.md
+    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, foresight_nodes, google_impact_challenge, yc_nonprofit]
+    useful_for: [brains_accelerator]
+  U07:
+    name: Schedule
+    family: heilmeier_core
+    file: slots/U07_schedule.md
+    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, foresight_nodes, google_impact_challenge, yc_nonprofit]
+    useful_for: [brains_accelerator]
+  U08:
+    name: Mid-term & final exams (quantitative go/no-go)
+    family: heilmeier_core
+    file: slots/U08_exams_and_gates.md
+    required_by: [heilmeier, nih_r01, arpah_mission_office, doe_genesis, brains_accelerator, foresight_nodes, google_impact_challenge]
+    useful_for: [nsf_tech_labs, astera_residency, yc_nonprofit]
+
+  # ---- Extensions ----
+  U09:
+    name: Bold thesis & opportunity-space framing
+    family: extensions
+    file: slots/U09_opportunity_space.md
+    required_by: [brains_accelerator, nsf_tech_labs, arpah_mission_office, doe_genesis]
+    useful_for: [astera_residency, foresight_nodes, google_impact_challenge, yc_nonprofit, nih_r01]
+  U10:
+    name: Why-not-academia / why-not-for-profit / why-Cytognosis
+    family: extensions
+    file: slots/U10_org_form_fit.md
+    required_by: [astera_residency, brains_accelerator, nsf_tech_labs]
+    useful_for: [foresight_nodes, arpah_mission_office, doe_genesis, google_impact_challenge, yc_nonprofit, nih_r01]
+  U11:
+    name: Team & founder fit
+    family: extensions
+    file: slots/U11_team_fit.md
+    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_nonprofit]
+  U12:
+    name: Open science & openness commitments
+    family: extensions
+    file: slots/U12_open_science.md
+    required_by: [astera_residency, foresight_nodes, google_impact_challenge, nsf_tech_labs, doe_genesis]
+    useful_for: [nih_r01, arpah_mission_office, brains_accelerator, yc_nonprofit]
+  U13:
+    name: Equity, accessibility, workforce
+    family: extensions
+    file: slots/U13_equity_access.md
+    required_by: [arpah_mission_office, google_impact_challenge]
+    useful_for: [nih_r01, astera_residency, brains_accelerator, foresight_nodes, doe_genesis, yc_nonprofit, nsf_tech_labs]
+  U14:
+    name: Responsible AI / AI safety
+    family: extensions
+    file: slots/U14_responsible_ai.md
+    required_by: [foresight_nodes, google_impact_challenge, arpah_mission_office]
+    useful_for: [nsf_tech_labs, astera_residency, brains_accelerator, doe_genesis, yc_nonprofit, nih_r01]
+  U15:
+    name: IP & data governance
+    family: extensions
+    file: slots/U15_ip_and_data.md
+    required_by: [foresight_nodes, nsf_tech_labs, arpah_mission_office, doe_genesis, google_impact_challenge]
+    useful_for: [nih_r01, astera_residency, brains_accelerator, yc_nonprofit]
+  U16:
+    name: Regulatory, dual-use & biosecurity
+    family: extensions
+    file: slots/U16_regulatory_biosecurity.md
+    required_by: [arpah_mission_office, doe_genesis, yc_nonprofit]
+    useful_for: [nih_r01, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, nsf_tech_labs]
+  U17:
+    name: End-user narrative / adoption / transition-to-practice
+    family: extensions
+    file: slots/U17_adoption_transition.md
+    required_by: [arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, nsf_tech_labs, google_impact_challenge, yc_nonprofit]
+    useful_for: [nih_r01, foresight_nodes]
+  U18:
+    name: Translation-to-Mission (Market · Manufacturing · IP · Funding)
+    family: extensions
+    file: slots/U18_translation_to_mission.md
+    required_by: [arpah_mission_office, doe_genesis, nsf_tech_labs, yc_nonprofit]
+    useful_for: [nih_r01, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge]
+  U19:
+    name: Sustainability / transition / sunset
+    family: extensions
+    file: slots/U19_sustainability.md
+    required_by: [foresight_nodes, google_impact_challenge, arpah_mission_office, doe_genesis, yc_nonprofit]
+    useful_for: [nih_r01, nsf_tech_labs, astera_residency, brains_accelerator]
+  U20:
+    name: Partnerships, ecosystem, consortium
+    family: extensions
+    file: slots/U20_partnerships.md
+    required_by: [foresight_nodes, nsf_tech_labs, arpah_mission_office, doe_genesis, google_impact_challenge]
+    useful_for: [nih_r01, astera_residency, brains_accelerator, yc_nonprofit]
+
+  # ---- Counterfactual & Theory-of-change (added in v1.1) ----
+  U21:
+    name: Counterfactual & impact-without-funder
+    family: extensions
+    file: slots/U21_counterfactual.md
+    required_by: [ea_long_term_future_fund, ea_infrastructure_fund, coefficient_giving, drk_foundation]
+    useful_for: [emergent_ventures, gates_grand_challenges, rwjf, astrazeneca_change, brains_accelerator, astera_residency]
+    added_in: "1.1"
+  U22:
+    name: Theory of change
+    family: extensions
+    file: slots/U22_theory_of_change.md
+    required_by: [drk_foundation, rwjf, ea_long_term_future_fund, ea_infrastructure_fund, coefficient_giving, astrazeneca_change]
+    useful_for: [gates_grand_challenges, czi, fast_forward, foresight_nodes, brains_accelerator]
+    added_in: "1.1"
+
+  # ---- Administrative ----
+  A01:
+    name: Organizational identity
+    family: administrative
+    file: slots/A01_org_identity.md
+    required_by: [nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_nonprofit]
+  A02:
+    name: Points of contact
+    family: administrative
+    file: slots/A02_points_of_contact.md
+    required_by: [nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_nonprofit]
+  A03:
+    name: Eligibility & compliance
+    family: administrative
+    file: slots/A03_eligibility_compliance.md
+    required_by: [arpah_mission_office, doe_genesis, google_impact_challenge, yc_nonprofit]
+    useful_for: [nih_r01, nsf_tech_labs, astera_residency, brains_accelerator, foresight_nodes]
+  A04:
+    name: Supplementary artifacts
+    family: administrative
+    file: slots/A04_supplementary_artifacts.md
+    required_by: [astera_residency, brains_accelerator, foresight_nodes, yc_nonprofit, arpah_mission_office, doe_genesis]
+    useful_for: [nih_r01, nsf_tech_labs, google_impact_challenge]
+  A05:
+    name: Intake meta
+    family: administrative
+    file: slots/A05_intake_meta.md
+    required_by: [google_impact_challenge, foresight_nodes, yc_nonprofit]
+    useful_for: [nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator]
+
+# -----------------------------------------------------------------------------
+# Funder registry
+# -----------------------------------------------------------------------------
+funders:
+  heilmeier:
+    name: DARPA Heilmeier Catechism
+    kind: universal_baseline
+    file: funders/heilmeier.yaml
+    notes: The spine. Every other funder is a variant of this.
+  nih_r01:
+    name: NIH R01 Research Strategy
+    kind: federal_grant
+    file: funders/nih_r01.yaml
+  nsf_tech_labs:
+    name: NSF Tech Labs RFI
+    kind: federal_grant
+    file: funders/nsf_tech_labs.yaml
+  arpah_mission_office:
+    name: ARPA-H Mission Office ISO
+    kind: federal_grant
+    file: funders/arpah_mission_office.yaml
+  doe_genesis:
+    name: DOE Genesis Mission (Focus Area 2)
+    kind: federal_grant
+    file: funders/doe_genesis.yaml
+  astera_residency:
+    name: Astera Institute Residency
+    kind: private_fellowship
+    file: funders/astera_residency.yaml
+  brains_accelerator:
+    name: Brains Accelerator
+    kind: private_fellowship
+    file: funders/brains_accelerator.yaml
+  foresight_nodes:
+    name: Foresight Institute AI for Safety & Science Nodes
+    kind: private_fellowship
+    file: funders/foresight_nodes.yaml
+  google_impact_challenge:
+    name: Google.org AI Impact Challenge
+    kind: private_grant
+    file: funders/google_impact_challenge.yaml
+  yc_nonprofit:
+    name: Y Combinator Nonprofit Program
+    kind: accelerator
+    file: funders/yc_nonprofit.yaml
+
+# -----------------------------------------------------------------------------
+# Funder kind registry (added in v1.1)
+# -----------------------------------------------------------------------------
+# Determines which slot subset a funder needs. heavy = full U01-U22 + A01-A05;
+# medium = subset; light = minimal A01 + A03 + a few F-family.
+funder_kinds:
+  universal_baseline:
+    description: The Heilmeier reference; not a real funder.
+    canonical_subset: heavy
+  federal_grant:
+    description: Federal grant under FAR (NIH, NSF traditional, DOE conventional).
+    canonical_subset: heavy
+  federal_OT:
+    description: Federal Other Transaction contract or Mission Office ISO (ARPA-H ISOs, NSF Tech Labs OT, DOE Genesis if structured as OT). Adds research-security and phased-budget specifics.
+    canonical_subset: heavy
+  intergovernmental_grant:
+    description: Multilateral / intergovernmental program (Horizon Europe, UNESCO, WHO).
+    canonical_subset: heavy
+  private_grant:
+    description: Single-grant philanthropic award (Google.org, Schmidt Sciences, Wellcome Trust).
+    canonical_subset: heavy
+  philanthropic_grant_proactive:
+    description: Funder primarily reaches out (Coefficient Giving, Wellcome Leap thrusts).
+    canonical_subset: heavy
+  ea_micro_grant:
+    description: Effective-altruism micro-grant funders with counterfactual emphasis (EA LTFF, EAIF, Emergent Ventures).
+    canonical_subset: medium
+  private_fellowship:
+    description: Residency/fellowship structures (Astera, Brains, Foresight, Schmidt postdocs).
+    canonical_subset: heavy
+  accelerator:
+    description: Cohort-based accelerator/incubator (YC, IndieBio, JLABS, Bakar Labs, SkyDeck, Fast Forward).
+    canonical_subset: medium
+  vc_investment:
+    description: Venture-capital investment (Lux, BEV, 5050 Fellowship, Anthology Fund, IndieBio).
+    canonical_subset: medium
+  venture_builder:
+    description: Operator-building model (Deep Science Ventures, Foresite Labs, The Next Sequence).
+    canonical_subset: medium
+  corporate_credit:
+    description: Cloud / API / software credits, often programmatically issued (AWS Activate, Google Cloud AI Startup, Anthropic AI for Science, NVIDIA Inception, Microsoft for Startups).
+    canonical_subset: light
+  nonprofit_discount:
+    description: Free / discounted SaaS or hardware for verified 501(c)(3)s, mostly TechSoup-mediated (Canva, Zoom, Slack, Adobe, GitHub, Notion, etc.).
+    canonical_subset: light
+
+# -----------------------------------------------------------------------------
+# Funder metadata fields (F-family) — added in v1.1
+# -----------------------------------------------------------------------------
+# These describe the funding opportunity itself, not proposal content.
+# They live on the funder file (funder_metadata: {...}) and on the Monday
+# Funding Opportunities board as columns. F01–F11 map to existing Monday
+# columns; F12–F30 are new and proposed for the next Monday board pass.
+funder_metadata_fields:
+  F01:
+    name: funding_category
+    type: enum
+    monday_column_id: color_mm2baevc
+    values: [Grants, Small Grants, Accelerators & Incubators, Credits, Discounts, Investment]
+    existing: true
+  F02:
+    name: maturity_stage
+    type: enum
+    monday_column_id: color_mm2b9yqc
+    values: [Early, Intermediate, Late]
+    existing: true
+  F03:
+    name: pipeline_status
+    type: enum
+    monday_column_id: color_mm2b37zy
+    values: [Not Started, Under Consideration, Under Preparation, Internal Review, Applied, Approved / Granted, Rejected, Archived]
+    existing: true
+  F04:
+    name: funding_source_type
+    type: enum
+    monday_column_id: color_mm2b9xc9
+    values: [Government, Philanthropic Foundation, FRO / Moonshot, Corporate, Venture Capital, EA / Longtermist, Intergovernmental, Nonprofit Program]
+    existing: true
+  F05:
+    name: funding_type
+    type: text
+    monday_column_id: text_mm2bn127
+    existing: true
+  F06:
+    name: funding_subtype
+    type: text
+    monday_column_id: text_mm2b5229
+    existing: true
+  F07:
+    name: focus_areas
+    type: dropdown_multi
+    monday_column_id: dropdown_mm2by651
+    existing: true
+  F08:
+    name: deadline
+    type: date
+    monday_column_id: date_mm2bqn02
+    existing: true
+  F09:
+    name: deadline_type
+    type: enum
+    monday_column_id: color_mm2byfy9
+    values: [Single Deadline, Recurring Annual, Ongoing / Rolling]
+    existing: true
+  F10:
+    name: mission_alignment
+    type: rating_0_5
+    monday_column_id: rating_mm2bbgnv
+    existing: true
+  F11:
+    name: initial_submission_format
+    type: text
+    monday_column_id: text_mm2bpm46
+    existing: true
+  F12:
+    name: instrument
+    type: enum
+    values: [grant, investment, credits, discount, in-kind, fellowship, hybrid, TBD-at-closing]
+    default: grant
+    added_in: "1.1"
+  F13:
+    name: submission_stages
+    type: list
+    values_examples: [[full], [LOI, full], [concept, full], [abstract, full], [summary, full], [round1, round2], [invitation_only]]
+    default: [full]
+    added_in: "1.1"
+  F14:
+    name: application_effort
+    type: enum
+    values: [light, medium, heavy]
+    description: light=≤2h, medium=≤20h, heavy=>20h
+    default: medium
+    added_in: "1.1"
+  F15:
+    name: investment_horizon_years
+    type: int
+    description: Patient-capital horizon for VC/venture-builder; null otherwise
+    default: null
+    added_in: "1.1"
+  F16:
+    name: application_required
+    type: enum
+    values: [yes, verification_only, no, invitation_only]
+    default: yes
+    added_in: "1.1"
+  F17:
+    name: cost_share_required
+    type: bool_or_percent
+    default: false
+    added_in: "1.1"
+  F18:
+    name: indirect_cost_rule
+    type: enum
+    values: [flat_15pct, flat_10pct, flat_25pct, capped_negotiated, fEC, F&A_negotiated, OT_negotiated, direct_only, uncapped]
+    default: F&A_negotiated
+    added_in: "1.1"
+  F19:
+    name: award_period_months
+    type: int
+    default: null
+    added_in: "1.1"
+  F20:
+    name: joint_program_partners
+    type: list
+    description: List of partner-org names for joint programs
+    default: []
+    added_in: "1.1"
+  F21:
+    name: funder_process_type
+    type: enum
+    values: [proactive, reactive, hybrid]
+    description: Does the funder reach out (proactive) or accept open applications (reactive)?
+    default: reactive
+    added_in: "1.1"
+  F22:
+    name: canonical_funder_ref
+    type: string
+    description: Reference to canonical/funders/<funder_id>.yaml when one exists
+    default: null
+    added_in: "1.1"
+  F23:
+    name: min_award_usd
+    type: numeric
+    monday_column_id: numeric_mm2bddjd
+    default: 0
+    existing_partial: true
+    added_in: "1.1"
+  F24:
+    name: max_award_usd
+    type: numeric
+    monday_column_id: numeric_mm2bw7ds
+    default: null
+    existing_partial: true
+    added_in: "1.1"
+  F25:
+    name: residency_required
+    type: bool
+    default: false
+    added_in: "1.1"
+  F26:
+    name: residency_location
+    type: string
+    description: City/region required for in-person residency (e.g., SF/Berlin/Emeryville)
+    default: null
+    added_in: "1.1"
+  F27:
+    name: confidentiality_policy
+    type: enum
+    values: [standard, no_confidential_ip, nda_required]
+    default: standard
+    added_in: "1.1"
+  F28:
+    name: written_feedback_gate
+    type: bool
+    description: Funder requires written feedback round before accepting full proposal (e.g., ARPA-H)
+    default: false
+    added_in: "1.1"
+  F29:
+    name: review_criteria
+    type: list
+    description: Structured criteria with weights, when published
+    default: []
+    added_in: "1.1"
+  F30:
+    name: required_partners_count
+    type: int
+    description: For consortia (e.g., Horizon Europe min 3 from 3 different EU countries)
+    default: 0
+    added_in: "1.1"
+  F31:
+    name: strategic_connection
+    type: list_of_objects
+    schema:
+      - name: string
+      - role: string
+      - relationship: string
+      - notes: string
+    description: |
+      Insider connections (Cytognosis-side) that meaningfully shape access or
+      review pathway (e.g., Adam Marblestone @ Convergent Research, Milad
+      Alucozai @ ARPA-H, Angela Pisco @ CZI, Shankar Subramaniam @ Wellcome
+      Leap). Discovered in Drive funding-research summary.
+    default: []
+    added_in: "1.2"
+  F32:
+    name: strategic_pairing
+    type: list_of_strings
+    description: |
+      Other opportunity IDs that this opportunity is strategically paired with
+      (e.g., NSF Tech Labs paired with Convergent Research FRO; ARPA-H ISO
+      paired with Delphi as biosensor companion).
+    default: []
+    added_in: "1.2"
+  F33:
+    name: thematic_tags
+    type: list_of_strings
+    description: |
+      Hashtag-style cross-cutting tags from the Drive funding taxonomy
+      (#Moonshot, #FRO, #Open, #Cytoscope, #Cytoverse, #Cytonome, #Proactive,
+      #Healthspan, #Neuro, #AI, #Biotech, #ImpactCenter, #Equity, etc.).
+      Distinct from F07 focus_areas (which is a fixed enum); thematic_tags
+      are flexible and program-specific.
+    default: []
+    added_in: "1.2"
+  F34:
+    name: sub_programs
+    type: list_of_objects
+    schema:
+      - id: string
+      - name: string
+      - url: string
+      - relationship: string  # one of: child | companion | predecessor | successor
+    description: |
+      Programs within or related to this opportunity (e.g., ARPA-H Mission
+      Office ISO has child Programs DELPHI, PROSPR, EVIDENT; NIH Common Fund
+      has children Bridge2AI, PRIMED-AI). Lets us link tracking of program
+      announcements to the parent opportunity.
+    default: []
+    added_in: "1.2"
+  F35:
+    name: heilmeier_required
+    type: bool
+    description: |
+      Funder explicitly requires (or strongly favors) addressing the Heilmeier
+      Catechism in the initial submission (e.g., ARPA-H 5-page Solution
+      Summary, NSF Tech Labs RFI). Drives template-selection in render.
+    default: false
+    added_in: "1.2"
+  F36:
+    name: review_mechanism
+    type: enum
+    values: [peer_review, program_officer, internal_panel, invitation_only,
+             expert_committee, dual_anonymous, hybrid]
+    description: |
+      How submissions are reviewed (NIH peer review vs ARPA-H program-officer
+      vs YC partner panel vs Schmidt invitation-only).
+    default: peer_review
+    added_in: "1.2"
+  F37:
+    name: academic_affiliation_required
+    type: bool
+    description: |
+      Funder requires PI to hold an academic appointment (NIH R01 default,
+      NSF default, some philanthropic LOIs). Distinct from residency
+      requirements (F25) and from US-entity requirements (F25/F26).
+    default: false
+    added_in: "1.2"
+  F38:
+    name: funding_score_rationale
+    type: text
+    description: |
+      Free-text explanation behind the F10 mission_alignment score
+      (1-2 sentences). Captures "why we rate this 9/10 — perfect FRO fit
+      plus direct CEO connection." Surfaces in Monday hover.
+    default: null
+    added_in: "1.2"
+
+# -----------------------------------------------------------------------------
+# Render defaults
+# -----------------------------------------------------------------------------
+length_enforcement:
+  strategy: funder_first            # funder limit overrides slot author-limit at render
+  on_overflow: warn                 # warn | truncate | fail
+  overflow_message_template: "[overflow: {actual} > {limit} {unit}] slot {slot_id} in {funder}.{artifact}.{section}"
+
+render_targets:
+  primary: google_workspace
+  targets:
+    google_workspace:
+      kind: api
+      tool: google_workspace_connector
+      surfaces: [docs, sheets, slides]
+      notes: Primary output. Use Google Docs/Sheets/Slides APIs via the google-workspace skill.
+    docxtpl:
+      kind: local_file
+      tool: docxtpl
+      notes: Used only when funder requires a specific DOCX file with their template.
+    openpyxl_jinja:
+      kind: local_file
+      tool: openpyxl + Jinja + LibreOffice recalc.py
+      notes: Used only when funder requires a specific XLSX budget template.
+    quarto:
+      kind: local_file
+      tool: quarto
+      notes: Internal review PDFs and Markdown renders.
+
+# -----------------------------------------------------------------------------
+# Validation rules
+# -----------------------------------------------------------------------------
+validation:
+  require_all_slot_files: true
+  require_all_funder_files: true
+  require_sub_slot_heading_match: true
+  require_funder_hooks_resolve: true
+  strict_id_format:
+    slot_id: ^(U\d{2}|A\d{2})$
+    sub_slot_id: ^(U\d{2}|A\d{2})\.[1-9][0-9]?$
+    funder_question: ^[a-z_]+\.(Q[0-9a-z]+|[A-Z]+[0-9a-z.]+|appendix_[a-z]_[0-9]+|[a-z_]+)$
+    funder_metadata_id: ^F\d{2}$

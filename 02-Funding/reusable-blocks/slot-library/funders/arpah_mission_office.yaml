@@ -1,0 +1,111 @@
+funder_id: arpah_mission_office
+display_name: ARPA-H Mission Office ISO
+kind: federal_grant
+version: "2026.1"
+source_doc: ../extracted_grants.md
+
+primary_artifacts:
+  - id: appendix_a
+    name: Solution Summary (Appendix A)
+    format: docx
+    page_limit: 5
+    sections:
+      - heading: "1. Program fit — what are you trying to do?"
+        slots: [U01, U09.1]
+        word_limit: 400
+      - heading: "2. How is it done today, and what are the limits of current practice?"
+        slots: [U02]
+        word_limit: 400
+      - heading: "3. What is new, and what are the quantitative metrics?"
+        slots: [U03, U08.1]
+        word_limit: 500
+      - heading: "4. Who cares? If successful, what difference will it make?"
+        slots: [U04, U13.1, U13.2, U17.1, U17.4]
+        word_limit: 300
+      - heading: "5. Risks"
+        slots: [U05, U14.2, U16.1, U16.6]
+        word_limit: 300
+      - heading: "Team / key personnel"
+        slots: [U11.1, U11.2, U11.4]
+        word_limit: 200
+      - heading: "Budget synopsis"
+        slots: [U06.1, U06.2]
+        word_limit: 200
+
+  - id: tech_mgmt_proposal
+    name: Full Technical & Management Proposal
+    format: docx
+    page_limit: 20
+    sections:
+      - heading: "Executive Summary"
+        slots: [U01, U04, U08.1]
+      - heading: "Technical Approach"
+        slots: [U02, U03, U08]
+      - heading: "Management Plan & Phases"
+        slots: [U07, U08.2]
+      - heading: "Team & Key Personnel"
+        slots: [U11]
+      - heading: "Transition-to-Practice"
+        slots: [U17.2, U17.5, U17.6, U18.1, U18.2, U18.4, U18.5]
+      - heading: "Partnerships & Consortium"
+        slots: [U20.1, U20.3]
+      - heading: "Sustainability"
+        slots: [U19.1]
+
+  - id: tdd
+    name: Technology Development Document
+    format: docx
+    sections:
+      - heading: "IP & Data Governance"
+        slots: [U15.1, U15.2, U15.3, U15.5]
+      - heading: "Dual-Use & Biosecurity"
+        slots: [U16.4, U16.5]
+      - heading: "Consortium Governance"
+        slots: [U20.2]
+      - heading: "Translation IP"
+        slots: [U18.3]
+
+  - id: cost_proposal
+    name: Cost Proposal (9 sections)
+    format: xlsx
+    sections:
+      - heading: "Budget — personnel, compute, equipment, partners"
+        slots: [U06.1, U06.2, U06.3, U06.4]
+      - heading: "Compliance attestations"
+        slots: [A01, A03.1, A03.2, A03.4]
+      - heading: "Human subjects / animal use"
+        slots: [U16.2, U16.3]
+
+  - id: letters_of_support
+    name: Letters of Support
+    format: pdf
+    sections:
+      - heading: "Partner letters"
+        slots: [A04.5]
+
+render_targets:
+  - id: google_docs_authoring
+    kind: google_docs
+    doc_id_env: ARPAH_APPENDIX_A_DOC_ID
+    mapping: appendix_a
+    notes: Primary authoring surface for Appendix A; review and comment in Google Docs.
+  - id: google_docs_tech_mgmt
+    kind: google_docs
+    doc_id_env: ARPAH_TECH_MGMT_DOC_ID
+    mapping: tech_mgmt_proposal
+  - id: docxtpl_appendix_a
+    kind: docxtpl
+    template_path: raw/arpah_appendix_a_solution_summary.docx
+    mapping: appendix_a
+  - id: docxtpl_tech_mgmt
+    kind: docxtpl
+    template_path: raw/arpah_tech_mgmt_proposal.docx
+    mapping: tech_mgmt_proposal
+  - id: docxtpl_tdd
+    kind: docxtpl
+    template_path: raw/arpah_tdd.docx
+    mapping: tdd
+  - id: openpyxl_cost
+    kind: openpyxl_jinja
+    template_path: raw/arpah_cost_proposal.xlsx
+    mapping: cost_proposal

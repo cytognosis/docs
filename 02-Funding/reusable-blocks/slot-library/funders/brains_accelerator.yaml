@@ -1,0 +1,43 @@
+funder_id: brains_accelerator
+display_name: Brains Accelerator
+kind: private_fellowship
+version: "2026.1"
+source_doc: ../extracted_questions_applications.md
+
+primary_artifacts:
+  - id: application_form
+    name: Brains Accelerator Application
+    format: web_form
+    sections:
+      - heading: "Basic info"
+        slots: [A01, A02]
+      - heading: "B1. Objective / plain-language thesis"
+        slots: [U01.1, U01.2]
+      - heading: "B2. State of the art & limits"
+        slots: [U02.1, U02.2]
+      - heading: "B3. Novelty / why it will work now"
+        slots: [U03.1, U03.3]
+      - heading: "B4. Beneficiaries / end users"
+        slots: [U04.1, U17.1]
+      - heading: "B5. Impact magnitude & downstream"
+        slots: [U04.3, U04.4, U08.1]
+      - heading: "B6. Risks & failure modes"
+        slots: [U05.4, U05.5, U08.3]
+      - heading: "B7. Why-not-traditional"
+        slots: [U10.1, U10.2, U10.3]
+      - heading: "Program Leadership Readiness"
+        slots: [U11.1, U11.2, U11.4]
+      - heading: "Vision for Impact"
+        slots: [U04.4, U09.1, U09.3]
+      - heading: "References"
+        slots: [A04.5, A04.4]
+
+render_targets:
+  - id: google_docs_authoring
+    kind: google_docs
+    doc_id_env: BRAINS_ACCELERATOR_DOC_ID
+    mapping: application_form
+  - id: quarto_review
+    kind: quarto
+    template_path: lib/quarto/brains_accelerator_review.qmd
+    mapping: application_form
