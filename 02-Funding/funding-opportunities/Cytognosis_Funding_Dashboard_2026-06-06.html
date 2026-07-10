@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cytognosis Funding Dashboard — June 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --violet:#8B3FC7; --azure:#3B7DD6; --magenta:#E0309E; --indigo:#5145A8; --teal:#14A3A3;
+    --bg:#13131F; --panel:#1b1b2b; --panel2:#23233a; --line:rgba(255,255,255,.09);
+    --txt:#ECECF4; --muted:#9c9cb6; --gold:#D9A23B;
+    --do:#E0309E; --soon:#8B3FC7; --watch:#3B7DD6; --park:#5b5b73;
+    --sig:linear-gradient(135deg,#8B3FC7 0%,#5A95E8 50%,#E0309E 100%);
+    --data:linear-gradient(135deg,#3B7DD6 0%,#14A3A3 50%,#6B5DC7 100%);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;font-size:16px}
+  a{color:var(--azure);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 80px}
+  header .mark{font-weight:800;font-size:1.05rem;letter-spacing:.5px;background:var(--sig);-webkit-background-clip:text;background-clip:text;color:transparent}
+  h1{font-size:1.9rem;font-weight:800;margin:.2em 0 .1em;line-height:1.2}
+  .sub{color:var(--muted);font-size:.95rem;margin:0 0 18px}
+  h2{font-size:1.2rem;font-weight:700;margin:34px 0 6px;border-left:4px solid var(--violet);padding-left:10px}
+  h2 .small{font-weight:500;color:var(--muted);font-size:.85rem}
+  .anchor{background:linear-gradient(135deg,rgba(224,48,158,.14),rgba(139,63,199,.14));border:1px solid rgba(224,48,158,.4);border-radius:14px;padding:14px 18px;margin:14px 0 4px}
+  .anchor b{color:#fff}
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:14px 0}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px}
+  .kpi .n{font-size:1.8rem;font-weight:800;line-height:1}
+  .kpi .l{color:var(--muted);font-size:.8rem;margin-top:6px}
+  .kpi.k0 .n{color:var(--magenta)} .kpi.k1 .n{color:var(--teal)} .kpi.k2 .n{color:var(--violet)} .kpi.k3 .n{color:var(--azure)} .kpi.k4 .n{background:var(--sig);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .donow li{margin:7px 0}
+  .donow label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+  .donow input{margin-top:5px;width:16px;height:16px;accent-color:var(--magenta);flex:0 0 auto}
+  .donow .tag{font-size:.7rem;color:var(--bg);background:var(--magenta);border-radius:20px;padding:1px 8px;font-weight:700;white-space:nowrap}
+  .donow .d{color:var(--muted);font-size:.82rem}
+  ul.clean{list-style:none;padding:0;margin:0}
+  /* timeline */
+  .tlwrap{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:10px 8px 4px;overflow-x:auto}
+  svg{display:block;width:100%;height:auto}
+  /* bars */
+  .bar-row{display:flex;align-items:center;gap:10px;margin:8px 0}
+  .bar-row .lab{flex:0 0 150px;font-size:.85rem;color:var(--muted)}
+  .bar-track{flex:1;background:rgba(255,255,255,.06);border-radius:8px;height:18px;overflow:hidden}
+  .bar-fill{height:100%;border-radius:8px}
+  .bar-row .ct{flex:0 0 32px;text-align:right;font-weight:700;font-size:.85rem}
+  /* filters + table */
+  .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}
+  .chip{border:1px solid var(--line);background:var(--panel2);color:var(--txt);border-radius:20px;padding:5px 12px;font-size:.8rem;cursor:pointer;user-select:none}
+  .chip.active{background:var(--violet);border-color:var(--violet);color:#fff;font-weight:600}
+  .chip.s-do.active{background:var(--do);border-color:var(--do)} .chip.s-soon.active{background:var(--soon);border-color:var(--soon)} .chip.s-watch.active{background:var(--watch);border-color:var(--watch)} .chip.s-park.active{background:var(--park);border-color:var(--park)}
+  #q{flex:1;min-width:180px;background:var(--panel2);border:1px solid var(--line);color:var(--txt);border-radius:20px;padding:7px 14px;font-size:.85rem}
+  table{width:100%;border-collapse:collapse;font-size:.84rem}
+  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:.74rem;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0;background:var(--bg);cursor:pointer}
+  tbody tr:hover{background:rgba(255,255,255,.03)}
+  td.name{font-weight:600}
+  td .fn{color:var(--muted);font-weight:400;font-size:.78rem}
+  .pill{display:inline-block;border-radius:20px;padding:1px 9px;font-size:.7rem;font-weight:700;white-space:nowrap}
+  .p-do{background:var(--do);color:#fff} .p-soon{background:var(--soon);color:#fff} .p-watch{background:var(--watch);color:#fff} .p-park{background:var(--park);color:#fff}
+  .oct-Yes{color:var(--teal);font-weight:700} .oct-Maybe{color:var(--gold);font-weight:700} .oct-No{color:var(--muted)} .oct-na{color:var(--muted)}
+  .warm{color:var(--magenta);font-size:.8rem}
+  .tcheck{width:16px;height:16px;accent-color:var(--teal)}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;color:var(--muted);font-size:.78rem;margin:8px 2px}
+  .legend span b{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:middle}
+  .note{color:var(--muted);font-size:.82rem}
+  footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:.8rem}
+  @media(max-width:820px){.kpis{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.bar-row .lab{flex-basis:110px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark">CYTOGNOSIS</div>
+    <h1>Funding & Partnership Dashboard</h1>
+    <p class="sub">Individual runway, partnerships, scholar seats, and grants. Compiled June 6, 2026. Verified deadlines where dated; rolling and 2027 items noted. <b>The Oct 1 funding cliff is the line to beat.</b></p>
+  </header>
+
+  <div class="anchor">
+    <b>If you only do one thing this week:</b> apply to <b>Biswas Fast Grants</b> (up to $100K to Cytognosis, due <b>June 15</b>, money by ~August). It is the one confirmed source of cash before Oct 1, and it is a 90-minute bullet-point form. Then email <b>FACE / FondaMental</b> to open the data partnership you already planned.
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <h2>Do now <span class="small">— self-serve, no intro needed. Check them off as you go.</span></h2>
+  <div class="card donow"><ul class="clean" id="donow"></ul></div>
+
+  <h2>Deadline timeline <span class="small">— act-by dates, June to October 2026. Rolling and 2027 items live in the table.</span></h2>
+  <div class="tlwrap"><svg id="timeline" viewBox="0 0 1000 250" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Deadline timeline"></svg></div>
+  <div class="legend">
+    <span><b style="background:var(--do)"></b>Do now</span>
+    <span><b style="background:var(--soon)"></b>Apply soon</span>
+    <span><b style="background:var(--watch)"></b>Watch</span>
+    <span><b style="background:var(--park)"></b>Parked / for-profit / 2027</span>
+    <span><b style="background:#c0303a"></b>Oct 1 cliff</span>
+  </div>
+
+  <div class="grid2" style="margin-top:14px">
+    <div class="card">
+      <h2 style="margin-top:0;border:none;padding:0">By category</h2>
+      <div id="catbars"></div>
+    </div>
+    <div class="card">
+      <h2 style="margin-top:0;border:none;padding:0">By status</h2>
+      <div id="statbars"></div>
+      <p class="note" style="margin-top:14px"><b>How to read it:</b> the goal is to convert <span style="color:var(--do)">Do now</span> and <span style="color:var(--soon)">Apply soon</span> into submitted asks before Oct 1, and to keep the <span style="color:var(--watch)">Watch</span> items on a calendar.</p>
+    </div>
+  </div>
+
+  <h2>Warm-path map <span class="small">— who opens which door. One intro can unlock several awards.</span></h2>
+  <div class="card"><svg id="network" viewBox="0 0 1000 470" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Warm path map"></svg></div>
+
+  <h2>All opportunities <span class="small">— filter, search, and check off. Your checkmarks save in this browser.</span></h2>
+  <div class="controls" id="catFilters"></div>
+  <div class="controls" id="statFilters"></div>
+  <div class="controls"><input id="q" placeholder="Search name, funder, fit, contact..."><button class="chip" id="reset">Reset</button><span class="note" id="count"></span></div>
+  <div style="overflow-x:auto">
+    <table id="tbl">
+      <thead><tr>
+        <th>✓</th><th data-k="name">Opportunity</th><th data-k="cat">Category</th><th data-k="amount">Amount</th><th data-k="deadline">Timeline</th><th data-k="status">Status</th><th data-k="oct1">By Oct 1?</th><th data-k="warm">Warm path</th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p><b>Reading the columns.</b> "By Oct 1?" means a decision, and ideally money, is plausible before the cliff. "Amount" shows the award or, for partnerships and seats, what you actually get. "Parked" means closed, host-gated, for-profit-only, or 2027.</p>
+    <p><b>Two parallel asks.</b> Org runway (Biswas, Coefficient capacity, LTFF, Genentech giving) versus your own salary and seat (Coefficient transition, Emergent Ventures, Manifund, the MGH visiting-scientist seat). Run both at once.</p>
+    <p>Full narrative, sources, and framing notes live in <b>Cytognosis_Individual_Runway_Shortlist_2026-06-06.md</b> in this folder.</p>
+  </footer>
+</div>
+
+<script>
+const OPPS = [
+ {id:"biswas",name:"Biswas Fast Grants",funder:"Biswas Family Foundation",cat:"Fast cash",amount:"up to $100K",status:"do",oct1:"Yes",deadline:"Jun 15, 2026",date:"2026-06-15",warm:"",fit:"AI+health pilot; bipolar biotyping; funds the org",url:"https://www.biswasfamilyfoundation.org/science/fast-grants"},
+ {id:"ev",name:"Emergent Ventures",funder:"Mercatus (Tyler Cowen)",cat:"Transition",amount:"$10K–100K",status:"do",oct1:"Yes",deadline:"Rolling, ~2–6 wk",date:"",warm:"",fit:"Zero-to-one; individual or nonprofit",url:"https://www.mercatus.org/emergent-ventures"},
+ {id:"coef-ct",name:"Coefficient Career Transition",funder:"Coefficient Giving",cat:"Transition",amount:"~$165K (drafted)",status:"do",oct1:"Maybe",deadline:"Rolling, ~6 wk",date:"",warm:"",fit:"Funds Shahin; lead with AI-risk framing",url:"https://coefficientgiving.org/funds/global-catastrophic-risks-opportunities/career-development-and-transition-funding/"},
+ {id:"ltff",name:"EA Long-Term Future Fund",funder:"EA Funds",cat:"Transition",amount:"~$125K (drafted)",status:"do",oct1:"Maybe",deadline:"Rolling, ~3 wk",date:"",warm:"",fit:"AI-safety framing; fast",url:"https://funds.effectivealtruism.org/funds/far-future"},
+ {id:"manifund",name:"Manifund regranting",funder:"Manifund",cat:"Transition",amount:"$10K–50K",status:"do",oct1:"Yes",deadline:"Rolling, <2 wk",date:"",warm:"",fit:"Fastest bridge; post a project",url:"https://manifund.org/about/regranting"},
+ {id:"face",name:"FACE data-access charter",funder:"FondaMental",cat:"Partnership/data",amount:"Free data + co-authorship",status:"do",oct1:"Yes",deadline:"Rolling (email now)",date:"",warm:"",fit:"Validates Cytoverse bipolar axes; advances the FACE plan",url:"https://www.fondation-fondamental.org/en/our-actions/open-science-access-to-research-data"},
+ {id:"coef-cap",name:"Coefficient Capacity-Building",funder:"Coefficient Giving",cat:"Transition",amount:"~$175K (drafted)",status:"soon",oct1:"Maybe",deadline:"Rolling",date:"",warm:"",fit:"Org capacity; AI-risk framing",url:"https://coefficientgiving.org/funds/navigating-transformative-ai/"},
+ {id:"atai",name:"atai/Beckley Patient Impact Grant",funder:"AtaiBeckley",cat:"Fast cash",amount:"3 × $20K",status:"soon",oct1:"Yes",deadline:"Sep 1, 2026",date:"2026-09-01",warm:"",fit:"Track 3 ecosystem + research; patient-informed framing",url:"https://www.globenewswire.com/news-release/2026/05/28/3302931/0/en/AtaiBeckley-Launches-Patient-Impact-Grant-Program-for-Mental-Health-Non-Profit-Organizations.html"},
+ {id:"baszucki",name:"Baszucki Metabolic Psychiatry Scholar",funder:"Baszucki Group",cat:"Scholar seat",amount:"up to $150K / 18 mo",status:"soon",oct1:"Maybe",deadline:"Email; Round 2 ~Fall",date:"",warm:"email anna@baszuckigroup.org",fit:"Best science fit: bipolar + metabolic (BDNF–cholesterol–TrkB)",url:"https://baszuckigroup.com/metabolic-psychiatry-scholar-award/"},
+ {id:"sff",name:"SFF Human Self-Enhancement (HSEE)",funder:"Survival & Flourishing Fund",cat:"Transition",amount:"$50K–500K",status:"soon",oct1:"No",deadline:"Jul 8, 2026 (money ~Mar 2027)",date:"2026-07-08",warm:"",fit:"ND self-enhancement (Yar/Cytonome)",url:"https://survivalandflourishing.fund/2026/application"},
+ {id:"os4ls",name:"Open Source for Life Sciences (OS4LS)",funder:"Renaissance + CZ Biohub + Wellcome",cat:"Partnership/data",amount:"$250K–$1M",status:"soon",oct1:"Maybe",deadline:"Full proposal Jul 21",date:"2026-07-21",warm:"",fit:"Frame Cytoverse as open software, not model-dev",url:"https://os4science.org/funding_opportunity/os4ls/"},
+ {id:"afsp",name:"AFSP Focus Grants",funder:"Am. Foundation for Suicide Prevention",cat:"Foundation/Intl",amount:"$20K–100K",status:"soon",oct1:"No",deadline:"LOI Aug 1, 2026",date:"2026-08-01",warm:"",fit:"Bipolar-suicidality + BDNF; no faculty needed",url:"https://afsp.org/research-focus-grants/"},
+ {id:"fastfwd",name:"Fast Forward accelerator",funder:"Fast Forward",cat:"Accelerator",amount:"~$25K + program",status:"soon",oct1:"No",deadline:"LOI Jul 30–Sep 8",date:"2026-07-30",warm:"",fit:"Only accelerator built for AI nonprofits",url:"https://www.ffwd.org/"},
+ {id:"genentech-give",name:"Genentech Community / Giving Grant",funder:"Genentech",cat:"Pharma",amount:"$10K–$500K",status:"soon",oct1:"Maybe",deadline:"Rolling (GFRS portal)",date:"",warm:"",fit:"Health-equity / neurodiversity framing; Bay Area preference",url:"https://www.gene.com/good/giving/corporate-giving/funding-request-system-resources"},
+ {id:"bi-iis",name:"Boehringer Ingelheim IIS",funder:"Boehringer Ingelheim",cat:"Pharma",amount:"varies (+ study drug)",status:"soon",oct1:"Maybe",deadline:"Rolling",date:"",warm:"",fit:"Schizophrenia/psychiatry; treatment-response biotyping",url:"https://pro.boehringer-ingelheim.com/funding/clinical-research-grants/funding-opportunities-investigator-initiated-studies-iis"},
+ {id:"otsuka",name:"Otsuka Investigator-Sponsored Studies",funder:"Otsuka",cat:"Pharma",amount:"varies",status:"soon",oct1:"Maybe",deadline:"Rolling (email)",date:"",warm:"grants@otsuka-us.com",fit:"Bipolar, ADHD, autism are named focus areas",url:"https://www.otsuka-us.com/research"},
+ {id:"biohub-vbi",name:"CZ Biohub Virtual Biology Initiative",funder:"CZ Biohub",cat:"Partnership/data",amount:"$100M external fund (RFA pending)",status:"soon",oct1:"No",deadline:"Email now; RFA pending",date:"",warm:"Angela Pisco",fit:"Contribute psych/neuro cell data to the cell atlas",url:"https://biohub.org/news/virtual-biology-initiative/"},
+ {id:"hms-seat",name:"HMS Visiting Scientist @ MGH",funder:"Harvard / MGH (Smoller)",cat:"Scholar seat",amount:"Affiliation (self-funded)",status:"soon",oct1:"n/a",deadline:"Rolling, sponsor-initiated",date:"",warm:"Patty → Jordan Smoller",fit:"KEYSTONE: unlocks BBRF, One Mind, McKnight, Tommy Fuss, Broad",url:"https://facultyhandbook.hms.harvard.edu/14visiting/elig/"},
+ {id:"rfa-bbqs",name:"RFA-MH-26-140 BBQS sensors",funder:"NIMH / BRAIN",cat:"Federal",amount:"~$400K–$1M/yr",status:"soon",oct1:"No",deadline:"Submit ~Oct 2026 (money 2027)",date:"2026-10-06",warm:"",fit:"Cytoscope sensor vehicle; Shahin can PI",url:"https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-26-140.html"},
+ {id:"tinybluedot",name:"Tiny Blue Dot Perception Box R5",funder:"Tiny Blue Dot Foundation",cat:"Foundation/Intl",amount:"up to $900K",status:"watch",oct1:"No",deadline:"Watch ~Sep LOI",date:"2026-09-15",warm:"",fit:"Perception + lived-experience (22q11)",url:"https://www.tinybluedotfoundation.org/rfp"},
+ {id:"cbec",name:"CZ Biohub Chicago / CBEC",funder:"CZ Biohub Chicago",cat:"Partnership/data",amount:"Networking entry",status:"watch",oct1:"n/a",deadline:"CBEC Sep 17–18, 2026",date:"2026-09-17",warm:"Angela Pisco",fit:"Instrumented tissues / sensors (Cytoscope)",url:"https://biohub.org/"},
+ {id:"arc-vcc",name:"Arc Virtual Cell Challenge",funder:"Arc Institute",cat:"Partnership/data",amount:"$100K prize",status:"watch",oct1:"Maybe",deadline:"2026 cycle ~mid-year",date:"",warm:"Hani Goodarzi",fit:"ML competition; builds Arc relationship",url:"https://arcinstitute.org/virtual-cell-initiative"},
+ {id:"arc-collab",name:"Arc AD / Virtual Cell collaboration",funder:"Arc Institute",cat:"Partnership/data",amount:"Data/model collaboration",status:"watch",oct1:"n/a",deadline:"Via warm intro",date:"",warm:"Hani Goodarzi",fit:"Causal AI; neuro parallel to AD framework",url:"https://arcinstitute.org/alzheimers-disease-initiative"},
+ {id:"tempus",name:"Tempus PRECISION Challenge",funder:"Tempus AI",cat:"Partnership/data",amount:"$25K + $75K + compute",status:"watch",oct1:"Maybe",deadline:"Applications opening ~soon",date:"",warm:"",fit:"Foundation-model methodology; oncology-scoped",url:"https://www.tempus.com/"},
+ {id:"baszucki2",name:"Wellcome Leap programs",funder:"Wellcome Leap",cat:"Foundation/Intl",amount:"$1M–$50M",status:"watch",oct1:"No",deadline:"Program-specific",date:"",warm:"",fit:"Mental health / multiomics; no faculty requirement",url:"https://wellcomeleap.org/"},
+ {id:"bridge2ai",name:"NIH Bridge2AI Stage 2",funder:"NIH Common Fund",cat:"Federal",amount:"part of $130M pool",status:"watch",oct1:"No",deadline:"RFA ~mid-2026; money 2027",date:"",warm:"",fit:"AI-ready datasets; most Cytognosis-shaped federal program",url:"https://commonfund.nih.gov/bridge2ai"},
+ {id:"sch",name:"NSF / NIH Smart Health (SCH)",funder:"NSF + NIH (NIMH)",cat:"Federal",amount:"$1.2M / 4 yr",status:"watch",oct1:"No",deadline:"Awaiting new solicitation",date:"",warm:"Grama co-PI",fit:"Wearable + computational psychiatry",url:"https://www.nsf.gov/funding/opportunities/sch-smart-health-biomedical-research-era-artificial-intelligence"},
+ {id:"par25136",name:"PAR-25-136 Digital Health Labs",funder:"NIMH",cat:"Federal",amount:"~$250K–500K/yr",status:"watch",oct1:"No",deadline:"Submit ~Oct 2026; needs clinical partner",date:"",warm:"",fit:"Cytonome optimization layer in a trial",url:"https://grants.nih.gov/grants/guide/pa-files/PAR-25-136.html"},
+ {id:"precise-ai",name:"ARPA-H PRECISE-AI",funder:"ARPA-H",cat:"Federal",amount:"multi-$M (teaming)",status:"watch",oct1:"No",deadline:"Check SAM.gov; teaming",date:"",warm:"",fit:"AI model monitoring; join as a sub with a clinical partner",url:"https://arpa-h.gov/research-and-funding/programs/precise-ai/faqs"},
+ {id:"ciapm",name:"CIAPM Partnerships",funder:"California (CHHS)",cat:"Federal",amount:"$1.2M–$2M / team",status:"watch",oct1:"No",deadline:"Next ~Fall 2026",date:"",warm:"via UCSF affiliation",fit:"CA precision medicine; Cytognosis can partner now",url:"https://www.grants.ca.gov/grants/representative-precision-medicine-research-through-partnerships/"},
+ {id:"ucsf",name:"UCSF research affiliate",funder:"UCSF",cat:"Scholar seat",amount:"Affiliation",status:"watch",oct1:"n/a",deadline:"Relationship-initiated",date:"",warm:"via UCSF faculty",fit:"Unlocks CIAPM Lead-PI; ~15 min from home",url:"https://weill.ucsf.edu/"},
+ {id:"mclean",name:"McLean Visiting Scientist",funder:"McLean / HMS",cat:"Scholar seat",amount:"Affiliation + HMS title",status:"watch",oct1:"n/a",deadline:"Relationship-initiated",date:"",warm:"existing McLean data tie",fit:"Alternate Boston path; bipolar-data relationship",url:"https://hms.harvard.edu/about-hms/hms-affiliates"},
+ {id:"broad-am",name:"Broad Associate Member",funder:"Broad / Stanley Center",cat:"Scholar seat",amount:"PI status at Broad",status:"watch",oct1:"n/a",deadline:"After MGH seat",date:"",warm:"via MGH appointment",fit:"Psychiatric-genomics ecosystem",url:"https://www.broadinstitute.org/academic-affairs/associate-members"},
+ {id:"tommyfuss",name:"Tommy Fuss Scholars",funder:"CPP / MGH",cat:"Scholar seat",amount:"salary + research, 2 yr",status:"watch",oct1:"No",deadline:"2027 ~Jan",date:"",warm:"via MGH seat",fit:"Perfect science fit; pairs with the seat",url:"https://mghpsychnews.org/accepting-applications-for-the-tommy-fuss-scholars-program-in-precision-psychiatry/"},
+ {id:"bbrf",name:"BBRF Young Investigator",funder:"Brain & Behavior Research Foundation",cat:"Scholar seat",amount:"$70K / 2 yr",status:"watch",oct1:"No",deadline:"2027 ~Feb–Mar",date:"",warm:"needs institutional host",fit:"Bridges to NIH; unlocked by the seat",url:"https://bbrfoundation.org/grants-prizes/grants"},
+ {id:"genentech-gred",name:"Genentech gRED research partnership",funder:"Genentech",cat:"Pharma",amount:"Deal-specific (6–7 fig.)",status:"watch",oct1:"No",deadline:"2027, post-paper",date:"",warm:"Aviv Regev (high-energy)",fit:"Sponsored research; neuroscience focus",url:"https://www.gene.com/partners/our-approach"},
+ {id:"lundbeck",name:"Lundbeck IIT",funder:"Lundbeck",cat:"Pharma",amount:"varies (+ study drug)",status:"watch",oct1:"Maybe",deadline:"Rolling",date:"",warm:"needs clinician co-PI",fit:"Bipolar named focus area",url:"https://www.lundbeck.com/us/our-focus/community-engagement/grants-and-contributions/investigator-initiated-trials-iits"},
+ {id:"mayo",name:"Mayo Clinic Platform_Accelerate",funder:"Mayo Clinic",cat:"Accelerator",amount:"Data + network (equity)",status:"watch",oct1:"No",deadline:"Ask re: nonprofit track",date:"",warm:"platform@mayo.edu",fit:"Valuable data + validation; equity blocks a 501(c)(3)",url:"https://www.mayoclinicplatform.org/focus-areas/digital-health/accelerate/"},
+ {id:"pjmf",name:"PJMF Digital Health grants",funder:"Patrick J. McGovern Foundation",cat:"Foundation/Intl",amount:"$45K–$1.5M",status:"watch",oct1:"No",deadline:"Invite-only (cultivate)",date:"",warm:"needs a program-officer intro",fit:"AI + health equity",url:"https://www.mcgovern.org/grants/"},
+ {id:"one-mind-rs",name:"One Mind Rising Star",funder:"One Mind",cat:"Scholar seat",amount:"$300K / 3 yr",status:"park",oct1:"No",deadline:"2027; faculty-gated",date:"",warm:"via MGH seat",fit:"Faculty or equivalent required",url:"https://onemind.org/what-we-do/one-mind-rising-star-academy/one-mind-rising-star-awards/"},
+ {id:"stanford-hai",name:"Stanford HAI / Digital Health grants",funder:"Stanford",cat:"Scholar seat",amount:"varies",status:"park",oct1:"No",deadline:"2027 via Stanford affiliation",date:"",warm:"",fit:"Host-gated to Stanford faculty",url:"https://hai.stanford.edu/research/grant-programs"},
+ {id:"astera",name:"Astera Residency",funder:"Astera Institute",cat:"Transition",amount:"$125K–$250K salary",status:"park",oct1:"No",deadline:"~Spring 2027; on-site Emeryville",date:"",warm:"",fit:"Closed; reapply 2027",url:"https://astera.org/residency/"},
+ {id:"nsf-sbir",name:"NSF SBIR (AI topic)",funder:"NSF",cat:"Accelerator",amount:"$275K Phase I",status:"park",oct1:"No",deadline:"Yar PBC only (for-profit)",date:"",warm:"",fit:"Small-business statutory requirement",url:"https://seedfund.nsf.gov/topics/artificial-intelligence/"},
+ {id:"merck-mds",name:"Merck MDS Studio",funder:"Merck / MGHIF",cat:"Accelerator",amount:"$100K SAFE",status:"park",oct1:"No",deadline:"Yar PBC only (for-profit)",date:"",warm:"",fit:"Digital-sciences accelerator (equity)",url:"https://www.mds.studio/"},
+ {id:"cedars",name:"Cedars-Sinai Accelerator+",funder:"Cedars-Sinai",cat:"Accelerator",amount:"Investment (equity)",status:"park",oct1:"No",deadline:"Yar PBC only (for-profit)",date:"",warm:"",fit:"Healthcare startup accelerator",url:"https://www.csaccelerator.com/"},
+ {id:"ihi",name:"IHI JU (EU)",funder:"European Commission",cat:"Foundation/Intl",amount:"multi-million €",status:"park",oct1:"No",deadline:"EU-gated (US self-funds)",date:"",warm:"needs EU lead",fit:"US cannot be a funded participant",url:"https://www.ihi.europa.eu/apply-funding/open-calls"},
+ {id:"wellcome-disc",name:"Wellcome Discovery / MQ",funder:"Wellcome / MQ",cat:"Foundation/Intl",amount:"large",status:"park",oct1:"No",deadline:"UK / Ireland-gated",date:"",warm:"",fit:"US nonprofit ineligible to host",url:"https://wellcome.org/research-funding/schemes/wellcome-discovery-awards"},
+ {id:"openai-mh",name:"OpenAI Mental Health grants",funder:"OpenAI",cat:"Foundation/Intl",amount:"$5K–$100K",status:"park",oct1:"No",deadline:"Closed Jan 2026 (watch 2027)",date:"",warm:"",fit:"AI + mental health",url:"https://openai.com/index/ai-mental-health-research-grants/"},
+ {id:"nigms",name:"NIGMS MIRA (ESI)",funder:"NIH NIGMS",cat:"Federal",amount:"$1.25M / 5 yr",status:"park",oct1:"No",deadline:"Faculty-gated + wrong scope",date:"",warm:"",fit:"Skip: needs faculty seat; not psychiatry scope",url:"https://www.nigms.nih.gov/Research/mechanisms/MIRA/Pages/default"}
+];
+
+const CATS=["Fast cash","Transition","Partnership/data","Scholar seat","Pharma","Accelerator","Federal","Foundation/Intl"];
+const STATUS={do:"Do now",soon:"Apply soon",watch:"Watch",park:"Parked"};
+const SCOL={do:"var(--do)",soon:"var(--soon)",watch:"var(--watch)",park:"var(--park)"};
+const SKEY={do:"s-do",soon:"s-soon",watch:"s-watch",park:"s-park"};
+
+/* ---------- KPIs ---------- */
+const nDo=OPPS.filter(o=>o.status==="do").length;
+const nSelf=OPPS.filter(o=>(o.status==="do"||o.status==="soon")&&!o.warm).length;
+const nOct=OPPS.filter(o=>(o.oct1==="Yes"||o.oct1==="Maybe")&&o.status!=="park").length;
+const nWarm=OPPS.filter(o=>o.warm).length;
+const kpis=[
+ {n:OPPS.length,l:"opportunities mapped",c:"k4"},
+ {n:nDo,l:"do now, no intro needed",c:"k0"},
+ {n:nOct,l:"could decide / pay by Oct 1",c:"k1"},
+ {n:nWarm,l:"warm-path plays",c:"k3"},
+ {n:"1",l:"keystone seat unlocks 5 awards",c:"k2"}
+];
+document.getElementById("kpis").innerHTML=kpis.map(k=>`<div class="kpi ${k.c}"><div class="n">${k.n}</div><div class="l">${k.l}</div></div>`).join("");
+
+/* ---------- Do now list ---------- */
+const donow=[
+ {t:"Biswas Fast Grants",d:"$100K to Cytognosis; bullet-point form",tag:"Jun 15"},
+ {t:"Coefficient Career Transition",d:"draft ready; reframe to AI-risk and submit",tag:"now"},
+ {t:"EA LTFF",d:"adapt the Coefficient narrative; submit",tag:"now"},
+ {t:"Emergent Ventures",d:"one-page pitch; ~weeks to decision",tag:"now"},
+ {t:"Manifund",d:"post the project so regrantors see it",tag:"now"},
+ {t:"Email FACE / FondaMental",d:"open the bipolar data charter you planned",tag:"now"},
+ {t:"Email CZ Biohub VBI",d:"intro Cytognosis as a neuro data contributor; loop in Angela",tag:"now"},
+ {t:"Email Baszucki Group",d:"confirm a nonprofit-founder PI qualifies",tag:"this wk"}
+];
+document.getElementById("donow").innerHTML=donow.map((x,i)=>`<li><label><input type="checkbox" data-dn="${i}"><span><b>${x.t}</b> <span class="tag">${x.tag}</span><br><span class="d">${x.d}</span></span></label></li>`).join("");
+
+/* ---------- Timeline ---------- */
+(function(){
+ const svg=document.getElementById("timeline");
+ const W=1000,axisY=130,x0=55,x1=955;
+ const start=new Date("2026-06-01").getTime(), end=new Date("2026-10-31").getTime();
+ const xFor=t=>x0+(new Date(t).getTime()-start)/(end-start)*(x1-x0);
+ let s=`<line x1="${x0}" y1="${axisY}" x2="${x1}" y2="${axisY}" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>`;
+ const months=[["Jun","2026-06-01"],["Jul","2026-07-01"],["Aug","2026-08-01"],["Sep","2026-09-01"],["Oct","2026-10-01"]];
+ months.forEach(m=>{const x=xFor(m[1]);s+=`<line x1="${x}" y1="${axisY-6}" x2="${x}" y2="${axisY+6}" stroke="rgba(255,255,255,.25)"/><text x="${x}" y="${axisY+24}" fill="var(--muted)" font-size="12" text-anchor="middle">${m[0]}</text>`;});
+ // Oct 1 cliff
+ const cx=xFor("2026-10-01");
+ s+=`<line x1="${cx}" y1="20" x2="${cx}" y2="${axisY+34}" stroke="#c0303a" stroke-width="2" stroke-dasharray="5 4"/><text x="${cx}" y="16" fill="#e06a72" font-size="12" font-weight="700" text-anchor="middle">Oct 1 cliff</text>`;
+ const items=OPPS.filter(o=>o.date).sort((a,b)=>new Date(a.date)-new Date(b.date));
+ const above=[[ -70,-46],[-92,-46]]; // not used; manual stagger below
+ let lvlUp=0,lvlDn=0;
+ items.forEach((o,i)=>{
+   const x=xFor(o.date);
+   const up=i%2===0;
+   const offsets=up?[ -38,-60,-82]:[38,60,82];
+   const slot= up? (lvlUp++%3):(lvlDn++%3);
+   const ly=axisY+(up?offsets[slot]:offsets[slot]);
+   const col=SCOL[o.status];
+   const label=o.name.length>26?o.name.slice(0,25)+"…":o.name;
+   s+=`<line x1="${x}" y1="${axisY}" x2="${x}" y2="${ly+(up?8:-8)}" stroke="${col}" stroke-width="1" opacity=".5"/>`;
+   s+=`<circle cx="${x}" cy="${axisY}" r="5" fill="${col}"/>`;
+   s+=`<text x="${x}" y="${ly}" fill="var(--txt)" font-size="11.5" text-anchor="middle">${label}</text>`;
+   s+=`<text x="${x}" y="${ly+(up?-14:14)}" fill="${col}" font-size="10.5" font-weight="700" text-anchor="middle">${o.deadline.replace(/,? 2026.*/,"")}</text>`;
+ });
+ svg.innerHTML=s;
+})();
+
+/* ---------- Bars ---------- */
+function bars(elId,counts,colorFn){
+ const max=Math.max(...Object.values(counts),1);
+ document.getElementById(elId).innerHTML=Object.entries(counts).map(([k,v])=>
+  `<div class="bar-row"><div class="lab">${k}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.round(v/max*100)}%;background:${colorFn(k)}"></div></div><div class="ct">${v}</div></div>`).join("");
+}
+const catCounts={};CATS.forEach(c=>catCounts[c]=OPPS.filter(o=>o.cat===c).length);
+const catColor=c=>({"Fast cash":"var(--magenta)","Transition":"var(--violet)","Partnership/data":"var(--teal)","Scholar seat":"var(--azure)","Pharma":"var(--indigo)","Accelerator":"#7d5cc0","Federal":"#3f8fd6","Foundation/Intl":"#b34fb0"}[c]||"var(--violet)");
+bars("catbars",catCounts,catColor);
+const statCounts={};Object.entries(STATUS).forEach(([k,lab])=>statCounts[lab]=OPPS.filter(o=>o.status===k).length);
+const statColor=lab=>({"Do now":"var(--do)","Apply soon":"var(--soon)","Watch":"var(--watch)","Parked":"var(--park)"}[lab]);
+bars("statbars",statCounts,statColor);
+
+/* ---------- Warm-path network ---------- */
+(function(){
+ const svg=document.getElementById("network");
+ function node(x,y,w,t,sub,fill,tcol){return `<g><rect x="${x}" y="${y}" rx="9" width="${w}" height="${sub?44:30}" fill="${fill}" stroke="rgba(255,255,255,.15)"/><text x="${x+w/2}" y="${y+(sub?19:20)}" fill="${tcol||'#fff'}" font-size="12.5" font-weight="700" text-anchor="middle">${t}</text>${sub?`<text x="${x+w/2}" y="${y+34}" fill="${tcol||'rgba(255,255,255,.85)'}" font-size="10" text-anchor="middle">${sub}</text>`:""}</g>`;}
+ function link(x1,y1,x2,y2){return `<path d="M${x1},${y1} C${(x1+x2)/2},${y1} ${(x1+x2)/2},${y2} ${x2},${y2}" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1.5"/>`;}
+ let s="";
+ // center
+ s+=node(20,210,120,"Shahin","Founder, Cytognosis","#23233a");
+ // contacts column
+ const cx=210, cw=150;
+ const contacts=[
+  ["Patty → Smoller",40,"var(--indigo)"],
+  ["Angela Pisco",120,"var(--indigo)"],
+  ["Hani Goodarzi",200,"var(--indigo)"],
+  ["Aviv Regev",280,"var(--indigo)"],
+  ["Ananth Grama",360,"var(--indigo)"]
+ ];
+ contacts.forEach(c=>{s+=link(140,225,cx,c[1]+15);});
+ contacts.forEach(c=>{s+=node(cx,c[1],cw,c[0],"",c[2]);});
+ // targets column
+ const tx=430, tw=230;
+ const targets=[
+  ["HMS Visiting-Scientist seat","violet",30,0],
+  ["CZ Biohub Virtual Biology Init.","teal",120,1],
+  ["Arc: Virtual Cell + AD","teal",200,2],
+  ["Genentech gRED partnership","indigo",280,3],
+  ["NIH/NSF Smart Health, Purdue","azure",360,4]
+ ];
+ const tcolmap={violet:"var(--violet)",teal:"#127f7f",indigo:"#46407e",azure:"#2f6bb0"};
+ targets.forEach((t,i)=>{s+=link(cx+cw,contacts[i][1]+15,tx,t[2]+15);});
+ targets.forEach(t=>{s+=node(tx,t[2],tw,t[0],"",tcolmap[t[1]]);});
+ // unlocks from the seat
+ const ux=720, uw=250;
+ const unlocks=["BBRF Young Investigator","One Mind Rising Star","McKnight Scholar","Tommy Fuss Scholars","Broad Associate Member"];
+ unlocks.forEach((u,i)=>{const y=10+i*40;s+=link(tx+tw,45,ux,y+13);s+=node(ux,y,uw,u,"","#2a2440","#d9c8f2");});
+ s+=`<text x="${ux}" y="${10+5*40+6}" fill="var(--muted)" font-size="10.5">The seat is the key that opens the five faculty-gated awards.</text>`;
+ svg.innerHTML=s;
+})();
+
+/* ---------- Table + filters ---------- */
+const state={cat:new Set(),stat:new Set(),q:""};
+const catWrap=document.getElementById("catFilters");
+catWrap.innerHTML=`<span class="note" style="margin-right:4px">Category:</span>`+CATS.map(c=>`<span class="chip" data-cat="${c}">${c}</span>`).join("");
+const statWrap=document.getElementById("statFilters");
+statWrap.innerHTML=`<span class="note" style="margin-right:4px">Status:</span>`+Object.entries(STATUS).map(([k,l])=>`<span class="chip ${SKEY[k]}" data-stat="${k}">${l}</span>`).join("");
+
+let sortK="status",sortDir=1;
+const sortOrder={do:0,soon:1,watch:2,park:3};
+function render(){
+ let list=OPPS.filter(o=>{
+   if(state.cat.size&&!state.cat.has(o.cat))return false;
+   if(state.stat.size&&!state.stat.has(o.status))return false;
+   if(state.q){const s=(o.name+o.funder+o.fit+o.warm+o.cat).toLowerCase();if(!s.includes(state.q))return false;}
+   return true;
+ });
+ list.sort((a,b)=>{
+   let av,bv;
+   if(sortK==="status"){av=sortOrder[a.status];bv=sortOrder[b.status];}
+   else{av=(a[sortK]||"").toString().toLowerCase();bv=(b[sortK]||"").toString().toLowerCase();}
+   return av<bv?-1*sortDir:av>bv?1*sortDir:0;
+ });
+ const saved=JSON.parse(localStorage.getItem("cg_checks")||"{}");
+ document.getElementById("rows").innerHTML=list.map(o=>{
+   const oc=o.oct1==="n/a"?`<span class="oct-na">—</span>`:`<span class="oct-${o.oct1}">${o.oct1}</span>`;
+   return `<tr>
+   <td><input type="checkbox" class="tcheck" data-id="${o.id}" ${saved[o.id]?"checked":""}></td>
+   <td class="name"><a href="${o.url}" target="_blank" rel="noopener">${o.name}</a><div class="fn">${o.fit}</div></td>
+   <td>${o.cat}</td>
+   <td>${o.amount}</td>
+   <td>${o.deadline}</td>
+   <td><span class="pill p-${o.status}">${STATUS[o.status]}</span></td>
+   <td>${oc}</td>
+   <td>${o.warm?`<span class="warm">${o.warm}</span>`:`<span class="note">—</span>`}</td>
+   </tr>`;
+ }).join("");
+ document.getElementById("count").textContent=`${list.length} of ${OPPS.length} shown`;
+}
+catWrap.addEventListener("click",e=>{const c=e.target.dataset.cat;if(!c)return;e.target.classList.toggle("active");state.cat.has(c)?state.cat.delete(c):state.cat.add(c);render();});
+statWrap.addEventListener("click",e=>{const k=e.target.dataset.stat;if(!k)return;e.target.classList.toggle("active");state.stat.has(k)?state.stat.delete(k):state.stat.add(k);render();});
+document.getElementById("q").addEventListener("input",e=>{state.q=e.target.value.toLowerCase().trim();render();});
+document.getElementById("reset").addEventListener("click",()=>{state.cat.clear();state.stat.clear();state.q="";document.getElementById("q").value="";document.querySelectorAll(".chip.active").forEach(c=>c.classList.remove("active"));render();});
+document.querySelectorAll("#tbl th[data-k]").forEach(th=>th.addEventListener("click",()=>{const k=th.dataset.k;if(sortK===k)sortDir*=-1;else{sortK=k;sortDir=1;}render();}));
+document.getElementById("rows").addEventListener("change",e=>{if(!e.target.dataset.id)return;const saved=JSON.parse(localStorage.getItem("cg_checks")||"{}");saved[e.target.dataset.id]=e.target.checked;localStorage.setItem("cg_checks",JSON.stringify(saved));});
+// do-now persistence
+const dn=JSON.parse(localStorage.getItem("cg_donow")||"{}");
+document.querySelectorAll("[data-dn]").forEach(c=>{c.checked=!!dn[c.dataset.dn];c.addEventListener("change",()=>{const d=JSON.parse(localStorage.getItem("cg_donow")||"{}");d[c.dataset.dn]=c.checked;localStorage.setItem("cg_donow",JSON.stringify(d));});});
+render();
+</script>
+</body>
+</html>
