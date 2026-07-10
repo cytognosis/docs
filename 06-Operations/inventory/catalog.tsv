@@ -73,11 +73,11 @@ docs	04-Engineering	engineering	primary	no		5.1				Cytos Standards Reference	rep
 docs	04-Engineering	engineering	primary	no		13.8	Active	2026-06-14	cytonome, architecture, cross-system	Cytognosis Cross-System Architecture	repos/cytognosis/docs/04-Engineering/architecture/cross-system-architecture.md
 docs	04-Engineering	engineering	primary	no		2.1				Scholarly Extraction & Grant Harmonization Pipeline	repos/cytognosis/docs/04-Engineering/cytos/scholarly-extraction.md
 docs	04-Engineering	engineering	primary	no		54.4				Cytos–Neuros Architectural Separation	repos/cytognosis/docs/04-Engineering/cytos/cytos-neuros-separation.md
+docs	04-Engineering	engineering	primary	no		4.3				Cytos pillar — technical reference	repos/cytognosis/docs/04-Engineering/cytos/cytos-pillar.md
 docs	04-Engineering	readme	primary	no		3.8				Cytos (Cytoverse engineering platform) — layer index	repos/cytognosis/docs/04-Engineering/cytos/README.md
 docs	04-Engineering	engineering	primary	no		9.4				Playbook Chapter to Cytos Module Map	repos/cytognosis/docs/04-Engineering/cytos/03_chapter_to_module_map.md
-docs	04-Engineering	engineering	readable	no		2.6				Cytos pillar — readable guide	repos/cytognosis/docs/04-Engineering/cytos/cytos-pillar.readable.md
 docs	04-Engineering	engineering	primary	no		8.6				Genomic Atlas Interface	repos/cytognosis/docs/04-Engineering/cytos/genomic-atlas.md
-docs	04-Engineering	engineering	technical	no		4.1				Cytos pillar — technical reference	repos/cytognosis/docs/04-Engineering/cytos/cytos-pillar.technical.md
+docs	04-Engineering	engineering	agent	no		3.5				Cytos pillar — agent brief	repos/cytognosis/docs/04-Engineering/cytos/cytos-pillar_prompt.md
 docs	04-Engineering	engineering	primary	no		10.1				Genomic Standards and Protocols	repos/cytognosis/docs/04-Engineering/cytos/genomic-standards.md
 docs	04-Engineering	engineering	primary	no		3.4				End-to-End Platform Validation & Tutorial Generation	repos/cytognosis/docs/04-Engineering/cytos/e2e-platform-validation.md
 docs	04-Engineering	engineering	primary	no		23.2		2026-05-26 · **Status**: ANALYSIS — Awaiting review		VFS Enhancement, Container Strategy, and Database Benchmarking	repos/cytognosis/docs/04-Engineering/cytos/vfs-containers-databases-analysis.md
@@ -85,7 +85,6 @@ docs	04-Engineering	engineering	primary	no		7.7				Verification Matrix — Imple
 docs	04-Engineering	engineering	primary	no		40.4				Experiment Management Interface: Design and Tool Analysis	repos/cytognosis/docs/04-Engineering/cytos/experiment-management-interface.md
 docs	04-Engineering	engineering	primary	no		16.6	DRAFT — Awaiting your review	2026-05-26		Experiment Management Architecture: Analysis & Recommendation	repos/cytognosis/docs/04-Engineering/cytos/experiment-management-architecture.md
 docs	04-Engineering	engineering	primary	no		10.7				Cytos Pipeline Automation	repos/cytognosis/docs/04-Engineering/cytos/02_pipeline_automation.md
-docs	04-Engineering	engineering	agent	no		3.4				Cytos pillar — agent brief	repos/cytognosis/docs/04-Engineering/cytos/cytos-pillar.agent.md
 docs	04-Engineering	engineering	primary	no		47.2				Experiment Orchestration: Definition, Execution, and Provenance	repos/cytognosis/docs/04-Engineering/cytos/experiment-orchestration-research.md
 docs	04-Engineering	module-spec	primary	no		6.0				Cytos Module Map	repos/cytognosis/docs/04-Engineering/cytos/module-map.md
 docs	04-Engineering	engineering	primary	no		14.5				Cytos Foundation-Model Architecture	repos/cytognosis/docs/04-Engineering/cytos/04_foundation_model_architecture.md
@@ -180,10 +179,9 @@ docs	04-Engineering	engineering	primary	no		5.5	Active	2026-06-14	quick-referenc
 docs	04-Engineering	engineering	primary	no		8.3	Active	2026-06-14	branding, cytognosis-branding, design-system, v10	cytognosis-branding — Deep Brand Reference Skill	repos/cytognosis/docs/04-Engineering/cytoskills/skills/cytognosis-branding/cytognosis-branding.md
 docs	04-Engineering	engineering	primary	no		5.1	Active	2026-06-14	quick-reference, cytognosis-orchestrator	cytognosis-orchestrator — Quick Reference	repos/cytognosis/docs/04-Engineering/cytoskills/skills/cytognosis-orchestrator/cytognosis-orchestrator-quickref.md
 docs	04-Engineering	engineering	primary	no		10.6	Active	2026-06-14	orchestration, routing, cytognosis-orchestrator	cytognosis-orchestrator — Task Orchestrator Skill	repos/cytognosis/docs/04-Engineering/cytoskills/skills/cytognosis-orchestrator/cytognosis-orchestrator.md
+docs	04-Engineering	engineering	primary	no		4.4				Toolchain Platform Overview (technical)	repos/cytognosis/docs/04-Engineering/toolchain/toolchain-overview.md
 docs	04-Engineering	readme	primary	no		2.2				Toolchain engineering layer	repos/cytognosis/docs/04-Engineering/toolchain/README.md
-docs	04-Engineering	engineering	technical	no		4.3				Toolchain Platform Overview (technical)	repos/cytognosis/docs/04-Engineering/toolchain/toolchain-overview.technical.md
-docs	04-Engineering	engineering	readable	no		2.4				Toolchain Platform Overview (readable)	repos/cytognosis/docs/04-Engineering/toolchain/toolchain-overview.readable.md
-docs	04-Engineering	engineering	agent	no		2.7				Toolchain Platform Overview (agent brief)	repos/cytognosis/docs/04-Engineering/toolchain/toolchain-overview.agent.md
+docs	04-Engineering	engineering	agent	no		2.8				Toolchain Platform Overview (agent brief)	repos/cytognosis/docs/04-Engineering/toolchain/toolchain-overview_prompt.md
 docs	04-Engineering	meeting-notes	primary	no		15.6				Meeting Transcription, Storage, and Synthesis: Recommended System for Cytognosis	repos/cytognosis/docs/04-Engineering/toolchain/Meeting-Transcription-and-Synthesis-Plan.md
 docs	04-Engineering	engineering	primary	no		73.4				Cytognosis Brand Design Guide	repos/cytognosis/docs/04-Engineering/toolchain/cytocast/design/branding.md
 docs	04-Engineering	engineering	primary	no		3.8				IDE Configuration	repos/cytognosis/docs/04-Engineering/toolchain/cytocast/features/ide-configuration.md
@@ -487,18 +485,20 @@ docs	07-Design	design	readable	no		5.1				Cytognosis Design System — Readable 
 docs	07-Design	design	primary	no		50.7				ADHD and Neurodiversity Design Research	repos/cytognosis/docs/07-Design/adhd-neurodiversity-design-research.md
 docs	07-Design	design	agent	no		3.9				Cytognosis Design System — Agent Brief	repos/cytognosis/docs/07-Design/design-system.agent.md
 docs	07-Design	design	primary	no		6.5				Claude Design Bidirectional Sync Protocol	repos/cytognosis/docs/07-Design/claude-design-sync-protocol.md
-docs	06-Operations	operations	agent	no		3.4				Operations (06-Operations) — Fresh-Agent Brief	repos/cytognosis/docs/06-Operations/operations-overview.agent.md
 docs	06-Operations	readme	primary	no		1.4				06-Operations	repos/cytognosis/docs/06-Operations/README.md
-docs	06-Operations	operations	technical	no		7.5				Operations (06-Operations) — Layer Overview (Technical)	repos/cytognosis/docs/06-Operations/operations-overview.technical.md
+docs	06-Operations	operations	agent	no		3.5				Operations (06-Operations) — Fresh-Agent Brief	repos/cytognosis/docs/06-Operations/operations-overview_prompt.md
+docs	06-Operations	operations	primary	no		7.5				Operations (06-Operations) — Layer Overview (Technical)	repos/cytognosis/docs/06-Operations/operations-overview.md
 docs	06-Operations	operations	primary	no		3.3	Active	2026-06-14	operations, legal, finance, gdrive, index	Google Drive: Operations and Legal Document Index	repos/cytognosis/docs/06-Operations/gdrive-ops-legal-index.md
-docs	06-Operations	operations	readable	no		3.1				Operations (06-Operations) — Overview (Readable)	repos/cytognosis/docs/06-Operations/operations-overview.readable.md
 docs	06-Operations	operations	primary	no		2.5				Communications & Workspace Infrastructure	repos/cytognosis/docs/06-Operations/COMMUNICATIONS_AND_WORKSPACE.md
+docs	06-Operations	operations	primary	no		1073.6					repos/cytognosis/docs/06-Operations/inventory/provenance-archives.tsv
 docs	06-Operations	code	primary	no		7.5					repos/cytognosis/docs/06-Operations/inventory/build_catalog.py
+docs	06-Operations	operations	primary	no		1.5					repos/cytognosis/docs/06-Operations/inventory/catalog-tables.md
+docs	06-Operations	operations	primary	no		9.0	Active	2026-07-10	inventory, catalog, taxonomy, provenance, knowledge-management	Master Catalog — Everything We Have and Where It Lives	repos/cytognosis/docs/06-Operations/inventory/MASTER-CATALOG.md
 docs	06-Operations	operations	primary	no		730.6					repos/cytognosis/docs/06-Operations/inventory/catalog.tsv
 docs	06-Operations	config/schema	primary	no		1.4					repos/cytognosis/docs/06-Operations/inventory/catalog-summary.json
-docs	06-Operations	operations	agent	no		3.1				Cytognosis Foundation — Org Context (Agent Brief)	repos/cytognosis/docs/06-Operations/org/org-context.agent.md
-docs	06-Operations	operations	readable	no		3.6				Cytognosis Foundation — Org Context (Readable)	repos/cytognosis/docs/06-Operations/org/org-context.readable.md
-docs	06-Operations	operations	technical	no		6.0				Cytognosis Foundation — Organizational Context (Technical)	repos/cytognosis/docs/06-Operations/org/org-context.technical.md
+docs	06-Operations	operations	simple	no		2.1				The Master Map, in Plain Words	repos/cytognosis/docs/06-Operations/inventory/simple/MASTER-CATALOG.md
+docs	06-Operations	operations	primary	no		6.1				Cytognosis Foundation — Organizational Context (Technical)	repos/cytognosis/docs/06-Operations/org/org-context.md
+docs	06-Operations	operations	agent	no		3.2				Cytognosis Foundation — Org Context (Agent Brief)	repos/cytognosis/docs/06-Operations/org/org-context_prompt.md
 docs	06-Operations	operations	primary	no		2.4				HIPAA Compliance Overview	repos/cytognosis/docs/06-Operations/org/compliance/hipaa-overview.md
 docs	06-Operations	operations	primary	no		0.5				Moved to the Infrastructure engineering layer	repos/cytognosis/docs/06-Operations/org/compliance/neuroverse-infrastructure-compliance.md
 docs	06-Operations	operations	primary	no		3.7				Extras & Naming Conventions Research	repos/cytognosis/docs/06-Operations/org/naming/extras-naming-conventions.md
@@ -709,9 +709,8 @@ docs	02-Funding	funding	primary	no		56.3				DOE Genesis Mission: National Scienc
 docs	02-Funding	funding	primary	no		70.2					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/arpah_hsf_iso.txt
 docs	02-Funding	code	primary	no		21.8					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/convert_isos_v2.py
 docs	02-Funding	funding	primary	no		20.6					repos/cytognosis/docs/02-Funding/reusable-blocks/raw-source/nsf_tech_labs_rfi.txt
-docs	02-Funding	grant-section	technical	no		7.7				Grant-Alignment Map (technical)	repos/cytognosis/docs/02-Funding/strategy/grant-alignment-map.technical.md
-docs	02-Funding	grant-section	readable	no		3.4				Grant-Alignment Map (readable)	repos/cytognosis/docs/02-Funding/strategy/grant-alignment-map.readable.md
-docs	02-Funding	grant-section	agent	no		3.4				Grant-Alignment Map (agent brief)	repos/cytognosis/docs/02-Funding/strategy/grant-alignment-map.agent.md
+docs	02-Funding	grant-section	agent	no		3.5				Grant-Alignment Map (agent brief)	repos/cytognosis/docs/02-Funding/strategy/grant-alignment-map_prompt.md
+docs	02-Funding	grant-section	primary	no		7.8				Grant-Alignment Map (technical)	repos/cytognosis/docs/02-Funding/strategy/grant-alignment-map.md
 docs	02-Funding	funding	primary	no		12.3				Grant Pipeline — Testing Strategy	repos/cytognosis/docs/02-Funding/testing/testing_strategy.md
 docs	03-Products	product-spec	primary	no		2.8				Cytoverse: science foundation	repos/cytognosis/docs/03-Products/Cytoverse/science-foundation.md
 docs	03-Products	product-spec	primary	no		15.8				Integration Details: DagsHub, LaminDB, redun, DVC, scDataLoader, TileDB	repos/cytognosis/docs/03-Products/Cytoverse/integration-details.md
@@ -1604,7 +1603,7 @@ project:Refactor	(root)	other	primary	no		6.9				Master Drive Plan — Consolida
 project:Refactor	(root)	other	primary	no		3.2				Consolidation Status — 2026-07-07 (after Antigravity round 2)	Claude/Projects/Refactor/STATUS_2026-07-07.md
 project:Refactor	(root)	other	primary	no		4.4				Duplicate Document Manifest (Claude Projects, non-design)	Claude/Projects/Refactor/DEDUP-MANIFEST_2026-07-09.md
 project:Refactor	(root)	other	primary	no		10.9				Pre-Antigravity-Update Repo Checkpoint Prompt	Claude/Projects/Refactor/repo-checkpoint-prompt.md
-project:Refactor	(root)	other	primary	no		3.1				Where We Are, in Plain Words	Claude/Projects/Refactor/STATUS-SIMPLE.md
+project:Refactor	(root)	other	primary	no		2.5				Where We Are, in Plain Words	Claude/Projects/Refactor/STATUS-SIMPLE.md
 project:Refactor	(root)	other	primary	no		18.2				Antigravity Wave-1 Review: Comments Before Execution	Claude/Projects/Refactor/ANTIGRAVITY-WAVE1-REVIEW_2026-07-08.md
 project:Refactor	(root)	other	primary	no		19.4				Cytognosis Consolidation Program; Full History Reconstruction	Claude/Projects/Refactor/CONSOLIDATION-TIMELINE_2026-07-08.md
 project:Refactor	(root)	other	primary	no		1.4				Finalize Blueprint A: within-project cleanup (deterministic; no docs-repo writes)	Claude/Projects/Refactor/FINALIZE-BLUEPRINT-A.md
