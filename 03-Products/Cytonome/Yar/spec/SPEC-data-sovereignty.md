@@ -12,6 +12,13 @@ implements: []
 
 # SPEC: Yar Data Sovereignty
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `spec`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **BLUF:** Yar's data sovereignty architecture ensures the person owns, controls, and can export all their data at all times. The device is the primary trust boundary; the server is an optional, zero-knowledge relay. This spec defines the concrete privacy boundaries, encryption requirements, and consent gates that enforce data sovereignty from the op-log layer up through the UI.
 
 ---

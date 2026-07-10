@@ -1,5 +1,12 @@
 # SurrealDB Code Audit: Yar Benchmark Package
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Audit date:** 2026-06-22
 **Package path:** `/home/mohammadi/repos/cytognosis/yar_supervisor_reproducible_benchmark_package`
 **Reference guide:** `/home/mohammadi/repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SurrealDB-tuning-and-graphrag-guide.md`

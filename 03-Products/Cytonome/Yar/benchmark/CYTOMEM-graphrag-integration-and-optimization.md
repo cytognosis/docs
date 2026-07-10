@@ -1,5 +1,12 @@
 # cytomem GraphRAG Integration and Optimization Assessment
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `benchmark`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Version:** 1.0  
 **Date:** 2026-06-22  
 **Author:** Cytognosis Agents (Sonnet 4.6)  

@@ -8,6 +8,13 @@ tags: [yar, storage, benchmark, surrealdb, falkordb, sqlite, neo4j, graphrag, cy
 
 # Antigravity Execution Prompt: Yar Database and GraphRAG Benchmark
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `benchmark`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Estimated reading time: 12 minutes.**
 **If you only read one section:** read Section 3 (Guardrails) before touching any files, and Section 4 (SurrealDB Optimizations) before writing any code.
 

@@ -8,6 +8,13 @@ tags: [surrealdb, performance, versions, optimization, graphrag]
 
 # SurrealDB Advanced Optimization and Version Guide
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `spec`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **BLUF.** The benchmark was pinned to 3.1.3; the current latest is 3.1.5 (security fix, June 19 2026). Pin production to 3.1.5. The single highest-impact change remaining in the rerun is switching from the synchronous SDK to `AsyncSurreal`, which collapses task_lookup from 46-446 ms to the 1-5 ms range. This guide is a companion to [SurrealDB-tuning-and-graphrag-guide.md](./SurrealDB-tuning-and-graphrag-guide.md); read that first, then use this for advanced configs, resolved unknowns, and the ordered rerun checklist.
 
 ---

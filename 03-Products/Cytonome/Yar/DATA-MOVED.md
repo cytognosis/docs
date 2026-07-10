@@ -1,5 +1,12 @@
 # Yar primary tables moved to the datasets tree
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `product`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 > **Status:** Active pointer · **Date:** 2026-07-01
 
 Per the data policy (blueprint Section 16h, primary tables are data, not docs), the Yar feature and prioritization tables moved out of this docs tree to the canonical datasets home.

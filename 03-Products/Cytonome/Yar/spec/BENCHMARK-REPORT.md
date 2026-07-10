@@ -1,5 +1,12 @@
 # Benchmark Report — Yar Storage Engine Retest (SurrealDB v3.1.5)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `spec`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-07-06
 **Author:** Cytognosis Foundation
 **Environment:** Linux, Docker 29.3.1, Docker Compose v5.1.1, Python 3.14.4, SurrealDB v3.1.5

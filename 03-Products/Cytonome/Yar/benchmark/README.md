@@ -8,6 +8,13 @@ tags: [yar, storage, benchmark, index]
 
 # Yar Storage and GraphRAG Benchmark: Document Index
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `benchmark`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 This is the one-page index for all formal benchmark documents in this folder and in adjacent paths. One-line purpose per document. Start here.
 
 ---

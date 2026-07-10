@@ -8,6 +8,13 @@ tags: [yar, storage, benchmark, prompts, ai, catalog, surrealdb]
 
 # Yar DB Benchmark: Prompts Catalog
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `benchmark`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **BLUF.** The benchmark package contains no embedded LLM prompts in code. All LLM-driven work was done through conversational sessions (Claude); the artifacts produced by those sessions are the benchmark analysis docs and code audit docs. Three categories of prompts are identified below: conversational prompts Shahin gave to produce the analysis docs, run instructions Ali received, and prompts needed for the next phase. The prompt history is partially reconstructed from context; original session transcripts are not preserved.
 
 ---

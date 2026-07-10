@@ -19,6 +19,13 @@ sources:
 
 # Yar Benchmarking Master Plan
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `benchmark`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **BLUF.** This document is the single authoritative reference for the Yar storage and GraphRAG benchmark program. It consolidates the current state of benchmarks (PATCH10 baseline), all 20 known issues (12 package-level + 8 SurrealDB code-level), the 9 code revisions (CR-1 through CR-9), database installation status on this machine, and the full execution plan for PATCH11. **SurrealDB's last-place finish (score 9.38 at 100k) is a confirmed configuration artifact; the corrected retest targeting score 3 to 5 is the primary objective.**
 
 ---

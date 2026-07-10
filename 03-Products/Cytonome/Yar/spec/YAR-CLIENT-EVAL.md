@@ -1,5 +1,12 @@
 # Yar Client Evaluation — yar-code-20260705-2354
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `spec`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-07-06
 **Evaluator:** Cytognosis Foundation
 **Subject:** Ali's new Yar client (Tauri + TypeScript/React + Django backend)

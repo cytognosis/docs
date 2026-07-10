@@ -10,6 +10,13 @@ reading_time: "~25 minutes"
 
 # Yar Integration Plan
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `product`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Three codebases need to converge into one product.** This plan maps all 62 Yar features to their implementation status across the Yar revision, Cytoplex (CAP), and the spec corpus, then recommends a merge order, conflict resolution strategy, and test plan.
 
 > [!IMPORTANT]

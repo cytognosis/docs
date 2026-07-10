@@ -1,5 +1,12 @@
 # Yar Feature Catalog (consolidated, canonical)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `product`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-26 · **Status:** canonical front door for all Yar features · **Supersedes:** the 05-31 feature master and all pre-v4 comparisons.
 **Integrates:** the "Yar specs execution plan" session (16 specs, promoted to `docs/03-Products/Cytonome/Yar/spec/`), the v4 feature comparison + prioritization, the feature-naming convention, and the "Cytonome research consolidation" benchmark package.
 **Reading time:** ~6 minutes. **If you only read one thing:** the Wave 1 table in §4 (the 25 wedge features being built first).

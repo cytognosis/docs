@@ -8,6 +8,13 @@ tags: [yar, storage, benchmark, sqlite, falkordb, surrealdb, neo4j, kuzu, graphr
 
 # Yar DB Benchmark: Evaluation and Results
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `benchmark`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **BLUF.** Ali's benchmark (Ali Mohammadi, 2026-06-21) validates SQLite as the on-device MVP default and FalkorDB as the best server-tier graph projection. SurrealDB's last-place finish at 100k is a confirmed configuration and methodology artifact; three root causes are proven by the benchmark's own data. A corrected retest is required before any architecture decision that excludes SurrealDB from the GraphRAG path.
 
 ---

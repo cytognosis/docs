@@ -1,5 +1,12 @@
 # Persona Profiler: Frameworks, Standards, and Schema Reference
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Prepared for:** Shahin Mohammadi, Cytognosis Foundation
 **Date:** 30 May 2026
 **Purpose:** A vetted reference for the scientifically defensible frameworks, instruments, ontologies, and matching methods that can underpin a persona profiler serving two use cases: (1) matching cofounders, partners, and collaborators on expertise, values, goals, and personality; and (2) the Yar / Cytonome application that tracks how social interactions with different persona types affect a user's mood and cognition.

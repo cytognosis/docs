@@ -9,6 +9,13 @@ version_at_time_of_writing: "3.1.0"
 
 # SurrealDB Tuning, Troubleshooting, and GraphRAG Guide for Yar
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `spec`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **TL;DR.** SurrealDB 3.1 (May 2026) now includes DISKANN as a GA second vector index alongside HNSW, a major stability pass, and improved in-memory performance. The benchmark last-place finish for SurrealDB was caused by three configuration artifacts (FTS index failure, per-call connection overhead, and unchecked storage backend), none of which reflect the engine's ceiling. Fix those three issues first before any architecture decision.
 
 ---

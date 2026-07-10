@@ -1,5 +1,12 @@
 # Yar Internal Feature Prioritization v1
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-06-21
 **Version:** v1.1 (2026-06-21): founder-priority elevation of the mindmapping and capture clusters.
 **Author:** Cytognosis Foundation

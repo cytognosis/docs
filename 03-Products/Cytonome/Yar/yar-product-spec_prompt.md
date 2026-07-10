@@ -1,5 +1,14 @@
 # Yar Product Spec (agent brief)
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `product`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
+> **Variants**: Agent seed (this doc) - Technical (yar-product-spec.md) - Readable (yar-product-spec.md)
+
 > **Status:** Active · **Date:** 2026-07-01 · Self-contained brief for a fresh agent picking up Yar. Companion to `yar-product-spec.md` (canonical) and `yar-product-spec.readable.md` (ADHD).
 
 ## Goal

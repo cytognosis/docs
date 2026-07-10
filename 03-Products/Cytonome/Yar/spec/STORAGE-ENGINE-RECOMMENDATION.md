@@ -1,5 +1,12 @@
 # Storage Engine Recommendation — Yar v0.1
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `spec`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Date:** 2026-07-06
 **Status:** Complete (10k verified; 100k in progress)
 **Author:** Cytognosis Foundation

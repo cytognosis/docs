@@ -8,6 +8,13 @@ Tags: yar, community-feedback, public
 
 # Yar: What would help you most?
 
+> **Status**: Active
+> **Date**: 2026-07-10
+> **Author**: @shahin
+> **Audience**: engineers, stakeholders
+> **Tags**: `yar`, `research`
+> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+
 **Yar is a personal cognitive companion built by and for neurodivergent people**, designed to work the way your brain actually works, not the way productivity apps expect it to.
 
 This is an early community feedback round. We have a long list of possible features, and we want to hear from you: which ones would genuinely help, which ones feel off, and what is missing entirely. Your input shapes what we build first.
