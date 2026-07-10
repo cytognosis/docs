@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=AG IDE
+Comment=Antigravity 2.0 IDE — AI-Powered Code Editor
+GenericName=Code Editor
+Exec=/usr/local/bin/antigravity-ide --ozone-platform=wayland --enable-features=WaylandWindowDecorations,CanvasOopRasterization,UseSkiaRenderer --use-angle=gl --enable-gpu-rasterization --enable-zero-copy --ignore-gpu-blocklist --password-store=gnome-libsecret %U
+Icon=antigravity-ide
+Terminal=false
+Type=Application
+Categories=Development;IDE;TextEditor;
+StartupNotify=true
+StartupWMClass=Antigravity IDE
+MimeType=text/plain;application/x-shellscript;text/x-python;text/x-c;text/x-c++;text/javascript;application/json;text/yaml;text/markdown;
+Keywords=editor;code;ide;antigravity;ai;development;

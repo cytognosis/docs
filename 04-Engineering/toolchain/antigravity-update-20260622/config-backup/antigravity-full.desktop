@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Antigravity · Full Suite
+Comment=Launch both Antigravity Agent and IDE together
+Exec=bash -c '/usr/local/bin/antigravity --ozone-platform=wayland --enable-features=WaylandWindowDecorations,CanvasOopRasterization,UseSkiaRenderer --use-angle=gl --enable-gpu-rasterization --enable-zero-copy --ignore-gpu-blocklist & sleep 2 && /usr/local/bin/antigravity-ide --ozone-platform=wayland --enable-features=WaylandWindowDecorations,CanvasOopRasterization,UseSkiaRenderer --use-angle=gl --enable-gpu-rasterization --enable-zero-copy --ignore-gpu-blocklist'
+Icon=antigravity
+Terminal=false
+Type=Application
+Categories=Development;IDE;
+StartupNotify=true
+NoDisplay=true
+Keywords=antigravity;full;suite;

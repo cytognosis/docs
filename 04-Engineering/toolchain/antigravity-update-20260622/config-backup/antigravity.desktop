@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=AG
+Comment=Antigravity 2.0 — AI Agent Platform (Chat, Reasoning, Tools)
+GenericName=AI Agent Platform
+Exec=/usr/local/bin/antigravity --ozone-platform=wayland --enable-features=WaylandWindowDecorations,CanvasOopRasterization,UseSkiaRenderer --use-angle=gl --enable-gpu-rasterization --enable-zero-copy --ignore-gpu-blocklist --password-store=gnome-libsecret %U
+Icon=antigravity
+Terminal=false
+Type=Application
+Categories=Development;IDE;Utility;
+StartupNotify=true
+StartupWMClass=Antigravity
+MimeType=x-scheme-handler/antigravity;
+Keywords=ai;agent;gemini;google;antigravity;chat;reasoning;
