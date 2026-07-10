@@ -494,7 +494,7 @@ docs	06-Operations	operations	primary	no		1073.6					repos/cytognosis/docs/06-Op
 docs	06-Operations	code	primary	no		7.5					repos/cytognosis/docs/06-Operations/inventory/build_catalog.py
 docs	06-Operations	operations	primary	no		1.4					repos/cytognosis/docs/06-Operations/inventory/catalog-tables.md
 docs	06-Operations	operations	primary	no		9.0	Active	2026-07-10	inventory, catalog, taxonomy, provenance, knowledge-management	Master Catalog — Everything We Have and Where It Lives	repos/cytognosis/docs/06-Operations/inventory/MASTER-CATALOG.md
-docs	06-Operations	operations	primary	no		732.0					repos/cytognosis/docs/06-Operations/inventory/catalog.tsv
+docs	06-Operations	operations	primary	no		732.6					repos/cytognosis/docs/06-Operations/inventory/catalog.tsv
 docs	06-Operations	config/schema	primary	no		1.3					repos/cytognosis/docs/06-Operations/inventory/catalog-summary.json
 docs	06-Operations	operations	simple	no		2.1				The Master Map, in Plain Words	repos/cytognosis/docs/06-Operations/inventory/simple/MASTER-CATALOG.md
 docs	06-Operations	operations	primary	no		6.1				Cytognosis Foundation — Organizational Context (Technical)	repos/cytognosis/docs/06-Operations/org/org-context.md
@@ -754,14 +754,13 @@ docs	03-Products	product-spec	primary	no		18.2	Active	2026-05-29	cap, cytoplex, 
 docs	03-Products	product-spec	primary	no		16.5	Draft	2026-05-17		CAP — Comprehensive Revision Plan & Deep-Dive	repos/cytognosis/docs/03-Products/Cytonome/Cytoplex/research/cap-v0.2-revision-plan.md
 docs	03-Products	readme	archive	no		4.7	Active	2026-06-14	cap, cytoplex	Cytoplex — Yar's Safety, Authority & Coordination Component	repos/cytognosis/docs/03-Products/Cytonome/Cytoplex/_archive/README.md
 docs	03-Products	product-spec	archive	no		3.6	Active	2026-05-29	cap, cytoplex, protocol, reference	🛡️ CAP / Cytoplex — ADHD Summary	repos/cytognosis/docs/03-Products/Cytonome/Cytoplex/_archive/cap-comprehensive.md
-docs	03-Products	product-spec	primary	no		25.9				Yar Integration Plan	repos/cytognosis/docs/03-Products/Cytonome/Yar/INTEGRATION_PLAN.md
-docs	03-Products	product-spec	primary	no		0.9				Yar primary tables moved to the datasets tree	repos/cytognosis/docs/03-Products/Cytonome/Yar/DATA-MOVED.md
+docs	03-Products	product-spec	primary	no		26.2	Active	2026-07-10	yar, product	Yar Integration Plan	repos/cytognosis/docs/03-Products/Cytonome/Yar/INTEGRATION_PLAN.md
+docs	03-Products	product-spec	primary	no		1.2	Active	2026-07-10	yar, product	Yar primary tables moved to the datasets tree	repos/cytognosis/docs/03-Products/Cytonome/Yar/DATA-MOVED.md
+docs	03-Products	product-spec	agent	no		4.4	Active	2026-07-10	yar, product	Yar Product Spec (agent brief)	repos/cytognosis/docs/03-Products/Cytonome/Yar/yar-product-spec_prompt.md
 docs	03-Products	product-spec	primary	no		10.2	Active	2026-06-14	yar, sensors, usap, architecture	Sensor Ecosystem and Universal Biosensor Adapter Protocol (UBAP)	repos/cytognosis/docs/03-Products/Cytonome/Yar/sensor-ecosystem.md
 docs	03-Products	product-spec	primary	no		3.8	Active	2026-06-01	yar, sensors, usap, architecture	🧠 Sensor Architecture — ADHD Summary	repos/cytognosis/docs/03-Products/Cytonome/Yar/sensor-architecture.md
-docs	03-Products	product-spec	primary	no		7.6				Yar Feature Catalog (consolidated, canonical)	repos/cytognosis/docs/03-Products/Cytonome/Yar/YAR_FEATURE_CATALOG.md
-docs	03-Products	product-spec	agent	no		4.0				Yar Product Spec (agent brief)	repos/cytognosis/docs/03-Products/Cytonome/Yar/yar-product-spec.agent.md
-docs	03-Products	product-spec	readable	no		3.1				Yar Product Spec (readable)	repos/cytognosis/docs/03-Products/Cytonome/Yar/yar-product-spec.readable.md
-docs	03-Products	product-spec	primary	no		19.1				Yar Product Spec (canonical)	repos/cytognosis/docs/03-Products/Cytonome/Yar/yar-product-spec.md
+docs	03-Products	product-spec	primary	no		7.8	Active	2026-07-10	yar, product	Yar Feature Catalog (consolidated, canonical)	repos/cytognosis/docs/03-Products/Cytonome/Yar/YAR_FEATURE_CATALOG.md
+docs	03-Products	product-spec	primary	no		19.2				Yar Product Spec (canonical)	repos/cytognosis/docs/03-Products/Cytonome/Yar/yar-product-spec.md
 docs	03-Products	product-spec	primary	no		7.3	Active	2026-06-14	yar, mvp, implementation	Yar Central And Mobile Setup	repos/cytognosis/docs/03-Products/Cytonome/Yar/mvp/11_SETUP_CENTRAL_AND_MOBILE.md
 docs	03-Products	product-spec	primary	no		10.9	Active	2026-06-14	cytonome, mvp, yar	Product Milestone 1: Mobile Voice Vertical Slice	repos/cytognosis/docs/03-Products/Cytonome/Yar/mvp/PRODUCT_MILESTONE_1_MOBILE_VOICE.md
 docs	03-Products	product-spec	primary	no		4.6	Active	2026-06-14	cytonome, mvp, yar	00 — Context Update: Skeleton-First Direction	repos/cytognosis/docs/03-Products/Cytonome/Yar/mvp/00_CONTEXT_UPDATE.md
@@ -779,27 +778,27 @@ docs	03-Products	product-spec	primary	no		5.3	Active	2026-06-14	cytonome, mvp, y
 docs	03-Products	product-spec	primary	no		4.2	Active	2026-05-29	yar, steering, agents	Tech Steering: Yar	repos/cytognosis/docs/03-Products/Cytonome/Yar/steering/yar-tech.md
 docs	03-Products	product-spec	primary	no		8.7	Active	2026-05-29	yar, steering, agents	Structure Steering: Yar	repos/cytognosis/docs/03-Products/Cytonome/Yar/steering/yar-structure.md
 docs	03-Products	product-spec	primary	no		2.8	Active	2026-05-29	yar, steering, agents	Product Steering: Yar	repos/cytognosis/docs/03-Products/Cytonome/Yar/steering/yar-product.md
-docs	03-Products	product-spec	primary	no		9.8				Yar Client Evaluation — yar-code-20260705-2354	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/YAR-CLIENT-EVAL.md
+docs	03-Products	product-spec	primary	no		10.1	Active	2026-07-10	yar, spec	Yar Client Evaluation — yar-code-20260705-2354	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/YAR-CLIENT-EVAL.md
 docs	03-Products	product-spec	primary	no		44.5	Draft	2026-06-22	yar, edge-ai, hybrid, cap, gemma	SPEC: Yar Edge-AI and Hybrid Supervisor Architecture	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SPEC-edge-ai-hybrid.md
 docs	03-Products	product-spec	primary	no		10.7	Draft	2026-06-22	cytoplex, cap, privacy, schema, requirements, ears, v0	CAP Privacy-Boundary Schema and Requirements (v0)	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/privacy-boundary-spec.md
-docs	03-Products	product-spec	primary	no		6.4				Benchmark Report — Yar Storage Engine Retest (SurrealDB v3.1.5)	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/BENCHMARK-REPORT.md
+docs	03-Products	product-spec	primary	no		6.6	Active	2026-07-10	yar, spec	Benchmark Report — Yar Storage Engine Retest (SurrealDB v3.1.5)	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/BENCHMARK-REPORT.md
 docs	03-Products	product-spec	primary	no		14.8	Active (v0.2 — updated after SurrealDB v3.1.5 retest)	2026-07-06	yar, storage, graph-db, surrealdb, sqlite, ladybugdb, crdt, local-first, hipaa	SPEC: Yar Storage Engine	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SPEC-storage-engine.md
-docs	03-Products	product-spec	primary	no		32.1				SurrealDB Advanced Optimization and Version Guide	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SurrealDB-advanced-optimization-and-versions.md
+docs	03-Products	product-spec	primary	no		32.3	Active	2026-07-10	yar, spec	SurrealDB Advanced Optimization and Version Guide	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SurrealDB-advanced-optimization-and-versions.md
 docs	03-Products	product-spec	primary	no		50.8	Draft	2026-06-22	yar, cytonome, csp, sensor, social-interaction, social-rhythm, aware, digital-phenotyping	SPEC-sensor-social-interaction: Temporal Social-Interaction Sensing	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SPEC-sensor-social-interaction.md
 docs	03-Products	product-spec	primary	no		33.5	Draft	2026-06-22		SPEC-CSP: Cytonome Sensor Protocol	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SPEC-CSP.md
 docs	03-Products	product-spec	primary	no		40.2	Draft	2026-06-22	yar, multi-agent, orchestration, cap	SPEC: Yar Multi-Agent System	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SPEC-multi-agent.md
-docs	03-Products	product-spec	primary	no		7.9				SurrealDB Root Cause Analysis — Yar Benchmark Performance	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SURREALDB-ROOTCAUSE.md
+docs	03-Products	product-spec	primary	no		8.1	Active	2026-07-10	yar, spec	SurrealDB Root Cause Analysis — Yar Benchmark Performance	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SURREALDB-ROOTCAUSE.md
 docs	03-Products	product-spec	primary	no		83.6	Draft	2026-06-22	yar, cytonome, csp, neurobehavioral, axes, dimensional, crdt, linkml, EQ-model, PATO, OBA, RDoC, HiTOP, ontology	SPEC-neurobehavioral-axes: Dimensional Neurobehavioral Axes	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SPEC-neurobehavioral-axes.md
-docs	03-Products	product-spec	primary	no		5.7				Optimization Changelog — SurrealDB v3.1.5 Retest	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/OPTIMIZATION-CHANGELOG.md
+docs	03-Products	product-spec	primary	no		6.0	Active	2026-07-10	yar, spec	Optimization Changelog — SurrealDB v3.1.5 Retest	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/OPTIMIZATION-CHANGELOG.md
 docs	03-Products	module-spec	primary	no		11.1	Draft	2026-06-22	yar, cap, crisis-detection, safety, module-spec, v0	Crisis-Detection Subsystem (Module Spec, v0)	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/MODULE-crisis-detection.md
 docs	03-Products	product-spec	primary	no		53.6	Draft	2026-06-22	yar, cytonome, csp, sensor, wearables, aware, instruments	SPEC-sensor-physiological: Physiological and Passive-Sensing Modalities	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SPEC-sensor-physiological.md
-docs	03-Products	product-spec	primary	no		9.8				SPEC: Yar Data Sovereignty	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SPEC-data-sovereignty.md
+docs	03-Products	product-spec	primary	no		10.1	Active	2026-07-10	yar, spec	SPEC: Yar Data Sovereignty	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SPEC-data-sovereignty.md
 docs	03-Products	product-spec	primary	no		52.2	Draft	2026-06-22	yar, cytonome, csp, sensor, speech, mental-state, paralinguistic	SPEC-sensor-speech-mentalstate: Speech Mental-State Sensor	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SPEC-sensor-speech-mentalstate.md
 docs	03-Products	product-spec	primary	no		52.0	Draft	2026-06-22	yar, cytonome, personas, voice, tts, cap, kokoro, elevenlabs	SPEC: Yar Personas, Voice, and Character System	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SPEC-personas-voice.md
 docs	03-Products	product-spec	primary	no		12.4	Draft (Living Document)	2026-06-21	yar, storage, benchmark, surrealdb, sqlite, falkordb, neo4j, kuzu, loro, iroh, any-sync, tracker	Yar Storage and Sync: Benchmark Tracker	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/STORAGE_BENCHMARK_TRACKER.md
-docs	03-Products	product-spec	primary	no		23.6				SurrealDB Tuning, Troubleshooting, and GraphRAG Guide for Yar	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SurrealDB-tuning-and-graphrag-guide.md
+docs	03-Products	product-spec	primary	no		23.8	Active	2026-07-10	yar, spec	SurrealDB Tuning, Troubleshooting, and GraphRAG Guide for Yar	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SurrealDB-tuning-and-graphrag-guide.md
 docs	03-Products	product-spec	primary	no		15.0	Draft	2026-06-22	yar, sync, crdt, loro, iroh, any-sync, solid, identity, hipaa	SPEC: Yar Sync Protocol	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SPEC-sync-protocol.md
-docs	03-Products	product-spec	primary	no		6.7				Storage Engine Recommendation — Yar v0.1	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/STORAGE-ENGINE-RECOMMENDATION.md
+docs	03-Products	product-spec	primary	no		6.9	Active	2026-07-10	yar, spec	Storage Engine Recommendation — Yar v0.1	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/STORAGE-ENGINE-RECOMMENDATION.md
 docs	03-Products	product-spec	primary	no		53.2	Draft	2026-06-22	yar, cytonome, csp, sensor, menstrual, reproductive-health, privacy	SPEC-sensor-menstrual: Menstrual and Reproductive-Cycle Sensing	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SPEC-sensor-menstrual.md
 docs	03-Products	module-spec	readable	no		10.5	Draft	2026-06-22	yar, cap, crisis-detection, safety, module-spec, adhd-friendly, v0	🔍 Crisis-Detection Subsystem	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/adhd/MODULE-crisis-detection_adhd.md
 docs	03-Products	product-spec	readable	no		20.7	Draft	2026-06-22	yar, cytonome, csp, sensor, wearables, physiological, adhd-friendly	🔬 Physiological and Passive-Sensing Modalities (ADHD-Friendly)	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/adhd/SPEC-sensor-physiological_adhd.md
@@ -816,23 +815,24 @@ docs	03-Products	product-spec	readable	no		15.3	Draft	2026-06-22	yar, multi-agen
 docs	03-Products	product-spec	readable	no		18.0	Draft	2026-06-22	yar, cytonome, csp, sensor, menstrual, reproductive-health, privacy, adhd-friendly	🔬 Menstrual and Reproductive-Cycle Sensing (ADHD-Friendly)	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/adhd/SPEC-sensor-menstrual_adhd.md
 docs	03-Products	product-spec	readable	no		16.8	Draft	2026-06-22	yar, cytonome, personas, voice, tts, adhd-friendly	Yar Personas, Voice, and Character System	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/adhd/SPEC-personas-voice_adhd.md
 docs	03-Products	product-spec	readable	no		16.5	Draft	2026-06-22	yar, edge-ai, hybrid, cap, gemma, adhd-friendly	Yar Edge-AI and Hybrid Supervisor Architecture	repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/adhd/SPEC-edge-ai-hybrid_adhd.md
+docs	03-Products	readme	simple	no		0.6				Yar Product Docs, in Plain Words	repos/cytognosis/docs/03-Products/Cytonome/Yar/simple/README.md
 docs	03-Products	product-spec	primary	no		2.7	Active	2026-06-14	yar, prompts, feature-spec		repos/cytognosis/docs/03-Products/Cytonome/Yar/prompts/object-router.md
 docs	03-Products	product-spec	primary	no		2.1	Active	2026-06-14	yar, prompts, feature-spec	Yar Communication Translator	repos/cytognosis/docs/03-Products/Cytonome/Yar/prompts/communication-translator.md
 docs	03-Products	product-spec	primary	no		1.4	Active	2026-06-14	yar, prompts, feature-spec	Yar Daily Anchor Planner	repos/cytognosis/docs/03-Products/Cytonome/Yar/prompts/daily-anchor-planner.md
-docs	03-Products	product-spec	primary	no		41.2				Yar Benchmarking Master Plan	repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmarks/BENCHMARK_MASTER_PLAN.md
-docs	03-Products	readme	primary	no		3.7				Yar Storage and GraphRAG Benchmark: Document Index	repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmark/README.md
-docs	03-Products	product-spec	primary	no		19.8				Yar DB Benchmark: Evaluation and Results	repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmark/BENCHMARK-evaluation-and-results.md
-docs	03-Products	product-spec	primary	no		12.3				Yar DB Benchmark: Prompts Catalog	repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmark/BENCHMARK-prompts-catalog.md
-docs	03-Products	product-spec	primary	no		23.9				cytomem GraphRAG Integration and Optimization Assessment	repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmark/CYTOMEM-graphrag-integration-and-optimization.md
-docs	03-Products	product-spec	primary	no		35.4				Antigravity Execution Prompt: Yar Database and GraphRAG Benchmark	repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmark/ANTIGRAVITY-execution-prompt.md
-docs	03-Products	product-spec	primary	no		46.2				Persona Profiler: Frameworks, Standards, and Schema Reference	repos/cytognosis/docs/03-Products/Cytonome/Yar/research/persona_profiler_frameworks_reference.md
+docs	03-Products	readme	primary	no		3.9	Active	2026-07-10	yar, benchmark	Yar Storage and GraphRAG Benchmark: Document Index	repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmark/README.md
+docs	03-Products	product-spec	primary	no		20.0	Active	2026-07-10	yar, benchmark	Yar DB Benchmark: Evaluation and Results	repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmark/BENCHMARK-evaluation-and-results.md
+docs	03-Products	product-spec	primary	no		12.6	Active	2026-07-10	yar, benchmark	Yar DB Benchmark: Prompts Catalog	repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmark/BENCHMARK-prompts-catalog.md
+docs	03-Products	product-spec	primary	no		24.2	Active	2026-07-10	yar, benchmark	cytomem GraphRAG Integration and Optimization Assessment	repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmark/CYTOMEM-graphrag-integration-and-optimization.md
+docs	03-Products	product-spec	primary	no		35.7	Active	2026-07-10	yar, benchmark	Antigravity Execution Prompt: Yar Database and GraphRAG Benchmark	repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmark/ANTIGRAVITY-execution-prompt.md
+docs	03-Products	product-spec	primary	no		41.5	Active	2026-07-10		Yar Benchmarking Master Plan	repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmark/BENCHMARK_MASTER_PLAN.md
+docs	03-Products	product-spec	primary	no		46.4	Active	2026-07-10	yar, research	Persona Profiler: Frameworks, Standards, and Schema Reference	repos/cytognosis/docs/03-Products/Cytonome/Yar/research/persona_profiler_frameworks_reference.md
 docs	03-Products	readme	primary	no		1.8	Active	2026-07-01	yar, research, index	Yar Research Index (product-facing)	repos/cytognosis/docs/03-Products/Cytonome/Yar/research/README.md
 docs	03-Products	product-spec	primary	no		25.5	Draft	2026-06-22	yar, consolidation, code-sweep, incorporation, divergence	INCORPORATION MAP — Yar Spec Suite vs Codebase	repos/cytognosis/docs/03-Products/Cytonome/Yar/research/INCORPORATION_MAP.md
-docs	03-Products	product-spec	primary	no		22.1				SurrealDB Code Audit: Yar Benchmark Package	repos/cytognosis/docs/03-Products/Cytonome/Yar/research/SURREALDB_CODE_AUDIT.md
+docs	03-Products	product-spec	primary	no		22.4	Active	2026-07-10	yar, research	SurrealDB Code Audit: Yar Benchmark Package	repos/cytognosis/docs/03-Products/Cytonome/Yar/research/SURREALDB_CODE_AUDIT.md
 docs	03-Products	product-spec	primary	no		8.9	Active	2026-06-21	yar, feature-matrix, neurodiversity, adhd-friendly, v4	Yar Feature Landscape, the Readable Version (v4)	repos/cytognosis/docs/03-Products/Cytonome/Yar/research/yar-unified-feature-comparison-v4-adhd.md
 docs	03-Products	product-spec	primary	no		4.6	Active	2026-06-21	yar, naming, neurodiversity-affirming, psych-alignment, convention	Yar Feature Naming Convention (Affirming and Psych-Aligned)	repos/cytognosis/docs/03-Products/Cytonome/Yar/research/yar-feature-naming-convention.md
-docs	03-Products	product-spec	primary	no		18.8				Yar Internal Feature Prioritization v1	repos/cytognosis/docs/03-Products/Cytonome/Yar/research/yar-internal-prioritization-v1.md
-docs	03-Products	product-spec	primary	no		14.4				Yar: What would help you most?	repos/cytognosis/docs/03-Products/Cytonome/Yar/research/yar-feature-catalog-public.md
+docs	03-Products	product-spec	primary	no		19.1	Active	2026-07-10	yar, research	Yar Internal Feature Prioritization v1	repos/cytognosis/docs/03-Products/Cytonome/Yar/research/yar-internal-prioritization-v1.md
+docs	03-Products	product-spec	primary	no		14.7	Active	2026-07-10	yar, research	Yar: What would help you most?	repos/cytognosis/docs/03-Products/Cytonome/Yar/research/yar-feature-catalog-public.md
 docs	03-Products	config/schema	primary	no		30.2					repos/cytognosis/docs/03-Products/Cytonome/Yar/research/persona_profiler_schema.yaml
 docs	03-Products	product-spec	primary	no		46.6					repos/cytognosis/docs/03-Products/Cytonome/Yar/research/yar-feature-feedback.html
 docs	03-Products	product-spec	primary	no		36.7	Active	2026-06-21	yar, cytonome, cytoplex, market-research, feature-matrix, neurodiversity, v4	Yar Unified Feature Comparison and AI-Fit Prioritization (v4)	repos/cytognosis/docs/03-Products/Cytonome/Yar/research/yar-unified-feature-comparison-v4.md
@@ -1606,7 +1606,7 @@ project:Refactor	(root)	other	primary	no		6.9				Master Drive Plan — Consolida
 project:Refactor	(root)	other	primary	no		3.2				Consolidation Status — 2026-07-07 (after Antigravity round 2)	Claude/Projects/Refactor/STATUS_2026-07-07.md
 project:Refactor	(root)	other	primary	no		4.4				Duplicate Document Manifest (Claude Projects, non-design)	Claude/Projects/Refactor/DEDUP-MANIFEST_2026-07-09.md
 project:Refactor	(root)	other	primary	no		10.9				Pre-Antigravity-Update Repo Checkpoint Prompt	Claude/Projects/Refactor/repo-checkpoint-prompt.md
-project:Refactor	(root)	other	primary	no		2.1				Where We Are, in Plain Words	Claude/Projects/Refactor/STATUS-SIMPLE.md
+project:Refactor	(root)	other	primary	no		1.8				Where We Are, in Plain Words	Claude/Projects/Refactor/STATUS-SIMPLE.md
 project:Refactor	(root)	other	primary	no		18.2				Antigravity Wave-1 Review: Comments Before Execution	Claude/Projects/Refactor/ANTIGRAVITY-WAVE1-REVIEW_2026-07-08.md
 project:Refactor	(root)	other	primary	no		19.4				Cytognosis Consolidation Program; Full History Reconstruction	Claude/Projects/Refactor/CONSOLIDATION-TIMELINE_2026-07-08.md
 project:Refactor	(root)	other	primary	no		1.4				Finalize Blueprint A: within-project cleanup (deterministic; no docs-repo writes)	Claude/Projects/Refactor/FINALIZE-BLUEPRINT-A.md

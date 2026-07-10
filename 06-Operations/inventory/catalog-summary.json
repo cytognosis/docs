@@ -37,9 +37,9 @@
     "funding": 163,
     "research": 162,
     "code": 156,
-    "product-spec": 147,
+    "product-spec": 146,
     "strategy": 144,
-    "readme": 79,
+    "readme": 80,
     "config/schema": 77,
     "data-table": 62,
     "operations": 35,
@@ -56,10 +56,10 @@
   "by_variant": {
     "primary": 3489,
     "archive": 202,
-    "simple": 26,
+    "simple": 27,
     "agent": 24,
-    "readable": 19
+    "readable": 18
   },
-  "md_with_std_header": 312,
+  "md_with_std_header": 334,
   "md_total": 1806
 }
