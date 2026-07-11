@@ -1,44 +1,31 @@
-# Spec Registry (Central Index of All Specs)
+# Spec Registry (cross-repo index)
 
 > **Status**: Active
-> **Date**: 2026-07-08
-> **Author**: Claude (Cowork) for @shahin
+> **Date**: 2026-07-11
+> **Author**: @shahin
 > **Audience**: engineers, agents
-> **Tags**: `specs`, `registry`, `spec-driven`, `central-index`
+> **Tags**: `engineering`, `specs`, `registry`
+> **Variants**: Technical (this doc) - Readable (`simple/SPEC-REGISTRY.md`)
 
-**Reading time**: 3 minutes. This is the single central place to find every spec across every Cytognosis repo. Feature specs physically live with their code (docs-as-code, required by Spec Kit and the repo constitutions); this registry links to all of them and hosts the location policy so nothing is lost.
+> [!NOTE]
+> **TL;DR**: One row per spec across all repos. Specs live in-repo at `specs/NNN-slug/spec.md`; changes ride `changes/` deltas; statuses: Draft -> Approved -> Implementing -> Live -> Superseded. The mission hub board mirrors this table; cytomem ingests it (cytomem spec 004).
 
-## Location policy (where each spec type lives)
+| Repo | Spec | Title | Status | Board issue | Depends on |
+|---|---|---|---|---|---|
+| cytomem | 001-per-repo-scoped | Per-repo scoped memory | Live | - | - |
+| website | 001-gen1-reconciliation | Gen-1 feature reconciliation onto Payload | Approved | pending sign-in | branding 003 (partial) |
+| website | 002-template-adoption | Website Template adoption + token enforcement | Approved | pending sign-in | branding 003 |
+| branding | 001-recover-brand-assets | Recover pre-CytoStyle assets into CytoStyle | Approved | pending sign-in | - |
+| branding | 002-claude-design-sync-ci | Restore Claude Design sync + drift CI | Approved | pending sign-in | 001 |
+| branding | 003-website-template-package | Website Template package build + publish | Approved | pending sign-in | 001, 002 |
+| cytomem | 002-mission-hub-bridge | cytomem <-> mission hub task sync | Draft | pending sign-in | hub MCP (live) |
+| cytomem | 003-cca-memory-upgrade | Notes, hindsight, compaction (CCA fold-in) | Draft | pending sign-in | - |
+| cytomem | 004-spec-ingestion | Specs as first-class memory | Draft | pending sign-in | 002, 003 |
 
-| Spec type | Physical location | Why |
-|-----------|-------------------|-----|
-| **Feature spec** | Owning repo: `specs/NNN-slug/` (Spec Kit layout) | Travels with the code it governs; reviewed in the same PR; append-only after shipping (constitution Article X) |
-| **Cross-repo / platform / architecture spec** | Central: `docs/04-Engineering/architecture/` | Spans repos, so it has no single code home |
-| **Decision record (ADR)** | Central: `docs/04-Engineering/decisions/` | Org memory, superseded not edited |
-| **This registry (index of all specs)** | Central: `docs/04-Engineering/specs/SPEC-REGISTRY.md` | One place to discover everything |
+## Conventions
 
-The weekly Cowork drift audit refreshes the table below and flags specs stale versus their code.
-
-## Standard format (every spec, everywhere)
-
-Enforced by each repo's constitution and the Cytognosis preset:
-
-1. **Metadata header**: Status, Date, Author, Audience, Tags.
-2. **Requirements in EARS** with stable `REQ-NNN` identifiers.
-3. **Checks section**: executable acceptance criteria, each traceable to a `REQ-NNN`, run by an independent verifier.
-4. **Lifecycle status**: Draft → Approved → Implementing → Live → Superseded.
-5. **Changes as deltas** (ADDED / MODIFIED / REMOVED / RENAMED), merged after shipping, never silent edits.
-
-## Registry (all specs, all repos)
-
-| Repo | Spec | Status | Link |
-|------|------|--------|------|
-| cytomem | 001 Per-repo scoped task boards | Draft (pilot) | `cytomem/specs/001-per-repo-scoped/spec.md` |
-
-*(New specs append here automatically via the drift audit; cross-repo specs also list their `docs/04-Engineering/architecture/` path.)*
-
-## How agents and Cowork use this
-
-- **Cowork** writes new feature specs into the owning repo, then adds a registry row here.
-- **Claude Code** reads the owning repo's spec plus its constitution before implementing.
-- **Anyone** browses this one file to find any spec across the org.
+- **Location**: feature specs in-repo `specs/NNN-slug/`; cross-repo or architecture specs in `04-Engineering/architecture/`.
+- **Requirements**: EARS syntax; every spec ends with executable **Checks**; a verifier session (never the implementer) runs Checks and writes `verification.md` before Live.
+- **Evolution**: never silently edit a Live spec; add `changes/NNN-date-slug.md` deltas (ADDED/MODIFIED/REMOVED/RENAMED), archive on supersession.
+- **Board mirror**: each spec gets one hub issue carrying only pointers (spec ID, repo, path, status); content stays in git (pointer discipline, ADR D-2/REQ-002-03).
+- **Enforcement**: spec-guard (pre-commit + CI + PreToolUse hook) blocks `src/` changes without a governing spec; escape hatches `SPEC_GUARD_SKIP=1`, `[trivial]` tag.
