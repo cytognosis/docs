@@ -9,7 +9,7 @@
 
 **Purpose:** the single shared file both track sessions read at start and update at end. Keeps Branding (Track A) and Website (Track B) consistent without sharing context. Update the date and the three live fields whenever you touch either track.
 
-**Last updated:** 2026-07-10 (setup).
+**Last updated:** 2026-07-11 (Track B Phase 0 executed).
 
 ## Live sync fields
 
@@ -17,8 +17,8 @@
 |---|---|
 | Design System (upstream) | v11.2.1, PUBLISHED + team Default, `https://claude.ai/design/p/11d44c2c-5d95-416f-9395-f12091cba8ee` |
 | Current Website Template version | none yet (Track A Phase 3 produces `website-template@0.1.0`) |
-| Website pinned Template version | none yet |
-| Open cross-track blockers | none |
+| Website pinned Template version | none yet — **fetch/pin mechanism now BUILT and waiting** in the website repo (`TEMPLATE_VERSION.lock` status=pending, `scripts/fetch-template.mjs` verified no-op, wired as a `pnpm build` prestep). Track B flips the lock to status=published the instant Track A ships a release. |
+| Open cross-track blockers | **Track A -> Track B:** publish `website-template@x.y.z` (checksummed tokens.css + fonts + component classes) so Track B can pin it. Only Track B Phase 1 (Template adoption) is blocked on this; everything else in Phase 0 is done. |
 | Ali gate (branding-repo recovery) | OPEN, blocks Track A Phase 0 and the `branding/design-system/` write only |
 
 ## Track A (Branding) status
@@ -31,8 +31,14 @@
 ## Track B (Website) status
 
 - Plan: `TRACK-B_WEBSITE_PLAN.md` (+ `simple/`). Home after relocation: Website project.
-- Known now: stack is Vite 6 + React 19 + Node 22 + Payload CMS 3 + Postgres (the FastAPI backend in-repo is dead code); CI/CD is currently BROKEN (workflows build Docker `--target site`/`cms` stages the Dockerfile does not define; neither uses cytohost); a July 6 patch swapped Space Grotesk for Inter and must be reverted.
-- Next: pin the Website Template when Track A publishes it; feature-gap reconstruction; DB/resource pressure-test; CI/CD repair on cytohost; Yar-section revision; IA revision. Animations deferred to their own sessions.
+- **Phase 0 DONE (2026-07-11)**, on branch `claude/busy-mirzakhani-88b0e9` in `~/repos/cytognosis/website` (pre-change tag `pre-track-b-consolidation-2026-07-11`):
+  - **CI/CD repaired + verified.** Restored the Node multi-stage Dockerfile (`deps`/`site-build`/`cms-build`/`cms`/`site`) from last-good `d91dc90`; `docker build --target site` and `--target cms` both build locally (exit 0). Both workflows moved to the self-hosted **cytohost** runner (`[self-hosted, Linux, X64, cytohost]`); added the missing `cytognosis-cms` deploy job. Site healthcheck now hits `/api/health`.
+  - **Dead FastAPI backend removed** (`main.py`, `backend/auth.py`, stale `DEPLOY.md`); permanently closes the `/auth/dev_login` gate. Node + Payload is the one backend.
+  - **Space Grotesk heading regression reverted** (`--f-display` back to Space Grotesk 500); adopted live-site deltas (96/48px section rhythm; `#23232B` ink and uppercase-mono eyebrows were already correct).
+  - **Repo hygiene:** untracked `dist/` (82) + `cms/.next/` (632) build artifacts and gitignored them; deleted stray root `package-lock.json`.
+  - **Template pin mechanism built** (`TEMPLATE_VERSION.lock` + `scripts/fetch-template.mjs`), a verified no-op until Track A publishes.
+  - **Feature recovery:** git archaeology report at `docs/FEATURE-RECOVERY-REPORT.md`; dropped Generation-1 features staged for reconciliation on branch `feat/website-feature-recovery` (see `RECOVERY-STAGING.md`). Restore ref is `c5a9a17^` (`2ad85a6`). Corrections: Contact FAQ was NOT lost; CSV export half-survives. Open conflict for adjudication: `team` collection vs static team pages.
+- Next: **Phase 1 = pin the Website Template once Track A publishes it** (mechanism ready). Then DB/resource pressure-test; Yar-section revision; IA revision; feature reimplementation from the recovery branch (RSS/CSV/delete first, then CV pipeline as Node). Animations deferred to their own sessions.
 
 ## Protocol
 
