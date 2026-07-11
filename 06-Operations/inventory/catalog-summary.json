@@ -1,17 +1,18 @@
 {
   "generated": "2026-07-10",
-  "total_files": 3964,
-  "non_symlink": 3964,
+  "total_files": 4005,
+  "non_symlink": 4005,
   "symlinks": 0,
   "by_root": {
-    "project:Science and Platform": 2095,
-    "docs": 1418,
-    "project:Website": 163,
+    "project:Branding": 2013,
+    "docs": 1442,
+    "project:Website": 165,
     "project:Grants": 132,
-    "project:Refactor": 70,
+    "project:Refactor": 94,
+    "project:Science and Platform": 72,
     "project:Infrastructure and Tooling": 24,
     "project:Personal": 22,
-    "project:Yar": 17,
+    "project:Yar": 18,
     "project:Cytos": 13,
     "project:Cytognosis": 5,
     "project:Strategic Planning": 3,
@@ -24,18 +25,18 @@
     "03-Products": 155,
     "01-Strategy": 125,
     "06-Operations": 65,
+    "07-Design": 29,
     "00-Inbox": 6,
-    "07-Design": 5,
     "(root)": 4,
     "_templates": 2,
     ".github": 1
   },
   "by_doc_type": {
     "diagram/asset": 1186,
-    "design": 923,
+    "design": 928,
     "funding": 439,
+    "other": 291,
     "engineering": 283,
-    "other": 255,
     "code": 177,
     "research": 160,
     "product-spec": 147,
@@ -55,12 +56,12 @@
     "rfc": 1
   },
   "by_variant": {
-    "primary": 3600,
+    "primary": 3630,
     "archive": 289,
-    "simple": 32,
+    "simple": 43,
     "agent": 27,
     "readable": 16
   },
-  "md_with_std_header": 890,
-  "md_total": 1739
+  "md_with_std_header": 931,
+  "md_total": 1787
 }
