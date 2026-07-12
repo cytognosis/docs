@@ -13,14 +13,14 @@
 | Repo | Spec | Title | Status | Board issue | Depends on |
 |---|---|---|---|---|---|
 | cytomem | 001-per-repo-scoped | Per-repo scoped memory | Live | - | - |
-| website | 001-gen1-reconciliation | Gen-1 feature reconciliation onto Payload | Approved | pending sign-in | branding 003 (partial) |
-| website | 002-template-adoption | Website Template adoption + token enforcement | Approved | pending sign-in | branding 003 |
-| branding | 001-recover-brand-assets | Recover pre-CytoStyle assets into CytoStyle | Approved | pending sign-in | - |
-| branding | 002-claude-design-sync-ci | Restore Claude Design sync + drift CI | Approved | pending sign-in | 001 |
-| branding | 003-website-template-package | Website Template package build + publish | Approved | pending sign-in | 001, 002 |
-| cytomem | 002-mission-hub-bridge | cytomem <-> mission hub task sync | Draft | pending sign-in | hub MCP (live) |
-| cytomem | 003-cca-memory-upgrade | Notes, hindsight, compaction (CCA fold-in) | Draft | pending sign-in | - |
-| cytomem | 004-spec-ingestion | Specs as first-class memory | Draft | pending sign-in | 002, 003 |
+| website | 001-gen1-reconciliation | Gen-1 feature reconciliation onto Payload | Approved | on board | branding 003 (partial) |
+| website | 002-template-adoption | Website Template adoption + token enforcement | Approved | on board | branding 003 |
+| branding | 001-recover-brand-assets | Recover pre-CytoStyle assets into CytoStyle | Approved | on board | - |
+| branding | 002-claude-design-sync-ci | Restore Claude Design sync + drift CI | Approved | on board | 001 |
+| branding | 003-website-template-package | Website Template package build + publish | Approved | on board | 001, 002 |
+| cytomem | 002-mission-hub-bridge | cytomem <-> mission hub task sync | Draft | on board | hub MCP (live) |
+| cytomem | 003-cca-memory-upgrade | Notes, hindsight, compaction (CCA fold-in) | Draft | on board | - |
+| cytomem | 004-spec-ingestion | Specs as first-class memory | Draft | on board | 002, 003 |
 
 ## Conventions
 
