@@ -5,6 +5,7 @@
 > **Author**: @mohammadi
 > **Audience**: engineers
 > **Tags**: `dvc`, `gcs`, `data-versioning`
+> **Variants**: Technical (this doc) - Readable (same filename in Obsidian vault: 04-Engineering/infrastructure/) - Agent (n/a)
 
 **Last verified: 2026-06-19** — `gs://cytognosis-data-hub` confirmed with versioning and lifecycle rules. `gs://cytognosis-artifacts` is the unified artifact bucket (replaces the former `cytognosis-mlflow-artifacts`). MLflow uses `gs://cytognosis-artifacts/mlflow/`. DVC remotes use `cytognosis-infrastructure` and `cytognosis-phi-prod` projects only; `cytognosis-data` project does NOT exist.
 

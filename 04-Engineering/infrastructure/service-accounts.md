@@ -5,6 +5,7 @@
 > **Author**: @mohammadi
 > **Audience**: engineers, operators
 > **Tags**: `iam`, `service-accounts`, `oidc`
+> **Variants**: Technical (this doc) - Readable (same filename in Obsidian vault: 04-Engineering/infrastructure/) - Agent (n/a)
 
 **Last verified: 2026-06-19**
 

@@ -14,6 +14,7 @@ tags:
 > **Author**: @mohammadi
 > **Audience**: engineers
 > **Tags**: `code-search`, `zoekt`, `self-hosted`
+> **Variants**: Technical (this doc) - Readable (same filename in Obsidian vault: 04-Engineering/infrastructure/) - Agent (n/a)
 
 **Last verified: 2026-06-14** — `code.cytognosis.org` subdomain confirmed in `cg-org` DNS zone pointing to cytohost (`34.171.23.255`, ephemeral). Deployment target is cytohost (`e2-highmem-2`, `us-central1-b`).
 

@@ -3,6 +3,7 @@
 > **Author**: Cytognosis Engineering
 > **Audience**: Engineering, DevOps
 > **Tags**: `containers`, `docker`, `self-hosted`, `cytohost`
+> **Variants**: Technical (this doc) - Readable (same filename in Obsidian vault: 04-Engineering/infrastructure/) - Agent (n/a)
 > **Last verified**: 2026-06-14 against gcloud
 
 # Container Services — Quick Reference

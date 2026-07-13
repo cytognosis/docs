@@ -3,6 +3,7 @@
 > **Author**: Cytognosis Engineering
 > **Audience**: Engineering, DevOps
 > **Tags**: `hosting`, `cloud-run`, `ci-cd`, `oidc`, `artifact-registry`
+> **Variants**: Technical (this doc) - Readable (same filename in Obsidian vault: 04-Engineering/infrastructure/) - Agent (n/a)
 > **Last verified**: 2026-06-14 against gcloud
 
 # Hosting & Deployment Architecture
