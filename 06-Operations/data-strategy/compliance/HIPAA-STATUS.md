@@ -115,7 +115,7 @@ and operates HIPAA-aligned facilities. Cytognosis does not maintain its own data
 | Control | Status | Evidence | Owner |
 |---|---|---|---|
 | Cloud Audit Logs enabled (both GCP projects) | ✅ Done | Log sinks configured | Shahin Mohammadi |
-| Data Access Audit Logging (DATA_READ, DATA_WRITE, ADMIN_READ) | ✅ **Done 2026-05-26** | `allServices` on both infra + phi-prod; [GCP audit](../../audits/gcp-infrastructure-audit-2026-05-25.md) | Shahin Mohammadi |
+| Data Access Audit Logging (DATA_READ, DATA_WRITE, ADMIN_READ) | ✅ **Done 2026-05-26** | `allServices` on both infra + phi-prod; [GCP audit](../../../04-Engineering/infrastructure/audits/gcp-infrastructure-audit-2026-05-25.md) | Shahin Mohammadi |
 | 7-year audit log retention | ✅ Done | `gs://cytognosis-audit-7yr` | Shahin Mohammadi |
 | Audit log retention locked (irrevocable) | ✅ **LOCKED 2026-05-22** | [audit-log-retention.md](audit-log-retention.md) | Shahin Mohammadi |
 | Log tampering prevention | ✅ Done | Locked retention policy | Shahin Mohammadi |
@@ -124,7 +124,7 @@ and operates HIPAA-aligned facilities. Cytognosis does not maintain its own data
 | Control | Status | Evidence | Owner |
 |---|---|---|---|
 | PHI integrity controls documented | ✅ Done | [phi-security-controls-checklist.md](phi-security-controls-checklist.md) | Shahin Mohammadi |
-| Object versioning on PHI buckets | ✅ **Done 2026-05-25** | Enabled on `phi-core` + `phi-collab`; [GCP audit](../../audits/gcp-infrastructure-audit-2026-05-25.md) | Shahin Mohammadi |
+| Object versioning on PHI buckets | ✅ **Done 2026-05-25** | Enabled on `phi-core` + `phi-collab`; [GCP audit](../../../04-Engineering/infrastructure/audits/gcp-infrastructure-audit-2026-05-25.md) | Shahin Mohammadi |
 
 ### Encryption (§164.312(a)(2)(iv) and §164.312(e)(2))
 | Control | Status | Evidence | Owner |

@@ -415,5 +415,5 @@ Dinga 2019 failed to replicate the 4 clusters themselves, so these specific perc
 - [Neuroplastogen differential response](../../treatment/neuromodulation/neuroplastogen-response.md) (NEW)
 - [Neuromodulation differential response](../../treatment/neuromodulation/neuromodulation-response.md) (NEW)
 - [Transdiagnostic connectomic synthesis (v1)](../transdiagnostic/transdiagnostic-connectomic-synthesis.md)
-- [Research SYNTHESIS](SYNTHESIS.md)
+- [Research SYNTHESIS](../../../../02-Funding/submissions/Grants/NSF/X-labs/SYNTHESIS.md)
 - [v1 cheatsheet (now superseded but kept for reference)](BIOTYPES_CHEATSHEET.md)

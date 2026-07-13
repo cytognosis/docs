@@ -6,7 +6,7 @@
 
 > [!NOTE]
 > **TL;DR**: No single voice model handles everything Yar needs. Use **Gemma 4 E4B** for speech understanding + **HuBERT/openSMILE** as a parallel emotion sensor. The emotion sensor is non-negotiable because no voice model produces the quantified, clinically-comparable features needed for longitudinal ND tracking. All biometric data stays on-device, always.
-> **Source**: [voice_model_deep_evaluation.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/voice_model_deep_evaluation.md)
+> **Source**: [voice_model_deep_evaluation.md](voice_model_deep_evaluation.md)
 
 ---
 

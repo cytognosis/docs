@@ -86,7 +86,7 @@ def main(input_path: str):
 - redun's cache hits/misses
 - Intermediate results between tasks
 
-**The CytognosisExecutor design** in [provenance-lineage.md](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/reproducibility/provenance-lineage.md) proposes a deeper integration — a custom redun Executor that calls `log_to_lamindb()` after EVERY task, not just at the entry point. That's custom glue code we would write:
+**The CytognosisExecutor design** in [provenance-lineage.md](../../04-Engineering/infrastructure/reproducibility/provenance-lineage.md) proposes a deeper integration — a custom redun Executor that calls `log_to_lamindb()` after EVERY task, not just at the entry point. That's custom glue code we would write:
 
 ```python
 # FROM OUR DESIGN DOC (not yet implemented)

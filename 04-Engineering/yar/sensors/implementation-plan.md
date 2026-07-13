@@ -20,14 +20,14 @@ The sensor documentation is substantial but fragmented across three distinct loc
 | File | Lines | Content |
 |---|---|---|
 | [README.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/README.md) | 59 | Index of sensor docs, TL;DR recommended stack |
-| [unified-sensor-report.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/unified-sensor-report.md) | 716 | Master consolidated report: body, sensors, data, models in one thread |
-| [sensor-taxonomy.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-taxonomy.md) | 442 | Full sensor taxonomy with IEEE 1752 and Open mHealth coverage |
+| [unified-sensor-report.md](../../cytos/sensing-schema/unified-sensor-report.md) | 716 | Master consolidated report: body, sensors, data, models in one thread |
+| [sensor-taxonomy.md](../../cytos/sensing-schema/sensor-taxonomy.md) | 442 | Full sensor taxonomy with IEEE 1752 and Open mHealth coverage |
 | [sensor-architecture.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-architecture.md) | 379 | Pluggable sensor framework (Pydantic Protocol, SensorDescriptor, Voice Emotion Sensor 0 reference implementation) |
-| [interop-standards.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/interop-standards.md) | 284 | Cross-standard interop with IEEE 1752 and Open mHealth focus |
+| [interop-standards.md](../../cytos/sensing-schema/interop-standards.md) | 284 | Cross-standard interop with IEEE 1752 and Open mHealth focus |
 | [universal-sensor-schema-vault.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/universal-sensor-schema-vault.md) | 1,458 | Comprehensive vault copy with full schema details |
-| [data-formats.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/data-formats.md) | 254 | Data storage format recommendations |
-| [human-body-systems.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/human-body-systems.md) | 219 | HRA and human body ontology integration |
-| [ml-models.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/ml-models.md) | 226 | ML model manifest and IO contracts |
+| [data-formats.md](../../cytos/sensing-schema/data-formats.md) | 254 | Data storage format recommendations |
+| [human-body-systems.md](../../cytos/sensing-schema/human-body-systems.md) | 219 | HRA and human body ontology integration |
+| [ml-models.md](ml-models.md) | 226 | ML model manifest and IO contracts |
 
 ### Location 2: `cytos/schemas/domains/sensor/` (LinkML schemas, 3,986 lines)
 
@@ -49,19 +49,19 @@ The sensor documentation is substantial but fragmented across three distinct loc
 
 | File | Lines | Content |
 |---|---|---|
-| [sensors.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/sensors.md) | 226 | Phenotypic measurement schemas research: OBI, BAO, EFO, UCUM, LOINC, sampling regimes, AssayManifest |
-| [interop.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/interop.md) | 234 | How models, sensors, and data compose: match function, ontology backbone, bridge schemas |
+| [sensors.md](../../../05-Research/neuroverse/schema-survey/sensors.md) | 226 | Phenotypic measurement schemas research: OBI, BAO, EFO, UCUM, LOINC, sampling regimes, AssayManifest |
+| [interop.md](../../../05-Research/neuroverse/schema-survey/interop.md) | 234 | How models, sensors, and data compose: match function, ontology backbone, bridge schemas |
 | [linkml_kg_playbook/07_sosa_ssn_to_linkml.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/linkml_kg_playbook/07_sosa_ssn_to_linkml.md) | 217 | SOSA/SSN → LinkML conversion walkthrough (CytoSensor, CytoObservation) |
 | [sssom_tooling_for_cytognosis.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/sssom_tooling_for_cytognosis.md) | 505 | SSSOM cross-ontology mapping for the scholarly KG |
-| [data.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/data.md) | 254 | Data storage research |
+| [data.md](../../../05-Research/neuroverse/schema-survey/data.md) | 254 | Data storage research |
 | [linkml_kg_playbook/02_schema_landscape.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/linkml_kg_playbook/02_schema_landscape.md) | 145 | Schema landscape survey |
 
 ### Location 4: Yar Product Docs (Sensor references, scattered)
 
 | File | Sensor Content |
 |---|---|
-| [product-implementation.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/product-implementation.md) Phase 7 (lines 419-489) | USAP: SensorAdapter Protocol, SensorDescriptor, 6 sensor classes, plug-and-play UX |
-| [adhd-paper-synthesis.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/adhd-paper-synthesis.md) §8.9 | Sensor Integration features #44-47 (USAP, wearables, brain connectomic, environmental) |
+| [product-implementation.md](../../../00-Inbox/product-implementation.md) Phase 7 (lines 419-489) | USAP: SensorAdapter Protocol, SensorDescriptor, 6 sensor classes, plug-and-play UX |
+| [adhd-paper-synthesis.md](../research/adhd-paper-synthesis.md) §8.9 | Sensor Integration features #44-47 (USAP, wearables, brain connectomic, environmental) |
 | [yar-unified-feature-comparison-v3.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/yar-unified-feature-comparison-v3.md) | USAP in Priority 3 features, Big Gap section |
 | [cytonome-master-reference.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/cytonome-master-reference.md) | Paralinguistic sensor pipeline references |
 

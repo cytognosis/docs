@@ -6,7 +6,7 @@
 
 > [!NOTE]
 > **TL;DR**: Tana is the closest existing product to Yar's vision: an AI-native, graph-based outliner where everything is a node with persistent IDs. Its **supertags** (typed schemas), **live searches** (queries-as-objects), and **command nodes** (automation) are the three patterns Yar should adopt. Key differentiator for Yar: biomedical domain specificity that Tana's general-purpose architecture cannot provide. 9 features are P0 for Yar MVP.
-> **Source**: [tana-outliner-deep-dive.md](file:///home/mohammadi/Documents/ObsidianVault/02-Products/cytonome-yar/tana-outliner-deep-dive.md)
+> **Source**: [tana-outliner-deep-dive.md](tana-outliner-deep-dive.md)
 
 ---
 

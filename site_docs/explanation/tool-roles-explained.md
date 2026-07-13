@@ -364,7 +364,7 @@ No overlaps. Each tool does exactly one thing. They connect via metadata cross-r
 
 | Document | What it covers |
 |---|---|
-| [tools-infrastructure-stack.md](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/tools/tools-infrastructure-stack.md) | The 16-layer architecture with all tools mapped |
-| [provenance-lineage.md](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/reproducibility/provenance-lineage.md) | The DVC+redun+LaminDB+MLflow cooperation model, CytognosisExecutor code |
-| [seek-workflowhub.md](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/reproducibility/seek-workflowhub.md) | SEEK + WorkflowHub deployment, ISA model, publish flow |
-| [master-metaplan.md](file:///home/mohammadi/repos/cytognosis/org/plans/master-metaplan.md) | Phase 2A tracks infrastructure implementation |
+| [tools-infrastructure-stack.md](../../04-Engineering/infrastructure/tools/tools-infrastructure-stack.md) | The 16-layer architecture with all tools mapped |
+| [provenance-lineage.md](../../04-Engineering/infrastructure/reproducibility/provenance-lineage.md) | The DVC+redun+LaminDB+MLflow cooperation model, CytognosisExecutor code |
+| [seek-workflowhub.md](../../04-Engineering/infrastructure/reproducibility/seek-workflowhub.md) | SEEK + WorkflowHub deployment, ISA model, publish flow |
+| [master-metaplan.md](../../01-Strategy/master-metaplan.md) | Phase 2A tracks infrastructure implementation |

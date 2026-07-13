@@ -3,7 +3,7 @@
 > **Status**: v1.0
 > **Date**: 2026-05-31
 > **Scope**: Defines the formal crosswalk between four health data standards through the Cytos LinkML spine
-> **Companion**: [Consolidated Sensor Reference](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/unified-sensor-report.md)
+> **Companion**: [Consolidated Sensor Reference](unified-sensor-report.md)
 
 ---
 
@@ -278,9 +278,9 @@ sensor:ObservableProperty	ObservableProperty	skos:exactMatch	sosa:ObservableProp
 |---|---|---|
 | **P0 (Done)** | Core schema with SOSA/FHIR/IEEE 1752/AWARE/BT GHS profiles | `cytos/schemas/domains/sensor/` |
 | **P1 (Next)** | Generate SSSOM TSV crosswalk files | `cytos/schemas/domains/sensor/crosswalks/` |
-| **P1 (Next)** | AWARE adapter implementation | [implementing-aware.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-aware.md) |
-| **P1 (Next)** | Oura/Fitbit adapter implementation | [implementing-wearables.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-wearables.md) |
-| **P1 (Next)** | Health instruments catalog | [implementing-health-instruments.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-health-instruments.md) |
+| **P1 (Next)** | AWARE adapter implementation | [implementing-aware.md](../../yar/sensors/implementing-aware.md) |
+| **P1 (Next)** | Oura/Fitbit adapter implementation | [implementing-wearables.md](../../yar/sensors/implementing-wearables.md) |
+| **P1 (Next)** | Health instruments catalog | [implementing-health-instruments.md](../../yar/sensors/implementing-health-instruments.md) |
 | **P2** | Cytos-to-Yar bridge (`cytos_bridge.py`) | `src/cytonome/yar/sensors/bridge.py` |
 | **P2** | OMOP CDM profile | `profiles/profile_omop.yaml` |
 | **P3** | Apple HealthKit / Google Health Connect vendors | `vendors/vendor_apple.yaml` |
@@ -319,8 +319,8 @@ sensor:ObservableProperty	ObservableProperty	skos:exactMatch	sosa:ObservableProp
 - [Ontology Access Kit (OAK)](https://github.com/INCATools/ontology-access-kit)
 
 ### Cytognosis Internal
-- [Consolidated Sensor Reference](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/unified-sensor-report.md)
+- [Consolidated Sensor Reference](unified-sensor-report.md)
 - [Cytos Sensor Schema README](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/README.md)
 - [SSSOM Tooling for Cytognosis](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/sssom_tooling_for_cytognosis.md)
 - [SOSA/SSN to LinkML Playbook](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/linkml_kg_playbook/07_sosa_ssn_to_linkml.md)
-- [Yar USAP Phase 7](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/product-implementation.md)
+- [Yar USAP Phase 7](../../../00-Inbox/product-implementation.md)

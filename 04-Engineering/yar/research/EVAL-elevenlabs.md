@@ -6,7 +6,7 @@
 
 > [!NOTE]
 > **TL;DR**: ElevenLabs offers the best voice AI quality in the market. For Cytonome, adopt their **on-device TTS** (privacy-first, offline) and **Voice Design** (create Yar's companion voice). Skip their cloud-only conversational agents since we have our own Gemma cascade.
-> **Source**: [elevenlabs_evaluation.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/elevenlabs_evaluation.md)
+> **Source**: [elevenlabs_evaluation.md](elevenlabs_evaluation.md)
 
 ---
 

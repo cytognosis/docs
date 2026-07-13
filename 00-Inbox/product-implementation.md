@@ -227,7 +227,7 @@ async def evaluate(directive: Directive, settings: YarSettings) -> GuardDecision
 
 #### 2.2.1 Create `src/yar/anytype/` (8 modules)
 
-See [yar_revision_plan.md](file:///home/mohammadi/.gemini/antigravity/brain/3a11be50-0404-4087-86d2-471b9987ec43/artifacts/yar_revision_plan.md) Phase 1 for full module inventory.
+See [yar_revision_plan.md](yar_revision_plan.md) Phase 1 for full module inventory.
 
 **Critical evaluation**: The current 48KB monolithic adapter is the largest module in the codebase. It works, but:
 - 1 file = 1 point of failure for all Anytype operations
@@ -418,9 +418,9 @@ def to_character_card_v3(persona: YarPersona) -> dict:
 
 ### Phase 7: Universal Sensor Adapter Protocol (Week 12-16)
 
-> **Full documentation**: [Consolidated Sensor Reference](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/unified-sensor-report.md)
+> **Full documentation**: [Consolidated Sensor Reference](../04-Engineering/cytos/sensing-schema/unified-sensor-report.md)
 > **Schema system**: [Cytos LinkML Sensor Schemas](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/)
-> **Standards crosswalk**: [Semantic Alignment Specification](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/semantic-alignment.md)
+> **Standards crosswalk**: [Semantic Alignment Specification](../04-Engineering/cytos/sensing-schema/semantic-alignment.md)
 
 #### 2.7.1 The Problem
 
@@ -441,10 +441,10 @@ Yar introduces a **Universal Sensor Adapter Protocol (USAP)**, modeled on the MC
 
 | Sensor Class | Example Devices | Data Type | Cytos Schema | Implementation Guide |
 |---|---|---|---|---|
-| **Wearable rings** | Oura Ring, RingConn | HRV, sleep stages, temperature, activity | [vendor_oura.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_oura.yaml) | [Implementing Wearables](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-wearables.md) |
-| **Smartwatches** | Apple Watch, Pixel Watch, Fitbit | HR, SpO2, stress, steps, activity | [vendor_fitbit.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_fitbit.yaml) | [Implementing Wearables](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-wearables.md) |
-| **Smartphone sensors** | Built-in accelerometer, GPS, screen, apps | Motion, location, digital behavior, ESM | [profile_aware.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml) | [Implementing AWARE](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-aware.md) |
-| **Health instruments** | PHQ-9, GAD-7, ASRS, PSQI, WHO-5 | Self-report scores, subscales | [selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml) | [Implementing Health Instruments](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-health-instruments.md) |
+| **Wearable rings** | Oura Ring, RingConn | HRV, sleep stages, temperature, activity | [vendor_oura.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_oura.yaml) | [Implementing Wearables](../04-Engineering/yar/sensors/implementing-wearables.md) |
+| **Smartwatches** | Apple Watch, Pixel Watch, Fitbit | HR, SpO2, stress, steps, activity | [vendor_fitbit.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_fitbit.yaml) | [Implementing Wearables](../04-Engineering/yar/sensors/implementing-wearables.md) |
+| **Smartphone sensors** | Built-in accelerometer, GPS, screen, apps | Motion, location, digital behavior, ESM | [profile_aware.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml) | [Implementing AWARE](../04-Engineering/yar/sensors/implementing-aware.md) |
+| **Health instruments** | PHQ-9, GAD-7, ASRS, PSQI, WHO-5 | Self-report scores, subscales | [selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml) | [Implementing Health Instruments](../04-Engineering/yar/sensors/implementing-health-instruments.md) |
 | **CGM** | Dexcom G6/G7, Libre | Continuous glucose | [vendor_dexcom.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_dexcom.yaml) | TBD |
 | **Brain connectomic** | Muse, Neurosity Crown | EEG, functional connectivity | Core `Observation` + `WaveformResult` | TBD |
 | **Environmental** | Air quality, light, noise sensors | CO2, lux, dB levels | Core `Observation` | TBD |

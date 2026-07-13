@@ -2415,8 +2415,8 @@ This implementation guide provides the foundation for self-report sensing in Cyt
 | **Cytos Self-Report Schema** | [selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml) | LinkML schema defining SurveyInstrument, SurveyResponse, ESMPrompt |
 | **Cytos Sensor Core Schema** | [core.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml) | Base classes (Observation, Procedure, Device, Subject) |
 | **Sensor Architecture** | [sensor-architecture.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-architecture.md) | Universal sensor protocol and plugin system |
-| **Interoperability Standards** | [interop-standards.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/interop-standards.md) | FHIR, IEEE 1752, SOSA/SSN alignment details |
-| **Sensor Taxonomy** | [sensor-taxonomy.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-taxonomy.md) | Classification of all sensor types in Cytonome |
+| **Interoperability Standards** | [interop-standards.md](../../cytos/sensing-schema/interop-standards.md) | FHIR, IEEE 1752, SOSA/SSN alignment details |
+| **Sensor Taxonomy** | [sensor-taxonomy.md](../../cytos/sensing-schema/sensor-taxonomy.md) | Classification of all sensor types in Cytonome |
 
 ### 7.1 Implementation Priorities
 

@@ -17,11 +17,11 @@ Consolidated all sensor-related documentation from three fragmented locations (Y
 
 | Document | Lines | What It Contains |
 |---|---|---|
-| [unified-sensor-report.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/unified-sensor-report.md) | 434 | **Master reference** replacing the old report. Architecture overview, Cytos schema system, standards coverage matrix, Yar USAP (full Sensor Protocol, not facade), vendor profiles, self-report instruments, interop stack, known gaps, research lineage, full file index |
-| [semantic-alignment.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/semantic-alignment.md) | 326 | **Crosswalk specification** with 8 concept-level mapping tables (SOSA ↔ IEEE 1752 ↔ FHIR ↔ AWARE), slot URI alignment, unit translation, temporal conversion rules, SSSOM integration, gap analysis |
-| [implementing-aware.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-aware.md) | 2,032 | All 25 AWARE sensors with SQLite → Cytos → SOSA mapping, full Python `AWARESensorAdapter`, ESM/EMA integration, ADHD digital phenotyping features |
-| [implementing-wearables.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-wearables.md) | 2,127 | Oura Cloud API v2 + Fitbit Web API with full data model mappings (API → Cytos → SOSA → IEEE 1752 → FHIR → LOINC), Python adapters, cross-vendor normalization, Apple Watch/Health Connect patterns |
-| [implementing-health-instruments.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-health-instruments.md) | 2,434 | 16 instruments (PHQ-9, GAD-7, ASRS, WFIRS, PSQI, ISI, ESS, PSS-10, WHO-5, PHQ-2, GAD-2, BRIEF-A, CAARS, MBI, WHOQOL-BREF, custom ESM) with full YAML definitions, scoring algorithms, FHIR mappings, safety protocols |
+| [unified-sensor-report.md](../../cytos/sensing-schema/unified-sensor-report.md) | 434 | **Master reference** replacing the old report. Architecture overview, Cytos schema system, standards coverage matrix, Yar USAP (full Sensor Protocol, not facade), vendor profiles, self-report instruments, interop stack, known gaps, research lineage, full file index |
+| [semantic-alignment.md](../../cytos/sensing-schema/semantic-alignment.md) | 326 | **Crosswalk specification** with 8 concept-level mapping tables (SOSA ↔ IEEE 1752 ↔ FHIR ↔ AWARE), slot URI alignment, unit translation, temporal conversion rules, SSSOM integration, gap analysis |
+| [implementing-aware.md](implementing-aware.md) | 2,032 | All 25 AWARE sensors with SQLite → Cytos → SOSA mapping, full Python `AWARESensorAdapter`, ESM/EMA integration, ADHD digital phenotyping features |
+| [implementing-wearables.md](implementing-wearables.md) | 2,127 | Oura Cloud API v2 + Fitbit Web API with full data model mappings (API → Cytos → SOSA → IEEE 1752 → FHIR → LOINC), Python adapters, cross-vendor normalization, Apple Watch/Health Connect patterns |
+| [implementing-health-instruments.md](implementing-health-instruments.md) | 2,434 | 16 instruments (PHQ-9, GAD-7, ASRS, WFIRS, PSQI, ISI, ESS, PSS-10, WHO-5, PHQ-2, GAD-2, BRIEF-A, CAARS, MBI, WHOQOL-BREF, custom ESM) with full YAML definitions, scoring algorithms, FHIR mappings, safety protocols |
 | [README.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/README.md) | 62 | Updated entry point with quick navigation table |
 
 ### SSSOM Crosswalk Files (141 lines)
@@ -37,7 +37,7 @@ Consolidated all sensor-related documentation from three fragmented locations (Y
 
 | File | Change |
 |---|---|
-| [product-implementation.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/product-implementation.md) Phase 7 | Replaced simplified `SensorAdapter` facade with full `Sensor` Protocol referencing Cytos schema. Added standards alignment table, implementation guide links, SSSOM crosswalk link |
+| [product-implementation.md](../../../00-Inbox/product-implementation.md) Phase 7 | Replaced simplified `SensorAdapter` facade with full `Sensor` Protocol referencing Cytos schema. Added standards alignment table, implementation guide links, SSSOM crosswalk link |
 | [cytos sensor README.md](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/README.md) | Added SSSOM Crosswalks section and Documentation table linking to all sensor docs |
 | [sensor docs README.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/README.md) | Rewrote as master entry point with quick navigation |
 

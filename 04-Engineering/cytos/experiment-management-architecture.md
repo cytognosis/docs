@@ -14,8 +14,8 @@ Before recommending anything new, here's what actually exists in the codebase:
 | **Pipeline DAG** | Kedro | ❌ **Previously rejected** (redundant with redun + LaminDB) | [pipeline_registry.py](file:///home/mohammadi/repos/cytognosis/cytos/src/cytos/pipeline_registry.py) — stubs remain |
 | **Data pipeline** | DVC | ✅ Working | [dvc.yaml](file:///home/mohammadi/repos/cytognosis/cytos/dvc.yaml) — 10+ stages |
 | **RO-Crate bridge** | redun → WRROC | ✅ MVP (124 LOC) | [redun_rocrate.py](file:///home/mohammadi/repos/cytognosis/cytos/src/cytos/publish/redun_rocrate.py) |
-| **Provenance design** | 4-tool stack | ✅ Designed (466 lines) | [provenance-lineage.md](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/reproducibility/provenance-lineage.md) |
-| **Environment matrix** | cytoskeleton | ✅ Designed (66 cells) | [envs-containers.md](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/reproducibility/envs-containers.md) |
+| **Provenance design** | 4-tool stack | ✅ Designed (466 lines) | [provenance-lineage.md](../infrastructure/reproducibility/provenance-lineage.md) |
+| **Environment matrix** | cytoskeleton | ✅ Designed (66 cells) | [envs-containers.md](../infrastructure/reproducibility/envs-containers.md) |
 | **Experiment tracking** | MLflow | ✅ Deployed | cytohost |
 | **Data versioning** | DVC | ✅ Working | `~/datasets/.dvc/config` → GCS |
 
@@ -326,7 +326,7 @@ This is the killer feature of redun over every other tool. No other workflow eng
 
 ## 7. RO-Crate: Not Just Post-Hoc
 
-The [provenance-lineage.md](file:///home/mohammadi/repos/cytognosis/infrastructure/docs/reproducibility/provenance-lineage.md) design already makes RO-Crate a **per-run emission**, not post-hoc packaging. The `CytognosisExecutor` emits a crate as step 5 of every task execution:
+The [provenance-lineage.md](../infrastructure/reproducibility/provenance-lineage.md) design already makes RO-Crate a **per-run emission**, not post-hoc packaging. The `CytognosisExecutor` emits a crate as step 5 of every task execution:
 
 ```
 1. Resolve inputs via VFS, verify hashes

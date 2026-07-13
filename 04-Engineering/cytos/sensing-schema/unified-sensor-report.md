@@ -158,7 +158,7 @@ The Cytos schema aligns with five major standards via profile schemas. Each prof
 | **OMOP CDM** | Not yet | Gap | Needed for clinical data warehousing |
 | **Apple HealthKit** | Proposed | Gap | Schema designed, not implemented |
 
-For the detailed semantic crosswalk between these standards, see [Semantic Alignment Specification](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/semantic-alignment.md).
+For the detailed semantic crosswalk between these standards, see [Semantic Alignment Specification](semantic-alignment.md).
 
 ---
 
@@ -207,7 +207,7 @@ Sensors span three scales with different standards and data characteristics at e
 
 ## 5. Yar USAP (Universal Sensor Adapter Protocol)
 
-The runtime sensor protocol that Yar uses is defined in [product-implementation.md Phase 7](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/product-implementation.md). It is a Python `Protocol`-based interface that acts as the runtime facade over the full Cytos LinkML schema.
+The runtime sensor protocol that Yar uses is defined in [product-implementation.md Phase 7](../../../00-Inbox/product-implementation.md). It is a Python `Protocol`-based interface that acts as the runtime facade over the full Cytos LinkML schema.
 
 ### Sensor Protocol
 
@@ -274,7 +274,7 @@ class Sensor(Protocol):
     └── devices.yaml      # Device catalog entries
 ```
 
-Full USAP specification: [product-implementation.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/product-implementation.md) Phase 7
+Full USAP specification: [product-implementation.md](../../../00-Inbox/product-implementation.md) Phase 7
 
 ---
 
@@ -291,9 +291,9 @@ Full USAP specification: [product-implementation.md](file:///home/mohammadi/repo
 | **Cytoscope** | [vendor_cytoscope.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_cytoscope.yaml) | Cytognosis biosensor (placeholder) | Draft |
 
 Implementation guides:
-- [Implementing Wearables (Oura + Fitbit)](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-wearables.md)
-- [Implementing AWARE](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-aware.md)
-- [Implementing Health Instruments](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-health-instruments.md)
+- [Implementing Wearables (Oura + Fitbit)](../../yar/sensors/implementing-wearables.md)
+- [Implementing AWARE](../../yar/sensors/implementing-aware.md)
+- [Implementing Health Instruments](../../yar/sensors/implementing-health-instruments.md)
 
 ---
 
@@ -315,7 +315,7 @@ Schema: [selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/
 | **Well-being** | WHO-5 | 70274-5 |
 | **Custom EMA** | Daily mood, energy, focus micro-surveys | Cytos-authored |
 
-Full catalog and implementation: [Implementing Health Instruments](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-health-instruments.md)
+Full catalog and implementation: [Implementing Health Instruments](../../yar/sensors/implementing-health-instruments.md)
 
 ---
 
@@ -365,7 +365,7 @@ Details: [sssom_tooling_for_cytognosis.md](file:///home/mohammadi/repos/cytognos
 
 The detailed crosswalk between SOSA/SSN, IEEE 1752, FHIR, and AWARE is documented in the dedicated specification:
 
-→ [Semantic Alignment Specification](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/semantic-alignment.md)
+→ [Semantic Alignment Specification](semantic-alignment.md)
 
 ---
 
@@ -389,8 +389,8 @@ This document consolidates and supersedes the following research outputs:
 
 | Original Document | Location | Status |
 |---|---|---|
-| [sensors.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/sensors.md) (226 lines) | archive/neuro-pheno | Superseded by this doc §4 |
-| [interop.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/interop.md) (234 lines) | archive/neuro-pheno | Superseded by this doc §8 |
+| [sensors.md](../../../05-Research/neuroverse/schema-survey/sensors.md) (226 lines) | archive/neuro-pheno | Superseded by this doc §4 |
+| [interop.md](../../../05-Research/neuroverse/schema-survey/interop.md) (234 lines) | archive/neuro-pheno | Superseded by this doc §8 |
 | [07_sosa_ssn_to_linkml.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/linkml_kg_playbook/07_sosa_ssn_to_linkml.md) (217 lines) | archive/neuro-pheno | Superseded by semantic-alignment.md |
 | [sssom_tooling_for_cytognosis.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/sssom_tooling_for_cytognosis.md) (505 lines) | archive/neuro-pheno | Still current, referenced from §8 |
 | [02_schema_landscape.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/linkml_kg_playbook/02_schema_landscape.md) | archive/neuro-pheno | Still current, foundational reference |
@@ -404,16 +404,16 @@ This document consolidates and supersedes the following research outputs:
 | File | Content |
 |---|---|
 | **This document** | Master consolidated reference |
-| [semantic-alignment.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/semantic-alignment.md) | SOSA/IEEE 1752/FHIR/AWARE crosswalk specification |
-| [implementing-aware.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-aware.md) | AWARE smartphone sensor data gathering guide |
-| [implementing-wearables.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-wearables.md) | Oura Ring and Fitbit integration guide |
-| [implementing-health-instruments.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/implementing-health-instruments.md) | PHQ-9, GAD-7, ASRS, and health scales guide |
+| [semantic-alignment.md](semantic-alignment.md) | SOSA/IEEE 1752/FHIR/AWARE crosswalk specification |
+| [implementing-aware.md](../../yar/sensors/implementing-aware.md) | AWARE smartphone sensor data gathering guide |
+| [implementing-wearables.md](../../yar/sensors/implementing-wearables.md) | Oura Ring and Fitbit integration guide |
+| [implementing-health-instruments.md](../../yar/sensors/implementing-health-instruments.md) | PHQ-9, GAD-7, ASRS, and health scales guide |
 | [sensor-architecture.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-architecture.md) | Runtime sensor protocol and Voice Sensor 0 |
-| [sensor-taxonomy.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-taxonomy.md) | Full sensor taxonomy with IEEE 1752 coverage |
-| [interop-standards.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/interop-standards.md) | Cross-standard interop details |
-| [data-formats.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/data-formats.md) | Data storage format recommendations |
-| [human-body-systems.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/human-body-systems.md) | HRA and human body ontology integration |
-| [ml-models.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/ml-models.md) | ML model manifest and IO contracts |
+| [sensor-taxonomy.md](sensor-taxonomy.md) | Full sensor taxonomy with IEEE 1752 coverage |
+| [interop-standards.md](interop-standards.md) | Cross-standard interop details |
+| [data-formats.md](data-formats.md) | Data storage format recommendations |
+| [human-body-systems.md](human-body-systems.md) | HRA and human body ontology integration |
+| [ml-models.md](../../yar/sensors/ml-models.md) | ML model manifest and IO contracts |
 
 ### Cytos LinkML Schemas (`cytos/schemas/domains/sensor/`)
 
@@ -429,6 +429,6 @@ This document consolidates and supersedes the following research outputs:
 
 | File | Sensor Content |
 |---|---|
-| [product-implementation.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/product-implementation.md) Phase 7 | USAP specification |
-| [adhd-paper-synthesis.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/adhd-paper-synthesis.md) §8.9 | Sensor integration features for ADHD |
+| [product-implementation.md](../../../00-Inbox/product-implementation.md) Phase 7 | USAP specification |
+| [adhd-paper-synthesis.md](../../yar/research/adhd-paper-synthesis.md) §8.9 | Sensor integration features for ADHD |
 | [yar-unified-feature-comparison-v3.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/yar-unified-feature-comparison-v3.md) | USAP in competitive feature matrix |

@@ -21,7 +21,7 @@ tags:
 **Cytognosis Foundation, 2026-05-24 (draft v0.1)**
 **Status**: Research complete, ready for design decisions
 
-> This document is the companion to the [Experiment Orchestration Research](file:///home/mohammadi/repos/cytognosis/org/plans/research/experiment-orchestration-research.md), which covers experiment definition, execution engines, and provenance tracking. This document focuses on the **user-facing interface** for browsing, comparing, and managing experiments across all Cytognosis workloads, not just ML training runs.
+> This document is the companion to the [Experiment Orchestration Research](experiment-orchestration-research.md), which covers experiment definition, execution engines, and provenance tracking. This document focuses on the **user-facing interface** for browsing, comparing, and managing experiments across all Cytognosis workloads, not just ML training runs.
 
 ---
 
@@ -617,7 +617,7 @@ async def get_costs(
 
 ## References
 
-- [Experiment Orchestration Research](file:///home/mohammadi/repos/cytognosis/org/plans/research/experiment-orchestration-research.md)
+- [Experiment Orchestration Research](experiment-orchestration-research.md)
 - [Reproducibility Strategy](file:///home/mohammadi/Documents/Claude/Projects/Infrastructure%20and%20Tooling/cytognosis_reproducibility_strategy.md)
 - [RO-Crate Research](file:///home/mohammadi/repos/cytognosis/org/plans/experiment-rocrate-research.md)
 - [MLflow Documentation](https://mlflow.org)

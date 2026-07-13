@@ -6,7 +6,7 @@
 
 > [!NOTE]
 > **TL;DR**: Letterly is an AI voice-to-text app that turns rambling spoken thoughts into polished written content using 25+ rewrite styles. Scores **41/120** on the Yar unified comparison (narrow scope, not quality). Yar should adopt its voice capture pipeline (P1), one-tap recording widget (P1), and offline recording (P1) while avoiding its cloud-only, closed-source, single-purpose architecture.
-> **Source**: [letterly-deep-dive.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/letterly-deep-dive.md)
+> **Source**: [letterly-deep-dive.md](letterly-deep-dive.md)
 
 ---
 

@@ -6,7 +6,7 @@
 
 > [!NOTE]
 > **TL;DR**: Leantime is a project management tool for teams; Super Productivity is a deep work task manager for individuals. Yar borrows focus features from Super Productivity (Pomodoro, idle detection, break reminders) and reframes Leantime's reflection tools, but Yar's core differentiators (voice input, emotion tracking, CAP safety) are unique to Cytonome.
-> **Source**: [feature_comparison_leantime_vs_sp.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/feature_comparison_leantime_vs_sp.md)
+> **Source**: [feature_comparison_leantime_vs_sp.md](feature_comparison_leantime_vs_sp.md)
 
 ---
 

@@ -907,7 +907,7 @@ gantt
 
 ### 11.3 Naming Conventions
 
-Following the rules established in [extras-naming-conventions.md](file:///home/mohammadi/repos/cytognosis/org/plans/research/extras-naming-conventions.md):
+Following the rules established in [extras-naming-conventions.md](../../06-Operations/org/naming/extras-naming-conventions.md):
 
 | Rule | Applied |
 |------|---------|

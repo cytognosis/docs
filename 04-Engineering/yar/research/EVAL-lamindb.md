@@ -6,7 +6,7 @@
 
 > [!NOTE]
 > **TL;DR**: LaminDB is a lineage-native data lakehouse for biological R&D. **Adopt it** for metadata/provenance tracking alongside our existing cytos KG (for deep ontology reasoning) and cytoskeleton VFS (for low-level storage). Evaluate scDataLoader for ML training data loading. Skip LaminHub SaaS dependency.
-> **Source**: [lamindb-deep-analysis.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/lamindb-deep-analysis.md)
+> **Source**: [lamindb-deep-analysis.md](lamindb-deep-analysis.md)
 
 ---
 

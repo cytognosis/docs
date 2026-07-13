@@ -6,7 +6,7 @@
 
 > [!NOTE]
 > **TL;DR**: **TileDB Cloud** is a managed data platform built on the TileDB Embedded engine. It provides **unified array-based storage** for multi-modal biomedical data (single-cell, genomics, imaging) plus **serverless compute** (Dask-like DAG tasks on Kubernetes). Three specialized ingestion modules: **SOMA** (single-cell), **VCF** (genomics), **BioImaging** (microscopy). Key question: use TileDB Cloud as infrastructure, or adopt patterns into our self-hosted stack.
-> **Source**: [tiledb-cloud-analysis.md](file:///home/mohammadi/Documents/ObsidianVault/04-Research/methods/tiledb-cloud-analysis.md)
+> **Source**: [tiledb-cloud-analysis.md](tiledb-cloud-analysis.md)
 
 ---
 

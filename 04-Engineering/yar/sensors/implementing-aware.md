@@ -1130,7 +1130,7 @@ The Cytos [SurveyAnswerTypeEnum](file:///home/mohammadi/repos/cytognosis/cytos/s
 
 ### 5.1 AWARESensorAdapter Architecture
 
-The AWARESensorAdapter implements Cytonome's [Sensor Protocol](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-architecture.md) (see [USAP Phase 7](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/product-implementation.md#L419-L489)) to bridge AWARE data into Cytos Observations.
+The AWARESensorAdapter implements Cytonome's [Sensor Protocol](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-architecture.md) (see [USAP Phase 7](../../../00-Inbox/product-implementation.md#L419-L489)) to bridge AWARE data into Cytos Observations.
 
 ```mermaid
 classDiagram
@@ -2019,9 +2019,9 @@ classDiagram
    - [selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml): ESM/EMA survey infrastructure
    - [profile_aware.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml): AWARE-specific profile
 
-2. **Semantic alignment**: Reference the semantic alignment documentation at [docs/cytonome/yar/sensors/semantic-alignment.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/semantic-alignment.md) (forthcoming) for SOSA/SSN, FHIR R5, and IEEE 1752 interoperability mapping.
+2. **Semantic alignment**: Reference the semantic alignment documentation at [docs/cytonome/yar/sensors/semantic-alignment.md](../../cytos/sensing-schema/semantic-alignment.md) (forthcoming) for SOSA/SSN, FHIR R5, and IEEE 1752 interoperability mapping.
 
-3. **USAP integration**: See Yar's [Phase 7: Universal Sensor Adapter Protocol](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/product-implementation.md#L419-L489) for the broader adapter architecture and plug-and-play user experience design.
+3. **USAP integration**: See Yar's [Phase 7: Universal Sensor Adapter Protocol](../../../00-Inbox/product-implementation.md#L419-L489) for the broader adapter architecture and plug-and-play user experience design.
 
 4. **Sensor architecture**: Review the [Universal Sensor Architecture](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-architecture.md) for the Sensor Protocol interface, SensorDescriptor schema, and SensorRegistry lifecycle.
 

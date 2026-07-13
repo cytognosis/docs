@@ -6,7 +6,7 @@
 
 > [!NOTE]
 > **TL;DR**: Capacities.io is an object-oriented PKM tool where "everything is a typed thing." Its Object Studio, multi-view data visualization, and two-way linking are the top 3 features for Yar to adopt. Key design lesson: "thinking in things" is more intuitive than "everything is a node." Yar should adopt a **hybrid** approach: Capacities' upfront types + Tana's schema inheritance. The full 80-item feature mapping identifies 8 P0 must-haves for Yar MVP.
-> **Source**: [capacities-deep-dive.md](file:///home/mohammadi/Documents/ObsidianVault/02-Products/cytonome-yar/capacities-deep-dive.md)
+> **Source**: [capacities-deep-dive.md](capacities-deep-dive.md)
 
 ---
 

@@ -6,7 +6,7 @@
 
 > [!NOTE]
 > **TL;DR**: Five biological model zoos were analyzed (MONAI, Kipoi, sfaira, scvi-hub, Bioimage.IO). No single zoo is sufficient. The LEGO Registry design combines MONAI's bundle format, Kipoi's biological entity typing, sfaira's ontology integration, scvi-hub's HuggingFace patterns, and Bioimage.IO's tensor I/O specification.
-> **Source**: [bio-model-zoos-research.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/bio-model-zoos-research.md)
+> **Source**: [bio-model-zoos-research.md](bio-model-zoos-research.md)
 
 ---
 

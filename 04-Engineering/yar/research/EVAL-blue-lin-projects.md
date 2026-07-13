@@ -6,7 +6,7 @@
 
 > [!NOTE]
 > **TL;DR**: Blue (Georgianna) Lin is a Columbia postdoc whose menstrual health tracking research offers the single best design blueprint for Yar's cognitive state visualizations. Her 5 validated design requirements (CHI 2024) transfer directly: communicate predicted phases with variance, support multiple interaction patterns, personalize viewable signals, integrate educational content, and enable side-by-side comparison with context. Her progressive disclosure pattern (status → summary → detail → raw data) solves Yar's core UX challenge of presenting multimodal cognitive data without overwhelm.
-> **Source**: [blue-lin-projects-deep-dive.md](file:///home/mohammadi/Documents/ObsidianVault/02-Products/cytonome-yar/research/blue-lin-projects-deep-dive.md)
+> **Source**: [blue-lin-projects-deep-dive.md](blue-lin-projects-deep-dive.md)
 
 ---
 

@@ -58,15 +58,15 @@ Full schema documentation: [Cytos Sensor Schema README](file:///home/mohammadi/r
 
 The Yar product-level sensor integration (USAP: Universal Sensor Adapter Protocol) is defined in:
 
-- [Product Implementation Phase 7](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/product-implementation.md) (USAP specification)
-- [ADHD Paper Synthesis §8.9](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/adhd-paper-synthesis.md) (sensor features for ADHD)
+- [Product Implementation Phase 7](../../../00-Inbox/product-implementation.md) (USAP specification)
+- [ADHD Paper Synthesis §8.9](../research/adhd-paper-synthesis.md) (sensor features for ADHD)
 - [Feature Comparison v3](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/yar-unified-feature-comparison-v3.md) (USAP in competitive matrix)
 
 ## Research Lineage
 
 Foundational research that informed this architecture (retained in archive for citation purposes):
 
-- [Sensors Research](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/sensors.md) (ontology survey)
-- [Interop Research](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/interop.md) (match function design)
+- [Sensors Research](../../../05-Research/neuroverse/schema-survey/sensors.md) (ontology survey)
+- [Interop Research](../../../05-Research/neuroverse/schema-survey/interop.md) (match function design)
 - [SOSA/SSN to LinkML](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/linkml_kg_playbook/07_sosa_ssn_to_linkml.md) (conversion walkthrough)
 - [SSSOM Tooling](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/sssom_tooling_for_cytognosis.md) (cross-ontology mapping)

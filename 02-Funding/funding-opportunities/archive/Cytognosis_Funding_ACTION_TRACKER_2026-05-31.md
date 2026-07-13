@@ -36,21 +36,21 @@
 
 | Application | Submitted | Link |
 |---|---|---|
-| **Foresight** (AI Safety Science Nodes resubmission) | **2026-05-31** | [draft](../applications/v2/Foresight_AI_Safety_Science_Nodes_2026_RESUBMISSION.md) |
+| **Foresight** (AI Safety Science Nodes resubmission) | **2026-05-31** | [draft](../../submissions/Applications/Foresight/archive/Foresight_AI_Safety_Science_Nodes_2026_RESUBMISSION.md) |
 
 ### Drafted and ready
 
 | Application | Link |
 |---|---|
-| AWS Imagine (Go Further, Faster) — filled, ready to submit Jun 5 | [draft](../applications/v2/AWS_Imagine_Grant_GoFurtherFaster_2026.md) |
-| ARPA-H IGoR Solution Summary — ready, due Jun 25 | [draft](../applications/v2/ARPA-H_IGoR_Solution_Summary_DRAFT.md) · [summary](../applications/v2/ARPA-H_IGoR_summary_and_materials.md) |
+| AWS Imagine (Go Further, Faster) — filled, ready to submit Jun 5 | [draft](../../submissions/Applications/AWS/Imagine/AWS_Imagine_Grant_GoFurtherFaster_2026.md) |
+| ARPA-H IGoR Solution Summary — ready, due Jun 25 | [draft](../../submissions/Grants/ARPA-H/IGoR/solution_summary/_sources/ARPA-H_IGoR_Solution_Summary_DRAFT.md) · [summary](../../submissions/Grants/ARPA-H/IGoR/solution_summary/_sources/ARPA-H_IGoR_summary_and_materials.md) |
 | Career Transition Award ($165K) — drafted, ready to submit | (runway floor) |
 | EA LTFF (~$125K) — drafted, ready to submit | (runway floor) |
 | Coefficient Capacity Building ($175K) — drafted | — |
-| NIMH BRAIN sensor (RFA-MH-26-140) | [summary + aims](../applications/v2/NIMH_BRAIN_RFA-MH-26-140_summary_and_materials.md) |
-| Nucleate × Eli Lilly Grand Challenge | [draft](../applications/v2/Nucleate_Lilly_Grand_Challenge_2026.md) |
-| Anthropic / NAIRR / Cohere (compute + credits) — ready | [drafts](../applications/v2/Compute_Credits_Applications_Anthropic_NAIRR_Cohere.md) |
-| ElevenLabs Impact Partners — ready | [draft](../applications/outreach/ElevenLabs_Impact_Partners.md) |
+| NIMH BRAIN sensor (RFA-MH-26-140) | [summary + aims](../../NIMH_BRAIN_RFA-MH-26-140_summary_and_materials.md) |
+| Nucleate × Eli Lilly Grand Challenge | [draft](../../submissions/Applications/Lilly/Nucleate_Lilly_Grand_Challenge_2026.md) |
+| Anthropic / NAIRR / Cohere (compute + credits) — ready | [drafts](../../Compute_Credits_Applications_Anthropic_NAIRR_Cohere.md) |
+| ElevenLabs Impact Partners — ready | [draft](../../submissions/Applications/ElevenLabs/ElevenLabs_Impact_Partners.md) |
 | YC (Summer 2026, Yar) | [draft](../applications/Y%20Combinator%20Application%20(Summer%202026).md) |
 | FRO / Convergent intro (needs Erin) | [draft](../applications/outreach/FRO_Adam_Marblestone_intro.md) |
 | Wellcome Leap outreach (needs escalation) | [draft](../applications/outreach/WellcomeLeap_strategy_and_outreach.md) |
@@ -60,7 +60,7 @@
 ## NIH BRAIN + One Mind (medium-term track, funds in 2027, not survival)
 
 > [!NOTE]
-> Full detail: [NIH BRAIN + One Mind Plan](NIH_BRAIN_and_OneMind_Plan_2026-06-02.md). **The three RFAs previously named (MH-26-100, DA-24-042, MH-23-130) are all EXPIRED** (the BBQS family). These do not touch the Oct 1 cliff; NIH money arrives late 2027. We have **eRA Commons** already.
+> Full detail: [NIH BRAIN + One Mind Plan](../NIH_BRAIN_and_OneMind_Plan_2026-06-02.md). **The three RFAs previously named (MH-26-100, DA-24-042, MH-23-130) are all EXPIRED** (the BBQS family). These do not touch the Oct 1 cliff; NIH money arrives late 2027. We have **eRA Commons** already.
 
 | Opportunity | Mech | Deadline | Status | Next action |
 |---|---|---|:--:|---|
@@ -79,16 +79,16 @@
 
 | # | Application | Why now | Deadline | Status | Draft |
 |:--:|---|---|---|:--:|---|
-| 1 | ⏰ **AWS Imagine — Go Further, Faster** | $150K + $100K credits; form filled (org info + category + account + phone); Round 1 only | **Jun 5, 11:59 PM EDT** | ✅🟢 | [link](../applications/v2/AWS_Imagine_Grant_GoFurtherFaster_2026.md) |
+| 1 | ⏰ **AWS Imagine — Go Further, Faster** | $150K + $100K credits; form filled (org info + category + account + phone); Round 1 only | **Jun 5, 11:59 PM EDT** | ✅🟢 | [link](../../submissions/Applications/AWS/Imagine/AWS_Imagine_Grant_GoFurtherFaster_2026.md) |
 | 2 | ⏰ **Career Transition Award** ($165K) | Runway floor; drafted and ready | ASAP | ✅🟢 | (runway floor) |
 | 3 | ⏰ **EA LTFF** (~$125K) | Runway floor; drafted and ready | ASAP | ✅🟢 | (runway floor) |
-| 4 | ⏰ **ARPA-H IGoR** Solution Summary | Exact Cytoverse fit; the Summary is self-serve | **Jun 25** | ✅🟢 | [link](../applications/v2/ARPA-H_IGoR_Solution_Summary_DRAFT.md) |
+| 4 | ⏰ **ARPA-H IGoR** Solution Summary | Exact Cytoverse fit; the Summary is self-serve | **Jun 25** | ✅🟢 | [link](../../submissions/Grants/ARPA-H/IGoR/solution_summary/_sources/ARPA-H_IGoR_Solution_Summary_DRAFT.md) |
 | 5 | **Coefficient Capacity Building** ($175K) | Drafted; self-serve 1–2-pager | rolling | ✅🟢 | — |
-| 6 | **Anthropic AI for Science** (Claude credits) | Rolling, low effort | rolling | ✅🟢 | [link](../applications/v2/Compute_Credits_Applications_Anthropic_NAIRR_Cohere.md) |
-| 7 | **NAIRR** (GPU compute) | Nonprofit-eligible; 3-page PDF + form | rolling (by 15th) | ✅🟢 | [link](../applications/v2/Compute_Credits_Applications_Anthropic_NAIRR_Cohere.md) |
-| 8 | **Cohere Catalyst** (credits) | Healthcare focus; rolling | rolling | ✅🟢 | [link](../applications/v2/Compute_Credits_Applications_Anthropic_NAIRR_Cohere.md) |
-| 9 | **ElevenLabs Impact Partners** | On-device TTS for Yar; nonprofit track | rolling | ✅🟢 | [link](../applications/outreach/ElevenLabs_Impact_Partners.md) |
-| 10 | ⏰ **Nucleate × Lilly** Grand Challenge | $100K non-dilutive; you can just apply | **~Jul 11** | ✅🟢 | [link](../applications/v2/Nucleate_Lilly_Grand_Challenge_2026.md) |
+| 6 | **Anthropic AI for Science** (Claude credits) | Rolling, low effort | rolling | ✅🟢 | [link](../../Compute_Credits_Applications_Anthropic_NAIRR_Cohere.md) |
+| 7 | **NAIRR** (GPU compute) | Nonprofit-eligible; 3-page PDF + form | rolling (by 15th) | ✅🟢 | [link](../../Compute_Credits_Applications_Anthropic_NAIRR_Cohere.md) |
+| 8 | **Cohere Catalyst** (credits) | Healthcare focus; rolling | rolling | ✅🟢 | [link](../../Compute_Credits_Applications_Anthropic_NAIRR_Cohere.md) |
+| 9 | **ElevenLabs Impact Partners** | On-device TTS for Yar; nonprofit track | rolling | ✅🟢 | [link](../../submissions/Applications/ElevenLabs/ElevenLabs_Impact_Partners.md) |
+| 10 | ⏰ **Nucleate × Lilly** Grand Challenge | $100K non-dilutive; you can just apply | **~Jul 11** | ✅🟢 | [link](../../submissions/Applications/Lilly/Nucleate_Lilly_Grand_Challenge_2026.md) |
 
 > [!NOTE]
 > Nucleate is a warm tie (you are an alumnus), but you do **not** need to use it: the form is open to anyone, so this stays Tier 1.
@@ -154,11 +154,11 @@
 
 ### Do now (no outreach needed)
 
-1. **Submit AWS Imagine Go Further, Faster** Round-1 short form (Jun 5, 11:59 PM EDT) — [draft](../applications/v2/AWS_Imagine_Grant_GoFurtherFaster_2026.md)
+1. **Submit AWS Imagine Go Further, Faster** Round-1 short form (Jun 5, 11:59 PM EDT) — [draft](../../submissions/Applications/AWS/Imagine/AWS_Imagine_Grant_GoFurtherFaster_2026.md)
 2. **Submit Career Transition Award** ($165K, runway floor) — ready
 3. **Submit EA LTFF** (~$125K, runway floor) — ready
-4. **Fire off the 4 rolling, zero-stress ones** (Anthropic, NAIRR, Cohere, ElevenLabs) — [drafts](../applications/v2/Compute_Credits_Applications_Anthropic_NAIRR_Cohere.md)
-5. **Submit the ARPA-H IGoR Solution Summary** (Jun 25) — [draft](../applications/v2/ARPA-H_IGoR_Solution_Summary_DRAFT.md)
+4. **Fire off the 4 rolling, zero-stress ones** (Anthropic, NAIRR, Cohere, ElevenLabs) — [drafts](../../Compute_Credits_Applications_Anthropic_NAIRR_Cohere.md)
+5. **Submit the ARPA-H IGoR Solution Summary** (Jun 25) — [draft](../../submissions/Grants/ARPA-H/IGoR/solution_summary/_sources/ARPA-H_IGoR_Solution_Summary_DRAFT.md)
 
 > [!TIP]
 > If a week feels like too much, do only item 1. That is a real win and it is enough.
