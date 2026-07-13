@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers, agents
 > **Tags**: `engineering`, `specs`, `registry`
-> **Variants**: Technical (this doc) - Readable (`simple/SPEC-REGISTRY.md`)
+> **Variants**: Technical (this doc) - Readable (same filename in Obsidian vault)
 
 > [!NOTE]
 > **TL;DR**: One row per spec across all repos. Specs live in-repo at `specs/NNN-slug/spec.md`; changes ride `changes/` deltas; statuses: Draft -> Approved -> Implementing -> Live -> Superseded. The mission hub board mirrors this table; cytomem ingests it (cytomem spec 004).

@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: everyone, every agent
 > **Tags**: `organization`, `projects`, `taxonomy`, `map`
-> **Variants**: Technical (this doc) - Readable (`simple/PROJECT-MAP.md`)
+> **Variants**: Technical (this doc) - Readable (same filename in Obsidian vault)
 
 > [!NOTE]
 > **TL;DR**: One table maps every Claude project to its docs pillar, its content, and its repos. The docs repo's 8 pillars are the master vocabulary; Obsidian mirrors them 1:1; every Claude project points at its pillar slice via `_context/`. Design is its own project, mirroring its own pillar.
