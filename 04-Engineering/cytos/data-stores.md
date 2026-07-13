@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (data-stores.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 > v1.0 | Last updated: 2026-05-26
 

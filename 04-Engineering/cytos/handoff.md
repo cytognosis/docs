@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (handoff.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 > **Written:** 2026-05-22 | **Conversation IDs:** b591c0f4 (GenomeKG), cd6537fc (GWAS/PGC), f78b85f5 (Cytoskeleton/FAIR)
 >

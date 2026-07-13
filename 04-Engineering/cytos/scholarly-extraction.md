@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (scholarly-extraction.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 The `src/cytos/scholarly/grants/` subpackage processes unstructured grant documents (PDFs, DOCX, XLSX) and transforms them into standardized, structured data ready for proposal generation.
 

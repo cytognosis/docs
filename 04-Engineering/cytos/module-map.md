@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (module-map.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 > All `src/cytos/` Python modules, status, and purpose.
 > Last audited: 2026-05-22 | Total files: ~170

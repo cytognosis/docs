@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (04_foundation_model_architecture.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 Companion to `01_cytos_package_design.md`. Specifies the modeling arc that turns harmonized cytos data plus the cytos KG into a patient-foundation-model substrate: per-modality encoders, fusion strategies, training infrastructure, evaluation, and serving.
 

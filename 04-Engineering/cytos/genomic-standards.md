@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (genomic-standards.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 > Research notes on all external standards used in Cytos GenomeKG.
 > Consolidated from multiple Antigravity sessions (b591c0f4, cd6537fc).

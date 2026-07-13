@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (validation-report.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 > Every deliverable mapped to evidence. Only items with real proof are marked ✅.
 

@@ -16,7 +16,7 @@ tags:
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (experiment-orchestration-research.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 **Cytognosis Foundation, 2026-05-24 (draft v0.1)**
 **Status**: Research complete, ready for architectural decisions

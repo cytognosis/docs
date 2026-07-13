@@ -2,6 +2,7 @@
 
 > **Status**: DRAFT — Awaiting your review
 > **Date**: 2026-05-26
+> **Variants**: Technical (this doc) - Readable (experiment-management-architecture.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 ---
 

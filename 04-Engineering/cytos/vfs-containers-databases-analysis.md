@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (vfs-containers-databases-analysis.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 > **Date**: 2026-05-26 · **Status**: ANALYSIS — Awaiting review
 

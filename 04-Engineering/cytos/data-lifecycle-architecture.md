@@ -2,6 +2,7 @@
 
 > **Status**: DRAFT — Needs review before implementation
 > **Date**: 2026-05-26
+> **Variants**: Technical (this doc) - Readable (data-lifecycle-architecture.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 ---
 

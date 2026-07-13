@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (cytos-neuros-separation.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 > Defining the boundary between `cytos` (general biomedical data platform) and `neuros` (neuro/psych-specific functionality)
 

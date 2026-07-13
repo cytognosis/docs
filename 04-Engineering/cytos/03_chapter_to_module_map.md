@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (03_chapter_to_module_map.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 Companion to `01_cytos_package_design.md`. Maps each chapter of the linkml_kg_playbook to the cytos modules, schemas, and source descriptors that implement it. The chapter prose becomes the notebook narrative; the cytos library does the work.
 

@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (02_pipeline_automation.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 Companion to `01_cytos_package_design.md`. Specifies the exact automation surfaces (nox sessions, Prefect flows, GitHub Actions workflows, CLI subcommands) and the IO contract per stage.
 

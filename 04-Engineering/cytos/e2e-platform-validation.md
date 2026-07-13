@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (e2e-platform-validation.md in Obsidian vault: 04-Engineering/cytos/) - Agent (n/a)
 
 > **Status:** DEFERRED — Resume after Cytoskeleton Structural Refactor is complete.
 > **Depends on:** Cytoskeleton Refactor (assets/, VFS, manifests, adapter system)
