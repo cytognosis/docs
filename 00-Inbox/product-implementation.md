@@ -2,7 +2,7 @@
 
 > **Status**: Draft
 > **Date**: 2026-05-17
-> **Prerequisite**: Read [01_cytonome_master_reference.md](file:///home/mohammadi/.gemini/antigravity/brain/3a11be50-0404-4087-86d2-471b9987ec43/artifacts/01_cytonome_master_reference.md) and [02_cap_comprehensive.md](file:///home/mohammadi/.gemini/antigravity/brain/3a11be50-0404-4087-86d2-471b9987ec43/artifacts/02_cap_comprehensive.md)
+> **Prerequisite**: Read 01_cytonome_master_reference.md (target archived/removed) and 02_cap_comprehensive.md (target archived/removed)
 
 ---
 
@@ -448,7 +448,7 @@ Yar introduces a **Universal Sensor Adapter Protocol (USAP)**, modeled on the MC
 | **CGM** | Dexcom G6/G7, Libre | Continuous glucose | [vendor_dexcom.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_dexcom.yaml) | TBD |
 | **Brain connectomic** | Muse, Neurosity Crown | EEG, functional connectivity | Core `Observation` + `WaveformResult` | TBD |
 | **Environmental** | Air quality, light, noise sensors | CO2, lux, dB levels | Core `Observation` | TBD |
-| **Voice/audio** | Built-in mic, OMI wearable | Vocal biomarkers, prosody | Core `Observation` (13 fields) | [sensor-architecture.md §5](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-architecture.md) |
+| **Voice/audio** | Built-in mic, OMI wearable | Vocal biomarkers, prosody | Core `Observation` (13 fields) | [sensor-architecture.md §5](../03-Products/Cytonome/Yar/sensor-architecture.md) |
 
 #### 2.7.4 Adapter Architecture
 

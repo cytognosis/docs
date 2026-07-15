@@ -205,6 +205,6 @@ The paper's top-ranked concepts (8, 6, 11, 3) share a common architecture: they 
 
 ## See Also
 
-- [sensor-architecture.md](../sensor-architecture.md)
+- [sensor-architecture.md](../../../03-Products/Cytonome/Yar/sensor-architecture.md)
 - [yar-product-feature-master.md](../../../03-Products/Cytonome/Yar/yar-product-spec.md)
 - [yar-product-implementation.md](../../../03-Products/Cytonome/Yar/yar-product-spec.md)

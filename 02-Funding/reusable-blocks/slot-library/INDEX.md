@@ -46,8 +46,8 @@ Primary output target: **Google Workspace** (Docs / Sheets / Slides via API). Lo
 
 ## Format conversion
 
-- **[`../format_conversion_decision_tree.md`](../format_conversion_decision_tree.md)** — for each input or output format, which tool to use. Active reference.
-- **[`../templating_stack_v2.md`](../templating_stack_v2.md)** — SHELVED full evaluation. Read only for rationale.
+- **`../format_conversion_decision_tree.md` (target archived/removed)** — for each input or output format, which tool to use. Active reference.
+- **`../templating_stack_v2.md` (target archived/removed)** — SHELVED full evaluation. Read only for rationale.
 
 ---
 

@@ -60,7 +60,7 @@ CI builds and pushes are wired through GitHub Actions Workload Identity Federati
 
 ## Cross-references
 
-- [Container Framework README](../../container_framework/README.md) — runtime architecture, `stack_manager.py` CLI.
+- [Container Framework README](../container-framework.md) — runtime architecture, `stack_manager.py` CLI.
 - [Deployment Walkthrough](deployment_walkthrough.md) — what is currently running and where.
 - [Cal.com Architecture](calcom_architecture.md) · [Logseq Knowledge Architecture](logseq_knowledge_architecture.md) · [MLflow Architecture](mlflow_architecture.md) · [Whiteboard / Mermaid Architecture](whiteboard_mermaid_architecture.md).
 - [Sovereign Paper Library Architecture](../data-strategy/paper-library-architecture.md) — supersedes the originally planned self-hosted Zotero data server.

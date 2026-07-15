@@ -252,4 +252,4 @@ for gene_edge in scz_genes:
 - [Architecture Overview](architecture.md)
 - [Data Stores Reference](data-stores.md)
 - [Genomic Atlas Guide](genomic-atlas.md)
-- [Tutorial: Brain Atlas Queries](tutorials/brain-atlas-queries.md)
+- Tutorial: Brain Atlas Queries (target archived/removed)

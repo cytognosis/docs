@@ -15,8 +15,8 @@
 > **Status:** Final
 > **Primary Source:** [bluelin.me](https://bluelin.me)
 > **Cross-References:**
-> - [yar-unified-feature-comparison.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/yar-unified-feature-comparison.md)
-> - [cytonome-master-reference.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/cytonome-master-reference.md)
+> - yar-unified-feature-comparison.md (target archived/removed)
+> - cytonome-master-reference.md (target archived/removed)
 
 ---
 

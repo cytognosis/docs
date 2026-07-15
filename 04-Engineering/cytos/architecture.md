@@ -94,7 +94,7 @@ Two protocol layers exist:
 | **Sync Protocol** | `cytos.kg.store.KGStore` | Sync, DuckDB-backed | Development, analytics, KG construction |
 | **Async Protocol** | `cytos.db.interface.KGStore` | Async, context manager | Production graph queries (Neo4j, SurrealDB) |
 
-See [KGStore API Reference](kgstore-api.md) for full method signatures.
+See KGStore API Reference (target archived/removed) for full method signatures.
 
 ## Specialized Data Stores
 
@@ -261,9 +261,9 @@ scholarly = ["docling", "marker-pdf", "scispacy", "spacy"]
 
 ## Related Documentation
 
-- [KGStore API Reference](kgstore-api.md)
+- KGStore API Reference (target archived/removed)
 - [Data Stores Reference](data-stores.md)
 - [Brain Atlas Guide](brain-atlas.md)
 - [Genomic Atlas Guide](genomic-atlas.md)
-- [Getting Started](getting-started.md)
+- Getting Started (target archived/removed)
 - [Tutorials](tutorials/)

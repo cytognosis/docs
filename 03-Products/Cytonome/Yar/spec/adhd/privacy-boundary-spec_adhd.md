@@ -10,7 +10,7 @@ Technical source: ../../Cytoplex/spec/privacy-boundary-spec.md
 
 > [!NOTE]
 > **TL;DR**: This spec defines which data may leave Yar's on-device trust zone and which data must never leave. The rule is simple: only derived, structured signals cross the boundary; raw content never does. Enforcement is PLANNED; the only current gate is `CapLiteGuard`.
-> **Full source**: [privacy-boundary-spec.md](../../Cytoplex/spec/privacy-boundary-spec.md)
+> **Full source**: [privacy-boundary-spec.md](../../../Cytoplex/spec/privacy-boundary-spec.md)
 
 **Reading time**: ~6 minutes.
 

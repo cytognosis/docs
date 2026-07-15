@@ -54,4 +54,4 @@ Cytognosis Platform = "GPS for Health"
 - **Spec/design docs** live here (single source of truth)
 - **User-facing docs** (tutorials, API refs, getting-started) stay in their repos
 - **ADHD-friendly variants** live in the Obsidian vault (not git-tracked)
-- All docs follow [documentation standards](standards/documentation-standards.md)
+- All docs follow [documentation standards](04-Engineering/standards/documentation-standards.md)

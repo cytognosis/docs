@@ -7,7 +7,7 @@
 > **Tags**: `engineering`
 > **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 
-This directory is the **single source of truth** for self-hosted Cytognosis services and the architectural / evaluation reports behind them. All services are orchestrated via the [Container Framework](../../container_framework/README.md) using a modular Docker / Podman composition.
+This directory is the **single source of truth** for self-hosted Cytognosis services and the architectural / evaluation reports behind them. All services are orchestrated via the [Container Framework](../container-framework.md) using a modular Docker / Podman composition.
 
 The services here support both day-to-day team operations (scheduling, whiteboarding, knowledge management) and the research stack (Neo4j, Jupyter, MLflow). The research stack interlocks tightly with the [Data Strategy & Compliance](../data-strategy/README.md) hub — see in particular the [sovereign paper library architecture](../data-strategy/paper-library-architecture.md) and the [scholarly knowledge graph schema](../data-strategy/scholarly-knowledge-graph.md).
 

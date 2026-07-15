@@ -12,7 +12,7 @@
 This document captures the full requirements, assumptions, and architectural design for restructuring `cytoskeleton` from its current state (ad-hoc mix of generated assets, Python scripts, and cross-cutting concerns) into a clean, principled foundation for the Cytognosis ecosystem's data and asset management layer.
 
 > [!IMPORTANT]
-> This refactor must be completed **before** the End-to-End Platform Validation (see [e2e_platform_validation.md](file:///home/mohammadi/.gemini/antigravity/brain/d1a6495e-95b8-421a-9d8d-df4f604f5de3/e2e_platform_validation.md)).
+> This refactor must be completed **before** the End-to-End Platform Validation (see e2e_platform_validation.md (target archived/removed)).
 
 ---
 

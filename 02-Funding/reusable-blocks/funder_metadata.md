@@ -179,7 +179,7 @@ Validation: every referenced group must exist in `groups.yaml`; every slot/field
 
 ## Monday board mapping
 
-Every F-field carries either an existing `monday_column_id:` (for v1.1 fields) or a placeholder pending a Monday board pass (for v1.2 fields F31–F38). The execution spec for the next Monday-update session declares which new columns to add. See [`agent/prompts/execution_spec_v1.md`](../../agent/prompts/execution_spec_v1.md) §3 (Fundraising/Monday consolidation).
+Every F-field carries either an existing `monday_column_id:` (for v1.1 fields) or a placeholder pending a Monday board pass (for v1.2 fields F31–F38). The execution spec for the next Monday-update session declares which new columns to add. See `agent/prompts/execution_spec_v1.md` (target archived/removed) §3 (Fundraising/Monday consolidation).
 
 | F-field | Monday column id | Status |
 |---|---|---|

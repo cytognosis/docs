@@ -9,11 +9,11 @@
 
 This packet prepares CAP for independent third-party security review. It is a reviewer starting point, not evidence that the review has happened.
 
-The external review gate remains open until qualified external reviewers complete the review and any critical findings in authority, signing, privacy, PEP bypass, policy update, evidence, or audit behavior are resolved. The supported status labels remain those listed in [CAP_RELEASE_GATES.md](../CAP_RELEASE_GATES.md).
+The external review gate remains open until qualified external reviewers complete the review and any critical findings in authority, signing, privacy, PEP bypass, policy update, evidence, or audit behavior are resolved. The supported status labels remain those listed in CAP_RELEASE_GATES.md (target archived/removed).
 
 ## Review Objective
 
-Review whether the current repository evidence supports the conservative claims in [CAP_CLAIMS.md](../CAP_CLAIMS.md), and identify security issues that would block any future stable-release or production-deployment claim.
+Review whether the current repository evidence supports the conservative claims in CAP_CLAIMS.md (target archived/removed), and identify security issues that would block any future stable-release or production-deployment claim.
 
 The review should focus on the current executable and documented surfaces:
 
@@ -29,16 +29,16 @@ Out of scope for this packet: claiming CAP v1 as a complete runtime, stable publ
 
 | Area | Primary docs | Evidence to inspect |
 |---|---|---|
-| Release status and gate language | [CAP_RELEASE_GATES.md](../CAP_RELEASE_GATES.md), [CAP_FINAL_STATUS.md](../CAP_FINAL_STATUS.md), [CAP_CLAIMS.md](../CAP_CLAIMS.md) | Confirm the review gate is still open and no docs overclaim review completion. |
-| Architecture and trust boundaries | [architecture.md](../architecture.md), [CAP_00_README.md](../CAP_00_README.md), [CAP_IMPLEMENTATION_ALIGNMENT.md](../CAP_IMPLEMENTATION_ALIGNMENT.md) | Verify the two-tier, three-plane target and current scaffold/production boundaries are clearly separated. |
-| Threat model | [CAP_threat_model.md](../CAP_threat_model.md), [CAP_04_security_trust_evidence.md](../CAP_04_security_trust_evidence.md) | Validate threats, mitigations, and residual gaps for compromised components, replay, key compromise, PEP bypass, and privacy leakage. |
-| Production key custody | [KMS/HSM operations plan](../kms_hsm/README.md), [config placeholder](../../config/kms_hsm.example.yaml) | Confirm local/demo keys remain non-production and deployment-owned key custody evidence is still required. |
-| Organization policy deployment | [OPA/Cedar deployment guide](../policy_deployment/README.md), [sample policy layout](../../policies/organization_template/), [config placeholder](../../config/policy_deployment.example.yaml) | Confirm sample policies are not treated as production policy and organization-owned promotion evidence is still required. |
-| Multi-organization MCP/A2A interop | [interop plan](../mcp_a2a_interop/README.md), [report template](../mcp_a2a_interop/report_template.md), [config placeholder](../../config/mcp_a2a_interop.example.yaml) | Confirm local simulation and external partner evidence are separated, and shared reports do not include raw sensitive content or secrets. |
-| Domain semantic-quality evaluation | [evaluation harness](../domain_semantic_quality/README.md), [rubric](../quality/reviewer_rubric.md), [config placeholder](../../config/domain_semantic_quality.example.yaml) | Confirm semantic-quality evidence is separated from structural conformance and synthetic scores are not represented as expert validation. |
-| Regulated-profile review | [regulated-profile packet](../regulated_profile_review/README.md), [checklist](../compliance/reviewer_checklist.md), [config placeholder](../../config/regulated_profile_review.example.yaml) | Confirm CAP-Med profile review remains external and the packet does not claim regulatory clearance or clinical approval. |
-| Conformance and testing | [CAP_06_conformance.md](../CAP_06_conformance.md), [testing.md](../testing.md) | Run or sample the release-blocking deterministic scaffold checks and targeted security tests. |
-| Security reporting | [SECURITY.md](../../SECURITY.md) | Confirm vulnerability handling and scope language match the release status. |
+| Release status and gate language | CAP_RELEASE_GATES.md (target archived/removed), CAP_FINAL_STATUS.md (target archived/removed), CAP_CLAIMS.md (target archived/removed) | Confirm the review gate is still open and no docs overclaim review completion. |
+| Architecture and trust boundaries | [architecture.md](../../../03-Products/Cytonome/Cytoplex/spec/architecture.md), CAP_00_README.md (target archived/removed), CAP_IMPLEMENTATION_ALIGNMENT.md (target archived/removed) | Verify the two-tier, three-plane target and current scaffold/production boundaries are clearly separated. |
+| Threat model | CAP_threat_model.md (target archived/removed), CAP_04_security_trust_evidence.md (target archived/removed) | Validate threats, mitigations, and residual gaps for compromised components, replay, key compromise, PEP bypass, and privacy leakage. |
+| Production key custody | [KMS/HSM operations plan](kms_hsm.md), [config placeholder](../../config/kms_hsm.example.yaml) | Confirm local/demo keys remain non-production and deployment-owned key custody evidence is still required. |
+| Organization policy deployment | [OPA/Cedar deployment guide](../../infrastructure/policy-deployment/README.md), [sample policy layout](../../policies/organization_template/), [config placeholder](../../config/policy_deployment.example.yaml) | Confirm sample policies are not treated as production policy and organization-owned promotion evidence is still required. |
+| Multi-organization MCP/A2A interop | [interop plan](../interop/README.md), [report template](../interop/report_template.md), [config placeholder](../../config/mcp_a2a_interop.example.yaml) | Confirm local simulation and external partner evidence are separated, and shared reports do not include raw sensitive content or secrets. |
+| Domain semantic-quality evaluation | [evaluation harness](../quality/README.md), [rubric](../quality/reviewer_rubric.md), [config placeholder](../../config/domain_semantic_quality.example.yaml) | Confirm semantic-quality evidence is separated from structural conformance and synthetic scores are not represented as expert validation. |
+| Regulated-profile review | [regulated-profile packet](../compliance/README.md), [checklist](../compliance/reviewer_checklist.md), [config placeholder](../../config/regulated_profile_review.example.yaml) | Confirm CAP-Med profile review remains external and the packet does not claim regulatory clearance or clinical approval. |
+| Conformance and testing | CAP_06_conformance.md (target archived/removed), [testing.md](../testing.md) | Run or sample the release-blocking deterministic scaffold checks and targeted security tests. |
+| Security reporting | SECURITY.md (target archived/removed) | Confirm vulnerability handling and scope language match the release status. |
 | Findings tracking | [findings_tracker_template.md](findings_tracker_template.md) | Use the tracker to record findings, owners, fixes, retests, and gate impact. |
 
 ## Architecture Summary
@@ -152,7 +152,7 @@ The following remain open even after this packet is prepared:
 
 ## Review Closure Rule
 
-The security-review gate in [CAP_RELEASE_GATES.md](../CAP_RELEASE_GATES.md) can close only after:
+The security-review gate in CAP_RELEASE_GATES.md (target archived/removed) can close only after:
 
 - external reviewers complete the scoped review;
 - findings are recorded in a tracker derived from [findings_tracker_template.md](findings_tracker_template.md);

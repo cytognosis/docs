@@ -13,7 +13,7 @@
 > [!WARNING]
 > **Verify live deadlines and status by web search before acting.** Several dates below were near-term as of mid-2026 and may have passed or moved. Do not assert a deadline to a funder without re-checking.
 
-**If you only read one thing:** IGoR/ARPA-H is the highest-value active workstream. Near-term rolling AI-safety asks (Coefficient CDT/Capacity, LTFF, Manifund) share one frame; Biswas is the health-frame outlier. See [../strategy/grant-alignment-map.readable.md](../strategy/grant-alignment-map.readable.md) for the framing rule.
+**If you only read one thing:** IGoR/ARPA-H is the highest-value active workstream. Near-term rolling AI-safety asks (Coefficient CDT/Capacity, LTFF, Manifund) share one frame; Biswas is the health-frame outlier. See ../strategy/grant-alignment-map.readable.md (target archived/removed) for the framing rule.
 
 | Funder / program | Track | Recipient | Approx amount | Deadline (verify) | Status | Working folder (`Grants/`) |
 |---|---|---|---|---|---|---|

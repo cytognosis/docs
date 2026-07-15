@@ -39,7 +39,7 @@ The **Open Responsible AI Licenses** (OpenRAIL) are a family of licenses designe
 - **OpenRAIL-D**: For datasets. Permits data sharing with responsible use clauses.
 - **OpenRAIL-S**: For source code. Similar to Apache 2.0 but with responsible AI provisions.
 
-For a detailed explanation, see the [OpenRAIL documentation](../OpenRAIL.md).
+For a detailed explanation, see the OpenRAIL documentation (target archived/removed).
 
 ## License Classifier Injection (F09)
 

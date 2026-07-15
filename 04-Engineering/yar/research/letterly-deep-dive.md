@@ -19,7 +19,7 @@
 > - AppSumo reviews and user feedback
 > - G2, ProductHunt, Unite.AI reviews
 > - Founder interviews (Anton Lebedev, Adapty.io, YouTube)
-> - [yar-unified-feature-comparison.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/yar-unified-feature-comparison.md)
+> - yar-unified-feature-comparison.md (target archived/removed)
 
 ---
 
@@ -523,7 +523,7 @@ Letterly occupies the **upper-left quadrant**: single-purpose, content-creation-
 
 ## 10. Yar Scoring (0-10 Scale)
 
-Scores use the same 0-10 scale as the [unified feature comparison](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/yar-unified-feature-comparison.md): **0** = absent, **3** = basic/limited, **5** = adequate, **7** = strong, **10** = best-in-class.
+Scores use the same 0-10 scale as the unified feature comparison (target archived/removed): **0** = absent, **3** = basic/limited, **5** = adequate, **7** = strong, **10** = best-in-class.
 
 ### 10.1 Score Card
 

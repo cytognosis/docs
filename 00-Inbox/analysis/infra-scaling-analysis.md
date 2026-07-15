@@ -11,7 +11,7 @@
 > that supports neo4j serving, Jupyter notebooks, dataset ingestion, and dockerized services.
 
 > [!IMPORTANT]
-> **Superseded (2026-06-19)**: This document reflects the pre-migration analysis. The migration to `e2-highmem-2` is complete, research stack consolidated, static IP (`cytohost-static` = 34.171.23.255) attached, and 12 containers running on cytohost. See [architecture.md](../04-Engineering/infrastructure/architecture.md) for current state.
+> **Superseded (2026-06-19)**: This document reflects the pre-migration analysis. The migration to `e2-highmem-2` is complete, research stack consolidated, static IP (`cytohost-static` = 34.171.23.255) attached, and 12 containers running on cytohost. See [architecture.md](../../04-Engineering/infrastructure/architecture.md) for current state.
 
 ---
 

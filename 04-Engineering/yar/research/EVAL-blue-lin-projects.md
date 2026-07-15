@@ -630,7 +630,7 @@ graph LR
 ## 🔜 What's Next?
 
 - [[blue-lin-projects-deep-dive]] — Full source document reference stub
-- [[capacities-deep-dive_adhd]] — Capacities deep dive (related design inspiration)
-- [[yar-unified-feature-comparison_adhd]] — Unified feature comparison for Yar (if available)
+- capacities-deep-dive_adhd (target archived/removed) — Capacities deep dive (related design inspiration)
+- yar-unified-feature-comparison_adhd (target archived/removed) — Unified feature comparison for Yar (if available)
 
 ➡️ **Priority actions**: Implement progressive disclosure for cognitive state views (Rec #1), define cognitive state phases with Cytognosis color coding (Rec #2), and build the longitudinal comparison view (Rec #5).

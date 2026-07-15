@@ -9,7 +9,7 @@
 
 This package prepares the external live MCP/A2A interoperability gate. It is a runbook and evidence format for partner organizations. It does not close the gate by itself: local simulation and repository-maintainer-only execution remain local evidence.
 
-The release-gate status is tracked in [CAP_RELEASE_GATES.md](../CAP_RELEASE_GATES.md). Integration mappings are described in [CAP_05_integrations.md](../CAP_05_integrations.md).
+The release-gate status is tracked in CAP_RELEASE_GATES.md (target archived/removed). Integration mappings are described in CAP_05_integrations.md (target archived/removed).
 
 ## Objective
 

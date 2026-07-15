@@ -2108,10 +2108,10 @@ The Brain Weather system does not average these scores. Instead, it treats them 
 | Document | Path |
 |----------|------|
 | Full Cytos sensor schema | [core.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml) |
-| Sensor architecture overview | [sensor-architecture.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-architecture.md) |
+| Sensor architecture overview | [sensor-architecture.md](../../../03-Products/Cytonome/Yar/sensor-architecture.md) |
 | Interoperability standards | [interop-standards.md](../../cytos/sensing-schema/interop-standards.md) |
 | Sensor taxonomy | [sensor-taxonomy.md](../../cytos/sensing-schema/sensor-taxonomy.md) |
-| Schema README | [README.md](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/README.md) |
+| Schema README | README.md (target archived/removed) |
 
 ### Implementation Roadmap
 

@@ -23,7 +23,7 @@ This directory holds the harmonized source-of-truth for every Cytognosis grant, 
 3. **Funder metadata (F side):** [`../funder_metadata.md`](../funder_metadata.md) — F01–F38 reference organized by group, with examples.
 4. **Groups & inheritance:** [`groups.yaml`](groups.yaml) — eight F-groups, six U-groups, four A-groups, eleven composition presets.
 5. **Crosswalk matrix:** [`../funder_crosswalk_matrix.md`](../funder_crosswalk_matrix.md) — reverse lookup (funder question → slot) and slot × funder matrix.
-6. **Rendering tools:** [`../format_conversion_decision_tree.md`](../format_conversion_decision_tree.md) — which tool for which input/output format.
+6. **Rendering tools:** `../format_conversion_decision_tree.md` (target archived/removed) — which tool for which input/output format.
 
 ## Directory layout
 

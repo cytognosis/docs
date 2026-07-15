@@ -13,9 +13,9 @@ Canonical home for Cytognosis **org and business operations**: HIPAA and NIH GDS
 
 ## Start here
 
-- **[operations-overview.readable.md](operations-overview.readable.md)** — fast, ADHD-friendly orientation.
-- **[operations-overview.technical.md](operations-overview.technical.md)** — full document index and boundary rules.
-- **[operations-overview.agent.md](operations-overview.agent.md)** — self-contained brief for a fresh agent.
+- **operations-overview.readable.md (target archived/removed)** — fast, ADHD-friendly orientation.
+- **operations-overview.technical.md (target archived/removed)** — full document index and boundary rules.
+- **operations-overview.agent.md (target archived/removed)** — self-contained brief for a fresh agent.
 
 ## Contents
 

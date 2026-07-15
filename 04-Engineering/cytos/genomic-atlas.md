@@ -349,4 +349,4 @@ impact = get_impact_ranking("SO:0001583")  # missense_variant
 - [Architecture Overview](architecture.md)
 - [Data Stores Reference](data-stores.md)
 - [Brain Atlas Guide](brain-atlas.md)
-- [Tutorial: Variant Analysis](tutorials/variant-analysis.md)
+- Tutorial: Variant Analysis (target archived/removed)

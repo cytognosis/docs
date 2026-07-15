@@ -52,8 +52,8 @@
 | Anthropic / NAIRR / Cohere (compute + credits) — ready | [drafts](../../Compute_Credits_Applications_Anthropic_NAIRR_Cohere.md) |
 | ElevenLabs Impact Partners — ready | [draft](../../submissions/Applications/ElevenLabs/ElevenLabs_Impact_Partners.md) |
 | YC (Summer 2026, Yar) | [draft](../applications/Y%20Combinator%20Application%20(Summer%202026).md) |
-| FRO / Convergent intro (needs Erin) | [draft](../applications/outreach/FRO_Adam_Marblestone_intro.md) |
-| Wellcome Leap outreach (needs escalation) | [draft](../applications/outreach/WellcomeLeap_strategy_and_outreach.md) |
+| FRO / Convergent intro (needs Erin) | draft (target archived/removed) |
+| Wellcome Leap outreach (needs escalation) | draft (target archived/removed) |
 
 ---
 
@@ -136,8 +136,8 @@
 
 | Opportunity | What it needs | Draft / note |
 |---|---|---|
-| FRO / Convergent Research | Erin to intro you to Adam Marblestone | [intro draft ready](../applications/outreach/FRO_Adam_Marblestone_intro.md) |
-| Wellcome Leap (HBNet / programs) | Escalation via a member institution or program director | [outreach draft](../applications/outreach/WellcomeLeap_strategy_and_outreach.md) |
+| FRO / Convergent Research | Erin to intro you to Adam Marblestone | intro draft ready (target archived/removed) |
+| Wellcome Leap (HBNet / programs) | Escalation via a member institution or program director | outreach draft (target archived/removed) |
 | Eli Lilly (LRAP / LPRC / Catalyze360) + Mayo | Ananth to broker a Lilly/Mayo contact | (warm via Board co-chair) |
 | OneMind Rising Star | An academic-host PI | top-3 MH; revisit with a partner |
 | BBRF / NARSAD | A faculty host | revisit with a partner |

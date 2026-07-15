@@ -98,9 +98,9 @@ This subtree was previously split across the `cytognosis/data-strategy` reposito
 - [Master Infrastructure Index](../MASTER_INFRASTRUCTURE.md)
 - [DNS & GCP Architecture](../DNS_AND_GCP_ARCHITECTURE.md)
 - [Tools Catalog](../tools/README.md) — 911-tool technology landscape; L1-storage, L6-FAIR, L7-provenance, and L9-standards layers directly underpin data strategy
-- [Container Framework](../../container_framework/README.md) — orchestrates Neo4j, Jupyter, MLflow, Zotero (metadata) self-hosted services
-- [Self-Hosted Services](../self_hosted/README.md)
-- **[Neuroverse Program](../programs/neuroverse/README.md)** — first Cytognosis research program; drives the controlled-access data acquisition pipeline documented here
+- [Container Framework](../container-framework.md) — orchestrates Neo4j, Jupyter, MLflow, Zotero (metadata) self-hosted services
+- [Self-Hosted Services](../self-hosted/README.md)
+- **[Neuroverse Program](../../../05-Research/neuroverse/README.md)** — first Cytognosis research program; drives the controlled-access data acquisition pipeline documented here
 - **[Reproducibility & FAIR Strategy](../reproducibility/README.md)** — defines how data managed here gets packaged as RO-Crates and published through SEEK/WorkflowHub
 
 ---

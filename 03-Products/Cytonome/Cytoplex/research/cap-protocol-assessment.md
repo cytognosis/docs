@@ -8,7 +8,7 @@
 
 > [!NOTE]
 > **TL;DR**: CAP (Control Authority Protocol) exists in two separate codebases that have diverged: a massive standalone research repo (`cap-protocol`, ~660KB of runtime) and a lean production guard in Yar (`cap`, ~52KB). The recommended path is to extract Yar's CAP-Lite as a standalone `cytognosis-cap` package via Cytocast, then deprecate the bloated standalone repo. A 5-phase, 10-week migration roadmap is defined.
-> **Source**: [cap-protocol-assessment.md](file:///home/mohammadi/Documents/ObsidianVault/02-Products/cytonome-yar/cap-protocol-assessment.md)
+> **Source**: cap-protocol-assessment.md (target archived/removed)
 
 ---
 

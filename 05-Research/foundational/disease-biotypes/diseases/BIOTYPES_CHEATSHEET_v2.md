@@ -404,16 +404,16 @@ Dinga 2019 failed to replicate the 4 clusters themselves, so these specific perc
 
 ## Files referenced
 
-- [Depression biotypes](biotypes-depression.md)
-- [Anxiety biotypes](biotypes-anxiety.md)
-- [Psychosis biotypes](biotypes-psychosis.md)
-- [PTSD biotypes](biotypes-ptsd.md)
-- [Addiction biotypes](biotypes-addiction.md)
-- [Autism biotypes](biotypes-autism.md) (NEW)
+- Depression biotypes (target archived/removed)
+- Anxiety biotypes (target archived/removed)
+- Psychosis biotypes (target archived/removed)
+- PTSD biotypes (target archived/removed)
+- Addiction biotypes (target archived/removed)
+- Autism biotypes (target archived/removed) (NEW)
 - [EEG/MEG biotypes across all disorders](../../neurosensing/eeg-meg-biotypes.md) (NEW)
 - [Molecular/cellular cross-cutting biotypes](../molecular-cellular-biotypes.md) (NEW)
 - [Neuroplastogen differential response](../../treatment/neuromodulation/neuroplastogen-response.md) (NEW)
 - [Neuromodulation differential response](../../treatment/neuromodulation/neuromodulation-response.md) (NEW)
 - [Transdiagnostic connectomic synthesis (v1)](../transdiagnostic/transdiagnostic-connectomic-synthesis.md)
 - [Research SYNTHESIS](../../../../02-Funding/submissions/Grants/NSF/X-labs/SYNTHESIS.md)
-- [v1 cheatsheet (now superseded but kept for reference)](BIOTYPES_CHEATSHEET.md)
+- v1 cheatsheet (now superseded but kept for reference) (target archived/removed)

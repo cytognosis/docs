@@ -77,6 +77,6 @@ The first sensor. Receives 16kHz audio, outputs per-utterance emotion + vocal bi
 
 | Doc | Relationship |
 |-----|-------------|
-| [`04-Engineering/cytoplex/interop/README.md`](../../04-Engineering/cytoplex/interop/README.md) | CAP interoperability runbook; defines how Yar sensing adapters connect to external systems via MCP/A2A |
+| [`04-Engineering/cytoplex/interop/README.md`](../../../04-Engineering/cytoplex/interop/README.md) | CAP interoperability runbook; defines how Yar sensing adapters connect to external systems via MCP/A2A |
 | [`03-Products/Cytonome/Yar/yar-product-spec.md`](./yar-product-spec.md) | Product-level implementation details; complements this sensor-layer architecture |
 | [`05-Research/neuroverse/README.md`](../../../05-Research/neuroverse/README.md) | Neuroverse is the first deployment of multimodal Yar sensing in a clinical research context |

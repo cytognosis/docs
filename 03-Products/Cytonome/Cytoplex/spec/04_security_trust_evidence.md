@@ -78,7 +78,7 @@ The current repository chooses Biscuit for the v1 warrant scaffold because Biscu
 
 ### Production KMS/HSM custody
 
-Production deployments must supply their own KMS/HSM or equivalent signing service for CAP signing roles. The deployment-facing plan is [docs/kms_hsm/README.md](kms_hsm/README.md), and the non-secret placeholder shape is [config/kms_hsm.example.yaml](../config/kms_hsm.example.yaml). That plan covers key roles, custody, rotation, revocation, incident response, auditability, signer request/response metadata, and deployment evidence.
+Production deployments must supply their own KMS/HSM or equivalent signing service for CAP signing roles. The deployment-facing plan is [docs/kms_hsm/README.md](../../../../04-Engineering/cytoplex/security/kms_hsm.md), and the non-secret placeholder shape is [config/kms_hsm.example.yaml](../config/kms_hsm.example.yaml). That plan covers key roles, custody, rotation, revocation, incident response, auditability, signer request/response metadata, and deployment evidence.
 
 The current `KeyMaterial`, runtime-generated keyset, deterministic Biscuit warrant keys, and test signing callbacks are local scaffold material. They are not production key custody and must not be treated as deployment evidence. The `ExternalKMSHSMAuditSigningKeyProvider` interface is a fail-closed hook for deployments to bind an external signer; a deployment must still provide the actual signer, access policy, public-key discovery, revocation source, audit trail, and runbooks.
 
@@ -113,7 +113,7 @@ Policy references are part of the authority surface. A Local PEP or Executor MUS
 
 The current Local PEP can compare Directive `policy_refs` against the active `PolicyBundle.policy_refs`. When configured with `ReferencePolicyRegistryService`, it fetches verified signed bundles from the service, pins one bundle version/digest per session by default, refuses directives that require an unapproved hot update, and only rotates a pinned session when explicit hot-update or emergency-override mode is enabled. Emergency override bundles are audited and still must pass signature, digest, and expiry checks.
 
-Organization-specific OPA/Cedar deployment guidance is in [docs/policy_deployment/README.md](policy_deployment/README.md), with a non-production sample layout under [policies/organization_template](../policies/organization_template/). That guide covers ownership, environment separation, policy promotion, rollback, hot updates, exception handling, and test evidence. The checked-in deterministic policy adapters and sample policies are not production policy deployment evidence.
+Organization-specific OPA/Cedar deployment guidance is in [docs/policy_deployment/README.md](../../../../04-Engineering/infrastructure/policy-deployment/README.md), with a non-production sample layout under [policies/organization_template](../policies/organization_template/). That guide covers ownership, environment separation, policy promotion, rollback, hot updates, exception handling, and test evidence. The checked-in deterministic policy adapters and sample policies are not production policy deployment evidence.
 
 Stale policy is distinct from stale evidence: policy version/digest mismatches use `stale_policy`, while expired or freshness-failed EvidenceRefs use `stale_evidence`.
 

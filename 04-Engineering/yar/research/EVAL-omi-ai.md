@@ -901,10 +901,10 @@ flowchart TD
 
 | Action | Link |
 |---|---|
-| Compare with Capacities analysis | [[capacities-deep-dive_adhd]] |
-| Review Yar architecture planning | [[yar-architecture]] |
-| Explore Tana deep-dive | [[tana-deep-dive_adhd]] |
-| Start MCP server design | [[yar-mcp-server]] |
+| Compare with Capacities analysis | capacities-deep-dive_adhd (target archived/removed) |
+| Review Yar architecture planning | yar-architecture (target archived/removed) |
+| Explore Tana deep-dive | tana-deep-dive_adhd (target archived/removed) |
+| Start MCP server design | yar-mcp-server (target archived/removed) |
 
 ---
 

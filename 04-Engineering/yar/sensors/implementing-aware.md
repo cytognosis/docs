@@ -44,7 +44,7 @@ Cytonome's adapter supports both variants. The Cytos schema maps identically to 
 
 ### 1.4 How AWARE Fits into Cytonome's Sensor Architecture
 
-AWARE operates as a **sensor plugin** within Cytonome's [Universal Sensor Architecture](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-architecture.md). Each AWARE sensor maps to a `SensorDescriptor` and produces `Observation` instances conforming to the [Cytos sensor core schema](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml).
+AWARE operates as a **sensor plugin** within Cytonome's [Universal Sensor Architecture](../../../03-Products/Cytonome/Yar/sensor-architecture.md). Each AWARE sensor maps to a `SensorDescriptor` and produces `Observation` instances conforming to the [Cytos sensor core schema](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml).
 
 ```mermaid
 flowchart TB
@@ -1130,7 +1130,7 @@ The Cytos [SurveyAnswerTypeEnum](file:///home/mohammadi/repos/cytognosis/cytos/s
 
 ### 5.1 AWARESensorAdapter Architecture
 
-The AWARESensorAdapter implements Cytonome's [Sensor Protocol](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-architecture.md) (see [USAP Phase 7](../../../00-Inbox/product-implementation.md#L419-L489)) to bridge AWARE data into Cytos Observations.
+The AWARESensorAdapter implements Cytonome's [Sensor Protocol](../../../03-Products/Cytonome/Yar/sensor-architecture.md) (see [USAP Phase 7](../../../00-Inbox/product-implementation.md#L419-L489)) to bridge AWARE data into Cytos Observations.
 
 ```mermaid
 classDiagram
@@ -2023,7 +2023,7 @@ classDiagram
 
 3. **USAP integration**: See Yar's [Phase 7: Universal Sensor Adapter Protocol](../../../00-Inbox/product-implementation.md#L419-L489) for the broader adapter architecture and plug-and-play user experience design.
 
-4. **Sensor architecture**: Review the [Universal Sensor Architecture](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-architecture.md) for the Sensor Protocol interface, SensorDescriptor schema, and SensorRegistry lifecycle.
+4. **Sensor architecture**: Review the [Universal Sensor Architecture](../../../03-Products/Cytonome/Yar/sensor-architecture.md) for the Sensor Protocol interface, SensorDescriptor schema, and SensorRegistry lifecycle.
 
 5. **Implementation priorities**: Start with high-value sensors (Screen, Applications, Activity Recognition, ESM) before adding IMU and environmental sensors.
 

@@ -78,7 +78,7 @@ This catalog informs and is referenced by several other infrastructure documents
 - [Technical Data Infrastructure](../data-strategy/TECHNICAL_DATA_INFRASTRUCTURE.md) — GCP project taxonomy and HIPAA controls using tools from L1, L7, L8
 - [Scholarly Knowledge Graph](../data-strategy/scholarly-knowledge-graph.md) — LinkML schema referencing L9, L10 tools
 - [Sovereign Paper Library Architecture](../data-strategy/paper-library-architecture.md) — Zotero + Drive + Hypothes.is from L14, L4
-- [Self-Hosted Services](../self_hosted/README.md) — container framework using L8 workflow tools
+- [Self-Hosted Services](../self-hosted/README.md) — container framework using L8 workflow tools
 
 ## Source provenance
 

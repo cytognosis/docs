@@ -140,8 +140,8 @@ cyto research tool "vector database"
 ## See Also
 
 - [Full documentation](cytognosis-doc.md) — comprehensive reference + explanation
-- [doc-type-guide.md](../../../skills/cytognosis/cytognosis-doc/references/doc-type-guide.md) — detailed "when to create" for all 34 types
-- [command-reference.md](../../../skills/cytognosis/cytognosis-doc/references/command-reference.md) — full command specs with all flags
-- [adhdfy-pipeline.md](../../../skills/cytognosis/cytognosis-doc/references/adhdfy-pipeline.md) — 11-step transformation pipeline
+- doc-type-guide.md (target archived/removed) — detailed "when to create" for all 34 types
+- command-reference.md (target archived/removed) — full command specs with all flags
+- adhdfy-pipeline.md (target archived/removed) — 11-step transformation pipeline
 - [cytognosis-dev](../cytognosis-dev/cytognosis-dev.md) — coding standards (not documentation)
 - [cytognosis-writer](../cytognosis-writer/cytognosis-writer.md) — grant narrative strategy

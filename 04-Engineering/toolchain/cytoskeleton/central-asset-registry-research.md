@@ -330,7 +330,7 @@ cytognosis:env/cytognosis-base/v2.1 → cytoskeleton configs/environments/cytogn
 
 ### Tagging System
 
-Per the [skill-tagging ontology recommendation](file:///home/mohammadi/Documents/Claude/Projects/Refactor/skill-tagging-ontology-recommendation.md):
+Per the skill-tagging ontology recommendation (target archived/removed):
 
 - **Axis A** (coding/use-case): `cyto:se/*` — SWEBOK-derived, Wikidata-backed, GitHub Topics aliases
 - **Axis B** (org function): `apqc:pcf:*` — APQC PCF, ArchiMate typed, ESCO enriched

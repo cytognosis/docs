@@ -618,8 +618,8 @@ async def get_costs(
 ## References
 
 - [Experiment Orchestration Research](experiment-orchestration-research.md)
-- [Reproducibility Strategy](file:///home/mohammadi/Documents/Claude/Projects/Infrastructure%20and%20Tooling/cytognosis_reproducibility_strategy.md)
-- [RO-Crate Research](file:///home/mohammadi/repos/cytognosis/org/plans/experiment-rocrate-research.md)
+- Reproducibility Strategy (target archived/removed)
+- RO-Crate Research (target archived/removed)
 - [MLflow Documentation](https://mlflow.org)
 - [Weights & Biases Documentation](https://docs.wandb.ai)
 - [Aim Documentation](https://aimstack.readthedocs.io)

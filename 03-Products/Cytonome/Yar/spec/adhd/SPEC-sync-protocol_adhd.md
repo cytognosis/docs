@@ -278,7 +278,7 @@ Transport selection per context:
 - **Immediate (unblocked)**: use the conformance harness at `yar_supervisor_reproducible_benchmark_package/sync_benchmark/yar_sync_edge_bench.py` to test any new adapter.
 - **Before sync protocol decision (O-1)**: prototype Loro integration; benchmark real Iroh blob transfer.
 - **Before pod hosting decision (O-5)**: confirm BAA availability with any third-party provider.
-- **Shared open decision**: PAP (Policy Administration Point) is tracked jointly with [privacy-boundary-spec.md](../../Cytoplex/spec/privacy-boundary-spec.md); resolve in one place.
+- **Shared open decision**: PAP (Policy Administration Point) is tracked jointly with [privacy-boundary-spec.md](../../../Cytoplex/spec/privacy-boundary-spec.md); resolve in one place.
 - **For L4 engine details**: read [SPEC-storage-engine_adhd.md](./SPEC-storage-engine_adhd.md).
 
 ---

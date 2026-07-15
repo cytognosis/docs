@@ -110,7 +110,7 @@ The future state lifts Layers 0–2 into a single graph database for cross-corpu
 - **Objective layer** — LinkML-driven nodes for papers, authors, code, models, datasets, biological entities (Gene Ontology, Disease Ontology, Cell Ontology). Fed by the Zotero API, OpenAlex, GitHub API, and HuggingFace API. Schema is documented in [`scholarly-knowledge-graph.md`](scholarly-knowledge-graph.md).
 - **Personalization layer** — W3C Web Annotation nodes harvested from Hypothes.is. Personal libraries become filtered queries over annotations; the underlying corpus is not duplicated.
 
-The Neo4j stack is already provisioned (see [`../self_hosted/logseq_knowledge_architecture.md`](../self-hosted/logseq_knowledge_architecture.md) and the [Container Framework](../../container_framework/README.md)).
+The Neo4j stack is already provisioned (see [`../self_hosted/logseq_knowledge_architecture.md`](../self-hosted/logseq_knowledge_architecture.md) and the [Container Framework](../container-framework.md)).
 
 ## Reader and annotation tools
 

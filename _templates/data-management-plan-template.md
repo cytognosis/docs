@@ -286,10 +286,10 @@ Use this checklist (adapted from [Jones & Grootveld, 2017](https://doi.org/10.52
 - [Data Use Agreement Template](data-use-agreement-template.md)
 - [Scholarly Knowledge Graph Schema](../04-Engineering/infrastructure/data-strategy/scholarly-knowledge-graph.md)
 - [Technical Data Infrastructure](../04-Engineering/infrastructure/data-strategy/TECHNICAL_DATA_INFRASTRUCTURE.md)
-- [Tools Catalog](../../tools/README.md) — 911-tool technology landscape with storage, FAIR, provenance, workflow, and standards picks
+- [Tools Catalog](../04-Engineering/infrastructure/tools/README.md) — 911-tool technology landscape with storage, FAIR, provenance, workflow, and standards picks
 - [Infrastructure Stack Deep-Dive](../04-Engineering/infrastructure/tools/tools-infrastructure-stack.md) — data flow from bytes to FAIR-published reasoning
 - [**Neuroverse Datasets & Cohorts**](../05-Research/neuroverse/datasets-cohorts.md) — primary data sources for the first Cytognosis DMP
-- [**Reproducibility & FAIR Strategy**](../../reproducibility/README.md) — how data gets packaged as WRROC and published via SEEK/WorkflowHub
+- [**Reproducibility & FAIR Strategy**](../04-Engineering/infrastructure/reproducibility/README.md) — how data gets packaged as WRROC and published via SEEK/WorkflowHub
 
 ## Appendix C: External Reference Standards
 
@@ -315,7 +315,7 @@ Use this checklist (adapted from [Jones & Grootveld, 2017](https://doi.org/10.52
 
 ## Appendix D: DMP Section to Tools Catalog Mapping
 
-This appendix maps DMP sections to the relevant layers of the [Cytognosis Tools Catalog](../../tools/README.md) to help project teams select approved tools.
+This appendix maps DMP sections to the relevant layers of the [Cytognosis Tools Catalog](../04-Engineering/infrastructure/tools/README.md) to help project teams select approved tools.
 
 | DMP Section | Catalog Layer(s) | Key Primary Picks |
 | --- | --- | --- |

@@ -23,26 +23,26 @@ Complete reference of all 85 features across 19 categories in the Cytocast templ
 
 | # | Feature | Maturity | Doc | Tutorial | Test |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| F01 | Dynamic package name slug | 🟢 5 | [scaffolding](project-scaffolding.md) | [quickstart](../guides/quickstart.md) | `test_dynamic_package_generation` |
+| F01 | Dynamic package name slug | 🟢 5 | [scaffolding](project-scaffolding.md) | quickstart (target archived/removed) | `test_dynamic_package_generation` |
 | F02 | Project type selection (7 types) | 🟢 5 | [scaffolding](project-scaffolding.md) | — | `test_project_type_classifiers` |
 | F03 | Language selection (python/R/hybrid) | 🟢 5 | [scaffolding](project-scaffolding.md) | — | `test_language_selection` |
-| F04 | Author/GitHub metadata injection | 🟢 5 | [scaffolding](project-scaffolding.md) | [quickstart](../guides/quickstart.md) | `test_dynamic_package_generation` |
+| F04 | Author/GitHub metadata injection | 🟢 5 | [scaffolding](project-scaffolding.md) | quickstart (target archived/removed) | `test_dynamic_package_generation` |
 | F05 | Dynamic source module directories | 🟢 5 | [scaffolding](project-scaffolding.md) | — | `test_source_modules_scaffolding` |
 | F06 | Dynamic project directory scaffold | 🟢 5 | [scaffolding](project-scaffolding.md) | — | `test_project_directories_scaffolding` |
-| F07 | Version tracking (.copier-answers) | 🟢 5 | [copier workflow](copier-workflow.md) | [copier update](../guides/copier-update.md) | `test_copier_answers_generated` |
+| F07 | Version tracking (.copier-answers) | 🟢 5 | [copier workflow](copier-workflow.md) | copier update (target archived/removed) | `test_copier_answers_generated` |
 
 ### Category 2: Licensing
 
 | # | Feature | Maturity | Doc | Tutorial | Test |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| F08 | 16 license options | 🟢 5 | [licensing](licensing.md) | [licensing guide](../guides/licensing-guide.md) | `test_license_full_matrix` |
-| F09 | License classifier in pyproject.toml | 🟢 5 | [licensing](licensing.md) | [licensing guide](../guides/licensing-guide.md) | `test_license_full_matrix` |
+| F08 | 16 license options | 🟢 5 | [licensing](licensing.md) | licensing guide (target archived/removed) | `test_license_full_matrix` |
+| F09 | License classifier in pyproject.toml | 🟢 5 | [licensing](licensing.md) | licensing guide (target archived/removed) | `test_license_full_matrix` |
 
 ### Category 3: Dependency Management
 
 | # | Feature | Maturity | Doc | Tutorial | Test |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| F10 | uv dependency manager | 🟢 5 | [default standards](default-standards.md) | [quickstart](../guides/quickstart.md) | `test_dependency_manager_uv` |
+| F10 | uv dependency manager | 🟢 5 | [default standards](default-standards.md) | quickstart (target archived/removed) | `test_dependency_manager_uv` |
 | F11 | pixi alternative manager | 🟢 5 | [default standards](default-standards.md) | — | `test_dependency_manager_pixi` |
 | F12 | 7 optional dep groups | 🟢 5 | [default standards](default-standards.md) | — | `test_pyproject_optional_deps` |
 | F13 | hatchling build system | 🟢 5 | [default standards](default-standards.md) | — | `test_pyproject_optional_deps` |
@@ -61,10 +61,10 @@ Complete reference of all 85 features across 19 categories in the Cytocast templ
 
 | # | Feature | Maturity | Doc | Tutorial | Test |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| F19 | Sandbox tier (E, F, W) | 🟢 5 | [CI/CD](cicd-features.md), [standards](default-standards.md) | [code quality](../guides/code-quality-tiers.md) | `test_all_tiers_coexist` |
-| F20 | Local Dev tier (+I, D) | 🟢 5 | [CI/CD](cicd-features.md), [standards](default-standards.md) | [code quality](../guides/code-quality-tiers.md) | `test_all_tiers_coexist` |
-| F21 | CI tier (+UP, PT, B, SIM) | 🟢 5 | [CI/CD](cicd-features.md), [standards](default-standards.md) | [code quality](../guides/code-quality-tiers.md) | `test_all_tiers_coexist` |
-| F22 | Release tier (+ARG, N, C90, S) | 🟢 5 | [CI/CD](cicd-features.md), [standards](default-standards.md) | [code quality](../guides/code-quality-tiers.md) | `test_all_tiers_coexist` |
+| F19 | Sandbox tier (E, F, W) | 🟢 5 | [CI/CD](cicd-features.md), [standards](default-standards.md) | code quality (target archived/removed) | `test_all_tiers_coexist` |
+| F20 | Local Dev tier (+I, D) | 🟢 5 | [CI/CD](cicd-features.md), [standards](default-standards.md) | code quality (target archived/removed) | `test_all_tiers_coexist` |
+| F21 | CI tier (+UP, PT, B, SIM) | 🟢 5 | [CI/CD](cicd-features.md), [standards](default-standards.md) | code quality (target archived/removed) | `test_all_tiers_coexist` |
+| F22 | Release tier (+ARG, N, C90, S) | 🟢 5 | [CI/CD](cicd-features.md), [standards](default-standards.md) | code quality (target archived/removed) | `test_all_tiers_coexist` |
 | F23 | Docstring style selection | 🟢 5 | [doc standards](documentation-standards.md) | — | `test_docstring_style` |
 
 ### Category 6: Type Checking
@@ -78,16 +78,16 @@ Complete reference of all 85 features across 19 categories in the Cytocast templ
 
 | # | Feature | Maturity | Doc | Tutorial | Test |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| F26 | CUDA backend | 🟢 5 | [ML](ml-functionalities.md) | [compute backends](../guides/compute-backends.md) | `test_compute_backends[cuda]` |
-| F27 | ROCm backend | 🟢 5 | [ML](ml-functionalities.md) | [compute backends](../guides/compute-backends.md) | `test_compute_backends[rocm]` |
-| F28 | CPU backend | 🟢 5 | [ML](ml-functionalities.md) | [compute backends](../guides/compute-backends.md) | `test_compute_backends[cpu]` |
-| F29 | APU GFX override | 🟢 5 | [compute](compute-orchestration.md) | [compute backends](../guides/compute-backends.md) | `test_resource_orchestrator_env` |
+| F26 | CUDA backend | 🟢 5 | [ML](ml-functionalities.md) | compute backends (target archived/removed) | `test_compute_backends[cuda]` |
+| F27 | ROCm backend | 🟢 5 | [ML](ml-functionalities.md) | compute backends (target archived/removed) | `test_compute_backends[rocm]` |
+| F28 | CPU backend | 🟢 5 | [ML](ml-functionalities.md) | compute backends (target archived/removed) | `test_compute_backends[cpu]` |
+| F29 | APU GFX override | 🟢 5 | [compute](compute-orchestration.md) | compute backends (target archived/removed) | `test_resource_orchestrator_env` |
 
 ### Category 8: Deep Learning
 
 | # | Feature | Maturity | Doc | Tutorial | Test |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| F30 | PyTorch dependency injection | 🟢 5 | [ML](ml-functionalities.md) | [compute backends](../guides/compute-backends.md) | `test_compute_backends` |
+| F30 | PyTorch dependency injection | 🟢 5 | [ML](ml-functionalities.md) | compute backends (target archived/removed) | `test_compute_backends` |
 | F31 | Lightning integration | 🟢 5 | [ML](ml-functionalities.md) | — | `test_use_lightning_enabled`, `test_use_lightning_disabled` |
 
 ### Category 9: Resource Orchestration
@@ -104,14 +104,14 @@ Complete reference of all 85 features across 19 categories in the Cytocast templ
 
 | # | Feature | Maturity | Doc | Tutorial | Test |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| F37 | Init/notebook sessions | 🟢 5 | [Nox API](../api/nox-sessions.md) | [quickstart](../guides/quickstart.md) | `test_nox_sessions_present` |
-| F38 | Lint sessions (4 tiers) | 🟢 5 | [Nox API](../api/nox-sessions.md) | [code quality](../guides/code-quality-tiers.md) | `test_nox_sessions_present` |
-| F39 | Type/security sessions | 🟢 5 | [Nox API](../api/nox-sessions.md) | — | `test_nox_sessions_present` |
-| F40 | Test session | 🟢 5 | [Nox API](../api/nox-sessions.md) | [quickstart](../guides/quickstart.md) | `test_nox_sessions_present` |
-| F41 | Docs sessions | 🟢 5 | [Nox API](../api/nox-sessions.md) | — | `test_nox_sessions_present` |
-| F42 | Build/release sessions | 🟢 5 | [Nox API](../api/nox-sessions.md) | — | `test_nox_sessions_present` |
-| F43 | Docker sessions | 🟢 5 | [Nox API](../api/nox-sessions.md) | — | `test_nox_sessions_present` |
-| F44 | Cytoskeleton setup sessions | 🟢 5 | [Nox API](../api/nox-sessions.md) | — | `test_cytoskeleton_wrappers` |
+| F37 | Init/notebook sessions | 🟢 5 | Nox API (target archived/removed) | quickstart (target archived/removed) | `test_nox_sessions_present` |
+| F38 | Lint sessions (4 tiers) | 🟢 5 | Nox API (target archived/removed) | code quality (target archived/removed) | `test_nox_sessions_present` |
+| F39 | Type/security sessions | 🟢 5 | Nox API (target archived/removed) | — | `test_nox_sessions_present` |
+| F40 | Test session | 🟢 5 | Nox API (target archived/removed) | quickstart (target archived/removed) | `test_nox_sessions_present` |
+| F41 | Docs sessions | 🟢 5 | Nox API (target archived/removed) | — | `test_nox_sessions_present` |
+| F42 | Build/release sessions | 🟢 5 | Nox API (target archived/removed) | — | `test_nox_sessions_present` |
+| F43 | Docker sessions | 🟢 5 | Nox API (target archived/removed) | — | `test_nox_sessions_present` |
+| F44 | Cytoskeleton setup sessions | 🟢 5 | Nox API (target archived/removed) | — | `test_cytoskeleton_wrappers` |
 
 ### Category 11: CI/CD & Git Hooks
 
@@ -128,9 +128,9 @@ Complete reference of all 85 features across 19 categories in the Cytocast templ
 
 | # | Feature | Maturity | Doc | Tutorial | Test |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| F51 | Dockerfile (multi-stage) | 🟢 5 | [Docker](docker-containers.md) | [Docker guide](../guides/docker-devcontainer.md) | `test_docker_generation` |
-| F52 | .dockerignore | 🟢 5 | [Docker](docker-containers.md) | [Docker guide](../guides/docker-devcontainer.md) | `test_docker_generation` |
-| F53 | DevContainer config | 🟢 5 | [Docker](docker-containers.md) | [Docker guide](../guides/docker-devcontainer.md) | `test_devcontainer_extensions` |
+| F51 | Dockerfile (multi-stage) | 🟢 5 | [Docker](docker-containers.md) | Docker guide (target archived/removed) | `test_docker_generation` |
+| F52 | .dockerignore | 🟢 5 | [Docker](docker-containers.md) | Docker guide (target archived/removed) | `test_docker_generation` |
+| F53 | DevContainer config | 🟢 5 | [Docker](docker-containers.md) | Docker guide (target archived/removed) | `test_devcontainer_extensions` |
 | F54 | docker-compose.yml | 🟢 5 | [Docker](docker-containers.md) | — | `test_docker_compose_generated`, `test_docker_compose_always_present` |
 | F55 | Docker base image selection | 🟢 5 | [Docker](docker-containers.md) | — | `test_docker_base_image` |
 
@@ -138,9 +138,9 @@ Complete reference of all 85 features across 19 categories in the Cytocast templ
 
 | # | Feature | Maturity | Doc | Tutorial | Test |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| F56 | JupyterLab session | 🟢 5 | [data science](data-science-tooling.md) | [notebooks](../guides/notebooks.md) | `test_nox_sessions_present` |
-| F57 | Marimo session | 🟢 5 | [data science](data-science-tooling.md) | [notebooks](../guides/notebooks.md) | `test_nox_sessions_present` |
-| F58 | Quarto config + session | 🟢 5 | [data science](data-science-tooling.md) | [notebooks](../guides/notebooks.md) | `test_notebooks_and_docs` |
+| F56 | JupyterLab session | 🟢 5 | [data science](data-science-tooling.md) | notebooks (target archived/removed) | `test_nox_sessions_present` |
+| F57 | Marimo session | 🟢 5 | [data science](data-science-tooling.md) | notebooks (target archived/removed) | `test_nox_sessions_present` |
+| F58 | Quarto config + session | 🟢 5 | [data science](data-science-tooling.md) | notebooks (target archived/removed) | `test_notebooks_and_docs` |
 | F59 | MkDocs Material docs | 🟢 5 | [doc standards](documentation-standards.md) | — | `test_nox_sessions_present` |
 | F60 | Docs hosting selection | 🟢 5 | [doc standards](documentation-standards.md) | — | `test_docs_hosting_ghpages`, `test_docs_hosting_readthedocs` |
 
@@ -148,9 +148,9 @@ Complete reference of all 85 features across 19 categories in the Cytocast templ
 
 | # | Feature | Maturity | Doc | Tutorial | Test |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| F61 | Experiment directory scaffolding | 🟢 5 | [ML](ml-functionalities.md) | [experiments](../guides/experiments.md) | `test_mlops_experiments_scaffolding` |
-| F62 | Hydra configuration | 🟢 5 | [ML](ml-functionalities.md) | [experiments](../guides/experiments.md) | `test_mlops_experiments_scaffolding` |
-| F63 | MLflow tracking | 🟢 5 | [ML](ml-functionalities.md) | [experiments](../guides/experiments.md) | `test_mlflow_tracking_uri` |
+| F61 | Experiment directory scaffolding | 🟢 5 | [ML](ml-functionalities.md) | experiments (target archived/removed) | `test_mlops_experiments_scaffolding` |
+| F62 | Hydra configuration | 🟢 5 | [ML](ml-functionalities.md) | experiments (target archived/removed) | `test_mlops_experiments_scaffolding` |
+| F63 | MLflow tracking | 🟢 5 | [ML](ml-functionalities.md) | experiments (target archived/removed) | `test_mlflow_tracking_uri` |
 | F64 | Git hash provenance | 🟢 5 | [ML](ml-functionalities.md) | — | `test_mlops_experiments_scaffolding` |
 
 ### Category 15: IDE Configuration
@@ -194,8 +194,8 @@ Complete reference of all 85 features across 19 categories in the Cytocast templ
 
 | # | Feature | Maturity | Doc | Tutorial | Test |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| F82 | 3-way merge updates | 🟢 5 | [copier workflow](copier-workflow.md) | [copier update](../guides/copier-update.md) | `test_copier_answers_generated` |
-| F83 | _skip_if_exists | 🟢 5 | [copier workflow](copier-workflow.md) | [copier update](../guides/copier-update.md) | `test_skip_if_exists_files` |
+| F82 | 3-way merge updates | 🟢 5 | [copier workflow](copier-workflow.md) | copier update (target archived/removed) | `test_copier_answers_generated` |
+| F83 | _skip_if_exists | 🟢 5 | [copier workflow](copier-workflow.md) | copier update (target archived/removed) | `test_skip_if_exists_files` |
 | F84 | _exclude for conditionals | 🟢 5 | [copier workflow](copier-workflow.md) | — | `test_exclude_pixi_when_uv`, `test_exclude_readthedocs_when_ghpages`, `test_exclude_docs_workflow_when_readthedocs` |
 | F85 | _tasks post-copy scaffold | 🟢 5 | [copier workflow](copier-workflow.md) | — | `test_tasks_scaffold_hook_creates_directories`, `test_template_internal_tests_exist` |
 

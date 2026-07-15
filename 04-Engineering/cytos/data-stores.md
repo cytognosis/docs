@@ -265,6 +265,6 @@ connectivity = nwb_query(region="UBERON:0001870", modality="fmri")
 ## Related Documentation
 
 - [Architecture Overview](architecture.md)
-- [KGStore API Reference](kgstore-api.md)
+- KGStore API Reference (target archived/removed)
 - [Brain Atlas Guide](brain-atlas.md)
 - [Genomic Atlas Guide](genomic-atlas.md)

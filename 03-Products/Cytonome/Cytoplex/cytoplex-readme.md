@@ -99,12 +99,12 @@ runs/cap_therapist_supervisor_demo/<run-id>/
 
 ## Reading path
 
-- [Baseline index](docs/v1_baseline/00_INDEX.md)
-- [Architecture](docs/v1_baseline/03_architecture.md)
-- [Primitives](docs/v1_baseline/04_primitives.md)
-- [Security, trust, and threat model](docs/v1_baseline/05_security_trust_and_threat_model.md)
-- [Examples](docs/v1_baseline/09_examples.md)
-- [Implementation alignment](docs/v1_baseline/11_implementation_alignment.md)
+- Baseline index (target archived/removed)
+- Architecture (target archived/removed)
+- Primitives (target archived/removed)
+- Security, trust, and threat model (target archived/removed)
+- Examples (target archived/removed)
+- Implementation alignment (target archived/removed)
 - [Completed task prompts](docs/task_prompts/cap_v1/Done/)
 
 ## Safe public claim
@@ -257,12 +257,12 @@ third_impl/go_cap_adapter/     local Go CAP v1 interop fixture adapter
 
 More detail:
 
-- [Architecture](docs/architecture.md)
-- [CAP v1 Task Backlog](docs/CAP_v1_TASKS.md)
+- [Architecture](spec/architecture.md)
+- CAP v1 Task Backlog (target archived/removed)
 - [Development](../../../04-Engineering/cytoplex/development.md)
 - [API](../../../04-Engineering/cytoplex/api.md)
 - [Testing](../../../04-Engineering/cytoplex/testing.md)
-- [Refactoring Notes](REFACTORING_NOTES.md)
+- Refactoring Notes (target archived/removed)
 
 ## Current Release Status
 

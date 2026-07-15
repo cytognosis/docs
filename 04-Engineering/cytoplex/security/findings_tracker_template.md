@@ -7,7 +7,7 @@
 > **Tags**: `engineering`
 > **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 
-Use this template during an independent security review. It is intentionally empty; filling it out records review evidence but does not by itself close the external review gate in [CAP_RELEASE_GATES.md](../CAP_RELEASE_GATES.md).
+Use this template during an independent security review. It is intentionally empty; filling it out records review evidence but does not by itself close the external review gate in CAP_RELEASE_GATES.md (target archived/removed).
 
 ## Review Metadata
 
@@ -18,7 +18,7 @@ Use this template during an independent security review. It is intentionally emp
 | Review end date | TBD |
 | Repository commit SHA | TBD |
 | Reviewed release labels | `v0.1-production-candidate`, `v1-architecture-documented`, `v1-runtime-scaffold` |
-| Packet used | [README.md](README.md) |
+| Packet used | README.md (target archived/removed) |
 | Test commands run | TBD |
 | Artifacts reviewed | TBD |
 | Out-of-scope areas | TBD |

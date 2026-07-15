@@ -18,9 +18,9 @@ Review whether the CAP-Med profile behavior is clearly bounded, privacy-preservi
 This review is separate from:
 
 - structural CAP conformance, which is checked by `cap-check-v1-conformance`;
-- domain semantic-quality scoring, which is prepared under [domain_semantic_quality](../domain_semantic_quality/README.md);
-- independent security review, which is prepared under [security_review](../security_review/README.md);
-- organization policy deployment, which is prepared under [policy_deployment](../policy_deployment/README.md).
+- domain semantic-quality scoring, which is prepared under [domain_semantic_quality](../quality/README.md);
+- independent security review, which is prepared under [security_review](../security/security_review.md);
+- organization policy deployment, which is prepared under [policy_deployment](../../infrastructure/policy-deployment/README.md).
 
 ## Scope
 
@@ -46,13 +46,13 @@ Out of scope:
 
 | Area | Primary docs | Evidence to inspect |
 |---|---|---|
-| Profile architecture | [CAP_07_profiles_roadmap.md](../CAP_07_profiles_roadmap.md), [CAP_03_primitives.md](../CAP_03_primitives.md) | Confirm CAP-Med rules stay under `profile_constraints.cap-med/v1` and `profile_extensions.cap-med/v1`, not CAP Core. |
+| Profile architecture | CAP_07_profiles_roadmap.md (target archived/removed), CAP_03_primitives.md (target archived/removed) | Confirm CAP-Med rules stay under `profile_constraints.cap-med/v1` and `profile_extensions.cap-med/v1`, not CAP Core. |
 | CAP-Med fixture | [cap_med.py](../../src/cap_protocol/profiles/cap_med.py), [test_cap_med_v1_profile.py](../../tests/test_cap_med_v1_profile.py) | Confirm Core schemas are reused and CAP-Med constraints are profile-owned. |
 | Local PEP boundaries | [local_pep.py](../../src/cap_protocol/runtime/local_pep.py), [test_cap_v1_pep.py](../../tests/test_cap_v1_pep.py) | Confirm raw-data, diagnosis, treatment-advice, and unsafe stream paths are vetoed or transformed. |
 | Supervisor Gateway | [supervisor_gateway.py](../../src/cap_protocol/runtime/supervisor_gateway.py), [test_supervisor_gateway_service.py](../../tests/test_supervisor_gateway_service.py) | Confirm Supervisor authority role, gateway endpoint, and backend engine remain distinct, and raw context is withheld from backends. |
 | Human Review | [human_review.py](../../src/cap_protocol/runtime/human_review.py), [test_human_review_integration.py](../../tests/test_human_review_integration.py) | Confirm safety escalation can route to human review without raw transcript leakage. |
-| Semantic-quality harness | [domain_semantic_quality](../domain_semantic_quality/README.md), [synthetic cases](../../examples/domain_semantic_quality/) | Confirm synthetic examples are labeled as onboarding evidence only. |
-| Release gates | [CAP_RELEASE_GATES.md](../CAP_RELEASE_GATES.md), [CAP_FINAL_STATUS.md](../CAP_FINAL_STATUS.md), [CAP_CLAIMS.md](../CAP_CLAIMS.md) | Confirm regulated-profile review remains an external gate. |
+| Semantic-quality harness | [domain_semantic_quality](../quality/README.md), [synthetic cases](../../examples/domain_semantic_quality/) | Confirm synthetic examples are labeled as onboarding evidence only. |
+| Release gates | CAP_RELEASE_GATES.md (target archived/removed), CAP_FINAL_STATUS.md (target archived/removed), CAP_CLAIMS.md (target archived/removed) | Confirm regulated-profile review remains an external gate. |
 
 ## Profile Constraints
 

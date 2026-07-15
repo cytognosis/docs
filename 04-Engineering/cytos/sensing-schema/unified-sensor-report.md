@@ -84,7 +84,7 @@ cytos/schemas/domains/sensor/
     └── mcphases_example.yaml    Synthetic mcPHASES, validates clean
 ```
 
-Full schema: [sensor/](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/) · [core.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml) · [README](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/README.md)
+Full schema: [sensor/](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/) · [core.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml) · README (target archived/removed)
 
 ### Core Entity Model
 
@@ -359,7 +359,7 @@ The Cytognosis schema uses SSSOM (Simple Standard for Sharing Ontological Mappin
 
 Toolchain: `sssom-schema` → `sssom-py` → `oaklib` → `curies` + `prefixmaps`
 
-Details: [sssom_tooling_for_cytognosis.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/sssom_tooling_for_cytognosis.md)
+Details: sssom_tooling_for_cytognosis.md (target archived/removed)
 
 ### Semantic Alignment
 
@@ -391,9 +391,9 @@ This document consolidates and supersedes the following research outputs:
 |---|---|---|
 | [sensors.md](../../../05-Research/neuroverse/schema-survey/sensors.md) (226 lines) | archive/neuro-pheno | Superseded by this doc §4 |
 | [interop.md](../../../05-Research/neuroverse/schema-survey/interop.md) (234 lines) | archive/neuro-pheno | Superseded by this doc §8 |
-| [07_sosa_ssn_to_linkml.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/linkml_kg_playbook/07_sosa_ssn_to_linkml.md) (217 lines) | archive/neuro-pheno | Superseded by semantic-alignment.md |
-| [sssom_tooling_for_cytognosis.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/sssom_tooling_for_cytognosis.md) (505 lines) | archive/neuro-pheno | Still current, referenced from §8 |
-| [02_schema_landscape.md](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/linkml_kg_playbook/02_schema_landscape.md) | archive/neuro-pheno | Still current, foundational reference |
+| 07_sosa_ssn_to_linkml.md (target archived/removed) (217 lines) | archive/neuro-pheno | Superseded by semantic-alignment.md |
+| sssom_tooling_for_cytognosis.md (target archived/removed) (505 lines) | archive/neuro-pheno | Still current, referenced from §8 |
+| [02_schema_landscape.md](../../infrastructure/data-strategy/linkml-kg-playbook/02_schema_landscape.md) | archive/neuro-pheno | Still current, foundational reference |
 
 ---
 
@@ -408,7 +408,7 @@ This document consolidates and supersedes the following research outputs:
 | [implementing-aware.md](../../yar/sensors/implementing-aware.md) | AWARE smartphone sensor data gathering guide |
 | [implementing-wearables.md](../../yar/sensors/implementing-wearables.md) | Oura Ring and Fitbit integration guide |
 | [implementing-health-instruments.md](../../yar/sensors/implementing-health-instruments.md) | PHQ-9, GAD-7, ASRS, and health scales guide |
-| [sensor-architecture.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/sensors/sensor-architecture.md) | Runtime sensor protocol and Voice Sensor 0 |
+| [sensor-architecture.md](../../../03-Products/Cytonome/Yar/sensor-architecture.md) | Runtime sensor protocol and Voice Sensor 0 |
 | [sensor-taxonomy.md](sensor-taxonomy.md) | Full sensor taxonomy with IEEE 1752 coverage |
 | [interop-standards.md](interop-standards.md) | Cross-standard interop details |
 | [data-formats.md](data-formats.md) | Data storage format recommendations |
@@ -431,4 +431,4 @@ This document consolidates and supersedes the following research outputs:
 |---|---|
 | [product-implementation.md](../../../00-Inbox/product-implementation.md) Phase 7 | USAP specification |
 | [adhd-paper-synthesis.md](../../yar/research/adhd-paper-synthesis.md) §8.9 | Sensor integration features for ADHD |
-| [yar-unified-feature-comparison-v3.md](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/yar-unified-feature-comparison-v3.md) | USAP in competitive feature matrix |
+| yar-unified-feature-comparison-v3.md (target archived/removed) | USAP in competitive feature matrix |

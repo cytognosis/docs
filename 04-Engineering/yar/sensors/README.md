@@ -20,7 +20,7 @@
 |---|---|
 | [Consolidated Sensor Reference](../../cytos/sensing-schema/unified-sensor-report.md) | **Master reference**: architecture, schema system, standards coverage, vendor profiles, interop stack, roadmap |
 | [Semantic Alignment Specification](../../cytos/sensing-schema/semantic-alignment.md) | SOSA/SSN ↔ IEEE 1752 ↔ FHIR ↔ AWARE crosswalk tables, SSSOM integration, gap analysis |
-| [Sensor Architecture](sensor-architecture.md) | Runtime sensor protocol, Voice Sensor 0 reference implementation, MindMed AI fusion architecture |
+| [Sensor Architecture](../../../03-Products/Cytonome/Yar/sensor-architecture.md) | Runtime sensor protocol, Voice Sensor 0 reference implementation, MindMed AI fusion architecture |
 | [Sensor Taxonomy](../../cytos/sensing-schema/sensor-taxonomy.md) | Full sensor taxonomy across micro/meso/macro scales with IEEE 1752 and Open mHealth coverage |
 | [Interop Standards](../../cytos/sensing-schema/interop-standards.md) | Cross-standard interop details and data flow patterns |
 
@@ -52,7 +52,7 @@ cytos/schemas/domains/sensor/
 └── examples/      Validation examples (mcPHASES dataset)
 ```
 
-Full schema documentation: [Cytos Sensor Schema README](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/README.md)
+Full schema documentation: Cytos Sensor Schema README (target archived/removed)
 
 ## Yar Integration
 
@@ -60,7 +60,7 @@ The Yar product-level sensor integration (USAP: Universal Sensor Adapter Protoco
 
 - [Product Implementation Phase 7](../../../00-Inbox/product-implementation.md) (USAP specification)
 - [ADHD Paper Synthesis §8.9](../research/adhd-paper-synthesis.md) (sensor features for ADHD)
-- [Feature Comparison v3](file:///home/mohammadi/repos/cytognosis/docs/cytonome/yar/research/yar-unified-feature-comparison-v3.md) (USAP in competitive matrix)
+- Feature Comparison v3 (target archived/removed) (USAP in competitive matrix)
 
 ## Research Lineage
 
@@ -68,5 +68,5 @@ Foundational research that informed this architecture (retained in archive for c
 
 - [Sensors Research](../../../05-Research/neuroverse/schema-survey/sensors.md) (ontology survey)
 - [Interop Research](../../../05-Research/neuroverse/schema-survey/interop.md) (match function design)
-- [SOSA/SSN to LinkML](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/linkml_kg_playbook/07_sosa_ssn_to_linkml.md) (conversion walkthrough)
-- [SSSOM Tooling](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/sssom_tooling_for_cytognosis.md) (cross-ontology mapping)
+- SOSA/SSN to LinkML (target archived/removed) (conversion walkthrough)
+- SSSOM Tooling (target archived/removed) (cross-ontology mapping)

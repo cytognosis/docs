@@ -43,7 +43,7 @@ Technical source: ../MODULE-crisis-detection.md
 This module is a standalone, **stateless**, single-responsibility component. It runs **fully on-device** and does not require a network connection to detect risk or display resources.
 
 - **In scope**: detection contract, response actions, resource registry, thresholds, safety requirements.
-- **Out of scope**: clinical validation, privacy schema (see [privacy-boundary-spec](../../Cytoplex/spec/privacy-boundary-spec.md)), claims of clinical efficacy.
+- **Out of scope**: clinical validation, privacy schema (see [privacy-boundary-spec](../../../Cytoplex/spec/privacy-boundary-spec.md)), claims of clinical efficacy.
 
 > [!NOTE]
 > **What is CAP-Lite?** (101)
@@ -181,7 +181,7 @@ The module fails safe by failing **toward help**. Any internal error, load failu
 
 ## ➡️ What's Next?
 
-- **Understand the privacy contract**: [privacy-boundary-spec](../../Cytoplex/spec/privacy-boundary-spec.md) governs what the alert signal may contain.
+- **Understand the privacy contract**: [privacy-boundary-spec](../../../Cytoplex/spec/privacy-boundary-spec.md) governs what the alert signal may contain.
 - **Contract a clinical advisor**: open decisions 1, 3, and 6 block any expansion beyond the current 22-term gate.
 - **Legal review**: open decisions 2 and 4 require Duane Valz before enabling clinician alerts.
 

@@ -588,10 +588,10 @@ Letterly is **not a direct competitor** to Yar. It occupies a specific niche (vo
 
 | Document | Link |
 |---|---|
-| Unified Feature Comparison | [[yar-unified-feature-comparison]] |
-| ElevenLabs Evaluation | [[elevenlabs_evaluation_adhd]] |
-| Speechify Deep Dive | [[speechify-deep-dive_adhd]] |
-| Goblin Tools Deep Dive | [[goblin-tools-deep-dive_adhd]] |
+| Unified Feature Comparison | yar-unified-feature-comparison (target archived/removed) |
+| ElevenLabs Evaluation | elevenlabs_evaluation_adhd (target archived/removed) |
+| Speechify Deep Dive | speechify-deep-dive_adhd (target archived/removed) |
+| Goblin Tools Deep Dive | goblin-tools-deep-dive_adhd (target archived/removed) |
 
 ---
 

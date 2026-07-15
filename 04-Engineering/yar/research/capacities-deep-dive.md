@@ -723,7 +723,7 @@ Spaces are independent containers for organizing content.
 | **Data model** | Object types | Node graph | Block database | File markdown | Block graph |
 | **Type system** | Object Studio | Supertags | Database schemas | Tags + frontmatter | Properties |
 | **Inheritance** | None | Extend (OOP) | None | None | None |
-| **Two-way links** | Object Select | @-mentions | Relations | [[links]] | [[links]] |
+| **Two-way links** | Object Select | @-mentions | Relations | links (target archived/removed) | links (target archived/removed) |
 | **Views** | Table, Board, Wall, List | Table, Cards, Calendar, List, Tabs | 6+ views | Community plugins | Queries |
 | **AI** | Multi-model, growing | Deep native | Bolt-on | Plugin | None |
 | **Task management** | Native + Kanban | Via supertags + views | Native | Plugin | Native (TODO) |

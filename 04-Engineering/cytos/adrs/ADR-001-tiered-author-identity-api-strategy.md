@@ -73,7 +73,7 @@ LinkedIn data is obtained only from ORCID researcher-urls or manual entry. No lo
 
 ## References
 
-- [Scholarly Access Strategy](../../../.gemini/antigravity/brain/cd6537fc-9f66-43c5-80fd-f9d2c8fe6893/artifacts/scholarly_access_strategy.md)
+- Scholarly Access Strategy (target archived/removed)
 - [Semantic Scholar API docs](https://api.semanticscholar.org/api-docs/)
 - [SerpAPI Scholar docs](https://serpapi.com/google-scholar-api)
 - [OpenAlex API docs](https://docs.openalex.org/)

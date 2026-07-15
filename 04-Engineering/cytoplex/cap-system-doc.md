@@ -51,7 +51,7 @@ Core innovation: **asymmetric authority with deny-wins semantics**. Refusals are
 
 CAP COMPOSES with these protocols rather than replacing them. The CAP report in `/Infra/CAP/cytognosis_multi_agent_architecture_report.md` describes the multi-layer stack in detail.
 
-See [`02_standards_inventory.md`](../02_standards_inventory.md) for full context.
+See `02_standards_inventory.md` (target archived/removed) for full context.
 
 ## 3. Architecture and assumptions
 
@@ -132,7 +132,7 @@ CAP doesn't operate in isolation. From `/curations/tools/`:
 
 ### 4.2 Phase I work (CAP track)
 
-See [`/Plans/design/07_yar/02_checklist.md`](../../../07_yar/02_checklist.md) and `/refactor/phases/docs/phase1.md`.
+See `/Plans/design/07_yar/02_checklist.md` (target archived/removed) and `/refactor/phases/docs/phase1.md`.
 
 Key Phase I CAP tasks:
 1. Consolidate `Yar/CAP/` (older sketch) with `/Infra/CAP/cytognosis_cap_v01_production_candidate/` (canonical).
@@ -276,9 +276,9 @@ python run_production_hardening.py
 
 ## 7. Cross-references
 
-- [Cross-system architecture](00_cross_system_architecture.md)
-- [Cyto-skills system doc](03_cyto_skills.md) — peer system (NOT parent)
-- [Yar system doc](05_yar.md) — main consumer
+- Cross-system architecture (target archived/removed)
+- Cyto-skills system doc (target archived/removed) — peer system (NOT parent)
+- Yar system doc (target archived/removed) — main consumer
 - [Phase 7 subplan](../../../07_yar/) — Yar refactor + CAP consolidation
 - Original Python ref: `/Infra and design/CAP/cytognosis_cap_v01_production_candidate/`
 - Supervisor report: `/Infra/CAP/CAP_v0.1_Production_Candidate_Supervisor_Report.md`

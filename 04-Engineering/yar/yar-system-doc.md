@@ -45,7 +45,7 @@ Plus shared backend (FastAPI + SQLite).
 | Tailscale | Edge-Center connectivity (when interview system used) |
 | NATS JetStream | A2A messaging (when interview system used) |
 
-See [`02_standards_inventory.md`](../02_standards_inventory.md).
+See `02_standards_inventory.md` (target archived/removed).
 
 ## 3. Architecture
 
@@ -148,7 +148,7 @@ User input → Yar mobile (Flutter) → backend.capture POST → form Directive 
 
 ### 4.2 Current refactor work
 
-See [`/Plans/design/07_yar/02_checklist.md`](../../../07_yar/02_checklist.md). Key:
+See `/Plans/design/07_yar/02_checklist.md` (target archived/removed). Key:
 1. Reorganize into multi-app monorepo (packages/, apps/, workspace manifests).
 2. Add cytoskeleton + cyto-skills submodules.
 3. Migrate 4 JSON Schemas to LinkML in cytoskeleton.
@@ -312,9 +312,9 @@ templates: [app-phone]
 
 ## 7. Cross-references
 
-- [Cross-system architecture](00_cross_system_architecture.md)
-- [CAP system doc](04_cap.md)
-- [Cyto-skills system doc](03_cyto_skills.md)
+- Cross-system architecture (target archived/removed)
+- CAP system doc (target archived/removed)
+- Cyto-skills system doc (target archived/removed)
 - [Phase 7 subplan](../../../07_yar/)
-- [Standards inventory](../02_standards_inventory.md)
-- [Decision log §D9](../../../09_decision_log.md)
+- Standards inventory (target archived/removed)
+- Decision log §D9 (target archived/removed)

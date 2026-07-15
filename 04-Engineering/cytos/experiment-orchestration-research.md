@@ -21,7 +21,7 @@ tags:
 **Cytognosis Foundation, 2026-05-24 (draft v0.1)**
 **Status**: Research complete, ready for architectural decisions
 
-> This document is the comprehensive research companion to the [Reproducibility Strategy](file:///home/mohammadi/Documents/Claude/Projects/Infrastructure%20and%20Tooling/cytognosis_reproducibility_strategy.md) (§7 Provenance, §9 Happy Path) and the [RO-Crate Research](file:///home/mohammadi/repos/cytognosis/org/plans/experiment-rocrate-research.md). It covers how experiments are defined, executed on heterogeneous compute, and how provenance flows automatically from definition through execution to publication.
+> This document is the comprehensive research companion to the Reproducibility Strategy (target archived/removed) (§7 Provenance, §9 Happy Path) and the RO-Crate Research (target archived/removed). It covers how experiments are defined, executed on heterogeneous compute, and how provenance flows automatically from definition through execution to publication.
 
 ---
 
@@ -723,8 +723,8 @@ The VFS `AssetStat` dataclass already captures SWHID identifiers (via `identity/
 
 ## References
 
-- [Reproducibility Strategy](file:///home/mohammadi/Documents/Claude/Projects/Infrastructure%20and%20Tooling/cytognosis_reproducibility_strategy.md)
-- [RO-Crate Research](file:///home/mohammadi/repos/cytognosis/org/plans/experiment-rocrate-research.md)
+- Reproducibility Strategy (target archived/removed)
+- RO-Crate Research (target archived/removed)
 - [WRROC Specification](https://w3id.org/ro/wfrun)
 - [ISA Abstract Model](https://isa-tools.org)
 - [redun Documentation](https://insitro.github.io/redun)

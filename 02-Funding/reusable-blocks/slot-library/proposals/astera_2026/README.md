@@ -11,7 +11,7 @@
 **Funder profile:** [`canonical/funders/astera_residency.yaml`](../../funders/astera_residency.yaml).
 **Funding Opp:** Monday item 11813491505.
 **Grants Pipeline entry:** Monday item 11813518971.
-**Source materials:** [`input/applications/Astera/Astera_submited_application_responses.md`](../../../../../input/applications/Astera/Astera_submited_application_responses.md), [`input/applications/Astera/expanded_version_technology.md`](../../../../../input/applications/Astera/expanded_version_technology.md), [`input/applications/Astera/Astera’s Open Science Policy.md`](../../../../../input/applications/Astera/Astera’s%20Open%20Science%20Policy.md).
+**Source materials:** `input/applications/Astera/Astera_submited_application_responses.md` (target archived/removed), `input/applications/Astera/expanded_version_technology.md` (target archived/removed), `input/applications/Astera/Astera’s Open Science Policy.md` (target archived/removed).
 
 This directory holds proposal-specific content overlays for the Astera 2026 cycle. Each file under `slots/` carries the content that was actually submitted, mapped to canonical slot IDs. Generic content lives in the canonical slot files at `canonical/slots/`; this directory captures only the Astera-specific framing and the extracted content authored for this submission.
 

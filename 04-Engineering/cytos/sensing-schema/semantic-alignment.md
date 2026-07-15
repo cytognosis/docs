@@ -320,7 +320,7 @@ sensor:ObservableProperty	ObservableProperty	skos:exactMatch	sosa:ObservableProp
 
 ### Cytognosis Internal
 - [Consolidated Sensor Reference](unified-sensor-report.md)
-- [Cytos Sensor Schema README](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/README.md)
-- [SSSOM Tooling for Cytognosis](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/sssom_tooling_for_cytognosis.md)
-- [SOSA/SSN to LinkML Playbook](file:///home/mohammadi/repos/cytognosis/archive/neuro-pheno/design_draft/schemas/research/linkml_kg_playbook/07_sosa_ssn_to_linkml.md)
+- Cytos Sensor Schema README (target archived/removed)
+- SSSOM Tooling for Cytognosis (target archived/removed)
+- SOSA/SSN to LinkML Playbook (target archived/removed)
 - [Yar USAP Phase 7](../../../00-Inbox/product-implementation.md)

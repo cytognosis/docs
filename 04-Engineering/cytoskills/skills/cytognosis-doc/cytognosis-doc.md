@@ -159,7 +159,7 @@ Every document starts with this block:
 
 ## cyto doc Commands
 
-All commands follow the [Command Execution Contract](../../../skills/cytognosis/cytognosis-doc/references/command-execution-contract.md). Every command supports `--dry-run`, `--prompt-only`, and ends with a validation step.
+All commands follow the Command Execution Contract (target archived/removed). Every command supports `--dry-run`, `--prompt-only`, and ends with a validation step.
 
 | Command | Purpose |
 |---------|---------|
