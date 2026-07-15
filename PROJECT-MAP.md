@@ -42,3 +42,5 @@
 - 2026-07-11: created; Design promoted to its own project (supersedes the same-morning fold into Science and Platform); Science and Platform explicitly documented as the Neuroverse home.
 
 - 2026-07-15: W2 started — Infrastructure `_context` narrowed to owned Engineering slices (infrastructure, toolchain, agent-integration, specs, decisions, architecture, standards); removed the whole-`04-Engineering` link that leaked cytoplex/cytos/yar. Backup at `Infrastructure and Tooling/_archive/_context-bak-2026-07-15`. Remaining projects audited case-by-case (shared-pillar links kept only where the project legitimately works in that slice).
+
+- 2026-07-15: W2 cont. — Cytognosis `_context` narrowed to 01-Strategy + org (removed whole-`06-Operations` link that exposed legal/comp/HR). Audited the rest (Grants strategy/research, Science-and-Platform, Yar, Cytos) — their shared-pillar links are legitimate working slices, kept. W2 substantially done; W1 (vault legacy-root migration) + W3 (sprawl) remain, running after the companion lane releases the vault.
