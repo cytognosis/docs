@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (SURREALDB.md in Obsidian vault: 04-Engineering/cytos/databases/) - Agent (n/a)
 
 > Running at: `ws://localhost:8000`
 > Container: `cytos-surrealdb` (Docker)

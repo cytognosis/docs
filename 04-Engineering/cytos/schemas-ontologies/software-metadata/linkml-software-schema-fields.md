@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (linkml-software-schema-fields.md in Obsidian vault: 04-Engineering/cytos/schemas-ontologies/software-metadata/) - Agent (n/a)
 
 **Purpose**: Comprehensive field listing for building a unified LinkML schema covering software and code repositories based on CodeMeta, CFF, Schema.org, Zenodo, and Software Heritage standards.
 

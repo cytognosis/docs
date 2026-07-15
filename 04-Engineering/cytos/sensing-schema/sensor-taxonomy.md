@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (sensor-taxonomy.md in Obsidian vault: 04-Engineering/cytos/sensing-schema/) - Agent (n/a)
 
 Scope: how to describe a phenotypic measurement (the assay or sensor) so that another system can match it to a model input, a downstream analysis, or co-register it with another modality. Six sub-questions:
 

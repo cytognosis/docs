@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (INVENTORY.md in Obsidian vault: 04-Engineering/cytos/data-lake/) - Agent (n/a)
 
 > Location: `/home/mohammadi/datasets/` (~1.5TB total)
 > Last audited: 2026-05-22

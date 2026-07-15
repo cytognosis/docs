@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (TASKS_REMAINING.md in Obsidian vault: 04-Engineering/cytos/genomekg/) - Agent (n/a)
 
 > **Priority-ordered checklist for the next agent session.**
 > All items are specific, actionable, and include exact file/command references.

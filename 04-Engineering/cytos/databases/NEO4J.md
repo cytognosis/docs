@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (NEO4J.md in Obsidian vault: 04-Engineering/cytos/databases/) - Agent (n/a)
 
 > Running at: `bolt://localhost:7687`
 > Auth: `neo4j` / `cytognosis2026`

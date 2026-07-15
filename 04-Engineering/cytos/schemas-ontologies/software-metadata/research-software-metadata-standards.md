@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (research-software-metadata-standards.md in Obsidian vault: 04-Engineering/cytos/schemas-ontologies/software-metadata/) - Agent (n/a)
 
 **Date**: April 4, 2026
 **Purpose**: Reference guide for building a LinkML schema covering CodeRepository and Software entity types

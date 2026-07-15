@@ -14,6 +14,7 @@ tags:
 > **Author**: @mohammadi
 > **Audience**: engineers
 > **Tags**: `engineering`, `schemas`, `research`, `biotools`, `edam`
+> **Variants**: Technical (this doc) - Readable (biotools-schema-edam-research.md in Obsidian vault: 04-Engineering/cytos/schemas-ontologies/) - Agent (n/a)
 
 
 # biotoolsSchema, EDAM Ontology, and bio.tools Registry: Research Analysis

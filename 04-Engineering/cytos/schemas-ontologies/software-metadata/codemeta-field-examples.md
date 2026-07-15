@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (codemeta-field-examples.md in Obsidian vault: 04-Engineering/cytos/schemas-ontologies/software-metadata/) - Agent (n/a)
 
 ## 1. CodeMeta JSON-LD Example
 

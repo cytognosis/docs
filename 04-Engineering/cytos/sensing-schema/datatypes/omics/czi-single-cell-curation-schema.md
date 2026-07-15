@@ -6,7 +6,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (czi-single-cell-curation-schema.md in Obsidian vault: 04-Engineering/cytos/sensing-schema/datatypes/omics/) - Agent (n/a)
 
 Contact: BAevermann@chanzuckerberg.com
 

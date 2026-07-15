@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (interop-standards.md in Obsidian vault: 04-Engineering/cytos/sensing-schema/) - Agent (n/a)
 
 The previous three documents survey each entity in isolation. This one is about the join: given a model card, a dataset manifest, and an assay manifest, how do you decide they fit, and what is the minimum machinery required to enforce that fit at runtime?
 

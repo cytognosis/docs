@@ -13,7 +13,7 @@ scope: choose controlled vocabularies for tagging agent skills on two distinct a
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (tagging-ontology.md in Obsidian vault: 04-Engineering/cytos/schemas-ontologies/) - Agent (n/a)
 
 ## 1. Problem framing
 

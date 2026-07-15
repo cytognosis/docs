@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (readme.md in Obsidian vault: 04-Engineering/cytos/schemas-ontologies/software-metadata/) - Agent (n/a)
 
 Complete reference materials for implementing a unified LinkML schema for CodeRepository and Software entities based on CodeMeta, CFF, Schema.org, Zenodo, and Software Heritage standards.
 

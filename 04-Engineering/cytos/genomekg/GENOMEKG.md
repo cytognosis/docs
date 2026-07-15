@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (GENOMEKG.md in Obsidian vault: 04-Engineering/cytos/genomekg/) - Agent (n/a)
 
 > Session: b591c0f4 (May 2026) | 19 commits, 56 tests passing
 
