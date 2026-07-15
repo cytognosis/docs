@@ -6,7 +6,8 @@
 **Program:** ARPA-H-SOL-26-155 (Intelligent Generator of Research, IGoR), Proactive Health Office
 **Award instrument:** Other Transaction
 **Period of performance:** 60 months (Phase I Months 0–18; Phase II Months 18–36; Phase III Months 36–60)
-**Date:** 2026-08-06
+**ARPA-H Program Manager:** Paul E. Sheehan, PhD (Proactive Health Office)
+**Date of submission:** 2026-08-13 (extended from 2026-08-06)
 
 ---
 

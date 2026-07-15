@@ -3,7 +3,7 @@
 **ARPA-H-SOL-26-155 (Intelligent Generator of Research, IGoR), Proactive Health Office.**
 **Award instrument: Other Transaction. Period of performance: 60 months (Phase I 18 mo; Phase II 18 mo; Phase III 24 mo).**
 
-> Working draft, revision 2026-06-16. The submitted C.1 body is capped at 40 pages (Sections 1 to 7); the Gantt chart, biographical information, and references are excluded. The Commercialization narrative is capped at 3 pages and the Capabilities/Management plan at 2 pages, both inside the 40. The factorized-PRS method is marked PROPRIETARY where it appears. This draft carries full substance for internal review and will be trimmed to the page limit before the Aug 6 submission.
+> Working draft, revision 2026-06-16 (deadline reconciled 2026-07-14). The submitted C.1 body is capped at 40 pages (Sections 1 to 7); the Gantt chart, biographical information, and references are excluded. The Commercialization narrative is capped at 3 pages and the Capabilities/Management plan at 2 pages, both inside the 40. The factorized-PRS method is marked PROPRIETARY where it appears. This draft carries full substance for internal review and will be trimmed to the page limit before the **2026-08-13** submission (extended from 2026-08-06). **ARPA-H PM:** Paul E. Sheehan, PhD.
 
 ## Cover page
 
@@ -20,7 +20,7 @@
 | Resource sharing (Performer, in-kind) | ~$2.3M Performer in-kind (IPAI/Purdue HPC compute, Purdue wet-lab facilities, Cellanome instrument and run credits); total project value ~$45.2M |
 | Place(s) of performance | Purdue University (IN); Cytognosis Foundation (CA); McLean Hospital (MA); validated laboratories (advancing and proposed) |
 | Proposal validity period | 120 days minimum |
-| Date of submission | [2026-08-06] |
+| Date of submission | 2026-08-13 (extended from 2026-08-06) |
 
 **Key personnel.** Ananth Grama (PI; IPAI, Purdue); Shahin Mohammadi (TA1 disease-model and TA1-TA2 hypothesis lead; TA2 co-lead; Cytognosis Foundation); Matthew Tegtmeyer (TA4 academic execution lead, Purdue; TA1 disease-modeling contributor); Anne Carpenter (TA1 co-lead, computational morphology and imaging models, IPAI/Purdue; no wet bench); W. Brad Ruzicka (clinical co-lead; McLean Hospital and HMS); Daniel Bryce and Robert Goldman (TA2-TA3, TA3, and TA3-TA4 lead; SIFT); Elham Jebalbarezi Sarbijan (Software and Systems Architect, IPAI/Purdue interim; Cytognosis hire, recruiting); Patricia Purcell (Project Manager, ~0.3 FTE).
 

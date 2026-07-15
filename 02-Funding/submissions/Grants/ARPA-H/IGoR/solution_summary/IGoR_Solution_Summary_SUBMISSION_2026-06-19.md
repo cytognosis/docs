@@ -1,5 +1,8 @@
 # PsychIGoR Solution Summary
 
+> [!IMPORTANT]
+> **STATUS: SUBMITTED to ARPA-H on 2026-06-25** (Solutions portal, ARPA-H-SOL-26-155). This file is the frozen submitted content and MUST NOT be edited. Post-submission budget and team revisions ($42.9M restructured model, expanded team) live in `full_proposal/` (canonical for the Aug 13, 2026 full proposal). See `INDEX.md` for the current canonical map.
+
 **Innovative Solutions Opening:** ARPA-H-SOL-26-155 (Intelligent Generator of Research, IGoR), Proactive Health Office.
 **Solution Summary title:** PsychIGoR: Intelligence Generation of Disease Mechanisms for Psychiatric Disorders. A self-updating, mechanistic causal model of psychiatric disease with a validated closed-loop experiment engine.
 **Solution Summary due:** 2026-06-25, 12:00 PM ET. **Full proposal due:** 2026-08-06, 12:00 PM ET.
