@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (data-science-tooling.md in Obsidian vault: 04-Engineering/toolchain/cytocast/features/) - Agent (n/a)
 
 Cytocast provides a unified approach to interactive computing, supporting three notebook ecosystems (Jupyter, Marimo, Quarto) through dedicated Nox sessions. Each session automatically loads the project's optimized environment so developers can start working immediately.
 

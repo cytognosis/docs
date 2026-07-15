@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (compute-orchestration.md in Obsidian vault: 04-Engineering/toolchain/cytocast/features/) - Agent (n/a)
 
 Cytocast includes a built-in resource orchestration layer that enforces CPU, memory, and GPU limits on all compute-intensive operations. This enables consistent behavior across laptops, workstations, shared servers, and cloud instances.
 

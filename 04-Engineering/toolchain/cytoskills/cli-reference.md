@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (cli-reference.md in Obsidian vault: 04-Engineering/toolchain/cytoskills/) - Agent (n/a)
 
 **Binary**: `cyto-skills`
 **Source**: `packages/cli/src/bin/cyto-skills.ts`

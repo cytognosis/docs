@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (index.md in Obsidian vault: 04-Engineering/toolchain/cytocast/features/) - Agent (n/a)
 
 Complete reference of all 85 features across 19 categories in the Cytocast template, with maturity scores and cross-links to documentation, tutorials, and tests.
 

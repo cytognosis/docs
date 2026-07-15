@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (docker-containers.md in Obsidian vault: 04-Engineering/toolchain/cytocast/features/) - Agent (n/a)
 
 Cytocast generates a complete containerization stack when `use_docker=True`: a multi-stage Dockerfile, DevContainer configuration, docker-compose for local orchestration, and a configurable base image.
 

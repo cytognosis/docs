@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (module-spec-claude-desktop-doctor.md in Obsidian vault: 04-Engineering/toolchain/cytoskills/) - Agent (n/a)
 
 **Source**: `packages/core/src/claude-desktop-doctor.ts`
 **Package**: `@cytognosis/cyto-skills`
