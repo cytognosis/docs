@@ -3,6 +3,7 @@
 > **Author**: Cytognosis Engineering
 > **Audience**: engineers, operators
 > **Tags**: `quick-reference`, `infrastructure`, `gcp`, `cytohost`
+> **Variants**: Technical (this doc) - Readable (same filename in Obsidian vault: 04-Engineering/infrastructure/) - Agent (n/a)
 > **Last verified**: 2026-06-21 against `gcloud` CLI + `ssh cytohost`
 
 # Cytognosis Infrastructure — Quick Reference

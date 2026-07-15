@@ -3,6 +3,7 @@
 > **Author**: Cytognosis Engineering
 > **Audience**: Engineering, DevOps, New Team Members
 > **Tags**: `infrastructure`, `index`, `gcp`
+> **Variants**: Technical (this doc) - Readable (same filename in Obsidian vault: 04-Engineering/infrastructure/) - Agent (n/a)
 > **Last verified**: 2026-06-19 against gcloud
 
 # Cytognosis Foundation — Master Infrastructure
