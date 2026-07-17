@@ -1,0 +1,151 @@
+funder_id: arpah_program_iso
+display_name: ARPA-H Program-Specific ISO
+kind: federal_OT
+version: "2026.1"
+source_doc: ../../../../cytos/data/staged/grants/arpah/programs/
+notes: |
+  Child of arpah_mission_office. A Program-Specific ISO (e.g. PROSPR, DELPHI,
+  EVIDENT) narrows the Mission Office ISO shape to specific Technical Areas
+  (TAs) defined by the program. Structure derived from PROSPR ISO
+  (25-SOL-125, Amend 2) and the DELPHI draft ISO (ARPA-H-SOL-26-153):
+  Solution Summary (Appendix B) -> Full Proposal (Appendix C: Volume I
+  Technical & Management, Volume II Cost, Volume III Admin & National Policy)
+  -> optional Task Description Document (Appendix C.2) -> Draft OT Agreement
+  (Appendix E, not authored content).
+
+primary_artifacts:
+  - id: solution_summary
+    name: Solution Summary (Appendix B — Solutions Summary Model)
+    format: docx
+    page_limit: 6
+    sections:
+      - heading: "Cover page — company profile"
+        slots: [A01, A02]
+        notes: Does not count toward page limit.
+      - heading: "1. Graphical + written abstract"
+        slots: [U01.1, U01.2, U09.1]
+        page_limit: 1
+      - heading: "2. Technical Area (TA) alignment — what are you trying to do?"
+        slots: [U01, U03.4]
+        word_limit: 400
+      - heading: "3. State of the art and its limits"
+        slots: [U02]
+        word_limit: 400
+      - heading: "4. Novel approach + quantitative metrics"
+        slots: [U03, U08.1]
+        word_limit: 500
+      - heading: "5. Who cares? Mission relevance"
+        slots: [U04, U13.1, U17.1]
+        word_limit: 300
+      - heading: "6. Risks"
+        slots: [U05, U14.2, U16.1]
+        word_limit: 300
+      - heading: "Team / key personnel"
+        slots: [U11.1, U11.2, U11.4]
+        word_limit: 200
+      - heading: "References cited"
+        slots: [A04.4]
+        notes: Does not count toward page limit.
+
+  - id: tech_mgmt_proposal
+    name: "Appendix C.1: Volume I — Technical & Management Proposal"
+    format: docx
+    page_limit: 30
+    sections:
+      - heading: "Executive Summary"
+        slots: [U01, U04, U08.1]
+      - heading: "Technical Approach by Technical Area (TA)"
+        slots: [U02, U03, U08]
+      - heading: "Management Plan & Phases"
+        slots: [U07, U08.2]
+      - heading: "Team & Key Personnel"
+        slots: [U11]
+      - heading: "Transition-to-Practice"
+        slots: [U17.2, U17.5, U17.6, U18.1, U18.2, U18.4, U18.5]
+      - heading: "Partnerships & Consortium"
+        slots: [U20.1, U20.3]
+      - heading: "Sustainability"
+        slots: [U19.1]
+      - heading: "Statement of Work (SOW) summary"
+        slots: [U07.1, U08.2]
+        notes: SOW is a standalone attachment; this section cannot substitute for it.
+
+  - id: tdd
+    name: "Appendix C.2: Task Description Document (TDD)"
+    format: docx
+    sections:
+      - heading: "IP & Data Governance"
+        slots: [U15.1, U15.2, U15.3, U15.5]
+      - heading: "Dual-Use & Biosecurity"
+        slots: [U16.4, U16.5]
+      - heading: "Consortium Governance"
+        slots: [U20.2]
+      - heading: "Translation IP"
+        slots: [U18.3]
+
+  - id: cost_proposal
+    name: "Appendix C.3: Volume II — Cost Proposal"
+    format: xlsx
+    sections:
+      - heading: "Budget — personnel, compute, equipment, partners"
+        slots: [U06.1, U06.2, U06.3, U06.4]
+      - heading: "Compliance attestations"
+        slots: [A01, A03.1, A03.2, A03.4]
+      - heading: "Human subjects / animal use"
+        slots: [U16.2, U16.3]
+
+  - id: admin_national_policy
+    name: "Appendix D / Volume III — Administrative & National Policy Requirements"
+    format: docx
+    sections:
+      - heading: "Research security, COI, and national-policy attestations"
+        slots: [A03.3, A03.4]
+      - heading: "Restrictions on foreign-influenced software / assertions"
+        slots: [U16.4, U16.6]
+    notes: No page limit for this document.
+
+  - id: letters_of_collaboration
+    name: Letters of Collaboration
+    format: pdf
+    sections:
+      - heading: "Partner letters (signed, one page each)"
+        slots: [A04.5]
+
+render_targets:
+  - id: google_docs_solution_summary
+    kind: google_docs
+    doc_id_env: ARPAH_PROGRAM_ISO_SOLUTION_SUMMARY_DOC_ID
+    mapping: solution_summary
+    notes: Primary authoring surface for the Solution Summary.
+  - id: google_docs_tech_mgmt
+    kind: google_docs
+    doc_id_env: ARPAH_PROGRAM_ISO_TECH_MGMT_DOC_ID
+    mapping: tech_mgmt_proposal
+  - id: docxtpl_solution_summary
+    kind: docxtpl
+    template_path: ../../../../cytos/data/staged/grants/arpah/templates/arpah_solution_summary_template.md
+    mapping: solution_summary
+  - id: docxtpl_tech_mgmt
+    kind: docxtpl
+    template_path: ../../../../cytos/data/staged/grants/arpah/programs/prospr/arpa-h-sol-25-125_attach1_model_ot.md
+    mapping: tech_mgmt_proposal
+  - id: openpyxl_cost
+    kind: openpyxl_jinja
+    template_path: ../../../../cytos/data/staged/grants/arpah/programs/prospr/sol_25-125_volume_2_-_attach_cost_proposal_spreadsheet.md
+    mapping: cost_proposal
+
+eligibility_notes: |
+  Same eligibility base as arpah_mission_office (any responsible entity;
+  non-traditional-defense-contractor cost-share exemptions may apply).
+  Program-specific ISOs additionally require explicit alignment to one or
+  more named Technical Areas (TAs) defined in the program's ISO — proposers
+  must state which TA(s) they address in the Solution Summary.
+
+submission_notes: |
+  Two-stage process, same shape as Mission Office ISO: Solution Summary
+  (mandatory, ~6 pages incl. graphical abstract) followed by an invited Full
+  Proposal (Volume I Technical & Management ~30pp, Volume II Cost, Volume III
+  Admin & National Policy) if selected. Family covers PROSPR (25-SOL-125),
+  DELPHI (ARPA-H-SOL-26-153), and EVIDENT-style program ISOs; verify exact
+  page limits and TA definitions against the specific program's current ISO
+  before submission, since amendments vary limits by a page or two.

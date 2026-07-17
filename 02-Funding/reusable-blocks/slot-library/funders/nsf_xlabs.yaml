@@ -1,0 +1,114 @@
+funder_id: nsf_xlabs
+display_name: NSF X-Labs Initiative
+kind: federal_OT
+version: "2026.1"
+source_doc: ../../../../cytos/data/staged/grants/nsf_xlabs/NSF_XLabs_Consolidated_Reference.md
+notes: |
+  Successor to the NSF Tech Labs RFI (nsf_tech_labs.yaml is the earlier
+  concept-stage RFI response; this file is the real OTASO solicitation,
+  NSF-OTASO-FY26-XLabsInitiative + Topic 2: Sensing & Imaging). Other
+  Transaction (OT) contract, not a grant. Written Proposal due 2026-07-13;
+  8 single-sided pages, 12pt, single-spaced, PDF, Attachment A template.
+  Phase 0 up to $1.5M (9-12mo); Phase 1 up to $50M/yr (24-36mo); Phase 2
+  variable. Six-point Autonomy Factor Test governs eligibility (decision
+  independence, funding control, research-direction control, IP ownership,
+  hiring autonomy, board independence) — maps to U10 (why-not-academia /
+  org-form-fit).
+
+primary_artifacts:
+  - id: written_proposal
+    name: Written Proposal
+    format: pdf
+    page_limit: 8
+    sections:
+      - heading: "1. Mission — novel platform technology, unmet by existing structures"
+        slots: [U01, U09.1, U09.2]
+      - heading: "2. Technology Landscape — SOTA analysis, quantitative figure recommended"
+        slots: [U02]
+      - heading: "3. Outcomes — 5-7yr measurable, high-impact scientific/technical benchmarks"
+        slots: [U03, U08.1]
+      - heading: "4. Senior/Key Personnel Qualifications"
+        slots: [U11.1, U11.2]
+      - heading: "5. Team Capabilities Statement — complementary expertise, governance, partnerships, capital"
+        slots: [U11.4, U11.6, U10.1, U10.3, U20.1]
+      - heading: "6. Conflicts of Interest"
+        slots: [A03.3]
+
+  - id: coi_statement
+    name: Conflict of Interest Statement
+    format: pdf
+    sections:
+      - heading: "COI disclosure and mitigation plan"
+        slots: [A03.3]
+    notes: Separate PDF; does not count toward the 8-page limit.
+
+  - id: oral_proposal_package
+    name: Oral Proposal Package (invitation only)
+    format: pdf
+    sections:
+      - heading: "Oral Presentation Slides — Mission, outcomes, Phase 0/1 activities, team, budget summary"
+        slots: [U01, U03, U07.2, U11, U06.5]
+      - heading: "Phase 0 Milestone Plan"
+        slots: [U07.1, U08.2]
+      - heading: "Senior/Key Personnel Disclosures (SciENcv)"
+        slots: [U11.1, U11.2, A04.2]
+      - heading: "Phase 0 Budget & Justification"
+        slots: [U06.1, U06.2]
+      - heading: "Letters of Collaboration"
+        slots: [A04.5]
+    notes: Written Proposal is not reconsidered — all content must appear in this package.
+
+  - id: phase0_milestones
+    name: Phase 0 Required Milestones (post-selection, pre-Phase-1-Go/No-Go)
+    format: docx
+    sections:
+      - heading: "Data Management and Privacy Plan"
+        slots: [U12.1, U12.2, U12.3, U15.4]
+        page_limit: 2
+      - heading: "IP Management Plan"
+        slots: [U15.1, U15.2, U15.5]
+      - heading: "Research Security Management Plan"
+        slots: [A03.4, U16.4]
+      - heading: "Governance Structure Plan (legal entity + Autonomy Factor Test)"
+        slots: [U10.1, U10.2, U19.2]
+      - heading: "Proposed Phase 1 Milestone Plan"
+        slots: [U07.1, U08.2]
+      - heading: "Proposed Phase 1 Budget (essential / mid-range / comprehensive tiers)"
+        slots: [U06.1, U06.5]
+      - heading: "Qualifications of Senior/Key Personnel (updated)"
+        slots: [U11.1, U11.2]
+
+render_targets:
+  - id: google_docs_written_proposal
+    kind: google_docs
+    doc_id_env: NSF_XLABS_WRITTEN_PROPOSAL_DOC_ID
+    mapping: written_proposal
+    notes: Primary authoring surface; final PDF built from Attachment A template.
+  - id: docxtpl_written_proposal
+    kind: docxtpl
+    template_path: ../../../../cytos/data/staged/grants/nsf_xlabs/nsf-otaso-fy26-xlabsinitiative-attachmenta.md
+    mapping: written_proposal
+  - id: quarto_review
+    kind: quarto
+    template_path: lib/quarto/nsf_xlabs_review.qmd
+    mapping: written_proposal
+
+eligibility_notes: |
+  Any domestic responsible entity; SAM-registered (www.sam.gov, allow 10
+  days). Autonomy Factor Test (6 conditions) must be demonstrable at
+  Phase 0 start: decision-making independence, full funding control, full
+  research-direction control, full IP ownership (no parent-institution IP
+  retention), full hiring autonomy, and an independent leadership board not
+  shared with any parent institution. Core leadership must be full-time by
+  Phase 1 start; Senior/Key Personnel listed on max 1 proposal per Topic.
+  Research-security exclusions per CHIPS Act apply (proscribed parties,
+  foreign entities of concern, malign foreign talent programs).
+
+submission_notes: |
+  Two-stage: Written Proposal (8pp, mandatory) -> Notice of Non-Selection or
+  invitation to Oral Proposal stage (invitation only, ~5 business days lead
+  time). Topic 2 (Sensing & Imaging) written-proposal deadline 2026-07-13,
+  5:00pm ET; questions due 2026-07-06. Max 2 proposals per org per Topic as
+  lead; Senior/Key Personnel on max 1. Selection criteria weighted roughly
+  equally across Team Qualifications & Structure and Mission Clarity &
+  Outcomes.
