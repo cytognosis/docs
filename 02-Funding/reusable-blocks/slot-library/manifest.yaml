@@ -246,6 +246,40 @@ funders:
     name: Y Combinator Nonprofit Program
     kind: accelerator
     file: funders/yc_nonprofit.yaml
+  arpah_program_iso:
+    name: ARPA-H Program-Specific ISO
+    kind: federal_OT
+    file: funders/arpah_program_iso.yaml
+    notes: Child of arpah_mission_office; program-specific technical-area (TA) requirements (PROSPR, DELPHI, EVIDENT).
+  nsf_xlabs:
+    name: NSF X-Labs Initiative
+    kind: federal_OT
+    file: funders/nsf_xlabs.yaml
+    notes: Successor solicitation to the nsf_tech_labs concept-stage RFI.
+  nsf_sbir_phase1:
+    name: NSF SBIR Phase I
+    kind: federal_grant
+    file: funders/nsf_sbir_phase1.yaml
+    planned: true
+    notes: Registry entry adopted 2026-07-16; funder file not yet built this pass.
+  nsf_sbir_phase2:
+    name: NSF SBIR Phase II
+    kind: federal_grant
+    file: funders/nsf_sbir_phase2.yaml
+    planned: true
+    notes: Registry entry adopted 2026-07-16; funder file not yet built this pass.
+  nsf_sbir_phase2b:
+    name: NSF SBIR Phase IIB
+    kind: federal_grant
+    file: funders/nsf_sbir_phase2b.yaml
+    planned: true
+    notes: Registry entry adopted 2026-07-16; funder file not yet built this pass.
+  nih_r21:
+    name: NIH R21 Exploratory/Developmental
+    kind: federal_grant
+    file: funders/nih_r21.yaml
+    planned: true
+    notes: Registry entry adopted 2026-07-16; funder file not yet built this pass.
 
 # -----------------------------------------------------------------------------
 # Funder kind registry (added in v1.1)
