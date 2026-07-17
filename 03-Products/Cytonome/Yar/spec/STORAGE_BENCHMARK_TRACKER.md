@@ -204,3 +204,11 @@ All of the above should be documented in the retest run notes.
 - `consolidation_2026-06-21/_storage/BENCHMARK_DIGEST.md` -- full benchmark deep-dive; this tracker summarizes it; refer to the digest for full SurrealDB apples-to-apples analysis.
 - `consolidation_2026-06-21/_storage/STORAGE_SYNC_DIGEST.md` -- architecture synthesis; this tracker is the living-status companion.
 - `consolidation_2026-06-21/_research/E_storage_sync_ingestion.md` -- SUPERSEDED by STORAGE_SYNC_DIGEST.md; retained for audit trail only.
+
+---
+
+## Related documents
+
+- [`SPEC-storage-engine.md`](./SPEC-storage-engine.md) -- the spec this tracker's status table implements (`depends_on`).
+- [`../benchmark/SURREALDB-PATCH11-VERDICT_2026-07-16.md`](../benchmark/SURREALDB-PATCH11-VERDICT_2026-07-16.md), [`../benchmark/SURREALDB-RETEST-REPORT_2026-07-16.md`](../benchmark/SURREALDB-RETEST-REPORT_2026-07-16.md) -- the 2026-07-16 evidence behind this tracker's latest refresh.
+- [`ANYSYNC-FIT-ASSESSMENT_2026-07-16.md`](./ANYSYNC-FIT-ASSESSMENT_2026-07-16.md) -- open sync-related decisions (O-series) cross-reference this assessment.

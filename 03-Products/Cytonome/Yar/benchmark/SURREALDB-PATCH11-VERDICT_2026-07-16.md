@@ -180,3 +180,12 @@ This is a **SurrealDB-reported condition**, not a benchmark harness bug — the 
 - Run logs: `/tmp/patch11_10k_run.log` (first attempt, fixed a bug mid-run), `/tmp/patch11_10k_run2.log` (clean final 10k run), `/tmp/patch11_100k_run.log`, `/tmp/patch11_100k_async_retry.log`, `/tmp/patch11_100k_async_retry2.log`
 
 **Note on the benchmark package:** `yar_supervisor_reproducible_benchmark_package/` is not a git repository, so the harness patches above are not committed anywhere (per instructions, only this report is committed, in the docs repo). If the package is git-initialized later, `yar_bench.py` and `docker-compose.yml` as they stand at the time of this report are the PATCH11 harness.
+
+---
+
+## Related documents
+
+- [`SURREALDB-RETEST-REPORT_2026-07-16.md`](./SURREALDB-RETEST-REPORT_2026-07-16.md) -- the retest this verdict closes out (see this doc's own "Supersedes" note).
+- [`../spec/SPEC-storage-engine.md`](../spec/SPEC-storage-engine.md) -- the storage-engine spec this verdict's decision D4 feeds.
+- [`../spec/STORAGE_BENCHMARK_TRACKER.md`](../spec/STORAGE_BENCHMARK_TRACKER.md) -- living status table updated by this verdict.
+- Benchmark package (external): `~/repos/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package/`.

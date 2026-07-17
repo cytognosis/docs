@@ -193,3 +193,11 @@ The module fails safe by failing **toward** help: any internal error, load failu
 - **PHI:** protected health information.
 
 </details>
+
+---
+
+## Related documents
+
+- [`privacy-boundary-spec.md`](./privacy-boundary-spec.md) -- this module's dependency (see `depends_on` front matter).
+- [`SAFETY-CHECKPOINT_2026-07-16.md`](./SAFETY-CHECKPOINT_2026-07-16.md) -- the checkpoint that closes this module and privacy-boundary together for post-YC resume.
+- CAP code path: `~/repos/cytognosis/yar_revisions/yar-code-20260705-2354/backend/cap/`.

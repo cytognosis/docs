@@ -119,3 +119,11 @@ Per the Yar feature catalog, the following features are gated on this workstream
 - Legacy source of the port: `Yar/src/cap/`
 - Cytoplex reusable components: `cytoplex/src/cytoplex/runtime/{local_pep,edge_pep,privacy_pdp,pdp_adapters}.py`
 - Feature catalog (safety-gated features): `feature-research/yar-unified-feature-comparison-v4.md` (F27, F36, F42, F48, F56, F62, F40, F28)
+
+---
+
+## Related documents
+
+- [`privacy-boundary-spec.md`](./privacy-boundary-spec.md), [`MODULE-crisis-detection.md`](./MODULE-crisis-detection.md) -- the two specs this checkpoint closes out; depends_on both.
+- CAP code path: `~/repos/cytognosis/yar_revisions/yar-code-20260705-2354/backend/cap/` (CapLiteGuard implementation this checkpoint governs).
+- [`../research/yar-feature-research-FINAL-simplified_2026-07-16.md`](../research/yar-feature-research-FINAL-simplified_2026-07-16.md) -- notes the 8 features gated on this checkpoint's two dependencies.

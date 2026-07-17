@@ -281,3 +281,11 @@ The `surrealdb_tuned` adapter on v3.1.5 confirmed:
 - Storage engine spec: `../spec/SPEC-storage-engine.md`
 - Storage benchmark tracker: `../spec/STORAGE_BENCHMARK_TRACKER.md`
 - Superseded originals (archived 2026-07-16): `../_archive/cleanup_2026-07-16/surrealdb/SURREALDB-ROOTCAUSE.md`, `../_archive/cleanup_2026-07-16/surrealdb/OPTIMIZATION-CHANGELOG.md`, `../_archive/cleanup_2026-07-16/surrealdb/BENCHMARK-REPORT.md`
+
+---
+
+## Related documents
+
+- [`SURREALDB-PATCH11-VERDICT_2026-07-16.md`](./SURREALDB-PATCH11-VERDICT_2026-07-16.md) -- closes the PATCH11 item this retest report left in progress.
+- [`../spec/SPEC-storage-engine.md`](../spec/SPEC-storage-engine.md), [`../spec/STORAGE_BENCHMARK_TRACKER.md`](../spec/STORAGE_BENCHMARK_TRACKER.md) -- the spec and living tracker this retest updates.
+- Benchmark package (external): `~/repos/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package/`.
