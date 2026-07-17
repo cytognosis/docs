@@ -197,3 +197,5 @@ Cross-grant compliance (Human Subjects readiness): `../../_support/Human_Subject
 - Rebuilt this INDEX.md as the single canonical artifact map.
 
 Open items still outside harmonization scope (per plan sections 5-6): IGoR per-award ceiling confirmation; Purdue HPC match letter; Cellanome R3200 quote and cost model; DataTecnica risk-row status; whether to add Phylo to TA2; Google-Docs reconciliation into the local canonical (SS + C.1-C.4 latest edits).
+
+- **Final submitted Solution Summary (Google Doc):** https://docs.google.com/document/d/12bxWF0ZkK7FVMOhsnlt4DijfRWkxDy0Wf7sR-ww85Fw/edit (submitted 2026-06-25; hand-edited by Shahin, read-only reference).

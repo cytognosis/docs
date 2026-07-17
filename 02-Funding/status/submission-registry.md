@@ -12,7 +12,7 @@
 
 | Program | Track / scope | Recipient | Approx amount | Applied | Status (2026-07-16) | Next / deadline | Folder (`docs/02-Funding/`) |
 |---|---|---|---|---|---|---|---|
-| **ARPA-H IGoR (PsychIGoR)** | Cytoverse + Cytonome | Org (Purdue-IPAI prime) | ~$42.9M / 60 mo | SS Jun 25 | **Pending / Active** | Full proposal **due Aug 13** | `submissions/Grants/ARPA-H/IGoR/` |
+| **ARPA-H IGoR (PsychIGoR)** | Cytoverse + Cytonome | Org (Purdue-IPAI prime) | ~$42.9M / 60 mo | SS Jun 25 | **Pending / Active** | Full proposal **due Aug 13**; [submitted SS](https://docs.google.com/document/d/12bxWF0ZkK7FVMOhsnlt4DijfRWkxDy0Wf7sR-ww85Fw/edit) | `submissions/Grants/ARPA-H/IGoR/` |
 | **Precision Psychiatry (ARPA-H Mission Office ISO)** | Cytoverse + Cytonome + Neuro | Org | TBD | — | **Planned (build now)** | ISO rolling; verify | `submissions/Grants/ARPA-H/PrecisionPsychiatry-ISO/` (new) |
 | **Convergent Research FRO** | Cytoverse | FRO | FRO scale | — | **Planned (build now)** | rolling | `submissions/Grants/Convergent/` (new) |
 | ARPA-H HSF / EVIDENT | Cytoverse | Org | large | — | Draft | rolling | `submissions/Grants/ARPA-H/HSF/` |
@@ -26,7 +26,7 @@
 | Google for Startups Cloud | Operational | Org (credits) | credits | May 7 | **Rejected** (May 11) | nonprofit ineligible after call | `submissions/Applications/Google-Cloud/` (create) |
 | Google.org Impact: AI for Science | Cytoverse | Org | program | May 1 | **Pending** | invitation-only next stage, rolling | `submissions/Grants/Google/` |
 | Foresight AI for Science & Safety Nodes | Cytonome | Org | node | resubmitted May 31 | **Pending (2nd round)** | R1 declined Apr 14 | `submissions/Applications/Foresight/` |
-| Claude Corps / Anthropic AI for Science | Cytoverse + Neuro | Org | credits / program | — | **Prep now (draft exists)** | **deadline Jul 17** | `submissions/Applications/Anthropics/AI for Science Program/` |
+| Claude Corps (Anthropic) | Cytoverse + Neuro | Org | fellowship (2 fellows) | Jul 17 | **Submitted (Jul 17)** | decision late Aug 2026; [final doc](https://docs.google.com/document/d/1Hi7u-nqOPtnWwhF8mGXKvUworpECbjZN6Qy60Nqx6Rk/edit) | `submissions/Applications/Anthropics/` |
 | ElevenLabs | Cytonome / Yar | Org | credits / program | — | Not applied (draft) | — | `submissions/Applications/ElevenLabs/` |
 | EA LTFF | Cytonome | Individual or org | ~$75-125K | — | Near-final (to submit) | rolling | `submissions/Applications/EA/` |
 | Manifund | Cytonome | Org or individual | $15-30K | — | No draft | rolling | `submissions/Applications/Manifund/` (create) |
@@ -40,6 +40,7 @@
 - **Rejected:** Google for Startups Cloud (May 11; nonprofit ineligibility after a call), Biswas Fast Grant (Jul 1; reapply Dec 16), Coefficient Career Dev & Transition (Jul 12), AWS Imagine (Jul 13; not invited to Round Two), NVIDIA Inception (prior), qb3 mentorship (prior).
 - **Missed deadline:** NSF X-Labs / Psychoscope (Jul 13; Herve non-response), Grand Challenge Aging Reimagined / Lilly-Nucleate.
 - **Pending:** ARPA-H IGoR SS (submitted Jun 25; full proposal in progress), Google.org Impact AI for Science (submitted May 1), Foresight Nodes (2nd round since May 31).
+- **Submitted:** Claude Corps (Jul 17, final doc after Ananth edits); IGoR Solution Summary (Jun 25).
 - **Not yet applied (draft only):** Coefficient Capacity Building, ElevenLabs, Anthropic AI for Science.
 
 ## Next priorities to prep
@@ -72,7 +73,7 @@ Full landscape and machine-readable rows: `../funding-opportunities/OPPORTUNITY_
 
 | Deadline | Program | Status | Folder |
 |---|---|---|---|
-| **Jul 17 (tomorrow)** | Claude Corps / Anthropic AI for Science | Prep to submit-ready now | `submissions/Applications/Anthropics/` |
+| Jul 17 DONE | Claude Corps (Anthropic) | **SUBMITTED Jul 17** | `submissions/Applications/Anthropics/` |
 | **Jul 26** | Fast Forward Academy ($10K; verify Jul 17 vs 26) | Prep now; strong 501(c)(3) fit | `submissions/Applications/FastForward/` (create) |
 | **Jul 27** | Y Combinator Fall 2026 (8pm PT) | Prep now; PBC path; un-park | `submissions/Applications/YC/` |
 

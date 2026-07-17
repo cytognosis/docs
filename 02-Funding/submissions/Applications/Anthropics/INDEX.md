@@ -38,3 +38,5 @@ Claude for Nonprofits is confirmed (Question 14 = Yes). Hybrid 3-day office mode
 - **Deadline:** Rolling, no fixed cutoff found; not the Jul 17 deadline.
 - **Draft:** `AI for Science Program/Anthropic_AI_for_Science_Application_2026.md`
 - **Status:** Draft only, unconfirmed submission decision, credit ceiling and exact form fields not yet re-verified against a live form (the form was not scrapable as of the last pass). Sequence this after Claude Corps and other deadline-critical applications.
+
+- **SUBMITTED (Claude Corps):** 2026-07-17. Final responses after Ananth edits: https://docs.google.com/document/d/1Hi7u-nqOPtnWwhF8mGXKvUworpECbjZN6Qy60Nqx6Rk/edit
