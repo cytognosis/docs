@@ -12,7 +12,7 @@
 
 | Program | Track / scope | Recipient | Approx amount | Applied | Status (2026-07-16) | Next / deadline | Folder (`docs/02-Funding/`) |
 |---|---|---|---|---|---|---|---|
-| **ARPA-H IGoR (PsychIGoR)** | Cytoverse + Cytonome | Org (Purdue-IPAI prime) | ~$42.9M / 60 mo | SS Jun 25 | **Pending / Active** | Full proposal **due Aug 13**; [submitted SS](https://docs.google.com/document/d/12bxWF0ZkK7FVMOhsnlt4DijfRWkxDy0Wf7sR-ww85Fw/edit) | `submissions/Grants/ARPA-H/IGoR/` |
+| **ARPA-H IGoR (PsychIGoR)** | Cytoverse + Cytonome | Org (Purdue-IPAI prime) | ~$51.5M / 60 mo | SS Jun 25 | **Pending / Active** | Full proposal **due Aug 13**; [submitted SS](https://docs.google.com/document/d/12bxWF0ZkK7FVMOhsnlt4DijfRWkxDy0Wf7sR-ww85Fw/edit) | `submissions/Grants/ARPA-H/IGoR/` |
 | **Precision Psychiatry (ARPA-H Mission Office ISO)** | Cytoverse + Cytonome + Neuro | Org | TBD | — | **Planned (build now)** | ISO rolling; verify | `submissions/Grants/ARPA-H/PrecisionPsychiatry-ISO/` (new) |
 | **Convergent Research FRO** | Cytoverse | FRO | FRO scale | — | **Planned (build now)** | rolling | `submissions/Grants/Convergent/` (new) |
 | ARPA-H HSF / EVIDENT | Cytoverse | Org | large | — | Draft | rolling | `submissions/Grants/ARPA-H/HSF/` |
