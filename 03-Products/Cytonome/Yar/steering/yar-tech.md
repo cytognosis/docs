@@ -26,7 +26,7 @@ last_updated: 2026-05-29
 | Desktop | Tauri | — | Lightweight desktop shell (planned) |
 | Extension | Chrome MV3 | — | Browser extension for web capture (planned) |
 | Voice STT | Whisper | — | Speech-to-text transcription |
-| Voice TTS | ElevenLabs | — | Text-to-speech synthesis with affect |
+| Voice TTS | Kokoro (on-device) | 82M | Text-to-speech synthesis with affect; ElevenLabs is design-time voice-design tooling only, not a runtime dependency (see `spec/SPEC-personas-voice.md`) |
 | On-device LLM | Gemma | — | Local model routing for privacy-first inference |
 | Validation | Pydantic | >=2.7.0 | Request/response model validation |
 | HTTP Client | httpx | >=0.27.0 | Async HTTP for integrations |
@@ -62,7 +62,7 @@ Microphone → Whisper STT → Intent Classification → Model Router
                                             │ Cloud (API)        │
                                             └─────────┬──────────┘
                                                       ↓
-                                            Response → ElevenLabs TTS → Speaker
+                                            Response → Kokoro TTS (on-device) → Speaker
 ```
 
 ### Key Design Decisions

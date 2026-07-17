@@ -39,7 +39,7 @@ Yar is a cognitive companion built by neurodivergent minds, for everyone. It cap
 
 ## Roadmap Priorities (Current Quarter)
 
-1. Stabilize voice capture pipeline (Whisper STT, ElevenLabs TTS, affect detection)
+1. Stabilize voice capture pipeline (Whisper STT, Kokoro TTS on-device, affect detection; ElevenLabs remains design-time voice-design tooling only)
 2. Ship Anytype integration for bi-directional knowledge sync
 3. Implement CAP-governed agent communication for supervisor/interviewer flows
 4. Harden semantic search with contextual retrieval using embedding-based similarity

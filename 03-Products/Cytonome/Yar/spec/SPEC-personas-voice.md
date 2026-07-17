@@ -21,6 +21,8 @@ implements: [CAP]
 
 > **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/SPEC-personas-voice_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
 
+> **Naming disambiguation:** "Persona" here means the **Voice Persona** — the app companion's switchable character and TTS voice (Steady, Curious, Anchor, etc.), governed by CAP. This is a distinct concept from the **Trait Profiler** (`research/persona_profiler_frameworks_reference.md`, `research/persona_profiler_schema.yaml`), which models a person's own personality, values, and traits for cofounder/collaborator matching and social-interaction mood tracking. Do not conflate the two.
+
 **Reading time**: ~14 minutes.
 **If you only read one thing**: Section 3 (persona model with LinkML schema) and Section 5 (voice layer). Personas are CAP-governed character configurations that determine how Yar speaks to the user. A persona is NOT an autonomous agent — it is a structured style envelope applied by the Interviewer worker, modulated in real time by CSP signals (mood, distress, cognitive load), and persisted as CRDT operations. The current v0.1 voice path uses Kokoro (implemented); ElevenLabs integration is planned but not yet built.
 

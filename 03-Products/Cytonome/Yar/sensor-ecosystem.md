@@ -6,6 +6,8 @@
 
 # Sensor Ecosystem and Universal Biosensor Adapter Protocol (UBAP)
 
+> **Naming cross-reference:** this Strategy-level document uses **UBAP** (Universal Biosensor Adapter Protocol), the same underlying open sensor-adapter protocol that Yar engineering specs call **CSP** (Cytonome Sensor Protocol, formerly drafted as USAP/UBAP). UBAP is kept here because it is tied to Strategic Initiative `SI-UBAP-v1`, tracked across `01-Strategy/planning/`; do not rename it locally without updating those cross-references too. See `spec/SPEC-CSP.md` for the canonical CSP spec.
+
 **Companion to:** `10_platform_architecture.md`, `12_clinical_to_wearable.md`, `15_app_design.md`
 
 Cytoscope is not one device. It is a universal interface plus a specific lineage of hardware we develop directly or co-develop with partners. The interface is open; the standard is owned by the Foundation; specific hardware implementations may be open or proprietary depending on the partner.

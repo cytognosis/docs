@@ -1,6 +1,10 @@
 id: https://cytognosis.org/schema/persona
 name: persona_profiler
 title: Cytognosis Persona Profiler Schema
+# Naming disambiguation: "persona" in this schema means the Trait Profiler (a real
+# person's own personality/values/traits, for cofounder matching and social-interaction
+# mood tracking). This is a distinct concept from the Voice Persona in
+# spec/SPEC-personas-voice.md (Yar's app companion's switchable character and TTS voice).
 description: >-
   A LinkML schema for representing a person's personality, dark-side traits, values,
   motivation and goals, vocational interests, character strengths, affect, and wellbeing,

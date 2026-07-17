@@ -1,5 +1,7 @@
 # Persona Profiler: Frameworks, Standards, and Schema Reference
 
+> **Naming disambiguation:** "Persona" here means the **Trait Profiler** — a model of a real person's own personality, values, and traits, used for cofounder/collaborator matching and for tracking how social interactions with different persona types affect a Yar user's mood and cognition. This is a distinct concept from the **Voice Persona** (`spec/SPEC-personas-voice.md`), which is Yar's app companion's switchable character and TTS voice. Do not conflate the two.
+
 > **Status**: Active
 > **Date**: 2026-07-10
 > **Author**: @shahin

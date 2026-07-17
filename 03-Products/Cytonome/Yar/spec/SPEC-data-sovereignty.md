@@ -1,7 +1,7 @@
 ---
 spec_id: SPEC-data-sovereignty
 version: "0.1"
-status: draft
+status: active
 domain: privacy-security
 owner: Shahin Mohammadi
 created: 2026-07-06
