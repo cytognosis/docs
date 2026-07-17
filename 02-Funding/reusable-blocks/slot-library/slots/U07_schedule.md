@@ -11,7 +11,7 @@ required_by:
   - astera_residency
   - foresight_nodes
   - google_impact_challenge
-  - yc_nonprofit
+  - yc_s26_pbc
 useful_for:
   - brains_accelerator
 sub_slots:
@@ -33,7 +33,7 @@ sub_slots:
       - google_impact_challenge.Q44
       - astera_residency.Q7
       - foresight_nodes.F18
-      - yc_nonprofit.YC30
+      - yc_s26_pbc.YC30
       - nsf_tech_labs.Q4b
       - arpah_mission_office.tech_mgmt_proposal
       - doe_genesis.narrative_3
@@ -48,8 +48,8 @@ sub_slots:
       - google_impact_challenge.Q47
       - astera_residency.Q2
       - foresight_nodes.F18
-      - yc_nonprofit.YC30
-      - yc_nonprofit.YC31
+      - yc_s26_pbc.YC30
+      - yc_s26_pbc.YC31
       - arpah_mission_office.tech_mgmt_proposal
       - doe_genesis.narrative_3
   - id: U07.4

@@ -41,46 +41,46 @@ slots:
     name: Objective, in plain language
     family: heilmeier_core
     file: slots/U01_objective.md
-    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_nonprofit]
+    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_s26_pbc]
   U02:
     name: State of the art & its limits
     family: heilmeier_core
     file: slots/U02_sota_and_limits.md
-    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_nonprofit]
+    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_s26_pbc]
   U03:
     name: Novelty & approach
     family: heilmeier_core
     file: slots/U03_novelty_and_approach.md
-    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_nonprofit]
+    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_s26_pbc]
   U04:
     name: Stakes & beneficiaries
     family: heilmeier_core
     file: slots/U04_stakes_and_beneficiaries.md
-    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_nonprofit]
+    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_s26_pbc]
   U05:
     name: Risks
     family: heilmeier_core
     file: slots/U05_risks.md
     required_by: [heilmeier, nih_r01, arpah_mission_office, doe_genesis, brains_accelerator, foresight_nodes, google_impact_challenge]
-    useful_for: [nsf_tech_labs, astera_residency, yc_nonprofit]
+    useful_for: [nsf_tech_labs, astera_residency, yc_s26_pbc]
   U06:
     name: Cost
     family: heilmeier_core
     file: slots/U06_cost.md
-    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, foresight_nodes, google_impact_challenge, yc_nonprofit]
+    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, foresight_nodes, google_impact_challenge, yc_s26_pbc]
     useful_for: [brains_accelerator]
   U07:
     name: Schedule
     family: heilmeier_core
     file: slots/U07_schedule.md
-    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, foresight_nodes, google_impact_challenge, yc_nonprofit]
+    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, foresight_nodes, google_impact_challenge, yc_s26_pbc]
     useful_for: [brains_accelerator]
   U08:
     name: Mid-term & final exams (quantitative go/no-go)
     family: heilmeier_core
     file: slots/U08_exams_and_gates.md
     required_by: [heilmeier, nih_r01, arpah_mission_office, doe_genesis, brains_accelerator, foresight_nodes, google_impact_challenge]
-    useful_for: [nsf_tech_labs, astera_residency, yc_nonprofit]
+    useful_for: [nsf_tech_labs, astera_residency, yc_s26_pbc]
 
   # ---- Extensions ----
   U09:
@@ -88,72 +88,72 @@ slots:
     family: extensions
     file: slots/U09_opportunity_space.md
     required_by: [brains_accelerator, nsf_tech_labs, arpah_mission_office, doe_genesis]
-    useful_for: [astera_residency, foresight_nodes, google_impact_challenge, yc_nonprofit, nih_r01]
+    useful_for: [astera_residency, foresight_nodes, google_impact_challenge, yc_s26_pbc, nih_r01]
   U10:
     name: Why-not-academia / why-not-for-profit / why-Cytognosis
     family: extensions
     file: slots/U10_org_form_fit.md
     required_by: [astera_residency, brains_accelerator, nsf_tech_labs]
-    useful_for: [foresight_nodes, arpah_mission_office, doe_genesis, google_impact_challenge, yc_nonprofit, nih_r01]
+    useful_for: [foresight_nodes, arpah_mission_office, doe_genesis, google_impact_challenge, yc_s26_pbc, nih_r01]
   U11:
     name: Team & founder fit
     family: extensions
     file: slots/U11_team_fit.md
-    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_nonprofit]
+    required_by: [heilmeier, nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_s26_pbc]
   U12:
     name: Open science & openness commitments
     family: extensions
     file: slots/U12_open_science.md
     required_by: [astera_residency, foresight_nodes, google_impact_challenge, nsf_tech_labs, doe_genesis]
-    useful_for: [nih_r01, arpah_mission_office, brains_accelerator, yc_nonprofit]
+    useful_for: [nih_r01, arpah_mission_office, brains_accelerator, yc_s26_pbc]
   U13:
     name: Equity, accessibility, workforce
     family: extensions
     file: slots/U13_equity_access.md
     required_by: [arpah_mission_office, google_impact_challenge]
-    useful_for: [nih_r01, astera_residency, brains_accelerator, foresight_nodes, doe_genesis, yc_nonprofit, nsf_tech_labs]
+    useful_for: [nih_r01, astera_residency, brains_accelerator, foresight_nodes, doe_genesis, yc_s26_pbc, nsf_tech_labs]
   U14:
     name: Responsible AI / AI safety
     family: extensions
     file: slots/U14_responsible_ai.md
     required_by: [foresight_nodes, google_impact_challenge, arpah_mission_office]
-    useful_for: [nsf_tech_labs, astera_residency, brains_accelerator, doe_genesis, yc_nonprofit, nih_r01]
+    useful_for: [nsf_tech_labs, astera_residency, brains_accelerator, doe_genesis, yc_s26_pbc, nih_r01]
   U15:
     name: IP & data governance
     family: extensions
     file: slots/U15_ip_and_data.md
     required_by: [foresight_nodes, nsf_tech_labs, arpah_mission_office, doe_genesis, google_impact_challenge]
-    useful_for: [nih_r01, astera_residency, brains_accelerator, yc_nonprofit]
+    useful_for: [nih_r01, astera_residency, brains_accelerator, yc_s26_pbc]
   U16:
     name: Regulatory, dual-use & biosecurity
     family: extensions
     file: slots/U16_regulatory_biosecurity.md
-    required_by: [arpah_mission_office, doe_genesis, yc_nonprofit]
+    required_by: [arpah_mission_office, doe_genesis, yc_s26_pbc]
     useful_for: [nih_r01, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, nsf_tech_labs]
   U17:
     name: End-user narrative / adoption / transition-to-practice
     family: extensions
     file: slots/U17_adoption_transition.md
-    required_by: [arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, nsf_tech_labs, google_impact_challenge, yc_nonprofit]
+    required_by: [arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, nsf_tech_labs, google_impact_challenge, yc_s26_pbc]
     useful_for: [nih_r01, foresight_nodes]
   U18:
     name: Translation-to-Mission (Market · Manufacturing · IP · Funding)
     family: extensions
     file: slots/U18_translation_to_mission.md
-    required_by: [arpah_mission_office, doe_genesis, nsf_tech_labs, yc_nonprofit]
+    required_by: [arpah_mission_office, doe_genesis, nsf_tech_labs, yc_s26_pbc]
     useful_for: [nih_r01, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge]
   U19:
     name: Sustainability / transition / sunset
     family: extensions
     file: slots/U19_sustainability.md
-    required_by: [foresight_nodes, google_impact_challenge, arpah_mission_office, doe_genesis, yc_nonprofit]
+    required_by: [foresight_nodes, google_impact_challenge, arpah_mission_office, doe_genesis, yc_s26_pbc]
     useful_for: [nih_r01, nsf_tech_labs, astera_residency, brains_accelerator]
   U20:
     name: Partnerships, ecosystem, consortium
     family: extensions
     file: slots/U20_partnerships.md
     required_by: [foresight_nodes, nsf_tech_labs, arpah_mission_office, doe_genesis, google_impact_challenge]
-    useful_for: [nih_r01, astera_residency, brains_accelerator, yc_nonprofit]
+    useful_for: [nih_r01, astera_residency, brains_accelerator, yc_s26_pbc]
 
   # ---- Counterfactual & Theory-of-change (added in v1.1) ----
   U21:
@@ -176,29 +176,29 @@ slots:
     name: Organizational identity
     family: administrative
     file: slots/A01_org_identity.md
-    required_by: [nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_nonprofit]
+    required_by: [nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_s26_pbc]
   A02:
     name: Points of contact
     family: administrative
     file: slots/A02_points_of_contact.md
-    required_by: [nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_nonprofit]
+    required_by: [nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator, foresight_nodes, google_impact_challenge, yc_s26_pbc]
   A03:
     name: Eligibility & compliance
     family: administrative
     file: slots/A03_eligibility_compliance.md
-    required_by: [arpah_mission_office, doe_genesis, google_impact_challenge, yc_nonprofit]
+    required_by: [arpah_mission_office, doe_genesis, google_impact_challenge, yc_s26_pbc]
     useful_for: [nih_r01, nsf_tech_labs, astera_residency, brains_accelerator, foresight_nodes]
   A04:
     name: Supplementary artifacts
     family: administrative
     file: slots/A04_supplementary_artifacts.md
-    required_by: [astera_residency, brains_accelerator, foresight_nodes, yc_nonprofit, arpah_mission_office, doe_genesis]
+    required_by: [astera_residency, brains_accelerator, foresight_nodes, yc_s26_pbc, arpah_mission_office, doe_genesis]
     useful_for: [nih_r01, nsf_tech_labs, google_impact_challenge]
   A05:
     name: Intake meta
     family: administrative
     file: slots/A05_intake_meta.md
-    required_by: [google_impact_challenge, foresight_nodes, yc_nonprofit]
+    required_by: [google_impact_challenge, foresight_nodes, yc_s26_pbc]
     useful_for: [nih_r01, nsf_tech_labs, arpah_mission_office, doe_genesis, astera_residency, brains_accelerator]
 
 # -----------------------------------------------------------------------------
@@ -242,10 +242,11 @@ funders:
     name: Google.org AI Impact Challenge
     kind: private_grant
     file: funders/google_impact_challenge.yaml
-  yc_nonprofit:
-    name: Y Combinator Nonprofit Program
+  yc_s26_pbc:
+    name: Y Combinator Summer 2026 (for-profit PBC)
     kind: accelerator
-    file: funders/yc_nonprofit.yaml
+    file: funders/yc_s26_pbc.yaml
+    notes: Renamed from yc_nonprofit 2026-07-16 — YC S26 is a for-profit Public Benefit Corporation track, not the nonprofit program.
   arpah_program_iso:
     name: ARPA-H Program-Specific ISO
     kind: federal_OT

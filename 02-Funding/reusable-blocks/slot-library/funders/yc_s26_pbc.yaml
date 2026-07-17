@@ -1,8 +1,14 @@
-funder_id: yc_nonprofit
-display_name: Y Combinator Nonprofit Program
+funder_id: yc_s26_pbc
+display_name: Y Combinator Summer 2026 (for-profit PBC)
 kind: accelerator
 version: "2026.1"
 source_doc: ../extracted_questions_applications.md
+notes: |
+  Renamed from yc_nonprofit 2026-07-16. YC Summer 2026 is a for-profit
+  Public Benefit Corporation (PBC) application, not the YC Nonprofit
+  Program — the old id/name was misleading. Section content and question
+  mapping below is inherited unchanged from the prior yc_nonprofit config;
+  review for any nonprofit-specific language before the S26 submission.
 
 primary_artifacts:
   - id: application_form
@@ -60,5 +66,5 @@ render_targets:
     notes: Authored in Google Docs; copy-pasted into YC web form at submission.
   - id: quarto_review
     kind: quarto
-    template_path: lib/quarto/yc_nonprofit_review.qmd
+    template_path: lib/quarto/yc_s26_pbc_review.qmd
     mapping: application_form

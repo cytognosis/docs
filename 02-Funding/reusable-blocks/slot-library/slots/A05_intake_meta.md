@@ -4,7 +4,7 @@ slot_name: Intake meta
 required_by:
   - google_impact_challenge
   - foresight_nodes
-  - yc_nonprofit
+  - yc_s26_pbc
 useful_for:
   - nih_r01
   - nsf_tech_labs
@@ -27,14 +27,14 @@ sub_slots:
     max_chars: null
     funder_hooks:
       - foresight_nodes.F35
-      - yc_nonprofit.YC37
+      - yc_s26_pbc.YC37
   - id: A05.3
     name: Expedited review / batch preference
     max_words: 60
     max_chars: null
     funder_hooks:
       - foresight_nodes.F36
-      - yc_nonprofit.YC38
+      - yc_s26_pbc.YC38
 cytognosis_anchor: "Intake metadata — filled at submission time per funder; tracked in application CRM"
 last_reviewed: 2026-04-23
 owner: mohammadi@cytognosis.org

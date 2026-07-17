@@ -5,7 +5,7 @@ required_by:
   - astera_residency
   - brains_accelerator
   - foresight_nodes
-  - yc_nonprofit
+  - yc_s26_pbc
   - arpah_mission_office
   - doe_genesis
 useful_for:
@@ -19,9 +19,9 @@ sub_slots:
     max_chars: null
     funder_hooks:
       - astera_residency.video
-      - yc_nonprofit.YC10
-      - yc_nonprofit.YC11
-      - yc_nonprofit.YC12
+      - yc_s26_pbc.YC10
+      - yc_s26_pbc.YC11
+      - yc_s26_pbc.YC12
   - id: A04.2
     name: Founder / team resumes
     max_words: 60
@@ -37,9 +37,9 @@ sub_slots:
     max_words: 60
     max_chars: null
     funder_hooks:
-      - yc_nonprofit.YC10
-      - yc_nonprofit.YC11
-      - yc_nonprofit.YC12
+      - yc_s26_pbc.YC10
+      - yc_s26_pbc.YC11
+      - yc_s26_pbc.YC12
   - id: A04.4
     name: Bibliography / publication list
     max_words: 60

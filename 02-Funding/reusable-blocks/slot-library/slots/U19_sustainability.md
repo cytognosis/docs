@@ -6,7 +6,7 @@ required_by:
   - google_impact_challenge
   - arpah_mission_office
   - doe_genesis
-  - yc_nonprofit
+  - yc_s26_pbc
 useful_for:
   - nih_r01
   - nsf_tech_labs
@@ -19,7 +19,7 @@ sub_slots:
     max_chars: null
     funder_hooks:
       - google_impact_challenge.Q34a
-      - yc_nonprofit.YC26
+      - yc_s26_pbc.YC26
       - foresight_nodes.F19
   - id: U19.2
     name: Operating-entity continuity

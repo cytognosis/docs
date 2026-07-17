@@ -8,7 +8,7 @@ required_by:
   - brains_accelerator
   - nsf_tech_labs
   - google_impact_challenge
-  - yc_nonprofit
+  - yc_s26_pbc
 useful_for:
   - nih_r01
   - foresight_nodes
@@ -33,12 +33,12 @@ sub_slots:
     max_chars: null
     funder_hooks:
       - astera_residency.Q5
-      - yc_nonprofit.YC16
-      - yc_nonprofit.YC17
-      - yc_nonprofit.YC18
-      - yc_nonprofit.YC19
-      - yc_nonprofit.YC20
-      - yc_nonprofit.YC21
+      - yc_s26_pbc.YC16
+      - yc_s26_pbc.YC17
+      - yc_s26_pbc.YC18
+      - yc_s26_pbc.YC19
+      - yc_s26_pbc.YC20
+      - yc_s26_pbc.YC21
   - id: U17.4
     name: Switching cost vs. status quo
     max_words: 200

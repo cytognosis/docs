@@ -10,7 +10,7 @@ required_by:
   - brains_accelerator
   - foresight_nodes
   - google_impact_challenge
-  - yc_nonprofit
+  - yc_s26_pbc
 sub_slots:
   - id: A01.1
     name: Legal name, EIN, classification
@@ -20,12 +20,12 @@ sub_slots:
       - google_impact_challenge.Q1
       - google_impact_challenge.Q2
       - google_impact_challenge.Q3
-      - yc_nonprofit.YC14
-      - yc_nonprofit.YC15
-      - yc_nonprofit.YC33
-      - yc_nonprofit.YC34
-      - yc_nonprofit.YC35
-      - yc_nonprofit.YC36
+      - yc_s26_pbc.YC14
+      - yc_s26_pbc.YC15
+      - yc_s26_pbc.YC33
+      - yc_s26_pbc.YC34
+      - yc_s26_pbc.YC35
+      - yc_s26_pbc.YC36
       - foresight_nodes.F3
       - doe_genesis.sf424
       - nsf_tech_labs.Q1

@@ -12,7 +12,7 @@ required_by:
   - brains_accelerator
   - foresight_nodes
   - google_impact_challenge
-  - yc_nonprofit
+  - yc_s26_pbc
 sub_slots:
   - id: U02.1
     name: Current-practice narrative
@@ -26,7 +26,7 @@ sub_slots:
       - foresight_nodes.F16
       - arpah_mission_office.appendix_a_2
       - doe_genesis.narrative_1
-      - yc_nonprofit.YC25
+      - yc_s26_pbc.YC25
   - id: U02.2
     name: Gaps, bottlenecks, failure modes of SOTA
     max_words: 400
@@ -40,7 +40,7 @@ sub_slots:
       - foresight_nodes.F16
       - arpah_mission_office.appendix_a_2
       - doe_genesis.narrative_1
-      - yc_nonprofit.YC24
+      - yc_s26_pbc.YC24
   - id: U02.3
     name: Why the gap persists
     max_words: 300

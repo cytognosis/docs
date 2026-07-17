@@ -5,7 +5,7 @@ required_by:
   - arpah_mission_office
   - doe_genesis
   - google_impact_challenge
-  - yc_nonprofit
+  - yc_s26_pbc
 useful_for:
   - nih_r01
   - nsf_tech_labs
@@ -21,8 +21,8 @@ sub_slots:
       - google_impact_challenge.Q48
       - google_impact_challenge.Q49
       - google_impact_challenge.Q50
-      - yc_nonprofit.YC33
-      - yc_nonprofit.YC34
+      - yc_s26_pbc.YC33
+      - yc_s26_pbc.YC34
       - doe_genesis.compliance
       - arpah_mission_office.cost_proposal
   - id: A03.2
@@ -32,8 +32,8 @@ sub_slots:
     funder_hooks:
       - google_impact_challenge.Q51
       - google_impact_challenge.Q52
-      - yc_nonprofit.YC35
-      - yc_nonprofit.YC36
+      - yc_s26_pbc.YC35
+      - yc_s26_pbc.YC36
   - id: A03.3
     name: Prior SBIR / federal funding history
     max_words: 200

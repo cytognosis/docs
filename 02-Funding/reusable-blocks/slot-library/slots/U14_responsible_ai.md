@@ -10,7 +10,7 @@ useful_for:
   - astera_residency
   - brains_accelerator
   - doe_genesis
-  - yc_nonprofit
+  - yc_s26_pbc
   - nih_r01
 sub_slots:
   - id: U14.1

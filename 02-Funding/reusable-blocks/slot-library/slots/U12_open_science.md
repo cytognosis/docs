@@ -11,7 +11,7 @@ useful_for:
   - nih_r01
   - arpah_mission_office
   - brains_accelerator
-  - yc_nonprofit
+  - yc_s26_pbc
 sub_slots:
   - id: U12.1
     name: Output inventory

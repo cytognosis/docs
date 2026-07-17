@@ -11,7 +11,7 @@ useful_for:
   - nih_r01
   - astera_residency
   - brains_accelerator
-  - yc_nonprofit
+  - yc_s26_pbc
 sub_slots:
   - id: U20.1
     name: Strategic partners
@@ -52,7 +52,7 @@ sub_slots:
     max_words: 200
     max_chars: null
     funder_hooks:
-      - yc_nonprofit.YC23
+      - yc_s26_pbc.YC23
       - doe_genesis.current_and_pending
       - nsf_tech_labs.Q3a.v
 cytognosis_anchor: "Delphi collaboration roster; clinical-site partners; philanthropy and federal prior-relationship map"

@@ -5,7 +5,7 @@ required_by:
   - arpah_mission_office
   - doe_genesis
   - nsf_tech_labs
-  - yc_nonprofit
+  - yc_s26_pbc
 useful_for:
   - nih_r01
   - astera_residency
@@ -18,7 +18,7 @@ sub_slots:
     max_words: 300
     max_chars: null
     funder_hooks:
-      - yc_nonprofit.YC26
+      - yc_s26_pbc.YC26
       - arpah_mission_office.tech_mgmt_proposal
       - doe_genesis.narrative_4
   - id: U18.2

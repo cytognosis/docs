@@ -12,7 +12,7 @@ required_by:
   - brains_accelerator
   - foresight_nodes
   - google_impact_challenge
-  - yc_nonprofit
+  - yc_s26_pbc
 sub_slots:
   - id: U03.1
     name: Core insight / thesis of novelty
@@ -27,7 +27,7 @@ sub_slots:
       - foresight_nodes.F16
       - arpah_mission_office.appendix_a_3
       - doe_genesis.narrative_2
-      - yc_nonprofit.YC29
+      - yc_s26_pbc.YC29
   - id: U03.2
     name: Technical approach (tools, models, methods, data, hardware)
     max_words: 600
@@ -42,8 +42,8 @@ sub_slots:
       - doe_genesis.narrative_2
       - doe_genesis.narrative_3
       - nsf_tech_labs.Q3a.i
-      - yc_nonprofit.YC13
-      - yc_nonprofit.YC29
+      - yc_s26_pbc.YC13
+      - yc_s26_pbc.YC29
   - id: U03.3
     name: Why it will work now (enabling conditions)
     max_words: 300
@@ -65,13 +65,13 @@ sub_slots:
       - google_impact_challenge.Q17c
       - google_impact_challenge.Q28
       - astera_residency.Q3
-      - yc_nonprofit.YC16
-      - yc_nonprofit.YC17
-      - yc_nonprofit.YC18
-      - yc_nonprofit.YC19
-      - yc_nonprofit.YC20
-      - yc_nonprofit.YC21
-      - yc_nonprofit.YC32
+      - yc_s26_pbc.YC16
+      - yc_s26_pbc.YC17
+      - yc_s26_pbc.YC18
+      - yc_s26_pbc.YC19
+      - yc_s26_pbc.YC20
+      - yc_s26_pbc.YC21
+      - yc_s26_pbc.YC32
   - id: U03.5
     name: Alternative strategies & fallback plans
     max_words: 300

@@ -11,7 +11,7 @@ required_by:
   - astera_residency
   - foresight_nodes
   - google_impact_challenge
-  - yc_nonprofit
+  - yc_s26_pbc
 useful_for:
   - brains_accelerator
 sub_slots:
@@ -63,7 +63,7 @@ sub_slots:
       - google_impact_challenge.Q41
       - google_impact_challenge.Q42
       - foresight_nodes.F30
-      - yc_nonprofit.YC31
+      - yc_s26_pbc.YC31
       - arpah_mission_office.cost_proposal
       - doe_genesis.budget_justification
   - id: U06.4
@@ -82,8 +82,8 @@ sub_slots:
       - heilmeier.Q6
       - foresight_nodes.F31
       - nsf_tech_labs.Q4e
-      - yc_nonprofit.YC30
-      - yc_nonprofit.YC26
+      - yc_s26_pbc.YC30
+      - yc_s26_pbc.YC26
 cytognosis_anchor: "Total ask keyed to H1/H2/H3 phased budget; personnel + compute + wet-lab + partners; cost share via PBC Helix revenue reinvestment"
 last_reviewed: 2026-04-23
 owner: mohammadi@cytognosis.org

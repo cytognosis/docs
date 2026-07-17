@@ -10,7 +10,7 @@ required_by:
   - brains_accelerator
   - foresight_nodes
   - google_impact_challenge
-  - yc_nonprofit
+  - yc_s26_pbc
 sub_slots:
   - id: A02.1
     name: Primary point of contact

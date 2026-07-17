@@ -10,7 +10,7 @@ useful_for:
   - arpah_mission_office
   - doe_genesis
   - google_impact_challenge
-  - yc_nonprofit
+  - yc_s26_pbc
   - nih_r01
 sub_slots:
   - id: U10.1
@@ -43,7 +43,7 @@ sub_slots:
     funder_hooks:
       - google_impact_challenge.Q26
       - nsf_tech_labs.Q2
-      - yc_nonprofit.YC25
+      - yc_s26_pbc.YC25
 cytognosis_anchor: "501(c)(3) Foundation + PBC Helix — see Helix paper; FRO-style coordinated program"
 last_reviewed: 2026-04-23
 owner: mohammadi@cytognosis.org

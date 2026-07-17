@@ -11,7 +11,7 @@ useful_for:
   - brains_accelerator
   - foresight_nodes
   - doe_genesis
-  - yc_nonprofit
+  - yc_s26_pbc
 sub_slots:
   - id: U13.1
     name: Target populations / geographies / socioeconomic reach

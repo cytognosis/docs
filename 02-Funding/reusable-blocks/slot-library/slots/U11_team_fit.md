@@ -11,7 +11,7 @@ required_by:
   - brains_accelerator
   - foresight_nodes
   - google_impact_challenge
-  - yc_nonprofit
+  - yc_s26_pbc
 sub_slots:
   - id: U11.1
     name: Founder / PI obsession & origin story
@@ -20,7 +20,7 @@ sub_slots:
     funder_hooks:
       - astera_residency.Q3
       - brains_accelerator.program_leadership_readiness
-      - yc_nonprofit.YC24
+      - yc_s26_pbc.YC24
       - google_impact_challenge.Q26
   - id: U11.2
     name: Track record
@@ -32,9 +32,9 @@ sub_slots:
       - foresight_nodes.F9
       - google_impact_challenge.Q26
       - google_impact_challenge.Q36
-      - yc_nonprofit.YC1
-      - yc_nonprofit.YC4
-      - yc_nonprofit.YC5
+      - yc_s26_pbc.YC1
+      - yc_s26_pbc.YC4
+      - yc_s26_pbc.YC5
       - nsf_tech_labs.Q1
       - nsf_tech_labs.Q3a.ii
   - id: U11.3
@@ -44,8 +44,8 @@ sub_slots:
     funder_hooks:
       - astera_residency.Q3
       - astera_residency.Q5
-      - yc_nonprofit.YC2
-      - yc_nonprofit.YC3
+      - yc_s26_pbc.YC2
+      - yc_s26_pbc.YC3
   - id: U11.4
     name: Key team members / roles / expertise
     max_words: 400
@@ -55,7 +55,7 @@ sub_slots:
       - foresight_nodes.F10
       - google_impact_challenge.Q27
       - google_impact_challenge.Q30
-      - yc_nonprofit.YC6
+      - yc_s26_pbc.YC6
       - doe_genesis.facilities
       - nsf_tech_labs.Q3b.i
       - nsf_tech_labs.Q3b.ii
@@ -67,7 +67,7 @@ sub_slots:
       - google_impact_challenge.Q25
       - google_impact_challenge.Q30
       - google_impact_challenge.Q33
-      - yc_nonprofit.YC7
+      - yc_s26_pbc.YC7
   - id: U11.6
     name: Governance / advisors / scientific board
     max_words: 300

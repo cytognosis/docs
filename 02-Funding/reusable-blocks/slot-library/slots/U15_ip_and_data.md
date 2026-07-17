@@ -11,7 +11,7 @@ useful_for:
   - nih_r01
   - astera_residency
   - brains_accelerator
-  - yc_nonprofit
+  - yc_s26_pbc
 sub_slots:
   - id: U15.1
     name: Background IP inventory

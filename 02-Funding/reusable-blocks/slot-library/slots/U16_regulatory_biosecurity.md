@@ -4,7 +4,7 @@ slot_name: Regulatory, dual-use & biosecurity
 required_by:
   - arpah_mission_office
   - doe_genesis
-  - yc_nonprofit
+  - yc_s26_pbc
 useful_for:
   - nih_r01
   - astera_residency
@@ -18,7 +18,7 @@ sub_slots:
     max_words: 300
     max_chars: null
     funder_hooks:
-      - yc_nonprofit.YC31
+      - yc_s26_pbc.YC31
       - arpah_mission_office.appendix_a_5
   - id: U16.2
     name: IRB / human subjects plan

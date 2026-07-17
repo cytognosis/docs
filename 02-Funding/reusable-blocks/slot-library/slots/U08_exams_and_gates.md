@@ -13,7 +13,7 @@ required_by:
 useful_for:
   - nsf_tech_labs
   - astera_residency
-  - yc_nonprofit
+  - yc_s26_pbc
 sub_slots:
   - id: U08.1
     name: Quantitative success metrics

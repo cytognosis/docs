@@ -10,7 +10,7 @@ useful_for:
   - astera_residency
   - foresight_nodes
   - google_impact_challenge
-  - yc_nonprofit
+  - yc_s26_pbc
   - nih_r01
 sub_slots:
   - id: U09.1
@@ -41,7 +41,7 @@ sub_slots:
     max_chars: null
     funder_hooks:
       - astera_residency.Q7
-      - yc_nonprofit.YC28
+      - yc_s26_pbc.YC28
 cytognosis_anchor: "Opportunity space: cellular-resolution proactive medicine; consequential + under-explored + ripe; Cytognosis anti-goals list"
 last_reviewed: 2026-04-23
 owner: mohammadi@cytognosis.org

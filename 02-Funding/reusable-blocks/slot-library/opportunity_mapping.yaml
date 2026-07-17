@@ -1618,7 +1618,7 @@ opportunities:
     slug: y-combinator
     name: "Y Combinator"
     funder_org: "Y Combinator"
-    canonical_funder_ref: yc_nonprofit.yaml
+    canonical_funder_ref: yc_s26_pbc.yaml
     funder_kind: accelerator
     canonical_subset: medium
     funder_metadata:
@@ -1643,7 +1643,7 @@ opportunities:
       F19_award_period_months: 3
       F20_joint_program_partners: []
       F21_funder_process_type: reactive
-      F22_canonical_funder_ref: yc_nonprofit.yaml
+      F22_canonical_funder_ref: yc_s26_pbc.yaml
       F23_min_award_usd: 500000
       F24_max_award_usd: 500000
       F25_residency_required: true
@@ -1656,7 +1656,7 @@ opportunities:
     required_sub_slots: [A03.8, A04.6]
     useful_slots: [U02, U05, U06, U07, U18, U19]
     submission_notes: |
-      Cytognosis path is YC nonprofit cohort (covered by yc_nonprofit canonical funder). 1-min video required.
+      Cytognosis path is YC nonprofit cohort (covered by yc_s26_pbc canonical funder). 1-min video required.
       Inventory status Rejected — strategic decision not to apply this cycle.
 
   # ---------------------------------------------------------------------------

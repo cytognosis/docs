@@ -12,7 +12,7 @@ required_by:
   - brains_accelerator
   - foresight_nodes
   - google_impact_challenge
-  - yc_nonprofit
+  - yc_s26_pbc
 sub_slots:
   - id: U01.1
     name: Bold one-sentence thesis
@@ -23,7 +23,7 @@ sub_slots:
       - astera_residency.Q1
       - brains_accelerator.B1
       - foresight_nodes.F15
-      - yc_nonprofit.YC9
+      - yc_s26_pbc.YC9
   - id: U01.2
     name: Plain-language objective
     max_words: 250
@@ -36,8 +36,8 @@ sub_slots:
       - brains_accelerator.B1
       - foresight_nodes.F13
       - foresight_nodes.F15
-      - yc_nonprofit.YC13
-      - yc_nonprofit.YC27
+      - yc_s26_pbc.YC13
+      - yc_s26_pbc.YC27
       - nsf_tech_labs.Q3a.i
       - arpah_mission_office.appendix_a_1
       - doe_genesis.project_abstract
@@ -46,7 +46,7 @@ sub_slots:
     max_words: 10
     max_chars: 50
     funder_hooks:
-      - yc_nonprofit.YC9
+      - yc_s26_pbc.YC9
   - id: U01.4
     name: Project title / company name
     max_words: 20
@@ -54,7 +54,7 @@ sub_slots:
     funder_hooks:
       - google_impact_challenge.Q11
       - foresight_nodes.F14
-      - yc_nonprofit.YC8
+      - yc_s26_pbc.YC8
       - doe_genesis.title_page
 cytognosis_anchor: "GPS for Health elevator — Cytoverse + Cytoscope + Cytonome; from-reactive-to-proactive healthspan (Mission statement)"
 last_reviewed: 2026-04-23

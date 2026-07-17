@@ -12,7 +12,7 @@ required_by:
   - brains_accelerator
   - foresight_nodes
   - google_impact_challenge
-  - yc_nonprofit
+  - yc_s26_pbc
 sub_slots:
   - id: U04.1
     name: Beneficiary populations / end-users
@@ -24,7 +24,7 @@ sub_slots:
       - astera_residency.Q4
       - astera_residency.Q5
       - brains_accelerator.B4
-      - yc_nonprofit.YC24
+      - yc_s26_pbc.YC24
       - arpah_mission_office.appendix_a_4
   - id: U04.2
     name: Mechanism of benefit
