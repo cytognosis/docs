@@ -39,3 +39,7 @@ This folder is the single documentation hub for all grant-related infrastructure
 | Opportunity Mappings | [opportunity_mapping.yaml](reusable-blocks/slot-library/opportunity_mapping.yaml) | ✅ 71 opportunities mapped |
 | Funder Profiles | [funders/](reusable-blocks/slot-library/funders) | ⚠️ 10 files / ~25 needed |
 | Slot Files | [slots/](../../src/cytos/scholarly/grants/schemas/slots/) | ⚠️ 27 files; 4 authored, 23 stubs |
+
+## Consolidation 2026-07-16
+
+See `_consolidation-2026-07-16/CONSOLIDATION_LOG.md` for the grants and applications consolidation (plan, asset inventory, rebuilt registry, standardization sizes and values, EU/UK and entity memo, precision-psychiatry 1-pager).
