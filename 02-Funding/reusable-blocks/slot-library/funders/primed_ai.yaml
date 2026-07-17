@@ -1,0 +1,144 @@
+funder_id: primed_ai
+display_name: NIH Common Fund PRIMED-AI (D2M-AIP)
+kind: federal_grant
+version: "2026.1"
+source_doc: ../research/profiles/nih-primed-ai.md
+notes: |
+  Precision Medicine with AI: Integrating Imaging with Multimodal Data,
+  Data-to-Model AI Partnerships (D2M-AIP) initiative, RFA-RM-27-012.
+  Cytognosis-PI-eligible (no academic-affiliation requirement blocks the
+  Foundation from serving as prime). Biphasic UG3/UH3 cooperative agreement:
+  UG3 (R&D phase, ~$1-2M/yr) transitions to UH3 (translation/clinical phase,
+  ~$2-5M/yr) via NIH go/no-go review. Due 2026-10-19. Standard NIH F&A
+  indirect rates apply. Structure follows the standard NIH RFA / SF-424 (R&R)
+  bundle, extended with PRIMED-AI-specific multimodal-integration and
+  UG3-to-UH3 transition artifacts.
+
+primary_artifacts:
+  - id: specific_aims
+    name: Specific Aims
+    format: docx
+    page_limit: 1
+    sections:
+      - heading: "Specific Aims"
+        slots: [U01, U04, U08.1]
+
+  - id: research_strategy
+    name: Research Strategy (UG3/UH3 biphasic)
+    format: docx
+    page_limit: 12
+    sections:
+      - heading: "Significance"
+        slots: [U02, U04]
+      - heading: "Innovation — multimodal data integration + federated/privacy-preserving methods"
+        slots: [U03.1, U03.3, U15.4]
+      - heading: "Approach — UG3 R&D phase"
+        slots: [U03.2, U03.4, U03.5, U07, U05]
+      - heading: "Approach — UH3 translation/clinical phase + UG3-to-UH3 transition criteria (go/no-go)"
+        slots: [U08, U17.2]
+
+  - id: multimodal_integration_plan
+    name: Multimodal Data Integration Plan
+    format: docx
+    sections:
+      - heading: "Data modality inventory (imaging + clinical + lab + omics + EHR)"
+        slots: [U03.2, U15.3]
+      - heading: "Standardized imaging protocol and metadata/ontology plan"
+        slots: [U12.1, U12.2]
+      - heading: "AI-readiness statement for datasets"
+        slots: [U15.3, U14.1]
+
+  - id: cds_and_equity_plan
+    name: Clinical Decision Support (CDS) & Equity Plan
+    format: docx
+    sections:
+      - heading: "CDS tool development and validation pathway"
+        slots: [U17.1, U16.1]
+      - heading: "Bias / equity assessment of AI models"
+        slots: [U13.1, U13.2, U14.2]
+      - heading: "Validation cohort design (retrospective + prospective)"
+        slots: [U08.1, U08.2]
+
+  - id: sf424
+    name: SF-424 (R&R) + PHS 398 components
+    format: pdf
+    sections:
+      - heading: "Cover / Applicant Info"
+        slots: [A01, A02]
+      - heading: "Budget / Budget Justification"
+        slots: [U06.1, U06.2, U06.3]
+      - heading: "Facilities / Environment"
+        slots: [U11.4]
+
+  - id: biosketches
+    name: Biosketches
+    format: pdf
+    sections:
+      - heading: "Key Personnel Biosketches"
+        slots: [U11.1, U11.2, A04.2]
+
+  - id: human_subjects
+    name: Human Subjects / Vertebrate Animals
+    format: docx
+    sections:
+      - heading: "Human Subjects — IRB / human subjects assurance"
+        slots: [U16.2]
+      - heading: "Vertebrate Animals"
+        slots: [U16.3]
+
+  - id: resource_sharing
+    name: Resource Sharing / Data Management & Sharing Plan
+    format: docx
+    sections:
+      - heading: "Data Management & Sharing (DMS Plan)"
+        slots: [U12.1, U12.2, U12.3, U12.5, U15.3]
+
+  - id: ehr_partnership_letters
+    name: EHR Vendor Partnership Letters (Academic-Industrial Partnerships initiative)
+    format: pdf
+    sections:
+      - heading: "Partner letters"
+        slots: [A04.5, U20.1]
+
+  - id: bibliography
+    name: Bibliography & References Cited
+    format: docx
+    sections:
+      - heading: "References"
+        slots: [A04.4]
+
+render_targets:
+  - id: google_docs_strategy
+    kind: google_docs
+    doc_id_env: PRIMED_AI_STRATEGY_DOC_ID
+    mapping: research_strategy
+  - id: google_docs_aims
+    kind: google_docs
+    doc_id_env: PRIMED_AI_AIMS_DOC_ID
+    mapping: specific_aims
+  - id: docxtpl_strategy
+    kind: docxtpl
+    template_path: raw/primed_ai_research_strategy.docx
+    mapping: research_strategy
+  - id: docxtpl_dmp
+    kind: docxtpl
+    template_path: raw/primed_ai_dms_plan.docx
+    mapping: resource_sharing
+
+eligibility_notes: |
+  US institutions of higher education, research institutes, eligible
+  nonprofits, hospitals, and (for the Academic-Industrial Partnerships
+  initiative specifically) industrial partners. Cytognosis (501(c)(3)
+  nonprofit) is PI-eligible; no NIH academic-affiliation requirement blocks
+  Foundation-as-prime the way NSF's Senior/Key citizenship rule does.
+  Multidisciplinary teams expected (AI/ML, clinical imaging, EHR,
+  biostatistics, ethics).
+
+submission_notes: |
+  RFA-RM-27-012 (Data-to-Model AI Partnerships, D2M-AIP), due 2026-10-19.
+  UG3/UH3 biphasic cooperative agreement; combined project period 3-5 years.
+  Verify the exact due date and page limits against the live RFA before
+  submission — PRIMED-AI runs multiple concurrent sub-RFAs (Translating
+  Models to Clinic; Multi-use Framework Playbooks; Academic-Industrial
+  Partnerships) with separate deadlines and slightly different artifact
+  requirements.

@@ -280,6 +280,16 @@ funders:
     file: funders/nih_r21.yaml
     planned: true
     notes: Registry entry adopted 2026-07-16; funder file not yet built this pass.
+  primed_ai:
+    name: NIH Common Fund PRIMED-AI (D2M-AIP)
+    kind: federal_grant
+    file: funders/primed_ai.yaml
+    notes: RFA-RM-27-012, Data-to-Model AI Partnerships. Cytognosis-PI-eligible. Due 2026-10-19.
+  nsf_sch:
+    name: NSF Smart Health and Biomedical Research in the Era of AI
+    kind: federal_grant
+    file: funders/nsf_sch.yaml
+    notes: NSF 25-542, joint NSF/NIH program. Inventory deadline 2026-09-10.
 
 # -----------------------------------------------------------------------------
 # Funder kind registry (added in v1.1)

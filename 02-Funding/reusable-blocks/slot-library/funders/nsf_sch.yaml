@@ -1,0 +1,167 @@
+funder_id: nsf_sch
+display_name: NSF Smart Health and Biomedical Research in the Era of AI (NSF 25-542)
+kind: federal_grant
+version: "2026.1"
+source_doc: ../research/profiles/nsf-nih-smart-health.md
+notes: |
+  Joint NSF (CISE, ENG, EHR) + NIH (NIBIB, NCI, NHLBI, NIDA, NIA, NLM, etc.)
+  program. Single-stage full proposal, no LOI, via Research.gov/Grants.gov,
+  PAPPG format. Up to $1.2M over 4 years ($300K/yr max). Multidisciplinary
+  team requirement: must include at least 2 of {fundamental science/
+  engineering, biomedical/health/clinical research, technology vendors,
+  client/end-user groups}. Annual deadline; inventory date 2026-09-10.
+  Required publication-attribution phrase: "as part of the NSF/NIH Smart
+  Health and Biomedical Research in the Era of Artificial Intelligence and
+  Advanced Data Science Program."
+
+primary_artifacts:
+  - id: project_summary
+    name: Project Summary
+    format: docx
+    page_limit: 1
+    sections:
+      - heading: "Overview"
+        slots: [U01.2]
+      - heading: "Intellectual Merit"
+        slots: [U03.1]
+      - heading: "Broader Impacts"
+        slots: [U13.1]
+
+  - id: project_description
+    name: Project Description
+    format: docx
+    page_limit: 15
+    sections:
+      - heading: "Health problem and clinical impact"
+        slots: [U01, U04]
+      - heading: "Fundamental contributions to two or more disciplines"
+        slots: [U03.1, U03.3, U09.1]
+      - heading: "Multi-disciplinary collaboration plan (roles across sectors)"
+        slots: [U20.1, U20.2]
+      - heading: "Computing/engineering/data-science + biomedical approach (AI/ML methodology)"
+        slots: [U03.2, U03.4, U03.5]
+      - heading: "Risks and contingencies"
+        slots: [U05]
+      - heading: "Evaluation methodology — validation in real-world/representative setting"
+        slots: [U08.1, U08.2]
+      - heading: "Broader Impacts (NSF 5-criterion: workforce, STEM education, public engagement, infrastructure, society)"
+        slots: [U13.1, U13.2]
+      - heading: "Data sharing / software / code release plan"
+        slots: [U12.1, U12.2]
+      - heading: "Collaboration with technology vendors / client groups (encouraged, optional)"
+        slots: [U20.3]
+
+  - id: references_cited
+    name: References Cited
+    format: docx
+    sections:
+      - heading: "References"
+        slots: [A04.4]
+
+  - id: biosketches
+    name: Biographical Sketches (NSF format)
+    format: pdf
+    page_limit: 3
+    sections:
+      - heading: "Key Personnel Biosketches"
+        slots: [U11.1, U11.2, A04.2]
+
+  - id: budget
+    name: Budget + Budget Justification
+    format: pdf
+    sections:
+      - heading: "Budget"
+        slots: [U06.1, U06.2, U06.3]
+      - heading: "Budget Justification"
+        slots: [U06.2]
+
+  - id: current_and_pending
+    name: Current & Pending Support
+    format: docx
+    sections:
+      - heading: "Current & Pending Support"
+        slots: [A03.3, U20.5]
+
+  - id: facilities
+    name: Facilities, Equipment & Other Resources
+    format: docx
+    sections:
+      - heading: "Facilities & Equipment"
+        slots: [U11.4]
+
+  - id: dms_plan
+    name: Data Management & Sharing Plan (NSF DMSP)
+    format: docx
+    page_limit: 2
+    sections:
+      - heading: "Data types, standards, and metadata"
+        slots: [U12.1, U12.3]
+      - heading: "Access, sharing, and reuse policies"
+        slots: [U12.2, U15.3]
+      - heading: "Archiving and preservation"
+        slots: [U12.5]
+
+  - id: postdoc_mentoring_plan
+    name: Postdoctoral Mentoring Plan (if postdocs included)
+    format: docx
+    page_limit: 1
+    sections:
+      - heading: "Mentoring Plan"
+        slots: [U11.5]
+
+  - id: collaborators_and_affiliations
+    name: Collaborators & Other Affiliations (COA)
+    format: xlsx
+    sections:
+      - heading: "COA table"
+        slots: [A02, U20.5]
+
+  - id: letters_of_collaboration
+    name: Letters of Collaboration (NSF format, no opinion letters)
+    format: pdf
+    sections:
+      - heading: "Partner letters"
+        slots: [A04.5]
+
+  - id: personnel_and_partner_list
+    name: Project Personnel and Partner Org List
+    format: docx
+    sections:
+      - heading: "Personnel and partner organizations"
+        slots: [A02, U20.1]
+
+render_targets:
+  - id: google_docs_project_description
+    kind: google_docs
+    doc_id_env: NSF_SCH_PROJECT_DESCRIPTION_DOC_ID
+    mapping: project_description
+  - id: google_docs_summary
+    kind: google_docs
+    doc_id_env: NSF_SCH_PROJECT_SUMMARY_DOC_ID
+    mapping: project_summary
+  - id: docxtpl_project_description
+    kind: docxtpl
+    template_path: raw/nsf_sch_project_description.docx
+    mapping: project_description
+  - id: docxtpl_dmsp
+    kind: docxtpl
+    template_path: raw/nsf_sch_dmsp.docx
+    mapping: dms_plan
+
+eligibility_notes: |
+  US institutions of higher education, non-profit research organizations,
+  and certain other entities per the NSF PAPPG. Foreign collaboration
+  permitted. Team must span at least 2 of the 4 required sector categories
+  (fundamental science/engineering; biomedical/health/clinical research;
+  technology vendors; client/end-user groups). NSF's Senior/Key citizenship
+  rule (distinct from PRIMED-AI/NIH) may constrain who can serve as PI/co-PI
+  — verify current PAPPG citizenship provisions before naming Cytognosis
+  as lead.
+
+submission_notes: |
+  NSF 25-542 (current solicitation; supersedes 23-614). Single-stage full
+  proposal, no LOI required. Annual deadline; inventory date 2026-09-10 —
+  confirm against the live Research.gov posting. Est. 10-16 awards/year from
+  a $15-20M annual program budget. Reviewed by NSF panels with NIH
+  co-reviewers. Required publication-attribution phrase must appear in any
+  resulting publications.
