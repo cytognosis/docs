@@ -24,12 +24,12 @@
 
 | Asset | File | Status | Coverage |
 |---|---|---|---|
-| **Manifest** | `manifest.yaml` | ✅ v1.2 | 27 slots, 16 funders, 38 F-fields, 12 kinds |
+| **Manifest** | `manifest.yaml` | ✅ v1.2 | 27 slots, 10 funders, 38 F-fields, 12 kinds |
 | **Groups/Presets** | `groups.yaml` | ✅ v1.0 | 6 U-groups, 4 A-groups, 8 F-groups, 11 presets |
 | **Opportunity Map** | `opportunity_mapping.yaml` | ✅ v1.1 | 71 opportunities × 30+ F-fields |
 | **Opportunity CSV** | `opportunity_mapping.csv` | ✅ Exists | Monday-importable flat table |
 | **Slot Files** | `slots/*.md` | ⚠️ Partial | 27 files; 4 authored (U01, U03p, U06p, U08), 23 stubs |
-| **Funder Profiles** | `funders/*.yaml` | ⚠️ Partial | 17 files exist; Tier-1 priority funders missing |
+| **Funder Profiles** | `funders/*.yaml` | ⚠️ Partial | 10 files exist; Tier-1 priority funders missing |
 | **Schema README** | `README.md` | ✅ Complete | Directory layout, coverage snapshot, next steps |
 | **Schema INDEX** | `INDEX.md` | ✅ Complete | Full orientation map with metrics |
 | **Schema CHANGELOG** | `CHANGELOG.md` | ✅ Complete | v1.0 → v1.1 → v1.2 history |

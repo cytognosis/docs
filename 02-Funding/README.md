@@ -37,5 +37,5 @@ This folder is the single documentation hub for all grant-related infrastructure
 | Manifest (v1.2) | [manifest.yaml](reusable-blocks/slot-library/manifest.yaml) | ✅ Authoritative |
 | Groups & Presets | [groups.yaml](reusable-blocks/slot-library/groups.yaml) | ✅ Complete |
 | Opportunity Mappings | [opportunity_mapping.yaml](reusable-blocks/slot-library/opportunity_mapping.yaml) | ✅ 71 opportunities mapped |
-| Funder Profiles | [funders/](reusable-blocks/slot-library/funders) | ⚠️ 17 files / ~25 needed |
+| Funder Profiles | [funders/](reusable-blocks/slot-library/funders) | ⚠️ 10 files / ~25 needed |
 | Slot Files | [slots/](../../src/cytos/scholarly/grants/schemas/slots/) | ⚠️ 27 files; 4 authored, 23 stubs |
