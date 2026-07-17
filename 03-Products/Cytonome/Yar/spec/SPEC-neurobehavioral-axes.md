@@ -12,6 +12,8 @@ implements: [CSP]
 
 # SPEC-neurobehavioral-axes: Dimensional Neurobehavioral Axes
 
+> **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/SPEC-neurobehavioral-axes_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
+
 > **Status**: Draft
 > **Date**: 2026-06-22
 > **Author**: Cytognosis Foundation

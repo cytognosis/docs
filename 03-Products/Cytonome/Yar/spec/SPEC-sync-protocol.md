@@ -22,6 +22,8 @@ implements: []
 
 # SPEC: Yar Sync Protocol
 
+> **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/SPEC-sync-protocol_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
+
 **BLUF:** Cross-node sync is built on a CRDT op-log at L2. The protocol that replicates that log is open; the leaning is Loro + Iroh (score 36/45) over any-sync (35/45). Neither is committed. Solid is the portability and consent layer at L6, not the hot-path runtime.
 
 ---

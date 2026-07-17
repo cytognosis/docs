@@ -23,6 +23,8 @@ implements: [CAP/06_conformance]
 
 # Crisis-Detection Subsystem (Module Spec, v0)
 
+> **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/MODULE-crisis-detection_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
+
 > **Reading time**: ~10 minutes.
 > **If you only read one thing**: the **Safety Principles** in Section 2. They are non-negotiable design constraints, and they require clinical-advisor sign-off before any user-facing release.
 

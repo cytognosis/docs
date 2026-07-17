@@ -12,6 +12,8 @@ implements: [CSP]
 
 # SPEC-sensor-social-interaction: Temporal Social-Interaction Sensing
 
+> **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/SPEC-sensor-social-interaction_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
+
 > **Status**: Draft
 > **Date**: 2026-06-22
 > **Author**: Cytognosis Foundation

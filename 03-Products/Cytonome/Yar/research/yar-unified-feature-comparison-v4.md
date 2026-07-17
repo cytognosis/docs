@@ -8,8 +8,9 @@
 
 # Yar Unified Feature Comparison and AI-Fit Prioritization (v4)
 
-> **Reading time**: ~20 minutes. For the ADHD-friendly version, see `yar-unified-feature-comparison-v4-adhd.md`.
+> **Reading time**: ~20 minutes.
 > **If you only read one thing**: the **P1 build list** in Section 9 and the **AI-Fit master matrix** in Section 4. Yar's defensible moat is the cluster of emotional-regulation and adaptive-companion features that no competitor ships, not the task and focus features that several competitors already do well.
+> **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`yar-unified-feature-comparison-v4-adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/research/`.
 
 ---
 

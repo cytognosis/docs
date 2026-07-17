@@ -12,6 +12,8 @@ implements: [CSP]
 
 # SPEC-sensor-speech-mentalstate: Speech Mental-State Sensor
 
+> **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/SPEC-sensor-speech-mentalstate_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
+
 > **Status**: Draft
 > **Date**: 2026-06-22
 > **Author**: Cytognosis Foundation

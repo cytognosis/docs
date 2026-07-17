@@ -20,6 +20,8 @@ implements: [CAP]
 
 # SPEC: Yar Edge-AI and Hybrid Supervisor Architecture
 
+> **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/SPEC-edge-ai-hybrid_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
+
 **Reading time**: ~17 minutes.
 
 **BLUF**: Yar runs all latency-sensitive, privacy-critical computation on-device under CAP-Lite governance; the cloud supervisor receives only derived semantic packets, never raw data. The on-device/cloud boundary is a CAP privacy boundary, and every escalation is a declared `CrossBoundarySignal` crossing. Default routing stays on-device; escalation to the cloud supervisor requires an active consent grant plus a routing trigger that cannot be satisfied locally.

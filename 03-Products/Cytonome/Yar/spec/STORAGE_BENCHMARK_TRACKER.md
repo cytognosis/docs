@@ -20,6 +20,8 @@ implements: []
 
 # Yar Storage and Sync: Benchmark Tracker
 
+> **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/STORAGE_BENCHMARK_TRACKER_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
+
 **BLUF:** Ali's benchmark (2026-06-21) validates SQLite as the on-device MVP default. SurrealDB placed last at 100k due to confirmed configuration artifacts -- not engine ceiling. A retest is required before any decision that excludes SurrealDB. See the FLAG section below.
 
 ---

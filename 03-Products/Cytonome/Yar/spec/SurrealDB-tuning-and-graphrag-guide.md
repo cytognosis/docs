@@ -9,6 +9,8 @@ version_at_time_of_writing: "3.1.0"
 
 # SurrealDB Tuning, Troubleshooting, and GraphRAG Guide for Yar
 
+> **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/SurrealDB-tuning-and-graphrag-guide_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
+
 > **Status**: Active
 > **Date**: 2026-07-10
 > **Author**: @shahin

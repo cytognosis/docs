@@ -23,6 +23,8 @@ implements: [CAP/03_primitives, CAP/06_conformance]
 
 # CAP Privacy-Boundary Schema and Requirements (v0)
 
+> **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/privacy-boundary-spec_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
+
 > **Reading time**: ~9 minutes.
 > **If you only read one thing**: the data-classification table in Section 3 and the cross-boundary schema in Section 5. The rule is simple: **only derived, structured signals leave the device; raw content never does.**
 

@@ -24,6 +24,8 @@ implements:
 
 # SPEC: Yar Multi-Agent System
 
+> **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/SPEC-multi-agent_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
+
 > **Reading time**: ~15 minutes.
 > **If you only read one thing**: Section 2 (agent roles and the implementation-status distinction) and Section 6 (the brainmap loop as a worked example). The architecture targets a supervisor-worker model, but only the on-device CAP-Lite safety gate (`CapLiteGuard`) is implemented today. The Gemma E4B intent service is wired on mobile. No supervisor agent is running yet. Every future agent-to-agent message will be a CAP Directive envelope.
 

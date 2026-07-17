@@ -22,6 +22,8 @@ implements: []
 
 # SPEC: Yar Storage Engine
 
+> **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/SPEC-storage-engine_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
+
 **BLUF:** The CRDT op-log is the single source of truth. The L4 graph engine is a derived, swappable index rebuilt by replaying it. **SQLite + FTS5 + sqlite-vec is the decided MVP engine for phone and laptop**, confirmed by the SurrealDB v3.1.5 retest (2026-07-06). SurrealDB is a priority GraphRAG projection candidate, not rejected, but not MVP default. See `STORAGE-ENGINE-RECOMMENDATION.md` for the full decision and `SURREALDB-ROOTCAUSE.md` for root cause analysis.
 
 ---
