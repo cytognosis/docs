@@ -1,19 +1,19 @@
 ---
 spec_id: STORAGE-BENCHMARK-TRACKER
-version: "0.1"
+version: "0.2"
 status: draft
 domain: storage-sync
 owner: Shahin Mohammadi
 created: 2026-06-21
-last_updated: 2026-06-22
+last_updated: 2026-07-16
 depends_on: [SPEC-storage-engine]
 implements: []
 ---
 
-> **Related:** [storage-engine spec](./SPEC-storage-engine.md)
+> **Related:** [storage-engine spec](./SPEC-storage-engine.md) (v0.2, ACTIVE)
 
 > **Status**: Draft (Living Document)
-> **Date**: 2026-06-21
+> **Date**: 2026-07-16
 > **Author**: @shahin
 > **Audience**: engineers and reviewers
 > **Tags**: `yar`, `storage`, `benchmark`, `surrealdb`, `sqlite`, `falkordb`, `neo4j`, `kuzu`, `loro`, `iroh`, `any-sync`, `tracker`
@@ -22,7 +22,7 @@ implements: []
 
 > **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/STORAGE_BENCHMARK_TRACKER_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
 
-**BLUF:** Ali's benchmark (2026-06-21) validates SQLite as the on-device MVP default. SurrealDB placed last at 100k due to confirmed configuration artifacts -- not engine ceiling. A retest is required before any decision that excludes SurrealDB. See the FLAG section below.
+**BLUF (updated 2026-07-16):** The engine decision is no longer open. **Device tier: SQLite + FTS5 + sqlite-vec — DECIDED.** **Server tier: FalkorDB — DECIDED.** SurrealDB is **demoted**: the v3.1.5 Docker/WebSocket retest (2026-07-06) confirmed SQLite wins at 10k and FalkorDB wins at 100k, with SurrealDB third at both scales even after all configuration-artifact fixes (PATCH8-10). SurrealDB is not ruled out entirely — it remains a candidate GraphRAG projection — but it is pending one further embedded-mode retest (PATCH11, in progress as of 2026-07-16) before any further consideration. Full results: `../benchmark/SURREALDB-RETEST-REPORT_2026-07-16.md`. See `SPEC-storage-engine.md` (v0.2, ACTIVE) for the canonical decision record. The original 2026-06-21 pre-retest benchmark narrative below (Ali's run, the FLAG section, and the retest plan) is retained for audit trail; treat its "retest required" language as historical — the retest it called for has since run and is summarized above.
 
 ---
 
@@ -32,10 +32,10 @@ All proposed engine and sync options in one place. Update this table as decision
 
 | Option | Layer | Current Status | Benchmark Score (100k) | Notes |
 |---|---|---|---|---|
-| **SQLite + FTS5 + sqlite-vec** | Engine (device) | Validated MVP | 4.23 | Wins all local/phone/laptop tiers. SQLCipher for HIPAA. Default for device tier. |
-| **SurrealDB** | Engine (device + cloud) | Front-runner (retest required) | 8.68 (artifact; see FLAG) | Multi-model, native vector, bi-temporal. Score is inflated by config artifacts; retest before ruling in or out. BSL license check pending. |
+| **SQLite + FTS5 + sqlite-vec** | Engine (device) | **DECIDED (device MVP)** | 4.23 (10k: 3.609 v3.1.5 retest) | Wins all local/phone/laptop tiers, confirmed again in the 2026-07-06 v3.1.5 retest. SQLCipher for HIPAA. Default for device tier. |
+| **SurrealDB** | Engine (device + cloud) | **Demoted — pending PATCH11 embedded retest (in progress 2026-07-16)** | 8.68 (2026-06-21); 8.384 (10k) / 9.478 (100k) after PATCH8-10 tuning, v3.1.5 retest 2026-07-06 | Multi-model, native vector, bi-temporal. Config artifacts from the 2026-06-21 run are fixed; the tuned v3.1.5 retest still places SurrealDB third at both 10k and 100k (see `../benchmark/SURREALDB-RETEST-REPORT_2026-07-16.md`). Remains a candidate GraphRAG projection pending an embedded-mode (non-Docker/WebSocket) retest. BSL license check pending. |
 | **LadybugDB** | Engine (device) | Open (fork-ownership decision needed) | Not benchmarked | Best active Kuzu fork. iOS works; Android DIY. No cloud clustering. Category unsettled 12-24 months. |
-| **FalkorDB** | Engine (cloud only) | Cloud-only (validated) | 4.01 | Best server-tier score. Redis module; no mobile embedding. Cloud GraphRAG or supervisor tier. |
+| **FalkorDB** | Engine (cloud only) | **DECIDED (server tier)** | 4.01 (100k); 5.344 (10k) / 5.369 (100k) v3.1.5 retest | Best server-tier score, confirmed again in the 2026-07-06 v3.1.5 retest. Redis module; no mobile embedding. Cloud GraphRAG or supervisor tier. |
 | **Neo4j** | Engine (cloud only) | Cloud-only | 5.58 | Best GraphRAG tooling, lowest vendor risk. JVM; server-only. Benchmark invalid for lexical + hybrid (volume dimension mismatch; see note). |
 | **Kuzu** | Engine | Ruled out | 5.14 (archived) | Apple acquired + archived 2025-10-09. Use LadybugDB fork. |
 | **Memgraph** | Engine | Ruled out | Not benchmarked | Server-only; no Series A in 8 years; ~25 people. |
@@ -103,7 +103,9 @@ Weighted decision score; lower is better. Coverage weight: 1.2 for fully functio
 
 ---
 
-## FLAG FOR SHAHIN: SurrealDB Result
+## FLAG FOR SHAHIN: SurrealDB Result — RESOLVED 2026-07-16
+
+**Resolution:** the retest this flag called for ran on 2026-07-06 (SurrealDB v3.1.5, PATCH8-10 applied). Result: SurrealDB is no longer last by artifact — the FTS, schema, and index fixes below were applied — but it still finishes third at both 10k and 100k against tuned SQLite and FalkorDB. Full write-up: `../benchmark/SURREALDB-RETEST-REPORT_2026-07-16.md`. The verdict, evidence, and retest plan below are kept verbatim for audit trail; they are the reason the retest happened and every recommended fix in the plan was in fact applied.
 
 ### Verdict
 
@@ -163,9 +165,9 @@ Cross-reference with SPEC-storage-engine.md and SPEC-sync-protocol.md for full r
 
 | # | Decision | Status | Owner | Gate |
 |---|---|---|---|---|
-| O-1 | L4 engine: SurrealDB vs SQLite vs LadybugDB | Open | Engineering | SurrealDB retest (O-3) + mobile soak test |
+| O-1 | L4 engine: SurrealDB vs SQLite vs LadybugDB | **DECIDED 2026-07-06** — SQLite (device) + FalkorDB (server); SurrealDB demoted | Engineering | Closed by O-3; LadybugDB (device alt.) remains open per O-2 |
 | O-2 | LadybugDB fork ownership | Open | Engineering / Shahin | Team decision on Android DIY cost |
-| O-3 | SurrealDB benchmark retest | Pending | Ali | Run before O-1 |
+| O-3 | SurrealDB benchmark retest | **Complete 2026-07-06** (v3.1.5); PATCH11 embedded-mode follow-up in progress 2026-07-16 | Ali | Closed; see `../benchmark/SURREALDB-RETEST-REPORT_2026-07-16.md` |
 | O-4 | SurrealDB BSL license for commercial PBC | Pending | Duane | Legal check before launch |
 | O-5 | Sync protocol: Loro + Iroh vs any-sync | Open | Engineering | Prototype Loro + Iroh first |
 | O-6 | CRDT library within Option B: Loro vs Automerge 3.0 | Open | Engineering | Resolved by prototyping |
@@ -194,7 +196,8 @@ All of the above should be documented in the retest run notes.
 
 ## 5. Cross-References
 
-- `SPEC-storage-engine.md` -- engine profiles, architecture patterns, decided vs open (storage).
+- `../benchmark/SURREALDB-RETEST-REPORT_2026-07-16.md` -- the 2026-07-06 v3.1.5 retest that resolved O-1/O-3: root causes, changelog, and full 10k/100k results.
+- `SPEC-storage-engine.md` (v0.2, ACTIVE) -- engine profiles, architecture patterns, decided vs open (storage).
 - `SPEC-sync-protocol.md` -- sync protocol profiles, transport, identity, consent, decided vs open (sync).
 - `docs/03-Products/Cytonome/Cytoplex/spec/privacy-boundary-spec.md` -- L6 consent layer; PAP open decision shared.
 - `consolidation_2026-06-21/_research/F_db_benchmark_ingestion.md` -- raw benchmark ingestion; this tracker supersedes it for living-status purposes; retain for audit trail.
