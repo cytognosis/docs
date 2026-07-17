@@ -1,11 +1,12 @@
 ---
 spec_id: MODULE-crisis-detection
 version: "0.1"
-status: draft
+status: design-final
+implementation_status: deferred-post-yc
 domain: safety-governance
 owner: Shahin Mohammadi
 created: 2026-06-21
-last_updated: 2026-06-22
+last_updated: 2026-07-16
 depends_on: [SPEC-privacy-boundary]
 implements: [CAP/06_conformance]
 ---
@@ -19,7 +20,7 @@ implements: [CAP/06_conformance]
 > **Tags**: `yar`, `cap`, `crisis-detection`, `safety`, `module-spec`, `v0`
 > **Related**: `Cytoplex/spec/privacy-boundary-spec.md`, `../_archive/cytonome-master-reference.md`, `Yar/research/yar-unified-feature-comparison-v4.md` (F18)
 
-> **Implementation status**: PLANNED. The full crisis-detection module described in this spec (tiered scoring, `CrisisDecision` struct, context handling, elevated tier, resource registry lookup) does not yet exist as code. The only currently built crisis mechanism is the deterministic `CapLiteGuard` crisis-term gate at `Yar/src/cap/guard.py`, which matches a 22-term English and Farsi keyword list and redirects to 1480 (Iran Social Emergency) and findahelpline.com. Everything else in this spec is a design target requiring clinical-advisor review before implementation.
+> **Implementation status**: Design finalized 2026-07-16 for a post-YC build (decision D5). The full crisis-detection module described in this spec (tiered scoring, `CrisisDecision` struct, context handling, elevated tier, resource registry lookup) does not yet exist as code. The only currently built crisis mechanism is the deterministic `CapLiteGuard` crisis-term gate, originally at `Yar/src/cap/guard.py` and, as of 2026-07-16, ported into the YC Tauri base at `yar_revisions/yar-code-20260705-2354/backend/cap/` (commit `068b10d`), wired as a pre-response gate in `backend/assistant/views.py`. It matches a 22-term English and Farsi keyword list and redirects to 1480 (Iran Social Emergency) and findahelpline.com. Everything else in this spec is a design target requiring clinical-advisor review before implementation. See the "Implementation Status — 2026-07-16" section below and `spec/SAFETY-CHECKPOINT_2026-07-16.md` for the full resume plan.
 
 # Crisis-Detection Subsystem (Module Spec, v0)
 
@@ -29,9 +30,28 @@ implements: [CAP/06_conformance]
 > **If you only read one thing**: the **Safety Principles** in Section 2. They are non-negotiable design constraints, and they require clinical-advisor sign-off before any user-facing release.
 
 > [!CAUTION]
-> This spec closes CRITICAL gap D3 from the v4 feature comparison. **It is a first draft for clinical and legal review, not an approved design.** Today, the only shipped protection is a 22-term keyword match inside `CapLiteGuard.evaluate()`. No crisis module, threshold policy, or clinical-review process exists yet. Nothing in this spec ships to users until a clinical advisor signs off.
+> This spec closes CRITICAL gap D3 from the v4 feature comparison. **It is a finalized design for clinical and legal review, not an approved implementation.** Today, the only shipped protection is a 22-term keyword match inside `CapLiteGuard.evaluate()`, now ported into the YC Tauri base (see Section 0). No full crisis module, threshold policy, or clinical-review process exists yet. Nothing beyond the shipped keyword gate ships to users until a clinical advisor signs off.
 
 ---
+
+## 0. Implementation Status — 2026-07-16 (D5 Checkpoint)
+
+> **Decision D5:** build the full crisis-detection module **post-YC**. Keep the `CapLiteGuard` keyword gate live for beta. This section is the authoritative implementation-status record as of 2026-07-16; see `spec/SAFETY-CHECKPOINT_2026-07-16.md` for the full resume plan.
+
+**Shipped today:**
+
+- The 22-term English/Farsi keyword gate inside `CapLiteGuard.evaluate()`, live in the YC Tauri base at `yar_revisions/yar-code-20260705-2354/backend/cap/` (ported from `Yar/src/cap/`, commit `068b10d`, 2026-07-16), wired as a pre-response gate in `backend/assistant/views.py` (`ChatView`, `ExtractTasksView`) via `backend/assistant/safety.py`.
+- The shipped crisis message already redirects to **1480 (Iran Social Emergency) and findahelpline.com** — a live product decision already in code, not merely the Section 7 proposed default.
+- Test coverage: `SafetyGateTests` in `backend/assistant/tests.py` — English crisis phrase, Farsi/Persian crisis phrase, diagnosis request, and benign message pass-through, plus the equivalent extract-tasks cases. All 41 backend tests are green.
+
+**Deferred to post-YC:** tiered scoring (`elevated`/`acute`), the `CrisisDecision` struct, negation/context handling, the elevated tier's supportive response, and resource-registry lookup beyond the hardcoded Iran/findahelpline pair.
+
+**Open dependencies blocking full implementation:**
+
+| Dependency | Status | Owner |
+|---|---|---|
+| Clinical advisor | **None contracted yet.** No expanded lexicon, tier thresholds, negation handling, or evaluation set can be finalized until one is engaged (see Open Decisions #1 and #6 below). | Shahin (contracting decision) |
+| Launch-market hotline set | **Open founder decision, not yet made.** Two candidate sets: (a) **1480 Iran Social Emergency + findahelpline.com** — matches what is already shipped in `CapLiteGuard` today; (b) **988 US Suicide & Crisis Lifeline + Crisis Text Line** (text HOME to 741741) — the Section 7 US default. Whichever market(s) Yar launches in first determines which set is authoritative for that market; both may be needed if launching in the US and Iran simultaneously. | Shahin (founder decision) |
 
 ## 1. Purpose and Scope
 
@@ -120,6 +140,8 @@ Properties: **stateless**, **synchronous**, target latency **under 10 millisecon
 | International | findahelpline.com (global directory, ThroughLine) | Verify coverage per market |
 | Iran and other launch markets | Localized, clinically verified numbers | **Unresolved; must be verified, do not guess** |
 
+> **2026-07-16 note:** the shipped `CapLiteGuard` message already uses **1480 (Iran Social Emergency) + findahelpline.com**, not the US 988/Crisis-Text-Line pair above. Which set is authoritative for launch is an open founder decision (Section 0) — this table's US row has not been verified or chosen over the Iran row that is already live in code.
+
 The registry is data, not code, so it can be updated and localized without changing the module logic.
 
 ## 8. Thresholds and Evaluation
@@ -152,7 +174,7 @@ The module fails safe by failing **toward** help: any internal error, load failu
 |---|---|---|
 | 1 | Crisis signal taxonomy and tiers beyond the 22 keywords | Clinical advisor (none contracted yet) |
 | 2 | Clinician-alert opt-in mechanics and HIPAA posture | Counsel (Duane Valz) |
-| 3 | Verified hotline set per launch market | Product plus clinical advisor |
+| 3 | Verified hotline set per launch market — **founder decision, open as of 2026-07-16**: 1480 Iran + findahelpline.com (already shipped) vs. 988 US + Crisis Text Line (Section 7 default, unverified) | Shahin (founder decision), with clinical-advisor verification once contracted |
 | 4 | Retention of crisis log events under HIPAA and state law | Counsel (Duane Valz) |
 | 5 | Who sets the initial threshold before an advisor is contracted | Shahin |
 | 6 | Sensitivity and specificity targets and the evaluation set | Clinical advisor |

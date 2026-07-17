@@ -1,11 +1,12 @@
 ---
 spec_id: SPEC-privacy-boundary
 version: "0.1"
-status: draft
+status: design-final
+implementation_status: deferred-post-yc
 domain: safety-governance
 owner: Shahin Mohammadi
 created: 2026-06-21
-last_updated: 2026-06-22
+last_updated: 2026-07-16
 depends_on: []
 implements: [CAP/03_primitives, CAP/06_conformance]
 ---
@@ -19,7 +20,7 @@ implements: [CAP/03_primitives, CAP/06_conformance]
 > **Tags**: `cytoplex`, `cap`, `privacy`, `schema`, `requirements`, `ears`, `v0`
 > **Related**: `cytonome-master-reference.md` §4.2, `Cytoplex/steering/cytoplex-tech.md`, `Yar/research/yar-unified-feature-comparison-v4.md` (F12, F18)
 
-> **Implementation status**: Design spec. Enforcement is PLANNED. The only currently built boundary gate is the deterministic `CapLiteGuard` in `Yar/src/cap/guard.py`, which runs before model inference and blocks raw-data sharing, diagnosis advice, and crisis signals. Full schema-validated `CrossBoundarySignal` enforcement, the PDP/PAP runtime, and consent-ref checking are not yet implemented.
+> **Implementation status**: Design spec, finalized 2026-07-16 for a post-YC build (decision D5). The only currently built boundary gate is the deterministic `CapLiteGuard`, originally at `Yar/src/cap/guard.py` and, as of 2026-07-16, ported into the YC Tauri base at `yar_revisions/yar-code-20260705-2354/backend/cap/` (commit `068b10d`), wired as a pre-response gate in `backend/assistant/views.py`. It runs before model inference and blocks raw-data sharing, diagnosis advice, and crisis signals. Full schema-validated `CrossBoundarySignal` enforcement, the PDP/PAP runtime, and consent-ref checking are not yet implemented and are deferred to post-YC. See the "Implementation Status — 2026-07-16" section below and `spec/SAFETY-CHECKPOINT_2026-07-16.md` for the full resume plan.
 
 # CAP Privacy-Boundary Schema and Requirements (v0)
 
@@ -30,6 +31,33 @@ implements: [CAP/03_primitives, CAP/06_conformance]
 
 > [!IMPORTANT]
 > This spec closes CRITICAL gap D2 from the v4 feature comparison. It is a **first draft** of the data contract; it does not specify transport security or CAP runtime internals. Distributed-runtime work should block on acceptance of this spec.
+
+---
+
+## 0. Implementation Status — 2026-07-16 (D5 Checkpoint)
+
+> **Decision D5:** build the full CAP privacy-boundary runtime **post-YC**. Keep the lightweight `CapLiteGuard` keyword gate live for beta. This section is the authoritative implementation-status record as of 2026-07-16; see `spec/SAFETY-CHECKPOINT_2026-07-16.md` for the full resume plan.
+
+**Shipped today:**
+
+- `CapLiteGuard` (deterministic keyword gate) is live in the YC Tauri base at `yar_revisions/yar-code-20260705-2354/backend/cap/`, ported from the legacy `Yar/src/cap/` implementation (commit `068b10d`, 2026-07-16).
+- Wired as a pre-response gate in `backend/assistant/views.py` (`ChatView`, `ExtractTasksView`) via `backend/assistant/safety.py`. It runs before any provider/LLM call; on `deny` it short-circuits and returns the guard's own refusal message without touching `get_provider()`.
+- 41 backend tests pass, including `SafetyGateTests` covering English and Farsi crisis phrasing, diagnosis requests, and benign pass-through.
+
+**Deferred to post-YC:** the full `CrossBoundarySignal` schema-validated PEP (Sections 3-6), the PDP runtime driving it, and consent-ref checking.
+
+**Reuse correction.** Earlier drafts of this spec implied the full CAP runtime would be built from nothing. That is inaccurate: Cytoplex already ships four **Production** runtime components (in `cytoplex/src/cytoplex/runtime/`) that the full implementation **must reuse**, not rebuild:
+
+| File | Role |
+|---|---|
+| `local_pep.py` | Local Policy Enforcement Point — capture-level guard evaluating operational constraints and the privacy boundary before a capture is used |
+| `edge_pep.py` | Edge/boundary PEP — validates CAP envelope structure, authority chains, and privacy boundary at the network edge |
+| `privacy_pdp.py` | Privacy Policy Decision Point — evaluates the privacy-boundary dimensions (classification, movement, transformation, retention, logging, audit visibility, allowed recipients, raw-data egress, minimization) that this spec's Section 3 data-classification table maps onto |
+| `pdp_adapters.py` | Adapters bridging directive envelopes (`CAPPolicyRequest`) into PDP calls |
+
+These are the PEP and PDP referenced throughout this document — they are not net-new work.
+
+**PAP is the one gap.** No Policy Administration Point exists anywhere in Cytoplex or Yar today. It is genuinely **net-new and currently unowned**. If runtime-updatable policy is required for v1 (Open Decision #3, Section 8), a PAP must be designed and built from scratch, and an owner must be assigned before work starts.
 
 ---
 
@@ -59,7 +87,7 @@ graph LR
 ```
 
 > [!NOTE]
-> **PAP is not implemented yet.** If policy must be updatable without redeploying the app, the PAP is a new architectural component. Flagged as an open decision (Section 8).
+> **PAP is not implemented yet, and unlike the PEP and PDP below, it has no existing Cytoplex component to reuse — it is net-new and currently unowned.** The PEP and PDP roles are already implemented in Cytoplex Production (`local_pep.py`, `edge_pep.py`, `privacy_pdp.py`, `pdp_adapters.py` — see Section 0). If policy must be updatable without redeploying the app, the PAP is a new architectural component that must be designed and built from scratch. Flagged as an open decision (Section 8).
 
 ## 3. Data Classification
 
@@ -147,7 +175,7 @@ Every payload variant is closed: validators reject unknown fields. No variant ma
 |---|---|---|---|
 | 1 | Schema serialization format | **LinkML** as canonical, generate JSON Schema for runtime | Engineering |
 | 2 | Retention TTLs for crossed signals and logs | Adopt the Section 6 defaults pending review | Counsel (Duane Valz) |
-| 3 | PAP implementation for updatable policy | Decide whether runtime-updatable policy is required for v1 | Architecture |
+| 3 | PAP implementation for updatable policy — **net-new, no owner assigned as of 2026-07-16** | Decide whether runtime-updatable policy is required for v1; if yes, assign an owner and scope the build from scratch (the PEP/PDP have Cytoplex components to reuse, the PAP does not) | Architecture (unassigned) |
 | 4 | Clinician-path HIPAA posture | Scope minimum-necessary and BAA requirements before enabling | Counsel (Duane Valz) |
 | 5 | Formal PHI definition for Yar | Define the PHI identifier set explicitly so PB-7 is testable | Counsel + Shahin |
 
