@@ -55,3 +55,15 @@
 - Rejected and prior-cycle items are retained for the record; per-funder archives live in each funder folder's `archive/`.
 - **IGoR Google Docs are hand-edited by Shahin; do not edit them programmatically.**
 - Raw parsed solicitations (ARPA-H ISOs, NSF, DOE) live in `cytos/data/staged/grants/`; the render engine is `cytos/src/cytos/scholarly/funding/`.
+
+## Landscape update (2026-07-16)
+
+Full landscape and machine-readable rows: `../funding-opportunities/OPPORTUNITY_LANDSCAPE_2026-07-16.md` and `opportunity_landscape_rows.csv`. Eligibility axes: `../funding-opportunities/eligibility_axes.md`. EU/UK + entity: `../funding-opportunities/EU_UK_funders_2026-07-16.md`, `../runway-and-entity/Entity_Strategy_Madhvi_vs_UK_EU_Branch_2026-07-16.md`.
+
+**Concrete precision-psychiatry target:** ARPA-H PHO Mission Office ISO **Special Notice SN-26-156 (Serious Mental Illness)**, rolling; the Smoller and Coppersmith (PHO program-director) one-pagers are already drafted in `../submissions/Grants/ARPA-H/outreach-onepagers/` and are ready to send.
+
+**Best-fit shortlist (top picks):** ARPA-H PHO ISO SN-26-156 (rolling, fit 5); NIH RFA-DA-27-004 BRAIN TMM R01 (Oct 6, via Purdue/Grama); ARPA-H EVIDENT TA4 (rolling); ARIA Scalable Neural Interfaces seed (Jul 31); Wellcome Leap; MSCA Postdoctoral Global Fellowship (Sep 9, can fund Ali).
+
+**Near-term deadline watchlist:** Jul 20 PIBBSS; Jul 24 NSF X-Labs Topic 2 (low fit); Jul 27 Manifund AI-safety; Jul 31 ARIA Neural Interfaces; Sep 9 MSCA Postdoctoral (Ali); Sep 16 EIC Transition (entity-blocked); Sep 22 Wellcome Trust Discovery (entity-blocked, route via Manchester); Sep 30 DARPA BTO BAA; Oct 6 NIH RFA-DA-27-004; Dec 17 DOE Genesis.
+
+**Ali funding route:** MSCA Postdoctoral Global Fellowship (Cytognosis hosts the outgoing phase, EC-funded salary, EU return partner needed); Innovate UK KTP is not usable (UK-only entities).
