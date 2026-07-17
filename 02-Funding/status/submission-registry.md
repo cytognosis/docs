@@ -22,12 +22,12 @@
 | AWS Imagine | Cytoverse | Org (credits) | credits | R1 submitted | **Rejected** (Jul 13) | reapply next cycle; recipients announced Dec 2026 | `submissions/Applications/AWS/Imagine/` |
 | Biswas Fast Grant | Cytoverse | Org | $100K | Jun 12 | **Rejected** (Jul 1) | reapply **Dec 16, 2026** | `submissions/Applications/Biswas/` |
 | Coefficient Career Dev & Transition | Cytonome | Individual | rate pending comp finalization | Jun 12 | **Rejected** (Jul 12) | — | `submissions/Applications/CoefficientGiving/CareerTransition/` |
-| Coefficient Capacity Building | Cytonome | Org | ~$175K | — | **Verify** (near-final) | rolling ~3 mo; confirm not bundled into CDT rejection | `submissions/Applications/CoefficientGiving/CapacityBuilding/` |
+| Coefficient Capacity Building | Cytonome | Org | ~$175K | — | Not applied (draft) | rolling ~3 mo; confirm not bundled into CDT rejection | `submissions/Applications/CoefficientGiving/CapacityBuilding/` |
 | Google for Startups Cloud | Operational | Org (credits) | credits | May 7 | **Rejected** (May 11) | nonprofit ineligible after call | `submissions/Applications/Google-Cloud/` (create) |
 | Google.org Impact: AI for Science | Cytoverse | Org | program | May 1 | **Pending** | invitation-only next stage, rolling | `submissions/Grants/Google/` |
 | Foresight AI for Science & Safety Nodes | Cytonome | Org | node | resubmitted May 31 | **Pending (2nd round)** | R1 declined Apr 14 | `submissions/Applications/Foresight/` |
-| Anthropic AI for Science (confirm vs Claude Corps) | Cytoverse | Org | credits / program | — | **Verify** | — | `submissions/Applications/Anthropics/AI for Science Program/` |
-| ElevenLabs | Cytonome / Yar | Org | credits / program | — | **Verify** | — | `submissions/Applications/ElevenLabs/` |
+| Anthropic AI for Science (confirm vs Claude Corps) | Cytoverse | Org | credits / program | — | Not applied (draft) | — | `submissions/Applications/Anthropics/AI for Science Program/` |
+| ElevenLabs | Cytonome / Yar | Org | credits / program | — | Not applied (draft) | — | `submissions/Applications/ElevenLabs/` |
 | EA LTFF | Cytonome | Individual or org | ~$75-125K | — | Near-final (to submit) | rolling | `submissions/Applications/EA/` |
 | Manifund | Cytonome | Org or individual | $15-30K | — | No draft | rolling | `submissions/Applications/Manifund/` (create) |
 | YC Summer 2026 | Cytonome / PBC | PBC | accelerator | — | Parked (until Yar) | cycle | `submissions/Applications/YC/` |
@@ -40,7 +40,7 @@
 - **Rejected:** Google for Startups Cloud (May 11; nonprofit ineligibility after a call), Biswas Fast Grant (Jul 1; reapply Dec 16), Coefficient Career Dev & Transition (Jul 12), AWS Imagine (Jul 13; not invited to Round Two), NVIDIA Inception (prior), qb3 mentorship (prior).
 - **Missed deadline:** NSF X-Labs / Psychoscope (Jul 13; Herve non-response), Grand Challenge Aging Reimagined / Lilly-Nucleate.
 - **Pending:** ARPA-H IGoR SS (submitted Jun 25; full proposal in progress), Google.org Impact AI for Science (submitted May 1), Foresight Nodes (2nd round since May 31).
-- **Verify (do not assert):** Coefficient Capacity Building, ElevenLabs, Anthropic AI for Science; confirm via Gmail.
+- **Not yet applied (draft only):** Coefficient Capacity Building, ElevenLabs, Anthropic AI for Science.
 
 ## Next priorities to prep
 
