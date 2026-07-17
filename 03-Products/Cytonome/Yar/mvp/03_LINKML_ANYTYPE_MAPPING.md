@@ -6,6 +6,8 @@
 
 # 03 — LinkML to Anytype Mapping
 
+> **SUPERSEDED (2026-07-16):** This document is superseded. See `yar-product-spec.md` (product/spec canonical, this repo) and `yar-code-20260705-2354/ARCHITECTURE.md` (engineering canonical, in the code repo) for current state. Retained here for historical reference; not archived.
+
 ## Goal
 
 Yar should reuse existing structured schemas instead of inventing ad hoc object models. LinkML is the canonical schema authoring layer. Anytype is the user-facing local-first object graph layer.

@@ -6,6 +6,8 @@
 
 # 06 — WADM Annotation Integration Plan
 
+> **SUPERSEDED (2026-07-16):** This document is superseded. See `yar-product-spec.md` (product/spec canonical, this repo) and `yar-code-20260705-2354/ARCHITECTURE.md` (engineering canonical, in the code repo) for current state. Retained here for historical reference; not archived.
+
 ## Goal
 
 Yar should reuse the W3C Web Annotation Data Model pattern for browser/page/paper annotations instead of inventing a new annotation model.

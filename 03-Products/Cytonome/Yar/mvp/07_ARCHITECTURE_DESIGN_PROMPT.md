@@ -6,6 +6,8 @@
 
 # 07 — Architecture Design Prompt
 
+> **SUPERSEDED (2026-07-16):** This document is superseded. See `yar-product-spec.md` (product/spec canonical, this repo) and `yar-code-20260705-2354/ARCHITECTURE.md` (engineering canonical, in the code repo) for current state. Retained here for historical reference; not archived.
+
 Copy and use this prompt to generate a detailed implementation architecture.
 
 ## Current status note — 2026-05-17

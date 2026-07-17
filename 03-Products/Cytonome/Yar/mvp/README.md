@@ -6,6 +6,8 @@
 
 # Yar Gemma 4 Good MVP Docs — Current Scope
 
+> **SUPERSEDED (2026-07-16):** This document is superseded. See `yar-product-spec.md` (product/spec canonical, this repo) and `yar-code-20260705-2354/ARCHITECTURE.md` (engineering canonical, in the code repo) for current state. Retained here for historical reference; not archived.
+
 This package updates the previous Yar Gemma 4 Good hackathon scope based on the latest product/architecture feedback.
 
 The original correction was that the immediate build should **not** focus on a broad feature set. It should first prove the technical skeleton:

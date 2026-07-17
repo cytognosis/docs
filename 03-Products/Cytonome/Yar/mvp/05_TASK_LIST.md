@@ -6,6 +6,8 @@
 
 # 05 — Task List: Skeleton-First Build
 
+> **SUPERSEDED (2026-07-16):** This document is superseded. See `yar-product-spec.md` (product/spec canonical, this repo) and `yar-code-20260705-2354/ARCHITECTURE.md` (engineering canonical, in the code repo) for current state. Retained here for historical reference; not archived.
+
 ## Current completed status — 2026-05-17
 
 The original skeleton task list has largely been completed, plus Product Milestone 1 has been added.

@@ -6,6 +6,8 @@
 
 # Product Milestone 1: Mobile Voice Vertical Slice
 
+> **SUPERSEDED (2026-07-16):** This document is superseded. See `yar-product-spec.md` (product/spec canonical, this repo) and `yar-code-20260705-2354/ARCHITECTURE.md` (engineering canonical, in the code repo) for current state. Retained here for historical reference; not archived.
+
 ## Architecture
 
 ```mermaid

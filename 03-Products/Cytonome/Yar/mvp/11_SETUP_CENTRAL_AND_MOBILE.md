@@ -6,6 +6,8 @@
 
 # Yar Central And Mobile Setup
 
+> **SUPERSEDED (2026-07-16):** This document is superseded. See `yar-product-spec.md` (product/spec canonical, this repo) and `yar-code-20260705-2354/ARCHITECTURE.md` (engineering canonical, in the code repo) for current state. Retained here for historical reference; not archived.
+
 This guide covers:
 
 - Setting up the Yar backend and `YAR_CENTRAL_*` model route on macOS.

@@ -14,6 +14,8 @@ last_updated: 2026-05-29
 
 # Structure Steering: Yar
 
+> **SUPERSEDED (2026-07-16):** This document is superseded. See `yar-product-spec.md` (product/spec canonical, this repo) and `yar-code-20260705-2354/ARCHITECTURE.md` (engineering canonical, in the code repo) for current state. Retained here for historical reference; not archived.
+
 ## Directory Layout
 
 ```
