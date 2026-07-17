@@ -30,7 +30,7 @@
 | ElevenLabs | Cytonome / Yar | Org | credits / program | — | Not applied (draft) | — | `submissions/Applications/ElevenLabs/` |
 | EA LTFF | Cytonome | Individual or org | ~$75-125K | — | Near-final (to submit) | rolling | `submissions/Applications/EA/` |
 | Manifund | Cytonome | Org or individual | $15-30K | — | No draft | rolling | `submissions/Applications/Manifund/` (create) |
-| YC (Fall 2026) | Cytonome / PBC | PBC | accelerator | — | **Prep now** | **deadline Jul 27 (verify batch)** | `submissions/Applications/YC/` |
+| YC (Fall 2026) | Cytonome / PBC | PBC | accelerator | — | **Prep now** | **deadline Jul 27 8pm PT (Fall 2026)** | `submissions/Applications/YC/` |
 | Compute credits (Anthropic, NAIRR, Cohere) | Cytoverse | Org | credits | — | Materials | rolling | `Compute_Credits_Applications_Anthropic_NAIRR_Cohere.md` |
 | NVIDIA Inception | Cytonome | Org | credits | — | Rejected (prior) | — | `submissions/Applications/Nvidia/Inception/` |
 | qb3 mentorship | Operational | Org | mentorship | — | Rejected (prior) | — | `submissions/Applications/qb3/mentorship/` |
@@ -64,7 +64,7 @@ Full landscape and machine-readable rows: `../funding-opportunities/OPPORTUNITY_
 
 **Best-fit shortlist (top picks):** ARPA-H PHO ISO SN-26-156 (rolling, fit 5); NIH RFA-DA-27-004 BRAIN TMM R01 (Oct 6, via Purdue/Grama); ARPA-H EVIDENT TA4 (rolling); ARIA Scalable Neural Interfaces seed (Jul 31); Wellcome Leap; PRIMED-AI D2M-AIP (Oct 19, Cytognosis can be PI); MSCA Postdoctoral (Sep 9).
 
-**Near-term deadline watchlist:** **Jul 17 Claude Corps (Anthropic); Jul 26 Fast Forward Accelerator; Jul 27 YC (verify batch);** Jul 20 PIBBSS; Jul 24 NSF X-Labs Topic 2 (low fit); Jul 27 Manifund AI-safety; Jul 31 ARIA Neural Interfaces; Sep 9 MSCA Postdoctoral; Oct 19 PRIMED-AI D2M-AIP; Sep 16 EIC Transition (entity-blocked); Sep 22 Wellcome Trust Discovery (entity-blocked, route via Manchester); Sep 30 DARPA BTO BAA; Oct 6 NIH RFA-DA-27-004; Dec 17 DOE Genesis.
+**Near-term deadline watchlist:** **Jul 17 Claude Corps (Anthropic); Jul 26 Fast Forward Academy (verify Jul 17 vs 26); Jul 27 YC Fall 2026 (8pm PT);** Jul 20 PIBBSS; Jul 24 NSF X-Labs Topic 2 (low fit); Jul 27 Manifund AI-safety; Jul 31 ARIA Neural Interfaces; Sep 9 MSCA Postdoctoral; Oct 19 PRIMED-AI D2M-AIP; Sep 16 EIC Transition (entity-blocked); Sep 22 Wellcome Trust Discovery (entity-blocked, route via Manchester); Sep 30 DARPA BTO BAA; Oct 6 NIH RFA-DA-27-004; Dec 17 DOE Genesis.
 
 **Ali funding route (PhD student):** a grant-funded GRA slot (NSF SCH or a Purdue/Grama award) or a direct industry-sponsored/co-supervised PhD are the citizenship-agnostic routes; NSF GRFP and NIH F31 require US citizenship or permanent residency (confirm Ali); MSCA Doctoral Networks and UKRI CASE depend on EU/UK enrollment. See `../funding-opportunities/OPPORTUNITY_LANDSCAPE_2026-07-16.md` PhD-student section.
 
@@ -73,7 +73,7 @@ Full landscape and machine-readable rows: `../funding-opportunities/OPPORTUNITY_
 | Deadline | Program | Status | Folder |
 |---|---|---|---|
 | **Jul 17 (tomorrow)** | Claude Corps / Anthropic AI for Science | Prep to submit-ready now | `submissions/Applications/Anthropics/` |
-| **Jul 26** | Fast Forward Accelerator (tech-nonprofit) | Prep now; strong 501(c)(3) fit | `submissions/Applications/FastForward/` (create) |
-| **Jul 27** | Y Combinator (verify batch) | Prep now; PBC path; un-park | `submissions/Applications/YC/` |
+| **Jul 26** | Fast Forward Academy ($10K; verify Jul 17 vs 26) | Prep now; strong 501(c)(3) fit | `submissions/Applications/FastForward/` (create) |
+| **Jul 27** | Y Combinator Fall 2026 (8pm PT) | Prep now; PBC path; un-park | `submissions/Applications/YC/` |
 
 Submission itself is done by Shahin in each portal; these are prepped to ready-to-paste with a checklist.
