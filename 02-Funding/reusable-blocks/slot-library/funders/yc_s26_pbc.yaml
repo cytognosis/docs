@@ -12,7 +12,7 @@ notes: |
 
 primary_artifacts:
   - id: application_form
-    name: YC Nonprofit Application
+    name: YC S26 Application (for-profit PBC)
     format: web_form
     sections:
       - heading: "Founders (YC1–YC7)"
