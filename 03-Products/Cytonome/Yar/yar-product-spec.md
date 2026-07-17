@@ -139,7 +139,7 @@ Grounded in Blue Lin's health-data-visualization research and the Chen, Meng, an
 
 ## 13. Strategic fit and positioning
 
-The wedge-to-platform flywheel: Yar wins the daily neurodivergent habit, builds a consented longitudinal multimodal dataset, and feeds the Cytoverse map and Cytonome navigator. The open and proprietary split keeps open science and safety primitives in the Foundation (Apache 2.0, CC BY) and the Yar consumer product plus proprietary tracking in the **PBC** arm; this bifurcation also makes the funding story clean and is the basis of the Summer 2026 YC for-profit consumer positioning (see `cytonome-track.md`). Yar is positioned as wellness and productivity, not a medical device, with CAP enforcing the line. Its durable differentiation is being the only local-first, voice-first, emotionally aware, unified neurodivergent companion with on-device AI and no subscription, built by and for neurodivergent people.
+The wedge-to-platform flywheel: Yar wins the daily neurodivergent habit, builds a consented longitudinal multimodal dataset, and feeds the Cytoverse map and Cytonome navigator. The open and proprietary split keeps open science and safety primitives in the Foundation (Apache 2.0, CC BY) and the Yar consumer product plus proprietary tracking in the **PBC** arm; this bifurcation also makes the funding story clean and is the basis of the Summer 2026 YC for-profit consumer positioning (see [`cytonome-track.md`](../../../01-Strategy/tracks/CYTONOME_TRACK_2026-06-03.md), canonical home; the `03-Products/Cytonome/cytonome-track.md` copy is a stub pointer as of 2026-07-16). Yar is positioned as wellness and productivity, not a medical device, with CAP enforcing the line. Its durable differentiation is being the only local-first, voice-first, emotionally aware, unified neurodivergent companion with on-device AI and no subscription, built by and for neurodivergent people.
 
 ## 14. Founder and advocacy narrative
 
@@ -157,5 +157,5 @@ Yar exists because its founder lives the problem. The branching brainmap exists 
 ## Cross-references
 
 - **Feature index:** `YAR_FEATURE_CATALOG.md` · **Competitive evidence:** `research/yar-unified-feature-comparison-v4.md`
-- **Specs:** `spec/` (14 formal specs + `spec/adhd/` variants) · **Safety and protocol:** `Cytoplex/cap-readme.md`, `Cytoplex/spec/`
-- **Identity and YC:** `cytonome-track.md` · **Engineering:** `04-Engineering/yar/` (sensors, integrations, reports)
+- **Specs:** `spec/` (14 formal specs; the `spec/adhd/` easy-read variants were archived 2026-07-16, see `_archive/cleanup_2026-07-16/adhd-twins/spec/`) · **Safety and protocol:** `Cytoplex/cap-readme.md`, `Cytoplex/spec/`
+- **Identity and YC:** [`cytonome-track.md`](../../../01-Strategy/tracks/CYTONOME_TRACK_2026-06-03.md) (canonical; `03-Products/Cytonome/cytonome-track.md` is a stub pointer) · **Engineering:** `04-Engineering/yar/` (sensors, integrations, reports)

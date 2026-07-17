@@ -170,5 +170,5 @@ Adoption is encouraged through:
 
 - The platform-level role: `10_platform_architecture.md`.
 - App-level integration of plug-ins (sensor section, plug-in store): `15_app_design.md`.
-- The clinical-to-wearable alignment that uses UBAP-formatted data on both sides: `12_clinical_to_wearable.md`.
+- The clinical-to-wearable alignment that uses UBAP-formatted data on both sides: [`12_clinical_to_wearable.md`](../../../01-Strategy/planning/12_clinical_to_wearable.md) (canonical numbered planning doc; the sibling `clinical-to-wearable.md` in this directory covers the same ground in Yar-specific terms).
 - The bifurcation rules that govern hardware lineage: `02_horizons_and_bifurcation.md`, `23_open_science_and_ip.md`.

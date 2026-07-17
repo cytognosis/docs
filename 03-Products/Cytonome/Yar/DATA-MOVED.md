@@ -13,9 +13,11 @@ Per the data policy (blueprint Section 16h, primary tables are data, not docs), 
 
 | Table | New canonical location |
 |---|---|
-| `yar-feature-matrix-v4.csv` | `~/datasets/cytognosis/products/yar/yar-feature-matrix-v4.csv` |
-| `yar-feature-naming-map.csv` | `~/datasets/cytognosis/products/yar/yar-feature-naming-map.csv` |
-| `yar-feature-prioritization.csv` | `~/datasets/cytognosis/products/yar/yar-feature-prioritization.csv` |
-| `yar-internal-prioritization-v1.csv` | `~/datasets/cytognosis/products/yar/yar-internal-prioritization-v1.csv` |
+| `yar-feature-matrix-v4.csv` | `~/datasets/cytognosis/yar/data/yar-feature-matrix-v4.csv` |
+| `yar-feature-naming-map.csv` | `~/datasets/cytognosis/yar/data/yar-feature-naming-map.csv` |
+| `yar-feature-prioritization.csv` | **missing** — not found at this or any other known location as of 2026-07-17; open gap, not yet re-created after the move |
+| `yar-internal-prioritization-v1.csv` | `~/datasets/cytognosis/yar/data/yar-internal-prioritization-v1.csv` |
 
 Committed in the datasets repo on branch `reorg/yar-2026-07-01` (commit `ebff402`) with a provenance README. The tables are under 30 KB, so they are committed to git there, not tracked via DVC.
+
+> **Correction (2026-07-17):** this table previously pointed at `~/datasets/cytognosis/products/yar/`. That directory exists but holds only a `.gitkeep`. The tables actually live at `~/datasets/cytognosis/yar/data/`, verified against the `reorg/yar-2026-07-01` branch; paths above corrected.

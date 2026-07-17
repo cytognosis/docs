@@ -11,7 +11,9 @@
 
 > **Full/technical versions:** the specs live in `../spec/` and `../mvp/`; the feature catalog is `../YAR_FEATURE_CATALOG.md`.
 
-> **If you only read one thing:** Yar's specs now share one standard shape. Each easy-read spec twin (in `spec/adhd/`) links back to its full spec. Duplicate benchmark folders were merged into one.
+> **If you only read one thing:** Yar's specs now share one standard shape. Duplicate benchmark folders were merged into one.
+
+> **Update (2026-07-17):** the easy-read spec twins that used to live in `spec/adhd/` were archived on 2026-07-16 (see `../_archive/cleanup_2026-07-16/adhd-twins/spec/`); `spec/adhd/` is now an empty placeholder. The twins are no longer linked from the full specs; treat the base specs in `../spec/` as the current source and the archive as historical only.
 
 ## What changed
 
