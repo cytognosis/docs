@@ -1,3 +1,17 @@
+> **5-field canonical summary (added 2026-07-16, augmenting the detailed map below; nothing removed).**
+
+**1. Status:** Pending / Active. Solution Summary submitted 2026-06-25. Full proposal due **2026-08-13** (extended from 2026-08-06).
+
+**2. Final Google Doc link:** hand-edited in Google Docs, do not touch programmatically. (Shahin edits the IGoR Google Docs directly as of 2026-06-22; do not push finds/replaces, re-imports, or comment writes unless explicitly asked. Reference URLs are catalogued in section 3 below and in the coordination doc referenced there.)
+
+**3. Final submitted artifact:** `solution_summary/IGoR_Solution_Summary_SUBMISSION_2026-06-19.md` (Solution Summary, submitted 2026-06-25; frozen, do not edit). The full proposal (`full_proposal/C1_Technical_and_Management_Proposal.md`, `C2_Task_Description_Document.md`, `C3_Price_Proposal.md`, `costs/C4_Price_Workbook_PsychIGoR_v2026-06-21.xlsx`) is an active draft, not yet submitted (due Aug 13).
+
+**4. Scope to platform:** Cytoverse + Cytonome.
+
+**5. Question to slot mapping:** no dedicated question-to-slot map file exists; closest reference is `research/sections/70_proposal_evolution_crosswalk.md` (version/claim crosswalk across SS and full-proposal drafts). Otherwise: to map.
+
+---
+
 # ARPA-H IGoR (PsychIGoR) — Canonical Submission Index
 
 **Program:** ARPA-H Intelligent Generator of Research (IGoR), solicitation **ARPA-H-SOL-26-155**, Proactive Health Office.
