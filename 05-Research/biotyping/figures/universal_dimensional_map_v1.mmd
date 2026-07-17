@@ -1,0 +1,81 @@
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '14px'}}}%%
+flowchart TB
+
+    subgraph GENFACTORS["GENOMIC FACTORS (Grotzinger et al., Nature 2025)"]
+        direction LR
+        FSB["SB factor<br/>excitatory neurons<br/>(schizophrenia + bipolar)"]
+        FINT["Internalizing factor<br/>oligodendrocyte / myelin<br/>(MDD + PTSD + anxiety)"]
+        FNEURO["Neurodevelopmental factor<br/>synaptic/interneuron programs<br/>(context only, core scope)"]
+        FCOMP["Compulsive/eating factor<br/>(extended scope)"]
+        FSUD["Substance-use factor<br/>(extended scope)"]
+    end
+
+    subgraph DISORDERS["DISORDERS (core scope solid, extension scope dashed)"]
+        direction LR
+        MDD(["MDD"])
+        BD(["Bipolar disorder"])
+        SCZ(["Schizophrenia"])
+        PTSD(("PTSD"))
+        ANX(("Anxiety"))
+    end
+
+    FSB ==>|primary loading| BD
+    FSB ==>|primary loading| SCZ
+    FINT ==>|primary loading| MDD
+    FINT -.->|extension loading| PTSD
+    FINT -.->|extension loading| ANX
+
+    subgraph MICRO["MICRO LAYER: molecular / cellular"]
+        direction LR
+        M_BDNF["BDNF/TrkB plasticity axis<br/>NbN neuroplastogens<br/>(ketamine, psilocybin)"]
+        M_EI["E/I imbalance<br/>PV interneuron axis<br/>NbN antipsychotics (D2/5-HT2)"]
+        M_OX["Oxidative/mitochondrial axis<br/>NAC-responsive subgroup"]
+    end
+
+    subgraph MESO["MESO LAYER: connectomic nodes, edges, subgraphs"]
+        direction LR
+        E_DLPFC_SGACC["dlPFC -- sgACC edge<br/>SAINT/SNT TMS target<br/>~79% TRD remission"]
+        E_AMYG_VMPFC["Amygdala -- vmPFC edge<br/>threat regulation"]
+        E_THAL["Thalamus -- sensorimotor / prefrontal edges<br/>SCZ reciprocal pattern"]
+        SG_DMN["Default-mode network subgraph<br/>PCC/precuneus -- mPFC"]
+    end
+
+    subgraph MACRO["MACRO LAYER: phenotypic outcome instruments"]
+        direction LR
+        O_PHQ["PHQ-9<br/>(MDD outcome)"]
+        O_YMRS["YMRS<br/>(BD mania outcome)"]
+        O_PANSS["PANSS<br/>(SCZ outcome)"]
+        O_GAD["GAD-7<br/>(anxiety/PTSD extension outcome)"]
+    end
+
+    MDD --> M_BDNF
+    MDD --> E_DLPFC_SGACC
+    MDD --> SG_DMN
+    MDD --> O_PHQ
+
+    BD --> M_BDNF
+    BD --> M_OX
+    BD --> O_YMRS
+
+    SCZ --> M_EI
+    SCZ --> E_THAL
+    SCZ --> O_PANSS
+
+    PTSD -.-> E_AMYG_VMPFC
+    PTSD -.-> O_GAD
+    ANX -.-> E_AMYG_VMPFC
+    ANX -.-> O_GAD
+
+    classDef factor fill:#e8d5e8,stroke:#7a4c7a,stroke-width:1px,color:#1a1a1a
+    classDef disorderCore fill:#cde7f0,stroke:#2b6777,stroke-width:2px,color:#1a1a1a
+    classDef disorderExt fill:#cde7f0,stroke:#2b6777,stroke-width:1px,stroke-dasharray:4 3,color:#1a1a1a
+    classDef micro fill:#d9e8d0,stroke:#4c7a3f,stroke-width:1px,color:#1a1a1a
+    classDef meso fill:#f3d9c4,stroke:#a8622a,stroke-width:1px,color:#1a1a1a
+    classDef macro fill:#e0d9f0,stroke:#5c4c8a,stroke-width:1px,color:#1a1a1a
+
+    class FSB,FINT,FNEURO,FCOMP,FSUD factor
+    class MDD,BD,SCZ disorderCore
+    class PTSD,ANX disorderExt
+    class M_BDNF,M_EI,M_OX micro
+    class E_DLPFC_SGACC,E_AMYG_VMPFC,E_THAL,SG_DMN meso
+    class O_PHQ,O_YMRS,O_PANSS,O_GAD macro
