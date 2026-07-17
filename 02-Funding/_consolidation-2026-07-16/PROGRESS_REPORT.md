@@ -10,6 +10,37 @@
 
 ---
 
+## 0. Deadline calendar (DO NOT MISS)
+
+> [!WARNING]
+> Every dated opportunity is here. Rolling items are listed separately. Entity-blocked items need a UK/EU lead; skip unless routed via Madhvi/Manchester.
+
+```mermaid
+timeline
+  title Cytognosis funding deadlines (2026)
+  July : Jul 20 PIBBSS : Jul 24 NSF X-Labs T2 (low fit) : Jul 26 Fast Forward Academy : Jul 27 YC Fall 2026 (8pm PT) : Jul 27 Manifund : Jul 31 ARIA Neural Interfaces
+  August : Aug 13 ARPA-H IGoR FULL PROPOSAL
+  September : Sep 9 MSCA Postdoctoral : Sep 16 EIC Transition (blocked) : Sep 22 Wellcome Trust (blocked) : Sep 30 DARPA BTO BAA
+  October : Oct 6 NIH TMM R01 (Purdue) : Oct 19 PRIMED-AI D2M-AIP : Oct 28 EIC Pathfinder (blocked)
+  December : Dec 16 Biswas reapply : Dec 17 DOE Genesis
+```
+
+| Date (2026) | Opportunity | Action | Flag |
+|---|---|---|---|
+| **Jul 26** | Fast Forward Academy | Confirm date, record demo video, submit | 501(c)(3) fit |
+| **Jul 27, 8pm PT** | YC Fall 2026 | Submit (recommended) | PBC / Yar |
+| **Jul 31** | ARIA Scalable Neural Interfaces | Assess + apply | US lead OK |
+| **Aug 13** | ARPA-H IGoR full proposal | Active build, largest ($51.5M) | prime Purdue |
+| **Sep 9** | MSCA Postdoctoral Fellowship | Assess | EU host needed |
+| **Oct 6** | NIH RFA-DA-27-004 TMM R01 | via Purdue / Grama | academic lead |
+| **Oct 19** | PRIMED-AI D2M-AIP (RFA-RM-27-012) | Cytognosis can be PI | strong new fit |
+| **Dec 16** | Biswas Fast Grant (reapply) | Was rejected Jul 1; reapply | 501(c)(3) |
+| **Dec 17** | DOE Genesis Mission FOA | Assess | — |
+| **Rolling** | ARPA-H PHO ISO **SN-26-156** (precision psych), ARPA-H EVIDENT TA4, Wellcome Leap, Google.org Impact, EA LTFF, Coefficient Capacity, Manifund | Send one-pagers / submit anytime | — |
+| **Entity-blocked** | Sep 16 EIC Transition; Sep 22 Wellcome Trust Discovery; Sep 30 DARPA BTO; Oct 28 EIC Pathfinder | Skip unless routed via Manchester | needs UK/EU lead |
+
+---
+
 ## 1. Scoreboard
 
 | Metric | Value |
