@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (licensing.md in Obsidian vault: 04-Engineering/toolchain/cytocast/features/) - Agent (n/a)
 
 Cytocast offers 16 license options spanning permissive open source, copyleft, Creative Commons, responsible AI (OpenRAIL), and proprietary licenses. Each selection automatically generates the correct LICENSE file and injects the proper classifier into `pyproject.toml`.
 

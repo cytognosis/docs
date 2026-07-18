@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (dependency-strategy.md in Obsidian vault: 04-Engineering/toolchain/cytoskeleton/) - Agent (n/a)
 
 As standard across Cytognosis, reproducibility is a core tenet of our deployment infrastructure. Rather than relying on transient network pings to PyPI or mapping ambiguous version tags, `cytoskeleton` strictly resolves and anchors all dependency trees downstream.
 

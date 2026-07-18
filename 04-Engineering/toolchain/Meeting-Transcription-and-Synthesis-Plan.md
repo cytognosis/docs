@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (Meeting-Transcription-and-Synthesis-Plan.md in Obsidian vault: 04-Engineering/toolchain/) - Agent (n/a)
 
 **Reading time:** about 7 minutes. **If you only read one thing:** the **Decisions** table, then "Part 1: Fix Google Meet."
 

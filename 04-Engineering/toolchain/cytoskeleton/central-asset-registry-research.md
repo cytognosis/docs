@@ -16,7 +16,7 @@ tags:
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (central-asset-registry-research.md in Obsidian vault: 04-Engineering/toolchain/cytoskeleton/) - Agent (n/a)
 
 > D1: Storage backends per entity type, specialized repositories, and central registry design.
 

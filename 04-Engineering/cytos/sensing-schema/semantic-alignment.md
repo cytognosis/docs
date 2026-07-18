@@ -4,6 +4,7 @@
 > **Date**: 2026-05-31
 > **Scope**: Defines the formal crosswalk between four health data standards through the Cytos LinkML spine
 > **Companion**: [Consolidated Sensor Reference](unified-sensor-report.md)
+> **Variants**: Technical (this doc) - Readable (semantic-alignment.md in Obsidian vault: 04-Engineering/cytos/sensing-schema/) - Agent (n/a)
 
 ---
 

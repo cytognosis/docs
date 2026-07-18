@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (06_biothings.md in Obsidian vault: 04-Engineering/cytos/schemas-ontologies/linkml-playbook/) - Agent (n/a)
 
 > **Goal** – know what BioThings is (it's four things), figure out which
 > piece you need, and use them alongside (not instead of) LinkML.

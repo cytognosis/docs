@@ -4,6 +4,7 @@
 > **Date**: 2026-05-14
 > **Author**: @shmohammadi
 > **Tags**: `data-source`, `api`, `schema`, `scholarly`
+> **Variants**: Technical (this doc) - Readable (ADR-001-tiered-author-identity-api-strategy.md in Obsidian vault: 04-Engineering/cytos/adrs/) - Agent (n/a)
 
 ## Context
 

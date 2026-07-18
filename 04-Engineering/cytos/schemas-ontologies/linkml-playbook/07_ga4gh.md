@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (07_ga4gh.md in Obsidian vault: 04-Engineering/cytos/schemas-ontologies/linkml-playbook/) - Agent (n/a)
 
 > **Goal** – inventory and convert the GA4GH schema family (genotype +
 > phenotype + clinical) to LinkML so you know what's already covered

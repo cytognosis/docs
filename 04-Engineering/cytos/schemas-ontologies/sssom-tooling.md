@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (sssom-tooling.md in Obsidian vault: 04-Engineering/cytos/schemas-ontologies/) - Agent (n/a)
 
 A LinkML-native reference for cross-ontology mapping in the Cytognosis stack,
 with single-cell (CELLxGENE) integration patterns and a worked example using

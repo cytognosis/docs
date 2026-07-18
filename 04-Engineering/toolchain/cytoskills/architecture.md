@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (architecture.md in Obsidian vault: 04-Engineering/toolchain/cytoskills/) - Agent (n/a)
 
 This repo holds the runtime skills catalog, profile-based deployment system,
 and the typed Python overlay that turns SKILL.md bundles into validated

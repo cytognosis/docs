@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (data-formats.md in Obsidian vault: 04-Engineering/cytos/sensing-schema/) - Agent (n/a)
 
 Scope: how to describe a dataset so a system can find it, load it, validate it, and feed it to a model. Five sub-questions:
 

@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (platform-design.md in Obsidian vault: 04-Engineering/toolchain/cytoskeleton/) - Agent (n/a)
 
 > Comprehensive architecture for infrastructure, compute orchestration,
 > specialized storage, and data lifecycle management.

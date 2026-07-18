@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (branding-skill-spec.md in Obsidian vault: 04-Engineering/toolchain/cytoskills/) - Agent (n/a)
 
 **Version:** 5.0.0 | **Status:** Production | **Last Revised:** 2026-05-31
 

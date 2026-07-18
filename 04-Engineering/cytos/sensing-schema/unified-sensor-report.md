@@ -4,6 +4,7 @@
 > **Date**: 2026-05-31
 > **Scope**: Single authoritative reference for Cytognosis sensor architecture, schema system, standards alignment, and implementation roadmap
 > **Supersedes**: `unified-sensor-report.md` (archived), `archive/neuro-pheno/design_draft/schemas/research/sensors.md` (archived)
+> **Variants**: Technical (this doc) - Readable (unified-sensor-report.md in Obsidian vault: 04-Engineering/cytos/sensing-schema/) - Agent (n/a)
 
 ---
 

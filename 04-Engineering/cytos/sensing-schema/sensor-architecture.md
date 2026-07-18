@@ -3,6 +3,7 @@
 > **Status**: v0.1 (Design Specification)
 > **Date**: 2026-05-17
 > **Scope**: Defines the pluggable sensor framework for Cytonome, enabling modular, user-controlled data streams from heterogeneous input sources
+> **Variants**: Technical (this doc) - Readable (sensor-architecture.md in Obsidian vault: 04-Engineering/cytos/sensing-schema/) - Agent (n/a)
 
 ---
 

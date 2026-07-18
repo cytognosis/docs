@@ -5,7 +5,7 @@
 > **Author**: @shahin
 > **Audience**: engineers
 > **Tags**: `engineering`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
+> **Variants**: Technical (this doc) - Readable (branding.md in Obsidian vault: 04-Engineering/toolchain/cytocast/design/) - Agent (n/a)
 ## Master Reference — Complete Visual Identity & Implementation Standards
 
 **Version:** 6.0 Proprietary | **Last Updated:** January 2025 | **Organization:** Cytognosis Foundation, Inc.
