@@ -1,18 +1,11 @@
 # Yar Product Spec (canonical)
 
-> **Status**: Active
-> **Date**: 2026-07-10
-> **Author**: @shahin
-> **Audience**: engineers, stakeholders
-> **Tags**: `product`
-> **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
-
-> **Status:** Active · **Date:** 2026-07-01 · **Author:** @mohammadi · **Audience:** engineers, stakeholders, funders
+> **Status:** Active · **Date:** 2026-07-18 · **Author:** @mohammadi · **Audience:** engineers, stakeholders, funders
 > **Variants**: Technical (this doc) - Readable (yar-product-spec.md in Obsidian vault, same filename) - Agent (yar-product-spec_prompt.md)
-> **Supersedes:** `yar-product-feature-master.md`, `yar-product-implementation.md`, `cytonome-master-reference.md`, `feature-comparison.md` (all archived with forward links). **Feature index:** `YAR_FEATURE_CATALOG.md` (62 features). **Evidence base:** `research/yar-unified-feature-comparison-v4.md`.
+> **Supersedes:** `yar-product-feature-master.md`, `yar-product-implementation.md`, `cytonome-master-reference.md`, `feature-comparison.md` (all archived with forward links). **Feature index:** `YAR_FEATURE_CATALOG.md` (64 features). **Evidence base:** `research/yar-unified-feature-comparison-v4.md`.
 > **Reading time:** about 8 minutes.
 
-**If you only read one thing:** Yar is Cytonome v0.1, a local-first, voice-aware, AI-native cognitive companion built by and for neurodivergent adults. It turns messy voice or text into typed objects in a personal knowledge graph, helps the user plan and execute, and keeps raw data on-device behind a hard safety boundary (CAP). This spec is the single canonical product doc; per-feature depth lives in the 62-feature catalog and the 14 formal specs it maps to.
+**If you only read one thing:** Yar is Cytonome v0.1, a local-first, voice-aware, AI-native cognitive companion built by and for neurodivergent adults. It turns messy voice or text into typed objects in a personal knowledge graph, helps the user plan and execute, and keeps raw data on-device behind a hard safety boundary (CAP). This spec is the single canonical product doc; per-feature depth lives in the 64-feature catalog and the 14 formal specs it maps to.
 
 ---
 
@@ -20,7 +13,7 @@
 
 **Yar (Your AI Representative) is a local-first, voice-aware, AI-native cognitive companion for neurodivergent adults, built by and for neurodivergent people.** It is the consumer-facing expression of Cytognosis's **Cytonome** navigator layer. Yar accepts messy input (voice, text, web context), uses on-device AI to structure it into typed objects in a personal knowledge graph, and helps the user execute, manage time, and stay self-aware. Raw private data stays on-device by default, and a hard safety boundary (**CAP**) blocks diagnosis, treatment, and unconfirmed sharing.
 
-**Who it is for:** neurodivergent adults (ADHD, autistic, AuDHD, and adjacent) for whom continuous tracking and multi-app context-switching fail.
+**Who it is for:** neurodivergent adults (ADHD, autistic, AuDHD, and adjacent) for whom continuous tracking and multi-app context-switching fail. Yar is not built for clinicians or developers as target users.
 
 **Wedge thesis:** win the daily habit first (frictionless capture, execution, self-awareness), then layer soft sensors (speech-emotion, patterns) in software, with hardware sensors later. This inverts the one-to-two-month abandonment curve typical of health and wearable apps.
 
@@ -82,7 +75,7 @@ Yar's companion is configurable as a **persona**: a bundle of personality, relat
 CSP is a **universal sensor adapter protocol**, an MCP-style open interface that lets users and third parties plug any sensor into Cytonome/Yar as easily as adding an integration. The voice-emotion sensor is simply the first CSP adapter. Each adapter declares identity and modality, the typed observations it emits (LinkML schema, so all sensors feed Brain Weather and the graph uniformly), a privacy and data-residency class, consent requirements, sampling cadence, and a `discover -> connect -> configure -> read/stream -> disconnect` lifecycle. **CAP governs every adapter:** raw biometric data stays on-device by default and each sensor is granted or revoked individually. CSP future-proofs Yar for Cytognosis hardware, creates an open ecosystem (Apache 2.0), and unifies every modality into one typed, on-device cognitive picture. Maps to features F12, F55, F30, F46 and `SPEC-CSP`.
 
 > [!NOTE]
-> **Naming:** **CSP** (Cytonome Sensor Protocol) is the canonical term. The engineering `sensors/` docs historically used **USAP** (Universal Sensor Adapter Protocol) for the same protocol; use CSP going forward.
+> **Naming:** **CSP** (Cytonome Sensor Protocol) is the canonical term, formerly USAP/UBAP, now standardized as CSP. The engineering `sensors/` docs historically used **USAP** (Universal Sensor Adapter Protocol) and **UBAP** (Universal Biosensor Adapter Protocol) for the same protocol; use CSP going forward.
 
 ### 5C. Branching brainmap companion (the flagship)
 
@@ -91,11 +84,13 @@ CSP is a **universal sensor adapter protocol**, an MCP-style open interface that
 
 You talk; Yar listens, understands your words (including slang and shorthand), and on each turn reasons about where the new thought best attaches in the growing graph, which restructures itself as the bigger picture emerges. It removes the "where does this go?" tax, honors nonlinear associative thinking, repairs earlier placements via a background reviser agent, learns your personal lexicon, deconvolves interleaved threads, captures side TODOs off the main flow, and turns a subtree into a proposal, paper, or plan. The brainmap is a typed (LinkML) thought-graph stored locally; three on-device agent roles run over it (a placer, a reviser, and a side-thread agent), all governed by CAP. Maps to features F13, F14, F15, F31, F60 and `SPEC-multi-agent`. It exists because it is how the founder's own mind works, which is the heart of the by-and-for-neurodivergent thesis.
 
-## 6. Feature catalog (62 features)
+## 6. Feature catalog (64 features)
 
-The canonical per-feature index is `YAR_FEATURE_CATALOG.md`: **62 features, F01-F62**, across six neurodivergent functional domains, plus two infrastructure modules that gate the rest. Each feature carries three naming layers (affirming public label, psychological construct tag, domain code); **CU-1..CU-8** mark the 28 Cytognosis-unique features.
+The canonical per-feature index is `YAR_FEATURE_CATALOG.md`: **64 features, F01-F64** (62 original plus F63 invisible-disability advocacy mode and F64 personal compass, added 2026-07-18), across six neurodivergent functional domains, plus two infrastructure modules that gate the rest. Each feature carries three naming layers (affirming public label, psychological construct tag, domain code); **CU-1..CU-8** mark the unique features: 20 features anchored to 8 named, defensible capability clusters, plus 21 additional features with no direct competitor equivalent.
 
 **Domains:** AEF (Attention/Executive Function), ERM (Emotion Regulation/Mood), SCI (Social/Communication/Interaction), SPR (Sensory/Processing), CTO (Cognition/Thought Organization), SMI (Self-Monitoring/Insight).
+
+Features are organized in a 3-level hierarchy (6 domains, 19 clusters, 64 features); see `research/FEATURE-HIERARCHY.md` and `research/features.json`.
 
 **Waves:** 0 = safety and sensor substrate; 1 = wedge (25 founder-elevated features); 2 = moat (24 features); 3 = sensor, hardware, and research (6 features). Five infrastructure features build first: F18 safety/consent layer, F19 on-device AI runtime (Gemma 4 E4B), F52 local knowledge store, F50 web annotation layer, F51 schema translation; plus the privacy-boundary schema and crisis-detection module.
 

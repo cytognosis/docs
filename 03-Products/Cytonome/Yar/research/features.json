@@ -1,0 +1,146 @@
+{
+  "name": "Yar",
+  "meta": {
+    "title": "Yar universal feature hierarchy",
+    "version": "v5.1-hierarchy-2026-07-18 (+F63 advocacy, +F64 personal compass)",
+    "levels": "Root -> 6 domains -> 19 capability clusters -> 64 features",
+    "source_of_truth": "docs/03-Products/Cytonome/Yar/research/yar-unified-feature-comparison-v4.md (62 scored features) + 2 approved additions (F63, F64) on 2026-07-18",
+    "counts": {"domains": 6, "clusters": 19, "features": 64},
+    "status_legend": ["shipped", "partial", "groundwork", "placeholder", "planned"],
+    "gated_note": "gated=true means safety-gated: cannot ship until crisis-detection module + privacy-boundary schema exist and are reviewed"
+  },
+  "children": [
+    {
+      "code": "AEF", "name": "Attention & Executive Function", "public": "Getting started, focus & time",
+      "children": [
+        {"name": "Capture & brain dump", "children": [
+          {"id": "F01", "name": "Voice brain dump", "status": "shipped", "desc": "Talk out everything on your mind, captured for you, no typing."},
+          {"id": "F32", "name": "Stray thought capture", "status": "shipped", "desc": "Drop a random thought or to-do somewhere safe mid-task."},
+          {"id": "F59", "name": "Capture from anywhere", "status": "groundwork", "desc": "Save to Yar from phone, computer, or browser in one tap."}
+        ]},
+        {"name": "Task structuring & breakdown", "children": [
+          {"id": "F02", "name": "Brain dump to action plan", "status": "shipped", "desc": "Turn a voice/text dump into actual next steps automatically."},
+          {"id": "F03", "name": "Tasks from your words", "status": "shipped", "desc": "Pull out to-dos directly from what you said, no manual sorting."},
+          {"id": "F04", "name": "Right-sized task breakdown", "status": "shipped", "desc": "Choose how small tasks are chopped so each step feels doable."}
+        ]},
+        {"name": "Focus, body-doubling & breaks", "children": [
+          {"id": "F06", "name": "Focus companion & body doubling", "status": "shipped", "desc": "A quiet presence with you while you work."},
+          {"id": "F20", "name": "Single-task focus mode", "status": "planned", "desc": "Fill the screen with one thing only."},
+          {"id": "F21", "name": "Graceful activity pause", "status": "planned", "desc": "Yar holds your place when you step away, no fuss."},
+          {"id": "F22", "name": "Gentle break prompts", "status": "planned", "desc": "A soft nudge to rest before you have been deep too long."},
+          {"id": "F26", "name": "Floating task reminder", "status": "planned", "desc": "A small current-task reminder in a screen corner."}
+        ]},
+        {"name": "Day planning & flexible plans", "children": [
+          {"id": "F07", "name": "Flexible plan with a backup track", "status": "shipped", "desc": "A dual-track plan: what you want, plus a lighter version."},
+          {"id": "F24", "name": "AI morning plan", "status": "planned", "desc": "A suggested day plan around what you have on and how you feel."},
+          {"id": "F64", "name": "Personal compass (gentle goals)", "status": "planned", "desc": "Non-pressuring direction: gentle goals you steer by, never a performance bar."}
+        ]},
+        {"name": "Unified app & open connections", "children": [
+          {"id": "F28", "name": "Open data connections (MCP)", "status": "planned", "gated": true, "desc": "Connect Yar to your other tools so info flows between them."},
+          {"id": "F41", "name": "All-in-one ND support app", "status": "planned", "desc": "Tasks, time, notes, mood, AI in one place, no app-switching."}
+        ]}
+      ]
+    },
+    {
+      "code": "ERM", "name": "Emotional Regulation & Mood", "public": "Mood, energy & emotional support",
+      "children": [
+        {"name": "Mood & energy sensing", "children": [
+          {"id": "F05", "name": "Your energy & mood map", "status": "shipped", "desc": "A simple picture of how energy and mood are moving."},
+          {"id": "F08", "name": "Mood tag on tasks", "status": "shipped", "desc": "Add a quick mood note to any task."},
+          {"id": "F40", "name": "Voice wellbeing signals (research)", "status": "planned", "gated": true, "desc": "Opt-in, research-stage voice-pattern signals, full consent."},
+          {"id": "F53", "name": "Mood-anchored morning check-in", "status": "shipped", "desc": "A brief low-pressure check-in that sets the day's tone."},
+          {"id": "F54", "name": "Voice mood awareness", "status": "placeholder", "desc": "Opt-in mood signals in your voice; off by default."}
+        ]},
+        {"name": "Adaptive companion & trust", "children": [
+          {"id": "F11", "name": "Companion style & voice", "status": "shipped", "desc": "Choose the voice and presence you want from Yar."},
+          {"id": "F29", "name": "Companion that learns your style", "status": "planned", "desc": "Yar adjusts how it talks to match what helps you."},
+          {"id": "F45", "name": "Mood-matched companion", "status": "planned", "desc": "Yar shifts tone to match how you feel right now."},
+          {"id": "F57", "name": "Adaptive companion that builds trust", "status": "groundwork", "desc": "Yar reads between the lines more as trust grows."}
+        ]},
+        {"name": "Compassionate pacing (anti-burnout)", "children": [
+          {"id": "F27", "name": "Rest day support", "status": "shipped", "gated": true, "desc": "Holds space for a pause without treating it as failure."},
+          {"id": "F35", "name": "Energy check before saying yes", "status": "planned", "desc": "Pause to check capacity before committing to something new."},
+          {"id": "F38", "name": "No-penalty plan change", "status": "planned", "desc": "Change your plan anytime without guilt or a performance hit."},
+          {"id": "F44", "name": "Streaks that honor rest days", "status": "shipped", "desc": "Consistency record that does not punish needed stops."},
+          {"id": "F48", "name": "Gentle reset after a hard day", "status": "planned", "gated": true, "desc": "A short kind debrief to process and set it down."},
+          {"id": "F49", "name": "Your week as a story", "status": "planned", "desc": "A short human narrative of the week, not a list."}
+        ]},
+        {"name": "Privacy & safety foundation", "children": [
+          {"id": "F17", "name": "Private space before planning", "status": "shipped", "desc": "Write how you feel before tasks, private to you."},
+          {"id": "F18", "name": "Safety & consent layer (CAP)", "status": "shipped", "desc": "Built-in consent and safety controls; you are in charge."},
+          {"id": "F19", "name": "On-device private AI", "status": "planned", "desc": "AI runs on your device; data never leaves your hands."}
+        ]}
+      ]
+    },
+    {
+      "code": "SCI", "name": "Social Communication & Interaction", "public": "Connecting & communicating",
+      "children": [
+        {"name": "Communication coaching", "children": [
+          {"id": "F25", "name": "Pre-send tone check-in", "status": "planned", "desc": "Optional heads-up on how a message's tone might land."},
+          {"id": "F42", "name": "Two-way communication bridge", "status": "planned", "gated": true, "desc": "Translate between ND and neurotypical styles, both ways."},
+          {"id": "F63", "name": "Invisible-disability advocacy mode", "status": "planned", "gated": true, "desc": "During hard periods, helps explain your situation, needs, and what to expect to others, on your terms."}
+        ]},
+        {"name": "Relational support", "children": [
+          {"id": "F36", "name": "Co-planning with a trusted person", "status": "planned", "gated": true, "desc": "Share planning with a trusted person, on your terms."},
+          {"id": "F56", "name": "Social connections & your mood", "status": "planned", "gated": true, "desc": "See how social interactions connect to how you feel."}
+        ]}
+      ]
+    },
+    {
+      "code": "SPR", "name": "Sensory Processing & Regulation", "public": "Sensory comfort",
+      "children": [
+        {"name": "Sensory accommodations", "children": [
+          {"id": "F23", "name": "Read-aloud with highlighting", "status": "planned", "desc": "Text read aloud with words highlighted in sync."},
+          {"id": "F37", "name": "Gentle context change cues", "status": "planned", "desc": "A soft signal before shifting from one thing to another."}
+        ]}
+      ]
+    },
+    {
+      "code": "CTO", "name": "Cognitive Style & Thought Organization", "public": "Thinking, notes & ideas",
+      "children": [
+        {"name": "Brainmap & thought mapping (flagship)", "children": [
+          {"id": "F13", "name": "Voice-grown thought map", "status": "groundwork", "desc": "Talk and watch words build into a connected visual map."},
+          {"id": "F14", "name": "Thought placement assistant", "status": "shipped", "desc": "Suggests where a new idea fits in your existing map."},
+          {"id": "F15", "name": "Spatial thought map view", "status": "shipped", "desc": "See notes and ideas laid out spatially with connections."},
+          {"id": "F31", "name": "Thought map reviewer", "status": "shipped", "desc": "A gentle review catching loose threads after a session."},
+          {"id": "F47", "name": "Untangling parallel thoughts", "status": "planned", "desc": "Sort several simultaneous ideas into workable threads."},
+          {"id": "F60", "name": "Conversational thought map", "status": "partial", "desc": "Build a map through back-and-forth conversation."}
+        ]},
+        {"name": "Notes, types & personal language", "children": [
+          {"id": "F09", "name": "Structured note types", "status": "partial", "desc": "Flexible note types that match how your memory works."},
+          {"id": "F10", "name": "Saved smart searches", "status": "planned", "desc": "Active searches that surface the right notes as things change."},
+          {"id": "F33", "name": "Your personal vocabulary", "status": "planned", "desc": "Yar learns your names, phrases, and shorthand."},
+          {"id": "F58", "name": "Names & terms you use", "status": "shipped", "desc": "Recognizes your people, places, and terms over time."}
+        ]},
+        {"name": "Capture, documents & transforms", "children": [
+          {"id": "F34", "name": "Map to document transform", "status": "planned", "desc": "Turn a messy thought map into a clean document in one step."},
+          {"id": "F50", "name": "Highlight & link on any page", "status": "planned", "desc": "Highlight anything on any web page and link it into notes."},
+          {"id": "F61", "name": "Thought to document templates", "status": "planned", "desc": "Apply a template to a map to draft a doc, report, or email."}
+        ]},
+        {"name": "Data ownership & interop", "children": [
+          {"id": "F16", "name": "Your data in your own tools", "status": "shipped", "desc": "Use Yar alongside Obsidian, Logseq; data stays yours."},
+          {"id": "F51", "name": "Open schema translation layer", "status": "planned", "desc": "Move notes/data between apps and formats without losing structure."},
+          {"id": "F52", "name": "Private local knowledge store", "status": "shipped", "desc": "Notes live on your device in an open format you own."}
+        ]}
+      ]
+    },
+    {
+      "code": "SMI", "name": "Self-Monitoring & Interoception", "public": "Noticing & understanding yourself",
+      "children": [
+        {"name": "Sensor connectivity (CSP)", "children": [
+          {"id": "F12", "name": "Open sensor connection layer (CSP)", "status": "planned", "desc": "A flexible layer to connect data sources and devices you choose."},
+          {"id": "F30", "name": "Wearable sensor connection", "status": "planned", "desc": "Connect an Oura ring or Apple Watch; factor in body data."},
+          {"id": "F46", "name": "Brain sensor connection layer", "status": "planned", "desc": "Future, opt-in connection for non-invasive brain sensing."}
+        ]},
+        {"name": "Self-tracking & assessment", "children": [
+          {"id": "F55", "name": "Your custom tracking axes", "status": "planned", "desc": "Define your own dimensions to track that no app covers."},
+          {"id": "F62", "name": "Opt-in self-assessment tools", "status": "planned", "gated": true, "desc": "Validated optional self-assessments, never diagnostic."}
+        ]},
+        {"name": "Insight & nudges", "children": [
+          {"id": "F39", "name": "Personalized gentle nudges", "status": "shipped", "desc": "Nudges tuned to your patterns, arriving when useful."},
+          {"id": "F43", "name": "Layered wellbeing dashboard", "status": "planned", "desc": "Wellbeing data in layers you open as much as you want."}
+        ]}
+      ]
+    }
+  ]
+}

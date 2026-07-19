@@ -16,7 +16,17 @@ last_updated: 2026-05-29
 
 ## Vision
 
-Yar is a cognitive companion built by neurodivergent minds, for everyone. It captures personal knowledge through voice-first interaction, organizes it as a structured knowledge graph, and retrieves it contextually through natural conversation. Yar transforms fleeting thoughts into persistent, searchable, interconnected knowledge.
+> **Yar (Your AI Representative)** is a local-first, voice-aware, AI-native cognitive companion for neurodivergent adults, built by and for neurodivergent people. It is the consumer-facing expression of Cytognosis's Cytonome navigator layer. Yar accepts messy input (voice, text, web context), uses on-device AI to structure it into typed objects in a personal knowledge graph, and helps the user execute, manage time, and stay self-aware.
+>
+> **Who it is for:** neurodivergent adults (ADHD, autistic, AuDHD, and adjacent) for whom continuous tracking and multi-app context-switching fail. Yar is not built for clinicians or developers as target users.
+>
+> **Why it exists:** to get through a day, a neurodivergent adult stitches together seven or eight apps, and the context-switching between them is itself the executive-function problem each claims to solve. Yar replaces that stack with one companion that keeps data on-device, adapts to the user's brain, and is fully free.
+>
+> **Differentiator:** on-device AI, a hard safety boundary (CAP) that never diagnoses or treats, emotional-regulation depth that no competitor covers, and the branching-brainmap companion as the flagship.
+>
+> **What Yar is not:** not a therapist, not a diagnostic tool, not a medical device, not a surveillance product, and not a subscription.
+
+It captures personal knowledge through voice-first interaction, organizes it as a structured knowledge graph, and retrieves it contextually through natural conversation. Yar transforms fleeting thoughts into persistent, searchable, interconnected knowledge.
 
 ## User Personas
 
@@ -24,8 +34,6 @@ Yar is a cognitive companion built by neurodivergent minds, for everyone. It cap
 |---------|------|-------------|------------|
 | Neurodivergent professional | Knowledge worker with ADHD/ASD | Capture ideas at the speed of thought without losing context | Traditional note-taking tools require too much executive function overhead |
 | Researcher | Scientist managing complex reading and experimental notes | Link observations, papers, and hypotheses into a navigable graph | Information silos across tools; no semantic connections between notes |
-| Clinician | Healthcare provider tracking people across encounters | Voice-capture clinical reasoning and retrieve relevant history instantly | EHR friction; critical context lost between visits |
-| Developer | Engineer maintaining complex codebases and decisions | Record architectural decisions and retrieve rationale later | Decision context evaporates; ADRs are never written |
 
 ## Success Metrics
 

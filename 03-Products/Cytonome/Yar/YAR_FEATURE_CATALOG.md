@@ -1,25 +1,27 @@
 # Yar Feature Catalog (consolidated, canonical)
 
 > **Status**: Active
-> **Date**: 2026-07-10
+> **Date**: 2026-07-18
 > **Author**: @shahin
 > **Audience**: engineers, stakeholders
 > **Tags**: `yar`, `product`
 > **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 
-**Date:** 2026-06-26 · **Status:** canonical front door for all Yar features · **Supersedes:** the 05-31 feature master and all pre-v4 comparisons.
+**Date:** 2026-07-18 · **Status:** canonical front door for all Yar features · **Supersedes:** the 05-31 feature master and all pre-v4 comparisons.
 **Integrates:** the "Yar specs execution plan" session (16 specs, promoted to `docs/03-Products/Cytonome/Yar/spec/`), the v4 feature comparison + prioritization, the feature-naming convention, and the "Cytonome research consolidation" benchmark package.
 **Reading time:** ~6 minutes. **If you only read one thing:** the Wave 1 table in §4 (the 25 wedge features being built first).
 
+**Hierarchy:** This catalog is organized by build wave; for the domain hierarchy (6 domains, 19 clusters, 64 features) see research/FEATURE-HIERARCHY.md and research/features.json.
+
 ## 1. Scope
 
-62 features, F01-F62, across 6 neurodivergent functional domains, plus 2 infrastructure modules (privacy boundary, crisis detection) that gate the rest. Sensor-science features are flagged for the Cytoscope project (§7). This catalog is the single index; each feature's depth lives in its spec.
+64 features, F01-F64, across 6 neurodivergent functional domains, plus 2 infrastructure modules (privacy boundary, crisis detection) that gate the rest. Sensor-science features are flagged for the Cytoscope project (§7). This catalog is the single index; each feature's depth lives in its spec.
 
 ## 2. Domain and naming legend
 
 **ND functional domains:** AEF = Attention/Executive Function; ERM = Emotion Regulation/Mood; SCI = Social/Communication/Interaction; SPR = Sensory/Processing; CTO = Cognition/Thought Organization; SMI = Self-Monitoring/Insight.
 
-**Three naming layers per feature:** affirming public label (user-facing), psychological construct tag (internal), domain code (above). **CU-1..CU-8** mark the 28 Cytognosis-unique features (CSP sensor system, social tracker, adaptive personas, personal-KG NER, capture-everywhere, conversational mind-mapping, templated transformation, self-report instruments).
+**Three naming layers per feature:** affirming public label (user-facing), psychological construct tag (internal), domain code (above). **CU-1..CU-8** mark 20 features anchored to 8 named, defensible capability clusters, plus 21 additional features with no direct competitor equivalent (CSP sensor system, social tracker, adaptive personas, personal-KG NER, capture-everywhere, conversational mind-mapping, templated transformation, self-report instruments).
 
 ## 3. Prioritization (IPS) and waves
 
@@ -76,7 +78,7 @@ Plus two off-catalog infra modules: **privacy-boundary schema** and **crisis-det
 | F15 | Spatial map view | CTO | | 48 |
 | F16 | Open export | CTO | | 48 |
 
-### Wave 2 (24 moat features)
+### Wave 2 (26 moat features, incl. 2 added 2026-07-18)
 
 | ID | Feature | Domain | CU | IPS |
 |---|---|---|---|---|
@@ -104,6 +106,15 @@ Plus two off-catalog infra modules: **privacy-boundary schema** and **crisis-det
 | F23 | Read-aloud | SPR | | 46 |
 | F35 | Energy check before yes | AEF | | 46 |
 | F37 | Transition cues | SPR | | 44 |
+
+#### Added 2026-07-18
+
+Not yet scored in the v4 comparison matrix (post-matrix additions per D-E).
+
+| ID | Feature | Domain / cluster | Status | Gated | Description |
+|---|---|---|---|---|---|
+| F63 | Invisible-disability advocacy mode | SCI / Communication coaching | planned | yes | During depressive or anxious periods, Yar helps explain your situation, needs, and what to expect to partners or colleagues, on your terms, so you are not misunderstood when you cannot perform as usual. Closes the founder-narrative "advocates for you" gap. |
+| F64 | Personal compass (gentle goals) | AEF / Day planning & flexible plans | planned | no | Non-pressuring direction: gentle goals you steer by, never a performance bar. Reframes the Leantime "Goals" pattern into Yar's no-shame model. |
 
 ### Wave 3 (6 sensor / hardware / research)
 

@@ -6,7 +6,7 @@
 
 # Yar Documentation Pillar: Master Index
 
-**BLUF:** Yar (Your AI Representative) is Cytonome v0.1, a local-first, voice-aware cognitive companion built by and for neurodivergent people. This is the master index for every current (non-archive) doc in this pillar, organized by section. Start with [`yar-product-spec.md`](./yar-product-spec.md) for the product, [`YAR_FEATURE_CATALOG.md`](./YAR_FEATURE_CATALOG.md) for the 62-feature index, and [`submission/README.md`](./submission/README.md) if you're a YC reviewer.
+**BLUF:** Yar (Your AI Representative) is Cytonome v0.1, a local-first, voice-aware cognitive companion built by and for neurodivergent people. This is the master index for every current (non-archive) doc in this pillar, organized by section. Start with [`yar-product-spec.md`](./yar-product-spec.md) for the product, [`YAR_FEATURE_CATALOG.md`](./YAR_FEATURE_CATALOG.md) for the 64-feature index (62 original + F63, F64 added 2026-07-18), and [`submission/README.md`](./submission/README.md) if you're a YC reviewer.
 
 **If you only read one thing:** the product spec, plus this pillar's four section indexes (`research/README.md`, `spec/README.md`, `benchmark/README.md`, `submission/README.md`), each of which cross-links the others.
 
@@ -18,11 +18,11 @@
 |---|---|
 | [`yar-product-spec.md`](./yar-product-spec.md) | Canonical product spec: what Yar is, architecture, feature catalog, safety, positioning (15 sections) |
 | [`yar-product-spec_prompt.md`](./yar-product-spec_prompt.md) | Self-contained agent brief; companion to the product spec for a fresh agent picking up Yar |
-| [`YAR_FEATURE_CATALOG.md`](./YAR_FEATURE_CATALOG.md) | Canonical 62-feature index (F01-F62), Wave 1 build table, supersedes all pre-v4 comparisons |
+| [`YAR_FEATURE_CATALOG.md`](./YAR_FEATURE_CATALOG.md) | Canonical 64-feature index (F01-F64; 62 original + F63, F64 added 2026-07-18), Wave 1 build table, supersedes all pre-v4 comparisons |
 | [`INTEGRATION_PLAN.md`](./INTEGRATION_PLAN.md) | Codebase integration plan reconciling this docs pillar with the Yar code repo and Cytoplex |
 | [`DATA-MOVED.md`](./DATA-MOVED.md) | Pointer: feature/prioritization CSV tables live in the datasets repo, not here (path corrected 2026-07-17) |
 | [`sensor-architecture.md`](./sensor-architecture.md) | ADHD-friendly summary of the sensor architecture layer |
-| [`sensor-ecosystem.md`](./sensor-ecosystem.md) | Universal Biosensor Adapter Protocol (UBAP) and the sensor plug-in ecosystem; see `spec/SPEC-CSP.md` for the engineering-facing equivalent (CSP) |
+| [`sensor-ecosystem.md`](./sensor-ecosystem.md) | Sensor plug-in ecosystem, formerly USAP/UBAP (Universal Sensor/Biosensor Adapter Protocol), now standardized as CSP; see `spec/SPEC-CSP.md` for the engineering-facing equivalent |
 | [`simple/README.md`](./simple/README.md) | One-minute plain-language pointer into the technical docs; notes what changed in the 2026-07 consolidation |
 
 ## Research (`research/`)
@@ -30,6 +30,8 @@
 Full index, statuses, and cross-links: **[`research/README.md`](./research/README.md)**.
 
 Covers: the canonical v4 feature comparison and its supporting docs (naming convention, public catalog), the 2026-07-16 session artifacts (FINAL consolidation + simplified twin, framework assessment, salvage-reconciliation map), and promoted references (incorporation map, SurrealDB code audit, persona-profiler framework reference and schema).
+
+**New artifacts (2026-07-18):** [`research/FEATURE-HIERARCHY.md`](./research/FEATURE-HIERARCHY.md) and [`research/features.json`](./research/features.json) (canonical 6-domain, 19-cluster, 64-feature hierarchy), [`research/COMPS-MASTER-TABLE.md`](./research/COMPS-MASTER-TABLE.md) (competitor coverage table), [`research/yar-feature-hierarchy.csv`](./research/yar-feature-hierarchy.csv), and [`assets/viz/yar-feature-tree.html`](./assets/viz/yar-feature-tree.html) (interactive feature-tree visualization).
 
 ## Spec (`spec/`)
 

@@ -1,0 +1,65 @@
+domain,domain_public,cluster,feature_id,feature,status,gated,description
+AEF,"Getting started, focus & time",Capture & brain dump,F01,Voice brain dump,shipped,,"Talk out everything on your mind, captured for you, no typing."
+AEF,"Getting started, focus & time",Capture & brain dump,F32,Stray thought capture,shipped,,Drop a random thought or to-do somewhere safe mid-task.
+AEF,"Getting started, focus & time",Capture & brain dump,F59,Capture from anywhere,groundwork,,"Save to Yar from phone, computer, or browser in one tap."
+AEF,"Getting started, focus & time",Task structuring & breakdown,F02,Brain dump to action plan,shipped,,Turn a voice/text dump into actual next steps automatically.
+AEF,"Getting started, focus & time",Task structuring & breakdown,F03,Tasks from your words,shipped,,"Pull out to-dos directly from what you said, no manual sorting."
+AEF,"Getting started, focus & time",Task structuring & breakdown,F04,Right-sized task breakdown,shipped,,Choose how small tasks are chopped so each step feels doable.
+AEF,"Getting started, focus & time","Focus, body-doubling & breaks",F06,Focus companion & body doubling,shipped,,A quiet presence with you while you work.
+AEF,"Getting started, focus & time","Focus, body-doubling & breaks",F20,Single-task focus mode,planned,,Fill the screen with one thing only.
+AEF,"Getting started, focus & time","Focus, body-doubling & breaks",F21,Graceful activity pause,planned,,"Yar holds your place when you step away, no fuss."
+AEF,"Getting started, focus & time","Focus, body-doubling & breaks",F22,Gentle break prompts,planned,,A soft nudge to rest before you have been deep too long.
+AEF,"Getting started, focus & time","Focus, body-doubling & breaks",F26,Floating task reminder,planned,,A small current-task reminder in a screen corner.
+AEF,"Getting started, focus & time",Day planning & flexible plans,F07,Flexible plan with a backup track,shipped,,"A dual-track plan: what you want, plus a lighter version."
+AEF,"Getting started, focus & time",Day planning & flexible plans,F24,AI morning plan,planned,,A suggested day plan around what you have on and how you feel.
+AEF,"Getting started, focus & time",Day planning & flexible plans,F64,Personal compass (gentle goals),planned,,"Non-pressuring direction: gentle goals you steer by, never a performance bar."
+AEF,"Getting started, focus & time",Unified app & open connections,F28,Open data connections (MCP),planned,yes,Connect Yar to your other tools so info flows between them.
+AEF,"Getting started, focus & time",Unified app & open connections,F41,All-in-one ND support app,planned,,"Tasks, time, notes, mood, AI in one place, no app-switching."
+ERM,"Mood, energy & emotional support",Mood & energy sensing,F05,Your energy & mood map,shipped,,A simple picture of how energy and mood are moving.
+ERM,"Mood, energy & emotional support",Mood & energy sensing,F08,Mood tag on tasks,shipped,,Add a quick mood note to any task.
+ERM,"Mood, energy & emotional support",Mood & energy sensing,F40,Voice wellbeing signals (research),planned,yes,"Opt-in, research-stage voice-pattern signals, full consent."
+ERM,"Mood, energy & emotional support",Mood & energy sensing,F53,Mood-anchored morning check-in,shipped,,A brief low-pressure check-in that sets the day's tone.
+ERM,"Mood, energy & emotional support",Mood & energy sensing,F54,Voice mood awareness,placeholder,,Opt-in mood signals in your voice; off by default.
+ERM,"Mood, energy & emotional support",Adaptive companion & trust,F11,Companion style & voice,shipped,,Choose the voice and presence you want from Yar.
+ERM,"Mood, energy & emotional support",Adaptive companion & trust,F29,Companion that learns your style,planned,,Yar adjusts how it talks to match what helps you.
+ERM,"Mood, energy & emotional support",Adaptive companion & trust,F45,Mood-matched companion,planned,,Yar shifts tone to match how you feel right now.
+ERM,"Mood, energy & emotional support",Adaptive companion & trust,F57,Adaptive companion that builds trust,groundwork,,Yar reads between the lines more as trust grows.
+ERM,"Mood, energy & emotional support",Compassionate pacing (anti-burnout),F27,Rest day support,shipped,yes,Holds space for a pause without treating it as failure.
+ERM,"Mood, energy & emotional support",Compassionate pacing (anti-burnout),F35,Energy check before saying yes,planned,,Pause to check capacity before committing to something new.
+ERM,"Mood, energy & emotional support",Compassionate pacing (anti-burnout),F38,No-penalty plan change,planned,,Change your plan anytime without guilt or a performance hit.
+ERM,"Mood, energy & emotional support",Compassionate pacing (anti-burnout),F44,Streaks that honor rest days,shipped,,Consistency record that does not punish needed stops.
+ERM,"Mood, energy & emotional support",Compassionate pacing (anti-burnout),F48,Gentle reset after a hard day,planned,yes,A short kind debrief to process and set it down.
+ERM,"Mood, energy & emotional support",Compassionate pacing (anti-burnout),F49,Your week as a story,planned,,"A short human narrative of the week, not a list."
+ERM,"Mood, energy & emotional support",Privacy & safety foundation,F17,Private space before planning,shipped,,"Write how you feel before tasks, private to you."
+ERM,"Mood, energy & emotional support",Privacy & safety foundation,F18,Safety & consent layer (CAP),shipped,,Built-in consent and safety controls; you are in charge.
+ERM,"Mood, energy & emotional support",Privacy & safety foundation,F19,On-device private AI,planned,,AI runs on your device; data never leaves your hands.
+SCI,Connecting & communicating,Communication coaching,F25,Pre-send tone check-in,planned,,Optional heads-up on how a message's tone might land.
+SCI,Connecting & communicating,Communication coaching,F42,Two-way communication bridge,planned,yes,"Translate between ND and neurotypical styles, both ways."
+SCI,Connecting & communicating,Communication coaching,F63,Invisible-disability advocacy mode,planned,yes,"During hard periods, helps explain your situation, needs, and what to expect to others, on your terms."
+SCI,Connecting & communicating,Relational support,F36,Co-planning with a trusted person,planned,yes,"Share planning with a trusted person, on your terms."
+SCI,Connecting & communicating,Relational support,F56,Social connections & your mood,planned,yes,See how social interactions connect to how you feel.
+SPR,Sensory comfort,Sensory accommodations,F23,Read-aloud with highlighting,planned,,Text read aloud with words highlighted in sync.
+SPR,Sensory comfort,Sensory accommodations,F37,Gentle context change cues,planned,,A soft signal before shifting from one thing to another.
+CTO,"Thinking, notes & ideas",Brainmap & thought mapping (flagship),F13,Voice-grown thought map,groundwork,,Talk and watch words build into a connected visual map.
+CTO,"Thinking, notes & ideas",Brainmap & thought mapping (flagship),F14,Thought placement assistant,shipped,,Suggests where a new idea fits in your existing map.
+CTO,"Thinking, notes & ideas",Brainmap & thought mapping (flagship),F15,Spatial thought map view,shipped,,See notes and ideas laid out spatially with connections.
+CTO,"Thinking, notes & ideas",Brainmap & thought mapping (flagship),F31,Thought map reviewer,shipped,,A gentle review catching loose threads after a session.
+CTO,"Thinking, notes & ideas",Brainmap & thought mapping (flagship),F47,Untangling parallel thoughts,planned,,Sort several simultaneous ideas into workable threads.
+CTO,"Thinking, notes & ideas",Brainmap & thought mapping (flagship),F60,Conversational thought map,partial,,Build a map through back-and-forth conversation.
+CTO,"Thinking, notes & ideas","Notes, types & personal language",F09,Structured note types,partial,,Flexible note types that match how your memory works.
+CTO,"Thinking, notes & ideas","Notes, types & personal language",F10,Saved smart searches,planned,,Active searches that surface the right notes as things change.
+CTO,"Thinking, notes & ideas","Notes, types & personal language",F33,Your personal vocabulary,planned,,"Yar learns your names, phrases, and shorthand."
+CTO,"Thinking, notes & ideas","Notes, types & personal language",F58,Names & terms you use,shipped,,"Recognizes your people, places, and terms over time."
+CTO,"Thinking, notes & ideas","Capture, documents & transforms",F34,Map to document transform,planned,,Turn a messy thought map into a clean document in one step.
+CTO,"Thinking, notes & ideas","Capture, documents & transforms",F50,Highlight & link on any page,planned,,Highlight anything on any web page and link it into notes.
+CTO,"Thinking, notes & ideas","Capture, documents & transforms",F61,Thought to document templates,planned,,"Apply a template to a map to draft a doc, report, or email."
+CTO,"Thinking, notes & ideas",Data ownership & interop,F16,Your data in your own tools,shipped,,"Use Yar alongside Obsidian, Logseq; data stays yours."
+CTO,"Thinking, notes & ideas",Data ownership & interop,F51,Open schema translation layer,planned,,Move notes/data between apps and formats without losing structure.
+CTO,"Thinking, notes & ideas",Data ownership & interop,F52,Private local knowledge store,shipped,,Notes live on your device in an open format you own.
+SMI,Noticing & understanding yourself,Sensor connectivity (CSP),F12,Open sensor connection layer (CSP),planned,,A flexible layer to connect data sources and devices you choose.
+SMI,Noticing & understanding yourself,Sensor connectivity (CSP),F30,Wearable sensor connection,planned,,Connect an Oura ring or Apple Watch; factor in body data.
+SMI,Noticing & understanding yourself,Sensor connectivity (CSP),F46,Brain sensor connection layer,planned,,"Future, opt-in connection for non-invasive brain sensing."
+SMI,Noticing & understanding yourself,Self-tracking & assessment,F55,Your custom tracking axes,planned,,Define your own dimensions to track that no app covers.
+SMI,Noticing & understanding yourself,Self-tracking & assessment,F62,Opt-in self-assessment tools,planned,yes,"Validated optional self-assessments, never diagnostic."
+SMI,Noticing & understanding yourself,Insight & nudges,F39,Personalized gentle nudges,shipped,,"Nudges tuned to your patterns, arriving when useful."
+SMI,Noticing & understanding yourself,Insight & nudges,F43,Layered wellbeing dashboard,planned,,Wellbeing data in layers you open as much as you want.

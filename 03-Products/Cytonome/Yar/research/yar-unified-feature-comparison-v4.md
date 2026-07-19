@@ -43,8 +43,13 @@
 | Personal-knowledge-management comparators (substrate analysis) | 7 |
 | Total named tools represented | 18 |
 | Unified features after de-duplication | 62 |
-| Of those, Cytognosis-unique (no competitor equivalent) | 28 |
+| Of those, anchored to 8 named, defensible capability clusters (D-B) | 20 |
+| Additional Cytognosis-unique features with no direct competitor equivalent | 21 |
 | Academic sources verified | Chen et al. 2026 (CSCW), Brain.fm Communications Biology 2024, Blue Lin CHI 2024 + IMWUT 2025 |
+
+> **Taxonomy update (2026-07-18):** Two features (F63 invisible-disability advocacy mode, F64 personal compass) were added on 2026-07-18 per decision D-E; they have no competitor equivalent and are not yet scored in this matrix. Current taxonomy total: 64.
+>
+> **Domain hierarchy** (6 domains, 19 clusters, 64 features): see `FEATURE-HIERARCHY.md` and `features.json` in this folder.
 
 ---
 
@@ -267,7 +272,7 @@ The substrate decision report (2026-06-14) assessed nine PKM tools against Yar's
 
 ## 8. Cytognosis Unique-Feature Strategy
 
-Twenty-eight of the sixty-two features have no competitor equivalent. They are anchored by eight named capabilities that define Yar's moat. Each is greenfield (prior-AI maturity 0 to 2), high impact, and high differentiation.
+Twenty of the sixty-two features are anchored to eight named, defensible capability clusters that define Yar's moat. A further twenty-one features have no direct competitor equivalent but are not yet anchored to a named cluster. Each anchored capability is greenfield (prior-AI maturity 0 to 2), high impact, and high differentiation.
 
 | CU | Capability | Feature IDs | Why it is defensible |
 |---|---|---|---|
@@ -378,7 +383,7 @@ This verdict grounds features F01 (Voice brain dump), F40 (Voice wellbeing signa
 
 | # | Decision or gap | Severity | Recommended action |
 |---|---|---|---|
-| D1 | CSP vs. USAP sensor-protocol name | Low | Adopt **CSP (Cytonome Sensor Protocol)** as canonical; document USAP as the engineering alias |
+| D1 | Sensor-protocol name, formerly USAP/UBAP, now standardized as CSP | Low | Adopt **CSP (Cytonome Sensor Protocol)** as canonical; USAP/UBAP retained only as deprecated engineering aliases |
 | D2 | Privacy-boundary schema (no artifact) | **Critical** | Create the schema before any distributed-runtime work; block that work on it |
 | D3 | Crisis-detection subsystem (not built) | **Critical** | Required before any therapy-adjacent feature reaches users |
 | D4 | Duplicate master files (byte-identical) | Low | Designate `yar-product-feature-master.md` canonical; replace the other with a link |

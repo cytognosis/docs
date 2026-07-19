@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Yar Universal Feature Hierarchy</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+  :root{
+    --bg:#0f1020; --panel:#1a1b2e; --ink:#f4f4fb; --muted:#a9abce; --line:#3a3c63;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  header{padding:18px 22px 8px}
+  h1{font-size:20px;margin:0 0 2px}
+  .sub{color:var(--muted);font-size:13px}
+  .bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:10px 22px}
+  button{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  button.active{background:#8B3FC7;border-color:#8B3FC7}
+  button:hover{border-color:#8B3FC7}
+  #legend{display:flex;flex-wrap:wrap;gap:14px;padding:4px 22px 8px;font-size:12px;color:var(--muted)}
+  .lg{display:flex;align-items:center;gap:6px}
+  .sw{width:13px;height:13px;border-radius:3px;display:inline-block}
+  #wrap{width:100%;height:calc(100vh - 190px);min-height:520px}
+  svg{width:100%;height:100%;display:block}
+  .link{fill:none;stroke:var(--line);stroke-opacity:.6}
+  .node text{font-size:9px;fill:var(--ink)}
+  .clabel{font-size:10px;fill:var(--ink);font-weight:600}
+  .dlabel{font-size:12px;fill:var(--ink);font-weight:700}
+  .tip{position:fixed;pointer-events:none;background:#000d;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12px;max-width:280px;opacity:0;transition:opacity .1s;z-index:9}
+  .tip b{color:#e9d5ff}
+  .statusdot{font-size:11px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Yar &mdash; Universal Feature Hierarchy</h1>
+  <div class="sub">Root &rsaquo; 6 domains &rsaquo; 19 capability clusters &rsaquo; 62 features. Color = domain; opacity = build status; dashed ring = safety-gated.</div>
+</header>
+<div class="bar">
+  <button id="btnRadial" class="active">Radial dendrogram</button>
+  <button id="btnPack">Nested / packed circles</button>
+  <button id="btnDownload">Download SVG</button>
+  <span class="sub" id="counts"></span>
+</div>
+<div id="legend"></div>
+<div id="wrap"><svg id="viz"></svg></div>
+<div class="tip" id="tip"></div>
+
+<script>
+const DATA = {
+  "name": "Yar",
+  "meta": {
+    "title": "Yar universal feature hierarchy",
+    "version": "v5.1-hierarchy-2026-07-18 (+F63 advocacy, +F64 personal compass)",
+    "levels": "Root -> 6 domains -> 19 capability clusters -> 64 features",
+    "source_of_truth": "docs/03-Products/Cytonome/Yar/research/yar-unified-feature-comparison-v4.md (62 scored features) + 2 approved additions (F63, F64) on 2026-07-18",
+    "counts": {"domains": 6, "clusters": 19, "features": 64},
+    "status_legend": ["shipped", "partial", "groundwork", "placeholder", "planned"],
+    "gated_note": "gated=true means safety-gated: cannot ship until crisis-detection module + privacy-boundary schema exist and are reviewed"
+  },
+  "children": [
+    {
+      "code": "AEF", "name": "Attention & Executive Function", "public": "Getting started, focus & time",
+      "children": [
+        {"name": "Capture & brain dump", "children": [
+          {"id": "F01", "name": "Voice brain dump", "status": "shipped", "desc": "Talk out everything on your mind, captured for you, no typing."},
+          {"id": "F32", "name": "Stray thought capture", "status": "shipped", "desc": "Drop a random thought or to-do somewhere safe mid-task."},
+          {"id": "F59", "name": "Capture from anywhere", "status": "groundwork", "desc": "Save to Yar from phone, computer, or browser in one tap."}
+        ]},
+        {"name": "Task structuring & breakdown", "children": [
+          {"id": "F02", "name": "Brain dump to action plan", "status": "shipped", "desc": "Turn a voice/text dump into actual next steps automatically."},
+          {"id": "F03", "name": "Tasks from your words", "status": "shipped", "desc": "Pull out to-dos directly from what you said, no manual sorting."},
+          {"id": "F04", "name": "Right-sized task breakdown", "status": "shipped", "desc": "Choose how small tasks are chopped so each step feels doable."}
+        ]},
+        {"name": "Focus, body-doubling & breaks", "children": [
+          {"id": "F06", "name": "Focus companion & body doubling", "status": "shipped", "desc": "A quiet presence with you while you work."},
+          {"id": "F20", "name": "Single-task focus mode", "status": "planned", "desc": "Fill the screen with one thing only."},
+          {"id": "F21", "name": "Graceful activity pause", "status": "planned", "desc": "Yar holds your place when you step away, no fuss."},
+          {"id": "F22", "name": "Gentle break prompts", "status": "planned", "desc": "A soft nudge to rest before you have been deep too long."},
+          {"id": "F26", "name": "Floating task reminder", "status": "planned", "desc": "A small current-task reminder in a screen corner."}
+        ]},
+        {"name": "Day planning & flexible plans", "children": [
+          {"id": "F07", "name": "Flexible plan with a backup track", "status": "shipped", "desc": "A dual-track plan: what you want, plus a lighter version."},
+          {"id": "F24", "name": "AI morning plan", "status": "planned", "desc": "A suggested day plan around what you have on and how you feel."},
+          {"id": "F64", "name": "Personal compass (gentle goals)", "status": "planned", "desc": "Non-pressuring direction: gentle goals you steer by, never a performance bar."}
+        ]},
+        {"name": "Unified app & open connections", "children": [
+          {"id": "F28", "name": "Open data connections (MCP)", "status": "planned", "gated": true, "desc": "Connect Yar to your other tools so info flows between them."},
+          {"id": "F41", "name": "All-in-one ND support app", "status": "planned", "desc": "Tasks, time, notes, mood, AI in one place, no app-switching."}
+        ]}
+      ]
+    },
+    {
+      "code": "ERM", "name": "Emotional Regulation & Mood", "public": "Mood, energy & emotional support",
+      "children": [
+        {"name": "Mood & energy sensing", "children": [
+          {"id": "F05", "name": "Your energy & mood map", "status": "shipped", "desc": "A simple picture of how energy and mood are moving."},
+          {"id": "F08", "name": "Mood tag on tasks", "status": "shipped", "desc": "Add a quick mood note to any task."},
+          {"id": "F40", "name": "Voice wellbeing signals (research)", "status": "planned", "gated": true, "desc": "Opt-in, research-stage voice-pattern signals, full consent."},
+          {"id": "F53", "name": "Mood-anchored morning check-in", "status": "shipped", "desc": "A brief low-pressure check-in that sets the day's tone."},
+          {"id": "F54", "name": "Voice mood awareness", "status": "placeholder", "desc": "Opt-in mood signals in your voice; off by default."}
+        ]},
+        {"name": "Adaptive companion & trust", "children": [
+          {"id": "F11", "name": "Companion style & voice", "status": "shipped", "desc": "Choose the voice and presence you want from Yar."},
+          {"id": "F29", "name": "Companion that learns your style", "status": "planned", "desc": "Yar adjusts how it talks to match what helps you."},
+          {"id": "F45", "name": "Mood-matched companion", "status": "planned", "desc": "Yar shifts tone to match how you feel right now."},
+          {"id": "F57", "name": "Adaptive companion that builds trust", "status": "groundwork", "desc": "Yar reads between the lines more as trust grows."}
+        ]},
+        {"name": "Compassionate pacing (anti-burnout)", "children": [
+          {"id": "F27", "name": "Rest day support", "status": "shipped", "gated": true, "desc": "Holds space for a pause without treating it as failure."},
+          {"id": "F35", "name": "Energy check before saying yes", "status": "planned", "desc": "Pause to check capacity before committing to something new."},
+          {"id": "F38", "name": "No-penalty plan change", "status": "planned", "desc": "Change your plan anytime without guilt or a performance hit."},
+          {"id": "F44", "name": "Streaks that honor rest days", "status": "shipped", "desc": "Consistency record that does not punish needed stops."},
+          {"id": "F48", "name": "Gentle reset after a hard day", "status": "planned", "gated": true, "desc": "A short kind debrief to process and set it down."},
+          {"id": "F49", "name": "Your week as a story", "status": "planned", "desc": "A short human narrative of the week, not a list."}
+        ]},
+        {"name": "Privacy & safety foundation", "children": [
+          {"id": "F17", "name": "Private space before planning", "status": "shipped", "desc": "Write how you feel before tasks, private to you."},
+          {"id": "F18", "name": "Safety & consent layer (CAP)", "status": "shipped", "desc": "Built-in consent and safety controls; you are in charge."},
+          {"id": "F19", "name": "On-device private AI", "status": "planned", "desc": "AI runs on your device; data never leaves your hands."}
+        ]}
+      ]
+    },
+    {
+      "code": "SCI", "name": "Social Communication & Interaction", "public": "Connecting & communicating",
+      "children": [
+        {"name": "Communication coaching", "children": [
+          {"id": "F25", "name": "Pre-send tone check-in", "status": "planned", "desc": "Optional heads-up on how a message's tone might land."},
+          {"id": "F42", "name": "Two-way communication bridge", "status": "planned", "gated": true, "desc": "Translate between ND and neurotypical styles, both ways."},
+          {"id": "F63", "name": "Invisible-disability advocacy mode", "status": "planned", "gated": true, "desc": "During hard periods, helps explain your situation, needs, and what to expect to others, on your terms."}
+        ]},
+        {"name": "Relational support", "children": [
+          {"id": "F36", "name": "Co-planning with a trusted person", "status": "planned", "gated": true, "desc": "Share planning with a trusted person, on your terms."},
+          {"id": "F56", "name": "Social connections & your mood", "status": "planned", "gated": true, "desc": "See how social interactions connect to how you feel."}
+        ]}
+      ]
+    },
+    {
+      "code": "SPR", "name": "Sensory Processing & Regulation", "public": "Sensory comfort",
+      "children": [
+        {"name": "Sensory accommodations", "children": [
+          {"id": "F23", "name": "Read-aloud with highlighting", "status": "planned", "desc": "Text read aloud with words highlighted in sync."},
+          {"id": "F37", "name": "Gentle context change cues", "status": "planned", "desc": "A soft signal before shifting from one thing to another."}
+        ]}
+      ]
+    },
+    {
+      "code": "CTO", "name": "Cognitive Style & Thought Organization", "public": "Thinking, notes & ideas",
+      "children": [
+        {"name": "Brainmap & thought mapping (flagship)", "children": [
+          {"id": "F13", "name": "Voice-grown thought map", "status": "groundwork", "desc": "Talk and watch words build into a connected visual map."},
+          {"id": "F14", "name": "Thought placement assistant", "status": "shipped", "desc": "Suggests where a new idea fits in your existing map."},
+          {"id": "F15", "name": "Spatial thought map view", "status": "shipped", "desc": "See notes and ideas laid out spatially with connections."},
+          {"id": "F31", "name": "Thought map reviewer", "status": "shipped", "desc": "A gentle review catching loose threads after a session."},
+          {"id": "F47", "name": "Untangling parallel thoughts", "status": "planned", "desc": "Sort several simultaneous ideas into workable threads."},
+          {"id": "F60", "name": "Conversational thought map", "status": "partial", "desc": "Build a map through back-and-forth conversation."}
+        ]},
+        {"name": "Notes, types & personal language", "children": [
+          {"id": "F09", "name": "Structured note types", "status": "partial", "desc": "Flexible note types that match how your memory works."},
+          {"id": "F10", "name": "Saved smart searches", "status": "planned", "desc": "Active searches that surface the right notes as things change."},
+          {"id": "F33", "name": "Your personal vocabulary", "status": "planned", "desc": "Yar learns your names, phrases, and shorthand."},
+          {"id": "F58", "name": "Names & terms you use", "status": "shipped", "desc": "Recognizes your people, places, and terms over time."}
+        ]},
+        {"name": "Capture, documents & transforms", "children": [
+          {"id": "F34", "name": "Map to document transform", "status": "planned", "desc": "Turn a messy thought map into a clean document in one step."},
+          {"id": "F50", "name": "Highlight & link on any page", "status": "planned", "desc": "Highlight anything on any web page and link it into notes."},
+          {"id": "F61", "name": "Thought to document templates", "status": "planned", "desc": "Apply a template to a map to draft a doc, report, or email."}
+        ]},
+        {"name": "Data ownership & interop", "children": [
+          {"id": "F16", "name": "Your data in your own tools", "status": "shipped", "desc": "Use Yar alongside Obsidian, Logseq; data stays yours."},
+          {"id": "F51", "name": "Open schema translation layer", "status": "planned", "desc": "Move notes/data between apps and formats without losing structure."},
+          {"id": "F52", "name": "Private local knowledge store", "status": "shipped", "desc": "Notes live on your device in an open format you own."}
+        ]}
+      ]
+    },
+    {
+      "code": "SMI", "name": "Self-Monitoring & Interoception", "public": "Noticing & understanding yourself",
+      "children": [
+        {"name": "Sensor connectivity (CSP)", "children": [
+          {"id": "F12", "name": "Open sensor connection layer (CSP)", "status": "planned", "desc": "A flexible layer to connect data sources and devices you choose."},
+          {"id": "F30", "name": "Wearable sensor connection", "status": "planned", "desc": "Connect an Oura ring or Apple Watch; factor in body data."},
+          {"id": "F46", "name": "Brain sensor connection layer", "status": "planned", "desc": "Future, opt-in connection for non-invasive brain sensing."}
+        ]},
+        {"name": "Self-tracking & assessment", "children": [
+          {"id": "F55", "name": "Your custom tracking axes", "status": "planned", "desc": "Define your own dimensions to track that no app covers."},
+          {"id": "F62", "name": "Opt-in self-assessment tools", "status": "planned", "gated": true, "desc": "Validated optional self-assessments, never diagnostic."}
+        ]},
+        {"name": "Insight & nudges", "children": [
+          {"id": "F39", "name": "Personalized gentle nudges", "status": "shipped", "desc": "Nudges tuned to your patterns, arriving when useful."},
+          {"id": "F43", "name": "Layered wellbeing dashboard", "status": "planned", "desc": "Wellbeing data in layers you open as much as you want."}
+        ]}
+      ]
+    }
+  ]
+};
+
+const DOMAINS = DATA.children.map(d=>d.code);
+const DOMAIN_NAMES = {}; DATA.children.forEach(d=>DOMAIN_NAMES[d.code]=d.name);
+const palette = ["#8B3FC7","#3B7DD6","#2Fb3a3","#E0a11b","#D6564f","#7d8cf0"];
+const color = d3.scaleOrdinal().domain(DOMAINS).range(palette);
+const statusOpacity = {shipped:1.0, partial:0.74, groundwork:0.64, placeholder:0.54, planned:0.4};
+const statusLabel = {shipped:"shipped", partial:"partial", groundwork:"groundwork", placeholder:"placeholder", planned:"planned"};
+
+const tip = d3.select("#tip");
+function showTip(html,ev){ tip.html(html).style("opacity",1).style("left",(ev.clientX+14)+"px").style("top",(ev.clientY+12)+"px"); }
+function hideTip(){ tip.style("opacity",0); }
+
+function domainCodeOf(node){
+  let n=node; while(n.depth>1) n=n.parent;
+  return (n.data&&n.data.code) ? n.data.code : (node.data.code||null);
+}
+
+let counts={dom:0,clu:0,feat:0};
+(function(){
+  DATA.children.forEach(d=>{counts.dom++; d.children.forEach(c=>{counts.clu++; c.children.forEach(()=>counts.feat++);});});
+  d3.select("#counts").text(`${counts.dom} domains · ${counts.clu} clusters · ${counts.feat} features`);
+})();
+
+function buildLegend(){
+  const L=d3.select("#legend"); L.html("");
+  DATA.children.forEach(d=>{
+    const el=L.append("div").attr("class","lg");
+    el.append("span").attr("class","sw").style("background",color(d.code));
+    el.append("span").text(`${d.code} — ${d.public}`);
+  });
+  const s=L.append("div").attr("class","lg").style("margin-left","8px");
+  s.append("span").html("status:");
+  Object.keys(statusOpacity).forEach(k=>{
+    const e=L.append("div").attr("class","lg");
+    e.append("span").attr("class","sw").style("background","#fff").style("opacity",statusOpacity[k]);
+    e.append("span").text(k);
+  });
+  const g=L.append("div").attr("class","lg");
+  g.append("span").attr("class","sw").style("background","transparent").style("border","2px dashed #fff");
+  g.append("span").text("safety-gated");
+}
+buildLegend();
+
+const svg=d3.select("#viz");
+function clear(){ svg.selectAll("*").remove(); }
+function dims(){ const w=document.getElementById("wrap").clientWidth, h=document.getElementById("wrap").clientHeight; return {w,h}; }
+
+function leafTip(d){
+  const g=d.data.gated?' <span class="statusdot">⛔ gated</span>':'';
+  return `<b>${d.data.id} · ${d.data.name}</b><br>${d.data.desc||''}<br><span style="color:#a9abce">${statusLabel[d.data.status]||d.data.status}${g}</span>`;
+}
+
+function renderRadial(){
+  clear();
+  const {w,h}=dims(); const R=Math.min(w,h)/2-90;
+  const g=svg.append("g").attr("transform",`translate(${w/2},${h/2})`);
+  const root=d3.hierarchy(DATA);
+  d3.cluster().size([2*Math.PI, R])(root);
+  g.selectAll("path.link").data(root.links()).join("path")
+    .attr("class","link")
+    .attr("d", d3.linkRadial().angle(d=>d.x).radius(d=>d.y));
+  const node=g.selectAll("g.node").data(root.descendants()).join("g")
+    .attr("class","node")
+    .attr("transform",d=>`rotate(${d.x*180/Math.PI-90}) translate(${d.y},0)`);
+  node.append("circle")
+    .attr("r",d=> d.depth===0?5 : d.children?4.5:4)
+    .attr("fill",d=> d.depth===0? "#fff" : color(domainCodeOf(d)))
+    .attr("fill-opacity",d=> !d.children && d.data.status ? statusOpacity[d.data.status] : 1)
+    .attr("stroke",d=> d.data.gated?"#fff":"none")
+    .attr("stroke-dasharray",d=> d.data.gated?"2,2":null)
+    .attr("stroke-width",d=>d.data.gated?1.5:0)
+    .on("mousemove",(e,d)=>{ if(!d.children) showTip(leafTip(d),e); else if(d.depth>0) showTip(`<b>${d.data.code?d.data.code+' — ':''}${d.data.name}</b>`,e); })
+    .on("mouseleave",hideTip);
+  node.filter(d=>d.depth>=1).append("text")
+    .attr("dy","0.31em")
+    .attr("x",d=> d.x<Math.PI===!d.children?6:-6)
+    .attr("text-anchor",d=> d.x<Math.PI===!d.children?"start":"end")
+    .attr("transform",d=> d.x>=Math.PI?"rotate(180)":null)
+    .attr("class",d=> d.depth===1?"dlabel": d.children?"clabel":null)
+    .text(d=> d.depth===1? d.data.code : (d.children? d.data.name : `${d.data.id} ${d.data.name}`))
+    .attr("fill-opacity",d=> !d.children && d.data.status? Math.max(0.55,statusOpacity[d.data.status]):1);
+}
+
+function renderPack(){
+  clear();
+  const {w,h}=dims(); const S=Math.min(w,h)-20;
+  const g=svg.append("g").attr("transform",`translate(${(w-S)/2},${(h-S)/2})`);
+  const root=d3.hierarchy(DATA).sum(d=>d.children?0:1).sort((a,b)=>b.value-a.value);
+  d3.pack().size([S,S]).padding(d=>d.depth===0?6:d.depth===1?4:2)(root);
+  const nodes=g.selectAll("g.pk").data(root.descendants()).join("g")
+    .attr("class","pk").attr("transform",d=>`translate(${d.x},${d.y})`);
+  nodes.append("circle")
+    .attr("r",d=>d.r)
+    .attr("fill",d=>{
+      if(d.depth===0) return "#12132400";
+      const c=d3.color(color(domainCodeOf(d)));
+      if(d.depth===1){c.opacity=0.14;return c;}
+      if(d.depth===2){c.opacity=0.28;return c;}
+      c.opacity=statusOpacity[d.data.status]||0.6; return c;
+    })
+    .attr("stroke",d=> d.depth===0?"none": d.data.gated?"#fff":color(domainCodeOf(d)))
+    .attr("stroke-opacity",d=>d.depth===1?0.9:0.5)
+    .attr("stroke-dasharray",d=> d.data.gated?"3,2":null)
+    .attr("stroke-width",d=> d.data.gated?1.5:(d.depth===1?1.5:0.8))
+    .on("mousemove",(e,d)=>{ if(d.depth===3) showTip(leafTip(d),e); else if(d.depth>0) showTip(`<b>${d.data.code?d.data.code+' — ':''}${d.data.name}</b>`,e); })
+    .on("mouseleave",hideTip);
+  nodes.filter(d=>d.depth===3 && d.r>11).append("text")
+    .attr("text-anchor","middle").attr("dy","0.31em").style("font-size","8px").style("fill","#0b0b16")
+    .text(d=>d.data.id);
+  nodes.filter(d=>d.depth===1).append("text")
+    .attr("text-anchor","middle").attr("dy",d=>-d.r-4).attr("class","dlabel")
+    .text(d=>`${d.data.code} · ${d.data.public}`);
+  nodes.filter(d=>d.depth===2 && d.r>26).append("text")
+    .attr("text-anchor","middle").attr("dy",d=>-d.r+11).attr("class","clabel").style("fill",d=>color(domainCodeOf(d)))
+    .text(d=>d.data.name.length>26?d.data.name.slice(0,24)+"…":d.data.name);
+}
+
+let current="radial";
+function render(){ if(current==="radial") renderRadial(); else renderPack(); }
+d3.select("#btnRadial").on("click",function(){current="radial";d3.select("#btnPack").classed("active",false);d3.select(this).classed("active",true);render();});
+d3.select("#btnPack").on("click",function(){current="pack";d3.select("#btnRadial").classed("active",false);d3.select(this).classed("active",true);render();});
+d3.select("#btnDownload").on("click",()=>{
+  const s=new XMLSerializer().serializeToString(document.getElementById("viz"));
+  const blob=new Blob(['<?xml version="1.0"?>\n'+s],{type:"image/svg+xml"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=`yar-feature-${current}.svg`; a.click();
+});
+window.addEventListener("resize",()=>{clearTimeout(window._t);window._t=setTimeout(render,180);});
+render();
+</script>
+</body>
+</html>
