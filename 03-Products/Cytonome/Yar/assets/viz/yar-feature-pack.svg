@@ -2,184 +2,194 @@
 <rect width="1200" height="1200" fill="#0f1020"/>
 <text x="24" y="34" fill="#f4f4fb" font-size="20" font-weight="700">Yar &#8212; Universal Feature Hierarchy (nested / packed circles)</text>
 <text x="24" y="54" fill="#a9abce" font-size="12">6 domains &#8250; 19 clusters &#8250; 62 features. Color = domain; opacity = build status; dashed ring = safety-gated.</text>
-<circle cx="233.2" cy="430.4" r="83.1" fill="#E0A11B" fill-opacity="0.12" stroke="#E0A11B" stroke-opacity="0.9" stroke-width="1.6"/>
-<text x="233.2" y="343.3" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">SPR &#183; Sensory comfort</text>
-<circle cx="537.7" cy="1024.1" r="131.4" fill="#2FB3A3" fill-opacity="0.12" stroke="#2FB3A3" stroke-opacity="0.9" stroke-width="1.6"/>
-<text x="537.7" y="888.7" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">SCI &#183; Connecting &amp; communicating</text>
-<circle cx="924.0" cy="357.7" r="155.4" fill="#7D8CF0" fill-opacity="0.12" stroke="#7D8CF0" stroke-opacity="0.9" stroke-width="1.6"/>
-<text x="924.0" y="198.3" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">SMI &#183; Noticing &amp; understanding yourself</text>
-<circle cx="306.6" cy="739.9" r="235.0" fill="#8B3FC7" fill-opacity="0.12" stroke="#8B3FC7" stroke-opacity="0.9" stroke-width="1.6"/>
-<text x="306.6" y="500.9" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">AEF &#183; Getting started, focus &amp; time</text>
-<circle cx="534.7" cy="328.9" r="235.0" fill="#D6564F" fill-opacity="0.12" stroke="#D6564F" stroke-opacity="0.9" stroke-width="1.6"/>
-<text x="534.7" y="90.0" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">CTO &#183; Thinking, notes &amp; ideas</text>
-<circle cx="790.8" cy="739.9" r="249.2" fill="#3B7DD6" fill-opacity="0.12" stroke="#3B7DD6" stroke-opacity="0.9" stroke-width="1.6"/>
-<text x="790.8" y="486.6" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">ERM &#183; Mood, energy &amp; emotional support</text>
-<circle cx="465.4" cy="1024.1" r="59.0" fill="#2FB3A3" fill-opacity="0.26" stroke="#2FB3A3" stroke-opacity="0.5"/>
-<text x="465.4" y="977.0" fill="#2FB3A3" font-size="10" font-weight="600" text-anchor="middle">Relational support</text>
-<circle cx="139.1" cy="712.0" r="65.2" fill="#8B3FC7" fill-opacity="0.26" stroke="#8B3FC7" stroke-opacity="0.5"/>
-<text x="139.1" y="658.8" fill="#8B3FC7" font-size="10" font-weight="600" text-anchor="middle">Unified app &amp; open con…</text>
-<circle cx="841.7" cy="390.9" r="66.6" fill="#7D8CF0" fill-opacity="0.26" stroke="#7D8CF0" stroke-opacity="0.5"/>
-<text x="841.7" y="336.3" fill="#7D8CF0" font-size="10" font-weight="600" text-anchor="middle">Self-tracking &amp; assess…</text>
-<circle cx="901.6" cy="271.8" r="66.6" fill="#7D8CF0" fill-opacity="0.26" stroke="#7D8CF0" stroke-opacity="0.5"/>
-<text x="901.6" y="217.2" fill="#7D8CF0" font-size="10" font-weight="600" text-anchor="middle">Insight &amp; nudges</text>
-<circle cx="596.8" cy="1024.1" r="72.3" fill="#2FB3A3" fill-opacity="0.26" stroke="#2FB3A3" stroke-opacity="0.5"/>
-<text x="596.8" y="963.8" fill="#2FB3A3" font-size="10" font-weight="600" text-anchor="middle">Communication coaching</text>
-<circle cx="213.2" cy="836.7" r="79.8" fill="#8B3FC7" fill-opacity="0.26" stroke="#8B3FC7" stroke-opacity="0.5"/>
-<text x="213.2" y="768.9" fill="#8B3FC7" font-size="10" font-weight="600" text-anchor="middle">Capture &amp; brain dump</text>
-<circle cx="282.9" cy="693.0" r="79.8" fill="#8B3FC7" fill-opacity="0.26" stroke="#8B3FC7" stroke-opacity="0.5"/>
-<text x="282.9" y="625.2" fill="#8B3FC7" font-size="10" font-weight="600" text-anchor="middle">Task structuring &amp; bre…</text>
-<circle cx="438.9" cy="658.8" r="79.8" fill="#8B3FC7" fill-opacity="0.26" stroke="#8B3FC7" stroke-opacity="0.5"/>
-<text x="438.9" y="591.0" fill="#8B3FC7" font-size="10" font-weight="600" text-anchor="middle">Day planning &amp; flexibl…</text>
-<circle cx="791.1" cy="908.5" r="80.6" fill="#3B7DD6" fill-opacity="0.26" stroke="#3B7DD6" stroke-opacity="0.5"/>
-<text x="791.1" y="839.9" fill="#3B7DD6" font-size="10" font-weight="600" text-anchor="middle">Privacy &amp; safety found…</text>
-<circle cx="530.7" cy="175.6" r="81.6" fill="#D6564F" fill-opacity="0.26" stroke="#D6564F" stroke-opacity="0.5"/>
-<text x="530.7" y="106.0" fill="#D6564F" font-size="10" font-weight="600" text-anchor="middle">Capture, documents &amp; t…</text>
-<circle cx="530.7" cy="482.3" r="81.6" fill="#D6564F" fill-opacity="0.26" stroke="#D6564F" stroke-opacity="0.5"/>
-<text x="530.7" y="412.7" fill="#D6564F" font-size="10" font-weight="600" text-anchor="middle">Data ownership &amp; interop</text>
-<circle cx="989.9" cy="390.9" r="81.6" fill="#7D8CF0" fill-opacity="0.26" stroke="#7D8CF0" stroke-opacity="0.5"/>
-<text x="989.9" y="321.3" fill="#7D8CF0" font-size="10" font-weight="600" text-anchor="middle">Sensor connectivity (C…</text>
-<circle cx="233.2" cy="430.4" r="83.1" fill="#E0A11B" fill-opacity="0.26" stroke="#E0A11B" stroke-opacity="0.5"/>
-<text x="233.2" y="359.3" fill="#E0A11B" font-size="10" font-weight="600" text-anchor="middle">Sensory accommodations</text>
-<circle cx="790.6" cy="583.7" r="93.0" fill="#3B7DD6" fill-opacity="0.26" stroke="#3B7DD6" stroke-opacity="0.5"/>
-<text x="790.6" y="502.6" fill="#3B7DD6" font-size="10" font-weight="600" text-anchor="middle">Adaptive companion &amp; t…</text>
-<circle cx="444.7" cy="328.9" r="94.2" fill="#D6564F" fill-opacity="0.26" stroke="#D6564F" stroke-opacity="0.5"/>
-<text x="444.7" y="246.7" fill="#D6564F" font-size="10" font-weight="600" text-anchor="middle">Notes, types &amp; persona…</text>
-<circle cx="396.1" cy="836.7" r="103.1" fill="#8B3FC7" fill-opacity="0.26" stroke="#8B3FC7" stroke-opacity="0.5"/>
-<text x="396.1" y="745.6" fill="#8B3FC7" font-size="10" font-weight="600" text-anchor="middle">Focus, body-doubling &amp;…</text>
-<circle cx="690.8" cy="753.6" r="104.0" fill="#3B7DD6" fill-opacity="0.26" stroke="#3B7DD6" stroke-opacity="0.5"/>
-<text x="690.8" y="661.6" fill="#3B7DD6" font-size="10" font-weight="600" text-anchor="middle">Mood &amp; energy sensing</text>
-<circle cx="908.7" cy="753.6" r="113.9" fill="#3B7DD6" fill-opacity="0.26" stroke="#3B7DD6" stroke-opacity="0.5"/>
-<text x="908.7" y="651.6" fill="#3B7DD6" font-size="10" font-weight="600" text-anchor="middle">Compassionate pacing (…</text>
-<circle cx="654.3" cy="328.9" r="115.4" fill="#D6564F" fill-opacity="0.26" stroke="#D6564F" stroke-opacity="0.5"/>
-<text x="654.3" y="225.6" fill="#D6564F" font-size="10" font-weight="600" text-anchor="middle">Brainmap &amp; thought map…</text>
-<circle cx="494.9" cy="1024.1" r="29.5" fill="#2FB3A3" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
-<text x="494.9" y="1027.1" fill="#0b0b16" font-size="8" text-anchor="middle">F36</text>
-<circle cx="435.9" cy="1024.1" r="29.5" fill="#2FB3A3" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
-<text x="435.9" y="1027.1" fill="#0b0b16" font-size="8" text-anchor="middle">F56</text>
-<circle cx="171.7" cy="712.0" r="32.6" fill="#8B3FC7" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
-<text x="171.7" y="715.0" fill="#0b0b16" font-size="8" text-anchor="middle">F28</text>
-<circle cx="106.5" cy="712.0" r="32.6" fill="#8B3FC7" fill-opacity="0.40" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="106.5" y="715.0" fill="#0b0b16" font-size="8" text-anchor="middle">F41</text>
-<circle cx="875.0" cy="390.9" r="33.3" fill="#7D8CF0" fill-opacity="0.40" stroke="#7D8CF0" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="875.0" y="393.9" fill="#0b0b16" font-size="8" text-anchor="middle">F55</text>
-<circle cx="808.3" cy="390.9" r="33.3" fill="#7D8CF0" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
-<text x="808.3" y="393.9" fill="#0b0b16" font-size="8" text-anchor="middle">F62</text>
-<circle cx="934.9" cy="271.8" r="33.3" fill="#7D8CF0" fill-opacity="1.00" stroke="#7D8CF0" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="934.9" y="274.8" fill="#0b0b16" font-size="8" text-anchor="middle">F39</text>
-<circle cx="868.3" cy="271.8" r="33.3" fill="#7D8CF0" fill-opacity="0.40" stroke="#7D8CF0" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="868.3" y="274.8" fill="#0b0b16" font-size="8" text-anchor="middle">F43</text>
-<circle cx="630.3" cy="1043.5" r="33.6" fill="#2FB3A3" fill-opacity="0.40" stroke="#2FB3A3" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="630.3" y="1046.5" fill="#0b0b16" font-size="8" text-anchor="middle">F25</text>
-<circle cx="563.2" cy="1043.5" r="33.6" fill="#2FB3A3" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
-<text x="563.2" y="1046.5" fill="#0b0b16" font-size="8" text-anchor="middle">F42</text>
-<circle cx="596.8" cy="985.3" r="33.6" fill="#2FB3A3" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
-<text x="596.8" y="988.3" fill="#0b0b16" font-size="8" text-anchor="middle">F63</text>
-<circle cx="807.6" cy="613.1" r="34.1" fill="#3B7DD6" fill-opacity="1.00" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="807.6" y="616.1" fill="#0b0b16" font-size="8" text-anchor="middle">F11</text>
-<circle cx="739.5" cy="613.1" r="34.1" fill="#3B7DD6" fill-opacity="0.40" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="739.5" y="616.1" fill="#0b0b16" font-size="8" text-anchor="middle">F29</text>
-<circle cx="773.5" cy="554.2" r="34.1" fill="#3B7DD6" fill-opacity="0.40" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="773.5" y="557.2" fill="#0b0b16" font-size="8" text-anchor="middle">F45</text>
-<circle cx="841.6" cy="554.2" r="34.1" fill="#3B7DD6" fill-opacity="0.64" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="841.6" y="557.2" fill="#0b0b16" font-size="8" text-anchor="middle">F57</text>
-<circle cx="430.5" cy="896.2" r="34.4" fill="#8B3FC7" fill-opacity="1.00" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="430.5" y="899.2" fill="#0b0b16" font-size="8" text-anchor="middle">F06</text>
-<circle cx="361.8" cy="896.2" r="34.4" fill="#8B3FC7" fill-opacity="0.40" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="361.8" y="899.2" fill="#0b0b16" font-size="8" text-anchor="middle">F20</text>
-<circle cx="396.1" cy="836.7" r="34.4" fill="#8B3FC7" fill-opacity="0.40" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="396.1" y="839.7" fill="#0b0b16" font-size="8" text-anchor="middle">F21</text>
-<circle cx="464.9" cy="836.7" r="34.4" fill="#8B3FC7" fill-opacity="0.40" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="464.9" y="839.7" fill="#0b0b16" font-size="8" text-anchor="middle">F22</text>
-<circle cx="327.4" cy="836.7" r="34.4" fill="#8B3FC7" fill-opacity="0.40" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="327.4" y="839.7" fill="#0b0b16" font-size="8" text-anchor="middle">F26</text>
-<circle cx="461.9" cy="358.8" r="34.5" fill="#D6564F" fill-opacity="0.74" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="461.9" y="361.8" fill="#0b0b16" font-size="8" text-anchor="middle">F09</text>
-<circle cx="393.0" cy="358.8" r="34.5" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="393.0" y="361.8" fill="#0b0b16" font-size="8" text-anchor="middle">F10</text>
-<circle cx="427.4" cy="299.1" r="34.5" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="427.4" y="302.1" fill="#0b0b16" font-size="8" text-anchor="middle">F33</text>
-<circle cx="496.4" cy="299.1" r="34.5" fill="#D6564F" fill-opacity="1.00" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="496.4" y="302.1" fill="#0b0b16" font-size="8" text-anchor="middle">F58</text>
-<circle cx="725.4" cy="813.6" r="34.7" fill="#3B7DD6" fill-opacity="1.00" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="725.4" y="816.6" fill="#0b0b16" font-size="8" text-anchor="middle">F05</text>
-<circle cx="656.1" cy="813.6" r="34.7" fill="#3B7DD6" fill-opacity="1.00" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="656.1" y="816.6" fill="#0b0b16" font-size="8" text-anchor="middle">F08</text>
-<circle cx="690.8" cy="753.6" r="34.7" fill="#3B7DD6" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
-<text x="690.8" y="756.6" fill="#0b0b16" font-size="8" text-anchor="middle">F40</text>
-<circle cx="760.1" cy="753.6" r="34.7" fill="#3B7DD6" fill-opacity="1.00" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="760.1" y="756.6" fill="#0b0b16" font-size="8" text-anchor="middle">F53</text>
-<circle cx="621.4" cy="753.6" r="34.7" fill="#3B7DD6" fill-opacity="0.54" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="621.4" y="756.6" fill="#0b0b16" font-size="8" text-anchor="middle">F54</text>
-<circle cx="250.3" cy="858.1" r="37.1" fill="#8B3FC7" fill-opacity="1.00" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="250.3" y="861.1" fill="#0b0b16" font-size="8" text-anchor="middle">F01</text>
-<circle cx="176.2" cy="858.1" r="37.1" fill="#8B3FC7" fill-opacity="1.00" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="176.2" y="861.1" fill="#0b0b16" font-size="8" text-anchor="middle">F32</text>
-<circle cx="213.2" cy="793.9" r="37.1" fill="#8B3FC7" fill-opacity="0.64" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="213.2" y="796.9" fill="#0b0b16" font-size="8" text-anchor="middle">F59</text>
-<circle cx="320.0" cy="714.4" r="37.1" fill="#8B3FC7" fill-opacity="1.00" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="320.0" y="717.4" fill="#0b0b16" font-size="8" text-anchor="middle">F02</text>
-<circle cx="245.9" cy="714.4" r="37.1" fill="#8B3FC7" fill-opacity="1.00" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="245.9" y="717.4" fill="#0b0b16" font-size="8" text-anchor="middle">F03</text>
-<circle cx="282.9" cy="650.2" r="37.1" fill="#8B3FC7" fill-opacity="1.00" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="282.9" y="653.2" fill="#0b0b16" font-size="8" text-anchor="middle">F04</text>
-<circle cx="476.0" cy="680.2" r="37.1" fill="#8B3FC7" fill-opacity="1.00" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="476.0" y="683.2" fill="#0b0b16" font-size="8" text-anchor="middle">F07</text>
-<circle cx="401.9" cy="680.2" r="37.1" fill="#8B3FC7" fill-opacity="0.40" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="401.9" y="683.2" fill="#0b0b16" font-size="8" text-anchor="middle">F24</text>
-<circle cx="438.9" cy="616.1" r="37.1" fill="#8B3FC7" fill-opacity="0.40" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="438.9" y="619.1" fill="#0b0b16" font-size="8" text-anchor="middle">F64</text>
-<circle cx="828.5" cy="930.1" r="37.4" fill="#3B7DD6" fill-opacity="1.00" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="828.5" y="933.1" fill="#0b0b16" font-size="8" text-anchor="middle">F17</text>
-<circle cx="753.7" cy="930.1" r="37.4" fill="#3B7DD6" fill-opacity="1.00" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="753.7" y="933.1" fill="#0b0b16" font-size="8" text-anchor="middle">F18</text>
-<circle cx="791.1" cy="865.3" r="37.4" fill="#3B7DD6" fill-opacity="0.40" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="791.1" y="868.3" fill="#0b0b16" font-size="8" text-anchor="middle">F19</text>
-<circle cx="568.5" cy="197.5" r="37.9" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="568.5" y="200.5" fill="#0b0b16" font-size="8" text-anchor="middle">F34</text>
-<circle cx="492.8" cy="197.5" r="37.9" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="492.8" y="200.5" fill="#0b0b16" font-size="8" text-anchor="middle">F50</text>
-<circle cx="530.7" cy="131.9" r="37.9" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="530.7" y="134.9" fill="#0b0b16" font-size="8" text-anchor="middle">F61</text>
-<circle cx="568.5" cy="504.1" r="37.9" fill="#D6564F" fill-opacity="1.00" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="568.5" y="507.1" fill="#0b0b16" font-size="8" text-anchor="middle">F16</text>
-<circle cx="492.8" cy="504.1" r="37.9" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="492.8" y="507.1" fill="#0b0b16" font-size="8" text-anchor="middle">F51</text>
-<circle cx="530.7" cy="438.6" r="37.9" fill="#D6564F" fill-opacity="1.00" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="530.7" y="441.6" fill="#0b0b16" font-size="8" text-anchor="middle">F52</text>
-<circle cx="1027.8" cy="412.8" r="37.9" fill="#7D8CF0" fill-opacity="0.40" stroke="#7D8CF0" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="1027.8" y="415.8" fill="#0b0b16" font-size="8" text-anchor="middle">F12</text>
-<circle cx="952.1" cy="412.8" r="37.9" fill="#7D8CF0" fill-opacity="0.40" stroke="#7D8CF0" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="952.1" y="415.8" fill="#0b0b16" font-size="8" text-anchor="middle">F30</text>
-<circle cx="989.9" cy="347.2" r="37.9" fill="#7D8CF0" fill-opacity="0.40" stroke="#7D8CF0" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="989.9" y="350.2" fill="#0b0b16" font-size="8" text-anchor="middle">F46</text>
-<circle cx="946.7" cy="819.4" r="38.0" fill="#3B7DD6" fill-opacity="1.00" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
-<text x="946.7" y="822.4" fill="#0b0b16" font-size="8" text-anchor="middle">F27</text>
-<circle cx="870.8" cy="819.4" r="38.0" fill="#3B7DD6" fill-opacity="0.40" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="870.8" y="822.4" fill="#0b0b16" font-size="8" text-anchor="middle">F35</text>
-<circle cx="908.7" cy="753.6" r="38.0" fill="#3B7DD6" fill-opacity="0.40" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="908.7" y="756.6" fill="#0b0b16" font-size="8" text-anchor="middle">F38</text>
-<circle cx="984.7" cy="753.6" r="38.0" fill="#3B7DD6" fill-opacity="1.00" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="984.7" y="756.6" fill="#0b0b16" font-size="8" text-anchor="middle">F44</text>
-<circle cx="832.8" cy="753.6" r="38.0" fill="#3B7DD6" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
-<text x="832.8" y="756.6" fill="#0b0b16" font-size="8" text-anchor="middle">F48</text>
-<circle cx="946.7" cy="687.8" r="38.0" fill="#3B7DD6" fill-opacity="0.40" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="946.7" y="690.8" fill="#0b0b16" font-size="8" text-anchor="middle">F49</text>
-<circle cx="692.7" cy="395.6" r="38.5" fill="#D6564F" fill-opacity="0.64" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="692.7" y="398.6" fill="#0b0b16" font-size="8" text-anchor="middle">F13</text>
-<circle cx="615.8" cy="395.6" r="38.5" fill="#D6564F" fill-opacity="1.00" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="615.8" y="398.6" fill="#0b0b16" font-size="8" text-anchor="middle">F14</text>
-<circle cx="654.3" cy="328.9" r="38.5" fill="#D6564F" fill-opacity="1.00" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="654.3" y="331.9" fill="#0b0b16" font-size="8" text-anchor="middle">F15</text>
-<circle cx="731.2" cy="328.9" r="38.5" fill="#D6564F" fill-opacity="1.00" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="731.2" y="331.9" fill="#0b0b16" font-size="8" text-anchor="middle">F31</text>
-<circle cx="577.4" cy="328.9" r="38.5" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="577.4" y="331.9" fill="#0b0b16" font-size="8" text-anchor="middle">F47</text>
-<circle cx="692.7" cy="262.3" r="38.5" fill="#D6564F" fill-opacity="0.74" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="692.7" y="265.3" fill="#0b0b16" font-size="8" text-anchor="middle">F60</text>
-<circle cx="274.8" cy="430.4" r="41.5" fill="#E0A11B" fill-opacity="0.40" stroke="#E0A11B" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="274.8" y="433.4" fill="#0b0b16" font-size="8" text-anchor="middle">F23</text>
-<circle cx="191.7" cy="430.4" r="41.5" fill="#E0A11B" fill-opacity="0.40" stroke="#E0A11B" stroke-opacity="0.5" stroke-width="0.6"/>
-<text x="191.7" y="433.4" fill="#0b0b16" font-size="8" text-anchor="middle">F37</text>
+<circle cx="253.2" cy="437.5" r="80.3" fill="#E0A11B" fill-opacity="0.12" stroke="#E0A11B" stroke-opacity="0.9" stroke-width="1.6"/>
+<text x="253.2" y="353.2" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">SPR &#183; Sensory comfort</text>
+<circle cx="558.2" cy="1031.1" r="126.9" fill="#2FB3A3" fill-opacity="0.12" stroke="#2FB3A3" stroke-opacity="0.9" stroke-width="1.6"/>
+<text x="558.2" y="900.2" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">SCI &#183; Connecting &amp; communicating</text>
+<circle cx="944.9" cy="378.7" r="150.2" fill="#7D8CF0" fill-opacity="0.12" stroke="#7D8CF0" stroke-opacity="0.9" stroke-width="1.6"/>
+<text x="944.9" y="224.5" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">SMI &#183; Noticing &amp; understanding yourself</text>
+<circle cx="319.1" cy="751.7" r="240.8" fill="#8B3FC7" fill-opacity="0.12" stroke="#8B3FC7" stroke-opacity="0.9" stroke-width="1.6"/>
+<text x="319.1" y="506.9" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">AEF &#183; Getting started, focus &amp; time</text>
+<circle cx="556.7" cy="332.8" r="240.8" fill="#3B7DD6" fill-opacity="0.12" stroke="#3B7DD6" stroke-opacity="0.9" stroke-width="1.6"/>
+<text x="556.7" y="87.9" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">ERM &#183; Mood, energy &amp; emotional support</text>
+<circle cx="807.3" cy="751.7" r="247.4" fill="#D6564F" fill-opacity="0.12" stroke="#D6564F" stroke-opacity="0.9" stroke-width="1.6"/>
+<text x="807.3" y="500.3" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">CTO &#183; Thinking, notes &amp; ideas</text>
+<circle cx="488.4" cy="1031.1" r="57.0" fill="#2FB3A3" fill-opacity="0.26" stroke="#2FB3A3" stroke-opacity="0.5"/>
+<text x="488.4" y="986.0" fill="#2FB3A3" font-size="10" font-weight="600" text-anchor="middle">Relational support</text>
+<circle cx="191.4" cy="628.3" r="63.2" fill="#8B3FC7" fill-opacity="0.26" stroke="#8B3FC7" stroke-opacity="0.5"/>
+<text x="191.4" y="577.1" fill="#8B3FC7" font-size="10" font-weight="600" text-anchor="middle">Unified app &amp; open con…</text>
+<circle cx="865.4" cy="410.7" r="64.4" fill="#7D8CF0" fill-opacity="0.26" stroke="#7D8CF0" stroke-opacity="0.5"/>
+<text x="865.4" y="358.4" fill="#7D8CF0" font-size="10" font-weight="600" text-anchor="middle">Self-tracking &amp; assess…</text>
+<circle cx="923.3" cy="295.7" r="64.4" fill="#7D8CF0" fill-opacity="0.26" stroke="#7D8CF0" stroke-opacity="0.5"/>
+<text x="923.3" y="243.3" fill="#7D8CF0" font-size="10" font-weight="600" text-anchor="middle">Insight &amp; nudges</text>
+<circle cx="615.3" cy="1031.1" r="69.9" fill="#2FB3A3" fill-opacity="0.26" stroke="#2FB3A3" stroke-opacity="0.5"/>
+<text x="615.3" y="973.2" fill="#2FB3A3" font-size="10" font-weight="600" text-anchor="middle">Communication coaching</text>
+<circle cx="332.0" cy="623.5" r="77.4" fill="#8B3FC7" fill-opacity="0.26" stroke="#8B3FC7" stroke-opacity="0.5"/>
+<text x="332.0" y="558.1" fill="#8B3FC7" font-size="10" font-weight="600" text-anchor="middle">Task structuring &amp; bre…</text>
+<circle cx="332.0" cy="914.6" r="77.4" fill="#8B3FC7" fill-opacity="0.26" stroke="#8B3FC7" stroke-opacity="0.5"/>
+<text x="332.0" y="849.1" fill="#8B3FC7" font-size="10" font-weight="600" text-anchor="middle">Day planning &amp; flexibl…</text>
+<circle cx="557.0" cy="495.7" r="77.8" fill="#3B7DD6" fill-opacity="0.26" stroke="#3B7DD6" stroke-opacity="0.5"/>
+<text x="557.0" y="429.9" fill="#3B7DD6" font-size="10" font-weight="600" text-anchor="middle">Privacy &amp; safety found…</text>
+<circle cx="1008.6" cy="410.7" r="78.9" fill="#7D8CF0" fill-opacity="0.26" stroke="#7D8CF0" stroke-opacity="0.5"/>
+<text x="1008.6" y="343.9" fill="#7D8CF0" font-size="10" font-weight="600" text-anchor="middle">Sensor connectivity (C…</text>
+<circle cx="253.2" cy="437.5" r="80.3" fill="#E0A11B" fill-opacity="0.26" stroke="#E0A11B" stroke-opacity="0.5"/>
+<text x="253.2" y="369.2" fill="#E0A11B" font-size="10" font-weight="600" text-anchor="middle">Sensory accommodations</text>
+<circle cx="807.3" cy="591.8" r="87.5" fill="#D6564F" fill-opacity="0.26" stroke="#D6564F" stroke-opacity="0.5"/>
+<text x="807.3" y="516.3" fill="#D6564F" font-size="10" font-weight="600" text-anchor="middle">Notes, types &amp; persona…</text>
+<circle cx="807.3" cy="911.6" r="87.5" fill="#D6564F" fill-opacity="0.26" stroke="#D6564F" stroke-opacity="0.5"/>
+<text x="807.3" y="836.0" fill="#D6564F" font-size="10" font-weight="600" text-anchor="middle">Capture, documents &amp; t…</text>
+<circle cx="250.4" cy="769.1" r="89.4" fill="#8B3FC7" fill-opacity="0.26" stroke="#8B3FC7" stroke-opacity="0.5"/>
+<text x="250.4" y="691.7" fill="#8B3FC7" font-size="10" font-weight="600" text-anchor="middle">Capture &amp; brain dump</text>
+<circle cx="556.4" cy="181.8" r="89.9" fill="#3B7DD6" fill-opacity="0.26" stroke="#3B7DD6" stroke-opacity="0.5"/>
+<text x="556.4" y="104.0" fill="#3B7DD6" font-size="10" font-weight="600" text-anchor="middle">Adaptive companion &amp; t…</text>
+<circle cx="713.5" cy="751.7" r="97.9" fill="#D6564F" fill-opacity="0.26" stroke="#D6564F" stroke-opacity="0.5"/>
+<text x="713.5" y="665.8" fill="#D6564F" font-size="10" font-weight="600" text-anchor="middle">Data ownership &amp; interop</text>
+<circle cx="460.0" cy="346.0" r="100.5" fill="#3B7DD6" fill-opacity="0.26" stroke="#3B7DD6" stroke-opacity="0.5"/>
+<text x="460.0" y="257.5" fill="#3B7DD6" font-size="10" font-weight="600" text-anchor="middle">Mood &amp; energy sensing</text>
+<circle cx="918.5" cy="751.7" r="107.2" fill="#D6564F" fill-opacity="0.26" stroke="#D6564F" stroke-opacity="0.5"/>
+<text x="918.5" y="656.5" fill="#D6564F" font-size="10" font-weight="600" text-anchor="middle">Brainmap &amp; thought map…</text>
+<circle cx="449.3" cy="769.1" r="109.5" fill="#8B3FC7" fill-opacity="0.26" stroke="#8B3FC7" stroke-opacity="0.5"/>
+<text x="449.3" y="671.6" fill="#8B3FC7" font-size="10" font-weight="600" text-anchor="middle">Focus, body-doubling &amp;…</text>
+<circle cx="670.6" cy="346.0" r="110.1" fill="#3B7DD6" fill-opacity="0.26" stroke="#3B7DD6" stroke-opacity="0.5"/>
+<text x="670.6" y="247.9" fill="#3B7DD6" font-size="10" font-weight="600" text-anchor="middle">Compassionate pacing (…</text>
+<circle cx="516.9" cy="1031.1" r="28.5" fill="#2FB3A3" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
+<text x="516.9" y="1034.1" fill="#0b0b16" font-size="8" text-anchor="middle">F36</text>
+<circle cx="459.8" cy="1031.1" r="28.5" fill="#2FB3A3" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
+<text x="459.8" y="1034.1" fill="#0b0b16" font-size="8" text-anchor="middle">F56</text>
+<circle cx="223.0" cy="628.3" r="31.6" fill="#8B3FC7" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
+<text x="223.0" y="631.3" fill="#0b0b16" font-size="8" text-anchor="middle">F28</text>
+<circle cx="159.8" cy="628.3" r="31.6" fill="#8B3FC7" fill-opacity="0.40" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="159.8" y="631.3" fill="#0b0b16" font-size="8" text-anchor="middle">F41</text>
+<circle cx="823.4" cy="619.6" r="32.0" fill="#D6564F" fill-opacity="0.74" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="823.4" y="622.6" fill="#0b0b16" font-size="8" text-anchor="middle">F09</text>
+<circle cx="759.3" cy="619.6" r="32.0" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="759.3" y="622.6" fill="#0b0b16" font-size="8" text-anchor="middle">F10</text>
+<circle cx="791.3" cy="564.1" r="32.0" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="791.3" y="567.1" fill="#0b0b16" font-size="8" text-anchor="middle">F33</text>
+<circle cx="855.4" cy="564.1" r="32.0" fill="#D6564F" fill-opacity="1.00" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="855.4" y="567.1" fill="#0b0b16" font-size="8" text-anchor="middle">F58</text>
+<circle cx="823.4" cy="939.3" r="32.0" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="823.4" y="942.3" fill="#0b0b16" font-size="8" text-anchor="middle">F34</text>
+<circle cx="759.3" cy="939.3" r="32.0" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="759.3" y="942.3" fill="#0b0b16" font-size="8" text-anchor="middle">F50</text>
+<circle cx="791.3" cy="883.8" r="32.0" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="791.3" y="886.8" fill="#0b0b16" font-size="8" text-anchor="middle">F61</text>
+<circle cx="855.4" cy="883.8" r="32.0" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="855.4" y="886.8" fill="#0b0b16" font-size="8" text-anchor="middle">F66</text>
+<circle cx="897.6" cy="410.7" r="32.2" fill="#7D8CF0" fill-opacity="0.40" stroke="#7D8CF0" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="897.6" y="413.7" fill="#0b0b16" font-size="8" text-anchor="middle">F55</text>
+<circle cx="833.2" cy="410.7" r="32.2" fill="#7D8CF0" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
+<text x="833.2" y="413.7" fill="#0b0b16" font-size="8" text-anchor="middle">F62</text>
+<circle cx="955.5" cy="295.7" r="32.2" fill="#7D8CF0" fill-opacity="1.00" stroke="#7D8CF0" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="955.5" y="298.7" fill="#0b0b16" font-size="8" text-anchor="middle">F39</text>
+<circle cx="891.1" cy="295.7" r="32.2" fill="#7D8CF0" fill-opacity="0.40" stroke="#7D8CF0" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="891.1" y="298.7" fill="#0b0b16" font-size="8" text-anchor="middle">F43</text>
+<circle cx="647.7" cy="1049.8" r="32.4" fill="#2FB3A3" fill-opacity="0.40" stroke="#2FB3A3" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="647.7" y="1052.8" fill="#0b0b16" font-size="8" text-anchor="middle">F25</text>
+<circle cx="582.9" cy="1049.8" r="32.4" fill="#2FB3A3" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
+<text x="582.9" y="1052.8" fill="#0b0b16" font-size="8" text-anchor="middle">F42</text>
+<circle cx="615.3" cy="993.6" r="32.4" fill="#2FB3A3" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
+<text x="615.3" y="996.6" fill="#0b0b16" font-size="8" text-anchor="middle">F63</text>
+<circle cx="746.1" cy="808.2" r="32.6" fill="#D6564F" fill-opacity="1.00" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="746.1" y="811.2" fill="#0b0b16" font-size="8" text-anchor="middle">F16</text>
+<circle cx="680.9" cy="808.2" r="32.6" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="680.9" y="811.2" fill="#0b0b16" font-size="8" text-anchor="middle">F51</text>
+<circle cx="713.5" cy="751.7" r="32.6" fill="#D6564F" fill-opacity="1.00" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="713.5" y="754.7" fill="#0b0b16" font-size="8" text-anchor="middle">F52</text>
+<circle cx="778.7" cy="751.7" r="32.6" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="778.7" y="754.7" fill="#0b0b16" font-size="8" text-anchor="middle">F67</text>
+<circle cx="648.2" cy="751.7" r="32.6" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="648.2" y="754.7" fill="#0b0b16" font-size="8" text-anchor="middle">F68</text>
+<circle cx="266.8" cy="797.4" r="32.7" fill="#8B3FC7" fill-opacity="1.00" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="266.8" y="800.4" fill="#0b0b16" font-size="8" text-anchor="middle">F01</text>
+<circle cx="201.3" cy="797.4" r="32.7" fill="#8B3FC7" fill-opacity="1.00" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="201.3" y="800.4" fill="#0b0b16" font-size="8" text-anchor="middle">F32</text>
+<circle cx="234.1" cy="740.7" r="32.7" fill="#8B3FC7" fill-opacity="0.64" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="234.1" y="743.7" fill="#0b0b16" font-size="8" text-anchor="middle">F59</text>
+<circle cx="299.5" cy="740.7" r="32.7" fill="#8B3FC7" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
+<text x="299.5" y="743.7" fill="#0b0b16" font-size="8" text-anchor="middle">F69</text>
+<circle cx="572.9" cy="210.3" r="32.9" fill="#3B7DD6" fill-opacity="1.00" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="572.9" y="213.3" fill="#0b0b16" font-size="8" text-anchor="middle">F11</text>
+<circle cx="507.1" cy="210.3" r="32.9" fill="#3B7DD6" fill-opacity="0.40" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="507.1" y="213.3" fill="#0b0b16" font-size="8" text-anchor="middle">F29</text>
+<circle cx="540.0" cy="153.3" r="32.9" fill="#3B7DD6" fill-opacity="0.40" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="540.0" y="156.3" fill="#0b0b16" font-size="8" text-anchor="middle">F45</text>
+<circle cx="605.8" cy="153.3" r="32.9" fill="#3B7DD6" fill-opacity="0.64" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="605.8" y="156.3" fill="#0b0b16" font-size="8" text-anchor="middle">F57</text>
+<circle cx="493.5" cy="404.0" r="33.5" fill="#3B7DD6" fill-opacity="1.00" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="493.5" y="407.0" fill="#0b0b16" font-size="8" text-anchor="middle">F05</text>
+<circle cx="426.5" cy="404.0" r="33.5" fill="#3B7DD6" fill-opacity="1.00" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="426.5" y="407.0" fill="#0b0b16" font-size="8" text-anchor="middle">F08</text>
+<circle cx="460.0" cy="346.0" r="33.5" fill="#3B7DD6" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
+<text x="460.0" y="349.0" fill="#0b0b16" font-size="8" text-anchor="middle">F40</text>
+<circle cx="527.0" cy="346.0" r="33.5" fill="#3B7DD6" fill-opacity="1.00" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="527.0" y="349.0" fill="#0b0b16" font-size="8" text-anchor="middle">F53</text>
+<circle cx="393.0" cy="346.0" r="33.5" fill="#3B7DD6" fill-opacity="0.54" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="393.0" y="349.0" fill="#0b0b16" font-size="8" text-anchor="middle">F54</text>
+<circle cx="954.3" cy="813.6" r="35.7" fill="#D6564F" fill-opacity="0.64" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="954.3" y="816.6" fill="#0b0b16" font-size="8" text-anchor="middle">F13</text>
+<circle cx="882.8" cy="813.6" r="35.7" fill="#D6564F" fill-opacity="1.00" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="882.8" y="816.6" fill="#0b0b16" font-size="8" text-anchor="middle">F14</text>
+<circle cx="918.5" cy="751.7" r="35.7" fill="#D6564F" fill-opacity="1.00" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="918.5" y="754.7" fill="#0b0b16" font-size="8" text-anchor="middle">F15</text>
+<circle cx="990.0" cy="751.7" r="35.7" fill="#D6564F" fill-opacity="1.00" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="990.0" y="754.7" fill="#0b0b16" font-size="8" text-anchor="middle">F31</text>
+<circle cx="847.1" cy="751.7" r="35.7" fill="#D6564F" fill-opacity="0.40" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="847.1" y="754.7" fill="#0b0b16" font-size="8" text-anchor="middle">F47</text>
+<circle cx="954.3" cy="689.8" r="35.7" fill="#D6564F" fill-opacity="0.74" stroke="#D6564F" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="954.3" y="692.8" fill="#0b0b16" font-size="8" text-anchor="middle">F60</text>
+<circle cx="367.9" cy="644.3" r="35.9" fill="#8B3FC7" fill-opacity="1.00" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="367.9" y="647.3" fill="#0b0b16" font-size="8" text-anchor="middle">F02</text>
+<circle cx="296.1" cy="644.3" r="35.9" fill="#8B3FC7" fill-opacity="1.00" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="296.1" y="647.3" fill="#0b0b16" font-size="8" text-anchor="middle">F03</text>
+<circle cx="332.0" cy="582.0" r="35.9" fill="#8B3FC7" fill-opacity="1.00" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="332.0" y="585.0" fill="#0b0b16" font-size="8" text-anchor="middle">F04</text>
+<circle cx="367.9" cy="935.3" r="35.9" fill="#8B3FC7" fill-opacity="1.00" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="367.9" y="938.3" fill="#0b0b16" font-size="8" text-anchor="middle">F07</text>
+<circle cx="296.1" cy="935.3" r="35.9" fill="#8B3FC7" fill-opacity="0.40" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="296.1" y="938.3" fill="#0b0b16" font-size="8" text-anchor="middle">F24</text>
+<circle cx="332.0" cy="873.1" r="35.9" fill="#8B3FC7" fill-opacity="0.40" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="332.0" y="876.1" fill="#0b0b16" font-size="8" text-anchor="middle">F64</text>
+<circle cx="593.1" cy="516.6" r="36.1" fill="#3B7DD6" fill-opacity="1.00" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="593.1" y="519.6" fill="#0b0b16" font-size="8" text-anchor="middle">F17</text>
+<circle cx="520.8" cy="516.6" r="36.1" fill="#3B7DD6" fill-opacity="1.00" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="520.8" y="519.6" fill="#0b0b16" font-size="8" text-anchor="middle">F18</text>
+<circle cx="557.0" cy="454.0" r="36.1" fill="#3B7DD6" fill-opacity="0.40" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="557.0" y="457.0" fill="#0b0b16" font-size="8" text-anchor="middle">F19</text>
+<circle cx="485.8" cy="832.3" r="36.5" fill="#8B3FC7" fill-opacity="1.00" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="485.8" y="835.3" fill="#0b0b16" font-size="8" text-anchor="middle">F06</text>
+<circle cx="412.8" cy="832.3" r="36.5" fill="#8B3FC7" fill-opacity="0.40" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="412.8" y="835.3" fill="#0b0b16" font-size="8" text-anchor="middle">F20</text>
+<circle cx="449.3" cy="769.1" r="36.5" fill="#8B3FC7" fill-opacity="0.40" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="449.3" y="772.1" fill="#0b0b16" font-size="8" text-anchor="middle">F21</text>
+<circle cx="522.3" cy="769.1" r="36.5" fill="#8B3FC7" fill-opacity="0.40" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="522.3" y="772.1" fill="#0b0b16" font-size="8" text-anchor="middle">F22</text>
+<circle cx="376.3" cy="769.1" r="36.5" fill="#8B3FC7" fill-opacity="0.40" stroke="#8B3FC7" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="376.3" y="772.1" fill="#0b0b16" font-size="8" text-anchor="middle">F26</text>
+<circle cx="485.8" cy="705.8" r="36.5" fill="#8B3FC7" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
+<text x="485.8" y="708.8" fill="#0b0b16" font-size="8" text-anchor="middle">F65</text>
+<circle cx="1045.2" cy="431.9" r="36.6" fill="#7D8CF0" fill-opacity="0.40" stroke="#7D8CF0" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="1045.2" y="434.9" fill="#0b0b16" font-size="8" text-anchor="middle">F12</text>
+<circle cx="972.0" cy="431.9" r="36.6" fill="#7D8CF0" fill-opacity="0.40" stroke="#7D8CF0" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="972.0" y="434.9" fill="#0b0b16" font-size="8" text-anchor="middle">F30</text>
+<circle cx="1008.6" cy="368.5" r="36.6" fill="#7D8CF0" fill-opacity="0.40" stroke="#7D8CF0" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="1008.6" y="371.5" fill="#0b0b16" font-size="8" text-anchor="middle">F46</text>
+<circle cx="707.3" cy="409.6" r="36.7" fill="#3B7DD6" fill-opacity="1.00" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
+<text x="707.3" y="412.6" fill="#0b0b16" font-size="8" text-anchor="middle">F27</text>
+<circle cx="633.9" cy="409.6" r="36.7" fill="#3B7DD6" fill-opacity="0.40" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="633.9" y="412.6" fill="#0b0b16" font-size="8" text-anchor="middle">F35</text>
+<circle cx="670.6" cy="346.0" r="36.7" fill="#3B7DD6" fill-opacity="0.40" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="670.6" y="349.0" fill="#0b0b16" font-size="8" text-anchor="middle">F38</text>
+<circle cx="744.0" cy="346.0" r="36.7" fill="#3B7DD6" fill-opacity="1.00" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="744.0" y="349.0" fill="#0b0b16" font-size="8" text-anchor="middle">F44</text>
+<circle cx="597.2" cy="346.0" r="36.7" fill="#3B7DD6" fill-opacity="0.40" stroke="#fff" stroke-width="1.3" stroke-dasharray="3,2"/>
+<text x="597.2" y="349.0" fill="#0b0b16" font-size="8" text-anchor="middle">F48</text>
+<circle cx="707.3" cy="282.5" r="36.7" fill="#3B7DD6" fill-opacity="0.40" stroke="#3B7DD6" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="707.3" y="285.5" fill="#0b0b16" font-size="8" text-anchor="middle">F49</text>
+<circle cx="293.3" cy="437.5" r="40.1" fill="#E0A11B" fill-opacity="0.40" stroke="#E0A11B" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="293.3" y="440.5" fill="#0b0b16" font-size="8" text-anchor="middle">F23</text>
+<circle cx="213.1" cy="437.5" r="40.1" fill="#E0A11B" fill-opacity="0.40" stroke="#E0A11B" stroke-opacity="0.5" stroke-width="0.6"/>
+<text x="213.1" y="440.5" fill="#0b0b16" font-size="8" text-anchor="middle">F37</text>
 <rect x="24" y="1164" width="13" height="13" rx="3" fill="#8B3FC7"/>
 <text x="42" y="1176" fill="#a9abce" font-size="12">AEF</text>
 <rect x="174" y="1164" width="13" height="13" rx="3" fill="#3B7DD6"/>

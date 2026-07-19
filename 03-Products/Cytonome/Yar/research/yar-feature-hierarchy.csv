@@ -2,6 +2,7 @@ domain,domain_public,cluster,feature_id,feature,status,gated,description
 AEF,"Getting started, focus & time",Capture & brain dump,F01,Voice brain dump,shipped,,"Talk out everything on your mind, captured for you, no typing."
 AEF,"Getting started, focus & time",Capture & brain dump,F32,Stray thought capture,shipped,,Drop a random thought or to-do somewhere safe mid-task.
 AEF,"Getting started, focus & time",Capture & brain dump,F59,Capture from anywhere,groundwork,,"Save to Yar from phone, computer, or browser in one tap."
+AEF,"Getting started, focus & time",Capture & brain dump,F69,Meeting-mode diarization,planned,yes,Separate speakers in a conversation to build contextual meeting notes; consent-gated.
 AEF,"Getting started, focus & time",Task structuring & breakdown,F02,Brain dump to action plan,shipped,,Turn a voice/text dump into actual next steps automatically.
 AEF,"Getting started, focus & time",Task structuring & breakdown,F03,Tasks from your words,shipped,,"Pull out to-dos directly from what you said, no manual sorting."
 AEF,"Getting started, focus & time",Task structuring & breakdown,F04,Right-sized task breakdown,shipped,,Choose how small tasks are chopped so each step feels doable.
@@ -10,6 +11,7 @@ AEF,"Getting started, focus & time","Focus, body-doubling & breaks",F20,Single-t
 AEF,"Getting started, focus & time","Focus, body-doubling & breaks",F21,Graceful activity pause,planned,,"Yar holds your place when you step away, no fuss."
 AEF,"Getting started, focus & time","Focus, body-doubling & breaks",F22,Gentle break prompts,planned,,A soft nudge to rest before you have been deep too long.
 AEF,"Getting started, focus & time","Focus, body-doubling & breaks",F26,Floating task reminder,planned,,A small current-task reminder in a screen corner.
+AEF,"Getting started, focus & time","Focus, body-doubling & breaks",F65,Focus & adherence guardian,planned,yes,"With your permission across chosen apps, nudges you back to the agreed plan when you drift, at an authority level you set from gentle reminder to blocking distractions."
 AEF,"Getting started, focus & time",Day planning & flexible plans,F07,Flexible plan with a backup track,shipped,,"A dual-track plan: what you want, plus a lighter version."
 AEF,"Getting started, focus & time",Day planning & flexible plans,F24,AI morning plan,planned,,A suggested day plan around what you have on and how you feel.
 AEF,"Getting started, focus & time",Day planning & flexible plans,F64,Personal compass (gentle goals),planned,,"Non-pressuring direction: gentle goals you steer by, never a performance bar."
@@ -53,9 +55,12 @@ CTO,"Thinking, notes & ideas","Notes, types & personal language",F58,Names & ter
 CTO,"Thinking, notes & ideas","Capture, documents & transforms",F34,Map to document transform,planned,,Turn a messy thought map into a clean document in one step.
 CTO,"Thinking, notes & ideas","Capture, documents & transforms",F50,Highlight & link on any page,planned,,Highlight anything on any web page and link it into notes.
 CTO,"Thinking, notes & ideas","Capture, documents & transforms",F61,Thought to document templates,planned,,"Apply a template to a map to draft a doc, report, or email."
+CTO,"Thinking, notes & ideas","Capture, documents & transforms",F66,Ask & summarize your captures,planned,,Ask questions across your captures and get grounded summaries from your own knowledge.
 CTO,"Thinking, notes & ideas",Data ownership & interop,F16,Your data in your own tools,shipped,,"Use Yar alongside Obsidian, Logseq; data stays yours."
 CTO,"Thinking, notes & ideas",Data ownership & interop,F51,Open schema translation layer,planned,,Move notes/data between apps and formats without losing structure.
 CTO,"Thinking, notes & ideas",Data ownership & interop,F52,Private local knowledge store,shipped,,Notes live on your device in an open format you own.
+CTO,"Thinking, notes & ideas",Data ownership & interop,F67,Long-term personal memory,planned,,"A personal, temporal memory graph so Yar recalls people, terms, and threads across sessions."
+CTO,"Thinking, notes & ideas",Data ownership & interop,F68,Cross-device sync,planned,,"Keep your data consistent across phone and laptop, local-first and under your control."
 SMI,Noticing & understanding yourself,Sensor connectivity (CSP),F12,Open sensor connection layer (CSP),planned,,A flexible layer to connect data sources and devices you choose.
 SMI,Noticing & understanding yourself,Sensor connectivity (CSP),F30,Wearable sensor connection,planned,,Connect an Oura ring or Apple Watch; factor in body data.
 SMI,Noticing & understanding yourself,Sensor connectivity (CSP),F46,Brain sensor connection layer,planned,,"Future, opt-in connection for non-invasive brain sensing."
