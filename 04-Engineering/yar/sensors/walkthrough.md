@@ -17,7 +17,7 @@ Consolidated all sensor-related documentation from three fragmented locations (Y
 
 | Document | Lines | What It Contains |
 |---|---|---|
-| [unified-sensor-report.md](../../cytos/sensing-schema/unified-sensor-report.md) | 434 | **Master reference** replacing the old report. Architecture overview, Cytos schema system, standards coverage matrix, Yar USAP (full Sensor Protocol, not facade), vendor profiles, self-report instruments, interop stack, known gaps, research lineage, full file index |
+| [unified-sensor-report.md](../../cytos/sensing-schema/unified-sensor-report.md) | 434 | **Master reference** replacing the old report. Architecture overview, Cytos schema system, standards coverage matrix, Yar CSP (Cytonome Sensor Protocol; formerly USAP/UBAP), the full Sensor Protocol (not facade), vendor profiles, self-report instruments, interop stack, known gaps, research lineage, full file index |
 | [semantic-alignment.md](../../cytos/sensing-schema/semantic-alignment.md) | 326 | **Crosswalk specification** with 8 concept-level mapping tables (SOSA ↔ IEEE 1752 ↔ FHIR ↔ AWARE), slot URI alignment, unit translation, temporal conversion rules, SSSOM integration, gap analysis |
 | [implementing-aware.md](implementing-aware.md) | 2,032 | All 25 AWARE sensors with SQLite → Cytos → SOSA mapping, full Python `AWARESensorAdapter`, ESM/EMA integration, ADHD digital phenotyping features |
 | [implementing-wearables.md](implementing-wearables.md) | 2,127 | Oura Cloud API v2 + Fitbit Web API with full data model mappings (API → Cytos → SOSA → IEEE 1752 → FHIR → LOINC), Python adapters, cross-vendor normalization, Apple Watch/Health Connect patterns |

@@ -1907,7 +1907,7 @@ Any downstream consumer (Brain Weather, FHIR export, research dataset) queries b
 
 ### Apple Watch via HealthKit
 
-Apple Watch integration follows the same USAP (Universal Sensor Adapter Protocol) pattern. HealthKit acts as the on-device aggregator, and the adapter reads from the HealthKit store rather than a cloud API.
+Apple Watch integration follows the same CSP (Cytonome Sensor Protocol; formerly USAP/UBAP) pattern. HealthKit acts as the on-device aggregator, and the adapter reads from the HealthKit store rather than a cloud API.
 
 ```mermaid
 graph LR
@@ -2121,7 +2121,7 @@ The Brain Weather system does not average these scores. Instead, it treats them 
 
 3. **Phase 3:** Build the normalization pipeline: vendor observations → common ObservableProperty → Brain Weather feature store. Implement temporal alignment and quality scoring.
 
-4. **Phase 4:** Deploy webhook listeners for Oura real-time updates. Implement Fitbit subscription API for change notifications. Connect to Yar USAP for on-device processing.
+4. **Phase 4:** Deploy webhook listeners for Oura real-time updates. Implement Fitbit subscription API for change notifications. Connect to Yar CSP for on-device processing.
 
 5. **Phase 5:** Extend to Apple Watch (HealthKit adapter) and Google Health Connect (Android adapter). Create `vendor_apple.yaml` and `vendor_google_hc.yaml` profiles.
 

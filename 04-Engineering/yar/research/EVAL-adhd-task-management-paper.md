@@ -14,7 +14,7 @@
 
 ## BLUF
 
-Task management failure in adults with ADHD is fundamentally relational and affective, not cognitive or willpower-based; existing tools fail because they assume a neurotypical, solo, linear user. The strongest design signal from 42 participants across two studies is demand for **AI-augmented social scaffolding**: simulated co-presence, mood-adaptive planning, and co-regulation built into the core architecture. Yar's USAP/CAP sensor-and-companion architecture directly instantiates what this paper calls for; this paper provides empirical grounding and grant-ready framing for that architecture.
+Task management failure in adults with ADHD is fundamentally relational and affective, not cognitive or willpower-based; existing tools fail because they assume a neurotypical, solo, linear user. The strongest design signal from 42 participants across two studies is demand for **AI-augmented social scaffolding**: simulated co-presence, mood-adaptive planning, and co-regulation built into the core architecture. Yar's CSP (Cytonome Sensor Protocol; formerly USAP/UBAP) and CAP sensor-and-companion architecture directly instantiates what this paper calls for; this paper provides empirical grounding and grant-ready framing for that architecture.
 
 ---
 
@@ -38,7 +38,7 @@ Task management failure in adults with ADHD is fundamentally relational and affe
 
 | Challenge | ADHD Mechanism | Current Tool Failure | Yar Opportunity |
 |---|---|---|---|
-| **Task initiation paralysis** | Psychological inertia; executive dysfunction prevents transition to action even when intent is present | To-do lists assume initiation capacity; apps require the user to open them | Proactive sensor-triggered check-ins (USAP); CAP "comes to the user" |
+| **Task initiation paralysis** | Psychological inertia; executive dysfunction prevents transition to action even when intent is present | To-do lists assume initiation capacity; apps require the user to open them | Proactive sensor-triggered check-ins (CSP); CAP "comes to the user" |
 | **Time perception disorders** | Chronic misestimation; planning calibrated to rare hyperfocus states, not average states | Calendars impose fixed grid time; no fallback plan | Dual "ideal/baseline" plan modes; rhythm-based scheduling |
 | **Deadline addiction** | Crisis-driven dopamine spike needed to mobilize effort; adrenaline dependency | No graduated urgency system; binary "done/not done" | Pattern detection for recurring friction; gentle pre-deadline nudges |
 | **Emotional dysregulation** | Rapid mood swings derail entire days; emotional avoidance of low-meaning tasks | No mood context in task presentation; rigid task ordering | Morning mood check-in; mood-adaptive task suggestion |
@@ -113,7 +113,7 @@ The paper argues that ADHD task management requires moving from "solo optimizati
 
 ### 5.1 Relational Accountability (not solo optimization)
 **Paper**: AI should simulate attentive companionship; check-ins that reproduce social pressure without surveillance or shame.
-**Yar mapping**: CAP (Companion AI Platform) with proactive check-in cadence; USAP edge sensor detecting behavioral state transitions and triggering CAP prompts.
+**Yar mapping**: CAP (Companion AI Platform) with proactive check-in cadence; CSP edge sensor detecting behavioral state transitions and triggering CAP prompts.
 
 ### 5.2 Time as Rhythm (not grid)
 **Paper**: Replace fixed calendars with energy-flow framing; ideal/baseline dual plans; preserve streaks through partial completion.
@@ -121,7 +121,7 @@ The paper argues that ADHD task management requires moving from "solo optimizati
 
 ### 5.3 Mood-Adaptive Interfaces (prevent failure spirals)
 **Paper**: Emotional state check-ins that alter task presentation; affirming messages when load is reduced; non-judgmental progress framing.
-**Yar mapping**: Morning mood check-in (CAP); USAP physiological signals (HRV, movement, sleep) contributing to inferred readiness state; adaptive task queue.
+**Yar mapping**: Morning mood check-in (CAP); CSP physiological signals (HRV, movement, sleep) contributing to inferred readiness state; adaptive task queue.
 
 ### 5.4 Affirming Neurodivergent Cognition (not pathologizing)
 **Paper**: Ambient metaphors (brain weather); non-judgmental indicators; task decomposition without overwhelm.
@@ -129,7 +129,7 @@ The paper argues that ADHD task management requires moving from "solo optimizati
 
 ### 5.5 Co-Regulation as Core Infrastructure
 **Paper**: Live focus rooms; shared timelines with AI or human partners; distributed accountability ecosystem.
-**Yar mapping**: This is the architectural thesis of Yar. The USAP provides the ambient sensing; CAP provides the relational layer; the combination enables co-regulation as infrastructure rather than an add-on.
+**Yar mapping**: This is the architectural thesis of Yar. CSP provides the ambient sensing; CAP provides the relational layer; the combination enables co-regulation as infrastructure rather than an add-on.
 
 ---
 
@@ -192,14 +192,14 @@ Based on the paper's empirical findings and speed-dating ratings. Listed in orde
 | **P1** | Brain-weather cognitive state visualization (non-metric) | Concept 8 was the single highest-rated concept across the full speed-dating study; metaphorical framing reduces stigma and shame. |
 | **P1** | Burnout / pause day detection with proactive rest suggestion | Concept 11 was top-3 for 8/20 participants; early burnout intervention is clinically meaningful and currently absent from all tools. |
 | **P2** | Non-judgmental task collapse recovery (debrief after abandonment) | Failure spirals are a key harm mechanism; gentle debrief after task abandonment breaks the cycle without requiring therapist involvement. |
-| **P2** | Pattern-based nudges (detect recurring friction, suggest schedule adjustment) | Concept 10 valued by analytical users; sensor data from USAP makes this uniquely achievable for Yar vs. software-only competitors. |
+| **P2** | Pattern-based nudges (detect recurring friction, suggest schedule adjustment) | Concept 10 valued by analytical users; sensor data from CSP makes this uniquely achievable for Yar vs. software-only competitors. |
 | **P2** | Shared plan with trusted person (lightweight, non-supervisory) | Concept 5 valued by subset; bridges AI and human scaffolding; important for users whose human networks are strong but need a coordination layer. |
 | **P3** | Ambient transition cues (non-alarm, sensory) | Concept 7 lowest-rated overall due to subtlety; implement as optional, highly configurable; may be high-value for specific sensory profiles. |
 | **P3** | Adaptive "undo" button for task removal without shame | Concept 9 useful for anxiety reduction but raised procrastination concerns; implement with friction intentionally built in. |
 
 ### Architectural note for engineers
 
-The paper's top-ranked concepts (8, 6, 11, 3) share a common architecture: they require **ambient state sensing**, **emotional state modeling**, and **proactive output**. This is not achievable in a software-only app. USAP's role as the sensing layer (physiological signals, movement, time-of-day) feeding CAP's relational output layer is the architectural requirement implied by this research. The paper's "design implication 5.5" (co-regulation as core infrastructure) is a direct description of the USAP-CAP integration pattern.
+The paper's top-ranked concepts (8, 6, 11, 3) share a common architecture: they require **ambient state sensing**, **emotional state modeling**, and **proactive output**. This is not achievable in a software-only app. CSP's role as the sensing layer (physiological signals, movement, time-of-day) feeding CAP's relational output layer is the architectural requirement implied by this research. The paper's "design implication 5.5" (co-regulation as core infrastructure) is a direct description of the CSP-CAP integration pattern.
 
 ---
 

@@ -449,7 +449,7 @@ The op-log engine is TBD per `SPEC-storage-engine.md` open decisions O-1 through
 ### 8.3 Naming Rules
 
 - Do not use "Substrate" as a noun for the data layer. Use "storage layer", "data layer", or "local runtime".
-- The universal sensor protocol is **CSP** (Cytonome Sensor Protocol). Do not use USAP.
+- The universal sensor protocol is **CSP** (Cytonome Sensor Protocol; formerly USAP/UBAP). Do not use the deprecated aliases.
 - The governance protocol is **CAP** (Cytognosis Authority Protocol). Do not use "Cognitive Agent Protocol".
 - **Cytoplex** is the product name; **CAP** is the protocol name.
 - Agent IDs use the form `yar.<role>.<version>` (e.g., `yar.placer.v1`, `yar.supervisor.v1`).

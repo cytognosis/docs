@@ -49,7 +49,7 @@ This spec integrates the outputs of Yar's sensor layer into three dimensional ne
 
 **Out of scope:** per-sensor inference pipelines (covered in each sensor spec), crisis escalation logic (MODULE-crisis-detection.md), the sync protocol for cross-device axis track replication (SPEC-sync-protocol.md), and the genomic prior layer (out of scope for this spec; noted abstractly where relevant).
 
-**Canonical name reminder:** the protocol is CSP (Cytonome Sensor Protocol). "USAP" is a deprecated alias; do not use it in new code or documentation.
+**Canonical name reminder:** the protocol is CSP (Cytonome Sensor Protocol; formerly USAP/UBAP); do not use the deprecated aliases in new code or documentation.
 
 ---
 

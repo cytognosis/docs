@@ -60,9 +60,9 @@ The sensor documentation is substantial but fragmented across three distinct loc
 
 | File | Sensor Content |
 |---|---|
-| [product-implementation.md](../../../00-Inbox/product-implementation.md) Phase 7 (lines 419-489) | USAP: SensorAdapter Protocol, SensorDescriptor, 6 sensor classes, plug-and-play UX |
-| [adhd-paper-synthesis.md](../research/adhd-paper-synthesis.md) §8.9 | Sensor Integration features #44-47 (USAP, wearables, brain connectomic, environmental) |
-| yar-unified-feature-comparison-v3.md (target archived/removed) | USAP in Priority 3 features, Big Gap section |
+| [product-implementation.md](../../../00-Inbox/product-implementation.md) Phase 7 (lines 419-489) | CSP (Cytonome Sensor Protocol; formerly USAP/UBAP): SensorAdapter Protocol, SensorDescriptor, 6 sensor classes, plug-and-play UX |
+| [adhd-paper-synthesis.md](../research/adhd-paper-synthesis.md) §8.9 | Sensor Integration features #44-47 (CSP, wearables, brain connectomic, environmental) |
+| yar-unified-feature-comparison-v3.md (target archived/removed) | CSP in Priority 3 features, Big Gap section |
 | cytonome-master-reference.md (target archived/removed) | Paralinguistic sensor pipeline references |
 
 ---
@@ -70,9 +70,9 @@ The sensor documentation is substantial but fragmented across three distinct loc
 ## Problems to Solve
 
 ### 1. Fragmentation
-Three separate locations with no cross-references. A developer looking at the Yar USAP Phase 7 has no idea that 1,460-line LinkML schemas already exist in `cytos/`. A researcher reading `archive/neuro-pheno/` doesn't know the schemas were built.
+Three separate locations with no cross-references. A developer looking at the Yar CSP Phase 7 has no idea that 1,460-line LinkML schemas already exist in `cytos/`. A researcher reading `archive/neuro-pheno/` doesn't know the schemas were built.
 
-### 2. Yar USAP vs. Cytos Schema Divergence
+### 2. Yar CSP vs. Cytos Schema Divergence
 The Yar product-implementation.md defines a `SensorAdapter(Protocol)` + `SensorDescriptor(BaseModel)` that is a simplified subset of the actual `cytos/schemas/domains/sensor/` architecture. They need alignment.
 
 ### 3. Semantic Alignment Not Documented
@@ -93,7 +93,7 @@ A single master reference that:
 - Replaces the current `README.md` as the entry point
 - Summarizes the architecture across all three locations
 - Cross-links every file with clickable paths
-- Maps the Yar USAP to the Cytos schema spine
+- Maps the Yar CSP to the Cytos schema spine
 - Includes the semantic alignment specification
 - Provides the implementation roadmap
 
@@ -120,7 +120,7 @@ Contents:
 
 ---
 
-### Component 3: Yar USAP Alignment
+### Component 3: Yar CSP Alignment
 
 #### [MODIFY] `docs/cytonome/yar/product-implementation.md` Phase 7
 
@@ -131,7 +131,7 @@ Add cross-references to the Cytos schema library and sensor docs. Update the `Se
 ### Component 4: Cross-Linking
 
 Update these docs with cross-links:
-- `docs/cytonome/yar/sensors/README.md` → link to Yar USAP, ADHD synthesis, cytos schemas
+- `docs/cytonome/yar/sensors/README.md` → link to Yar CSP, ADHD synthesis, cytos schemas
 - `docs/cytonome/yar/product-implementation.md` Phase 7 → link to sensor docs and cytos schemas
 - `docs/cytonome/yar/research/adhd-paper-synthesis.md` §8.9 → link to sensor docs
 - `docs/cytonome/yar/research/yar-unified-feature-comparison-v3.md` → link to sensor docs
@@ -175,4 +175,4 @@ linkml-validate -s profiles/profile_mcphases.yaml -C SensorDataset examples/mcph
 - All cross-links resolve to correct files
 - No broken file references
 - Semantic alignment table covers all 4 standards
-- Yar USAP references match cytos schema spine
+- Yar CSP references match cytos schema spine

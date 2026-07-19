@@ -75,7 +75,7 @@ Yar's companion is configurable as a **persona**: a bundle of personality, relat
 CSP is a **universal sensor adapter protocol**, an MCP-style open interface that lets users and third parties plug any sensor into Cytonome/Yar as easily as adding an integration. The voice-emotion sensor is simply the first CSP adapter. Each adapter declares identity and modality, the typed observations it emits (LinkML schema, so all sensors feed Brain Weather and the graph uniformly), a privacy and data-residency class, consent requirements, sampling cadence, and a `discover -> connect -> configure -> read/stream -> disconnect` lifecycle. **CAP governs every adapter:** raw biometric data stays on-device by default and each sensor is granted or revoked individually. CSP future-proofs Yar for Cytognosis hardware, creates an open ecosystem (Apache 2.0), and unifies every modality into one typed, on-device cognitive picture. Maps to features F12, F55, F30, F46 and `SPEC-CSP`.
 
 > [!NOTE]
-> **Naming:** **CSP** (Cytonome Sensor Protocol) is the canonical term, formerly USAP/UBAP, now standardized as CSP. The engineering `sensors/` docs historically used **USAP** (Universal Sensor Adapter Protocol) and **UBAP** (Universal Biosensor Adapter Protocol) for the same protocol; use CSP going forward.
+> **Naming:** **CSP (Cytonome Sensor Protocol; formerly USAP/UBAP)** is the canonical term. The engineering `sensors/` docs historically used these deprecated names for the same protocol; use CSP going forward.
 
 ### 5C. Branching brainmap companion (the flagship)
 

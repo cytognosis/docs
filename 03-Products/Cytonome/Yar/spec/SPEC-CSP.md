@@ -16,6 +16,7 @@ implements:
   - CrossBoundarySignal schema v0
 aliases:
   - USAP (Universal Sensor Adapter Protocol) -- deprecated alias; do not use in new writing
+  - UBAP (Universal Biosensor Adapter Protocol) -- deprecated alias; do not use in new writing
 ---
 
 # SPEC-CSP: Cytonome Sensor Protocol
@@ -55,7 +56,7 @@ CSP defines the contract that any sensor or signal source must satisfy to integr
 
 **Out of scope:** transport security, model inference internals, the clinician alert experience (see `MODULE-crisis-detection.md`), CRDT sync mechanics (see `SPEC-sync-protocol.md`), and the graph query engine (see `SPEC-storage-engine.md`).
 
-**Canonical name:** this protocol is CSP. The alias USAP (Universal Sensor Adapter Protocol) was used in engineering docs predating this spec. New writing, code comments, and references must use CSP.
+**Canonical name:** this protocol is **CSP (Cytonome Sensor Protocol; formerly USAP/UBAP)**. These aliases were used in engineering docs predating this spec. New writing, code comments, and references must use CSP.
 
 ---
 
@@ -473,7 +474,7 @@ Rules:
 
 | Component | Decision |
 |---|---|
-| Canonical protocol name | CSP (Cytonome Sensor Protocol); USAP is a deprecated alias |
+| Canonical protocol name | CSP (Cytonome Sensor Protocol); see Section 1 for alias history |
 | Schema foundation | LinkML with SOSA/SSN alignment; Cytos schema tree is the canonical source |
 | Privacy boundary enforcement | CAP PEP validates every observation before op-log write; raw signals stay on-device |
 | Consent model | Reference-based; consent_ref required at observation level; default-deny |

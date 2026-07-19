@@ -55,7 +55,7 @@ flowchart TB
     end
 
     subgraph Cytonome["🧠 Cytonome"]
-        Adapter["AWARESensorAdapter<br/>(USAP Protocol)"]
+        Adapter["AWARESensorAdapter<br/>(CSP Protocol)"]
         Transform["Schema Transformer<br/>AWARE → Cytos Observation"]
         Privacy["CAP Privacy Gate<br/>(hash, filter, redact)"]
         Store["Local Observation Store<br/>(SensorDataset)"]
@@ -1126,11 +1126,11 @@ The Cytos [SurveyAnswerTypeEnum](file:///home/mohammadi/repos/cytognosis/cytos/s
 
 ---
 
-## 5. Cytonome USAP Adapter Implementation
+## 5. Cytonome CSP Adapter Implementation
 
 ### 5.1 AWARESensorAdapter Architecture
 
-The AWARESensorAdapter implements Cytonome's [Sensor Protocol](../../../03-Products/Cytonome/Yar/sensor-architecture.md) (see [USAP Phase 7](../../../00-Inbox/product-implementation.md#L419-L489)) to bridge AWARE data into Cytos Observations.
+The AWARESensorAdapter implements Cytonome's CSP (Cytonome Sensor Protocol; formerly USAP/UBAP), specified in [Sensor Protocol](../../../03-Products/Cytonome/Yar/sensor-architecture.md) (see [Phase 7](../../../00-Inbox/product-implementation.md#L419-L489)), to bridge AWARE data into Cytos Observations.
 
 ```mermaid
 classDiagram
@@ -1185,7 +1185,7 @@ classDiagram
 ### 5.2 Python Implementation
 
 ```python
-"""AWARESensorAdapter: USAP adapter for AWARE framework data.
+"""AWARESensorAdapter: CSP adapter for AWARE framework data.
 
 Bridges AWARE's ContentProvider/SQLite data model into Cytos Observations
 conforming to the profile_aware.yaml schema.
@@ -1505,11 +1505,11 @@ class AWARETransformer:
 
 
 # ---------------------------------------------------------------------------
-# USAP Adapter
+# CSP Adapter
 # ---------------------------------------------------------------------------
 
 class AWARESensorAdapter:
-    """USAP adapter for the AWARE smartphone sensing framework.
+    """CSP adapter for the AWARE smartphone sensing framework.
 
     Implements Cytonome's Sensor Protocol to bridge AWARE data
     into Cytos Observations. Supports batch ingestion from CSV/SQLite
@@ -1528,7 +1528,7 @@ class AWARESensorAdapter:
 
     @property
     def descriptor(self) -> dict[str, Any]:
-        """USAP SensorDescriptor for the AWARE adapter."""
+        """CSP SensorDescriptor for the AWARE adapter."""
         return {
             "sensor_id": "cytonome.aware.smartphone.v1",
             "name": "AWARE Smartphone Sensor Suite",
@@ -2021,7 +2021,7 @@ classDiagram
 
 2. **Semantic alignment**: Reference the semantic alignment documentation at [docs/cytonome/yar/sensors/semantic-alignment.md](../../cytos/sensing-schema/semantic-alignment.md) (forthcoming) for SOSA/SSN, FHIR R5, and IEEE 1752 interoperability mapping.
 
-3. **USAP integration**: See Yar's [Phase 7: Universal Sensor Adapter Protocol](../../../00-Inbox/product-implementation.md#L419-L489) for the broader adapter architecture and plug-and-play user experience design.
+3. **CSP integration**: See Yar's [Phase 7: Universal Sensor Adapter Protocol](../../../00-Inbox/product-implementation.md#L419-L489) for the broader adapter architecture and plug-and-play user experience design.
 
 4. **Sensor architecture**: Review the [Universal Sensor Architecture](../../../03-Products/Cytonome/Yar/sensor-architecture.md) for the Sensor Protocol interface, SensorDescriptor schema, and SensorRegistry lifecycle.
 

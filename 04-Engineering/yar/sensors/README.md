@@ -8,7 +8,7 @@
 > **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 
 > [!IMPORTANT]
-> **TL;DR**: This is Yar's **sensing component**, nested at `docs/cytonome/yar/sensors/`. It defines the **sensor protocol** that lets any sensor (voice, wearables, self-report, future connectomics) plug into Yar as a typed, consent-governed adapter. The protocol is referred to here as **USAP (Universal Sensor Adapter Protocol)**; the Yar master and strategy docs call the same protocol **CSP (Cytonome Sensor Protocol)**. They are the same thing. It is a standalone sensor architecture, integrated as Yar's input layer (Yar master `§4B`) and governed by **CAP** (every adapter needs per-sensor consent; raw data stays on-device by default).
+> **TL;DR**: This is Yar's **sensing component**, nested at `docs/cytonome/yar/sensors/`. It defines **CSP (Cytonome Sensor Protocol; formerly USAP/UBAP)**, the sensor protocol that lets any sensor (voice, wearables, self-report, future connectomics) plug into Yar as a typed, consent-governed adapter. It is a standalone sensor architecture, integrated as Yar's input layer (Yar master `§4B`) and governed by **CAP** (every adapter needs per-sensor consent; raw data stays on-device by default).
 
 > **Start here**: [Consolidated Sensor Reference](../../cytos/sensing-schema/unified-sensor-report.md)
 
@@ -56,11 +56,11 @@ Full schema documentation: Cytos Sensor Schema README (target archived/removed)
 
 ## Yar Integration
 
-The Yar product-level sensor integration (USAP: Universal Sensor Adapter Protocol) is defined in:
+The Yar product-level sensor integration (CSP: Cytonome Sensor Protocol) is defined in:
 
-- [Product Implementation Phase 7](../../../00-Inbox/product-implementation.md) (USAP specification)
+- [Product Implementation Phase 7](../../../00-Inbox/product-implementation.md) (CSP specification)
 - [ADHD Paper Synthesis §8.9](../research/adhd-paper-synthesis.md) (sensor features for ADHD)
-- Feature Comparison v3 (target archived/removed) (USAP in competitive matrix)
+- Feature Comparison v3 (target archived/removed) (CSP in competitive matrix)
 
 ## Research Lineage
 

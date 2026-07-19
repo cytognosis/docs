@@ -468,7 +468,7 @@ This unified list de-duplicates features from all three sources, grouped by the 
 
 | # | Feature | Source(s) | Paper Validation | Priority |
 |---|---|---|---|---|
-| 44 | **Universal Sensor Adapter Protocol (USAP)** (MCP for sensors) | Product Impl (Phase 7), Blue Lin DR3 | DI3: mood-adaptive (physiological signals feed Brain Weather) | **Critical** |
+| 44 | **CSP (Cytonome Sensor Protocol; formerly USAP/UBAP)** (MCP for sensors) | Product Impl (Phase 7), Blue Lin DR3 | DI3: mood-adaptive (physiological signals feed Brain Weather) | **Critical** |
 | 45 | **Wearable integration** (Oura, Apple Watch, Garmin) | Product Impl (Phase 7) | C8: Brain Weather needs physiological ground truth | **High** |
 | 46 | **Brain connectomic integration** (future EEG/neural trackers) | Product Impl (Phase 7), Cytonome vision | DI3 + DR1 (Lin): predicted cognitive states with confidence | **Medium** |
 | 47 | **Environmental context** (light, noise, air quality) | Product Impl (Phase 7) | Challenge: institutional misalignment (P4 open-office sensory overload) | **Medium** |
@@ -487,7 +487,7 @@ The paper's validated concepts map to Yar's existing implementation phases:
 | **Phase 4: Desktop & Web** | C8 (Brain Weather Dashboard), C13 (Weekly Narrative) | Desktop dashboard becomes Brain Weather primary interface |
 | **Phase 5: Voice Pipeline** | C2 (Mood-Aware Companion) | Vocal biomarkers feed Brain Weather model; morning check-in flow |
 | **Phase 6: Persona System** | C6 (Social Presence AI), C11 (Pause Days) | Persona must detect burnout signals and proactively suggest rest |
-| **Phase 7: Universal Sensor Adapter** | C8 (Brain Weather needs physiological ground truth) | USAP protocol, Oura/watch adapters, CAP privacy gates for sensor data |
+| **Phase 7: Universal Sensor Adapter (CSP)** | C8 (Brain Weather needs physiological ground truth) | CSP protocol, Oura/watch adapters, CAP privacy gates for sensor data |
 
 > [!IMPORTANT]
 > The paper's highest-rated concepts (C8, C3, C6, C11) concentrate in Phases 3-5. This validates Yar's current phase ordering: CAP and infrastructure first, then the features that matter most to users.

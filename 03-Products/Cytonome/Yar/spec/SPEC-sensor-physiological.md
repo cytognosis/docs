@@ -44,7 +44,7 @@ This spec is the formal modality-level complement to [SPEC-CSP](./SPEC-CSP.md). 
 
 **Out of scope:** voice and speech signals (see planned `SPEC-sensor-speech-mentalstate.md`), social-interaction signal aggregation (see planned `SPEC-sensor-social-interaction.md`), Cytoscope and future biosensors (CSP Section 6.6), and model inference internals.
 
-**Canonical naming reminder:** the protocol is CSP (Cytonome Sensor Protocol). "USAP" is a deprecated alias from pre-spec engineering docs. Do not use USAP in new code comments, schema references, or documentation.
+**Canonical naming reminder:** the protocol is CSP (Cytonome Sensor Protocol; formerly USAP/UBAP). Do not use the deprecated aliases in new code comments, schema references, or documentation.
 
 ---
 

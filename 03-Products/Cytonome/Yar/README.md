@@ -22,7 +22,7 @@
 | [`INTEGRATION_PLAN.md`](./INTEGRATION_PLAN.md) | Codebase integration plan reconciling this docs pillar with the Yar code repo and Cytoplex |
 | [`DATA-MOVED.md`](./DATA-MOVED.md) | Pointer: feature/prioritization CSV tables live in the datasets repo, not here (path corrected 2026-07-17) |
 | [`sensor-architecture.md`](./sensor-architecture.md) | ADHD-friendly summary of the sensor architecture layer |
-| [`sensor-ecosystem.md`](./sensor-ecosystem.md) | Sensor plug-in ecosystem, formerly USAP/UBAP (Universal Sensor/Biosensor Adapter Protocol), now standardized as CSP; see `spec/SPEC-CSP.md` for the engineering-facing equivalent |
+| [`sensor-ecosystem.md`](./sensor-ecosystem.md) | Sensor plug-in ecosystem for CSP (Cytonome Sensor Protocol; formerly USAP/UBAP); see `spec/SPEC-CSP.md` for the engineering-facing equivalent |
 | [`simple/README.md`](./simple/README.md) | One-minute plain-language pointer into the technical docs; notes what changed in the 2026-07 consolidation |
 
 ## Research (`research/`)

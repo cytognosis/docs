@@ -383,7 +383,7 @@ This verdict grounds features F01 (Voice brain dump), F40 (Voice wellbeing signa
 
 | # | Decision or gap | Severity | Recommended action |
 |---|---|---|---|
-| D1 | Sensor-protocol name, formerly USAP/UBAP, now standardized as CSP | Low | Adopt **CSP (Cytonome Sensor Protocol)** as canonical; USAP/UBAP retained only as deprecated engineering aliases |
+| D1 | Sensor-protocol naming | Low | **CSP (Cytonome Sensor Protocol; formerly USAP/UBAP)** is canonical; the deprecated aliases are not used in new work |
 | D2 | Privacy-boundary schema (no artifact) | **Critical** | Create the schema before any distributed-runtime work; block that work on it |
 | D3 | Crisis-detection subsystem (not built) | **Critical** | Required before any therapy-adjacent feature reaches users |
 | D4 | Duplicate master files (byte-identical) | Low | Designate `yar-product-feature-master.md` canonical; replace the other with a link |

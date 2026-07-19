@@ -54,7 +54,7 @@ This spec defines how Yar presents itself to the user: which voice it uses, what
 
 **Relationship to the multi-agent system:** A persona is not an agent. It is a style envelope applied at the Interviewer worker layer. The Interviewer reads the active `PersonaConfig` from the CRDT store, applies it to its system prompt, and renders responses and TTS output accordingly. The Supervisor may update the active persona (via a CAP Directive) when CSP signals warrant a tone shift. No worker may change the active persona unilaterally.
 
-**Naming rules:** use CSP (not USAP), CAP (not "Cognitive Agent Protocol"), Cytoplex (not "CAP product"), and avoid "Substrate" for any data layer. These rules are normative throughout this spec.
+**Naming rules:** use CSP (Cytonome Sensor Protocol; formerly USAP/UBAP), CAP (not "Cognitive Agent Protocol"), Cytoplex (not "CAP product"), and avoid "Substrate" for any data layer. These rules are normative throughout this spec.
 
 ---
 
