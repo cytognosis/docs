@@ -163,7 +163,7 @@ Six coupling risks are worth flagging, in order of how much schedule damage they
 
 - `Yar/_planning-20260719/FEATURE-VERIFICATION.md` (F65 to F69 gap definitions, wave/architecture mermaid, mapping table)
 - `Yar/_planning-20260719/SPECS-INVENTORY.md` (spec inventory, Wave 0 build list, depends_on tiering)
-- `docs/03-Products/Cytonome/Yar/research/features.json` (canonical 64-feature hierarchy, status and gated flags)
+- `docs/03-Products/Cytonome/Yar/research/features.json` (canonical 69-feature hierarchy, status and gated flags)
 
 
 ---

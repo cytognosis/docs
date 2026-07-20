@@ -2,7 +2,7 @@
 
 > **Status:** Active · **Date:** 2026-07-18 · **Author:** @mohammadi · **Audience:** engineers, stakeholders, funders
 > **Variants**: Technical (this doc) - Readable (yar-product-spec.md in Obsidian vault, same filename) - Agent (yar-product-spec_prompt.md)
-> **Supersedes:** `yar-product-feature-master.md`, `yar-product-implementation.md`, `cytonome-master-reference.md`, `feature-comparison.md` (all archived with forward links). **Feature index:** `YAR_FEATURE_CATALOG.md` (64 features). **Evidence base:** `research/yar-unified-feature-comparison-v4.md`.
+> **Supersedes:** `yar-product-feature-master.md`, `yar-product-implementation.md`, `cytonome-master-reference.md`, `feature-comparison.md` (all archived with forward links). **Feature index:** `YAR_FEATURE_CATALOG.md` (69 features). **Evidence base:** `research/yar-unified-feature-comparison-v4.md`.
 > **Reading time:** about 8 minutes.
 
 **If you only read one thing:** Yar is Cytonome v0.1, a local-first, voice-aware, AI-native cognitive companion built by and for neurodivergent adults. It turns messy voice or text into typed objects in a personal knowledge graph, helps the user plan and execute, and keeps raw data on-device behind a hard safety boundary (CAP). This spec is the single canonical product doc; per-feature depth lives in the 69-feature catalog and the formal specs it maps to.
