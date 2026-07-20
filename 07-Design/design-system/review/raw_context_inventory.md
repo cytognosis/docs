@@ -15,12 +15,12 @@
 ## 1. Executive summary
 
 1. Three independent, non-converged design systems exist for Cytognosis: (a) the Claude Design v10 system defined in `design-system-consolidation-2026-05/` (violet `#8B3FC7`, azure `#3B7DD6`, indigo `#5145A8`, Inter/Newsreader/JetBrains Mono, four use-case profiles), (b) the Website's "brand v2" token set in `Claude/Projects/Website/_drive/design-system-decision-v2.md` (deliberately drifted violet `#6E5BD1`, warm beige `#F4F2EF`, Space Grotesk), and (c) the branding repo's current "CytoStyle" package, a generic, unrelated React/MUI component library.
-2. The branding repo at `/home/mohammadi/repos/cytognosis/branding` was wholesale replaced on commit `130dee7` ("Replace branding repo with CytoStyle package") with the npm package `@alimohammadiwork/cytostyle`. Its Figma source evidence (IRAN Yekan font, Jalali dates, "dastyar/insurance/investment" banner nodes) indicates the underlying design file is an unrelated Persian-language fintech product, not a Cytognosis-authored system.
-3. A repo-wide case-insensitive grep for "claude" across `/home/mohammadi/repos/cytognosis/branding` returned zero matches. The branding repo currently has no live reference to the Claude Design v10 export, the 12 numbered references, or any artifact from the consolidation workspace.
-4. A partial, buried bridge exists: `/home/mohammadi/repos/cytognosis/branding/src/constants/colors.ts` (lines 163 to 227) exports `cytognosisAppColors`, `cytognosisGradients`, and `cytognosisSurfaces` with numerically correct v10-canonical values (violet `#8B3FC7`, signature gradient `135deg #3B7DD6/#8B3FC7/#5145A8`, light surface `#F4F2EF`, which also happens to match the website's warm-beige background). This is opt-in only; the package's own guideline example (`guidelines/foundations/color.md`) shows a generic teal/grey `#1DBF98`/`#4F545E` palette instead, and no guideline file recommends the Cytognosis constants.
+2. The branding repo at `https://github.com/cytognosis/branding` was wholesale replaced on commit `130dee7` ("Replace branding repo with CytoStyle package") with the npm package `@alimohammadiwork/cytostyle`. Its Figma source evidence (IRAN Yekan font, Jalali dates, "dastyar/insurance/investment" banner nodes) indicates the underlying design file is an unrelated Persian-language fintech product, not a Cytognosis-authored system.
+3. A repo-wide case-insensitive grep for "claude" across `https://github.com/cytognosis/branding` returned zero matches. The branding repo currently has no live reference to the Claude Design v10 export, the 12 numbered references, or any artifact from the consolidation workspace.
+4. A partial, buried bridge exists: `https://github.com/cytognosis/branding/blob/main/src/constants/colors.ts` (lines 163 to 227) exports `cytognosisAppColors`, `cytognosisGradients`, and `cytognosisSurfaces` with numerically correct v10-canonical values (violet `#8B3FC7`, signature gradient `135deg #3B7DD6/#8B3FC7/#5145A8`, light surface `#F4F2EF`, which also happens to match the website's warm-beige background). This is opt-in only; the package's own guideline example (`guidelines/foundations/color.md`) shows a generic teal/grey `#1DBF98`/`#4F545E` palette instead, and no guideline file recommends the Cytognosis constants.
 5. The May 2026 consolidation workspace (`design-system-consolidation-2026-05/`) produced a complete, internally consistent operational blueprint: 8 Claude Design prompts, 2 new master skills, 5 revised core skills, and 2 repo-organization plans. None of it has been applied to the live `branding` or `cytoskeleton` repos; it still lives only in the Claude Projects workspace folder.
 6. The agreed target structure for Claude Design output is `branding/design-system/` (12 numbered references, `tokens.css`, `profiles/`, `assets/`, `templates/`, `components/` as LinkML contracts, `preview/`, `data-viz/`) plus `branding/skills/` (7 skills), fully specified in `02_repo_organization/branding_repo_plan.md` and `03_claude_design_prompts/prompt_reorg.md`. The live repo instead has `guidelines/`, `skills/cytostyle-app-builder/`, `src/`, `stories/`, `dist/`, none matching the target shape.
-7. Five interface templates are specified (app-website, app-phone, app-web, app-desktop, app-extension) with a template-master skill routing to per-template deltas. None are scaffolded in `cytoskeleton/templates/` per the refactor brief's own status tracking. Meanwhile the real production website build (`~/repos/cytognosis/website`, Vite+React+FastAPI on Cloud Run) is running independently of, and materially diverges from, the app-website template spec (which mandates Astro).
+7. Five interface templates are specified (app-website, app-phone, app-web, app-desktop, app-extension) with a template-master skill routing to per-template deltas. None are scaffolded in `cytoskeleton/templates/` per the refactor brief's own status tracking. Meanwhile the real production website build (`https://github.com/cytognosis/website`, Vite+React+FastAPI on Cloud Run) is running independently of, and materially diverges from, the app-website template spec (which mandates Astro).
 8. The live cytognosis.org rebuild does not consume the Claude Design v10 tokens or the `cytognosis-design-system-master` skill's cheatsheet. It runs its own reconciled "brand v2" / "v3-recommended" token set, deliberately overriding the canonical violet, background, and gradient values for warmth and neurodiversity-calm reasons, with an explicit documented carve-out that the website is "one context" and IDE themes, print, and decks remain canonical v10.
 9. Enforcement of file/folder structure and token rules in every reviewed prompt and skill is entirely instructional: Markdown prompts pasted into Claude Design, "Definition of Done" checklists, "what to NOT produce" lists, and "open questions to surface" sections. No linter, CI check, or schema validation was found anywhere in the reviewed materials that would block an off-brand token or wrong-shape file from landing.
 10. The most urgent unresolved decision for the merge plan is which token set is authoritative for which surface going forward: v10 canonical for print, decks, IDE themes, and internal tools; website brand v2/v3 for cytognosis.org; and whether CytoStyle is discarded, quarantined as an unrelated internal tool, or re-skinned to consume v10/brand-v2 tokens before any product app is built on it.
@@ -29,7 +29,7 @@
 
 ## 2. Prompt inventory
 
-All files at `/home/mohammadi/Claude/Projects/Science and Platform/design-system-consolidation-2026-05/03_claude_design_prompts/`.
+All files at `~/Claude/Projects/Science and Platform/design-system-consolidation-2026-05/03_claude_design_prompts/`.
 
 | File | Purpose | Key rules |
 |---|---|---|
@@ -68,7 +68,7 @@ branding/
 └── scripts/                          (sync-from-claude-design.py, render_guidelines.py, validate_tokens.py)
 ```
 
-The live repo (`/home/mohammadi/repos/cytognosis/branding`, confirmed via `find` at 2026-07-08) instead has: `README.md`, 3 audit `.md` files plus one roadmap `.md` at the root, `guidelines/` (4 top-level files plus `components/` and `foundations/` subfolders), `skills/cytostyle-app-builder/`, `src/` (12 subdirectories of React/TS component source), `stories/`, `dist/`, `assets/fonts/` (IranYekan only), `docs/`, `archive/`, `.storybook/`. None of the target directories (`design-system/`, `themes/`, `scripts/`) exist.
+The live repo (`https://github.com/cytognosis/branding`, confirmed via `find` at 2026-07-08) instead has: `README.md`, 3 audit `.md` files plus one roadmap `.md` at the root, `guidelines/` (4 top-level files plus `components/` and `foundations/` subfolders), `skills/cytostyle-app-builder/`, `src/` (12 subdirectories of React/TS component source), `stories/`, `dist/`, `assets/fonts/` (IranYekan only), `docs/`, `archive/`, `.storybook/`. None of the target directories (`design-system/`, `themes/`, `scripts/`) exist.
 
 ### 3.2 The seven-skill family and four-phase skill model
 
@@ -106,7 +106,7 @@ Per `cytognosis-template-master/SKILL.md` (v1.1.0) and `06_refactor/01_refactor_
 
 ### 4.2 The actual, independently-built production website
 
-The real cytognosis.org rebuild lives at `~/repos/cytognosis/website` (branch `feat/vite-frontend-serving`), documented in `/home/mohammadi/Claude/Projects/Website/WEBSITE_DESIGN_HANDBOOK.md`. It is Vite + React (not Astro) for the frontend, FastAPI + SQLModel + Postgres on Cloud Run for the backend, plus a separate Node/Express + Firestore service (`stories-api`) for HIPAA-scoped patient stories. This is a materially different stack from `prompt_template_website.md`'s Astro mandate, built and substantially shipped (`WEBSITE_DESIGN_HANDBOOK.md` §11: phases 0 through 7a done and verified on branch) independently of, and apparently without reference to, the cytoskeleton template plan.
+The real cytognosis.org rebuild lives at `https://github.com/cytognosis/website` (branch `feat/vite-frontend-serving`), documented in `~/Claude/Projects/Website/WEBSITE_DESIGN_HANDBOOK.md`. It is Vite + React (not Astro) for the frontend, FastAPI + SQLModel + Postgres on Cloud Run for the backend, plus a separate Node/Express + Firestore service (`stories-api`) for HIPAA-scoped patient stories. This is a materially different stack from `prompt_template_website.md`'s Astro mandate, built and substantially shipped (`WEBSITE_DESIGN_HANDBOOK.md` §11: phases 0 through 7a done and verified on branch) independently of, and apparently without reference to, the cytoskeleton template plan.
 
 The frontend codebase (`updated_design/`, referred to throughout the Website docs as "Ali's design") was built by a contractor named Ali. Its design tokens were derived through an independent two-round research and reconciliation process:
 
@@ -126,7 +126,7 @@ The branding repo's current CytoStyle package is published as `@alimohammadiwork
 
 ### 5.1 Current repo state
 
-Path: `/home/mohammadi/repos/cytognosis/branding`. Package identity: `@alimohammadiwork/cytostyle`, version `1.0.82`, description "Reusable CytoStyle React and Material UI components, providers, hooks, utilities, and design tokens for Cytognosis products" (`package.json`).
+Path: `https://github.com/cytognosis/branding`. Package identity: `@alimohammadiwork/cytostyle`, version `1.0.82`, description "Reusable CytoStyle React and Material UI components, providers, hooks, utilities, and design tokens for Cytognosis products" (`package.json`).
 
 Top-level contents (bash `ls -la`, 2026-07-08): `README.md`, `CORRECTED_FIGMA_FIRST_DESIGN_SYSTEM_AUDIT.md` (39KB), `CYTOSTYLE_DESIGN_SYSTEM_IMPLEMENTATION_ROADMAP.md` (47KB), `EXISTING_DESIGN_SYSTEM_AUDIT.md` (33KB), `MISSING_COMPONENTS_VERIFICATION_AUDIT.md` (24KB), `Dockerfile`, `LICENSE`, `archive/`, `assets/` (fonts only: IranYekan), `dist/` (built JS/CSS output), `docs/`, `esbuild.js`, `guidelines/`, `pnpm-lock.yaml`, `pnpm-workspace.yaml`, `skills/`, `src/`, `stories/`, `tsconfig.json`, `.storybook/`, `.github/`.
 
@@ -138,7 +138,7 @@ Top-level contents (bash `ls -la`, 2026-07-08): `README.md`, `CORRECTED_FIGMA_FI
 
 ### 5.3 Claude Design integration points found
 
-A repo-wide grep for `claude` (case-insensitive, `/home/mohammadi/repos/cytognosis/branding`) returned **zero matches** in the current working tree. The only surviving Cytognosis-brand-correct content is:
+A repo-wide grep for `claude` (case-insensitive, `https://github.com/cytognosis/branding`) returned **zero matches** in the current working tree. The only surviving Cytognosis-brand-correct content is:
 
 - `src/constants/colors.ts` lines 163 to 227: `cytognosisAppColors` (`primary.600 = #8B3FC7`, `secondary.600 = #3B7DD6`, full 50 to 950 ramps), `cytognosisGradients` (signature/innovation/vitality/data/alert, all matching the v10 canonical gradient values exactly), and `cytognosisSurfaces` (light background `#F4F2EF`, which independently matches the website's brand-v2 warm beige; dark background `#1E1E32`, matching v9/v10 Rich Night).
 - `src/Introduction.mdx` and `src/Guide.mdx` show `cytognosisAppColors` used as an example `appColors` prop value for `ThemeProvider`/`SPAThemeProvider`.
@@ -164,7 +164,7 @@ All four documents (`CORRECTED_FIGMA_FIRST_DESIGN_SYSTEM_AUDIT.md`, `EXISTING_DE
 3. **Skill placement collision.** `branding/skills/` is now occupied by `cytostyle-app-builder/`. The planned migration of the 7 Cytognosis skills into `branding/skills/` (per `06_refactor/01_refactor_brief.md` §3.0 Step 2) needs an explicit placement decision (separate subfolder, rename, or full removal of `cytostyle-app-builder`).
 4. **Downstream repo status unknown.** This inventory did not check `cytoskeleton`, `cytocast`, or `cytoagent` (out of the requested scope). Their actual state materially affects whether any of the five interface templates exist anywhere, and the refactor brief's own tracking (`06_refactor/01_refactor_brief.md` §1, dated 2026-05-13) lists all three as "not yet started." This should be verified fresh before the merge plan assumes anything about template scaffolding.
 5. **Website token set is layered, not singular.** Three website-side documents exist in sequence (`design-system-decision.md` = v1/"v2" naming is confusing internally, then `research-design-consolidation.md` = the "v3" recommendation, then `design-system-decision-v2.md` = the actual current authority). A reader landing on `design-system-decision.md` alone gets superseded token values. The merge plan should treat `_drive/design-system-decision-v2.md` as the sole authoritative website token source and flag the other two as historical.
-6. **Stale, session-scoped cross-reference.** `research-design-consolidation.md` (source list, bottom of file) cites a "brand-identity skill" at an absolute path inside a specific prior agent session (`/home/mohammadi/.config/Claude/local-agent-mode-sessions/.../local_aaa10a0a-5a78-4a28-9f58-251bebb25a77/.claude/skills/brand-identity/SKILL.md`), described there as "v9.0." That path is very unlikely to resolve in this or future sessions. This session has a currently available skill named `anthropic-skills:brand-identity` ("Official Cytognosis Foundation brand identity, design system, voice, and content standards... REQUIRED for ALL Cytognosis-branded output"); whether that skill is the same v9, an updated v9, the v10 from this consolidation, or something newer was not checked in this task and should be the first thing read in the next step, since it is clearly the skill actually being loaded for current Cytognosis-branded work.
+6. **Stale, session-scoped cross-reference.** `research-design-consolidation.md` (source list, bottom of file) cites a "brand-identity skill" at an absolute path inside a specific prior agent session (`~/.config/Claude/local-agent-mode-sessions/.../local_aaa10a0a-5a78-4a28-9f58-251bebb25a77/.claude/skills/brand-identity/SKILL.md`), described there as "v9.0." That path is very unlikely to resolve in this or future sessions. This session has a currently available skill named `anthropic-skills:brand-identity` ("Official Cytognosis Foundation brand identity, design system, voice, and content standards... REQUIRED for ALL Cytognosis-branded output"); whether that skill is the same v9, an updated v9, the v10 from this consolidation, or something newer was not checked in this task and should be the first thing read in the next step, since it is clearly the skill actually being loaded for current Cytognosis-branded work.
 7. **Font licensing gap, never closed.** `prompt_reorg.md` §4 (open question 4) flags Source Serif Pro, Lexend, and Atkinson Hyperlegible as referenced-but-unlicensed. The website independently substituted Newsreader for Source Serif Pro and deferred Lexend/Atkinson Hyperlegible to "Phase 7a" per `_drive/design-system-decision-v2.md` §7 (D2, D3). No shared font asset pipeline exists between the website repo and the branding repo; each made its own independent call.
 8. **Branding-repo distribution mechanism still undecided.** `02_repo_organization/cytoskeleton_repo_plan.md` §9 and `06_refactor/00_master_architecture.md` §10 both leave "git submodule vs internal-PyPI" for branding distribution as an open, unresolved question from 2026-05-13. This is now secondary to reconstituting the branding repo's content at all, but will need an answer before `cytoskeleton` can consume it.
 9. **CytoStyle's genuine utility is unclear but non-zero.** The audits show CytoStyle is a reasonably mature MUI wrapper library (45 components, theme providers, hooks) with a partially-retrofitted Cytognosis palette (`cytognosisAppColors`). If any internal Cytognosis tool already depends on `@alimohammadiwork/cytostyle` in production, discarding it outright carries migration cost; this was not checked (no `package.json` dependents were searched outside the branding repo itself) and should be confirmed before deciding to remove it.
@@ -172,18 +172,18 @@ All four documents (`CORRECTED_FIGMA_FIRST_DESIGN_SYSTEM_AUDIT.md`, `EXISTING_DE
 ---
 
 *Sources consulted for this inventory, all with exact paths cited inline above:*
-- `/home/mohammadi/Claude/Projects/Science and Platform/design-system-consolidation-2026-05/03_claude_design_prompts/*.md` (8 files)
-- `/home/mohammadi/Claude/Projects/Science and Platform/design-system-consolidation-2026-05/01_plan/00_master_plan.md`
-- `/home/mohammadi/Claude/Projects/Science and Platform/design-system-consolidation-2026-05/02_repo_organization/{branding_repo_plan.md,cytoskeleton_repo_plan.md}`
-- `/home/mohammadi/Claude/Projects/Science and Platform/design-system-consolidation-2026-05/06_refactor/{00_master_architecture.md,01_refactor_brief.md,README.md}`
-- `/home/mohammadi/Claude/Projects/Science and Platform/design-system-consolidation-2026-05/04_skills_new/cytognosis-design-system-master/SKILL.md`
-- `/home/mohammadi/Claude/Projects/Science and Platform/design-system-consolidation-2026-05/04_skills_new/cytognosis-template-master/SKILL.md`
-- `/home/mohammadi/Claude/Projects/Website/WEBSITE_DESIGN_HANDBOOK.md`
-- `/home/mohammadi/Claude/Projects/Website/_drive/{design-system-decision.md,design-system-decision-v2.md,research-design-consolidation.md,inventory-new-design.md,handbook-src-design.md}`
-- `/home/mohammadi/Claude/Projects/Website/MASTER_DRIVE_PLAN.md` (design-relevant excerpts via grep)
-- `/home/mohammadi/repos/cytognosis/branding/{README.md,CORRECTED_FIGMA_FIRST_DESIGN_SYSTEM_AUDIT.md,EXISTING_DESIGN_SYSTEM_AUDIT.md,MISSING_COMPONENTS_VERIFICATION_AUDIT.md,CYTOSTYLE_DESIGN_SYSTEM_IMPLEMENTATION_ROADMAP.md}`
-- `/home/mohammadi/repos/cytognosis/branding/guidelines/{Guidelines.md,foundations/color.md}`
-- `/home/mohammadi/repos/cytognosis/branding/skills/cytostyle-app-builder/SKILL.md`
-- `/home/mohammadi/repos/cytognosis/branding/src/constants/colors.ts`
-- `/home/mohammadi/repos/cytognosis/branding/package.json`
-- `git log --oneline -20` in `/home/mohammadi/repos/cytognosis/branding`
+- `~/Claude/Projects/Science and Platform/design-system-consolidation-2026-05/03_claude_design_prompts/*.md` (8 files)
+- `~/Claude/Projects/Science and Platform/design-system-consolidation-2026-05/01_plan/00_master_plan.md`
+- `~/Claude/Projects/Science and Platform/design-system-consolidation-2026-05/02_repo_organization/{branding_repo_plan.md,cytoskeleton_repo_plan.md}`
+- `~/Claude/Projects/Science and Platform/design-system-consolidation-2026-05/06_refactor/{00_master_architecture.md,01_refactor_brief.md,README.md}`
+- `~/Claude/Projects/Science and Platform/design-system-consolidation-2026-05/04_skills_new/cytognosis-design-system-master/SKILL.md`
+- `~/Claude/Projects/Science and Platform/design-system-consolidation-2026-05/04_skills_new/cytognosis-template-master/SKILL.md`
+- `~/Claude/Projects/Website/WEBSITE_DESIGN_HANDBOOK.md`
+- `~/Claude/Projects/Website/_drive/{design-system-decision.md,design-system-decision-v2.md,research-design-consolidation.md,inventory-new-design.md,handbook-src-design.md}`
+- `~/Claude/Projects/Website/MASTER_DRIVE_PLAN.md` (design-relevant excerpts via grep)
+- `https://github.com/cytognosis/branding{README.md,CORRECTED_FIGMA_FIRST_DESIGN_SYSTEM_AUDIT.md,EXISTING_DESIGN_SYSTEM_AUDIT.md,MISSING_COMPONENTS_VERIFICATION_AUDIT.md,CYTOSTYLE_DESIGN_SYSTEM_IMPLEMENTATION_ROADMAP.md}`
+- `https://github.com/cytognosis/branding/tree/main/guidelines{Guidelines.md,foundations/color.md}`
+- `https://github.com/cytognosis/branding/blob/main/skills/cytostyle-app-builder/SKILL.md`
+- `https://github.com/cytognosis/branding/blob/main/src/constants/colors.ts`
+- `https://github.com/cytognosis/branding/blob/main/package.json`
+- `git log --oneline -20` in `https://github.com/cytognosis/branding`

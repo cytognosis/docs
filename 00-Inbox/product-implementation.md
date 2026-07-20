@@ -419,7 +419,7 @@ def to_character_card_v3(persona: YarPersona) -> dict:
 ### Phase 7: Universal Sensor Adapter Protocol (Week 12-16)
 
 > **Full documentation**: [Consolidated Sensor Reference](../04-Engineering/cytos/sensing-schema/unified-sensor-report.md)
-> **Schema system**: [Cytos LinkML Sensor Schemas](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/)
+> **Schema system**: [Cytos LinkML Sensor Schemas](https://github.com/cytognosis/cytos/tree/main/schemas/domains/sensor)
 > **Standards crosswalk**: [Semantic Alignment Specification](../04-Engineering/cytos/sensing-schema/semantic-alignment.md)
 
 #### 2.7.1 The Problem
@@ -428,7 +428,7 @@ Health-aware cognitive companions need sensor data (heart rate variability, slee
 
 #### 2.7.2 Sensor MCP: MCP for Sensors
 
-Yar introduces a **Universal Sensor Adapter Protocol (USAP)**, modeled on the MCP (Model Context Protocol) pattern but purpose-built for real-time physiological sensor streams. The USAP operates as the runtime layer over the [Cytos LinkML sensor schema system](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml) (35+ classes, SOSA/SSN-aligned):
+Yar introduces a **Universal Sensor Adapter Protocol (USAP)**, modeled on the MCP (Model Context Protocol) pattern but purpose-built for real-time physiological sensor streams. The USAP operates as the runtime layer over the [Cytos LinkML sensor schema system](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/core.yaml) (35+ classes, SOSA/SSN-aligned):
 
 | Component | Purpose | Cytos Schema Mapping |
 |---|---|---|
@@ -441,11 +441,11 @@ Yar introduces a **Universal Sensor Adapter Protocol (USAP)**, modeled on the MC
 
 | Sensor Class | Example Devices | Data Type | Cytos Schema | Implementation Guide |
 |---|---|---|---|---|
-| **Wearable rings** | Oura Ring, RingConn | HRV, sleep stages, temperature, activity | [vendor_oura.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_oura.yaml) | [Implementing Wearables](../04-Engineering/yar/sensors/implementing-wearables.md) |
-| **Smartwatches** | Apple Watch, Pixel Watch, Fitbit | HR, SpO2, stress, steps, activity | [vendor_fitbit.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_fitbit.yaml) | [Implementing Wearables](../04-Engineering/yar/sensors/implementing-wearables.md) |
-| **Smartphone sensors** | Built-in accelerometer, GPS, screen, apps | Motion, location, digital behavior, ESM | [profile_aware.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml) | [Implementing AWARE](../04-Engineering/yar/sensors/implementing-aware.md) |
-| **Health instruments** | PHQ-9, GAD-7, ASRS, PSQI, WHO-5 | Self-report scores, subscales | [selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml) | [Implementing Health Instruments](../04-Engineering/yar/sensors/implementing-health-instruments.md) |
-| **CGM** | Dexcom G6/G7, Libre | Continuous glucose | [vendor_dexcom.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_dexcom.yaml) | TBD |
+| **Wearable rings** | Oura Ring, RingConn | HRV, sleep stages, temperature, activity | [vendor_oura.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/vendors/vendor_oura.yaml) | [Implementing Wearables](../04-Engineering/yar/sensors/implementing-wearables.md) |
+| **Smartwatches** | Apple Watch, Pixel Watch, Fitbit | HR, SpO2, stress, steps, activity | [vendor_fitbit.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/vendors/vendor_fitbit.yaml) | [Implementing Wearables](../04-Engineering/yar/sensors/implementing-wearables.md) |
+| **Smartphone sensors** | Built-in accelerometer, GPS, screen, apps | Motion, location, digital behavior, ESM | [profile_aware.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml) | [Implementing AWARE](../04-Engineering/yar/sensors/implementing-aware.md) |
+| **Health instruments** | PHQ-9, GAD-7, ASRS, PSQI, WHO-5 | Self-report scores, subscales | [selfreport.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/selfreport.yaml) | [Implementing Health Instruments](../04-Engineering/yar/sensors/implementing-health-instruments.md) |
+| **CGM** | Dexcom G6/G7, Libre | Continuous glucose | [vendor_dexcom.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/vendors/vendor_dexcom.yaml) | TBD |
 | **Brain connectomic** | Muse, Neurosity Crown | EEG, functional connectivity | Core `Observation` + `WaveformResult` | TBD |
 | **Environmental** | Air quality, light, noise sensors | CO2, lux, dB levels | Core `Observation` | TBD |
 | **Voice/audio** | Built-in mic, OMI wearable | Vocal biomarkers, prosody | Core `Observation` (13 fields) | [sensor-architecture.md §5](../03-Products/Cytonome/Yar/sensor-architecture.md) |
@@ -507,16 +507,16 @@ class Sensor(Protocol):
 
 #### 2.7.5 Standards Alignment
 
-Every sensor observation aligns with four health data standards through the [Cytos schema profiles](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/):
+Every sensor observation aligns with four health data standards through the [Cytos schema profiles](https://github.com/cytognosis/cytos/tree/main/schemas/domains/sensor/profiles):
 
 | Standard | Profile | Coverage |
 |---|---|---|
-| W3C SOSA/SSN | [profile_sosa.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_sosa.yaml) | Full (class_uri + slot_uri bindings for lossless RDF round-trip) |
-| IEEE 1752.1 / Open mHealth | [profile_ieee1752.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_ieee1752.yaml) | Full (heart-rate, BP, body-temp, glucose, SpO2, sleep, activity) |
-| HL7 FHIR R5 | [profile_fhir.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_fhir.yaml) | Full (Observation, Device, DeviceMetric, vital signs profiles) |
-| AWARE Framework | [profile_aware.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml) | Full (25 smartphone sensors + ESM) |
+| W3C SOSA/SSN | [profile_sosa.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_sosa.yaml) | Full (class_uri + slot_uri bindings for lossless RDF round-trip) |
+| IEEE 1752.1 / Open mHealth | [profile_ieee1752.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_ieee1752.yaml) | Full (heart-rate, BP, body-temp, glucose, SpO2, sleep, activity) |
+| HL7 FHIR R5 | [profile_fhir.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_fhir.yaml) | Full (Observation, Device, DeviceMetric, vital signs profiles) |
+| AWARE Framework | [profile_aware.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml) | Full (25 smartphone sensors + ESM) |
 
-Machine-readable crosswalks: [SSSOM mapping sets](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/crosswalks/)
+Machine-readable crosswalks: [SSSOM mapping sets](https://github.com/cytognosis/cytos/tree/main/schemas/domains/sensor/crosswalks)
 
 #### 2.7.6 Plug-and-Play User Experience
 

@@ -7,7 +7,7 @@
 > **Tags**: `storage`, `gcs`, `dvc`, `mergerfs`, `tiledb`, `cmek`
 > **Variants**: Technical (this doc) - Readable (same filename in Obsidian vault: 04-Engineering/infrastructure/) - Agent (n/a)
 
-**Origin**: Imported from `/home/mohammadi/Claude/Projects/Infrastructure and Tooling/storage-architecture.md` (draft v0.1, 2026-05-10). Revised to ground truth (2026-06-14).
+**Origin**: Imported from `~/Claude/Projects/Infrastructure and Tooling/storage-architecture.md` (draft v0.1, 2026-05-10). Revised to ground truth (2026-06-14).
 
 **Last verified: 2026-06-19**
 

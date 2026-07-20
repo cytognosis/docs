@@ -2,8 +2,8 @@
 
 Analysis date: 2026-07-16. YC deadline: 2026-07-27 (11 days out). Scope: analysis only, no code changed in either repo.
 
-**Repo A** = `~/repos/cytognosis/yar_revisions/yar-code-20260705-2354/` (canonical, React/Vite + Tauri + Django, 2 commits, started 2026-07-16).
-**Repo B** = `~/repos/cytognosis/Yar/` (legacy, FastAPI + Flutter mobile, last commit 2026-05-29).
+**Repo A** = `https://github.com/cytognosis/yar_revisions/yar-code-20260705-2354/` (canonical, React/Vite + Tauri + Django, 2 commits, started 2026-07-16).
+**Repo B** = `https://github.com/cytognosis/Yar` (legacy, FastAPI + Flutter mobile, last commit 2026-05-29).
 
 ## BLUF
 
@@ -151,4 +151,4 @@ Total immediately reclaimable: **~2.27 GB** (`build` + `dist` + `third_party` + 
 
 - [`yar-framework-assessment_2026-07-16.md`](./yar-framework-assessment_2026-07-16.md) -- the companion long-term framework call; read together, this map is short-term (pre-7/27) and the framework assessment is long-term (post-YC).
 - [`yar-feature-research-FINAL_2026-07-16.md`](./yar-feature-research-FINAL_2026-07-16.md) -- consolidates this map alongside the v4 comparison and prioritization into one founder reference.
-- Repo A (canonical): `~/repos/cytognosis/yar_revisions/yar-code-20260705-2354/` (branches `main`, `feat/sqlite-device-store`); Repo B (legacy) per this map's own path.
+- Repo A (canonical): `https://github.com/cytognosis/yar_revisions/yar-code-20260705-2354/` (branches `main`, `feat/sqlite-device-store`); Repo B (legacy) per this map's own path.

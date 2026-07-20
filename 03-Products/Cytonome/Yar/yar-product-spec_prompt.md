@@ -26,7 +26,7 @@ Yar (Your AI Representative) is **Cytonome v0.1**, a local-first, voice-aware, A
 - Feature index is `YAR_FEATURE_CATALOG.md` (62 features, F01-F62, six domains, waves, IPS, CU-1..CU-8).
 - Tool evaluations consolidated to `04-Engineering/yar/research/` (concise `EVAL-<topic>.md` plus deep-dive references).
 - 14 formal specs live in `spec/` with ADHD variants in `spec/adhd/`. Cytoplex (CAP) docs are in `Cytoplex/`.
-- Primary tables live in the datasets tree (`~/datasets/cytognosis/products/yar/`).
+- Primary tables live in the datasets tree (`https://github.com/cytognosis/datasets/tree/main/cytognosis/products/yar`).
 - Persona voice is on-device Kokoro TTS.
 
 ## Open questions and pending work

@@ -138,7 +138,7 @@ DEFINE FIELD beta ON GWASHit TYPE float;
 docker run -d \
   --name cytos-surrealdb \
   -p 8000:8000 \
-  -v /home/mohammadi/datasets/15-databases/surrealdb:/data \
+  -v ~/datasets/15-databases/surrealdb:/data \
   surrealdb/surrealdb:latest \
   start --user root --pass root surrealkv:///data/cytos.db
 

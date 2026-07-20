@@ -27,7 +27,7 @@ All processing between commits is tracked locally. You explicitly choose when to
 **What**: Data used only for development, debugging, testing. Throwaway.
 
 **Rules**:
-- Lives anywhere in `~/datasets/` physically, but is NOT `dvc add`-ed
+- Lives anywhere in `https://github.com/cytognosis/datasets` physically, but is NOT `dvc add`-ed
 - No metadata, no provenance, no remote sync
 - Can be deleted without consequence
 - Useful for: exploring a new dataset, testing a parser, quick experiments
@@ -48,7 +48,7 @@ All processing between commits is tracked locally. You explicitly choose when to
 
 When you say "track this dataset", the system:
 
-1. **Creates or validates a `SourceDescriptor`** at [configs/sources/\<id\>.yaml](file:///home/mohammadi/repos/cytognosis/cytos/configs/sources/)
+1. **Creates or validates a `SourceDescriptor`** at [configs/sources/\<id\>.yaml](https://github.com/cytognosis/cytos/tree/main/configs/sources)
    - Download URL, license, version, format, contacts
    - This is the canonical metadata schema — already 11 configs exist
 2. **Computes content hash** (SHA-256)
@@ -152,7 +152,7 @@ graph TD
 
 ### Example 1: Track UMLS (data already downloaded)
 
-UMLS parquets already exist at `~/datasets/02-vocabularies/UMLS/parquet/2026AA/` with 56 provenance sidecars.
+UMLS parquets already exist at `https://github.com/cytognosis/datasets/tree/main/02-vocabularies/UMLS/parquet/2026AA` with 56 provenance sidecars.
 
 ```bash
 # 1. SourceDescriptor already exists
@@ -215,7 +215,7 @@ wget https://example.com/test-data.csv -O ~/datasets/11-benchmarks/scratch/test.
 
 ## Where Things Live
 
-### Single Data Lake: `~/datasets/`
+### Single Data Lake: `https://github.com/cytognosis/datasets`
 
 This is the ONE location for all data. It's a git+DVC repo.
 
@@ -243,7 +243,7 @@ This is the ONE location for all data. It's a git+DVC repo.
 
 **What gets DVC-tracked**: Only what you explicitly `dvc add`. Everything else is just local files.
 
-### Processing Engine: `~/repos/cytognosis/cytos/`
+### Processing Engine: `https://github.com/cytognosis/cytos`
 
 This is a CODE repo. It should NOT store data long-term.
 
@@ -253,14 +253,14 @@ This is a CODE repo. It should NOT store data long-term.
 
 | What | Current Location | Proposed Location |
 |---|---|---|
-| KG build outputs (nodes.tsv, edges.tsv) | `cytos/data/kg/` | `~/datasets/03-knowledge-graphs/cytos-kg/` |
-| GWAS processed data | `cytos/data/gwas/` | `~/datasets/06-genotype/gwas/` |
-| HRA-KG third-party assets | `cytos/third_party/hra-kg/` | `~/datasets/05-annotations/hra-kg/` |
+| KG build outputs (nodes.tsv, edges.tsv) | `cytos/data/kg/` | `https://github.com/cytognosis/datasets/tree/main/03-knowledge-graphs/cytos-kg` |
+| GWAS processed data | `cytos/data/gwas/` | `https://github.com/cytognosis/datasets/tree/main/06-genotype/gwas` |
+| HRA-KG third-party assets | `cytos/third_party/hra-kg/` | `https://github.com/cytognosis/datasets/tree/main/05-annotations/hra-kg` |
 | Pipeline definitions (dvc.yaml) | `cytos/dvc.yaml` | **stays** — this is code |
 | Source configs | `cytos/configs/sources/*.yaml` | **stays** — this is metadata schema |
 | Processing scripts | `cytos/scripts/` | **stays** — this is code |
 
-The `dvc.yaml` in cytos would reference `~/datasets/` paths via DVC params for inputs and outputs.
+The `dvc.yaml` in cytos would reference `https://github.com/cytognosis/datasets` paths via DVC params for inputs and outputs.
 
 ### Remote Storage: `gs://cytognosis-data-hub/`
 
@@ -276,12 +276,12 @@ DVC cache is content-addressed (files stored by MD5 hash). No directory structur
 
 ## What About `cytognosis/datasets` GitHub Repo?
 
-**Current state**: I created this repo to hold the `.dvc` files and git metadata for `~/datasets/`. This is where the pointer files, `.gitignore` updates from `dvc add`, and the `.dvc/config` live.
+**Current state**: I created this repo to hold the `.dvc` files and git metadata for `https://github.com/cytognosis/datasets`. This is where the pointer files, `.gitignore` updates from `dvc add`, and the `.dvc/config` live.
 
 **Question for you**: Is this the right place, or should this tracking metadata go elsewhere (e.g., infrastructure repo)?
 
 **Arguments for keeping it separate**:
-- `~/datasets/` has its own lifecycle independent of infrastructure config
+- `https://github.com/cytognosis/datasets` has its own lifecycle independent of infrastructure config
 - Git history tracks exactly which data was tracked/released and when
 - DVC requires a git repo to function — it stores `.dvc` files in git
 
@@ -352,7 +352,7 @@ SourceDescriptor (where it came from)
 
 1. **`cytognosis/datasets` repo**: Keep or merge into infrastructure?
 
-2. **`cytos/data/` cleanup**: Move KG outputs, GWAS, HRA-KG to `~/datasets/`? This is a significant refactor of `dvc.yaml` pipeline paths.
+2. **`cytos/data/` cleanup**: Move KG outputs, GWAS, HRA-KG to `https://github.com/cytognosis/datasets`? This is a significant refactor of `dvc.yaml` pipeline paths.
 
 3. **Container strategy**: Podman (already available, rootless, preferred by stack_manager) vs Docker (also available) vs Toolbx (not installed). Containerfiles should live in the infrastructure repo under `container_framework/`. Should we standardize on Podman?
 

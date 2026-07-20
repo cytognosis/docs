@@ -6,7 +6,7 @@
 > **Audience**: engineers, data scientists
 > **Tags**: `lamindb`, `provenance`, `data-lakehouse`, `single-cell`, `ml`
 
-**Origin**: Imported from `/home/mohammadi/repos/cytognosis/org/plans/research/lamindb-deep-analysis.md` (Antigravity session, 2026-05-24). Revised to cytognosis-doc evaluation template.
+**Origin**: Imported from `https://github.com/cytognosis/org/blob/main/plans/research/lamindb-deep-analysis.md` (Antigravity session, 2026-05-24). Revised to cytognosis-doc evaluation template.
 
 > [!NOTE]
 > **If you only read one section**: §1 (Executive Summary) and §9.3 (Recommended Integration Strategy).

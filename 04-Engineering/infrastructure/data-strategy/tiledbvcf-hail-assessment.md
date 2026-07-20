@@ -6,7 +6,7 @@
 > **Audience**: engineers, computational biologists
 > **Tags**: `tiledb`, `vcf`, `hail`, `genomics`, `storage`, `decision`
 
-**Origin**: Imported from `/home/mohammadi/repos/cytognosis/cytos/docs/checkpoint/chats/antigravity_raw/b591c0f4-734e-4f01-9f22-9a59ec524204/tiledbvcf_hail_assessment.md` (Antigravity session, 2026-05-~24). This document informs Track 9 storage architecture decisions for cytos GenomeKG.
+**Origin**: Imported from `https://github.com/cytognosis/cytos/blob/main/docs/checkpoint/chats/antigravity_raw/b591c0f4-734e-4f01-9f22-9a59ec524204/tiledbvcf_hail_assessment.md` (Antigravity session, 2026-05-~24). This document informs Track 9 storage architecture decisions for cytos GenomeKG.
 
 > [!NOTE]
 > **If you only read one section**: §3 (Decision table) and §7 (Decision summary) give you the full picture in under 5 minutes.

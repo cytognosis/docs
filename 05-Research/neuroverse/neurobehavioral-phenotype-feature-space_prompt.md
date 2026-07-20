@@ -36,10 +36,10 @@ In: the six-layer architecture (BFO/IAO, ICF, MF/MFOEM, HiTOP/RDoC, HPO/SNOMED, 
 ## Source-of-truth files
 - Technical: `05-Research/neuroverse/neurobehavioral-phenotype-feature-space.md`
 - Companion instrument vocabulary: `05-Research/neuroverse/cdisc-qrs-instrument-reference.md`
-- Harmonization reference data: `~/datasets/cytognosis/ontologies/` (disease, clinical-instruments, rdoc)
+- Harmonization reference data: `https://github.com/cytognosis/datasets/tree/main/cytognosis/ontologies` (disease, clinical-instruments, rdoc)
 
 ## Success criteria
 Instruments and diagnoses both project onto the shared axes; a query at any layer returns consistent features; diagnosis reconstruction matches held-out labels above an agreed threshold.
 
 ## Start commands
-Read the technical doc top-to-bottom; then inspect the Neo4j graph with the Cypher templates in its section 8. Reference tables live under `~/datasets/cytognosis/ontologies/`.
+Read the technical doc top-to-bottom; then inspect the Neo4j graph with the Cypher templates in its section 8. Reference tables live under `https://github.com/cytognosis/datasets/tree/main/cytognosis/ontologies`.

@@ -85,7 +85,7 @@ cytos/schemas/domains/sensor/
     └── mcphases_example.yaml    Synthetic mcPHASES, validates clean
 ```
 
-Full schema: [sensor/](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/) · [core.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml) · README (target archived/removed)
+Full schema: [sensor/](https://github.com/cytognosis/cytos/tree/main/schemas/domains/sensor) · [core.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/core.yaml) · README (target archived/removed)
 
 ### Core Entity Model
 
@@ -151,11 +151,11 @@ The Cytos schema aligns with five major standards via profile schemas. Each prof
 
 | Standard | Profile | Coverage | Key Classes |
 |---|---|---|---|
-| **W3C SOSA/SSN** (2017, ext-2023) | [profile_sosa.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_sosa.yaml) | Full | Sensor, Observation, FeatureOfInterest, ObservableProperty, Procedure, Platform, Sample, Result, ObservationCollection, Deployment, System, SystemCapability |
-| **IEEE 1752.1 / Open mHealth** | [profile_ieee1752.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_ieee1752.yaml) | Full | Header, data-point envelope, data-series, heart-rate, BP, body-temp, BMI, BG, SpO2, RR, step-count, physical-activity, sleep-episode, calories, geoposition, ambient-light/sound/temp, pain, mood |
-| **HL7 FHIR R5** | [profile_fhir.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_fhir.yaml) | Full | Observation, Device, DeviceMetric, DeviceUsage, Patient (Subject), Vital Signs profile family |
-| **Bluetooth GHS / IEEE 11073** | [profile_bt_ghs.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_bt_ghs.yaml) | Full | GHSDevice, GHSObservation (all 9 observation classes), measurement-status bitfield, MDC codes |
-| **AWARE Framework** | [profile_aware.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml) | Full | 25 smartphone sensors + ESM, privacy-preserving hashed contacts |
+| **W3C SOSA/SSN** (2017, ext-2023) | [profile_sosa.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_sosa.yaml) | Full | Sensor, Observation, FeatureOfInterest, ObservableProperty, Procedure, Platform, Sample, Result, ObservationCollection, Deployment, System, SystemCapability |
+| **IEEE 1752.1 / Open mHealth** | [profile_ieee1752.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_ieee1752.yaml) | Full | Header, data-point envelope, data-series, heart-rate, BP, body-temp, BMI, BG, SpO2, RR, step-count, physical-activity, sleep-episode, calories, geoposition, ambient-light/sound/temp, pain, mood |
+| **HL7 FHIR R5** | [profile_fhir.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_fhir.yaml) | Full | Observation, Device, DeviceMetric, DeviceUsage, Patient (Subject), Vital Signs profile family |
+| **Bluetooth GHS / IEEE 11073** | [profile_bt_ghs.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_bt_ghs.yaml) | Full | GHSDevice, GHSObservation (all 9 observation classes), measurement-status bitfield, MDC codes |
+| **AWARE Framework** | [profile_aware.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml) | Full | 25 smartphone sensors + ESM, privacy-preserving hashed contacts |
 | **OMOP CDM** | Not yet | Gap | Needed for clinical data warehousing |
 | **Apple HealthKit** | Proposed | Gap | Schema designed, not implemented |
 
@@ -285,11 +285,11 @@ Full USAP specification: [product-implementation.md](../../../00-Inbox/product-i
 
 | Vendor | Profile | Observation Classes | Status |
 |---|---|---|---|
-| **Fitbit** | [vendor_fitbit.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_fitbit.yaml) | 19 classes (HR, HRV, sleep, steps, activity, stress, SpO2, skin temp) | Complete |
-| **Oura Ring** | [vendor_oura.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_oura.yaml) | 8 classes (HR, HRV, skin temp, sleep, activity, readiness, cycle) | Complete |
-| **Dexcom** | [vendor_dexcom.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_dexcom.yaml) | CGM glucose readings | Complete |
-| **Mira** | [vendor_mira.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_mira.yaml) | Fertility hormone analysis | Complete |
-| **Cytoscope** | [vendor_cytoscope.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_cytoscope.yaml) | Cytognosis biosensor (placeholder) | Draft |
+| **Fitbit** | [vendor_fitbit.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/vendors/vendor_fitbit.yaml) | 19 classes (HR, HRV, sleep, steps, activity, stress, SpO2, skin temp) | Complete |
+| **Oura Ring** | [vendor_oura.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/vendors/vendor_oura.yaml) | 8 classes (HR, HRV, skin temp, sleep, activity, readiness, cycle) | Complete |
+| **Dexcom** | [vendor_dexcom.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/vendors/vendor_dexcom.yaml) | CGM glucose readings | Complete |
+| **Mira** | [vendor_mira.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/vendors/vendor_mira.yaml) | Fertility hormone analysis | Complete |
+| **Cytoscope** | [vendor_cytoscope.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/vendors/vendor_cytoscope.yaml) | Cytognosis biosensor (placeholder) | Draft |
 
 Implementation guides:
 - [Implementing Wearables (Oura + Fitbit)](../../yar/sensors/implementing-wearables.md)
@@ -302,7 +302,7 @@ Implementation guides:
 
 Health questionnaires, scales, and ecological momentary assessment prompts are treated as sensors in the Cytos schema. The instrument is a `Procedure` (specifically `SurveyInstrument`), and each completed response is an `Observation` (specifically `SurveyResponse`).
 
-Schema: [selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml)
+Schema: [selfreport.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/selfreport.yaml)
 
 ### Supported Instrument Types
 
@@ -420,11 +420,11 @@ This document consolidates and supersedes the following research outputs:
 
 | File | Content |
 |---|---|
-| [core/core.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml) | Core spine (1,460 lines, 35+ classes) |
-| [core/selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml) | Survey instruments and ESM |
-| [core/context.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/context.yaml) | Mobile context events |
-| [profiles/](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/) | Standard alignment profiles |
-| [vendors/](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/) | Vendor-specific schemas |
+| [core/core.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/core.yaml) | Core spine (1,460 lines, 35+ classes) |
+| [core/selfreport.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/selfreport.yaml) | Survey instruments and ESM |
+| [core/context.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/context.yaml) | Mobile context events |
+| [profiles/](https://github.com/cytognosis/cytos/tree/main/schemas/domains/sensor/profiles) | Standard alignment profiles |
+| [vendors/](https://github.com/cytognosis/cytos/tree/main/schemas/domains/sensor/vendors) | Vendor-specific schemas |
 
 ### Yar Product Docs
 

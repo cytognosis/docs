@@ -120,7 +120,7 @@ DVC is fundamentally a **content-addressed blob transport layer**:
 
 ### 3.2 What Our VFS Already Provides (That DVC Does Not)
 
-Our existing VFS implementation in [src/cytoskeleton/vfs/](file:///home/mohammadi/repos/cytognosis/cytoskeleton/src/cytoskeleton/vfs) already surpasses DVC:
+Our existing VFS implementation in [src/cytoskeleton/vfs/](https://github.com/cytognosis/cytoskeleton/tree/main/src/cytoskeleton/vfs) already surpasses DVC:
 
 | Feature | Our VFS | DVC |
 |---|---|---|
@@ -284,7 +284,7 @@ This `TabularAdapter` is used when:
 
 ### 3B.5 TileDB-NWB and the Format Dispatch Pattern
 
-The current [NeuroStore](file:///home/mohammadi/repos/cytognosis/cytos/src/cytos/db/neuro_store/store.py) (aliased as `TileDBNWB`) manages NWB, BIDS, and TileDB-backed neuroimaging datasets. The key design question is: **how do we handle multiple formats (NWB, BED, EDF, NIFTI, BIDS) without creating separate adapters for each?**
+The current [NeuroStore](https://github.com/cytognosis/cytos/blob/main/src/cytos/db/neuro_store/store.py) (aliased as `TileDBNWB`) manages NWB, BIDS, and TileDB-backed neuroimaging datasets. The key design question is: **how do we handle multiple formats (NWB, BED, EDF, NIFTI, BIDS) without creating separate adapters for each?**
 
 **Solution: Adapter per domain, FormatCodec per file type.**
 

@@ -193,7 +193,7 @@ gcloud storage cp -r gs://cytognosis-data-hub/raw/experiment-1/ gs://cytognosis-
 
 ```bash
 # --- Using cytoinfra CLI (from infrastructure repo) ---
-cd /home/mohammadi/repos/cytognosis/infrastructure
+cd ~/repos/cytognosis/infrastructure
 
 # List registered containers
 uv run cytoinfra container list
@@ -287,7 +287,7 @@ docker compose -f docker-compose.cytohost-v2.yml config --quiet  # Local syntax 
 ### 7. Use Cytoskeleton for Asset Management
 
 ```bash
-cd /home/mohammadi/repos/cytognosis/cytoskeleton
+cd ~/repos/cytognosis/cytoskeleton
 
 # --- Environment Management ---
 uv run cytoskeleton env build         # Build/resolve environment from component graph
@@ -322,7 +322,7 @@ export CYTOSKELETON_GCS_BUCKET=cytognosis-artifacts
 ### 8. Build New Packages with Cytocast
 
 ```bash
-cd /home/mohammadi/repos/cytognosis/cytocast
+cd ~/repos/cytognosis/cytocast
 
 # --- Scaffold a new project using Copier templates ---
 # Cytocast is a Copier template engine — it uses `copier copy` to scaffold projects
@@ -332,21 +332,21 @@ ls profiles/
 
 # Create a new AI/ML project
 copier copy --trust \
-  /home/mohammadi/repos/cytognosis/cytocast/templates \
+  ~/repos/cytognosis/cytocast/templates \
   /path/to/new-project \
   --data project_name=my-project \
   --data profile=ai-llm
 
 # Create a new data science project
 copier copy --trust \
-  /home/mohammadi/repos/cytognosis/cytocast/templates \
+  ~/repos/cytognosis/cytocast/templates \
   /path/to/new-project \
   --data project_name=my-analysis \
   --data profile=data-science
 
 # Create a new Python library
 copier copy --trust \
-  /home/mohammadi/repos/cytognosis/cytocast/templates \
+  ~/repos/cytognosis/cytocast/templates \
   /path/to/new-project \
   --data project_name=my-library \
   --data profile=library
@@ -409,7 +409,7 @@ result = graph.query("MATCH (n) RETURN n LIMIT 10")
 ### 10. cytoinfra CLI Reference
 
 ```bash
-cd /home/mohammadi/repos/cytognosis/infrastructure
+cd ~/repos/cytognosis/infrastructure
 
 # --- Container management ---
 uv run cytoinfra container list                        # List registered containers

@@ -37,7 +37,7 @@ The problem is concentrated in **03-Products/Cytonome/** and **04-Engineering/ya
 
 Three sources fed into the repo in separate passes:
 
-1. **Yar repo** (`~/repos/cytognosis/Yar`) had research files under `docs/research/`
+1. **Yar repo** (`https://github.com/cytognosis/Yar`) had research files under `docs/research/`
 2. **Claude Projects** had a second copy of many of the same research evaluations, named with the EVAL-topic.md convention
 3. **Drafts folder** had additional versions of CAP/Cytoplex architecture docs
 

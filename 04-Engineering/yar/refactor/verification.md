@@ -23,17 +23,17 @@
 
 | Check | Expected | Command |
 |---|---|---|
-| yar/yar_object.yaml in cytoskeleton | yes | `test -f /home/mohammadi/repos/cytognosis/refactor/cytoskeleton/schemas/domains/yar/yar_object.yaml` |
+| yar/yar_object.yaml in cytoskeleton | yes | `test -f https://github.com/cytognosis/refactor/cytoskeleton/schemas/domains/yar/yar_object.yaml` |
 | yar/capture.yaml | yes | (similar) |
 | yar/guard_decision.yaml | yes | (similar) |
 | yar/linkml_anytype_mapping.yaml | yes | (similar) |
-| Codegen produces Pydantic | yes | `ls /home/mohammadi/repos/cytognosis/refactor/cytoskeleton/schemas/codegen/pydantic/yar/*.py` |
+| Codegen produces Pydantic | yes | `ls https://github.com/cytognosis/refactor/cytoskeleton/schemas/codegen/pydantic/yar/*.py` |
 
 ## V3 — CAP TypeScript port
 
 | Check | Expected | Command |
 |---|---|---|
-| @cytognosis/cap package builds | green | `cd /home/mohammadi/repos/cytognosis/refactor/cyto-skills/cap && pnpm build` |
+| @cytognosis/cap package builds | green | `cd https://github.com/cytognosis/refactor/cyto-skills/cap && pnpm build` |
 | Unit tests pass | green | `pnpm test` |
 | Conformance suite: 28/28 PASS per binding | green | `pnpm test:conformance` |
 | Hardening suite: 33/33 PASS | green | `pnpm test:hardening` |
@@ -76,7 +76,7 @@
 
 ```bash
 # Full smoke
-cd /home/mohammadi/repos/cytognosis/refactor/Yar
+cd ~/repos/cytognosis/refactor/Yar
 scripts/run_dev.sh &
 SLEEP_PID=$!
 sleep 10
@@ -100,7 +100,7 @@ kill $SLEEP_PID
 | Yar branch refactor/v2-multi-app-monorepo | yes | `git rev-parse --abbrev-ref HEAD` |
 | Yar v0.2.0-rc1-refactor tag | yes (local) | `git tag --list 'v0.2.0-rc1*'` |
 | cyto-skills v1.0.0-rc1 tag | yes (local) | `cd .../cyto-skills && git tag --list 'v1.0.0-rc1'` |
-| Originals untouched | yes | `cd /home/mohammadi/repos/cytognosis/Yar && git status` |
+| Originals untouched | yes | `cd https://github.com/cytognosis/Yar && git status` |
 
 ## Halt criteria
 

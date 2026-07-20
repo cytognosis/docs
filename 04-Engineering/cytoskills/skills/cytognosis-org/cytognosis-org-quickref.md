@@ -19,7 +19,7 @@
 | **Document naming format** | `[Type]-[Topic]-[Version]-[Date]` (e.g., `Grant-ARPA-H-Specific-Aims-v2-2026-03`). |
 | **Workspace scripts** | Pre-existing Python scripts in `scripts/` that wrap Gmail, Calendar, Drive, Docs, Sheets, Slides, and Chat. Never rewrite auth. |
 | **@cytognosis.org** | The organizational domain. All email addresses are `<function>@cytognosis.org`. |
-| **Infrastructure repo** | Source of truth for all GCP/Cloud Run/DNS decisions (`~/repos/cytognosis/infrastructure`). |
+| **Infrastructure repo** | Source of truth for all GCP/Cloud Run/DNS decisions (`https://github.com/cytognosis/infrastructure`). |
 
 ---
 
@@ -39,16 +39,16 @@
 
 | Repo | Purpose | Local Path |
 |------|---------|------------|
-| `branding` | Design system + skills | `~/repos/cytognosis/branding` |
-| `cytocast` | Copier template engine | `~/repos/cytognosis/cytocast` |
-| `cytoskeleton` | Environment manager | `~/repos/cytognosis/cytoskeleton` |
-| `cytos` | Foundation kernel | `~/repos/cytognosis/cytos` |
-| `cytoverse` | Foundation AI models | `~/repos/cytognosis/cytoverse` |
-| `cytoscope` | Biosensor firmware | `~/repos/cytognosis/cytoscope` |
-| `cytonome` | On-device edge AI | `~/repos/cytognosis/cytonome` |
-| `website` | cytognosis.org public site | `~/repos/cytognosis/website` |
-| `infrastructure` | DNS, Cloud Run, Terraform | `~/repos/cytognosis/infrastructure` |
-| `papers` | LaTeX manuscripts | `~/repos/cytognosis/papers` |
+| `branding` | Design system + skills | `https://github.com/cytognosis/branding` |
+| `cytocast` | Copier template engine | `https://github.com/cytognosis/cytocast` |
+| `cytoskeleton` | Environment manager | `https://github.com/cytognosis/cytoskeleton` |
+| `cytos` | Foundation kernel | `https://github.com/cytognosis/cytos` |
+| `cytoverse` | Foundation AI models | `https://github.com/cytognosis/cytoverse` |
+| `cytoscope` | Biosensor firmware | `https://github.com/cytognosis/cytoscope` |
+| `cytonome` | On-device edge AI | `https://github.com/cytognosis/cytonome` |
+| `website` | cytognosis.org public site | `https://github.com/cytognosis/website` |
+| `infrastructure` | DNS, Cloud Run, Terraform | `https://github.com/cytognosis/infrastructure` |
+| `papers` | LaTeX manuscripts | `https://github.com/cytognosis/papers` |
 
 ---
 

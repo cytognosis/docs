@@ -33,7 +33,7 @@
 - **Live files tracked**: 3,758 (docs home 974; project workspaces 2,784).
 - **Standardized headers**: 286 of 1,805 markdown files (16 percent). The remainder is the reformat runway.
 - **Archived prior locations**: 7,485 across 15 safety archives. Rollback tag: `pre-promotion-2026-07-10`.
-- **Datasets** (parked outside the repos): 190 MB, 251 files at `~/datasets/cytognosis/`.
+- **Datasets** (parked outside the repos): 190 MB, 251 files at `https://github.com/cytognosis/datasets/tree/main/cytognosis`.
 
 **By root (home of record vs project workspaces):**
 
@@ -71,7 +71,7 @@
 
 There are two kinds of place, and one rule:
 
-- **Docs repo = home of record** at `~/repos/cytognosis/docs`, organized into 8 sections (`00-Inbox` ... `07-Design`). Obsidian mirrors this 1:1 and holds the readable twins.
+- **Docs repo = home of record** at `https://github.com/cytognosis/docs`, organized into 8 sections (`00-Inbox` ... `07-Design`). Obsidian mirrors this 1:1 and holds the readable twins.
 - **Project workspaces** at `~/Claude/Projects/*` = where work happens. Each reaches its canonical docs through a `_context/` folder of live shortcuts. **Edit in the repo, never in `_context`.**
 
 ```mermaid

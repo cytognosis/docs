@@ -32,7 +32,7 @@
 ## The rules that keep this identical everywhere
 
 1. **The 8 pillars are the master vocabulary** (`00-Inbox, 01-Strategy, 02-Funding, 03-Products, 04-Engineering, 05-Research, 06-Operations, 07-Design`). Obsidian mirrors them exactly. Claude projects map to pillar slices via `_context/` shortcuts; a project never invents its own taxonomy.
-2. **One home of record** (docs repo) per document; projects hold working drafts only; datasets live in `~/datasets/cytognosis/`.
+2. **One home of record** (docs repo) per document; projects hold working drafts only; datasets live in `https://github.com/cytognosis/datasets/tree/main/cytognosis`.
 3. **A category that exists as a pillar gets its own project when it has active work** (this is why Design moved out of Science and Platform on 2026-07-11).
 4. Tags on docs use the pillar vocabulary plus the two-axis skill ontology for skills only; the platform component taxonomy (Cytoverse/Cytoscope/Cytonome) describes the product, never file locations.
 5. Project folders keep their historical names; THIS TABLE is where name-to-pillar equivalence lives (rename only if Shahin asks; the map makes renames unnecessary).

@@ -205,8 +205,8 @@ Casarotto et al., Cell 2021 (PMID 33606976). Moliner et al., Nat Neurosci 2023 (
 ---
 
 **Related files:**
-- `/home/mohammadi/Claude/Projects/X-Labs/04-research/BDNF_TrkB_Neuroplasticity_Axes_Dossier_2026-06-03.md` (science keystone, contains confidential Section 5)
-- `/home/mohammadi/Claude/Projects/X-Labs/01-strategy/STAGE4_META_STRATEGY_TAXONOMY_2026-06-03.md` (taxonomy anchor)
+- `~/Claude/Projects/X-Labs/04-research/BDNF_TrkB_Neuroplasticity_Axes_Dossier_2026-06-03.md` (science keystone, contains confidential Section 5)
+- `~/Claude/Projects/X-Labs/01-strategy/STAGE4_META_STRATEGY_TAXONOMY_2026-06-03.md` (taxonomy anchor)
 - `docs/cytoverse/cytos/architecture.md` (KG platform architecture)
 - `docs/cytoverse/cytos/module-map-v2.md` (Cytos module status)
 - `docs/cytoverse/cytos/genomic-atlas.md` (genomic subsystem)

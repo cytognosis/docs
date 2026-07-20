@@ -101,7 +101,7 @@ This is a standalone Python package (not a sub-module of `yar`). `yar.cap` bridg
 
 ### 2.4 CAP latency budget
 
-The benchmark file at `cytoplex/docs/benchmarks/cap_v1_latency_mobile_budget.json` has been moved to `~/repos/cytognosis/docs/cytonome/cytoplex/benchmarks/cap_v1_latency_mobile_budget.json` (per the stub left in the repo). The docs location was not yet populated at sweep time.
+The benchmark file at `cytoplex/docs/benchmarks/cap_v1_latency_mobile_budget.json` has been moved to `https://github.com/cytognosis/docs/blob/main/cytonome/cytoplex/benchmarks/cap_v1_latency_mobile_budget.json` (per the stub left in the repo). The docs location was not yet populated at sweep time.
 
 ---
 

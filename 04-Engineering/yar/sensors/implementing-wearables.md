@@ -107,12 +107,12 @@ Each wearable observation flows through the Cytos schema, gets normalized to com
 
 | Schema | Path | Purpose |
 |--------|------|---------|
-| Core | [core.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml) | Device, Sensor, Observation, Result, UnitValue, TimeFrame |
-| Oura vendor | [vendor_oura.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_oura.yaml) | OuraDevice, OuraHeartRate, OuraHRV, OuraSleepSession, etc. |
-| Fitbit vendor | [vendor_fitbit.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_fitbit.yaml) | FitbitDevice, FitbitHeartRate, FitbitHRVDetails, FitbitSleepSession, etc. |
-| IEEE 1752 profile | [profile_ieee1752.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_ieee1752.yaml) | OMH body schemas (heart-rate, sleep-episode, step-count, etc.) |
-| FHIR R5 profile | [profile_fhir.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_fhir.yaml) | FHIRObservation, VitalsHeartRate, VitalsOxygenSaturation |
-| Umbrella | [sensor.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/sensor.yaml) | Imports all core, profiles, and vendor schemas |
+| Core | [core.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/core.yaml) | Device, Sensor, Observation, Result, UnitValue, TimeFrame |
+| Oura vendor | [vendor_oura.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/vendors/vendor_oura.yaml) | OuraDevice, OuraHeartRate, OuraHRV, OuraSleepSession, etc. |
+| Fitbit vendor | [vendor_fitbit.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/vendors/vendor_fitbit.yaml) | FitbitDevice, FitbitHeartRate, FitbitHRVDetails, FitbitSleepSession, etc. |
+| IEEE 1752 profile | [profile_ieee1752.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_ieee1752.yaml) | OMH body schemas (heart-rate, sleep-episode, step-count, etc.) |
+| FHIR R5 profile | [profile_fhir.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_fhir.yaml) | FHIRObservation, VitalsHeartRate, VitalsOxygenSaturation |
+| Umbrella | [sensor.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/sensor.yaml) | Imports all core, profiles, and vendor schemas |
 
 ---
 
@@ -1937,7 +1937,7 @@ graph LR
 | `HKQuantityTypeIdentifierAppleWalkingSteadiness` | vendor-specific | N/A |
 | `HKQuantityTypeIdentifierOxygenSaturation` | `sensor:prop/oxygen-saturation` | 59408-5 |
 
-A vendor profile schema (`vendor_apple.yaml`) would subclass `Device` with `device_type: consumer_wearable` and `device_category: wrist_worn`, following the same pattern as [vendor_fitbit.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/vendor_fitbit.yaml).
+A vendor profile schema (`vendor_apple.yaml`) would subclass `Device` with `device_type: consumer_wearable` and `device_category: wrist_worn`, following the same pattern as [vendor_fitbit.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/vendors/vendor_fitbit.yaml).
 
 ### Google Health Connect (Android)
 
@@ -1996,7 +1996,7 @@ classes:
 
 2. **Registry entries** (YAML instances): Add device models and observable properties to the registries
 
-The umbrella [sensor.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/sensor.yaml) imports the new vendor file, and the adapter class implements the same `SensorProtocol` interface.
+The umbrella [sensor.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/sensor.yaml) imports the new vendor file, and the adapter class implements the same `SensorProtocol` interface.
 
 ---
 
@@ -2107,7 +2107,7 @@ The Brain Weather system does not average these scores. Instead, it treats them 
 
 | Document | Path |
 |----------|------|
-| Full Cytos sensor schema | [core.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml) |
+| Full Cytos sensor schema | [core.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/core.yaml) |
 | Sensor architecture overview | [sensor-architecture.md](../../../03-Products/Cytonome/Yar/sensor-architecture.md) |
 | Interoperability standards | [interop-standards.md](../../cytos/sensing-schema/interop-standards.md) |
 | Sensor taxonomy | [sensor-taxonomy.md](../../cytos/sensing-schema/sensor-taxonomy.md) |

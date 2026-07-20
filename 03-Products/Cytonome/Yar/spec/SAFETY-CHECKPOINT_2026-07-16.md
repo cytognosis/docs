@@ -23,7 +23,7 @@ Decision D5: build the full CAP privacy-boundary and crisis-detection modules **
 
 ### 1.1 What is live
 
-- **`CapLiteGuard`**: a deterministic, 22-term English/Farsi keyword-match gate. Ported today from the legacy Yar repo (`/home/mohammadi/repos/cytognosis/Yar/src/cap/`) into the YC Tauri base at `/home/mohammadi/repos/cytognosis/yar_revisions/yar-code-20260705-2354/backend/cap/`, commit `068b10d` ("feat(safety): port CapLiteGuard pre-response gate from legacy Yar repo").
+- **`CapLiteGuard`**: a deterministic, 22-term English/Farsi keyword-match gate. Ported today from the legacy Yar repo (`https://github.com/cytognosis/Yar/tree/main/src/cap`) into the YC Tauri base at `https://github.com/cytognosis/yar_revisions/yar-code-20260705-2354/backend/cap/`, commit `068b10d` ("feat(safety): port CapLiteGuard pre-response gate from legacy Yar repo").
 - **Wiring**: `backend/assistant/safety.py` wraps `CapLiteGuard` behind `evaluate_message()`, `is_denied()`, `gate_reason()`, `gate_message()`. `backend/assistant/views.py` calls this as a **pre-response gate** in both `ChatView.post()` and `ExtractTasksView.post()`, before any provider/LLM call. On a `deny` decision, the view short-circuits and returns the guard's own refusal message; `get_provider()` is never invoked.
 - **Crisis message content**: on a crisis-term match, the guard's refusal text points to **1480 (Iran Social Emergency)** and **findahelpline.com**. This is a live, shipped product decision, not a proposal.
 
@@ -71,7 +71,7 @@ In short: crisis (English + Farsi), diagnosis requests, and benign pass-through 
 
 ### 2.3 Cytoplex reuse map (do not rebuild these)
 
-Four **Production** files already exist in `/home/mohammadi/repos/cytognosis/cytoplex/src/cytoplex/runtime/` and must be reused by the full implementation:
+Four **Production** files already exist in `https://github.com/cytognosis/cytoplex/tree/main/src/cytoplex/runtime` and must be reused by the full implementation:
 
 | File | Role |
 |---|---|
@@ -125,5 +125,5 @@ Per the Yar feature catalog, the following features are gated on this workstream
 ## Related documents
 
 - [`privacy-boundary-spec.md`](./privacy-boundary-spec.md), [`MODULE-crisis-detection.md`](./MODULE-crisis-detection.md) -- the two specs this checkpoint closes out; depends_on both.
-- CAP code path: `~/repos/cytognosis/yar_revisions/yar-code-20260705-2354/backend/cap/` (CapLiteGuard implementation this checkpoint governs).
+- CAP code path: `https://github.com/cytognosis/yar_revisions/yar-code-20260705-2354/backend/cap/` (CapLiteGuard implementation this checkpoint governs).
 - [`../research/yar-feature-research-FINAL-simplified_2026-07-16.md`](../research/yar-feature-research-FINAL-simplified_2026-07-16.md) -- notes the 8 features gated on this checkpoint's two dependencies.

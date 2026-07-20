@@ -69,7 +69,7 @@ flowchart TB
 ## 3. Placement procedure (answers "where does X go")
 
 1. **Personal?** -> Personal project (never the docs repo).
-2. **Data or large binary?** -> `~/datasets/cytognosis/<area>/`.
+2. **Data or large binary?** -> `https://github.com/cytognosis/datasets/tree/main/cytognosis<area>/`.
 3. **Code?** -> its repo `src/`; governed by a spec (spec-guard enforces).
 4. **Spec?** -> owning repo `specs/NNN-slug/` + row in SPEC-REGISTRY + one board card (pointers only). Deltas in `specs/NNN/changes/`.
 5. **Design?** tokens/components/template -> branding repo (single upstream: published Claude Design v11.2.1, never hand-edit); knowledge/track plans -> `07-Design`; source exports/zips -> datasets store.

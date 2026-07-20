@@ -137,7 +137,7 @@ def load_dvc_data(dvc_path: str, git_rev: str = "main") -> str:
     # dvc.api.get_url resolves the .dvc pointer to the actual GCS/S3 URL
     data_url = dvc.api.get_url(
         path=dvc_path,
-        repo="/home/mohammadi/repos/cytognosis/cytos",
+        repo="~/repos/cytognosis/cytos",
         rev=git_rev,
     )
     return data_url

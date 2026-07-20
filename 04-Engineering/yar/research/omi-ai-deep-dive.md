@@ -10,7 +10,7 @@
 > **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 
 > **Owner**: Shahin Mohammadi · **Created**: 2026-05-30 · **Status**: DRAFT
-> **Canonical location**: `~/repos/cytognosis/docs/cytonome/yar/research/omi-ai-deep-dive.md`
+> **Canonical location**: `https://github.com/cytognosis/docs/blob/main/cytonome/yar/research/omi-ai-deep-dive.md`
 > **Purpose**: Exhaustive feature analysis of OMI AI wearable for Cytonome/Yar feature prioritization, with focus on ambient capture, open-source architecture, and neurodivergent applicability
 
 ---

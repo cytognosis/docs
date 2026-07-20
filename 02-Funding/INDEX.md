@@ -37,6 +37,6 @@ graph TD
 
 ## Engines and data (outside this repo)
 
-- **Render engine + schema mirror:** `~/repos/cytognosis/cytos/src/cytos/scholarly/funding/` (parser, extractor, harmonizer, generator, render). Sync rule: [`reusable-blocks/SLOT_LIBRARY_CANONICAL_AND_SYNC.md`](reusable-blocks/SLOT_LIBRARY_CANONICAL_AND_SYNC.md).
-- **Raw parsed solicitations:** `~/repos/cytognosis/cytos/data/staged/grants/`.
-- **Primary data + ontologies:** `~/datasets/cytognosis/`.
+- **Render engine + schema mirror:** `https://github.com/cytognosis/cytos/tree/main/src/cytos/scholarly/funding` (parser, extractor, harmonizer, generator, render). Sync rule: [`reusable-blocks/SLOT_LIBRARY_CANONICAL_AND_SYNC.md`](reusable-blocks/SLOT_LIBRARY_CANONICAL_AND_SYNC.md).
+- **Raw parsed solicitations:** `https://github.com/cytognosis/cytos/tree/main/data/staged/grants`.
+- **Primary data + ontologies:** `https://github.com/cytognosis/datasets/tree/main/cytognosis`.

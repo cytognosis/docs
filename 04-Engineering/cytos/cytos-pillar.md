@@ -17,7 +17,7 @@
 
 Cytos owns the **platform and engineering code** and the **Cytoverse product framing**. The science-foundation narrative (BDNF axes, factorized-PRS, bipolar geometry, micro-to-meso bridge) belongs to **Neuroverse** (`05-Research/neuroverse`) and is linked, not authored, from Cytos docs. The interface repo `cytoexplorer` is part of the pillar identity but is not restructured in this consolidation wave.
 
-## Repository layout (`~/repos/cytognosis/cytos`)
+## Repository layout (`https://github.com/cytognosis/cytos`)
 
 | Path | Role | Git status |
 |---|---|---|

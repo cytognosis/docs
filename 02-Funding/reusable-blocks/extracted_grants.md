@@ -7,7 +7,7 @@
 > **Tags**: `funding`
 > **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 
-Source files are in `/home/mohammadi/Documents/Strategy/Grants/`. Raw text/markdown dumps are in `./raw/` alongside this file. This document is the authoritative, exhaustive extraction of every prompt, limit, and phase-specific requirement across the three opportunities. Downstream template generation depends on it.
+Source files are in `~/Documents/Strategy/Grants/`. Raw text/markdown dumps are in `./raw/` alongside this file. This document is the authoritative, exhaustive extraction of every prompt, limit, and phase-specific requirement across the three opportunities. Downstream template generation depends on it.
 
 Conventions:
 - "Required" vs "Optional" reflects the source document wording.

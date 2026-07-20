@@ -40,7 +40,7 @@ reading_time: "~25 minutes"
 
 ## 1. Yar Revision Assessment
 
-**Source:** `~/repos/cytognosis/yar_revisions/yar-code-20260705-2354/`
+**Source:** `https://github.com/cytognosis/yar_revisions/yar-code-20260705-2354/`
 
 ### 1.1 Architecture Overview
 
@@ -117,7 +117,7 @@ From `REQUIREMENTS_COVERAGE.md`:
 
 ## 2. Cytoplex (CAP) Assessment
 
-**Source:** `~/repos/cytognosis/cytoplex/`
+**Source:** `https://github.com/cytognosis/cytoplex`
 
 ### 2.1 What CAP Is
 
@@ -375,7 +375,7 @@ gantt
 
 #### Phase 1: Foundation (1 week)
 
-1. **Adopt Yar revision as the canonical Yar repo.** The `yar-code-20260705-2354` directory becomes the new `main` branch of `~/repos/cytognosis/Yar/`.
+1. **Adopt Yar revision as the canonical Yar repo.** The `yar-code-20260705-2354` directory becomes the new `main` branch of `https://github.com/cytognosis/Yar`.
 2. **Add Cytoplex as a pip dependency** in `backend/requirements.txt`. Import `cap_protocol` in Django.
 3. **Create `cap_yar` profile** in Cytoplex: a Yar-specific ND profile inheriting from the Therapist/Supervisor scenario with Yar-specific constraints (non-diagnostic, non-clinical language, person-first).
 
@@ -473,7 +473,7 @@ gantt
 
 ### 8.1 Redirect Stubs in `Yar/docs/` (46 files)
 
-The `~/repos/cytognosis/Yar/docs/` directory contains 46 files, most of which are substantive docs (not redirect stubs). These need updating:
+The `https://github.com/cytognosis/Yar/tree/main/docs` directory contains 46 files, most of which are substantive docs (not redirect stubs). These need updating:
 
 | Category | Count | Action |
 |----------|:-----:|--------|

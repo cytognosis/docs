@@ -9,15 +9,15 @@
 
 > **Status:** Active · **Date:** 2026-07-01 · **Pillar:** Cytoverse (The Map) · **Owner:** Cytos consolidation agent · **Reading time:** ~4 min
 
-**If you only read one thing:** This layer is the canonical home for **Cytos engineering and platform** docs. Cytos is the data-and-modeling substrate: LinkML schemas, DVC-managed ingestion, knowledge-graph construction (GenomeKG), multimodal modeling, and the sensing schema. The code lives in `~/repos/cytognosis/cytos`; the schema outputs in `cytos/artifacts/` are **generated** and gitignored (regenerate with `nox -s schema_generate`). Research narrative (the science foundation) belongs to **Neuroverse** (`05-Research/neuroverse`), not here.
+**If you only read one thing:** This layer is the canonical home for **Cytos engineering and platform** docs. Cytos is the data-and-modeling substrate: LinkML schemas, DVC-managed ingestion, knowledge-graph construction (GenomeKG), multimodal modeling, and the sensing schema. The code lives in `https://github.com/cytognosis/cytos`; the schema outputs in `cytos/artifacts/` are **generated** and gitignored (regenerate with `nox -s schema_generate`). Research narrative (the science foundation) belongs to **Neuroverse** (`05-Research/neuroverse`), not here.
 
 ## What Cytos is
 
 | | |
 |---|---|
 | **Identity** | The Map: the engineering platform under the Cytoverse pillar |
-| **Code repo** | `~/repos/cytognosis/cytos` (LinkML schemas, KG, models, DVC data) |
-| **Sibling repo** | `~/repos/cytognosis/cytoexplorer` (interface layer; not restructured this wave) |
+| **Code repo** | `https://github.com/cytognosis/cytos` (LinkML schemas, KG, models, DVC data) |
+| **Sibling repo** | `https://github.com/cytognosis/cytoexplorer` (interface layer; not restructured this wave) |
 | **Boundary** | Cytos owns platform/engineering code; **Neuroverse** owns Research and the science foundation. The Cytoverse product framing lives in `03-Products/Cytoverse`. |
 
 ## Canonical doc map

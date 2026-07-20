@@ -85,7 +85,7 @@
 
 | Deliverable | Evidence | Status |
 |---|---|---|
-| 7A. GO download | `~/datasets/01-ontologies/owl/go.owl` (124MB) | ✅ Present |
+| 7A. GO download | `https://github.com/cytognosis/datasets/tree/main/01-ontologies/owl/go.owl` (124MB) | ✅ Present |
 | 7A. DVC track | `01-ontologies/owl/go.owl.dvc` committed | ✅ datasets#1 |
 | 7A. DVC push | 124MB → GCS in 26s at 4.94 MB/s | ✅ Task log |
 | 7A. DVC pull | Delete + restore verified | ✅ Task log |

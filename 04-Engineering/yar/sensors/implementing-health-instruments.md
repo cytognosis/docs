@@ -2,7 +2,7 @@
 
 > **Status**: v0.1 (Design Specification)
 > **Date**: 2026-05-30
-> **Schema**: [selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml) · [core.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml)
+> **Schema**: [selfreport.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/selfreport.yaml) · [core.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/core.yaml)
 > **Scope**: Standardized health questionnaires, clinical scales, and ecological momentary assessment (EMA) instruments as first-class sensors in the Cytonome platform
 
 ---
@@ -23,7 +23,7 @@ Standardized health instruments bring three critical properties to Cytonome:
 
 In the Cytos schema, a PHQ-9 questionnaire is a measurement device, the same way an Oura Ring is a measurement device. Both produce structured `Observation` instances from a defined `Procedure`. The only difference is the transducer: one converts photoplethysmography into heart rate values, the other converts human self-reflection into ordinal Likert scores.
 
-This is not a metaphor. The [Cytos sensor core schema](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml) defines `Procedure` (line 504) as "workflow, protocol, algorithm, or instrument-specific method used to obtain an Observation." A validated questionnaire is exactly that.
+This is not a metaphor. The [Cytos sensor core schema](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/core.yaml) defines `Procedure` (line 504) as "workflow, protocol, algorithm, or instrument-specific method used to obtain an Observation." A validated questionnaire is exactly that.
 
 | Concept | Wearable Sensor | Self-Report Instrument |
 |---|---|---|
@@ -70,7 +70,7 @@ flowchart TB
     style State fill:#5145A8,color:#fff
 ```
 
-The Cytos [selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml) schema maps these instruments to the sensor core:
+The Cytos [selfreport.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/selfreport.yaml) schema maps these instruments to the sensor core:
 
 - `SurveyInstrument` extends `Procedure` (the measurement protocol)
 - `SurveyResponse` extends `Observation` (the measurement result)
@@ -1681,7 +1681,7 @@ SurveyInstrument:
 
 ### 2.8 Ecological Momentary Assessment (Custom)
 
-Custom EMA/ESM instruments leverage the `ESMPrompt` class from the [selfreport schema](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml#L151-L166), which extends `SurveyInstrument` with trigger logic.
+Custom EMA/ESM instruments leverage the `ESMPrompt` class from the [selfreport schema](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/selfreport.yaml#L151-L166), which extends `SurveyInstrument` with trigger logic.
 
 #### 2.8.1 Daily Mood Check-in
 
@@ -1827,7 +1827,7 @@ This section describes the general patterns for implementing any health instrume
 
 ### 3.1 Instrument Definition Pattern
 
-Every instrument follows this pattern in [selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml):
+Every instrument follows this pattern in [selfreport.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/selfreport.yaml):
 
 ```mermaid
 classDiagram
@@ -2412,8 +2412,8 @@ This implementation guide provides the foundation for self-report sensing in Cyt
 
 | Resource | Path | Description |
 |---|---|---|
-| **Cytos Self-Report Schema** | [selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml) | LinkML schema defining SurveyInstrument, SurveyResponse, ESMPrompt |
-| **Cytos Sensor Core Schema** | [core.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml) | Base classes (Observation, Procedure, Device, Subject) |
+| **Cytos Self-Report Schema** | [selfreport.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/selfreport.yaml) | LinkML schema defining SurveyInstrument, SurveyResponse, ESMPrompt |
+| **Cytos Sensor Core Schema** | [core.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/core.yaml) | Base classes (Observation, Procedure, Device, Subject) |
 | **Sensor Architecture** | [sensor-architecture.md](../../../03-Products/Cytonome/Yar/sensor-architecture.md) | Universal sensor protocol and plugin system |
 | **Interoperability Standards** | [interop-standards.md](../../cytos/sensing-schema/interop-standards.md) | FHIR, IEEE 1752, SOSA/SSN alignment details |
 | **Sensor Taxonomy** | [sensor-taxonomy.md](../../cytos/sensing-schema/sensor-taxonomy.md) | Classification of all sensor types in Cytonome |

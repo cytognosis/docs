@@ -46,6 +46,6 @@
 - Old MVP docs, old steering docs, the Flutter recommendation: **removed 2026-07-19**, live in git history.
 - Sensor science: **Cytoscope project**, not here.
 - Tool evaluations (EVAL-*): `04-Engineering/yar/research/`.
-- Code: `~/repos/cytognosis/Yar`.
+- Code: `https://github.com/cytognosis/Yar`.
 
 **Feeling lost?** Open [`README.md`](./README.md) and use the Start-here table.

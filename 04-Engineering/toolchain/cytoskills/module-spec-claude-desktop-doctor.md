@@ -214,7 +214,7 @@ All functions use defensive error handling:
 
 | Configuration | Source | Default |
 |--------------|--------|---------|
-| Home directory | `process.env.HOME` | `/home/mohammadi` |
+| Home directory | `process.env.HOME` | `/home/<user>` |
 | Claude config dir | Derived from HOME | `~/.config/Claude/` |
 | Launcher path | Hardcoded | `~/.local/bin/claude` |
 | SDK search dirs | Hardcoded | `claude-code/`, `claude-code-vm/` |

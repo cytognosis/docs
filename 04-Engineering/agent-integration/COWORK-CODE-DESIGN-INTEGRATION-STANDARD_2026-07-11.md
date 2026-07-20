@@ -36,7 +36,7 @@
 4. **Design wired** via `/design-sync` + the hosted Design MCP (user scope) + `/design-login`; use UI handoff for Design -> Code.
 5. **Claude-in-Chrome connected** as the universal fallback actuator (Design, Canva, Figma, any logged-in web app).
 6. **Folders pre-trusted** in `~/.claude.json` (`projects[path].hasTrustDialogAccepted=true`) to kill the "folder isn't trusted" gate (done 2026-07-11 for all repos + projects). CAVEAT: a trust-bypass advisory (CVE-2026-33068) exists; this is a convenience on our own machine, re-check advisories before treating pre-seeding as policy.
-7. **Shared working directory** (`~/repos/cytognosis/*`, `~/Claude/Projects/*`, docs repo) across Cowork + Code; **git worktrees** when both might edit one repo at once.
+7. **Shared working directory** (`https://github.com/cytognosis*`, `~/Claude/Projects/*`, docs repo) across Cowork + Code; **git worktrees** when both might edit one repo at once.
 8. **host-terminal MCP** kept available for unrestricted host git/destructive/sudo ops (never route those through the sandbox).
 
 ## 4. Auth and the headless 401 (fix)

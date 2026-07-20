@@ -16,7 +16,7 @@
 
 ## 1. What Is Cytos?
 
-Cytos (`/home/mohammadi/repos/cytognosis/cytos`) is the **master Cytognosis Python package** — the
+Cytos (`https://github.com/cytognosis/cytos`) is the **master Cytognosis Python package** — the
 data engineering, knowledge graph, and genomic infrastructure layer for the Cytognosis Foundation
 platform ("GPS for Health"). It is **not** a user-facing application. It is the substrate that
 produces data products consumed by:
@@ -125,7 +125,7 @@ All in `src/cytos/genomics/`:
 - `interface.py` — Native graphLD library bridge (`load_block_precision`, `align_block_sumstats`, `run_graphreml`, `compute_blup_scores`, `list_blocks`, `load_chromosome_blocks`)
 
 **Key data fact:** 1,360 UKBB LDGM blocks ingested (all 22 autosomes, EUR ancestry).
-DuckDB index at `/home/mohammadi/datasets/06-genotype/ldgm/index.duckdb`.
+DuckDB index at `https://github.com/cytognosis/datasets/tree/main/06-genotype/ldgm/index.duckdb`.
 graphLD package installed editable from `third_party/graphld/`.
 
 #### TileDB-VCF Stores ✅
@@ -153,7 +153,7 @@ Running at `bolt://localhost:7687` (auth: `neo4j`/`cytognosis2026`):
 - Full `SchemaGenerator` class **not yet implemented**
 
 #### SO OBO ✅
-- `so.obo` at `/home/mohammadi/datasets/04-identifiers/ontologies/so.obo`
+- `so.obo` at `https://github.com/cytognosis/datasets/tree/main/04-identifiers/ontologies/so.obo`
 - Upstream parse bugs fixed (backslash xrefs + PMID spacing) via regex sanitizer in `so.py`
 - 2,615 terms, 2,510 is_a edges
 - 18-test hierarchy suite: all pass
@@ -285,7 +285,7 @@ with d.session() as s:
 docker ps --filter name=cytos-surrealdb
 
 # Run genomics test suite
-cd /home/mohammadi/repos/cytognosis/cytos
+cd ~/repos/cytognosis/cytos
 NEO4J_PASSWORD=cytognosis2026 python3 -m pytest tests/genomics/ -q
 ```
 
@@ -301,17 +301,17 @@ NEO4J_PASSWORD=cytognosis2026 python3 -m pytest tests/genomics/ -q
 
 | Asset | Path |
 |-------|------|
-| LDGM DuckDB index | `/home/mohammadi/datasets/06-genotype/ldgm/index.duckdb` |
-| SO OBO ontology | `/home/mohammadi/datasets/04-identifiers/ontologies/so.obo` |
-| Shahin WGS VCF | `/home/mohammadi/datasets/06-genotype/personal/Shahin/NG1CNUL31H.mm2.sortdup.bqsr.hc.vcf.gz` |
-| Shahin CRAM | `/home/mohammadi/datasets/06-genotype/personal/Shahin/NG1CNUL31H.mm2.sortdup.bqsr.cram` |
-| Olivia SNP VCF | `/home/mohammadi/datasets/06-genotype/personal/Olivia/` (3 VCF types) |
-| PEC WGS VCF | `/home/mohammadi/datasets/06-genotype/cohort/PEC/brainSCOPE_PEC_sample_genotypes_no_rna.vcf.gz` |
-| PEC RNA VCF | `/home/mohammadi/datasets/08-neuroimaging/PEC/synapse/genotype/WGS-Derived-ImputedGenotypes/` |
-| PGC GWAS files | `/home/mohammadi/repos/cytognosis/cytos/data/gwas/pgc/` (14 files) |
-| GWAS Catalog files | `/home/mohammadi/repos/cytognosis/cytos/data/gwas/gwas_catalog/` (SCZ, BIP, MDD) |
-| graphLD third-party | `/home/mohammadi/repos/cytognosis/cytos/third_party/graphld/` |
-| GENCODE v47 GTF | `/home/mohammadi/datasets/06-genotype/reference/gencode.v47.annotation.gtf.gz` |
+| LDGM DuckDB index | `https://github.com/cytognosis/datasets/tree/main/06-genotype/ldgm/index.duckdb` |
+| SO OBO ontology | `https://github.com/cytognosis/datasets/tree/main/04-identifiers/ontologies/so.obo` |
+| Shahin WGS VCF | `https://github.com/cytognosis/datasets/tree/main/06-genotype/personal/Shahin/NG1CNUL31H.mm2.sortdup.bqsr.hc.vcf.gz` |
+| Shahin CRAM | `https://github.com/cytognosis/datasets/tree/main/06-genotype/personal/Shahin/NG1CNUL31H.mm2.sortdup.bqsr.cram` |
+| Olivia SNP VCF | `https://github.com/cytognosis/datasets/tree/main/06-genotype/personal/Olivia` (3 VCF types) |
+| PEC WGS VCF | `https://github.com/cytognosis/datasets/tree/main/06-genotype/cohort/PEC/brainSCOPE_PEC_sample_genotypes_no_rna.vcf.gz` |
+| PEC RNA VCF | `https://github.com/cytognosis/datasets/tree/main/08-neuroimaging/PEC/synapse/genotype/WGS-Derived-ImputedGenotypes` |
+| PGC GWAS files | `https://github.com/cytognosis/cytos/tree/main/data/gwas/pgc` (14 files) |
+| GWAS Catalog files | `https://github.com/cytognosis/cytos/tree/main/data/gwas/gwas_catalog` (SCZ, BIP, MDD) |
+| graphLD third-party | `https://github.com/cytognosis/cytos/tree/main/third_party/graphld` |
+| GENCODE v47 GTF | `https://github.com/cytognosis/datasets/tree/main/06-genotype/reference/gencode.v47.annotation.gtf.gz` |
 
 ---
 
@@ -352,9 +352,9 @@ cadd634  feat(genomics): GenomeKG foundation modules
 
 | Repo | Path | Relevance |
 |------|------|-----------|
-| `cytoskeleton` | `~/repos/cytognosis/cytoskeleton` | Environment hierarchy; `schemas/` migration target |
-| `cyto-skills` | `~/repos/cytognosis/cytoskills` | Agent skill system; schema taxonomy push target |
-| `agents` | `~/repos/cytognosis/agents` | Skill definitions + MEMORY.md |
+| `cytoskeleton` | `https://github.com/cytognosis/cytoskeleton` | Environment hierarchy; `schemas/` migration target |
+| `cyto-skills` | `https://github.com/cytognosis/cytoskills` | Agent skill system; schema taxonomy push target |
+| `agents` | `https://github.com/cytognosis/agents` | Skill definitions + MEMORY.md |
 | `graphld` | `third_party/graphld/` | LDGM native library (editable install) |
 
 ---

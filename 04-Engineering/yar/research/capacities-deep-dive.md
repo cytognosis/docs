@@ -10,7 +10,7 @@
 > **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 
 > **Owner**: Shahin Mohammadi · **Created**: 2026-05-24 · **Status**: DRAFT
-> **Canonical location**: `~/repos/cytognosis/org/plans/research/capacities-deep-dive.md`
+> **Canonical location**: `https://github.com/cytognosis/org/blob/main/plans/research/capacities-deep-dive.md`
 > **Purpose**: Exhaustive feature analysis of Capacities.io for Cytonome/Yar feature prioritization
 
 ---

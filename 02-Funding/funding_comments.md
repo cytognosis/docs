@@ -5,7 +5,7 @@
 > **Tags**: `funding`
 > **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 
-* [Biswas Fast Grants](https://www.biswasfamilyfoundation.org/science/fast-grants): Perfect fit, should prepair/apply now! Template now saved as /home/mohammadi/Claude/Projects/Grants/Biswas Family Foundation Fast Grant.md
+* [Biswas Fast Grants](https://www.biswasfamilyfoundation.org/science/fast-grants): Perfect fit, should prepair/apply now! Template now saved as ~/Claude/Projects/Grants/Biswas Family Foundation Fast Grant.md
 * Emergent Ventures is probably a no (primarily in archeology in their application form)
 * https://www.ataibeckley.com/our-work/patient-impact is a maybe for the “**Ecosystem Innovation & Independent Research**” area/category
   * Mission Statement

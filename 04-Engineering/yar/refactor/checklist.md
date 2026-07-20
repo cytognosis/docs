@@ -6,22 +6,22 @@
 
 # 07 — Yar + CAP — Execution Checklist
 
-Sandbox: `/home/mohammadi/repos/cytognosis/refactor/Yar/`. Also touches `/refactor/cyto-skills/cap/` and `/refactor/cytoskeleton/schemas/domains/yar/`.
+Sandbox: `https://github.com/cytognosis/refactor/Yar/`. Also touches `/refactor/cyto-skills/cap/` and `/refactor/cytoskeleton/schemas/domains/yar/`.
 
 ## 1. Setup
 
 ### 1.1 Branch in Yar
 ```bash
-cd /home/mohammadi/repos/cytognosis/refactor/Yar
+cd ~/repos/cytognosis/refactor/Yar
 git fetch upstream
 git checkout -b refactor/v2-multi-app-monorepo upstream/firstVersion
 ```
 
 ### 1.2 Verify prerequisites
 ```bash
-test -d /home/mohammadi/repos/cytognosis/refactor/cyto-skills/cap && echo OK cap dir
-test -d /home/mohammadi/repos/cytognosis/refactor/cytoskeleton/schemas/domains && echo OK schemas dir
-ls /home/mohammadi/repos/cytognosis/refactor/cytocast/profiles/yar-*.yaml
+test -d ~/repos/cytognosis/refactor/cyto-skills/cap && echo OK cap dir
+test -d ~/repos/cytognosis/refactor/cytoskeleton/schemas/domains && echo OK schemas dir
+ls ~/repos/cytognosis/refactor/cytocast/profiles/yar-*.yaml
 ```
 
 ### 1.3 Setup mise + toolchains
@@ -137,17 +137,17 @@ git commit -m "feat(plan-phase-7-step-3): add cytoskeleton + cyto-skills submodu
 
 ### 4.1 Convert JSON Schemas to LinkML
 ```bash
-SCRIPTS=/home/mohammadi/Documents/Cytognosis/Plans/design/07_yar/03_scripts
+SCRIPTS=~/Documents/Cytognosis/Plans/design/07_yar/03_scripts
 python $SCRIPTS/jsonschema_to_linkml.py \
-  --source /home/mohammadi/repos/cytognosis/refactor/Yar/schemas/yar_object.schema.json \
-  --output /home/mohammadi/repos/cytognosis/refactor/cytoskeleton/schemas/domains/yar/yar_object.yaml \
+  --source ~/repos/cytognosis/refactor/Yar/schemas/yar_object.schema.json \
+  --output ~/repos/cytognosis/refactor/cytoskeleton/schemas/domains/yar/yar_object.yaml \
   --domain yar
 # Repeat for capture.schema.json, guard_decision.schema.json, linkml_anytype_mapping.schema.json
 ```
 
 ### 4.2 Validate in cytoskeleton
 ```bash
-cd /home/mohammadi/repos/cytognosis/refactor/cytoskeleton
+cd ~/repos/cytognosis/refactor/cytoskeleton
 nox -s schemas_validate
 nox -s schemas_codegen
 ```
@@ -161,7 +161,7 @@ git commit -m "feat(plan-phase-7-step-4): add Yar LinkML schemas (migrated from 
 
 ### 4.4 Replace Yar schemas/ with reference
 ```bash
-cd /home/mohammadi/repos/cytognosis/refactor/Yar
+cd ~/repos/cytognosis/refactor/Yar
 git rm -rf schemas/
 ln -s external/cytoskeleton/schemas/domains/yar schemas
 git add schemas
@@ -172,24 +172,24 @@ git commit -m "refactor(plan-phase-7-step-4): migrate Yar schemas to cytoskeleto
 
 ### 5.1 Preserve Python reference
 ```bash
-cd /home/mohammadi/repos/cytognosis/refactor/cyto-skills
+cd ~/repos/cytognosis/refactor/cyto-skills
 mkdir -p cap/docs/reference-python
-cp -r "/home/mohammadi/Documents/Cytognosis/Infra and design/CAP/cytognosis_cap_v01_production_candidate" \
+cp -r "~/Documents/Cytognosis/Infra and design/CAP/cytognosis_cap_v01_production_candidate" \
       cap/docs/reference-python/
-cp "/home/mohammadi/Documents/Cytognosis/Infra and design/CAP/CAP_v0.1_Production_Candidate_Supervisor_Report.md" \
+cp "~/Documents/Cytognosis/Infra and design/CAP/CAP_v0.1_Production_Candidate_Supervisor_Report.md" \
    cap/docs/reference-python/SUPERVISOR_REPORT.md
-cp "/home/mohammadi/Documents/Cytognosis/Infra and design/CAP/01_MVP_SCOPE.md" \
+cp "~/Documents/Cytognosis/Infra and design/CAP/01_MVP_SCOPE.md" \
    cap/docs/reference-python/MVP_SCOPE.md
-cp "/home/mohammadi/Documents/Cytognosis/Infra and design/CAP/07_ARCHITECTURE_SCOPE.md" \
+cp "~/Documents/Cytognosis/Infra and design/CAP/07_ARCHITECTURE_SCOPE.md" \
    cap/docs/reference-python/ARCHITECTURE_SCOPE.md
 # Add Yar-style reference
 mkdir -p cap/docs/reference-python/yar-style
-cp -r /home/mohammadi/repos/cytognosis/Yar/CAP/* cap/docs/reference-python/yar-style/
+cp -r ~/repos/cytognosis/Yar/CAP/* cap/docs/reference-python/yar-style/
 ```
 
 ### 5.2 Scaffold @cytognosis/cap workspace package
 ```bash
-cd /home/mohammadi/repos/cytognosis/refactor/cyto-skills/cap
+cd ~/repos/cytognosis/refactor/cyto-skills/cap
 mkdir -p src/{primitives,guard/profiles,bindings/{grpc,http_json},crypto,audit,policies,opa,otel}
 mkdir -p conformance/fixtures hardening/fixtures tests/{unit,integration,parity} examples docs/{integration-patterns,policies}
 
@@ -309,7 +309,7 @@ Verification: all green.
 
 ### 5.14 Commit (in cyto-skills repo)
 ```bash
-cd /home/mohammadi/repos/cytognosis/refactor/cyto-skills
+cd ~/repos/cytognosis/refactor/cyto-skills
 git add cap/
 git commit -m "feat(plan-phase-7-step-5): TypeScript port of CAP v0.1 production-candidate (conformance + hardening parity with Python ref)"
 ```
@@ -318,7 +318,7 @@ git commit -m "feat(plan-phase-7-step-5): TypeScript port of CAP v0.1 production
 
 ### 6.1 Add httpx-based CAP client to yar-backend
 ```bash
-cd /home/mohammadi/repos/cytognosis/refactor/Yar/packages/yar-backend
+cd ~/repos/cytognosis/refactor/Yar/packages/yar-backend
 # Update src/yar_backend/core/cap_lite_guard.py:
 cp $SCRIPTS/cap_lite_guard_v2.py src/yar_backend/core/cap_lite_guard.py
 ```
@@ -394,9 +394,9 @@ Already done in step 7.1 + 8.x.
 
 ### 8.2 Run cytocast adopt
 ```bash
-cd /home/mohammadi/repos/cytognosis/refactor/Yar
-uvx --from /home/mohammadi/repos/cytognosis/refactor/cytocast copier copy \
-  /home/mohammadi/repos/cytognosis/refactor/cytocast . \
+cd ~/repos/cytognosis/refactor/Yar
+uvx --from ~/repos/cytognosis/refactor/cytocast copier copy \
+  ~/repos/cytognosis/refactor/cytocast . \
   --data profile=yar-backend --data project_name=Yar \
   --skip-if-exists --vcs-ref v2.0.0-rc1
 ```
@@ -411,21 +411,21 @@ bash $SCRIPTS/update_workflows_to_shared.sh
 ### 9.1 Tests across all packages
 ```bash
 # Python packages
-cd /home/mohammadi/repos/cytognosis/refactor/Yar
+cd ~/repos/cytognosis/refactor/Yar
 uv run pytest packages/
 
 # CAP (in cyto-skills)
-cd /home/mohammadi/repos/cytognosis/refactor/cyto-skills/cap
+cd ~/repos/cytognosis/refactor/cyto-skills/cap
 pnpm test:conformance && pnpm test:hardening && pnpm test:parity
 
 # Flutter (mobile)
-cd /home/mohammadi/repos/cytognosis/refactor/Yar/apps/mobile
+cd ~/repos/cytognosis/refactor/Yar/apps/mobile
 flutter test
 ```
 
 ### 9.2 End-to-end smoke
 ```bash
-cd /home/mohammadi/repos/cytognosis/refactor/Yar
+cd ~/repos/cytognosis/refactor/Yar
 bash scripts/run_dev.sh &
 sleep 5
 curl -X POST http://localhost:8000/capture \
@@ -436,15 +436,15 @@ curl -X POST http://localhost:8000/capture \
 
 ### 9.3 Originals untouched
 ```bash
-cd /home/mohammadi/repos/cytognosis/Yar && git status
-cd /home/mohammadi/repos/cytognosis/cytoagent && git status   # NOTE: this dir; cyto-skills is the rename target
+cd ~/repos/cytognosis/Yar && git status
+cd ~/repos/cytognosis/cytoagent && git status   # NOTE: this dir; cyto-skills is the rename target
 ```
 
 ### 9.4 Tag
 ```bash
-cd /home/mohammadi/repos/cytognosis/refactor/Yar
+cd ~/repos/cytognosis/refactor/Yar
 git tag v0.2.0-rc1-refactor -m "Phase 7: multi-app monorepo + CAP TS server"
-cd /home/mohammadi/repos/cytognosis/refactor/cyto-skills
+cd ~/repos/cytognosis/refactor/cyto-skills
 git tag v1.0.0-rc1 -m "Phase 7: CAP TypeScript port"
 ```
 

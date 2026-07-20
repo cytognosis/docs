@@ -17,7 +17,7 @@
 |------|-----------|
 | **Cytocast** | Copier-based template engine that scaffolds Cytognosis projects. `copier copy` creates; `copier update` applies template upgrades. |
 | **Cytoskeleton** | Component-based environment manager. Resolves dependencies, generates lockfiles, builds `.venv`. |
-| **cyto-skills** | JavaScript/Node.js skill runtime (renamed from cytoagent). Repo: `~/repos/cytognosis/cytoskills`. |
+| **cyto-skills** | JavaScript/Node.js skill runtime (renamed from cytoagent). Repo: `https://github.com/cytognosis/cytoskills`. |
 | **Steering docs** | AI-agent context files in `.agents/steering/` (product.md, tech.md, structure.md, etc.). |
 | **Spec-driven dev** | Three-file workflow: `requirements.md` → `design.md` → `tasks.md` in `.agents/specs/{feature}/`. |
 | **EARS notation** | Formal requirements syntax: WHEN/WHILE/IF/THE SYSTEM SHALL patterns. |

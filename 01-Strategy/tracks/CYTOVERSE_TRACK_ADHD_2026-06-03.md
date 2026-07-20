@@ -118,5 +118,5 @@ This is the key concept to put in every grant narrative.
 
 ---
 
-**Full doc:** `/home/mohammadi/Claude/Projects/X-Labs/01-strategy/tracks/CYTOVERSE_TRACK_2026-06-03.md`
-**Science keystone:** `/home/mohammadi/Claude/Projects/X-Labs/04-research/BDNF_TrkB_Neuroplasticity_Axes_Dossier_2026-06-03.md`
+**Full doc:** `~/Claude/Projects/X-Labs/01-strategy/tracks/CYTOVERSE_TRACK_2026-06-03.md`
+**Science keystone:** `~/Claude/Projects/X-Labs/04-research/BDNF_TrkB_Neuroplasticity_Axes_Dossier_2026-06-03.md`

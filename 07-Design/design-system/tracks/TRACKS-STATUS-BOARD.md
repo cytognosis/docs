@@ -31,7 +31,7 @@
 ## Track B (Website) status
 
 - Plan: `TRACK-B_WEBSITE_PLAN.md` (+ `simple/`). Home after relocation: Website project.
-- **Phase 0 DONE (2026-07-11)**, on branch `claude/busy-mirzakhani-88b0e9` in `~/repos/cytognosis/website` (pre-change tag `pre-track-b-consolidation-2026-07-11`):
+- **Phase 0 DONE (2026-07-11)**, on branch `claude/busy-mirzakhani-88b0e9` in `https://github.com/cytognosis/website` (pre-change tag `pre-track-b-consolidation-2026-07-11`):
   - **CI/CD repaired + verified.** Restored the Node multi-stage Dockerfile (`deps`/`site-build`/`cms-build`/`cms`/`site`) from last-good `d91dc90`; `docker build --target site` and `--target cms` both build locally (exit 0). Both workflows moved to the self-hosted **cytohost** runner (`[self-hosted, Linux, X64, cytohost]`); added the missing `cytognosis-cms` deploy job. Site healthcheck now hits `/api/health`.
   - **Dead FastAPI backend removed** (`main.py`, `backend/auth.py`, stale `DEPLOY.md`); permanently closes the `/auth/dev_login` gate. Node + Payload is the one backend.
   - **Space Grotesk heading regression reverted** (`--f-display` back to Space Grotesk 500); adopted live-site deltas (96/48px section rhythm; `#23232B` ink and uppercase-mono eyebrows were already correct).

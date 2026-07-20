@@ -11,7 +11,7 @@
 > **TL;DR**: Ali rebuilt both repos on top of older versions and dropped real features. This plan recovers the old features from git, reconciles them with his modern rebuilds, enforces the v11.2.1 design system, and restores Claude Design integration. Done autonomously from git + prior context; no Ali brief.
 
 ## 1. Scope and sources (read all before finalizing execution)
-- **Repos:** `~/repos/cytognosis/website`, `~/repos/cytognosis/branding`.
+- **Repos:** `https://github.com/cytognosis/website`, `https://github.com/cytognosis/branding`.
 - **Old versions (git):** branding pre-CytoStyle = `c4a4f29` and ancestors (Design System v10, logos, Dusk theme, Claude Design sync pipeline `22a42ac`); website pre-rebuild = "Generation-1" (pre `3a2caae`).
 - **Ali rewrites:** branding `9bf41cb` "Replace branding repo with CytoStyle package"; website `3a2caae` calm/neurodiverse redesign + `97b8d46` consolidation rebuild.
 - **Already executed (website, Track B session, 2026-07-11):** CI restored (`94658ee`), Space Grotesk regression reverted (`5925292`), node_modules untracked (`5682519`), checksum-pinned Template fetch (`15088e6`), `docs/FEATURE-RECOVERY-REPORT.md` (`900fc14`), Gen-1 features staged (`2468532`: FastAPI backend + candidates/events pages).

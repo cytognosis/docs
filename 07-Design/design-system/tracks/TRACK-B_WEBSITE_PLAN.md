@@ -23,7 +23,7 @@
 
 ### 1.1 What "the website" actually is right now
 
-The repo at `~/repos/cytognosis/website` is not a single design in progress. It holds the residue of at least three separate rebuilds that each got partly merged into `main`:
+The repo at `https://github.com/cytognosis/website` is not a single design in progress. It holds the residue of at least three separate rebuilds that each got partly merged into `main`:
 
 | Layer | What it is | Evidence |
 |---|---|---|
@@ -31,7 +31,7 @@ The repo at `~/repos/cytognosis/website` is not a single design in progress. It 
 | **Orphaned Python backend** | `main.py` (FastAPI), `backend/auth.py` only; every other module it imports (`database.py`, `models.py`, `admin.py`, `routes/forms.py`, `routes/blog.py`, `cv_parser.py`, `email_service.py`) is missing from disk and from git | `git ls-files backend/` returns one file; `find backend -type f` shows only compiled `.pyc` ghosts of the missing modules |
 | **Old marketing site (pre-redesign)** | Glassmorphism dark theme, Vision/Mission/Values cards, a Roadmap with revenue projections, the "Helix Framework" quote, Cal.com events page, FastAPI + Jinja2 blog with comments and RSS | `_drive/inventory-current-site.md`, dated 2026-06-09, describing the site before Ali's redesign |
 
-None of this is a guess. Run `git -C ~/repos/cytognosis/website log --oneline -30` and you see it directly: `feat/vite-frontend-serving` (the calm/ND Python-serving rebuild) and `feat/branding-consolidation-2026-07` (Ali's Yar/branding work) were both merged into `main` within the last four days, on top of each other, without a reconciliation pass. The working tree today is the union of both, including the parts that do not work together.
+None of this is a guess. Run `git -C https://github.com/cytognosis/website log --oneline -30` and you see it directly: `feat/vite-frontend-serving` (the calm/ND Python-serving rebuild) and `feat/branding-consolidation-2026-07` (Ali's Yar/branding work) were both merged into `main` within the last four days, on top of each other, without a reconciliation pass. The working tree today is the union of both, including the parts that do not work together.
 
 **The single most important fact in this plan:** the FastAPI backend that `main.py` and the `Dockerfile`'s Python stage still reference cannot start. Its imports point at five modules that do not exist. `README.md`, the current and authoritative doc, does not mention Python or FastAPI anywhere in its stated stack. This means the Python path is dead code that nobody finished deleting, not a live parallel backend. Decide this in Phase 0 (Section 8).
 
@@ -209,7 +209,7 @@ Both explanations point to the same fix: **rewrite the `Dockerfile` with explici
 | Gap | Detail | Recommendation |
 |---|---|---|
 | **No automated deploy for the `cms` Cloud Run service** | `DEPLOYMENT.md` documents `cytognosis-cms` as a deployed service, but `deploy.yml` only builds and deploys the `site` target. The CMS service's deployment path is not visible in any workflow. | Add a second job (or a matrix) to `deploy.yml` that builds and deploys the `cms` target to its own Cloud Run service, so a `cms/` code change actually ships. |
-| **`cytohost` is not used anywhere** | Both workflows run on `runs-on: ubuntu-latest` (GitHub-hosted). `cytohost` (the self-hosted VM at `136.111.39.188`, already carrying `cal.`, `code.`, and `hub.` subdomains, and registered as a runner per this org's own infra consolidation record) is not referenced in either workflow. | Confirm the exact runner label registered for `cytohost` (not found in any repo checked during this pass; likely only visible in the GitHub org's runner settings or the standalone `~/repos/cytognosis/infrastructure` repo), then switch at least `deploy.yml`, and ideally `ci.yml`, to `runs-on: [self-hosted, cytohost]` or the equivalent label. Verify the runner is online before cutting over, not after. |
+| **`cytohost` is not used anywhere** | Both workflows run on `runs-on: ubuntu-latest` (GitHub-hosted). `cytohost` (the self-hosted VM at `136.111.39.188`, already carrying `cal.`, `code.`, and `hub.` subdomains, and registered as a runner per this org's own infra consolidation record) is not referenced in either workflow. | Confirm the exact runner label registered for `cytohost` (not found in any repo checked during this pass; likely only visible in the GitHub org's runner settings or the standalone `https://github.com/cytognosis/infrastructure` repo), then switch at least `deploy.yml`, and ideally `ci.yml`, to `runs-on: [self-hosted, cytohost]` or the equivalent label. Verify the runner is online before cutting over, not after. |
 | **No rollback runbook** | `DEPLOY.md` (stale) shows a staged, no-traffic-then-shift pattern for the old single-service model. Nothing current documents rollback for either `site` or `cms`. | Write a one-page rollback runbook: `gcloud run services update-traffic <service> --to-revisions=<PREVIOUS_REVISION>=100 --region=us-central1 --project=cytognosis-phi-prod`, for both services, plus how to find the previous good revision. |
 | **`dist/` committed to git** (see 3.3) | Creates noisy diffs and risks a stale committed `dist/` shipping instead of the CI-built one, depending on `.dockerignore` behavior. | Gitignore `dist/`, rely on the Docker build stage to produce it fresh every time. |
 

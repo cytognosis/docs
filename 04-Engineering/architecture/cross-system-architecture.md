@@ -344,7 +344,7 @@ CAP is transport- and language-agnostic. Embedding it in any one system would co
 
 ## 10. References
 
-- Master plan: `/home/mohammadi/Documents/Cytognosis/Plans/design/00_master_plan.md`
-- Decision log: `/home/mohammadi/Documents/Cytognosis/Plans/design/09_decision_log.md`
+- Master plan: `~/Documents/Cytognosis/Plans/design/00_master_plan.md`
+- Decision log: `~/Documents/Cytognosis/Plans/design/09_decision_log.md`
 - Standards inventory: `../02_standards_inventory.md`
 - Per-system docs: `01_cytocast.md`, `02_cytos.md`, `03_cyto_skills.md`, `04_cap.md`, `05_yar.md`

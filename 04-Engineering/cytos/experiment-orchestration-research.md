@@ -732,4 +732,4 @@ The VFS `AssetStat` dataclass already captures SWHID identifiers (via `identity/
 - [MLflow Documentation](https://mlflow.org)
 - [Nextflow Documentation](https://nextflow.io)
 - [nf-prov Plugin](https://github.com/nextflow-io/nf-prov)
-- [cytoskeleton Source](file:///home/mohammadi/repos/cytognosis/cytoskeleton/src/cytoskeleton)
+- [cytoskeleton Source](https://github.com/cytognosis/cytoskeleton/tree/main/src/cytoskeleton)

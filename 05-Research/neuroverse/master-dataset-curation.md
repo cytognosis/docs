@@ -1,6 +1,6 @@
 > **Status:** Active · **Date:** 2026-05-07 (authored), 2026-07-01 (canonicalized) · **Author:** Cytognosis Foundation
 > **Canonical home:** `05-Research/neuroverse/master-dataset-curation.md` · **Consolidated from:** `Science and Platform/cytognosis_master_dataset_curation.md`.
-> **Paired data table:** `~/datasets/cytognosis/curations/master/cytognosis_master_dataset_curation.xlsx` (the XLSX is the data; this is the narrative).
+> **Paired data table:** `https://github.com/cytognosis/datasets/blob/main/cytognosis/curations/master/cytognosis_master_dataset_curation.xlsx` (the XLSX is the data; this is the narrative).
 
 # Cytognosis Foundation Master Dataset Curation
 

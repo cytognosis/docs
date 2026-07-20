@@ -121,7 +121,7 @@ The system allocates appropriate compute, tracks provenance, and tears down when
 
 ### 2.3 Cytoinfra
 
-**Container Registry**: 8 containers in [manifest.yaml](file:///home/mohammadi/repos/cytognosis/infrastructure/assets/containers/manifest.yaml):
+**Container Registry**: 8 containers in [manifest.yaml](https://github.com/cytognosis/infrastructure/blob/main/assets/containers/manifest.yaml):
 
 | Container | Image | Min RAM |
 |-----------|-------|---------|
@@ -153,7 +153,7 @@ The system allocates appropriate compute, tracks provenance, and tears down when
 > **No job scheduling, no compute pool management, no `cytoinfra run`.** Current cytoinfra
 > is limited to container/service lifecycle. The compute orchestration layer is entirely new.
 
-### 2.4 External Repos (`/home/mohammadi/repos/external/`)
+### 2.4 External Repos (`~/repos/external/`)
 
 **Total**: ~300+ repos, **179 GB** on disk, **28 organizations**, 6 domain categories
 
@@ -733,7 +733,7 @@ All research complete. Detailed evaluations inline in §4.4 and §5.1-5.5.
 | P2-3 | Extend MLflow for external model bookmarking | `[ ]` | cytos |
 | P2-4 | Implement dataset provenance chain in manifests | `[ ]` | cytos |
 | P2-5 | Build cross-repo agentic search index | `[ ]` | cytoskeleton |
-| P2-6 | Organize `/home/mohammadi/repos/external/` | `[ ]` | manual |
+| P2-6 | Organize `~/repos/external/` | `[ ]` | manual |
 
 ### Phase 3: Integration & Verification (Month 3)
 

@@ -187,4 +187,4 @@ D2 is the only one needing outside action (Ali). D1, D3, and D4 are already bake
 
 - `02_review/raw_comparison_designsystems.md` (full three-way inventory, token tables, component matrix, 15 conflicts, quality scores)
 - `02_review/raw_context_inventory.md` (8 prompts, structure standards, website lineage, CytoStyle audit)
-- Extracted systems under `01_extracted/`; May workstream under `Science and Platform/design-system-consolidation-2026-05/`; website docs under `Website/`; branding repo at `~/repos/cytognosis/branding`
+- Extracted systems under `01_extracted/`; May workstream under `Science and Platform/design-system-consolidation-2026-05/`; website docs under `Website/`; branding repo at `https://github.com/cytognosis/branding`

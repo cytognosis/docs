@@ -24,13 +24,13 @@ dvc version
 # Expected: DVC version: 3.67.1, Supports: gs (gcsfs = 2024.12.0)
 ```
 
-Binary location: `/home/mohammadi/miniforge3/envs/cytognosis/bin/dvc`
+Binary location: `~/miniforge3/envs/cytognosis/bin/dvc`
 
 ## Remote Configuration
 
 ### Datasets Repository (central data lake)
 
-The datasets repo at `~/datasets` uses a shared DVC cache on GCS:
+The datasets repo at `https://github.com/cytognosis/datasets` uses a shared DVC cache on GCS:
 
 ```bash
 # Already configured — verify with:

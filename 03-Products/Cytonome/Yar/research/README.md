@@ -67,11 +67,11 @@ Removed 2026-07-19 (superseded, retrievable from git history): `yar-framework-as
 
 ## Data pointers
 
-The feature/prioritization CSV tables live in the datasets tree at `~/datasets/cytognosis/yar/data/` (see [`../DATA-MOVED.md`](../DATA-MOVED.md)). Superseded comparisons (pre-v4, v3) and the retired ADHD twins live in git history (the on-disk `_archive/` was retired).
+The feature/prioritization CSV tables live in the datasets tree at `https://github.com/cytognosis/datasets/tree/main/cytognosis/yar/data` (see [`../DATA-MOVED.md`](../DATA-MOVED.md)). Superseded comparisons (pre-v4, v3) and the retired ADHD twins live in git history (the on-disk `_archive/` was retired).
 
 ## Related
 
 - Specs: [`../spec/README.md`](../spec/README.md)
 - Benchmarks: [`../benchmark/README.md`](../benchmark/README.md)
 - Tool evaluations: `04-Engineering/yar/research/`
-- Canonical code repo: `~/repos/cytognosis/Yar`
+- Canonical code repo: `https://github.com/cytognosis/Yar`

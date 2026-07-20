@@ -661,7 +661,7 @@ graph TD
 
 ```bash
 # 1. Create benchmark branch
-cd /home/mohammadi/repos/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package
+cd ~/repos/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package
 git checkout -b yar-bench-patch11
 
 # 2. Set up Python environment
@@ -710,7 +710,7 @@ python yar_bench.py --engines surrealdb_tuned --nodes 3000 --dim 384 \
 #### Clean State
 
 ```bash
-cd /home/mohammadi/repos/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package/db_benchmark
+cd ~/repos/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package/db_benchmark
 
 # Kill any running benchmark containers
 docker rm -f yar-surrealdb yar-falkordb yar-neo4j 2>/dev/null || true

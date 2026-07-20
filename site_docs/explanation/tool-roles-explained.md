@@ -36,7 +36,7 @@ Think of running an experiment like running a restaurant kitchen:
 **Tool: DVC** (Data Version Control)
 
 **What it does, concretely**:
-- You have a 50GB dataset in `~/datasets/umls/`. DVC creates a tiny `.dvc` file (a few bytes) containing the SHA256 hash of that 50GB.
+- You have a 50GB dataset in `https://github.com/cytognosis/datasets/tree/main/umls`. DVC creates a tiny `.dvc` file (a few bytes) containing the SHA256 hash of that 50GB.
 - The `.dvc` file goes into Git. The 50GB goes to GCS (`gs://cytognosis-data-hub/dvc-cache/`).
 - `dvc push` uploads data. `dvc pull` downloads data. `dvc checkout` restores a specific version.
 - `dvc.yaml` can also define a pipeline (stages with deps/outs), but that's DVC's *secondary* function.

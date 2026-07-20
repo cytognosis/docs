@@ -56,7 +56,7 @@ PGC minimal format columns: `CHR | BP | SNP | A1 | A2 | OR | SE | P`
 ## P3 — Variant Nodes + VRS *(blocked on seqrepo install)*
 
 - [~] **P3.1** Install seqrepo: `seqrepo pull -i 2021-01-29` (~50GB, ~1 hour)
-  - Data path: `/home/mohammadi/datasets/04-identifiers/seqrepo/`
+  - Data path: `https://github.com/cytognosis/datasets/tree/main/04-identifiers/seqrepo`
   - Set `SEQREPO_ROOT` env var after install
 - [~] **P3.2** After seqrepo: load SNP Variant nodes from TileDB-VCF into Neo4j
   - Properties: `rsid`, `chrom`, `pos`, `ref`, `alt`, `vrs_id`, `so_term`
@@ -196,5 +196,5 @@ with get_driver().session() as s:
     print(s.run('MATCH (v:Variant) RETURN count(v)').single()[0])"
 
 # P5 verify: git push
-cd /home/mohammadi/repos/cytognosis/cytos && git log origin/main..HEAD --oneline | wc -l
+cd ~/repos/cytognosis/cytos && git log origin/main..HEAD --oneline | wc -l
 ```

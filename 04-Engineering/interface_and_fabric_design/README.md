@@ -65,25 +65,25 @@ The following decisions, sketched in the prior version of this doc, are now **se
 
 | Artifact | Path |
 |---|---|
-| Cytocast new profiles | `/home/mohammadi/repos/cytognosis/cytocast/profiles/{cytoagent,neuros,neuro-scale,library,tool,interface-template}.yaml` |
-| Cytocast shared payload | `/home/mohammadi/repos/cytognosis/cytocast/templates/_shared/` |
-| Cytocast dev skills | `/home/mohammadi/repos/cytognosis/cytocast/skills/` |
-| Cytoskeleton templates | `/home/mohammadi/repos/cytognosis/cytoskeleton/templates/{app-phone,app-web,app-desktop,app-extension,shared}/` |
-| Cytoskeleton template-usage skills | `/home/mohammadi/repos/cytognosis/cytoskeleton/skills/{pick-template,update-template,port-token,env-doctor}/` |
-| Cytoagent repo (re-scaffolded) | `/home/mohammadi/repos/cytognosis/cytoagent` |
-| Branding repo | `/home/mohammadi/repos/cytognosis/branding` |
-| Cytognosis skills (final home, post-migration) | `/home/mohammadi/repos/cytognosis/branding/skills/` (7 skills) |
-| Cytognosis skills (current location) | `/home/mohammadi/repos/cytognosis/cytoagent/skills/cytognosis/` (5 skills; 2 new pending) |
+| Cytocast new profiles | `https://github.com/cytognosis/cytocast/tree/main/profiles{cytoagent,neuros,neuro-scale,library,tool,interface-template}.yaml` |
+| Cytocast shared payload | `https://github.com/cytognosis/cytocast/tree/main/templates/_shared` |
+| Cytocast dev skills | `https://github.com/cytognosis/cytocast/tree/main/skills` |
+| Cytoskeleton templates | `https://github.com/cytognosis/cytoskeleton/tree/main/templates{app-phone,app-web,app-desktop,app-extension,shared}/` |
+| Cytoskeleton template-usage skills | `https://github.com/cytognosis/cytoskeleton/tree/main/skills{pick-template,update-template,port-token,env-doctor}/` |
+| Cytoagent repo (re-scaffolded) | `https://github.com/cytognosis/cytoagent` |
+| Branding repo | `https://github.com/cytognosis/branding` |
+| Cytognosis skills (final home, post-migration) | `https://github.com/cytognosis/branding/tree/main/skills` (7 skills) |
+| Cytognosis skills (current location) | `https://github.com/cytognosis/cytoagent/skills/cytognosis/` (5 skills; 2 new pending) |
 
 ## Source materials
 
-- `/home/mohammadi/Documents/Sorted/infra/tools/tools_infra_stack.md` (the 16-layer architecture; §9.4 multi-agent voice flow; §10 component summary).
-- `/home/mohammadi/Documents/Sorted/infra/tools/tools_master.md` (full tool catalog).
-- `/home/mohammadi/repos/cytognosis/cytocast/` (templating engine).
-- `/home/mohammadi/repos/cytognosis/cytoskeleton/` (env locks).
-- `/home/mohammadi/repos/cytognosis/cytoagent/` (current scope, to be expanded).
-- `/home/mohammadi/repos/cytognosis/org/design/` (Claude Design v10 export of the Design System, ingested 2026-05-13).
-- `/home/mohammadi/repos/cytognosis/org/branding/` (current working clone of the branding repo).
-- `/home/mohammadi/Documents/Claude_design_chat.md` (Claude Design conversation history).
+- `~/Documents/Sorted/infra/tools/tools_infra_stack.md` (the 16-layer architecture; §9.4 multi-agent voice flow; §10 component summary).
+- `~/Documents/Sorted/infra/tools/tools_master.md` (full tool catalog).
+- `https://github.com/cytognosis/cytocast` (templating engine).
+- `https://github.com/cytognosis/cytoskeleton` (env locks).
+- `https://github.com/cytognosis/cytoagent/` (current scope, to be expanded).
+- `https://github.com/cytognosis/org/tree/main/design` (Claude Design v10 export of the Design System, ingested 2026-05-13).
+- `https://github.com/cytognosis/org/tree/main/branding` (current working clone of the branding repo).
+- `~/Documents/Claude_design_chat.md` (Claude Design conversation history).
 - The four-tier Cytognosis naming register (see `MEMORY.md` -> Neuroverse repo naming).
 - Prior conversations on tiered agent architecture, empathic voice interface, copier-template propagation, and Claude Design as the Design System tool.

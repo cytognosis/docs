@@ -15,10 +15,10 @@ Status: design, 2026-05-11 (revised from 2026-05-10 to span the full master scop
 Author: Shahin Mohammadi (mohammadi@cytognosis.org), with synthesis assistance from Claude.
 Source materials:
 
-- `/home/mohammadi/Documents/Sorted/infra/schemas/linkml_kg_playbook/` (chapters 00 to 21 plus README and appendix).
-- `/home/mohammadi/repos/cytognosis/cytocast/` (templating engine; cytos.yaml profile lives at `profiles/cytos.yaml`).
-- `/home/mohammadi/repos/cytognosis/cytoskeleton/` (component graph and lock manifests).
-- `/home/mohammadi/repos/cytognosis/cyto-schemas/` (predecessor scaffold; absorbed by cytos).
+- `~/Documents/Sorted/infra/schemas/linkml_kg_playbook/` (chapters 00 to 21 plus README and appendix).
+- `https://github.com/cytognosis/cytocast` (templating engine; cytos.yaml profile lives at `profiles/cytos.yaml`).
+- `https://github.com/cytognosis/cytoskeleton` (component graph and lock manifests).
+- `https://github.com/cytognosis/cyto-schemas/` (predecessor scaffold; absorbed by cytos).
 
 ## 1. Purpose and posture
 
@@ -50,7 +50,7 @@ Posture: **schema-and-model-first**. Every entity in cytos is a LinkML class; ev
 
 Per Cytognosis four-tier naming register, `cytos` is the **foundation kernel** that absorbs the older `cytotype` placeholder. It sits one level below `cytognosis` (mission/org) and one level above neuro-scale repos (`neurogeno`, `neurocyto`, `neurotopo`, `neurophysio`, `neuroetho`). Other foundation modules (`cytoflux`, `cytopraxis`, `cytoassay`) remain tentative.
 
-Repo path: `/home/mohammadi/repos/cytognosis/cytos` (sibling of `cytocast`, `cytoskeleton`, `cytoagent`, `cyto-schemas` until that one is archived).
+Repo path: `https://github.com/cytognosis/cytos` (sibling of `cytocast`, `cytoskeleton`, `cytoagent`, `cyto-schemas` until that one is archived).
 
 Package import path: `cytos`. Console entry: `cytos`.
 
@@ -901,12 +901,12 @@ PROV-O serialization (`cytos.publish.prov`) writes an RDF graph alongside the ma
 
 `cyto-schemas` is a thin scaffold. Migration steps:
 
-1. `git init` the new cytos repo at `/home/mohammadi/repos/cytognosis/cytos` and generate via `uvx copier copy /home/mohammadi/repos/cytognosis/cytocast /home/mohammadi/repos/cytognosis/cytos --data profile=cytos`.
+1. `git init` the new cytos repo at `https://github.com/cytognosis/cytos` and generate via `uvx copier copy https://github.com/cytognosis/cytocast https://github.com/cytognosis/cytos --data profile=cytos`.
 2. Lift the following from cyto-schemas verbatim, then rename references: `noxfile.py`, `mkdocs.yml`, `docs/` subtree (especially `FAIR_Openness_Standards.md`, `hosting_strategy.md`, `MLOps_Experimentation.md`), `Dockerfile`, `docker-compose.yml`, `sky_task.yaml`, `LICENSE`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `ATTRIBUTION.md`, `windsurf-configs/`.
 3. Restructure: `cyto_schemas/extract/` to `cytos.ingest`, `cyto_schemas/transform/` to `cytos.ingest.linkmlize` plus `cytos.kg`, `cyto_schemas/load/` to `cytos.publish` plus `cytos.kg.storage`, `cyto_schemas/schema/` to `cytos.schema.generated`, `cyto_schemas/models/` to `cytos.schema.linkml`, `cyto_schemas/utils/` split across `cytos.utils.io`, `cytos.harmonize.curies`, `cytos.publish.prov`, `policy/`.
 4. Author the schemas: produce `schemas/core.yaml`, `schemas/cytos.yaml`, and one `schemas/domains/<topic>.yaml` per playbook domain.
 5. Author the source registry: produce `configs/sources/*.yaml` for the 21 canonical sources from the playbook.
-6. Archive cyto-schemas under `/home/mohammadi/repos/cytognosis/archive/cyto-schemas` once cytos is functional.
+6. Archive cyto-schemas under `https://github.com/cytognosis/archive/cyto-schemas` once cytos is functional.
 
 ## 12. CI and quality gates
 
@@ -933,7 +933,7 @@ Tiered linting (inherited from cytoskeleton):
 
 ## 14. Cross-references
 
-- The cytos profile manifest itself: `/home/mohammadi/repos/cytognosis/cytocast/profiles/cytos.yaml`.
+- The cytos profile manifest itself: `https://github.com/cytognosis/cytocast/blob/main/profiles/cytos.yaml`.
 - Folder-tree spec lives next to this doc: `02_folder_tree.md`.
 - Pipeline DAG details: `03_pipeline_dag.md`.
 - Per-chapter mapping detail: `04_chapter_to_module_map.md`.

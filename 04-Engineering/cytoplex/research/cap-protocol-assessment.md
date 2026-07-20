@@ -65,7 +65,7 @@ The two codebases have diverged significantly. The standalone repo evolved into 
 
 ### 2.1 Repository Structure: `CAP/`
 
-The standalone CAP repository at `/home/mohammadi/repos/cytognosis/CAP/` is organized as follows:
+The standalone CAP repository at `https://github.com/cytognosis/CAP/` is organized as follows:
 
 ```
 CAP/
@@ -732,7 +732,7 @@ docs/
 
 ### 10.1 Cytocast Overview
 
-Cytocast (`/home/mohammadi/repos/cytognosis/cytocast/`) is the Cytognosis Foundation's Copier-based templating engine. It provides standardized project scaffolding with:
+Cytocast (`https://github.com/cytognosis/cytocast`) is the Cytognosis Foundation's Copier-based templating engine. It provides standardized project scaffolding with:
 
 - **Copier templates** for non-destructive updates (`copier update`)
 - **Profile system** connecting to Cytoskeleton component graphs

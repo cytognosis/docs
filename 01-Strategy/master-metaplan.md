@@ -19,8 +19,8 @@ tags:
 # Cytognosis Master Metaplan
 
 > **Owner**: Shahin Mohammadi · **Created**: 2026-05-23 · **Status**: DRAFT — Awaiting Review
-> **Canonical location**: `~/repos/cytognosis/org/plans/master-metaplan.md`
-> **Project root**: `/home/mohammadi/repos/cytognosis/` (AG Hub project)
+> **Canonical location**: `https://github.com/cytognosis/org/blob/main/plans/master-metaplan.md`
+> **Project root**: `https://github.com/cytognosis` (AG Hub project)
 
 ---
 
@@ -52,13 +52,13 @@ This metaplan coordinates work across **two AI agent systems running on the same
 
 **Coordination rules**:
 
-1. **All plans** live in `~/repos/cytognosis/org/plans/` (git-tracked, shared)
+1. **All plans** live in `https://github.com/cytognosis/org/tree/main/plans` (git-tracked, shared)
 2. **All artifacts** go to git repos, NOT to `~/.gemini/` or `~/.claude/` (those are ephemeral)
 3. **Never have AG and Claude edit the same file simultaneously**
 4. **AG handles**: code refactoring, infrastructure, repo cleanup, technical docs
 5. **Claude handles**: strategy, branding, design, grant writing, Obsidian organization
-6. **Cross-repo plans** always saved to `~/repos/cytognosis/org/plans/[name].md`
-7. **Per-repo docs** saved to `~/repos/cytognosis/[repo]/docs/`
+6. **Cross-repo plans** always saved to `https://github.com/cytognosis/org/tree/main/plans[name].md`
+7. **Per-repo docs** saved to `https://github.com/cytognosis[repo]/docs/`
 8. **Final artifacts** promoted to ObsidianVault at `~/Documents/ObsidianVault/`
 
 ### Code Standards
@@ -91,16 +91,16 @@ This metaplan coordinates work across **two AI agent systems running on the same
 | **AG config** (permissions, routing) | `~/.gemini/config/config.json`                                |
 | **AG plugins** (70+ skills)          | `~/.gemini/config/plugins/`                                   |
 | **Shared agent skills**              | `~/.agents/skills/`                                           |
-| **cytoskills repo** (60+ skills)     | `~/repos/cytognosis/cytoskills/skills/`                       |
+| **cytoskills repo** (60+ skills)     | `https://github.com/cytognosis/cytoskills/tree/main/skills`                       |
 | **Claude config**                    | `~/.claude/CLAUDE.md`                                         |
 | **MCP servers**                      | `~/.gemini/config/mcp_config.json`                            |
 | **ObsidianVault**                    | `~/Documents/ObsidianVault/`                                  |
 | **Legacy docs** (to consolidate)     | `~/Documents/Cytognosis/` (729 .md files)                     |
 | **Google Doc exports**               | `~/Documents/Cytognosis/GoogleDocs_May23/` (9 files)          |
-| **Cross-repo plans**                 | `~/repos/cytognosis/org/plans/`                               |
-| **Director agent script**            | `~/repos/cytognosis/org/agents/director.py`                   |
-| **AG companion docs**                | `~/repos/cytognosis/org/plans/ag2-ecosystem-reference.md`     |
-| **Multi-agent guide**                | `~/repos/cytognosis/org/plans/cross-repo-multiagent-guide.md` |
+| **Cross-repo plans**                 | `https://github.com/cytognosis/org/tree/main/plans`                               |
+| **Director agent script**            | `https://github.com/cytognosis/org/blob/main/agents/director.py`                   |
+| **AG companion docs**                | `https://github.com/cytognosis/org/blob/main/plans/ag2-ecosystem-reference.md`     |
+| **Multi-agent guide**                | `https://github.com/cytognosis/org/blob/main/plans/cross-repo-multiagent-guide.md` |
 
 ### AG2 Permissions (Already Configured)
 
@@ -129,7 +129,7 @@ This metaplan coordinates work across **two AI agent systems running on the same
 | What                               | Scale                                                 | Status                                    |
 | ---------------------------------- | ----------------------------------------------------- | ----------------------------------------- |
 | **Documents to consolidate** | 729 .md (Documents/Cytognosis) + 9 Google Doc exports | Scattered, many redundant/stale           |
-| **Repos to refactor**        | 12 repos under ~/repos/cytognosis/                    | Active, Phases 0-1 complete, Phase 2 in progress |
+| **Repos to refactor**        | 12 repos under https://github.com/cytognosis                    | Active, Phases 0-1 complete, Phase 2 in progress |
 | **ObsidianVault**            | 15 template files, 39 plugins installed               | Fresh, nearly empty                       |
 | **Strategic tracks**         | 3 (Cytoverse/ARPA-H, Cytoscope/NSF, Cytonome/Yar)     | Plans consolidated, Phase 3 planned       |
 | **Agent infrastructure**     | AG2 + Claude Cowork + cytoskills                      | cytoskills v1.0.0 published, skills audited |
@@ -339,7 +339,7 @@ graph LR
 | ------------------------ | ----------------------------------------------------------------------- |
 | Fix symlinks             | Point to `~/Documents/ObsidianVault` (not `~/Documents/Cytognosis`) |
 | Create vault structure   | See[Appendix B](#appendix-b-obsidian-vault-structure)                      |
-| Configure obsidian-git   | Point to `~/repos/cytognosis/org` for version control                 |
+| Configure obsidian-git   | Point to `https://github.com/cytognosis/org` for version control                 |
 | Configure Local REST API | Enable for AG/Claude MCP access                                         |
 | Configure realclaudian   | Connect Claude to vault                                                 |
 
@@ -424,7 +424,7 @@ graph TD
 | ------------------- | -------------------------------------- | ----------------------------------------- |
 | AG conversations    | `~/.gemini/antigravity-ide/brain/*/` | Implementation plans, decisions           |
 | Claude sessions     | `~/.claudian/sessions/`              | Strategy docs, design decisions           |
-| Repo-docs/artifacts | `~/repos/cytognosis/*/docs/`         | Multiple subfolders with docs and designs |
+| Repo-docs/artifacts | `https://github.com/cytognosis*/docs/`         | Multiple subfolders with docs and designs |
 
 ---
 
@@ -639,7 +639,7 @@ graph TD
 # Task: Set up Cytognosis Agentic Infrastructure
 
 Read the metaplan at:
-/home/mohammadi/repos/cytognosis/org/plans/master-metaplan.md
+~/repos/cytognosis/org/plans/master-metaplan.md
 
 Execute Phase 0 only:
 
@@ -658,7 +658,7 @@ Execute Phase 0 only:
 # Task: Cytognosis Document Discovery and Consolidation
 
 Read the metaplan at:
-/home/mohammadi/repos/cytognosis/org/plans/master-metaplan.md
+~/repos/cytognosis/org/plans/master-metaplan.md
 
 Execute Phase 1:
 
@@ -677,7 +677,7 @@ Execute Phase 1:
 # Task: Cytognosis Multi-Repo Foundational Update
 
 Read the metaplan at:
-/home/mohammadi/repos/cytognosis/org/plans/master-metaplan.md
+~/repos/cytognosis/org/plans/master-metaplan.md
 
 You are the Director Agent. Execute Phase 2, Track [A/B/C]:
 

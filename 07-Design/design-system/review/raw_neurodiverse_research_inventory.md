@@ -33,7 +33,7 @@
 
 Grep sweep of `~/Claude/Projects` for `neurodiv|therapeutic|sensory|overstimul|autism|ADHD-friendly` returned mostly Grants/Yar clinical-research documents (ADHD, autism, and anxiety as disease biotypes for the Yar product's science, not design guidance); these are out of scope for a design inventory and were excluded. The design-relevant hits all fall under the paths already listed above.
 
-`cytomem_recall` (semantic) surfaced two documents this session cannot reach: `docs` repo path `07-Design/adhd-neurodiversity-design-research.md`, and `website` repo (the actual git repo at `~/repos/cytognosis/website`, not the Claude Projects folder) paths `.agents/skills/brand/references/design-system.md` and `docs/design_requirements.md`. None of these live under a folder attached to this session. Flagged in Section 6 as follow-up, not incorporated below.
+`cytomem_recall` (semantic) surfaced two documents this session cannot reach: `docs` repo path `07-Design/adhd-neurodiversity-design-research.md`, and `website` repo (the actual git repo at `https://github.com/cytognosis/website`, not the Claude Projects folder) paths `.agents/skills/brand/references/design-system.md` and `docs/design_requirements.md`. None of these live under a folder attached to this session. Flagged in Section 6 as follow-up, not incorporated below.
 
 ---
 
@@ -231,9 +231,9 @@ Organized to run directly against a design system's tokens, components, motion l
 Two `cytomem_recall` hits could not be retrieved because they live outside this session's attached folders:
 
 1. `docs` repo, path `07-Design/adhd-neurodiversity-design-research.md` (semantic match score 0.848 against "neurodiverse design research"). Title suggests this may be a consolidated-docs-repo copy or successor of NDR; unclear if it is a duplicate or contains net-new material.
-2. `website` repo (the live git repo at `~/repos/cytognosis/website`, distinct from the Claude Projects `Website/` research folder used throughout this inventory), paths `.agents/skills/brand/references/design-system.md` and `docs/design_requirements.md`.
+2. `website` repo (the live git repo at `https://github.com/cytognosis/website`, distinct from the Claude Projects `Website/` research folder used throughout this inventory), paths `.agents/skills/brand/references/design-system.md` and `docs/design_requirements.md`.
 
-Recommend attaching `~/repos/cytognosis/website` and the `docs` repo to a future session and re-running the same `cytomem_recall` queries to confirm whether either document adds principles not already captured above.
+Recommend attaching `https://github.com/cytognosis/website` and the `docs` repo to a future session and re-running the same `cytomem_recall` queries to confirm whether either document adds principles not already captured above.
 
 ---
 

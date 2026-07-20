@@ -20,7 +20,7 @@ tags:
 # biotoolsSchema, EDAM Ontology, and bio.tools Registry: Research Analysis
 
 > **Owner**: Shahin Mohammadi · **Created**: 2026-05-24 · **Status**: DRAFT
-> **Canonical location**: `~/repos/cytognosis/org/plans/research/biotools-schema-edam-research.md`
+> **Canonical location**: `https://github.com/cytognosis/org/blob/main/plans/research/biotools-schema-edam-research.md`
 
 ---
 

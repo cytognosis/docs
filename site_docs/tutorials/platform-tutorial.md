@@ -799,10 +799,10 @@ done
 ```
 
 ```text
-✓ agents/skills/cytognosis-doc → /home/mohammadi/.cytognosis/assets/skills/cytognosis-doc
-✓ claude/skills/cytognosis-doc → /home/mohammadi/.cytognosis/assets/skills/cytognosis-doc
-✓ kiro/skills/cytognosis-doc → /home/mohammadi/.cytognosis/assets/skills/cytognosis-doc
-✓ antigravity/skills/cytognosis-doc → /home/mohammadi/.cytognosis/assets/skills/cytognosis-doc
+✓ agents/skills/cytognosis-doc → ~/.cytognosis/assets/skills/cytognosis-doc
+✓ claude/skills/cytognosis-doc → ~/.cytognosis/assets/skills/cytognosis-doc
+✓ kiro/skills/cytognosis-doc → ~/.cytognosis/assets/skills/cytognosis-doc
+✓ antigravity/skills/cytognosis-doc → ~/.cytognosis/assets/skills/cytognosis-doc
 ```
 
 ### Skill File Structure

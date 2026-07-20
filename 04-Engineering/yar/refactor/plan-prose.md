@@ -19,8 +19,8 @@
 ### CAP context (separate product, NOT inside cyto-skills)
 
 CAP is a standalone protocol. For Phase I, the canonical implementation stays at:
-- `/home/mohammadi/Documents/Cytognosis/Infra and design/CAP/cytognosis_cap_v01_production_candidate/` — primary Python implementation (gRPC + HTTP/JSON; conformance 28/28; hardening 33/33).
-- `/home/mohammadi/repos/cytognosis/Yar/CAP/` — Yar-side integration shims (older version, simpler).
+- `~/Documents/Cytognosis/Infra and design/CAP/cytognosis_cap_v01_production_candidate/` — primary Python implementation (gRPC + HTTP/JSON; conformance 28/28; hardening 33/33).
+- `https://github.com/cytognosis/Yar/tree/main/CAP` — Yar-side integration shims (older version, simpler).
 
 Phase I work for CAP:
 - Compare/consolidate with related protocols (A2A — already used; discovery; etc.) from `/curations/tools/`.

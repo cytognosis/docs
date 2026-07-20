@@ -321,7 +321,7 @@ All of the following documents are authoritative sources consulted to produce th
 
 | Document | Path | Role |
 |---|---|---|
-| Ali's analysis | `/home/mohammadi/Downloads/Telegram\ Desktop/yar_bench_final_analysis.md` | Primary raw results source |
+| Ali's analysis | `~/Downloads/Telegram\ Desktop/yar_bench_final_analysis.md` | Primary raw results source |
 | Benchmark package README | `yar_supervisor_reproducible_benchmark_package/README.md` | Run instructions, architecture decision |
 | PATCH8 README | `yar_supervisor_reproducible_benchmark_package/db_benchmark/README_PATCH8_SURREAL_TUNED.md` | Tuned adapter introduction and rationale |
 | PATCH9 README | `yar_supervisor_reproducible_benchmark_package/db_benchmark/README_PATCH9_SURREAL_TUNED_FIX.md` | Validation layer fixes |

@@ -372,7 +372,7 @@ The recommended approach is a graduated implementation: start with essential fie
 
 All reference documents saved to:
 ```
-/home/mohammadi/Documents/Claude/Projects/Infrastructure and Tooling/
+~/Documents/Claude/Projects/Infrastructure and Tooling/
 ├── research_software_metadata_standards.md (comprehensive standard analysis)
 ├── codemeta_field_examples.md (technical examples and mappings)
 └── linkml_software_schema_fields.md (field inventory for implementation)

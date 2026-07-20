@@ -7,7 +7,7 @@
 > **Tags**: `strategy`
 > **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 
-> Location: `/home/mohammadi/datasets/` (~1.5TB total)
+> Location: `https://github.com/cytognosis/datasets` (~1.5TB total)
 > Last audited: 2026-05-22
 
 ---
@@ -15,7 +15,7 @@
 ## Canonical Directory Structure
 
 ```
-/home/mohammadi/datasets/
+~/datasets/
 ├── 01-ontologies/          ~75GB    OWL/OBO files + registry.yaml
 │   ├── owl/                         Flat deduplicated OWL files (37+ ontologies)
 │   ├── mappings/                    SSSOM mapping files
@@ -86,7 +86,7 @@
 
 ## TileDB-VCF Stores
 
-Location: `/home/mohammadi/repos/cytognosis/cytos/tiledb/vcf/`
+Location: `https://github.com/cytognosis/cytos/tree/main/tiledb/vcf`
 (NOT in git — local disk only)
 
 | Store | Samples | Source | Notes |
@@ -104,7 +104,7 @@ Location: `/home/mohammadi/repos/cytognosis/cytos/tiledb/vcf/`
 
 ## GWAS Data in Repo
 
-Location: `/home/mohammadi/repos/cytognosis/cytos/data/gwas/`
+Location: `https://github.com/cytognosis/cytos/tree/main/data/gwas`
 
 ### GWAS Catalog (harmonized, downloaded)
 ```

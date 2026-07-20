@@ -28,6 +28,6 @@
 
 - Product spec these docs summarize: [`../yar-product-spec.md`](../yar-product-spec.md).
 - Feature catalog: [`../YAR_FEATURE_CATALOG.md`](../YAR_FEATURE_CATALOG.md).
-- Engineering source of truth for `ARCHITECTURE.md` claims: `~/repos/cytognosis/Yar (canonical; formerly the yar-code-20260705-2354 snapshot)/ARCHITECTURE.md` and `REQUIREMENTS_COVERAGE.md` (code repo, both branches `main` and `feat/sqlite-device-store`).
+- Engineering source of truth for `ARCHITECTURE.md` claims: `https://github.com/cytognosis/Yar (canonical; formerly the yar-code-20260705-2354 snapshot)/ARCHITECTURE.md` and `REQUIREMENTS_COVERAGE.md` (code repo, both branches `main` and `feat/sqlite-device-store`).
 - Safety claims in `SAFETY_AND_TRUST.md` trace back to [`../spec/privacy-boundary-spec.md`](../spec/privacy-boundary-spec.md), [`../spec/MODULE-crisis-detection.md`](../spec/MODULE-crisis-detection.md), and [`../spec/SAFETY-CHECKPOINT_2026-07-16.md`](../spec/SAFETY-CHECKPOINT_2026-07-16.md).
 - `LIMITATIONS.md` and `ROADMAP.md` should stay consistent with [`../research/yar-salvage-reconciliation-map_2026-07-16.md`](../research/yar-salvage-reconciliation-map_2026-07-16.md) (what's being deferred and why).

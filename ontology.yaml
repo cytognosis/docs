@@ -3,13 +3,13 @@
 nodes:
   - {id: org, type: root, parents: []}
   # surfaces
-  - {id: docs-repo, type: surface, parents: [org, code-repos], stores: ~/repos/cytognosis/docs}
+  - {id: docs-repo, type: surface, parents: [org, code-repos], stores: https://github.com/cytognosis/docs}
   - {id: obsidian-vault, type: surface, parents: [org], stores: ~/Documents/ObsidianVault}
   - {id: claude-projects, type: surface, parents: [org], stores: ~/Claude/Projects}
   - {id: mission-board, type: surface, parents: [org], stores: http://127.0.0.1:40601}
   - {id: cytomem, type: surface, parents: [org], stores: neo4j + MCP}
-  - {id: datasets-store, type: surface, parents: [org], stores: ~/datasets/cytognosis}
-  - {id: code-repos, type: surface, parents: [org], stores: ~/repos/cytognosis}
+  - {id: datasets-store, type: surface, parents: [org], stores: https://github.com/cytognosis/datasets/tree/main/cytognosis}
+  - {id: code-repos, type: surface, parents: [org], stores: https://github.com/cytognosis}
   # pillars (mirrored: parents docs-repo AND obsidian-vault)
   - {id: 00-inbox, type: pillar, parents: [docs-repo, obsidian-vault]}
   - {id: 01-strategy, type: pillar, parents: [docs-repo, obsidian-vault]}

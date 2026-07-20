@@ -8,8 +8,8 @@
 
 **Status**: v0.1 Production Candidate (Python canonical implementation)
 **Version**: 0.1
-**Canonical implementation**: `/home/mohammadi/Documents/Cytognosis/Infra and design/CAP/cytognosis_cap_v01_production_candidate/`
-**Yar-side integration**: `/home/mohammadi/repos/cytognosis/Yar/CAP/`
+**Canonical implementation**: `~/Documents/Cytognosis/Infra and design/CAP/cytognosis_cap_v01_production_candidate/`
+**Yar-side integration**: `https://github.com/cytognosis/Yar/tree/main/CAP`
 **Future repo (Phase 7+)**: `github.com/cytognosis/cap` (TBD)
 
 ## 1. Purpose and scope
@@ -155,8 +155,8 @@ Key Phase I CAP tasks:
 
 ### 5.1 Source of truth (Phase I)
 
-- **Canonical**: Python implementation at `/home/mohammadi/Documents/Cytognosis/Infra and design/CAP/cytognosis_cap_v01_production_candidate/`.
-- **Yar-side integration**: `/home/mohammadi/repos/cytognosis/Yar/CAP/` (older; will consolidate into canonical).
+- **Canonical**: Python implementation at `~/Documents/Cytognosis/Infra and design/CAP/cytognosis_cap_v01_production_candidate/`.
+- **Yar-side integration**: `https://github.com/cytognosis/Yar/tree/main/CAP` (older; will consolidate into canonical).
 - **Supervisor report**: `/Infra/CAP/CAP_v0.1_Production_Candidate_Supervisor_Report.md`.
 - **Multi-agent architecture report**: `/Infra/CAP/cytognosis_multi_agent_architecture_report.md`.
 
@@ -283,5 +283,5 @@ python run_production_hardening.py
 - Original Python ref: `/Infra and design/CAP/cytognosis_cap_v01_production_candidate/`
 - Supervisor report: `/Infra/CAP/CAP_v0.1_Production_Candidate_Supervisor_Report.md`
 - Multi-agent architecture: `/Infra/CAP/cytognosis_multi_agent_architecture_report.md`
-- Curated tools: `/home/mohammadi/Documents/Cytognosis/curations/tools/`
-- Phase I CAP docs: `/home/mohammadi/repos/cytognosis/refactor/phases/docs/CAP/`
+- Curated tools: `~/Documents/Cytognosis/curations/tools/`
+- Phase I CAP docs: `https://github.com/cytognosis/refactor/phases/docs/CAP/`

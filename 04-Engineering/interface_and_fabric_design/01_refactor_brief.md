@@ -236,7 +236,7 @@ This is the largest refactor because the scope expands significantly. Treat it a
 
 ```bash
 # in a scratch directory
-uvx copier copy /home/mohammadi/repos/cytognosis/cytocast \
+uvx copier copy ~/repos/cytognosis/cytocast \
                 /tmp/cytoagent-new \
                 --data profile=cytoagent
 ```

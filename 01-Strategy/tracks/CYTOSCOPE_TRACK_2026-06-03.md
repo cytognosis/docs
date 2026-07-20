@@ -176,13 +176,13 @@ The sensor strategy and NSF X-Labs content is split across multiple locations. N
 
 | Path | Contents | Status | Canonical home |
 |---|---|---|---|
-| `/home/mohammadi/Claude/Projects/X-Labs/07-nsf-xlabs/NSF_XLabs_Phase0_Draft_v1.md` | Full 8-page Psychoscope Phase 0 proposal draft | **Canonical active proposal** | `X-Labs/07-nsf-xlabs/` |
-| `/home/mohammadi/Claude/Projects/X-Labs/07-nsf-xlabs/NSF X-Labs.md` | NSF X-Labs project log and planning notes | Active planning log | `X-Labs/07-nsf-xlabs/` |
-| `/home/mohammadi/Claude/Projects/X-Labs/01-strategy/master-plan-v2.0/13_sensor_ecosystem.md` | UBAP architecture and sensor ecosystem strategy | **Canonical for UBAP/sensor-ecosystem strategy** | `X-Labs/01-strategy/master-plan-v2.0/` |
-| `/home/mohammadi/Claude/Projects/Strategic Planning/master_plan/13_sensor_ecosystem.md` | Earlier copy of sensor ecosystem strategy | Superseded by X-Labs copy; keep indexed, do not edit | Reconcile to X-Labs |
-| `/home/mohammadi/Claude/Projects/Science and Platform/schema-survey-2026-05/sensors.md` | SOSA/SSN and sensor schema survey (full version) | **Canonical for schema standards** | `Science and Platform/schema-survey-2026-05/` |
-| `/home/mohammadi/Claude/Projects/Science and Platform/schema-survey-2026-05/old/sensors.md` | Earlier draft of schema survey | Superseded; keep indexed | Archive |
-| `/home/mohammadi/Claude/Projects/Infrastructure and Tooling/sensing/old/sensors.md` | Even earlier sensors.md | Superseded; keep indexed | Archive |
+| `~/Claude/Projects/X-Labs/07-nsf-xlabs/NSF_XLabs_Phase0_Draft_v1.md` | Full 8-page Psychoscope Phase 0 proposal draft | **Canonical active proposal** | `X-Labs/07-nsf-xlabs/` |
+| `~/Claude/Projects/X-Labs/07-nsf-xlabs/NSF X-Labs.md` | NSF X-Labs project log and planning notes | Active planning log | `X-Labs/07-nsf-xlabs/` |
+| `~/Claude/Projects/X-Labs/01-strategy/master-plan-v2.0/13_sensor_ecosystem.md` | UBAP architecture and sensor ecosystem strategy | **Canonical for UBAP/sensor-ecosystem strategy** | `X-Labs/01-strategy/master-plan-v2.0/` |
+| `~/Claude/Projects/Strategic Planning/master_plan/13_sensor_ecosystem.md` | Earlier copy of sensor ecosystem strategy | Superseded by X-Labs copy; keep indexed, do not edit | Reconcile to X-Labs |
+| `~/Claude/Projects/Science and Platform/schema-survey-2026-05/sensors.md` | SOSA/SSN and sensor schema survey (full version) | **Canonical for schema standards** | `Science and Platform/schema-survey-2026-05/` |
+| `~/Claude/Projects/Science and Platform/schema-survey-2026-05/old/sensors.md` | Earlier draft of schema survey | Superseded; keep indexed | Archive |
+| `~/Claude/Projects/Infrastructure and Tooling/sensing/old/sensors.md` | Even earlier sensors.md | Superseded; keep indexed | Archive |
 | `cytos/data/staged/grants/nsf_xlabs/` (multiple files) | NSF X-Labs official documents and annotations | Reference material; not editable by Cytognosis | `cytos/data/staged/grants/nsf_xlabs/` |
 | `docs/cytonome/yar/sensors/` (README-vault, sensor-architecture, unified-sensor-report, etc.) | Yar/Cytonome sensor implementation docs | **Canonical for Yar-level sensor integration** | `docs/cytonome/yar/sensors/` |
 
@@ -210,10 +210,10 @@ The sensor strategy and NSF X-Labs content is split across multiple locations. N
 
 - NSF X-Labs official: `cytos/data/staged/grants/nsf_xlabs/nsf-otaso-fy26-xlabsinitiative.md`
 - NSF X-Labs Topic 2: `cytos/data/staged/grants/nsf_xlabs/nsf-topic2-fy26-xlabssensingandimaging.md`
-- Phase 0 proposal draft: `/home/mohammadi/Claude/Projects/X-Labs/07-nsf-xlabs/NSF_XLabs_Phase0_Draft_v1.md`
-- NSF X-Labs planning log: `/home/mohammadi/Claude/Projects/X-Labs/07-nsf-xlabs/NSF X-Labs.md`
-- UBAP / sensor ecosystem architecture: `/home/mohammadi/Claude/Projects/X-Labs/01-strategy/master-plan-v2.0/13_sensor_ecosystem.md`
-- Sensor schema survey: `/home/mohammadi/Claude/Projects/Science and Platform/schema-survey-2026-05/sensors.md`
-- Funding and IGoR track (NSF detail at §3 Priority 3): `/home/mohammadi/Claude/Projects/X-Labs/01-strategy/tracks/FUNDING_IGOR_TRACK_2026-06-03.md`
-- Stage 4 taxonomy and canonical-home assignments: `/home/mohammadi/Claude/Projects/X-Labs/01-strategy/STAGE4_META_STRATEGY_TAXONOMY_2026-06-03.md`
+- Phase 0 proposal draft: `~/Claude/Projects/X-Labs/07-nsf-xlabs/NSF_XLabs_Phase0_Draft_v1.md`
+- NSF X-Labs planning log: `~/Claude/Projects/X-Labs/07-nsf-xlabs/NSF X-Labs.md`
+- UBAP / sensor ecosystem architecture: `~/Claude/Projects/X-Labs/01-strategy/master-plan-v2.0/13_sensor_ecosystem.md`
+- Sensor schema survey: `~/Claude/Projects/Science and Platform/schema-survey-2026-05/sensors.md`
+- Funding and IGoR track (NSF detail at §3 Priority 3): `~/Claude/Projects/X-Labs/01-strategy/tracks/FUNDING_IGOR_TRACK_2026-06-03.md`
+- Stage 4 taxonomy and canonical-home assignments: `~/Claude/Projects/X-Labs/01-strategy/STAGE4_META_STRATEGY_TAXONOMY_2026-06-03.md`
 - NSF X-Labs Jul 13 deadline: [NSF X-Labs](https://www.nsf.gov/funding/initiatives/nsf-x-labs), [Granted AI analysis](https://grantedai.com/blog/nsf-x-labs-1-5-billion-quantum-instrumentation-ota-mechanism-july-13-deadline-strategy-2026)

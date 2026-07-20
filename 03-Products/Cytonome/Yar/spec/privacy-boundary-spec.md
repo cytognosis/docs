@@ -200,4 +200,4 @@ Every payload variant is closed: validators reject unknown fields. No variant ma
 
 - [`MODULE-crisis-detection.md`](./MODULE-crisis-detection.md) -- depends on this spec directly (see its `depends_on` front matter).
 - [`SAFETY-CHECKPOINT_2026-07-16.md`](./SAFETY-CHECKPOINT_2026-07-16.md) -- the checkpoint that closes this spec and crisis-detection together for post-YC resume.
-- CAP code path: `~/repos/cytognosis/yar_revisions/yar-code-20260705-2354/backend/cap/`.
+- CAP code path: `https://github.com/cytognosis/yar_revisions/yar-code-20260705-2354/backend/cap/`.

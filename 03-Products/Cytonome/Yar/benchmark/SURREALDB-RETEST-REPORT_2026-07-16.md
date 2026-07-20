@@ -288,4 +288,4 @@ The `surrealdb_tuned` adapter on v3.1.5 confirmed:
 
 - [`SURREALDB-PATCH11-VERDICT_2026-07-16.md`](./SURREALDB-PATCH11-VERDICT_2026-07-16.md) -- closes the PATCH11 item this retest report left in progress.
 - [`../spec/SPEC-storage-engine.md`](../spec/SPEC-storage-engine.md), [`../spec/STORAGE_BENCHMARK_TRACKER.md`](../spec/STORAGE_BENCHMARK_TRACKER.md) -- the spec and living tracker this retest updates.
-- Benchmark package (external): `~/repos/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package/`.
+- Benchmark package (external): `https://github.com/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package/`.

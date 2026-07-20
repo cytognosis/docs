@@ -136,5 +136,5 @@ ObsidianVault/
 ### Reference Linking Standards
 * **Bi-directional Links**: Every subdirectory has an index file linking to all child files. Each child file must link back to its parent index.
 * **Docs-to-Code Links**: Track A files inside Git must contain a footer link pointing to the corresponding Track B file in the Obsidian vault (using `obsidian://` URLs).
-* **Code-to-Docs Links**: Track B files in the vault must link directly to the Git repository folder or the exact source files using `file:///` URLs.
+* **Code-to-Docs Links**: Track B files must link to the Git repository folder or the exact source files using GitHub URLs (`https://github.com/cytognosis/<repo>/blob/main/...`). Never use `file:///` URLs or local absolute paths (`/home/...`, `~/...`) as document references; local paths are allowed only inside fenced code blocks as runnable commands. (Rule updated 2026-07-19.)
 * **No Orphans**: Any new document must be immediately added to `00-Index.md` or a related parent index before completing the task.

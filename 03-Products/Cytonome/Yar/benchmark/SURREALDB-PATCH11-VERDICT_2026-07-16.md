@@ -172,7 +172,7 @@ This is a **SurrealDB-reported condition**, not a benchmark harness bug — the 
 
 ## Appendix: artifact paths
 
-- Harness patches (not a git repo — see below): `~/repos/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package/db_benchmark/yar_bench.py`
+- Harness patches (not a git repo — see below): `https://github.com/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package/db_benchmark/yar_bench.py`
 - Docker port remap (8000→8010 to avoid a host port collision on this machine): `db_benchmark/docker-compose.yml`
 - 10k results (all 5 engines, 0 failures): `db_benchmark/results_patch11_10k_rocks_hnsw/`
 - 100k results (sqlite, falkordb, surrealdb_tuned — 0 failures): `db_benchmark/results_patch11_100k_rocks_hnsw/`
@@ -188,4 +188,4 @@ This is a **SurrealDB-reported condition**, not a benchmark harness bug — the 
 - [`SURREALDB-RETEST-REPORT_2026-07-16.md`](./SURREALDB-RETEST-REPORT_2026-07-16.md) -- the retest this verdict closes out (see this doc's own "Supersedes" note).
 - [`../spec/SPEC-storage-engine.md`](../spec/SPEC-storage-engine.md) -- the storage-engine spec this verdict's decision D4 feeds.
 - [`../spec/STORAGE_BENCHMARK_TRACKER.md`](../spec/STORAGE_BENCHMARK_TRACKER.md) -- living status table updated by this verdict.
-- Benchmark package (external): `~/repos/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package/`.
+- Benchmark package (external): `https://github.com/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package/`.

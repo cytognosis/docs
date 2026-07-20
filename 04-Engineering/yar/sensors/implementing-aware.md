@@ -44,7 +44,7 @@ Cytonome's adapter supports both variants. The Cytos schema maps identically to 
 
 ### 1.4 How AWARE Fits into Cytonome's Sensor Architecture
 
-AWARE operates as a **sensor plugin** within Cytonome's [Universal Sensor Architecture](../../../03-Products/Cytonome/Yar/sensor-architecture.md). Each AWARE sensor maps to a `SensorDescriptor` and produces `Observation` instances conforming to the [Cytos sensor core schema](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml).
+AWARE operates as a **sensor plugin** within Cytonome's [Universal Sensor Architecture](../../../03-Products/Cytonome/Yar/sensor-architecture.md). Each AWARE sensor maps to a `SensorDescriptor` and produces `Observation` instances conforming to the [Cytos sensor core schema](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/core.yaml).
 
 ```mermaid
 flowchart TB
@@ -147,7 +147,7 @@ Every AWARE sensor table follows a canonical column pattern:
 | `label` | TEXT | User-set free-text label for calibration |
 | *sensor-specific* | REAL/TEXT/INTEGER | Varies per sensor |
 
-This maps directly to the Cytos [AWAREObservationMixin](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L41-L47):
+This maps directly to the Cytos [AWAREObservationMixin](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L41-L47):
 
 ```yaml
 AWAREObservationMixin:
@@ -216,7 +216,7 @@ AWARE SQLite (on-device)
 | `double_values_2` | REAL | Z-axis acceleration (m/s²) |
 | `accuracy` | INTEGER | Android sensor accuracy constant |
 
-**Cytos LinkML mapping**: [AWAREAccelerometer](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L49-L62) → `is_a: Observation`
+**Cytos LinkML mapping**: [AWAREAccelerometer](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L49-L62) → `is_a: Observation`
 
 **SOSA alignment**:
 - `Sensor`: Smartphone accelerometer hardware
@@ -268,7 +268,7 @@ AWARE SQLite (on-device)
 | `double_values_2` | REAL | Z-axis angular velocity (rad/s) |
 | `accuracy` | INTEGER | Android sensor accuracy constant |
 
-**Cytos LinkML mapping**: [AWAREGyroscope](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L64-L76) → `is_a: Observation`
+**Cytos LinkML mapping**: [AWAREGyroscope](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L64-L76) → `is_a: Observation`
 
 **SOSA alignment**:
 - `Sensor`: Smartphone gyroscope hardware
@@ -317,7 +317,7 @@ AWARE SQLite (on-device)
 | `double_values_2` | REAL | Z-axis magnetic field (µT) |
 | `accuracy` | INTEGER | Android sensor accuracy constant |
 
-**Cytos LinkML mapping**: [AWAREMagnetometer](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L78-L90) → `is_a: Observation`
+**Cytos LinkML mapping**: [AWAREMagnetometer](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L78-L90) → `is_a: Observation`
 
 **SOSA alignment**:
 - `Sensor`: Smartphone magnetometer hardware
@@ -342,9 +342,9 @@ AWARE SQLite (on-device)
 | `activity_type` | INTEGER | Android DetectedActivity type constant |
 | `confidence` | INTEGER | Recognition confidence (0-100) |
 
-**Cytos LinkML mapping**: [AWAREActivityRecognition](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L191-L194) → `is_a: ActivityRecognitionEvent`
+**Cytos LinkML mapping**: [AWAREActivityRecognition](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L191-L194) → `is_a: ActivityRecognitionEvent`
 
-The parent [ActivityRecognitionEvent](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/context.yaml#L107-L114) defines:
+The parent [ActivityRecognitionEvent](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/context.yaml#L107-L114) defines:
 
 ```yaml
 ActivityRecognitionEvent:
@@ -395,7 +395,7 @@ ActivityRecognitionEvent:
 |--------|------|-------------|
 | `double_light_lux` | REAL | Ambient light intensity (lux) |
 
-**Cytos LinkML mapping**: [AWARELight](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L107-L113) → `is_a: Observation`
+**Cytos LinkML mapping**: [AWARELight](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L107-L113) → `is_a: Observation`
 
 **SOSA alignment**:
 - `Sensor`: Smartphone ambient light sensor
@@ -429,7 +429,7 @@ ActivityRecognitionEvent:
 |--------|------|-------------|
 | `double_values_0` | REAL | Atmospheric pressure (hPa) |
 
-**Cytos LinkML mapping**: [AWAREBarometer](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L120-L123) → `is_a: Observation`
+**Cytos LinkML mapping**: [AWAREBarometer](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L120-L123) → `is_a: Observation`
 
 **Recommended sampling rate**: 0.1 Hz (every 10 seconds)
 
@@ -441,7 +441,7 @@ ActivityRecognitionEvent:
 
 **Relevance for neurodivergent individuals**: Environmental temperature affects cognitive performance and sensory processing. Autistic individuals often report heightened temperature sensitivity. Tracking ambient temperature alongside productivity and mood data enables personalized environmental optimization.
 
-**Cytos LinkML mapping**: [AWARETemperature](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L125-L128) → `is_a: Observation`
+**Cytos LinkML mapping**: [AWARETemperature](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L125-L128) → `is_a: Observation`
 
 **Recommended sampling rate**: 0.017 Hz (every 60 seconds)
 
@@ -453,7 +453,7 @@ ActivityRecognitionEvent:
 
 **Relevance for neurodivergent individuals**: Proximity sensor events reveal phone-to-ear (call) duration and face-down placement. Face-down phone placement correlates with intentional focus periods, while prolonged phone-to-ear events indicate call engagement.
 
-**Cytos LinkML mapping**: [AWAREProximity](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L115-L118) → `is_a: Observation`
+**Cytos LinkML mapping**: [AWAREProximity](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L115-L118) → `is_a: Observation`
 
 **Recommended sampling rate**: Event-driven (sensor triggers on proximity change)
 
@@ -481,9 +481,9 @@ ActivityRecognitionEvent:
 | `accuracy` | REAL | Horizontal accuracy (meters) |
 | `provider` | TEXT | GPS, network, fused |
 
-**Cytos LinkML mapping**: [AWARELocation](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L130-L133) → `is_a: LocationFix`
+**Cytos LinkML mapping**: [AWARELocation](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L130-L133) → `is_a: LocationFix`
 
-The parent [LocationFix](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/context.yaml#L28-L52) provides the full location schema:
+The parent [LocationFix](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/context.yaml#L28-L52) provides the full location schema:
 
 ```yaml
 LocationFix:
@@ -549,9 +549,9 @@ LocationFix:
 |--------|------|-------------|
 | `screen_status` | INTEGER | 0=off, 1=on, 2=locked, 3=unlocked |
 
-**Cytos LinkML mapping**: [AWAREScreen](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L166-L169) → `is_a: ScreenEvent`
+**Cytos LinkML mapping**: [AWAREScreen](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L166-L169) → `is_a: ScreenEvent`
 
-The parent [ScreenEvent](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/context.yaml#L55-L60):
+The parent [ScreenEvent](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/context.yaml#L55-L60):
 
 ```yaml
 ScreenEvent:
@@ -598,9 +598,9 @@ ScreenEvent:
 | `application_name` | TEXT | Human-readable app name |
 | `is_system_app` | INTEGER | 1 if system app, 0 otherwise |
 
-**Cytos LinkML mapping**: [AWAREApplications](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L176-L179) → `is_a: AppForegroundEvent`
+**Cytos LinkML mapping**: [AWAREApplications](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L176-L179) → `is_a: AppForegroundEvent`
 
-The parent [AppForegroundEvent](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/context.yaml#L62-L71):
+The parent [AppForegroundEvent](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/context.yaml#L62-L71):
 
 ```yaml
 AppForegroundEvent:
@@ -647,9 +647,9 @@ AppForegroundEvent:
 | `vibrate` | INTEGER | Whether notification vibrated |
 | `flags` | TEXT | Notification flags |
 
-**Cytos LinkML mapping**: [AWARENotifications](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L181-L184) → `is_a: NotificationEvent`
+**Cytos LinkML mapping**: [AWARENotifications](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L181-L184) → `is_a: NotificationEvent`
 
-The parent [NotificationEvent](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/context.yaml#L73-L89) enforces privacy:
+The parent [NotificationEvent](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/context.yaml#L73-L89) enforces privacy:
 
 ```yaml
 NotificationEvent:
@@ -687,9 +687,9 @@ NotificationEvent:
 | `backspace_count` | INTEGER | Backspace presses in the interval |
 | `package_name` | TEXT | Active app during typing |
 
-**Cytos LinkML mapping**: [AWAREKeyboard](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L214-L217) → `is_a: KeyboardEvent`
+**Cytos LinkML mapping**: [AWAREKeyboard](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L214-L217) → `is_a: KeyboardEvent`
 
-The parent [KeyboardEvent](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/context.yaml#L116-L125):
+The parent [KeyboardEvent](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/context.yaml#L116-L125):
 
 ```yaml
 KeyboardEvent:
@@ -721,9 +721,9 @@ KeyboardEvent:
 | `touch_action` | TEXT | Gesture type |
 | `package_name` | TEXT | Active app during touch |
 
-**Cytos LinkML mapping**: [AWARETouch](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L219-L222) → `is_a: TouchEvent`
+**Cytos LinkML mapping**: [AWARETouch](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L219-L222) → `is_a: TouchEvent`
 
-The parent [TouchEvent](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/context.yaml#L127-L134):
+The parent [TouchEvent](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/context.yaml#L127-L134):
 
 ```yaml
 TouchEvent:
@@ -764,9 +764,9 @@ TouchEvent:
 | `call_duration` | INTEGER | Duration in seconds |
 | `trace` | TEXT | **SHA-256 hash** of phone number |
 
-**Cytos LinkML mapping**: [AWARECommunication](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L186-L189) → `is_a: CommunicationEvent`
+**Cytos LinkML mapping**: [AWARECommunication](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L186-L189) → `is_a: CommunicationEvent`
 
-The parent [CommunicationEvent](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/context.yaml#L91-L105):
+The parent [CommunicationEvent](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/context.yaml#L91-L105):
 
 ```yaml
 CommunicationEvent:
@@ -807,7 +807,7 @@ CommunicationEvent:
 
 **What it measures**: Cellular network state, signal strength, and telephony events (distinct from communication content events).
 
-**Cytos LinkML mapping**: [AWARETelephony](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L171-L174) → `is_a: Observation`
+**Cytos LinkML mapping**: [AWARETelephony](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L171-L174) → `is_a: Observation`
 
 **Recommended sampling rate**: Event-driven
 
@@ -833,9 +833,9 @@ CommunicationEvent:
 | `battery_voltage` | INTEGER | Voltage in millivolts |
 | `battery_temperature` | INTEGER | Temperature in tenths of °C |
 
-**Cytos LinkML mapping**: [AWAREBattery](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L204-L207) → `is_a: BatteryEvent`
+**Cytos LinkML mapping**: [AWAREBattery](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L204-L207) → `is_a: BatteryEvent`
 
-The parent [BatteryEvent](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/context.yaml#L147-L160):
+The parent [BatteryEvent](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/context.yaml#L147-L160):
 
 ```yaml
 BatteryEvent:
@@ -856,9 +856,9 @@ BatteryEvent:
 
 **What it measures**: Network connectivity state changes: type (WiFi, cellular, Bluetooth, VPN), connected status, and hashed SSID.
 
-**Cytos LinkML mapping**: [AWARENetwork](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L135-L138) → `is_a: NetworkEvent`
+**Cytos LinkML mapping**: [AWARENetwork](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L135-L138) → `is_a: NetworkEvent`
 
-The parent [NetworkEvent](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/context.yaml#L162-L173):
+The parent [NetworkEvent](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/context.yaml#L162-L173):
 
 ```yaml
 NetworkEvent:
@@ -892,7 +892,7 @@ NetworkEvent:
 | `rssi` | INTEGER | Signal strength (dBm) |
 | `frequency` | INTEGER | Channel frequency (MHz) |
 
-**Cytos LinkML mapping**: [AWAREWifi](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L140-L153) → `is_a: Observation`
+**Cytos LinkML mapping**: [AWAREWifi](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L140-L153) → `is_a: Observation`
 
 ```yaml
 AWAREWifi:
@@ -916,7 +916,7 @@ AWAREWifi:
 
 **Relevance for neurodivergent individuals**: Bluetooth proximity data reveals social context (co-located devices) and wearable connectivity status.
 
-**Cytos LinkML mapping**: [AWAREBluetooth](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L155-L164) → `is_a: Observation`
+**Cytos LinkML mapping**: [AWAREBluetooth](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L155-L164) → `is_a: Observation`
 
 ```yaml
 AWAREBluetooth:
@@ -940,12 +940,12 @@ The AWARE profile also includes several auxiliary sensor classes:
 
 | Sensor | Parent Class | Purpose |
 |--------|-------------|---------|
-| [AWARELinearAcceleration](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L92-L95) | Observation | Gravity-free acceleration vector |
-| [AWARERotation](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L97-L100) | Observation | Device rotation vector |
-| [AWAREGravity](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L102-L105) | Observation | Gravity-only acceleration component |
-| [AWAREProcessor](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L196-L202) | Observation | CPU load for resource management |
-| [AWAREInstallations](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L209-L212) | InstallationEvent | App install/update/uninstall events |
-| [AWAREScheduler](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L224-L227) | Observation | AWARE internal scheduling events |
+| [AWARELinearAcceleration](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L92-L95) | Observation | Gravity-free acceleration vector |
+| [AWARERotation](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L97-L100) | Observation | Device rotation vector |
+| [AWAREGravity](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L102-L105) | Observation | Gravity-only acceleration component |
+| [AWAREProcessor](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L196-L202) | Observation | CPU load for resource management |
+| [AWAREInstallations](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L209-L212) | InstallationEvent | App install/update/uninstall events |
+| [AWAREScheduler](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L224-L227) | Observation | AWARE internal scheduling events |
 
 ---
 
@@ -989,7 +989,7 @@ flowchart TB
     style SurveyItemAnswer fill:#14A3A3,color:#fff
 ```
 
-The [AWAREESM](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml#L229-L233) class extends [ESMPrompt](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml#L151-L165), which itself extends [SurveyInstrument](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml#L30-L57):
+The [AWAREESM](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml#L229-L233) class extends [ESMPrompt](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/selfreport.yaml#L151-L165), which itself extends [SurveyInstrument](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/selfreport.yaml#L30-L57):
 
 ```yaml
 AWAREESM:
@@ -1022,7 +1022,7 @@ ESMPrompt:
 
 ### 4.4 Question Types
 
-The Cytos [SurveyAnswerTypeEnum](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml#L170-L188) supports:
+The Cytos [SurveyAnswerTypeEnum](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/selfreport.yaml#L170-L188) supports:
 
 | Type | Description | Typical Use |
 |------|-------------|------------|
@@ -2013,11 +2013,11 @@ classDiagram
 
 ## 8. Next Steps
 
-1. **Full Cytos sensor schema**: Explore the complete schema hierarchy at [cytos/schemas/domains/sensor/](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/)
-   - [core.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml): Root SOSA-aligned schema
-   - [context.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/context.yaml): Smartphone context events
-   - [selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml): ESM/EMA survey infrastructure
-   - [profile_aware.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml): AWARE-specific profile
+1. **Full Cytos sensor schema**: Explore the complete schema hierarchy at [cytos/schemas/domains/sensor/](https://github.com/cytognosis/cytos/tree/main/schemas/domains/sensor)
+   - [core.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/core.yaml): Root SOSA-aligned schema
+   - [context.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/context.yaml): Smartphone context events
+   - [selfreport.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/selfreport.yaml): ESM/EMA survey infrastructure
+   - [profile_aware.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml): AWARE-specific profile
 
 2. **Semantic alignment**: Reference the semantic alignment documentation at [docs/cytonome/yar/sensors/semantic-alignment.md](../../cytos/sensing-schema/semantic-alignment.md) (forthcoming) for SOSA/SSN, FHIR R5, and IEEE 1752 interoperability mapping.
 

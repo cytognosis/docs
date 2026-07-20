@@ -171,7 +171,7 @@ See `/Plans/design/07_yar/02_checklist.md` (target archived/removed). Key:
 ### 5.1 Repository
 
 - URL: github.com/cytognosis/Yar
-- Refactor sandbox: `/home/mohammadi/repos/cytognosis/refactor/Yar/`
+- Refactor sandbox: `https://github.com/cytognosis/refactor/Yar/`
 - Branches: `main`, `firstVersion`, `refactor/v2-multi-app-monorepo`, `app/mobile`, `app/desktop`, `app/extension`, `app/web`
 
 ### 5.2 Features (current MVP)

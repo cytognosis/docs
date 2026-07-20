@@ -10,7 +10,7 @@
 **Date:** 2026-07-06
 **Evaluator:** Cytognosis Foundation
 **Subject:** Ali's new Yar client (Tauri + TypeScript/React + Django backend)
-**Source:** `~/repos/cytognosis/yar_revisions/yar-code-20260705-2354/`
+**Source:** `https://github.com/cytognosis/yar_revisions/yar-code-20260705-2354/`
 
 ---
 

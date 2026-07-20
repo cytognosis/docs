@@ -33,7 +33,7 @@
 - Cytoplex or the Cytognosis Authority Protocol: use the `docs` repo
 
 > Key naming facts (as of 2026-05-29):
-> - **cyto-skills** = rename of **cytoagent** (Python to JavaScript/Node.js). Repo: `~/repos/cytognosis/cytoskills`.
+> - **cyto-skills** = rename of **cytoagent** (Python to JavaScript/Node.js). Repo: `https://github.com/cytognosis/cytoskills`.
 > - **Cytoplex** (formerly CAP) = component of Cytonome, NOT part of cyto-skills.
 > - Spec/design docs live in the central `docs` repo; user-facing docs stay in source repos.
 
@@ -54,14 +54,14 @@ Developer
 
 | Repo | Purpose | Local Path |
 |------|---------|------------|
-| `cytocast` | Copier template engine + dev skills + shared CI | `~/repos/cytognosis/cytocast` |
-| `cytoskeleton` | Component-based env manager + interface templates + schemas | `~/repos/cytognosis/cytoskeleton` |
-| `branding` | Design system + brand-phase skills | `~/repos/cytognosis/org/branding` |
-| `cyto-skills` (was `cytoagent`) | JS/Node.js skill runtime | `~/repos/cytognosis/cytoskills` |
-| `cytos` | Foundation kernel | `~/repos/cytognosis/cytos` |
-| `Yar` | Personal KG system; multi-app monorepo | `~/repos/cytognosis/Yar` |
-| `Cytoplex` (was `CAP`) | Cytognosis Authority Protocol; component of Cytonome | `~/repos/cytognosis/CAP` |
-| `docs` | Central spec/design documentation | `~/repos/cytognosis/docs` |
+| `cytocast` | Copier template engine + dev skills + shared CI | `https://github.com/cytognosis/cytocast` |
+| `cytoskeleton` | Component-based env manager + interface templates + schemas | `https://github.com/cytognosis/cytoskeleton` |
+| `branding` | Design system + brand-phase skills | `https://github.com/cytognosis/org/tree/main/branding` |
+| `cyto-skills` (was `cytoagent`) | JS/Node.js skill runtime | `https://github.com/cytognosis/cytoskills` |
+| `cytos` | Foundation kernel | `https://github.com/cytognosis/cytos` |
+| `Yar` | Personal KG system; multi-app monorepo | `https://github.com/cytognosis/Yar` |
+| `Cytoplex` (was `CAP`) | Cytognosis Authority Protocol; component of Cytonome | `https://github.com/cytognosis/CAP` |
+| `docs` | Central spec/design documentation | `https://github.com/cytognosis/docs` |
 
 ---
 

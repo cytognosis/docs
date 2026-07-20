@@ -13,11 +13,11 @@
 ## 1. The homes (where any asset can be)
 | Home | Path | What lives here |
 |---|---|---|
-| Docs repo (home of record) | `~/repos/cytognosis/docs` | all technical docs, 8 pillars, specs, contracts |
+| Docs repo (home of record) | `https://github.com/cytognosis/docs` | all technical docs, 8 pillars, specs, contracts |
 | Obsidian vault (twins) | `~/Documents/ObsidianVault` | plain-language twins, same path+filename |
 | Claude projects (workspaces) | `~/Claude/Projects` | drafts + _context slices into docs |
-| Datasets store | `~/datasets/cytognosis` | data, large binaries |
-| Code repos | `~/repos/cytognosis` | all git repositories |
+| Datasets store | `https://github.com/cytognosis/datasets/tree/main/cytognosis` | data, large binaries |
+| Code repos | `https://github.com/cytognosis` | all git repositories |
 | Mission board | http://127.0.0.1:40601 (+ tailnet URL) | task cards, worktrees, runs (pointers only) |
 | cytomem (graph) | Neo4j @ localhost:7687 + MCP | queryable index of all of the above |
 | Google Drive (shared) | `~/.mnt/cytognosis-gdrive/Cytognosis Foundation` | governance, originals, some assets only-here |
@@ -67,20 +67,20 @@
 | 07-Design | 1 | 41 |
 
 ## 5. Datasets store + Drive top-level
-**Datasets** (`~/datasets/cytognosis`):
-- 5.7M	/home/mohammadi/datasets/cytognosis/ICD-11-CDDR/
-- 16K	/home/mohammadi/datasets/cytognosis/curations/
-- 475M	/home/mohammadi/datasets/cytognosis/design-system-sources/
-- 4.0K	/home/mohammadi/datasets/cytognosis/external/
-- 46M	/home/mohammadi/datasets/cytognosis/grants-large/
-- 12K	/home/mohammadi/datasets/cytognosis/metadata/
-- 140M	/home/mohammadi/datasets/cytognosis/neuroverse-ontologies/
-- 3.2M	/home/mohammadi/datasets/cytognosis/ontologies/
-- 16K	/home/mohammadi/datasets/cytognosis/operations/
-- 8.0K	/home/mohammadi/datasets/cytognosis/products/
-- 4.0M	/home/mohammadi/datasets/cytognosis/science-platform/
-- 8.0K	/home/mohammadi/datasets/cytognosis/treatments/
-- 64K	/home/mohammadi/datasets/cytognosis/yar/
+**Datasets** (`https://github.com/cytognosis/datasets/tree/main/cytognosis`):
+- 5.7M	https://github.com/cytognosis/datasets/tree/main/cytognosis/ICD-11-CDDR
+- 16K	https://github.com/cytognosis/datasets/tree/main/cytognosis/curations
+- 475M	https://github.com/cytognosis/datasets/tree/main/cytognosis/design-system-sources
+- 4.0K	https://github.com/cytognosis/datasets/tree/main/cytognosis/external
+- 46M	https://github.com/cytognosis/datasets/tree/main/cytognosis/grants-large
+- 12K	https://github.com/cytognosis/datasets/tree/main/cytognosis/metadata
+- 140M	https://github.com/cytognosis/datasets/tree/main/cytognosis/neuroverse-ontologies
+- 3.2M	https://github.com/cytognosis/datasets/tree/main/cytognosis/ontologies
+- 16K	https://github.com/cytognosis/datasets/tree/main/cytognosis/operations
+- 8.0K	https://github.com/cytognosis/datasets/tree/main/cytognosis/products
+- 4.0M	https://github.com/cytognosis/datasets/tree/main/cytognosis/science-platform
+- 8.0K	https://github.com/cytognosis/datasets/tree/main/cytognosis/treatments
+- 64K	https://github.com/cytognosis/datasets/tree/main/cytognosis/yar
 
 **Google Drive shared** (`~/.mnt/cytognosis-gdrive/Cytognosis Foundation`):
 - Cytognosis
@@ -104,7 +104,7 @@
 1. **Ask cytomem**: `cytomem recall "<what you're looking for>"` (semantic search over 31 repos). System of record.
 2. **Where does a NEW asset go?** -> ONTOLOGY.md placement ladder + PROJECT-MAP.md (project<->pillar).
 3. **A specific doc?** -> its pillar in the docs repo; plain-language version = same path in the vault.
-4. **A dataset?** -> `~/datasets/cytognosis`; access/modality in the dataset registry (06-Operations, in progress).
+4. **A dataset?** -> `https://github.com/cytognosis/datasets/tree/main/cytognosis`; access/modality in the dataset registry (06-Operations, in progress).
 5. **A grant/proposal?** -> `02-Funding/submissions` (IGoR = `.../ARPA-H/IGoR/INDEX.md`).
 6. **Governance/legal/branding originals?** -> Google Drive mount + `gdrive-*-index.md` under the relevant pillar.
 7. **In-flight agent work?** -> the mission board (worktree branches `vk/*`); nothing merges to main without review.

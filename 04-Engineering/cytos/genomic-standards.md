@@ -38,12 +38,12 @@ SHA-512 digest of the canonical JSON representation. Requires:
 ```bash
 pip install biocommons.seqrepo
 seqrepo pull -i 2021-01-29   # ~50GB
-export SEQREPO_ROOT=/home/mohammadi/datasets/04-identifiers/seqrepo
+export SEQREPO_ROOT=~/datasets/04-identifiers/seqrepo
 ```
 
 ### TBX1 SV (Shahin's diagnostic variant)
 Located at chr22:19,756,000 (GRCh38). Insertion ~2.5kb.
-Sequence in `/home/mohammadi/datasets/06-genotype/personal/Shahin/insertion_TBX1.fa`.
+Sequence in `https://github.com/cytognosis/datasets/tree/main/06-genotype/personal/Shahin/insertion_TBX1.fa`.
 VRS class: `Adjacency` with two `SequenceLocation` breakpoints.
 Clinical significance: Pathogenic, OMIM 188400 (DiGeorge syndrome / 22q11.2DS).
 
@@ -97,7 +97,7 @@ TOURETTE.tsv.gz  TS.tsv.gz
 ## Sequence Ontology (SO)
 
 **Source:** http://www.sequenceontology.org/
-**OBO file:** `/home/mohammadi/datasets/04-identifiers/ontologies/so.obo`
+**OBO file:** `https://github.com/cytognosis/datasets/tree/main/04-identifiers/ontologies/so.obo`
 **Version loaded:** 2.5.3 (latest release)
 
 ### Key term accessions
@@ -255,7 +255,7 @@ PEC_RNA/snp/    → 226 samples (RNA-derived imputed genotypes)
 ```
 
 ### LDGM TileDB Arrays
-Location: `/home/mohammadi/datasets/06-genotype/ldgm/tiledb/`
+Location: `https://github.com/cytognosis/datasets/tree/main/06-genotype/ldgm/tiledb`
 Schema: sparse 2D (row=SNP index i, col=SNP index j) + attribute `weight` (Ω_ij)
 One TileDB array per block. DuckDB index (`index.duckdb`) maps block_id → TileDB path.
 

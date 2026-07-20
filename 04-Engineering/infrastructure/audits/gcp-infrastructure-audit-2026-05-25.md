@@ -6,7 +6,7 @@
 > **Audience**: engineers, compliance
 > **Tags**: `audit`, `gcs`, `hipaa`, `iam`, `compliance`
 
-**Origin**: Imported from `/home/mohammadi/Documents/ObsidianVault/06-Operations/infrastructure/gcp-infrastructure-audit-2026-05-25.md` (Obsidian ADHD-friendly reformatted version, created 2026-05-29).
+**Origin**: Imported from `~/Documents/ObsidianVault/06-Operations/infrastructure/gcp-infrastructure-audit-2026-05-25.md` (Obsidian ADHD-friendly reformatted version, created 2026-05-29).
 
 **Last verified: 2026-05-25** (audit date).
 
@@ -181,4 +181,4 @@ graph TD
 - [service-accounts.md](../service-accounts.md)
 - [DNS_AND_GCP_ARCHITECTURE.md](../DNS_AND_GCP_ARCHITECTURE.md)
 - [data-strategy/TECHNICAL_DATA_INFRASTRUCTURE.md](../data-strategy/TECHNICAL_DATA_INFRASTRUCTURE.md)
-- 2026-06-14 ground-truth audit: `/home/mohammadi/.config/Claude/local-agent-mode-sessions/3750a277-0510-4821-96ac-e031664d2c06/.../outputs/infra/GCP_GROUND_TRUTH.md`
+- 2026-06-14 ground-truth audit: `~/.config/Claude/local-agent-mode-sessions/3750a277-0510-4821-96ac-e031664d2c06/.../outputs/infra/GCP_GROUND_TRUTH.md`

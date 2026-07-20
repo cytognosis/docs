@@ -33,16 +33,16 @@ The sensor documentation is substantial but fragmented across three distinct loc
 
 | File | Lines | Content |
 |---|---|---|
-| [core/core.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/core.yaml) | 1,460 | Core spine: Subject, Device, Sensor, Channel, Platform, Deployment, Session, Observation, Result, Stream, UnitValue, TimeFrame |
-| [core/selfreport.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/selfreport.yaml) | 198 | SurveyInstrument, SurveyResponse, ESMPrompt |
-| [core/context.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/core/context.yaml) | 255 | Mobile context: Location, Screen, App, Notification, Communication events |
-| [profiles/profile_sosa.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_sosa.yaml) | 79 | SOSA/SSN class/slot URI bindings |
-| [profiles/profile_ieee1752.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_ieee1752.yaml) | 351 | IEEE 1752.1 / Open mHealth body-schema mirror |
-| [profiles/profile_fhir.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_fhir.yaml) | 264 | FHIR R5 Observation/Device/DeviceMetric/DeviceUsage |
-| [profiles/profile_aware.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_aware.yaml) | 232 | AWARE framework smartphone sensors |
-| [profiles/profile_bt_ghs.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_bt_ghs.yaml) | 198 | Bluetooth GHS + IEEE 11073 |
-| [profiles/profile_mcphases.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/profiles/profile_mcphases.yaml) | 566 | Test-case profile: PhysioNet mcPHASES dataset |
-| [vendors/*.yaml](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/vendors/) | 383 | Vendor adapters: Cytoscope, Fitbit, Dexcom, Mira, Oura |
+| [core/core.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/core.yaml) | 1,460 | Core spine: Subject, Device, Sensor, Channel, Platform, Deployment, Session, Observation, Result, Stream, UnitValue, TimeFrame |
+| [core/selfreport.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/selfreport.yaml) | 198 | SurveyInstrument, SurveyResponse, ESMPrompt |
+| [core/context.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/core/context.yaml) | 255 | Mobile context: Location, Screen, App, Notification, Communication events |
+| [profiles/profile_sosa.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_sosa.yaml) | 79 | SOSA/SSN class/slot URI bindings |
+| [profiles/profile_ieee1752.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_ieee1752.yaml) | 351 | IEEE 1752.1 / Open mHealth body-schema mirror |
+| [profiles/profile_fhir.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_fhir.yaml) | 264 | FHIR R5 Observation/Device/DeviceMetric/DeviceUsage |
+| [profiles/profile_aware.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_aware.yaml) | 232 | AWARE framework smartphone sensors |
+| [profiles/profile_bt_ghs.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_bt_ghs.yaml) | 198 | Bluetooth GHS + IEEE 11073 |
+| [profiles/profile_mcphases.yaml](https://github.com/cytognosis/cytos/blob/main/schemas/domains/sensor/profiles/profile_mcphases.yaml) | 566 | Test-case profile: PhysioNet mcPHASES dataset |
+| [vendors/*.yaml](https://github.com/cytognosis/cytos/tree/main/schemas/domains/sensor/vendors) | 383 | Vendor adapters: Cytoscope, Fitbit, Dexcom, Mira, Oura |
 | README.md (target archived/removed) | 75 | Schema architecture overview |
 
 ### Location 3: `archive/neuro-pheno/design_draft/schemas/research/` (Research docs, 1,581 lines)

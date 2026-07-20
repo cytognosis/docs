@@ -20,7 +20,7 @@ This document defines the Virtual File System (VFS) module that lives in cytoske
 
 Three concrete pain points motivate this layer:
 
-1. **Path coupling**. cytos `dvc.yaml` references `${data_lake}/05-annotations/topic-areas/`; if the data lake moves from `~/datasets/` to `gs://cytognosis-data/datasets/`, the pipeline breaks until every config is rewritten.
+1. **Path coupling**. cytos `dvc.yaml` references `${data_lake}/05-annotations/topic-areas/`; if the data lake moves from `https://github.com/cytognosis/datasets` to `gs://cytognosis-data/datasets/`, the pipeline breaks until every config is rewritten.
 
 2. **Provenance gaps**. cytos `ro-crate-metadata.json` records `nodes.tsv` and `edges.tsv` but doesn't hash them in the Crate; a third party can't verify "this is the same nodes.tsv". The Cytos sensor universal schema design §7 open question 5 calls out the same issue for waveform URIs.
 

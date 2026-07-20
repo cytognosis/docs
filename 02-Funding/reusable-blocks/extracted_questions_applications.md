@@ -9,7 +9,7 @@
 
 Questions extracted verbatim (or normalized) from the 5 existing Cytognosis applications, with word/character limits where specified, ordered as they appear in each application. Used as inputs for the universal template (see `universal_template.md`).
 
-Source files (all under `/home/mohammadi/Documents/Strategy/Applications/`):
+Source files (all under `~/Documents/Strategy/Applications/`):
 - **Google** → `Google/GoogleImpact_Application_Page.md` (web form, detailed per-question word limits)
 - **Astera** → `Astera/Astera_submited_application_responses.md` + `Astera/Astera_Residency_page.md` (rubric)
 - **Brains** → `Brains/Brains Accelerator Application (Winter 2025).md` + `Brains/Brains_home_page.md` (6 Heilmeier-based short-answer questions)

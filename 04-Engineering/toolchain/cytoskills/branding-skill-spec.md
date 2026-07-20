@@ -162,7 +162,7 @@ The full protocol lives at `docs/design/claude-design-sync-protocol.md`.
 
 ## Relationship to Branding Repo
 
-The branding repo (`~/repos/cytognosis/branding`) is the production source of truth for all design system artifacts. This skill consumes and re-packages the branding repo content for agent consumption.
+The branding repo (`https://github.com/cytognosis/branding`) is the production source of truth for all design system artifacts. This skill consumes and re-packages the branding repo content for agent consumption.
 
 ```mermaid
 flowchart LR

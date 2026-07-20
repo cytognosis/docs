@@ -12,7 +12,7 @@ datasets:
   - id: ontologies-obo-51
     name: "OBO Foundry Ontologies (51 OWL files)"
     category: ontologies
-    local_path: "~/datasets/01-ontologies"
+    local_path: "https://github.com/cytognosis/datasets/tree/main/01-ontologies"
     access_tier: T1
     version: "various (588-643 days stale)"
     license: "CC-BY-4.0 / CC0"
@@ -26,7 +26,7 @@ datasets:
   - id: umls-2026aa
     name: "UMLS Metathesaurus 2026AA"
     category: vocabularies
-    local_path: "~/datasets/02-vocabularies/UMLS"
+    local_path: "https://github.com/cytognosis/datasets/tree/main/02-vocabularies/UMLS"
     access_tier: T3
     version: "2026AA"
     license: "UMLS-License"
@@ -39,7 +39,7 @@ datasets:
   - id: snomed-ct
     name: "SNOMED CT US Edition"
     category: vocabularies
-    local_path: "~/datasets/02-vocabularies/SnomedCT"
+    local_path: "https://github.com/cytognosis/datasets/tree/main/02-vocabularies/SnomedCT"
     access_tier: T3
     version: "2024-09-01"
     license: "SNOMED-License"
@@ -52,7 +52,7 @@ datasets:
   - id: loinc
     name: "LOINC"
     category: vocabularies
-    local_path: "~/datasets/02-vocabularies/LOINC"
+    local_path: "https://github.com/cytognosis/datasets/tree/main/02-vocabularies/LOINC"
     access_tier: T2
     version: "2.78"
     license: "LOINC-License"
@@ -66,7 +66,7 @@ datasets:
   - id: monarch-kg
     name: "Monarch Knowledge Graph"
     category: knowledge-graphs
-    local_path: "~/datasets/03-knowledge-graphs/monarch"
+    local_path: "https://github.com/cytognosis/datasets/tree/main/03-knowledge-graphs/monarch"
     access_tier: T1
     version: "2024-08"
     license: "CC0"
@@ -79,7 +79,7 @@ datasets:
   - id: primekg
     name: "PrimeKG"
     category: knowledge-graphs
-    local_path: "~/datasets/03-knowledge-graphs/primekg"
+    local_path: "https://github.com/cytognosis/datasets/tree/main/03-knowledge-graphs/primekg"
     access_tier: T1
     version: "2023-02"
     license: "MIT"
@@ -91,7 +91,7 @@ datasets:
   - id: open-targets
     name: "Open Targets Platform"
     category: knowledge-graphs
-    local_path: "~/datasets/03-knowledge-graphs/open-targets"
+    local_path: "https://github.com/cytognosis/datasets/tree/main/03-knowledge-graphs/open-targets"
     access_tier: T1
     version: "25.03"
     license: "Apache-2.0"
@@ -104,7 +104,7 @@ datasets:
   - id: pkg2
     name: "Precision Knowledge Graph 2.0"
     category: knowledge-graphs
-    local_path: "~/datasets/03-knowledge-graphs/pkg2.0"
+    local_path: "https://github.com/cytognosis/datasets/tree/main/03-knowledge-graphs/pkg2.0"
     access_tier: T1
     version: "2.0"
     license: "CC-BY-4.0"
@@ -116,7 +116,7 @@ datasets:
   - id: pheknowlator
     name: "PheKnowLator"
     category: knowledge-graphs
-    local_path: "~/datasets/03-knowledge-graphs/pheknowlator"
+    local_path: "https://github.com/cytognosis/datasets/tree/main/03-knowledge-graphs/pheknowlator"
     access_tier: T1
     version: "current_build"
     license: "BSD-3-Clause"
@@ -129,7 +129,7 @@ datasets:
   - id: ols4-sssom
     name: "OLS4 SSSOM Cross-Ontology Mappings"
     category: identifiers
-    local_path: "~/datasets/04-identifiers/ols4-sssom/sssom"
+    local_path: "https://github.com/cytognosis/datasets/tree/main/04-identifiers/ols4-sssom/sssom"
     access_tier: T1
     version: "2024-Q4"
     license: "CC0"
@@ -142,7 +142,7 @@ datasets:
   - id: unichem
     name: "UniChem Cross-References"
     category: identifiers
-    local_path: "~/datasets/04-identifiers/databases/UniChem"
+    local_path: "https://github.com/cytognosis/datasets/tree/main/04-identifiers/databases/UniChem"
     access_tier: T1
     version: "latest"
     license: "CC-BY-SA-3.0"
@@ -155,7 +155,7 @@ datasets:
   - id: gwas-summary-stats
     name: "GWAS Summary Statistics (8 traits)"
     category: genotype
-    local_path: "~/datasets/06-genotype/gwas"
+    local_path: "https://github.com/cytognosis/datasets/tree/main/06-genotype/gwas"
     access_tier: T1
     version: "various"
     license: "various"
@@ -168,7 +168,7 @@ datasets:
   - id: ldgm
     name: "LDGM Precision Matrices"
     category: genotype
-    local_path: "~/datasets/06-genotype/ldgm"
+    local_path: "https://github.com/cytognosis/datasets/tree/main/06-genotype/ldgm"
     access_tier: T1
     version: "2024"
     license: "MIT"
@@ -182,7 +182,7 @@ datasets:
   - id: neuroimaging-bids
     name: "Neuroimaging BIDS datasets"
     category: neuroimaging
-    local_path: "~/datasets/08-neuroimaging"
+    local_path: "https://github.com/cytognosis/datasets/tree/main/08-neuroimaging"
     access_tier: T2
     version: "various"
     license: "various"

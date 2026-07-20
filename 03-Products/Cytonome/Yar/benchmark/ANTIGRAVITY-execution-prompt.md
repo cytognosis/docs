@@ -38,7 +38,7 @@ tags: [yar, storage, benchmark, surrealdb, falkordb, sqlite, neo4j, graphrag, cy
 
 All work in this runbook is additive: it does not change the architecture decision (SQLite = phone/laptop MVP, FalkorDB = current server graph projection). It determines whether SurrealDB graduates from "retest candidate" to "validated GraphRAG projection."
 
-**Scope is also cytomem.** The cytomem service (at `/home/mohammadi/repos/cytognosis/cytomem`) uses Neo4j. It has a known O(n) CONTAINS scan on keyword search. This runbook fixes that, activates the existing Graphiti recall path, and benchmarks recall quality before and after.
+**Scope is also cytomem.** The cytomem service (at `https://github.com/cytognosis/cytomem`) uses Neo4j. It has a known O(n) CONTAINS scan on keyword search. This runbook fixes that, activates the existing Graphiti recall path, and benchmarks recall quality before and after.
 
 ---
 
@@ -48,17 +48,17 @@ Read all of these before writing any code. They contain exact file paths, line n
 
 | Document | Path | Purpose |
 |---|---|---|
-| Benchmark evaluation and results | `/home/mohammadi/repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmark/BENCHMARK-evaluation-and-results.md` | Authoritative results, issue list (12 package-level issues), SurrealDB artifact verdict, Section 8 validity requirements |
-| Benchmark prompts catalog | `/home/mohammadi/repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmark/BENCHMARK-prompts-catalog.md` | Status of each prior patch (A1-A5), which are canonical vs superseded; Section 4 lists N1-N3 prompts needed for this phase |
-| cytomem GraphRAG integration and optimization | `/home/mohammadi/repos/cytognosis/docs/03-Products/Cytonome/Yar/benchmark/CYTOMEM-graphrag-integration-and-optimization.md` | cytomem architecture (Section 1), fit assessment (Section 2), GraphRAG framework comparison (Section 3), concrete optimizations (Section 4), desktop benchmark plan (Section 5) |
-| Benchmark revision plan | `/home/mohammadi/repos/cytognosis/docs/03-Products/Cytonome/Yar/consolidation_2026-06-21/_storage/BENCHMARK_REVISION_PLAN.md` | All 12 package-level issues with exact file paths and line numbers, local install plan (Section 3), optimal engine configuration (Section 4), 9 code revisions CR-1 through CR-9 (Section 5), rerun procedure (Section 6), risks R1-R8 |
-| SurrealDB code audit | `/home/mohammadi/repos/cytognosis/docs/03-Products/Cytonome/Yar/consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md` | 8 code-level issues ranked by impact, exact before/after code for each fix, Summary Table |
-| SurrealDB tuning and GraphRAG guide | `/home/mohammadi/repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SurrealDB-tuning-and-graphrag-guide.md` | Troubleshooting table T1-T12, SCHEMAFULL schema, FTS analyzer and index syntax, KNN operator forms, persistent WebSocket pattern, GraphRAG query patterns (Section 4), verification checklist (Section 6) |
-| SurrealDB advanced optimization and versions | `/home/mohammadi/repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SurrealDB-advanced-optimization-and-versions.md` | Latest versions and relevant changes (Section 1), advanced optimization configs (Section 2), maximum-performance checklist (Section 4), docker-compose.yml and run script changes (Section 5) |
-| Storage benchmark tracker | `/home/mohammadi/repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/STORAGE_BENCHMARK_TRACKER.md` | Living master status table (Section 1), open decisions O-1 through O-8 (Section 3) |
-| Benchmark package top-level README | `/home/mohammadi/repos/cytognosis/yar_supervisor_reproducible_benchmark_package/README.md` | Run commands, architecture decision summary, reference output list |
-| PATCH10 README | `/home/mohammadi/repos/cytognosis/yar_supervisor_reproducible_benchmark_package/db_benchmark/README_PATCH10_SURREAL_FTS_RUNTIME_FIX.md` | Canonical prior patch; PATCH11 is built on top of it |
-| cytomem repo | `/home/mohammadi/repos/cytognosis/cytomem` | Source of truth for cytomem code; key files: `src/cytomem/graph/queries.py`, `src/cytomem/graph/client.py`, `src/cytomem/mcp/server.py` |
+| Benchmark evaluation and results | `https://github.com/cytognosis/docs/blob/main/03-Products/Cytonome/Yar/benchmark/BENCHMARK-evaluation-and-results.md` | Authoritative results, issue list (12 package-level issues), SurrealDB artifact verdict, Section 8 validity requirements |
+| Benchmark prompts catalog | `https://github.com/cytognosis/docs/blob/main/03-Products/Cytonome/Yar/benchmark/BENCHMARK-prompts-catalog.md` | Status of each prior patch (A1-A5), which are canonical vs superseded; Section 4 lists N1-N3 prompts needed for this phase |
+| cytomem GraphRAG integration and optimization | `https://github.com/cytognosis/docs/blob/main/03-Products/Cytonome/Yar/benchmark/CYTOMEM-graphrag-integration-and-optimization.md` | cytomem architecture (Section 1), fit assessment (Section 2), GraphRAG framework comparison (Section 3), concrete optimizations (Section 4), desktop benchmark plan (Section 5) |
+| Benchmark revision plan | `https://github.com/cytognosis/docs/blob/main/03-Products/Cytonome/Yar/consolidation_2026-06-21/_storage/BENCHMARK_REVISION_PLAN.md` | All 12 package-level issues with exact file paths and line numbers, local install plan (Section 3), optimal engine configuration (Section 4), 9 code revisions CR-1 through CR-9 (Section 5), rerun procedure (Section 6), risks R1-R8 |
+| SurrealDB code audit | `https://github.com/cytognosis/docs/blob/main/03-Products/Cytonome/Yar/consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md` | 8 code-level issues ranked by impact, exact before/after code for each fix, Summary Table |
+| SurrealDB tuning and GraphRAG guide | `https://github.com/cytognosis/docs/blob/main/03-Products/Cytonome/Yar/spec/SurrealDB-tuning-and-graphrag-guide.md` | Troubleshooting table T1-T12, SCHEMAFULL schema, FTS analyzer and index syntax, KNN operator forms, persistent WebSocket pattern, GraphRAG query patterns (Section 4), verification checklist (Section 6) |
+| SurrealDB advanced optimization and versions | `https://github.com/cytognosis/docs/blob/main/03-Products/Cytonome/Yar/spec/SurrealDB-advanced-optimization-and-versions.md` | Latest versions and relevant changes (Section 1), advanced optimization configs (Section 2), maximum-performance checklist (Section 4), docker-compose.yml and run script changes (Section 5) |
+| Storage benchmark tracker | `https://github.com/cytognosis/docs/blob/main/03-Products/Cytonome/Yar/spec/STORAGE_BENCHMARK_TRACKER.md` | Living master status table (Section 1), open decisions O-1 through O-8 (Section 3) |
+| Benchmark package top-level README | `https://github.com/cytognosis/yar_supervisor_reproducible_benchmark_package/README.md` | Run commands, architecture decision summary, reference output list |
+| PATCH10 README | `https://github.com/cytognosis/yar_supervisor_reproducible_benchmark_package/db_benchmark/README_PATCH10_SURREAL_FTS_RUNTIME_FIX.md` | Canonical prior patch; PATCH11 is built on top of it |
+| cytomem repo | `https://github.com/cytognosis/cytomem` | Source of truth for cytomem code; key files: `src/cytomem/graph/queries.py`, `src/cytomem/graph/client.py`, `src/cytomem/mcp/server.py` |
 
 ---
 
@@ -67,10 +67,10 @@ Read all of these before writing any code. They contain exact file paths, line n
 These facts are stated inline because this agent does not have session context.
 
 **Repo paths:**
-- Benchmark package: `/home/mohammadi/repos/cytognosis/yar_supervisor_reproducible_benchmark_package`
+- Benchmark package: `https://github.com/cytognosis/yar_supervisor_reproducible_benchmark_package`
 - Benchmark code: `.../yar_supervisor_reproducible_benchmark_package/db_benchmark/`
-- cytomem: `/home/mohammadi/repos/cytognosis/cytomem`
-- Docs: `/home/mohammadi/repos/cytognosis/docs`
+- cytomem: `https://github.com/cytognosis/cytomem`
+- Docs: `https://github.com/cytognosis/docs`
 
 **PATCH10 baseline scores (100k RocksDB + HNSW):** FalkorDB 4.26, SQLite 5.49, SurrealDB tuned 9.38.
 
@@ -136,7 +136,7 @@ sudo sysctl -w vm.max_map_count=262144
 ### 4.2 Python Environment (Benchmark)
 
 ```bash
-cd /home/mohammadi/repos/cytognosis/yar_supervisor_reproducible_benchmark_package/db_benchmark
+cd ~/repos/cytognosis/yar_supervisor_reproducible_benchmark_package/db_benchmark
 python3.12 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
@@ -205,7 +205,7 @@ pip install lightrag-hku
 ### 4.5 cytomem Python Environment
 
 ```bash
-cd /home/mohammadi/repos/cytognosis/cytomem
+cd ~/repos/cytognosis/cytomem
 # cytomem uses uv; check pyproject.toml for the exact install command
 cat pyproject.toml
 uv sync  # or: pip install -e ".[dev]" if uv is not available
@@ -216,7 +216,7 @@ uv sync  # or: pip install -e ".[dev]" if uv is not available
 ## 5. Apply the SurrealDB Optimizations
 
 Apply these in priority order. Highest impact first. All code references are in the benchmark code audit at:
-`/home/mohammadi/repos/cytognosis/docs/03-Products/Cytonome/Yar/consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md`
+`https://github.com/cytognosis/docs/blob/main/03-Products/Cytonome/Yar/consolidation_2026-06-21/_storage/SURREALDB_CODE_AUDIT.md`
 
 ### Item 1 (CRITICAL): Switch to the Async SDK
 
@@ -417,7 +417,7 @@ except Exception:
 ### 6.1 Clean State
 
 ```bash
-cd /home/mohammadi/repos/cytognosis/yar_supervisor_reproducible_benchmark_package
+cd ~/repos/cytognosis/yar_supervisor_reproducible_benchmark_package
 
 # Kill any running containers
 docker rm -f yar-surrealdb yar-falkordb yar-neo4j 2>/dev/null || true
@@ -618,10 +618,10 @@ Wire results into the existing harness via a thin adapter as described in the cy
 ## 9. cytomem Assessment and Optimization
 
 Read these files before making any changes:
-- `/home/mohammadi/repos/cytognosis/cytomem/src/cytomem/graph/queries.py`
-- `/home/mohammadi/repos/cytognosis/cytomem/src/cytomem/graph/client.py`
-- `/home/mohammadi/repos/cytognosis/cytomem/src/cytomem/mcp/tools.py`
-- `/home/mohammadi/repos/cytognosis/cytomem/pyproject.toml`
+- `https://github.com/cytognosis/cytomem/blob/main/src/cytomem/graph/queries.py`
+- `https://github.com/cytognosis/cytomem/blob/main/src/cytomem/graph/client.py`
+- `https://github.com/cytognosis/cytomem/blob/main/src/cytomem/mcp/tools.py`
+- `https://github.com/cytognosis/cytomem/blob/main/pyproject.toml`
 
 ### 9.1 Fix 1: Add Full-Text Index (Priority 1)
 

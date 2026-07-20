@@ -118,7 +118,7 @@ GitNexus's AST-based knowledge graph can:
   "command": "gitnexus",
   "args": ["mcp-server"],
   "env": {
-    "GITNEXUS_REPOS": "/home/mohammadi/repos/cytognosis/cytoskeleton,/home/mohammadi/repos/cytognosis/cytos,/home/mohammadi/repos/cytognosis/Yar"
+    "GITNEXUS_REPOS": "~/repos/cytognosis/cytoskeleton,~/repos/cytognosis/cytos,~/repos/cytognosis/Yar"
   }
 }
 ```
@@ -130,11 +130,11 @@ GitNexus's AST-based knowledge graph can:
 cargo install gitnexus  # or npm install -g gitnexus
 
 # Index all Cytognosis repos
-gitnexus index /home/mohammadi/repos/cytognosis/cytoskeleton
-gitnexus index /home/mohammadi/repos/cytognosis/cytos
-gitnexus index /home/mohammadi/repos/cytognosis/Yar
-gitnexus index /home/mohammadi/repos/cytognosis/cytoskills
-gitnexus index /home/mohammadi/repos/cytognosis/cytocast
+gitnexus index ~/repos/cytognosis/cytoskeleton
+gitnexus index ~/repos/cytognosis/cytos
+gitnexus index ~/repos/cytognosis/Yar
+gitnexus index ~/repos/cytognosis/cytoskills
+gitnexus index ~/repos/cytognosis/cytocast
 
 # Start MCP server
 gitnexus mcp-server

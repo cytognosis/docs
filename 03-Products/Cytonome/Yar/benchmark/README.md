@@ -64,11 +64,11 @@ This is the one-page index for all formal benchmark documents in this folder and
 
 ## Benchmark Package (external, outside this docs repo)
 
-> **External anchor:** `~/repos/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package/` (verified present 2026-07-17; this replaces the old, never-resolved `<repo-root>/yar_supervisor_reproducible_benchmark_package/` placeholder path below).
+> **External anchor:** `https://github.com/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package/` (verified present 2026-07-17; this replaces the old, never-resolved `<repo-root>/yar_supervisor_reproducible_benchmark_package/` placeholder path below).
 
 | Document | Path | Purpose |
 |---|---|---|
-| Package README | `~/repos/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package/README.md` | Run commands, architecture decision summary, reference output list; start here to reproduce a run |
+| Package README | `https://github.com/cytognosis/yar_revisions/yar_supervisor_reproducible_benchmark_package/README.md` | Run commands, architecture decision summary, reference output list; start here to reproduce a run |
 | PATCH10 README | `.../db_benchmark/README_PATCH10_SURREAL_FTS_RUNTIME_FIX.md` | Canonical prior patch; PATCH11 builds on it; contains the FTS ORDER BY alias fix |
 | PATCH10 Final Comparison | `.../reference_results/surreal_tuned_patch10_final_comparison.md` | Authoritative PATCH10 p50 latency tables and interpretation; the comparison baseline for all future runs |
 

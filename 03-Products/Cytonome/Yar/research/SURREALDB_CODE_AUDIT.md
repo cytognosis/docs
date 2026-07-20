@@ -8,9 +8,9 @@
 > **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 
 **Audit date:** 2026-06-22
-**Package path:** `/home/mohammadi/repos/cytognosis/yar_supervisor_reproducible_benchmark_package`
-**Reference guide:** `/home/mohammadi/repos/cytognosis/docs/03-Products/Cytonome/Yar/spec/SurrealDB-tuning-and-graphrag-guide.md`
-**Benchmark digest:** `/home/mohammadi/repos/cytognosis/docs/03-Products/Cytonome/Yar/consolidation_2026-06-21/_storage/BENCHMARK_DIGEST.md`
+**Package path:** `https://github.com/cytognosis/yar_supervisor_reproducible_benchmark_package`
+**Reference guide:** `https://github.com/cytognosis/docs/blob/main/03-Products/Cytonome/Yar/spec/SurrealDB-tuning-and-graphrag-guide.md`
+**Benchmark digest:** `https://github.com/cytognosis/docs/blob/main/03-Products/Cytonome/Yar/consolidation_2026-06-21/_storage/BENCHMARK_DIGEST.md`
 **SurrealDB version pinned:** `v3.1.3` (docker-compose.yml line 3)
 **Python SDK pinned:** `surrealdb>=1.0.4` (requirements.txt line 5)
 **Status of retest sequence:** PATCH10 is the final valid run; this audit applies to the code as it stands after PATCH10.

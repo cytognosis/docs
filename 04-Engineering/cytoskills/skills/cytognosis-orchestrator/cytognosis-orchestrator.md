@@ -124,7 +124,7 @@ UNSURE or MULTI-SKILL task?
 | "Style this for our brand" | `cytognosis-design-system-master` | Brand application |
 | "Where do grant proposals live?" | `cytognosis-org` | File location question |
 | "Compare task queue libraries" | `cytognosis-doc` (§ Research) | Tool evaluation research |
-| "Where are the Cytoplex spec docs?" | `cytognosis-org` (docs repo: `~/repos/cytognosis/docs/cytonome/cytoplex/`) | File location |
+| "Where are the Cytoplex spec docs?" | `cytognosis-org` (docs repo: `https://github.com/cytognosis/docs/tree/main/cytonome/cytoplex`) | File location |
 
 ---
 

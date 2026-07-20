@@ -179,13 +179,13 @@ The following files contain overlapping or partially redundant funding strategy 
 
 | Path | Contents | Status |
 |---|---|---|
-| `/home/mohammadi/Claude/Projects/X-Labs/01-strategy/funding-opportunities/Cytognosis_Funding_Strategy_Master_2026-05-30.md` | Full 65-opp funnel, wave plan, scoring | **Canonical master** |
-| `/home/mohammadi/Claude/Projects/X-Labs/01-strategy/funding-opportunities/Cytognosis_Funding_ACTION_TRACKER_2026-05-31.md` | ADHD action tracker derived from the master | **Canonical ADHD variant** |
-| `/home/mohammadi/Claude/Projects/X-Labs/01-strategy/funding-opportunities/compass_artifact_wf-15827078-9d1a-4365-a960-99b5d360ce59_text_markdown.md` | Earlier v1 funding strategy | Superseded by the master; keep indexed, do not edit |
-| `/home/mohammadi/Claude/Projects/X-Labs/01-strategy/funding-opportunities/funding_strategy_v2_update.md` | v2 update notes | Superseded by the master; keep indexed, do not edit |
-| `/home/mohammadi/Claude/Projects/X-Labs/02-applications/grants/IGoR/ARPA-H_IGoR_Solution_Summary_REVISED_2026-06-02.md` | IGoR solution summary draft (Cytognosis-prime framing) | **Needs rework to IPAI-prime before Jun 25** |
-| `/home/mohammadi/Claude/Projects/X-Labs/01-strategy/funding-opportunities/ARPA-H_IGoR_summary_and_materials.md` | Earlier IGoR summary notes | Superseded by `IGoR_Strategy_Master_2026-06-03.md`; keep indexed |
-| `/home/mohammadi/Claude/Projects/X-Labs/01-strategy/funding-opportunities/ARPA-H_IGoR_Solution_Summary_DRAFT.md` | Action tracker points here as the "draft" | Verify this is the same as the REVISED doc above; reconcile |
+| `~/Claude/Projects/X-Labs/01-strategy/funding-opportunities/Cytognosis_Funding_Strategy_Master_2026-05-30.md` | Full 65-opp funnel, wave plan, scoring | **Canonical master** |
+| `~/Claude/Projects/X-Labs/01-strategy/funding-opportunities/Cytognosis_Funding_ACTION_TRACKER_2026-05-31.md` | ADHD action tracker derived from the master | **Canonical ADHD variant** |
+| `~/Claude/Projects/X-Labs/01-strategy/funding-opportunities/compass_artifact_wf-15827078-9d1a-4365-a960-99b5d360ce59_text_markdown.md` | Earlier v1 funding strategy | Superseded by the master; keep indexed, do not edit |
+| `~/Claude/Projects/X-Labs/01-strategy/funding-opportunities/funding_strategy_v2_update.md` | v2 update notes | Superseded by the master; keep indexed, do not edit |
+| `~/Claude/Projects/X-Labs/02-applications/grants/IGoR/ARPA-H_IGoR_Solution_Summary_REVISED_2026-06-02.md` | IGoR solution summary draft (Cytognosis-prime framing) | **Needs rework to IPAI-prime before Jun 25** |
+| `~/Claude/Projects/X-Labs/01-strategy/funding-opportunities/ARPA-H_IGoR_summary_and_materials.md` | Earlier IGoR summary notes | Superseded by `IGoR_Strategy_Master_2026-06-03.md`; keep indexed |
+| `~/Claude/Projects/X-Labs/01-strategy/funding-opportunities/ARPA-H_IGoR_Solution_Summary_DRAFT.md` | Action tracker points here as the "draft" | Verify this is the same as the REVISED doc above; reconcile |
 
 **Action:** the Action Tracker (`2026-05-31`) points to `../applications/v2/ARPA-H_IGoR_Solution_Summary_DRAFT.md` as the submission draft. Confirm this path resolves to the same document as `ARPA-H_IGoR_Solution_Summary_REVISED_2026-06-02.md`. If they are different files, designate one canonical draft and update the tracker link.
 

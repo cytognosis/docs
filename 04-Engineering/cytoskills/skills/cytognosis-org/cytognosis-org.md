@@ -51,17 +51,17 @@
 
 | Repo | Purpose | Local Path |
 |------|---------|------------|
-| `branding` | Design System + Cytognosis-wide skills (SoT for the design system) | `~/repos/cytognosis/branding` |
-| `cytocast` | Copier templating engine + dev skills + shared CI/CD | `~/repos/cytognosis/cytocast` |
-| `cytoskeleton` | Environment manager + interface templates + template-usage skills | `~/repos/cytognosis/cytoskeleton` |
-| `cytos` | Foundation kernel (data + models + schemas) | `~/repos/cytognosis/cytos` |
-| `cytoagent` | Runtime agents + orchestration + fabric | `~/repos/cytognosis/cytoagent` |
-| `cytoverse` | Foundation AI models | `~/repos/cytognosis/cytoverse` |
-| `cytoscope` | Biosensor firmware | `~/repos/cytognosis/cytoscope` |
-| `cytonome` | On-device edge AI | `~/repos/cytognosis/cytonome` |
-| `website` | Public UI (`cytognosis.org`) | `~/repos/cytognosis/website` |
-| `infrastructure` | DNS, Cloud Run, Terraform | `~/repos/cytognosis/infrastructure` |
-| `papers` | LaTeX manuscripts | `~/repos/cytognosis/papers` |
+| `branding` | Design System + Cytognosis-wide skills (SoT for the design system) | `https://github.com/cytognosis/branding` |
+| `cytocast` | Copier templating engine + dev skills + shared CI/CD | `https://github.com/cytognosis/cytocast` |
+| `cytoskeleton` | Environment manager + interface templates + template-usage skills | `https://github.com/cytognosis/cytoskeleton` |
+| `cytos` | Foundation kernel (data + models + schemas) | `https://github.com/cytognosis/cytos` |
+| `cytoagent` | Runtime agents + orchestration + fabric | `https://github.com/cytognosis/cytoagent` |
+| `cytoverse` | Foundation AI models | `https://github.com/cytognosis/cytoverse` |
+| `cytoscope` | Biosensor firmware | `https://github.com/cytognosis/cytoscope` |
+| `cytonome` | On-device edge AI | `https://github.com/cytognosis/cytonome` |
+| `website` | Public UI (`cytognosis.org`) | `https://github.com/cytognosis/website` |
+| `infrastructure` | DNS, Cloud Run, Terraform | `https://github.com/cytognosis/infrastructure` |
+| `papers` | LaTeX manuscripts | `https://github.com/cytognosis/papers` |
 
 ---
 
@@ -186,4 +186,4 @@ Task: "Where is the ARPA-H Specific Aims document?"
 1. Load `cytognosis-org`.
 2. Check Drive: `01-Grants-and-Funding` folder.
 3. Name format: `Grant-ARPA-H-Specific-Aims-v<N>-<YYYY-MM>`.
-4. If it is a code asset (LaTeX manuscript), check `~/repos/cytognosis/papers`.
+4. If it is a code asset (LaTeX manuscript), check `https://github.com/cytognosis/papers`.

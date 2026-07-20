@@ -300,7 +300,7 @@ def hooked(vfs=None, provenance=False, path_prefix="/data/"):
 | **Streaming filesystem** (lazy download) | ✅ As disk cache | `cytoskeleton/vfs/cache.py` |
 | **Monkeypatching hooks** | ✅ As opt-in hooks module | `cytoskeleton/vfs/hooks.py` |
 | **MLflow failsafe wrapper** | ✅ As a skill | `cytoskills/skills/mlflow-failsafe/` |
-| **Content-addressed DVC storage** | Already have | DVC + `~/datasets/.dvc/config` → GCS |
+| **Content-addressed DVC storage** | Already have | DVC + `https://github.com/cytognosis/datasets/tree/main/.dvc/config` → GCS |
 | **Label Studio integration** | ❌ Not now | Would go in cytos annotation module if ever needed |
 | **Data Engine (SQL-over-datasets)** | ❌ Not now | DuckDB already fills this role (`KGStore`) |
 | **Git+DVC hosting** | ❌ We use GitHub + GCS | No need for DagsHub SaaS |

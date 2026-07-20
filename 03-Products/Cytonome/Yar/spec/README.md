@@ -68,7 +68,7 @@ Full benchmark evidence for these decisions lives in [`../benchmark/`](../benchm
 | [STORAGE-ENGINE-RECOMMENDATION.md](./STORAGE-ENGINE-RECOMMENDATION.md) | Storage engine recommendation for Yar v0.1 | Active | 2026-07-10 |
 | [SurrealDB-tuning-and-graphrag-guide.md](./SurrealDB-tuning-and-graphrag-guide.md) | Troubleshooting T1-T12, SCHEMAFULL schema, FTS/HNSW index syntax, GraphRAG query patterns | Draft | 2026-06-21 |
 | [SurrealDB-advanced-optimization-and-versions.md](./SurrealDB-advanced-optimization-and-versions.md) | Version changelog 3.1.0-3.1.5, max-performance checklist, PATCH11 docker-compose changes | Draft | 2026-06-22 |
-| [YAR-CLIENT-EVAL.md](./YAR-CLIENT-EVAL.md) | Evaluation of the Tauri reference client (the `yar-code-20260705-2354` snapshot, since promoted to the canonical `~/repos/cytognosis/Yar`) against these specs | Active | 2026-07-10 |
+| [YAR-CLIENT-EVAL.md](./YAR-CLIENT-EVAL.md) | Evaluation of the Tauri reference client (the `yar-code-20260705-2354` snapshot, since promoted to the canonical `https://github.com/cytognosis/Yar`) against these specs | Active | 2026-07-10 |
 
 ## Retired content
 
@@ -79,4 +79,4 @@ The easy-read ADHD spec twins were retired 2026-07-16; the on-disk `_archive/` w
 - Feature-to-spec map: [`../yar-product-spec.md`](../yar-product-spec.md) Section 7.
 - Benchmark evidence for storage decisions: [`../benchmark/README.md`](../benchmark/README.md).
 - Research chain (framework/AnySync assessments): [`../research/README.md`](../research/README.md).
-- CAP code path (engineering): `~/repos/cytognosis/Yar/backend/cap/` (canonical repo; formerly the `yar-code-20260705-2354` snapshot).
+- CAP code path (engineering): `https://github.com/cytognosis/Yar/tree/main/backend/cap` (canonical repo; formerly the `yar-code-20260705-2354` snapshot).

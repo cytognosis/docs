@@ -32,7 +32,7 @@ Keep `06-Operations` the single canonical home for Cytognosis org and business o
 ## Open questions (recommendations in the project OPEN_QUESTIONS.md)
 
 1. Route four boundary docs to their true owners in Wave 2: `org/compliance/neuroverse-infrastructure-compliance.md` and `policy-deployment/README.md` to Infrastructure/Engineering; the three `org/naming/*` ADRs to `04-Engineering/decisions`. Kept in place until Wave 2 (cross-layer moves are not a Wave 1 action).
-2. Disposition of the legacy `~/repos/cytognosis/org` repo (a 227 MB grab-bag; content mostly superseded or owned by other pillars). Recommendation: archive or split by pillar in Wave 2; do not bulk-import into `06-Operations`.
+2. Disposition of the legacy `https://github.com/cytognosis/org` repo (a 227 MB grab-bag; content mostly superseded or owned by other pillars). Recommendation: archive or split by pillar in Wave 2; do not bulk-import into `06-Operations`.
 
 ## Prioritized pending tasks
 

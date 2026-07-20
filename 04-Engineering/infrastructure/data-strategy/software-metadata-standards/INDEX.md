@@ -17,7 +17,7 @@
 ## Document File Listing
 
 ### 1. README.md
-**Location**: `/home/mohammadi/Documents/Claude/Projects/Infrastructure and Tooling/README.md`
+**Location**: `~/Documents/Claude/Projects/Infrastructure and Tooling/README.md`
 **Purpose**: Master navigation guide and document overview
 **Key Sections**:
 - Quick navigation by use case
@@ -33,7 +33,7 @@
 ---
 
 ### 2. QUICK_REFERENCE.md
-**Location**: `/home/mohammadi/Documents/Claude/Projects/Infrastructure and Tooling/QUICK_REFERENCE.md`
+**Location**: `~/Documents/Claude/Projects/Infrastructure and Tooling/QUICK_REFERENCE.md`
 **Purpose**: Fast lookup guide, one-page reference, checklists
 **Key Sections**:
 - What each standard does (comparison table)
@@ -60,7 +60,7 @@
 ---
 
 ### 3. RESEARCH_SUMMARY.md
-**Location**: `/home/mohammadi/Documents/Claude/Projects/Infrastructure and Tooling/RESEARCH_SUMMARY.md`
+**Location**: `~/Documents/Claude/Projects/Infrastructure and Tooling/RESEARCH_SUMMARY.md`
 **Purpose**: Executive overview, strategic context, project planning
 **Key Sections**:
 - Standards analysis (5 standards: CodeMeta, CFF, Schema.org, Zenodo, SWH)
@@ -81,7 +81,7 @@
 ---
 
 ### 4. research_software_metadata_standards.md
-**Location**: `/home/mohammadi/Documents/Claude/Projects/Infrastructure and Tooling/research_software_metadata_standards.md`
+**Location**: `~/Documents/Claude/Projects/Infrastructure and Tooling/research_software_metadata_standards.md`
 **Purpose**: Comprehensive standards reference, detailed field definitions
 **Key Sections**:
 1. **CodeMeta** (50+ properties)
@@ -134,7 +134,7 @@
 ---
 
 ### 5. codemeta_field_examples.md
-**Location**: `/home/mohammadi/Documents/Claude/Projects/Infrastructure and Tooling/codemeta_field_examples.md`
+**Location**: `~/Documents/Claude/Projects/Infrastructure and Tooling/codemeta_field_examples.md`
 **Purpose**: Technical implementation guide with real code examples
 **Key Sections**:
 1. **CodeMeta JSON-LD Example** (production-ready, 40+ fields)
@@ -181,7 +181,7 @@
 ---
 
 ### 6. linkml_software_schema_fields.md
-**Location**: `/home/mohammadi/Documents/Claude/Projects/Infrastructure and Tooling/linkml_software_schema_fields.md`
+**Location**: `~/Documents/Claude/Projects/Infrastructure and Tooling/linkml_software_schema_fields.md`
 **Purpose**: Implementation inventory and LinkML schema design guide
 **Key Sections**:
 1. **Complete Field Inventory** (127 fields)
@@ -324,13 +324,13 @@ Each field includes:
 
 ### File Locations (Absolute Paths)
 ```
-/home/mohammadi/Documents/Claude/Projects/Infrastructure and Tooling/README.md
-/home/mohammadi/Documents/Claude/Projects/Infrastructure and Tooling/QUICK_REFERENCE.md
-/home/mohammadi/Documents/Claude/Projects/Infrastructure and Tooling/RESEARCH_SUMMARY.md
-/home/mohammadi/Documents/Claude/Projects/Infrastructure and Tooling/research_software_metadata_standards.md
-/home/mohammadi/Documents/Claude/Projects/Infrastructure and Tooling/codemeta_field_examples.md
-/home/mohammadi/Documents/Claude/Projects/Infrastructure and Tooling/linkml_software_schema_fields.md
-/home/mohammadi/Documents/Claude/Projects/Infrastructure and Tooling/INDEX.md (this file)
+~/Documents/Claude/Projects/Infrastructure and Tooling/README.md
+~/Documents/Claude/Projects/Infrastructure and Tooling/QUICK_REFERENCE.md
+~/Documents/Claude/Projects/Infrastructure and Tooling/RESEARCH_SUMMARY.md
+~/Documents/Claude/Projects/Infrastructure and Tooling/research_software_metadata_standards.md
+~/Documents/Claude/Projects/Infrastructure and Tooling/codemeta_field_examples.md
+~/Documents/Claude/Projects/Infrastructure and Tooling/linkml_software_schema_fields.md
+~/Documents/Claude/Projects/Infrastructure and Tooling/INDEX.md (this file)
 ```
 
 ### Recommended Reading Order

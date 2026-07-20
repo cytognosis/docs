@@ -106,12 +106,12 @@ Earlier archive waves (`_archive/` with the pre-v4 comparisons, ADHD spec twins,
 
 | Anchor | Path |
 |---|---|
-| **Canonical code repo** | `~/repos/cytognosis/Yar` (Tauri v2 + React + Django; private, default `main`) |
-| Deprecated code | `~/repos/cytognosis/Yar_old` (do not build on this) |
-| Engineering research + sensor specs | `~/repos/cytognosis/docs/04-Engineering/yar/` (EVAL set, deep dives, sensors) |
-| Cytoplex (CAP protocol) | `~/repos/cytognosis/docs/03-Products/Cytonome/Cytoplex/` |
-| Org interface templates | `~/repos/cytognosis/docs/04-Engineering/interface_and_fabric_design/` |
-| cytomem (PeT convergence partner) | `~/repos/cytognosis/cytomem/` |
-| Feature/prioritization CSVs | `~/datasets/cytognosis/yar/data/` (see `DATA-MOVED.md`) |
+| **Canonical code repo** | `https://github.com/cytognosis/Yar` (Tauri v2 + React + Django; private, default `main`) |
+| Deprecated code | `https://github.com/cytognosis/Yar_old` (do not build on this) |
+| Engineering research + sensor specs | `https://github.com/cytognosis/docs/tree/main/04-Engineering/yar` (EVAL set, deep dives, sensors) |
+| Cytoplex (CAP protocol) | `https://github.com/cytognosis/docs/tree/main/03-Products/Cytonome/Cytoplex` |
+| Org interface templates | `https://github.com/cytognosis/docs/tree/main/04-Engineering/interface_and_fabric_design` |
+| cytomem (PeT convergence partner) | `https://github.com/cytognosis/cytomem` |
+| Feature/prioritization CSVs | `https://github.com/cytognosis/datasets/tree/main/cytognosis/yar/data` (see `DATA-MOVED.md`) |
 | Meeting-tools landscape research | `~/Claude/Projects/Infrastructure and Tooling/meeting-transcription-tools-landscape-2026-07.md` (referenced by `spec/SPEC-meeting-diarization.md`; org toolchain home `04-Engineering/toolchain/`) |
 | Author/working surface | `~/Claude/Projects/Yar/` (durable output is promoted here into this pillar) |

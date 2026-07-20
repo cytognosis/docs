@@ -12,13 +12,13 @@ Before recommending anything new, here's what actually exists in the codebase:
 
 | Layer | Tool | Status | Location |
 |---|---|---|---|
-| **Pipeline DAG** | Kedro | ❌ **Previously rejected** (redundant with redun + LaminDB) | [pipeline_registry.py](file:///home/mohammadi/repos/cytognosis/cytos/src/cytos/pipeline_registry.py) — stubs remain |
-| **Data pipeline** | DVC | ✅ Working | [dvc.yaml](file:///home/mohammadi/repos/cytognosis/cytos/dvc.yaml) — 10+ stages |
-| **RO-Crate bridge** | redun → WRROC | ✅ MVP (124 LOC) | [redun_rocrate.py](file:///home/mohammadi/repos/cytognosis/cytos/src/cytos/publish/redun_rocrate.py) |
+| **Pipeline DAG** | Kedro | ❌ **Previously rejected** (redundant with redun + LaminDB) | [pipeline_registry.py](https://github.com/cytognosis/cytos/blob/main/src/cytos/pipeline_registry.py) — stubs remain |
+| **Data pipeline** | DVC | ✅ Working | [dvc.yaml](https://github.com/cytognosis/cytos/blob/main/dvc.yaml) — 10+ stages |
+| **RO-Crate bridge** | redun → WRROC | ✅ MVP (124 LOC) | [redun_rocrate.py](https://github.com/cytognosis/cytos/blob/main/src/cytos/publish/redun_rocrate.py) |
 | **Provenance design** | 4-tool stack | ✅ Designed (466 lines) | [provenance-lineage.md](../infrastructure/reproducibility/provenance-lineage.md) |
 | **Environment matrix** | cytoskeleton | ✅ Designed (66 cells) | [envs-containers.md](../infrastructure/reproducibility/envs-containers.md) |
 | **Experiment tracking** | MLflow | ✅ Deployed | cytohost |
-| **Data versioning** | DVC | ✅ Working | `~/datasets/.dvc/config` → GCS |
+| **Data versioning** | DVC | ✅ Working | `https://github.com/cytognosis/datasets/tree/main/.dvc/config` → GCS |
 
 > [!IMPORTANT]
 > **Kedro was rejected** in a prior evaluation (conversation `30e4c8ce`) as "redundant with redun + LaminDB + copier." The existing Kedro pipeline stubs in cytos should be removed or migrated to redun tasks. The provenance-lineage.md doc already commits to redun as the primary workflow engine.

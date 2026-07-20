@@ -8,7 +8,7 @@
 > **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 
 All paths below are relative to:
-`/home/mohammadi/Claude/Projects/Science and Platform/design-system-merge-2026-07/01_extracted/`
+`~/Claude/Projects/Science and Platform/design-system-merge-2026-07/01_extracted/`
 
 Three systems compared: `mine/` (457 files), `ali_old/` (83 files), `ali_latest/` (129 files).
 

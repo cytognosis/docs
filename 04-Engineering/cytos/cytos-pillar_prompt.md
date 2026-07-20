@@ -13,7 +13,7 @@
 
 **Goal:** Maintain and extend the Cytos engineering platform (the Cytoverse "Map"): LinkML schemas, DVC-managed data, the knowledge graph, generated typed artifacts, and the sensing schema.
 
-**Scope (yours):** `~/repos/cytognosis/cytos` code and schemas; docs layers `04-Engineering/cytos` and `03-Products/Cytoverse`. **Not yours:** the science-foundation narrative (Neuroverse, `05-Research/neuroverse`); cytomem (terminal wave only).
+**Scope (yours):** `https://github.com/cytognosis/cytos` code and schemas; docs layers `04-Engineering/cytos` and `03-Products/Cytoverse`. **Not yours:** the science-foundation narrative (Neuroverse, `05-Research/neuroverse`); cytomem (terminal wave only).
 
 ## Decided / done (do not redo)
 

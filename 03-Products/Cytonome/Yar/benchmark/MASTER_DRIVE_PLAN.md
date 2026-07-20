@@ -78,7 +78,7 @@ fresh session if context degrades.
 ### D. Code repo — `repos/cytognosis/Yar/`
 - `docs/architecture/*`, `docs/research/*`, `docs/planning/*`, `src/yar/` schema, `apps/mobile/` (Flutter)
 
-### E. Un-ported / loose — `/home/mohammadi/`
+### E. Un-ported / loose — `~/`
 - `02_cap_comprehensive.md`, `03_yar_product_and_implementation.md`, `04_voice_model_deep_evaluation.md`
 - `Collaborative Intelligence and Meeting Document Synthesis...md` (transcription + synthesis eval)
 - `memex_revision.txt`

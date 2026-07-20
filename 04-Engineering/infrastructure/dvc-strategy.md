@@ -23,7 +23,7 @@ Cytognosis uses three DVC remotes across two GCS buckets to separate open and re
 
 ## Per-Repo Configuration
 
-### datasets repo (`~/datasets`)
+### datasets repo (`https://github.com/cytognosis/datasets`)
 
 ```ini
 [core]
@@ -37,7 +37,7 @@ Cytognosis uses three DVC remotes across two GCS buckets to separate open and re
 - Default pushes to `data-hub` (open data)
 - PsychENCODE and clinical data pushes to `phi-prod`
 
-### cytos repo (`~/repos/cytognosis/cytos`)
+### cytos repo (`https://github.com/cytognosis/cytos`)
 
 ```ini
 [core]
@@ -48,7 +48,7 @@ Cytognosis uses three DVC remotes across two GCS buckets to separate open and re
 
 - KG build outputs and pipeline artifacts
 
-### cytoskeleton repo (`~/repos/cytognosis/cytoskeleton`)
+### cytoskeleton repo (`https://github.com/cytognosis/cytoskeleton`)
 
 ```ini
 [core]

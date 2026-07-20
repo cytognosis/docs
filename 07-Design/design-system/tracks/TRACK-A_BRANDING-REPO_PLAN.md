@@ -19,7 +19,7 @@ The branding repo currently holds CytoStyle, a capable but Cytognosis-unaware Re
 
 ### 1.1 What the repo holds today: CytoStyle
 
-`~/repos/cytognosis/branding` is `@alimohammadiwork/cytostyle` v1.0.82, described in its own `package.json` as "Reusable CytoStyle React and Material UI components, providers, hooks, utilities, and design tokens for Cytognosis products." Confirmed contents:
+`https://github.com/cytognosis/branding` is `@alimohammadiwork/cytostyle` v1.0.82, described in its own `package.json` as "Reusable CytoStyle React and Material UI components, providers, hooks, utilities, and design tokens for Cytognosis products." Confirmed contents:
 
 - **Components:** 53 `.tsx` files in `src/components/`. CytoStyle's own June 7, 2026 audit (`CORRECTED_FIGMA_FIRST_DESIGN_SYSTEM_AUDIT.md`) counts 45 as actually exported from `src/components/index.ts`; the gap is likely newer additions or internal-only wrappers. Full Storybook coverage (`stories/`, `.storybook/`) for most of them.
 - **Theming:** `ThemeProvider` (Next.js) and `SPAThemeProvider` (Vite), built on MUI CSS variables via `createCytoStyleTheme`.
@@ -172,7 +172,7 @@ A concrete synergy worth using: CytoStyle's `docs/tokens.md` already defines a `
 
 ## Section 5: Downstream App Consumption (Yar)
 
-**Scope correction:** the primary `Yar/` product repo (`~/repos/cytognosis/Yar`) is Python plus Flutter mobile (`apps/mobile/`) and has zero dependency on CytoStyle, confirmed by grep. The actual consumer is a separate, dated web snapshot at `yar_revisions/yar-code-20260705-2354/` (2026-07-05), which looks like an AI app-builder export (CytoStyle's own `package.json` keywords include `figma-make` and `make-kit`, consistent with this).
+**Scope correction:** the primary `Yar/` product repo (`https://github.com/cytognosis/Yar`) is Python plus Flutter mobile (`apps/mobile/`) and has zero dependency on CytoStyle, confirmed by grep. The actual consumer is a separate, dated web snapshot at `yar_revisions/yar-code-20260705-2354/` (2026-07-05), which looks like an AI app-builder export (CytoStyle's own `package.json` keywords include `figma-make` and `make-kit`, consistent with this).
 
 That snapshot's dependency is real and deep: `package.json` pins `"@alimohammadiwork/cytostyle": "^1.0.82"`, and 23 source files import from it, covering the app shell, providers, primitives, layout (`AppShell`, `BottomNav`), and 8 of its feature screens (focus, plan, search, capture, map, home, assistant, mood, settings).
 
@@ -208,4 +208,4 @@ Important sequencing note: Phase 0 and Phase 1 pull from different sources (git 
 
 ---
 
-**Sources for this document:** `git log`, `git show 22a42ac --stat`, `git show 6e2815f --stat`, and `git ls-tree -r 9bf41cb~1` in `~/repos/cytognosis/branding`; direct file reads of `package.json`, `src/constants/colors.ts`, `guidelines/foundations/color.md`, `docs/tokens.md`, and the four audit MDs in that repo; `CLAUDE_DESIGN_BRIDGE.md` and `01_extracted/ali_latest/_ds_manifest.json` plus `readme.md` in this project folder; `02_repo_organization/branding_repo_plan.md`; grep across `~/repos` for `@alimohammadiwork/cytostyle` and its usage in `yar_revisions/yar-code-20260705-2354`.
+**Sources for this document:** `git log`, `git show 22a42ac --stat`, `git show 6e2815f --stat`, and `git ls-tree -r 9bf41cb~1` in `https://github.com/cytognosis/branding`; direct file reads of `package.json`, `src/constants/colors.ts`, `guidelines/foundations/color.md`, `docs/tokens.md`, and the four audit MDs in that repo; `CLAUDE_DESIGN_BRIDGE.md` and `01_extracted/ali_latest/_ds_manifest.json` plus `readme.md` in this project folder; `02_repo_organization/branding_repo_plan.md`; grep across `~/repos` for `@alimohammadiwork/cytostyle` and its usage in `yar_revisions/yar-code-20260705-2354`.

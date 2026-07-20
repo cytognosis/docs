@@ -11,9 +11,9 @@ Companion to `01_cytos_package_design.md`. Specifies the modeling arc that turns
 
 Source materials:
 
-- `/home/mohammadi/Documents/Claude/Projects/Science and Platform/multimodal_coembedding_review_2025_2026.md` (51KB methods review).
-- `/home/mohammadi/Documents/Claude/Projects/Science and Platform/multimodal_coembedding_addendum_deep_dives.md` (Q1 FGW-vs-paired, Q2 cross-attention, Q3 MoE, Q4 causal).
-- `/home/mohammadi/Documents/Claude/Projects/Science and Platform/cytognosis_master_dataset_curation.md` (Cytoverse modalities, stage-wise stack, biobanks, federation).
+- `~/Documents/Claude/Projects/Science and Platform/multimodal_coembedding_review_2025_2026.md` (51KB methods review).
+- `~/Documents/Claude/Projects/Science and Platform/multimodal_coembedding_addendum_deep_dives.md` (Q1 FGW-vs-paired, Q2 cross-attention, Q3 MoE, Q4 causal).
+- `~/Documents/Claude/Projects/Science and Platform/cytognosis_master_dataset_curation.md` (Cytoverse modalities, stage-wise stack, biobanks, federation).
 
 ## 1. The five Cytoverse modalities
 

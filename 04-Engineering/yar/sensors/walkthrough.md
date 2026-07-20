@@ -28,10 +28,10 @@ Consolidated all sensor-related documentation from three fragmented locations (Y
 
 | File | Mappings |
 |---|---|
-| [cytos-sosa.sssom.tsv](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/crosswalks/cytos-sosa.sssom.tsv) | 27 class + slot mappings to W3C SOSA/SSN |
-| [cytos-fhir.sssom.tsv](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/crosswalks/cytos-fhir.sssom.tsv) | 22 class + slot mappings to HL7 FHIR R5 |
-| [cytos-ieee1752.sssom.tsv](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/crosswalks/cytos-ieee1752.sssom.tsv) | 23 class + slot mappings to IEEE 1752.1 / Open mHealth |
-| [cytos-aware.sssom.tsv](file:///home/mohammadi/repos/cytognosis/cytos/schemas/domains/sensor/crosswalks/cytos-aware.sssom.tsv) | 28 sensor class mappings to AWARE Framework |
+| [cytos-sosa.sssom.tsv](https://github.com/cytognosis/cytos/tree/main/schemas/domains/sensor/crosswalks/cytos-sosa.sssom.tsv) | 27 class + slot mappings to W3C SOSA/SSN |
+| [cytos-fhir.sssom.tsv](https://github.com/cytognosis/cytos/tree/main/schemas/domains/sensor/crosswalks/cytos-fhir.sssom.tsv) | 22 class + slot mappings to HL7 FHIR R5 |
+| [cytos-ieee1752.sssom.tsv](https://github.com/cytognosis/cytos/tree/main/schemas/domains/sensor/crosswalks/cytos-ieee1752.sssom.tsv) | 23 class + slot mappings to IEEE 1752.1 / Open mHealth |
+| [cytos-aware.sssom.tsv](https://github.com/cytognosis/cytos/tree/main/schemas/domains/sensor/crosswalks/cytos-aware.sssom.tsv) | 28 sensor class mappings to AWARE Framework |
 
 ### Cross-Link Updates (3 files)
 

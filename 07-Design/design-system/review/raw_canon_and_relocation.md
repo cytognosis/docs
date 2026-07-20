@@ -18,7 +18,7 @@ No em dashes used anywhere in this document, per house style.
 
 ### 1.0 Source map and version
 
-Two sibling skills carry the brand canon inside `/home/mohammadi/repos/cytognosis/cytoskills/skills/cytognosis/`:
+Two sibling skills carry the brand canon inside `https://github.com/cytognosis/cytoskills/tree/main/skills/cytognosis`:
 
 | Skill | version (frontmatter) | last_revised | status | Role |
 |---|---|---|---|---|
@@ -222,7 +222,7 @@ Also relevant and not yet written into the 12 references: a separate warm "Lumen
 
 ### 6. Helix grep report (explicit, as requested)
 
-Command: `grep -rin helix` across `/home/mohammadi/repos/cytognosis/cytoskills/skills/cytognosis`.
+Command: `grep -rin helix` across `https://github.com/cytognosis/cytoskills/tree/main/skills/cytognosis`.
 
 **Result: Helix appears as a named, public-facing product in the live canon, not merely as an incidental mention.** Full hit list:
 
@@ -248,16 +248,16 @@ Command: `grep -rin helix` across `/home/mohammadi/repos/cytognosis/cytoskills/s
 
 ### Ground truth checked directly (not just planned)
 
-`~/repos/cytognosis/branding` (the repo `cytognosis-org/SKILL.md` names as the design system's source of truth, local path `~/repos/cytognosis/branding`) **currently contains an unrelated React/Material-UI component library, "CytoStyle"** (`README.md`: `npm install @alimohammadiwork/cytostyle`; Storybook; Persian/Farsi IranYekan font files; audit docs like `CORRECTED_FIGMA_FIRST_DESIGN_SYSTEM_AUDIT.md`), **not** the `design-system/` target layout described in `branding_repo_plan.md`. This matches and confirms existing session memory ("branding repo holds CytoStyle; recovery gated on Ali chat") and `FINALIZATION_PLAN_2026-07-09.md` step 7, "Branding repo recovery (gated on the Ali conversation; Antigravity prompt ready)." **Do not write finalized design-system content directly into this repo until that gate clears.**
+`https://github.com/cytognosis/branding` (the repo `cytognosis-org/SKILL.md` names as the design system's source of truth, local path `https://github.com/cytognosis/branding`) **currently contains an unrelated React/Material-UI component library, "CytoStyle"** (`README.md`: `npm install @alimohammadiwork/cytostyle`; Storybook; Persian/Farsi IranYekan font files; audit docs like `CORRECTED_FIGMA_FIRST_DESIGN_SYSTEM_AUDIT.md`), **not** the `design-system/` target layout described in `branding_repo_plan.md`. This matches and confirms existing session memory ("branding repo holds CytoStyle; recovery gated on Ali chat") and `FINALIZATION_PLAN_2026-07-09.md` step 7, "Branding repo recovery (gated on the Ali conversation; Antigravity prompt ready)." **Do not write finalized design-system content directly into this repo until that gate clears.**
 
 ### (a) Where the finalized Claude Design export + consolidated guideline should live
 
 Two destinations, serving different purposes, per the pattern used everywhere else in this consolidation (docs repo = narrative home of record; product/code repos = production mirror):
 
 1. **`docs/07-Design/`** (docs repo, Obsidian-mirrored 1:1). Confirmed as the real, already-designated prose-spec home: `Website/CLAUDE.md` states "Design layer -> `07-Design/`" and "Brand identity -> vault `07-Design/` + `brand-identity` skill"; `ANTIGRAVITY-WAVE1-REVIEW_2026-07-08.md` records the explicit decision "`docs/07-Design/` ownership: docs repo owns prose spec; branding repo consumes." This is the correct landing spot for the finalized, reconciled guideline (the human and agent-readable spec), following the same two-variant rule (technical plus Obsidian plain-language companion) used for every other pillar. No blocker; can happen as soon as content is final.
-2. **`~/repos/cytognosis/branding/design-system/`** (production CSS/token/asset mirror), per the already-agreed target layout in `Science and Platform/design-system-consolidation-2026-05/02_repo_organization/branding_repo_plan.md` (`references/01-12`, `tokens.css`, `LOGO.md`, `WRITING.md`, `IMAGERY.md`, `ACCESSIBILITY.md`, `profiles/`, `assets/`, `templates/`, `components/`, `preview/`, `data-viz/`). **This write is blocked** on the CytoStyle/Ali recovery gate above; stage the content but do not commit it there yet.
+2. **`https://github.com/cytognosis/branding/tree/main/design-system`** (production CSS/token/asset mirror), per the already-agreed target layout in `Science and Platform/design-system-consolidation-2026-05/02_repo_organization/branding_repo_plan.md` (`references/01-12`, `tokens.css`, `LOGO.md`, `WRITING.md`, `IMAGERY.md`, `ACCESSIBILITY.md`, `profiles/`, `assets/`, `templates/`, `components/`, `preview/`, `data-viz/`). **This write is blocked** on the CytoStyle/Ali recovery gate above; stage the content but do not commit it there yet.
 
-The skill packages themselves (`cytognosis-branding`, `cytognosis-design-system-master`, and five siblings) stay at `~/repos/cytognosis/cytoskills/skills/cytognosis/` for now. `branding_repo_plan.md` (2026-05-13) assumed these would eventually move to `branding/skills/`; that move is downstream of the same blocked gate and should not be attempted before it clears. Fix the content in place (Helix removal, neutral-scale sync, Lumen-palette and Space Grotesk doc-sync) rather than relocating files this round.
+The skill packages themselves (`cytognosis-branding`, `cytognosis-design-system-master`, and five siblings) stay at `https://github.com/cytognosis/cytoskills/tree/main/skills/cytognosis` for now. `branding_repo_plan.md` (2026-05-13) assumed these would eventually move to `branding/skills/`; that move is downstream of the same blocked gate and should not be attempted before it clears. Fix the content in place (Helix removal, neutral-scale sync, Lumen-palette and Space Grotesk doc-sync) rather than relocating files this round.
 
 ### (b) Where generated artifacts (themes, backgrounds, social) should live
 

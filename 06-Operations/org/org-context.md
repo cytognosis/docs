@@ -61,8 +61,8 @@ Every artifact has exactly one canonical home. The org project is the **working 
 
 | Home | Path | Canonical for |
 |---|---|---|
-| cytomem | `~/repos/cytognosis/cytomem` (Neo4j + Graphiti) | Cross-repo index, provenance, dedup oracle |
-| docs repo | `~/repos/cytognosis/docs` | Engineering and platform docs (incl. this doc, under `06-Operations/org`) |
+| cytomem | `https://github.com/cytognosis/cytomem` (Neo4j + Graphiti) | Cross-repo index, provenance, dedup oracle |
+| docs repo | `https://github.com/cytognosis/docs` | Engineering and platform docs (incl. this doc, under `06-Operations/org`) |
 | Obsidian vault | `~/Documents/ObsidianVault` | Personal, ADHD-variant readable docs |
 | Claude Projects | `~/Claude/Projects/<project>` | Working drafts, strategy, per-project sets |
 | Data Hub | `gs://cytognosis-data-hub` (via DVC) | Datasets, large or versioned assets, pipeline outputs |
