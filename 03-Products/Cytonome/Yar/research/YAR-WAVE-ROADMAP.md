@@ -84,19 +84,20 @@ Assumption: 1 developer delivers about **10 effective engineer-weeks per 13-week
 
 Wave 0 core is demoable by end of **Q1**, solid by **Q2**. The full 69-feature roadmap completes around **Q8** at 3 devs.
 
-## 6. Team-size scenarios
+## 6. Team and coding-agent scenarios
 
-Effective capacity per quarter: full-time dev about 10 eng-weeks; half-time (20 hrs/wk) about 5. Midpoint total effort about 246 eng-weeks. Critical-path coupling means more than 3 to 4 devs yields diminishing returns until foundations are done.
+Effective delivery capacity per 13-week quarter is taken from `CODING-AGENT-PRODUCTIVITY.md` (cited, evidence-based): **1 FTE = 10** effective eng-weeks; **1 FTE + coding agent = 17** (range 13-22, about 1.7x); **3 FTE = 25** (sublinear per Brooks's Law); **3 FTE + coding agents = 38** (range 30-47). Midpoint total effort about **246 eng-weeks**; Wave 0 core about **85 eng-weeks**.
 
-| Team | Full roadmap (all 69) | Wave 0 core only (approx 70-100 eng-wk) |
-|---|---|---|
-| 1 dev full-time | about 24 quarters (6 yr) | about 7-10 quarters |
-| 2 devs full-time | about 12 quarters (3 yr) | about 4-5 quarters |
-| **3 devs full-time** | **about 8 quarters (2 yr)** | **about 2-3 quarters** |
-| 4 devs full-time | about 6 quarters (1.5 yr) | about 2 quarters |
-| 1 dev half-time | about 48 quarters (not viable alone) | about 14-20 quarters |
+| Scenario | Capacity/quarter | Full roadmap (all 69) | Wave 0 core |
+|---|---|---|---|
+| 1 FTE, no agent | 10 | about 25 quarters (~6 yr) | about 8-9 quarters |
+| **1 FTE + coding agent** | **17** | **about 14-15 quarters (~3.5 yr)** | **about 5 quarters** |
+| 3 FTE, no agent | 25 | about 10 quarters (~2.5 yr) | about 3-4 quarters |
+| 3 FTE + coding agents | 38 | about 6-7 quarters (~1.7 yr) | about 2-3 quarters |
 
-**Reading:** for a YC-stage push, 3 full-time developers gets a credible Wave 0 demo in one quarter and a shippable core in two. Fewer than 2 devs makes the timeline multi-year. The PeT KG and sync foundations are the pacing items; consider a specialist for those.
+**Critical caveat (evidence-based):** coding agents help most on greenfield UI, CRUD, and test-writing (1.5-2.2x) and least, sometimes net-negative, on the **research-heavy foundations that pace this roadmap**: PeT KG + long-term memory, cross-node sync, and mind-mapping structure revision. Plan those at only **1.0x-1.3x**. So the agent-boosted quarters above are optimistic for the foundation phase; expect early foundation quarters near the no-agent pace, with the speedup arriving once app-surface work dominates.
+
+**On the personal estimate:** "1 FTE + agent beats 2 FTE, maybe up to 10x" is defensible only for greenfield/boilerplate sprints with a single expert driver. For the PeT KG, sync, and mind-mapping design work it does not hold (the METR 2025 RCT found experienced devs 19% slower with AI on mature-repo fixes). Realistic project-level multiplier for 1 FTE + agent is about **1.7x**, not 10x. Full evidence and citations: `CODING-AGENT-PRODUCTIVITY.md`.
 
 ## 7. Governance gates (block gated features regardless of code)
 
