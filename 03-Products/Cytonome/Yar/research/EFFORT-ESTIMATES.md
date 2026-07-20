@@ -99,3 +99,35 @@ Take the high end of every row. This assumes: a fully custom wire protocol is bu
 **Platform / routing:** [Tauri v2](https://github.com/tauri-apps/tauri), [Cactus](https://github.com/cactus-compute/cactus), [Cactus on Y Combinator](https://www.ycombinator.com/companies/cactus), [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/), [Memex](https://github.com/WorldBrain/Memex), [Tana Input API docs](https://tana.inc/docs/input-api), [Tana lock-in critique](https://www.dsebastien.net/the-reasons-ill-never-switch-from-obsidian-to-tana/)
 
 **Internal sources cross-referenced:** `FEATURE-VERIFICATION.md`, `SPECS-INVENTORY.md`, `docs/03-Products/Cytonome/Yar/research/features.json`
+
+
+---
+
+## Addendum: 2026-07-19 spec-refresh (post Wave 0 spec suite)
+
+All 10 Wave 0 spec areas (plus SPEC-meeting-diarization) were written or updated on 2026-07-19 and committed to `docs/03-Products/Cytonome/Yar/spec/` on the `yar-specs` branch. Decisions that change this document's inputs:
+
+| Area | Resolution | Effect |
+|---|---|---|
+| **Sync (O-1)** | **any-sync** (MIT server nodes) adopted transport-only; Yar reducer stays sole authority; **Loro** (MIT) as CRDT container lib, Automerge 3.0 fallback | Effort revised **28-48 down to 12-24 eng-weeks** (core transport adoption 4-6 wk; the rest is E2E encryption, key custody, and hardening; E2E encryption is a hard launch gate) |
+| **PeT KG (F67)** | PeT defined (Personal Temporal KG, bitemporal facts); substrate is the already-decided SQLite+FTS5+sqlite-vec device store and FalkorDB server projection, no new database; cytomem converges at the schema/API layer | Effort revised **35-65 down to 28-50 eng-weeks** (the "PeT is undefined" risk premium is retired; retrieval-quality tuning risk remains) |
+| **Cactus routing** | Borrow the RoutingPolicy concept, do **not** ship the Cactus binary: its custom source-available license terminates free use at $2M funding or revenue (30-day commercial-license clause), incompatible with the YC spinout; license-clean alternatives (llama.cpp MIT, MLC-LLM Apache-2.0, LiteRT Apache-2.0, ONNX Runtime MIT) cover every runtime role. **Gemma 4 confirmed plain Apache-2.0** (ai.google.dev/gemma/apache_2) | Effort revised **7-13 down to 5-10 eng-weeks**; both license-verification flags are closed |
+| **Transcriber** | whisper.cpp (MIT) + WhisperKit (MIT, Apple) + sherpa-onnx (Apache-2.0) device tier; faster-whisper (MIT) server tier (already shipped); raw audio stays device-only; cloud STT not adopted | Estimate stands (15-25) |
+| **Proofreader** | Gazetteer (shipped) then GLiNER (Apache-2.0) + spaCy (MIT) then Instructor (MIT) tiers; DSPy offline-only; medSpaCy evaluated, not adopted for MVP | Estimate stands (6-12) |
+| **Mind-mapper** | LLM placement + strict conservatism contract; river (BSD-3) advisory only; no adoptable core library confirmed | Estimate stands (24-40); still the highest-risk worker |
+| **Diarization (F69)** | pyannote.audio (MIT code, CC-BY-4.0 community pipeline) + diart (MIT) streaming + FluidAudio (Apple) + sherpa-onnx fallback; NVIDIA Sortformer excluded (CC-BY-NC weights). Phone-call recording is OS-blocked on iOS/Android, so mobile scope is in-person meeting mode only | Estimate stands (10-20); counsel questions are now structured in the spec (consent states, BIPA voiceprints, GDPR Art. 9) |
+| **Personas** | One Voice Persona, worn by the Interviewer only; workers voiceless by design (config, not character) | Scope-creep risk retired (2-5 stands) |
+| **Multiplatform** | Thin adoption spec done; **Tauri v2 mobile recommended** for phone (one codebase), Flutter stays the org-template fallback; founder sign-off pending | Estimate stands (16-30); flagged founder decision |
+
+**Revised total: approximately 149 to 276 eng-weeks** (was 174 to 318; midpoint about 213, down from about 246). Wave 0 core drops to about **75 eng-weeks** midpoint (was about 85). Spec-writing uncertainty is retired; remaining wide ranges are genuine engineering risk (mind-mapper structure inference, PeT retrieval quality, sync E2E hardening).
+
+### Founder decisions, 2026-07-19 (same day, post-review)
+
+| Area | Decision | Effect |
+|---|---|---|
+| **Cactus routing** | Cactus REMOVED entirely (nonprofit/fully-free framing does not durably fix its license: the $2M funding-or-revenue clause is organizational, and the YC PBC arm would trip it). Feature descoped to a **simple local-vs-cloud model selection** (three-state user setting + per-agent defaults + CAP/privacy gates) | Effort revised **5-10 down to 2-4 eng-weeks**; learned routing is a reopenable later enhancement |
+| **Phone framework** | **Tauri v2 on both phone and desktop, DECIDED** (Rust performance, unified framework, React ecosystem access, growing community); Flutter is contingency only | Founder-decision flag closed |
+| **F69 diarization** | Counsel review DEFERRED to public release; **Phase 0 internal use ships now** (founder + consenting design partners, consent UX + PHI exclusion on). Landscape research (meeting-transcription-tools-landscape-2026-07) incorporated into the spec; no separate tooling spec needed | Legal gate no longer blocks internal builds; G01/G02 + counsel gate apply only to the public release |
+| **E2E encryption** | PHASED: plaintext transition builds acceptable while all agents are local and relays are self-hosted single-tenant; hard prerequisite before any Cytognosis-hosted relay or cloud agent | Removed from the local-first launch critical path; scheduled with the cloud-agent milestone |
+
+**Re-revised total: approximately 146 to 270 eng-weeks.** All specs promoted from draft to active on 2026-07-19.

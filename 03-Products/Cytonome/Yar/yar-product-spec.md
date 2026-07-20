@@ -2,10 +2,10 @@
 
 > **Status:** Active · **Date:** 2026-07-18 · **Author:** @mohammadi · **Audience:** engineers, stakeholders, funders
 > **Variants**: Technical (this doc) - Readable (yar-product-spec.md in Obsidian vault, same filename) - Agent (yar-product-spec_prompt.md)
-> **Supersedes:** `yar-product-feature-master.md`, `yar-product-implementation.md`, `cytonome-master-reference.md`, `feature-comparison.md` (all archived with forward links). **Feature index:** `YAR_FEATURE_CATALOG.md` (64 features). **Evidence base:** `research/yar-unified-feature-comparison-v4.md`.
+> **Supersedes:** `yar-product-feature-master.md`, `yar-product-implementation.md`, `cytonome-master-reference.md`, `feature-comparison.md` (all archived with forward links). **Feature index:** `YAR_FEATURE_CATALOG.md` (69 features). **Evidence base:** `research/yar-unified-feature-comparison-v4.md`.
 > **Reading time:** about 8 minutes.
 
-**If you only read one thing:** Yar is Cytonome v0.1, a local-first, voice-aware, AI-native cognitive companion built by and for neurodivergent adults. It turns messy voice or text into typed objects in a personal knowledge graph, helps the user plan and execute, and keeps raw data on-device behind a hard safety boundary (CAP). This spec is the single canonical product doc; per-feature depth lives in the 64-feature catalog and the 14 formal specs it maps to.
+**If you only read one thing:** Yar is Cytonome v0.1, a local-first, voice-aware, AI-native cognitive companion built by and for neurodivergent adults. It turns messy voice or text into typed objects in a personal knowledge graph, helps the user plan and execute, and keeps raw data on-device behind a hard safety boundary (CAP). This spec is the single canonical product doc; per-feature depth lives in the 69-feature catalog and the formal specs it maps to.
 
 ---
 
@@ -84,17 +84,19 @@ CSP is a **universal sensor adapter protocol**, an MCP-style open interface that
 
 You talk; Yar listens, understands your words (including slang and shorthand), and on each turn reasons about where the new thought best attaches in the growing graph, which restructures itself as the bigger picture emerges. It removes the "where does this go?" tax, honors nonlinear associative thinking, repairs earlier placements via a background reviser agent, learns your personal lexicon, deconvolves interleaved threads, captures side TODOs off the main flow, and turns a subtree into a proposal, paper, or plan. The brainmap is a typed (LinkML) thought-graph stored locally; three on-device agent roles run over it (a placer, a reviser, and a side-thread agent), all governed by CAP. Maps to features F13, F14, F15, F31, F60 and `SPEC-multi-agent`. It exists because it is how the founder's own mind works, which is the heart of the by-and-for-neurodivergent thesis.
 
-## 6. Feature catalog (64 features)
+## 6. Feature catalog (69 features)
 
-The canonical per-feature index is `YAR_FEATURE_CATALOG.md`: **64 features, F01-F64** (62 original plus F63 invisible-disability advocacy mode and F64 personal compass, added 2026-07-18), across six neurodivergent functional domains, plus two infrastructure modules that gate the rest. Each feature carries three naming layers (affirming public label, psychological construct tag, domain code); **CU-1..CU-8** mark the unique features: 20 features anchored to 8 named, defensible capability clusters, plus 21 additional features with no direct competitor equivalent.
+The canonical per-feature index is `YAR_FEATURE_CATALOG.md`: **69 features, F01-F69** (62 original; F63 invisible-disability advocacy mode and F64 personal compass added 2026-07-18; F65 focus & adherence guardian, F66 ask & summarize your captures, F67 long-term personal memory, F68 cross-device sync, and F69 meeting-mode diarization added 2026-07-19 per `research/FEATURE-VERIFICATION.md`), across six neurodivergent functional domains, plus two infrastructure modules that gate the rest. Each feature carries three naming layers (affirming public label, psychological construct tag, domain code); **CU-1..CU-8** mark the unique features: 20 features anchored to 8 named, defensible capability clusters, plus 21 additional features with no direct competitor equivalent.
 
 **Domains:** AEF (Attention/Executive Function), ERM (Emotion Regulation/Mood), SCI (Social/Communication/Interaction), SPR (Sensory/Processing), CTO (Cognition/Thought Organization), SMI (Self-Monitoring/Insight).
 
-Features are organized in a 3-level hierarchy (6 domains, 19 clusters, 64 features); see `research/FEATURE-HIERARCHY.md` and `research/features.json`.
+Features are organized in a 3-level hierarchy (6 domains, 19 clusters, 69 features); see `research/FEATURE-HIERARCHY.md` and `research/features.json`.
 
-**Waves:** 0 = safety and sensor substrate; 1 = wedge (25 founder-elevated features); 2 = moat (24 features); 3 = sensor, hardware, and research (6 features). Five infrastructure features build first: F18 safety/consent layer, F19 on-device AI runtime (Gemma 4 E4B), F52 local knowledge store, F50 web annotation layer, F51 schema translation; plus the privacy-boundary schema and crisis-detection module.
+**Waves:** 0 = safety and sensor substrate; 1 = wedge (25 founder-elevated features); 2 = moat (28 features, including F65 and F66); 3 = sensor, hardware, and research (7 features, including F69). Seven infrastructure features build first: F18 safety/consent layer, F19 on-device AI runtime (Gemma 4 E4B), F52 local knowledge store, F50 web annotation layer, F51 schema translation, F67 long-term personal memory (the PeT recall layer), F68 cross-device sync; plus the privacy-boundary schema and crisis-detection module.
 
 **Wave 1 (the wedge, build first):** energy/mood map (F05), flexible plan with backup (F07), rest-day support (F27), streaks that honor rest (F44), focus companion / body doubling (F06), companion style/voice (F11), voice mood awareness (F54), adaptive companion/trust (F57), morning check-in (F53), private space before planning (F17), gentle nudges (F39), voice-grown thought map (F13), voice capture (F01), task creation from speech (F02), task structuring (F03), task scheduling (F04), personal NER (F58), conversational thought map (F60), stray-thought capture (F32), mood tag (F08), capture from anywhere (F59), thought placement (F14), map reviewer (F31), spatial map view (F15), open export (F16).
+
+**F24 scope extension (2026-07-19), AI morning plan with interactive collaborative refinement.** F24 is no longer a single-pass suggestion. The agent proposes up to three anchors, then the person and the agent iterate together: the person can push back, swap, resize, reorder, or defer items in plain language, and the agent revises and re-presents until the person confirms the plan. The interaction model reuses F60's conversational-iteration pattern; accepting the first pass unchanged is always a first-class outcome, never a nagged one. Prompt contract: `prompts/daily-anchor-planner.md`.
 
 ## 7. Feature-to-spec map
 
@@ -102,14 +104,20 @@ Features are organized in a 3-level hierarchy (6 domains, 19 clusters, 64 featur
 - **`SPEC-personas-voice`:** F11, F29, F45, F57 (Kokoro TTS)
 - **`SPEC-multi-agent`:** F13, F14, F15, F31, F60 (three-agent loop), F18
 - **`SPEC-edge-ai-hybrid`:** F19 (Gemma 4 E4B)
-- **`SPEC-storage-engine` / `SPEC-sync-protocol`:** F52, F16 (storage-engine DRAFT pending SurrealDB v3.1.5 retest)
+- **`SPEC-storage-engine` / `SPEC-sync-protocol`:** F52, F16, F68 (storage-engine ACTIVE; sync co-designed with storage and the PeT temporal-KG abstractions)
+- **`SPEC-petkg-longmemory`:** F67, F66 (PeT temporal knowledge graph + long-term recall)
+- **`SPEC-transcriber-agent` / `SPEC-proofreading-agent` / `SPEC-mindmapping-agent`:** worker-level detail under `SPEC-multi-agent` (F01, F13-F15, F31, F33, F58, F60)
+- **`SPEC-cactus-routing`:** simple local-vs-cloud model selection for all agents (Cactus removed 2026-07-19; with `SPEC-edge-ai-hybrid`)
+- **`SPEC-browser-extension`:** F50, F59 (WADM + Memex parity)
+- **`SPEC-multiplatform-delivery`:** F41 delivery architecture (org interface templates)
+- **`SPEC-meeting-diarization`:** F69 (consent-first; internal use now, counsel review before public release)
 - **`SPEC-neurobehavioral-axes`:** axis substrate for all features
 - **`MODULE-crisis-detection` + `privacy-boundary-spec`:** gate F18, F27, F28, F36, F42, F56
 - **Sensor-science specs** (`SPEC-sensor-speech-mentalstate`, `-physiological`, `-menstrual`, `-social-interaction`): consumed by F54, F40, F30, F56, F42; the sensing science is owned by the **Cytoscope** project (Section 10).
 
 ## 8. Prioritization (IPS) and roadmap
 
-**IPS (Impact Priority Score, max 70)** = AI_Fit (0-20) + Desirability (0-20) + WedgeFit x5 + DR x5 + MoatBonus (0 or 5). Wave 1 was founder-elevated to 25 features by moving nine mind-mapping and capture features up from Wave 2. Near-term roadmap: harden the mobile voice loop and stabilize the write path; ship Brain Weather v0 (manual signals first), spiciness-slider task decomposition, dual-track planning, gentle streaks, and auto task-extraction; ship preset personas with per-persona voice and CSP v0 with the voice adapter as reference; then focus mode, idle and break support, read-aloud, and MCP server exposure.
+**IPS (Impact Priority Score, max 70)** = AI_Fit (0-20) + Desirability (0-20) + WedgeFit x5 + DR x5 + MoatBonus (0 or 5). Wave 1 was founder-elevated to 25 features by moving nine mind-mapping and capture features up from Wave 2. Near-term roadmap: harden the mobile voice loop and stabilize the write path; ship Brain Weather v0 (manual signals first), spiciness-slider task decomposition, dual-track planning, gentle streaks, and auto task-extraction; ship preset personas with per-persona voice and CSP v0 with the voice adapter as reference; then focus mode, idle and break support, read-aloud, and MCP server exposure. The F24 interactive-refinement loop ships with the daily-plan work, reusing the F60 conversational-iteration pattern.
 
 ## 9. North star: the ADHD paper
 

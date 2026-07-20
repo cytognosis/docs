@@ -1,21 +1,21 @@
 # Yar Feature Catalog (consolidated, canonical)
 
 > **Status**: Active
-> **Date**: 2026-07-18
+> **Date**: 2026-07-19
 > **Author**: @shahin
 > **Audience**: engineers, stakeholders
 > **Tags**: `yar`, `product`
 > **Variants**: Technical (this doc) - Readable (Obsidian twin optional, same filename) - Agent (n/a)
 
-**Date:** 2026-07-18 · **Status:** canonical front door for all Yar features · **Supersedes:** the 05-31 feature master and all pre-v4 comparisons.
+**Date:** 2026-07-19 · **Status:** canonical front door for all Yar features · **Supersedes:** the 05-31 feature master and all pre-v4 comparisons.
 **Integrates:** the "Yar specs execution plan" session (16 specs, promoted to `docs/03-Products/Cytonome/Yar/spec/`), the v4 feature comparison + prioritization, the feature-naming convention, and the "Cytonome research consolidation" benchmark package.
 **Reading time:** ~6 minutes. **If you only read one thing:** the Wave 1 table in §4 (the 25 wedge features being built first).
 
-**Hierarchy:** This catalog is organized by build wave; for the domain hierarchy (6 domains, 19 clusters, 64 features) see research/FEATURE-HIERARCHY.md and research/features.json.
+**Hierarchy:** This catalog is organized by build wave; for the domain hierarchy (6 domains, 19 clusters, 69 features) see research/FEATURE-HIERARCHY.md and research/features.json.
 
 ## 1. Scope
 
-64 features, F01-F64, across 6 neurodivergent functional domains, plus 2 infrastructure modules (privacy boundary, crisis detection) that gate the rest. Sensor-science features are flagged for the Cytoscope project (§7). This catalog is the single index; each feature's depth lives in its spec.
+69 features, F01-F69, across 6 neurodivergent functional domains, plus 2 infrastructure modules (privacy boundary, crisis detection) that gate the rest. Sensor-science features are flagged for the Cytoscope project (§7). This catalog is the single index; each feature's depth lives in its spec.
 
 ## 2. Domain and naming legend
 
@@ -29,7 +29,7 @@
 
 ## 4. The features by wave
 
-### Infrastructure (5, build first; everything depends on these)
+### Infrastructure (7, build first; everything depends on these)
 
 | ID | Feature | Domain | CU | IPS |
 |---|---|---|---|---|
@@ -38,6 +38,10 @@
 | F52 | Local knowledge store | CTO | | 40 |
 | F50 | Web annotation layer | CTO | | 36 |
 | F51 | Schema translation | CTO | | 36 |
+| F67 | Long-term personal memory (PeT recall) | CTO | | n/s* |
+| F68 | Cross-device sync | CTO | | n/s* |
+
+*n/s = added 2026-07-19, post-matrix, not yet IPS-scored; placed in Infrastructure because every agent and wave depends on them (see `research/DEPENDENCY-GRAPH.md`).
 
 Plus two off-catalog infra modules: **privacy-boundary schema** and **crisis-detection module** (separate build stories; gate F18/F27/F28/F36/F42/F56).
 
@@ -78,11 +82,11 @@ Plus two off-catalog infra modules: **privacy-boundary schema** and **crisis-det
 | F15 | Spatial map view | CTO | | 48 |
 | F16 | Open export | CTO | | 48 |
 
-### Wave 2 (26 moat features, incl. 2 added 2026-07-18)
+### Wave 2 (28 moat features, incl. 2 added 2026-07-18 and 2 added 2026-07-19)
 
 | ID | Feature | Domain | CU | IPS |
 |---|---|---|---|---|
-| F24 | AI morning plan | AEF | | 53 |
+| F24 | AI morning plan (with interactive collaborative refinement) | AEF | | 53 |
 | F33 | Personal vocabulary | CTO | CU-4 | 53 |
 | F20 | Focus mode | AEF | | 51 |
 | F48 | Gentle reset (safety-gated) | ERM | | 51 |
@@ -107,6 +111,8 @@ Plus two off-catalog infra modules: **privacy-boundary schema** and **crisis-det
 | F35 | Energy check before yes | AEF | | 46 |
 | F37 | Transition cues | SPR | | 44 |
 
+**F24 scope extension (2026-07-19):** F24 now explicitly includes interactive collaborative refinement of the daily plan: the person and the agent iterate on the plan together (reusing F60's conversational-iteration pattern) instead of a single-pass suggestion. See `yar-product-spec.md` and `prompts/daily-anchor-planner.md`.
+
 #### Added 2026-07-18
 
 Not yet scored in the v4 comparison matrix (post-matrix additions per D-E).
@@ -116,7 +122,16 @@ Not yet scored in the v4 comparison matrix (post-matrix additions per D-E).
 | F63 | Invisible-disability advocacy mode | SCI / Communication coaching | planned | yes | During depressive or anxious periods, Yar helps explain your situation, needs, and what to expect to partners or colleagues, on your terms, so you are not misunderstood when you cannot perform as usual. Closes the founder-narrative "advocates for you" gap. |
 | F64 | Personal compass (gentle goals) | AEF / Day planning & flexible plans | planned | no | Non-pressuring direction: gentle goals you steer by, never a performance bar. Reframes the Leantime "Goals" pattern into Yar's no-shame model. |
 
-### Wave 3 (6 sensor / hardware / research)
+#### Added 2026-07-19
+
+Not yet scored in the v4 comparison matrix (post-matrix additions per `research/FEATURE-VERIFICATION.md`).
+
+| ID | Feature | Domain / cluster | Status | Gated | Description |
+|---|---|---|---|---|---|
+| F65 | Focus & adherence guardian | AEF / Focus, body-doubling & breaks | planned | yes | With your permission across chosen apps, nudges you back to the agreed plan when you drift, at an authority level you set from gentle reminder to blocking distractions. Gated on the privacy-boundary schema. |
+| F66 | Ask & summarize your captures | CTO / Capture, documents & transforms | planned | no | Ask questions across your captures and get grounded summaries from your own knowledge. Usable against F52's local store on day one; quality upgrades once F67 lands. |
+
+### Wave 3 (7 sensor / hardware / research)
 
 | ID | Feature | Domain | CU | IPS | Note |
 |---|---|---|---|---|---|
@@ -126,6 +141,7 @@ Not yet scored in the v4 comparison matrix (post-matrix additions per D-E).
 | F40 | Voice wellbeing signals (research) | ERM | | 37 | **Cytoscope** (SER, no clinical validation yet) |
 | F47 | Untangling parallel thoughts (research) | CTO | | 37 | |
 | F46 | Brain sensor layer (future) | SMI | CU-1 | 27 | **Cytoscope** (hardware) |
+| F69 | Meeting-mode diarization | AEF | | n/s | added 2026-07-19 (reverses the D-E deferral); consent-gated plus multi-party consent-law counsel review |
 
 ## 5. Feature-to-spec map
 
@@ -137,7 +153,13 @@ Not yet scored in the v4 comparison matrix (post-matrix additions per D-E).
 - **SPEC-personas-voice:** F11, F29, F45, F57 (Kokoro TTS)
 - **SPEC-multi-agent:** F13, F14, F15, F31, F60 (3-agent loop), F18
 - **SPEC-edge-ai-hybrid:** F19 (Gemma 4 E4B)
-- **SPEC-storage-engine / SPEC-sync-protocol:** F52, F16
+- **SPEC-storage-engine / SPEC-sync-protocol:** F52, F16, F68
+- **SPEC-petkg-longmemory:** F67, F66 (PeT temporal knowledge graph + long-term recall)
+- **SPEC-meeting-diarization:** F69 (consent-first; internal use now, counsel review before public release)
+- **SPEC-transcriber-agent / SPEC-proofreading-agent / SPEC-mindmapping-agent:** worker-level detail under SPEC-multi-agent (F01, F13-F15, F31, F33, F58, F60)
+- **SPEC-cactus-routing:** simple local-vs-cloud model selection for all agents (Cactus removed 2026-07-19; with SPEC-edge-ai-hybrid)
+- **SPEC-browser-extension:** F50, F59 (WADM + Memex parity)
+- **SPEC-multiplatform-delivery:** F41 delivery architecture (org interface templates)
 - **MODULE-crisis-detection + privacy-boundary-spec:** gate F18, F27, F28, F36, F42, F56
 
 ## 6. Status

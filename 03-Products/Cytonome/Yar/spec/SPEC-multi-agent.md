@@ -1,83 +1,133 @@
 ---
 spec_id: SPEC-multi-agent
-version: "0.1"
-status: draft
+version: "0.2"
+status: active
 domain: multi-agent
 owner: Shahin Mohammadi
 created: 2026-06-21
-last_updated: 2026-06-22
+last_updated: 2026-07-19
 depends_on:
   - SPEC-storage-engine
   - SPEC-sync-protocol
+  - SPEC-petkg-longmemory
   - privacy-boundary-spec
   - MODULE-crisis-detection
 implements:
   - CAP 05_integrations
   - CAP 02_core_model
+coordinates_with:
+  - SPEC-edge-ai-hybrid
+  - SPEC-CSP
+  - SPEC-transcriber-agent
+  - SPEC-proofreading-agent
+  - SPEC-mindmapping-agent
 ---
 
-> **Status**: Draft
-> **Date**: 2026-06-22
+> **Status**: Active (founder-approved 2026-07-19)
+> **Date**: 2026-07-19
 > **Author**: Cytognosis Foundation
 > **Audience**: engineers
-> **Tags**: `yar`, `multi-agent`, `orchestration`, `cap`
+> **Tags**: `yar`, `multi-agent`, `orchestration`, `cap`, `naming`, `petkg`
 
 # SPEC: Yar Multi-Agent System
 
 > **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/SPEC-multi-agent_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
 
-> **Reading time**: ~15 minutes.
-> **If you only read one thing**: Section 2 (agent roles and the implementation-status distinction) and Section 6 (the brainmap loop as a worked example). The architecture targets a supervisor-worker model, but only the on-device CAP-Lite safety gate (`CapLiteGuard`) is implemented today. The Gemma E4B intent service is wired on mobile. No supervisor agent is running yet. Every future agent-to-agent message will be a CAP Directive envelope.
+> **Reading time**: ~18 minutes.
+> **If you only read one thing**: Section 2 (the canonical naming table, which ends three months of drift across four different naming schemes) and Section 13 (implementation status against the shipped Tauri/Django reference client). The architecture still targets a supervisor-worker model with a CAP Directive envelope on every message; what changed this revision is that three of the five worker roles are now functionally shipped as an MVP, just not yet wired through CAP.
 
 ---
 
-> **IMPLEMENTATION STATUS SUMMARY (2026-06-22)**
+> **IMPLEMENTATION STATUS SUMMARY (2026-07-19)**
 >
 > | Component | Status |
 > |---|---|
-> | `CapLiteGuard` deterministic safety gate (`Yar/src/cap/guard.py`) | **IMPLEMENTED** |
-> | `GemmaEdgeIntentService` on-device intent inference (`Yar/apps/mobile/lib/src/services/gemma_edge_intent_service.dart`) | **IMPLEMENTED** |
-> | CAP-Lite sidecar concept (`:7100`) | **DESIGNED** (not yet running as a sidecar process) |
-> | Supervisor agent (Gemma 4 26B MoE, Ollama) | **PLANNED** |
-> | Worker agents: Placer, Reviser, Interviewer (as distinct agent processes) | **PLANNED** |
-> | Dapr and NATS orchestration runtime | **PLANNED** |
+> | `CapLiteGuard` deterministic safety gate | **IMPLEMENTED**, ported into the YC Tauri reference client (`yar-code-20260705-2354/backend/cap/`, commit `068b10d`) |
+> | `GemmaEdgeIntentService` on-device intent inference (mobile) | **IMPLEMENTED** |
+> | **Transcriber** (server-tier ASR) | **SHIPPED (MVP)**, `backend/transcribe/`: mock and faster-whisper providers, content-hash blob archive |
+> | **Transcriber** (device-tier ASR) | **GROUNDWORK**, whisper.cpp/WhisperKit seam documented, not bundled |
+> | **Proofreader** (personal-NER, revision/tagging) | **SHIPPED (MVP)**, `backend/assistant/extraction.py` + `providers.py`, gazetteer NER |
+> | **Mind-mapper** (placement, structural revision) | **SHIPPED (MVP)**, `backend/knowledge/`: BM25 + hashing embedder + RRF hybrid retrieval + n-hop graph expansion, frontend spatial canvas |
+> | CAP Directive envelope wiring for the three shipped agents above | **NOT WIRED**. No `cytoplex` import exists anywhere in the reference client. This is the outstanding structural gap this revision closes on paper, not a new agent to invent |
+> | **Supervisor** (Gemma 4 26B MoE, Ollama) | **PLANNED** |
+> | **Interviewer** (real-time conversational response, mood-state inference, as a distinct CAP-governed process) | **PLANNED**. Grounded chat exists today (`backend/assistant/providers.py`) but without CAP wiring, mood-arc inference, or a separate process boundary |
+> | Dapr and NATS orchestration runtime | **PLANNED**, not yet deployed. Dapr Agents v1.0 shipped in 2026 as a production-ready agent-orchestration framework with native NATS JetStream pub-sub, which confirms this is still the right pattern; it does not change Yar's own deployment status |
 > | AgentCard registration and attestation | **PLANNED** |
-> | `cytoplex/scenarios/therapist_supervisor/` is the closest reference implementation of the supervisor-worker CAP pattern; it uses an Ollama-backed supervisor agent and a local therapist agent with full CAP envelope wiring | **REFERENCE** |
+> | PeT recall API integration for Proofreader and Mind-mapper | **PLANNED**, depends on `SPEC-petkg-longmemory` (itself Draft v1) |
+> | `cytoplex/scenarios/therapist_supervisor/` | **REFERENCE**, the closest working implementation of the supervisor-worker CAP pattern |
 
 ---
 
-## 1. Purpose and Scope
+## 1. Purpose, Scope, and the Problem
 
-This spec defines the multi-agent architecture for the Yar cognitive companion. It covers the runtime model for on-device worker agents, the supervisor agent, agent and tool discovery, the orchestration layer (Dapr and NATS), interaction contracts, and how CAP governs every agent action.
+This spec defines the multi-agent architecture for the Yar cognitive companion: the runtime model for on-device worker agents, the supervisor agent, agent and tool discovery, the orchestration layer (Dapr and NATS), interaction contracts, how CAP governs every agent action, and how every agent reads and writes personalized long-term context through PeT (`SPEC-petkg-longmemory.md`).
 
-**In scope:** agent roles and ownership, discovery and registration via MCP, orchestration lifecycle and failure handling, the CAP Directive envelope as the inter-agent message format, privacy-boundary and crisis-detection gates, the conversational brainmap loop as a concrete worked example, edge versus supervisor split, and cross-cutting standards.
+**The problem this revision solves.** Three separate documents used three different names for what is, at the concept level, the same small set of worker roles, and a fourth planning pass used a fourth naming convention. Nobody outside this drafting session could tell a new engineer, with a straight face, whether "Reviser" and "revision-tagging" were the same job. Meanwhile, `YAR-CLIENT-EVAL.md` proved that a real, working, tested reference client already ships three of those roles as an MVP, which the prior draft of this spec described only as "PLANNED." A spec that is simultaneously wrong about names and wrong about what exists is worse than no spec. This revision fixes both problems in one pass: one canonical naming scheme (Section 2), and an implementation-status table that matches the shipped code (Section 13).
 
-**Out of scope:** model weights and training, sensor signal schemas (see `SPEC-CSP.md`), on-device versus cloud latency budgets (see `SPEC-edge-ai-hybrid.md` when written), persona selection and voice synthesis (see `SPEC-personas-voice.md` when written), and neurobehavioral axis scoring (see `SPEC-neurobehavioral-axes.md` when written).
+**In scope:** agent roles and ownership under one canonical naming scheme, discovery and registration via MCP, orchestration lifecycle and failure handling, the CAP Directive envelope as the inter-agent message format, the PeT recall API as the shared long-term-memory contract every worker reads and writes through, privacy-boundary and crisis-detection gates, the conversational brainmap loop and the F24 daily-plan refinement loop as concrete worked examples, edge versus supervisor split, and cross-cutting standards.
 
-**Relationship to CAP:** CAP (Cytognosis Authority Protocol) is the authority protocol; this spec defines how Yar agents instantiate CAP roles and how the multi-agent runtime composes with CAP primitives. For CAP primitives themselves, see `Cytoplex/spec/03_primitives.md`. For CAP composition with MCP and A2A, see `Cytoplex/spec/05_integrations.md`.
+**Out of scope:** model weights and training; sensor signal schemas (`SPEC-CSP.md`); on-device versus cloud latency budgets (`SPEC-edge-ai-hybrid.md`); persona selection and voice synthesis (`SPEC-personas-voice.md`); neurobehavioral axis scoring (`SPEC-neurobehavioral-axes.md`); the detailed internal design of any single worker, which belongs to its own forthcoming spec (Section 4).
+
+**Relationship to CAP:** CAP (Cytognosis Authority Protocol) is the authority protocol; this spec defines how Yar agents instantiate CAP roles and how the multi-agent runtime composes with CAP primitives. For CAP primitives themselves, see `Cytoplex/spec/03_primitives.md`. For CAP composition with MCP and A2A, see `Cytoplex/spec/05_integrations.md`. Yar is fully free with no subscription; every worker agent in this spec runs on open-weight models (Gemma, Whisper-family) that the person owns the inference for, on their own device or their own laptop-as-supervisor, not a metered cloud API a person must keep paying for.
 
 ---
 
-## 2. Agent Roles and the Supervisor-Worker Model
+## 2. Canonical Naming Reconciliation
 
-Yar's multi-agent system targets a strict supervisor-worker topology. Workers run on-device and handle latency-sensitive, user-facing interactions. The supervisor arbitrates policy, routes complex tasks, and manages cross-agent state. No worker communicates with another worker directly; all coordination passes through the supervisor.
+Four documents named the same small set of roles four different ways. None of the four were wrong for their own purpose; they were written at different times for different audiences and never reconciled against each other. This section is the single reconciliation pass.
 
-**Current state (v0.1):** The on-device safety gate (`CapLiteGuard`, `Yar/src/cap/guard.py`) is implemented. The `GemmaEdgeIntentService` (`Yar/apps/mobile/lib/src/services/gemma_edge_intent_service.dart`) is implemented for on-device intent inference. The full supervisor process and the separate worker-agent processes (Placer, Reviser, Interviewer) are PLANNED. The `cytoplex/src/cytoplex/scenarios/therapist_supervisor/` scenario is the working reference for the supervisor-worker CAP pattern and shows what the wired-up topology looks like.
+### 2.1 The four schemes, as they actually read
 
-### 2.1 Topology Diagram
+| Source | What it says | Read as of this revision |
+|---|---|---|
+| (a) `README.md` (spec-folder index) | "Three-agent brainmap loop (placer, reviser, side-thread)" | An early, informal gloss on this spec's own scope line. "Side-thread" was never defined anywhere else in the corpus; it is read here as a proto-name for thread and branch handling inside the brainmap, the exact capability F47 ("untangling parallel thoughts") and the Reviser's structural duties already covered |
+| (b) This spec's own v0.1 topology | Supervisor, Interviewer, Transcriber, Placer, Reviser (5 roles) | The most detailed prior scheme, but it split one real job (turning a transcript into durable knowledge-graph structure) across two names, Placer and Reviser, and gave the Reviser two unrelated duties at once: text-level tagging and structural graph editing |
+| (c) `YAR-CLIENT-EVAL.md` (shipped reference client) | transcription / revision-tagging / organization-into-KG (3 agents) | Ground truth for what actually runs today. "Revision-tagging" is the Reviser's text-side duty, shipped. "Organization-into-KG" is the Placer's placement duty plus the Reviser's structural duty, shipped together as one working pipeline |
+| (d) Wave 0 planning naming (`SPECS-INVENTORY.md`, `FEATURE-VERIFICATION.md`) | transcriber / proofreading / mind-mapping (3 agents) | The naming this revision adopts almost verbatim, because it is the one scheme that already matches what is shipped: one agent per pipeline stage, not per data-structure operation |
 
-> Note: diagram shows the target architecture. Components marked [PLANNED] are not yet wired up.
+### 2.2 Canonical scheme (this revision)
+
+**Recommendation, adopted:** five roles total. Two are session-level and CAP-Lite/CAP-governed but not yet shipped (Supervisor, Interviewer). Three are pipeline workers, and all three already exist as shipped MVP functionality under different names (Transcriber, Proofreader, Mind-mapper). This is not a compromise between the four schemes; it is the reading that makes (b), (c), and (d) all true statements about the same five things.
+
+| Canonical name | Old aliases | Shipped status | Spec home |
+|---|---|---|---|
+| **Supervisor** | Supervisor (scheme b); no equivalent in (a), (c), or (d) | **PLANNED**. No `cytoplex` import in the shipped client; this role does not exist as running code | This spec, Section 3 and Section 11 |
+| **Interviewer** | Interviewer (scheme b); implicit in "conversational" framing (`FEATURE-VERIFICATION.md` item 4); no equivalent in (a) or (c) | **PLANNED** as a distinct CAP-governed process. Grounded chat exists today (`backend/assistant/providers.py`) without CAP wiring or a separate process boundary | This spec, Section 3 and Section 9 |
+| **Transcriber** | Transcriber (scheme b); "transcription" (scheme c); "transcriber" (scheme d) | **SHIPPED (MVP, server-tier)**; device-tier is groundwork only | `SPEC-transcriber-agent` (forthcoming) |
+| **Proofreader** | Reviser, text-side duties only (scheme b); "revision-tagging" (scheme c); "proofreading" (scheme d) | **SHIPPED (MVP)** | `SPEC-proofreading-agent` (forthcoming, being written next) |
+| **Mind-mapper** | Placer, plus Reviser's structural duties (scheme b); "organization-into-KG" (scheme c); "mind-mapping" (scheme d); "placer/reviser/side-thread" (scheme a, with "side-thread" folded in as thread/branch handling) | **SHIPPED (MVP)** | `SPEC-mindmapping-agent` (forthcoming) |
+
+**What this does to the old "Reviser" name specifically, since it is the one role that splits.** The v0.1 Reviser owned two duties that were never actually one job: (1) recognizing and correcting personal terms, names, and revision-style edits in text, which becomes the **Proofreader**; and (2) restructuring the brainmap graph, moves, renames, links, which becomes part of the **Mind-mapper**. `YAR-CLIENT-EVAL.md`'s own agent table independently drew this exact line ("Revision/Tagging" as one shipped module, "Organization/KG" as another), which is the strongest evidence that the split, not the merge, is the correct decomposition. Nothing about the CRDT op-log, the revision-history entry, or the undo-by-replay guarantee (Section 9.4 of the prior draft) changes; only the agent-ownership label on the structural half moves from "Reviser" to "Mind-mapper."
+
+### 2.3 Updated agent inventory
+
+| Agent | Model | Runs on | CAP role | Status | Owns |
+|---|---|---|---|---|---|
+| **CapLiteGuard** | Deterministic term-matching (no LLM) | Device | Guard | **IMPLEMENTED** | First-pass safety evaluation on every input and write |
+| **GemmaEdgeIntentService** | Gemma 4 E4B (`flutter_gemma`) | Device (LiteRT) | Executor | **IMPLEMENTED** (mobile) | On-device intent classification and reply generation |
+| **Supervisor** | Gemma 4 26B MoE | Laptop or cloud (Ollama) | Controller | **PLANNED** | Policy routing, cross-agent state, safety arbitration, crisis escalation, sole emitter of `CrossBoundarySignal` |
+| **Interviewer** | Gemma 4 E4B | Device (LiteRT) | Controller + Executor | **PLANNED** as a CAP-governed process | Real-time conversational response, mood-state inference, crisis-detection trigger, F24 refinement dialogue (Section 10) |
+| **Transcriber** | Whisper-family (server-tier: faster-whisper; device-tier: whisper.cpp/WhisperKit, seam only) | Server (shipped) / Device (groundwork) | Executor | **SHIPPED (MVP, server)**, groundwork (device) | Continuous ASR, voice-turn segmentation, transcript archival by content hash |
+| **Proofreader** | Rule-based floor + OpenAI-compatible upgrade path; gazetteer NER | Server (shipped); device path PLANNED | Executor | **SHIPPED (MVP)** | Personal-NER resolution, transcript-to-task extraction, revision/correction tagging, structured output |
+| **Mind-mapper** | BM25 + hashing embedder + RRF hybrid retrieval + n-hop expansion; frontend spatial canvas | Server (shipped); device path PLANNED | Executor | **SHIPPED (MVP)** | Node placement, graph restructuring (move, rename, link), revision-history entries, PeT placement context calls |
+
+---
+
+## 3. Architecture and Topology
+
+Yar's multi-agent system targets a strict supervisor-worker topology. Workers run close to the user (on-device today for intent/guard, server-tier today for the three pipeline workers) and handle latency-sensitive or throughput-heavy tasks. The supervisor arbitrates policy, routes complex tasks, and manages cross-agent state. No worker communicates with another worker directly; all coordination passes through the supervisor. This invariant is unchanged from v0.1 and is not renegotiated by the naming reconciliation in Section 2.
 
 ```mermaid
 graph TB
   User["User (voice or text input)"]
   SUP["Supervisor\nGemma 4 26B MoE\n(Ollama, laptop/cloud)\n[PLANNED]"]
   WRK_INT["Interviewer Worker\nGemma 4 E4B\n(LiteRT, on-device)\n[PLANNED]"]
-  WRK_TXB["Transcriber Worker\nWhisper / on-device STT\n(on-device)\n[PLANNED]"]
-  WRK_PLA["Placer Worker\nGemma 4 E4B\n(on-device)\n[PLANNED]"]
-  WRK_REV["Reviser Worker\nGemma 4 E4B\n(on-device)\n[PLANNED]"]
-  CAP_G["CapLiteGuard\n(deterministic term-matching gate)\n[IMPLEMENTED]"]
-  GEMMA_INT["GemmaEdgeIntentService\n(on-device Gemma 4 E4B intent inference)\n[IMPLEMENTED]"]
+  WRK_TXB["Transcriber Worker\n[SHIPPED server / groundwork device]"]
+  WRK_PRO["Proofreader Worker\n[SHIPPED, MVP]"]
+  WRK_MM["Mind-mapper Worker\n[SHIPPED, MVP]"]
+  CAP_G["CapLiteGuard\n[IMPLEMENTED]"]
+  GEMMA_INT["GemmaEdgeIntentService\n[IMPLEMENTED]"]
+  PET["PeT recall API\n(SPEC-petkg-longmemory)\n[PLANNED integration]"]
   CRDT["CRDT Op-Log\n(source of truth)"]
   PB["Privacy Boundary PEP\n(CrossBoundarySignal schema)"]
 
@@ -85,63 +135,62 @@ graph TB
   CAP_G -->|"GuardDecision"| GEMMA_INT
   GEMMA_INT -->|"VoiceIntent"| WRK_INT
   WRK_INT -->|"CAP Directive"| SUP
-  SUP -->|"CAP Directive"| WRK_PLA
-  SUP -->|"CAP Directive"| WRK_REV
-  WRK_TXB -->|"transcript fragment"| WRK_INT
-  WRK_PLA -->|"CRDT op"| CRDT
-  WRK_REV -->|"CRDT op"| CRDT
+  SUP -->|"CAP Directive"| WRK_MM
+  SUP -->|"CAP Directive"| WRK_PRO
+  WRK_TXB -->|"transcript fragment"| WRK_PRO
+  WRK_PRO -->|"pet.resolve_entity"| PET
+  WRK_MM -->|"pet.get_placement_context"| PET
+  WRK_PRO -->|"CRDT op (pet_fact, task)"| CRDT
+  WRK_MM -->|"CRDT op (node, edge)"| CRDT
   SUP -->|"derived signal only"| PB
   PB -->|"CrossBoundarySignal"| EXT["External recipient\n(clinician / supervisor cloud)"]
   style SUP fill:#3B7DD6,color:#fff,stroke:#5145A8,stroke-width:3px
   style CAP_G fill:#2d7a2d,color:#fff,stroke:#1a5c1a,stroke-width:3px
   style GEMMA_INT fill:#2d7a2d,color:#fff,stroke:#1a5c1a,stroke-width:2px
+  style WRK_TXB fill:#2d7a2d,color:#fff,stroke:#1a5c1a,stroke-width:2px
+  style WRK_PRO fill:#2d7a2d,color:#fff,stroke:#1a5c1a,stroke-width:2px
+  style WRK_MM fill:#2d7a2d,color:#fff,stroke:#1a5c1a,stroke-width:2px
   style PB fill:#F26355,color:#fff,stroke:#b8472f,stroke-width:2px
 ```
 
-### 2.2 Agent Inventory
-
-| Agent | Model | Runs on | CAP Role | Status | Owns |
-|---|---|---|---|---|---|
-| **CapLiteGuard** | Deterministic term-matching (no LLM) | Device | Guard | **IMPLEMENTED** (`Yar/src/cap/guard.py`) | Evaluates crisis, diagnosis, treatment, raw-data-sharing, and intent-claim boundaries before any model inference |
-| **GemmaEdgeIntentService** | Gemma 4 E4B (flutter_gemma) | Device (LiteRT) | Executor | **IMPLEMENTED** (`Yar/apps/mobile/lib/src/services/gemma_edge_intent_service.dart`) | On-device intent classification and conversational reply generation |
-| **Supervisor** | Gemma 4 26B MoE | Laptop or cloud (Ollama) | Controller | **PLANNED** | Policy routing, cross-agent state, safety arbitration, crisis escalation |
-| **Interviewer** | Gemma 4 E4B | Device (LiteRT) | Controller + Executor | **PLANNED** | Real-time conversational response, mood-state inference, crisis-detection trigger |
-| **Transcriber** | Whisper-compatible on-device STT | Device | Executor | **PLANNED** | Continuous ASR, voice-turn segmentation, VocalBiomarkerFrame emission |
-| **Placer** | Gemma 4 E4B | Device (LiteRT) | Executor | **PLANNED** | Inserting new nodes and edges into the brainmap (CRDT insert ops) |
-| **Reviser** | Gemma 4 E4B | Device (LiteRT) | Executor | **PLANNED** | Restructuring existing brainmap nodes (CRDT move, rename, link ops) |
-
-### 2.3 Ownership Rules
-
-Each agent owns a clearly bounded set of state and actions:
-
-- **CapLiteGuard** (IMPLEMENTED): owns the first-pass safety evaluation. It runs synchronously before any model inference, on every user input and every proposed write. It evaluates crisis terms, diagnosis terms, treatment advice, intent claims, raw-data-sharing, and health-risk scoring using deterministic multilingual (English + Farsi) term-matching and regex patterns. It returns a `GuardDecision` (allow, allow_with_constraints, or deny) and never retains matched text. See `Yar/src/cap/guard.py`. Crisis message routes to 1480 (Iran Social Emergency) and findahelpline.com.
-- **GemmaEdgeIntentService** (IMPLEMENTED): owns on-device intent classification (`inferIntent`) and conversational reply generation (`generateAssistantReply`). Both run through the `flutter_gemma` Gemma 4 E4B model with session-specific inference params. See `Yar/apps/mobile/lib/src/services/gemma_edge_intent_service.dart`.
-- **Supervisor** (PLANNED): owns the active `AuthorityChain`, issues all Directives that target external tools or that require policy evaluation, holds the session-level guidance state, and is the only agent that may emit a `CrossBoundarySignal` to external recipients. Reference implementation: `cytoplex/src/cytoplex/scenarios/therapist_supervisor/supervisor_agent.py`.
-- **Interviewer** (PLANNED): owns the conversational turn buffer, infers mood arc and engagement signals, and is the first responder to user input. It MAY issue Directives to the supervisor but MUST NOT write directly to the CRDT store.
-- **Transcriber** (PLANNED): owns the raw audio stream and the ASR pipeline. It emits transcript fragments and `VocalBiomarkerFrame` structs. It MUST NOT retain raw audio after frame emission.
-- **Placer** (PLANNED): owns node-placement proposals. It receives a `PlaceDirective` from the supervisor, validates it against the CRDT schema, writes insert ops to the op-log, and emits an `ExecutionReport`.
-- **Reviser** (PLANNED): owns restructure proposals. It receives a `ReviseDirective` from the supervisor, validates it, writes move or link ops, and emits an `ExecutionReport`. It also writes a revision-history entry per turn.
+Ownership boundaries follow the "Owns" column of Section 2.3's agent inventory directly: CapLiteGuard and GemmaEdgeIntentService are IMPLEMENTED; Supervisor and Interviewer are PLANNED; Transcriber, Proofreader, and Mind-mapper are SHIPPED (MVP) and detailed per-worker below. The Interviewer MAY issue Directives to the Supervisor but MUST NOT write directly to the CRDT store; the Transcriber MUST NOT retain raw audio beyond the retention policy `SPEC-storage-engine.md` sets.
 
 ---
 
-## 3. Discovery: How Agents and Tools Are Found
+## 4. Per-Worker Summaries
 
-All agent and tool discovery in Yar is MCP-based. Agents advertise their capabilities via MCP AgentCards; the supervisor queries the registry at session start and maintains a live capability map.
+Full behavioral detail for each pipeline worker belongs in its own spec, not here; this spec fixes the name, the CAP role, the ownership boundary, and the PeT touchpoint, and points to the detail spec for everything else.
 
-### 3.1 MCP as the Discovery Layer
+| Worker | One-line job | Detail spec | Status of that spec |
+|---|---|---|---|
+| **Transcriber** | Converts voice to text and segments turns | `SPEC-transcriber-agent` | Forthcoming |
+| **Proofreader** | Resolves personal terms and names, tags revisions, produces structured output | `SPEC-proofreading-agent` | Forthcoming, being written next |
+| **Mind-mapper** | Places new thoughts and restructures the existing brainmap | `SPEC-mindmapping-agent` | Forthcoming |
 
-CAP wraps MCP tool invocations: `Directive.action.target` takes the form `mcp://<server>/<tool>`. A worker agent's capabilities are a set of MCP tool endpoints. The supervisor resolves capabilities by consulting the local MCP registry before issuing any Directive.
+**Transcriber.** Converts a voice turn into a transcript fragment and a segment-boundary event. The shipped server-tier implementation uses a mock provider for tests and `faster-whisper` for real transcription, archiving audio by content hash in the blob store. The device-tier path (whisper.cpp on iOS/Android, WhisperKit on Apple platforms) is a documented seam, not bundled code, as of `YAR-CLIENT-EVAL.md`'s 2026-07-06 assessment. The Transcriber does not call the PeT recall API; it is upstream of every agent that does.
 
-### 3.2 AgentCard Schema
+**Proofreader.** The new role this revision adds explicitly to the agent inventory (it did not exist as a named role in the prior draft; only "Reviser" existed, and only for its structural duties). The Proofreader's job is personal-NER: recognizing the user's own names, terms, and projects in a transcript fragment, correcting or tagging revisions to prior statements, and producing structured output an downstream agent or the CRDT op-log can consume directly. The shipped implementation (`backend/assistant/extraction.py`, `backend/assistant/providers.py`) already does transcript-to-task extraction and gazetteer-based NER; this is the Wave 1 floor the forthcoming `SPEC-proofreading-agent` formalizes and extends with the PeT-backed hybrid-match resolution described in Section 8.2.
 
-Every Yar agent publishes an AgentCard at session initialization. The card embeds CAP metadata so the supervisor can derive the authority chain without a separate negotiation round.
+**Mind-mapper.** Subsumes what the prior draft called the Placer (insert new thought-nodes) and the structural half of the Reviser (move, rename, link existing nodes). The shipped implementation already runs both halves as one working pipeline: BM25 plus a hashing embedder plus reciprocal-rank-fusion hybrid retrieval, n-hop graph expansion, and a spatial-canvas frontend. It is the CU-6 capability cluster's engine (F13, F14, F15, F31, F60) and the primary consumer of the PeT placement-context call (Section 8.3). The forthcoming `SPEC-mindmapping-agent` owns real-time chunking, the clustering approach used to infer structure, and conservative-revision rules that preserve a person's existing spatial layout rather than constantly reorganizing it.
+
+---
+
+## 5. Discovery: How Agents and Tools Are Found
+
+All agent and tool discovery in Yar is MCP-based. Agents advertise their capabilities via MCP AgentCards; the Supervisor queries the registry at session start and maintains a live capability map. This section is unchanged in mechanism from v0.1; only the agent names and examples are updated.
+
+### 5.1 MCP as the discovery layer
+
+CAP wraps MCP tool invocations: `Directive.action.target` takes the form `mcp://<server>/<tool>`. A worker agent's capabilities are a set of MCP tool endpoints. The Supervisor resolves capabilities by consulting the local MCP registry before issuing any Directive.
+
+### 5.2 AgentCard schema
 
 ```yaml
 # Illustrative LinkML sketch (field names normative, syntax to finalize)
 classes:
   YarAgentCard:
     attributes:
-      agent_id:       { range: string, required: true }    # e.g. "yar.placer.v1"
+      agent_id:       { range: string, required: true }    # e.g. "yar.mindmapper.v1"
       display_name:   { range: string, required: true }
       cap_profile:    { range: CAPProfileEnum, required: true }  # cap_lite | cap_med
       tools:          { range: MCPToolRef, multivalued: true }
@@ -150,78 +199,60 @@ classes:
       attestation:    { range: string, required: true }           # detached JWS over card body
 ```
 
-Key properties:
-- Cards are **session-scoped** and expire with the session. Cross-session capability caching is not permitted.
-- The `attestation` field is a detached JWS signed by the agent's Ed25519 key. The supervisor verifies this before adding the agent to the registry.
-- `constraints` lists what the agent explicitly CANNOT do (e.g., `no_external_write`, `no_raw_audio_retention`). The supervisor enforces constraints before dispatching any Directive.
+Cards are session-scoped and expire with the session; cross-session capability caching is not permitted. `constraints` lists what the agent explicitly CANNOT do (for example `no_external_write`, `no_raw_audio_retention`). The Supervisor enforces constraints before dispatching any Directive.
 
-### 3.3 Capability Advertisement
+### 5.3 Capability advertisement
 
-At session start, the supervisor queries each known agent endpoint for its AgentCard. Agents not responding within 500ms are marked unavailable; the supervisor degrades gracefully (e.g., disabling brainmap features if the Placer is unavailable).
+At session start, the Supervisor queries each known agent endpoint for its AgentCard. Agents not responding within 500ms are marked unavailable; the Supervisor degrades gracefully (for example, disabling brainmap features if the Mind-mapper is unavailable).
 
-Tool endpoints use the MCP tool-discovery pattern. Each Yar worker exposes a standard `list_tools()` handler that returns a `ToolManifest`. The supervisor caches this manifest per session and invalidates on any agent restart.
+### 5.4 Reference implementation
 
-### 3.4 Reference Implementation: therapist_supervisor and cap_med Profile
-
-The closest working example of the intended Yar supervisor-worker pattern is in the Cytoplex library:
-
-- **Scenario:** `cytoplex/src/cytoplex/scenarios/therapist_supervisor/` contains a complete therapist agent + supervisor agent pair with full CAP envelope wiring over an Ollama backend.
-- **Profile:** `cytoplex/src/cytoplex/profiles/cap_med.py` defines the `cap-med/therapist-supervisor/v1` profile (`CAP_MED_PROFILE_ID`). This is the reference for how Yar's medical-domain constraints will be encoded, including `non_diagnostic_required`, `non_prescriptive_required`, `raw_transcript_upload_forbidden`, `local_pep_veto_required`, and `supervisor_overreach_veto_required`.
-- **Policy JSON:** `cytoplex/policies/cap_med_policy.json` and the Yar-resident copy at `Yar/src/cap/data/cap_med_policy.json` (verify these are in sync; they are not auto-generated from a shared source).
-
-When building the Yar supervisor agent, use `therapist_supervisor/supervisor_agent.py` as the behavioral template and `cap_med.py` as the profile constraints source. The `SupervisorGateway` class in `cytoplex/src/cytoplex/runtime/supervisor_gateway.py` implements the translate-and-veto pattern that any Yar supervisor must replicate.
+The closest working example of the intended supervisor-worker pattern remains `cytoplex/src/cytoplex/scenarios/therapist_supervisor/`, with the `cap-med/therapist-supervisor/v1` profile (`cytoplex/src/cytoplex/profiles/cap_med.py`) as the reference for medical-domain constraints. The `SupervisorGateway` class (`cytoplex/src/cytoplex/runtime/supervisor_gateway.py`) implements the translate-and-veto pattern any Yar Supervisor must replicate.
 
 ---
 
-## 4. Orchestration: Runtime, Scheduling, Lifecycle, Failure Handling
+## 6. Orchestration: Runtime, Scheduling, Lifecycle, Failure Handling
 
-### 4.1 Runtime: Dapr and NATS
+### 6.1 Runtime: Dapr and NATS
 
-The orchestration layer is **Dapr** (service invocation, actor model, state management) running over **NATS** (messaging transport). This is a decided L7 component per the data fabric stack in `STORAGE_SYNC_DIGEST.md`.
+The orchestration layer is **Dapr** (service invocation, actor model, state management) running over **NATS** (messaging transport), decided at L7 per the data fabric stack. **Verification this revision:** Dapr Agents reached v1.0 in 2026 as a production-ready framework purpose-built for AI-agent orchestration, workflow-based and event-driven, with NATS JetStream as a supported pub-sub component out of the box. This confirms Dapr plus NATS is still the right choice for Yar's own orchestration; it does not change the fact that Yar has not deployed either yet.
 
 | Component | Role in Yar |
 |---|---|
 | **Dapr service invocation** | Supervisor-to-worker Directive dispatch; at-most-once delivery with idempotency key |
-| **Dapr actors** | Per-session supervisor actor; per-agent worker actor; actors encapsulate CAP state machine |
-| **Dapr state** | Session-scoped guidance state for the supervisor; CRDT op-log metadata (not the log itself) |
-| **NATS subjects** | `yar.session.<id>.directive` (supervisor outbound), `yar.session.<id>.report` (worker report), `yar.session.<id>.crisis` (crisis guard), `yar.session.<id>.boundary` (cross-boundary signals) |
+| **Dapr actors** | Per-session Supervisor actor; per-agent worker actor; actors encapsulate the CAP state machine |
+| **Dapr state** | Session-scoped guidance state for the Supervisor; CRDT op-log metadata (not the log itself) |
+| **NATS subjects** | `yar.session.<id>.directive` (Supervisor outbound), `yar.session.<id>.report` (worker report), `yar.session.<id>.crisis` (crisis guard), `yar.session.<id>.boundary` (cross-boundary signals) |
 
-**OPEN DECISION (O-1):** Dapr and NATS are the evaluated and decided components at L7. The precise version pins, deployment topology (embedded vs sidecar vs separate process), and mobile binding strategy are not yet specified. See Section 9.
+**OPEN DECISION (O-1):** Dapr and NATS are the evaluated and decided components at L7 (now further reinforced by Dapr Agents v1.0). Precise version pins, deployment topology (embedded vs sidecar vs separate process), and mobile binding strategy are not yet specified. See Section 16.
 
-### 4.2 Scheduling and Lifecycle
-
-Agents follow a session lifecycle:
+### 6.2 Scheduling and lifecycle
 
 ```
 INIT -> READY -> ACTIVE -> DRAINING -> TERMINATED
 ```
 
-- **INIT**: agent registers AgentCard, keys are generated (Ed25519 per session), MCP tool manifest is published.
-- **READY**: supervisor has verified the attestation and added the agent to the registry.
-- **ACTIVE**: agent is dispatching and receiving Directives.
-- **DRAINING**: supervisor has issued a drain signal; agent completes in-flight Directives and emits final `ExecutionReport`s.
-- **TERMINATED**: all CRDT ops flushed to op-log; session audit record sealed.
+INIT: agent registers AgentCard, session keys generated (Ed25519), MCP tool manifest published. READY: Supervisor has verified attestation. ACTIVE: agent is dispatching and receiving Directives. DRAINING: Supervisor has issued a drain signal; agent completes in-flight Directives and emits final `ExecutionReport`s. TERMINATED: all CRDT ops flushed to the op-log; session audit record sealed. Workers do not transition themselves.
 
-Workers transition from ACTIVE to DRAINING when the session ends or when the supervisor issues a `DRAIN` control Directive. Workers do not transition themselves.
-
-### 4.3 Failure Handling
+### 6.3 Failure handling
 
 | Failure mode | Behavior |
 |---|---|
 | Worker unresponsive (>500ms) | Supervisor marks worker unavailable; degrades feature gracefully; logs availability event (no PHI) |
-| Guard unavailable | Fail closed: no Directive dispatched until Guard responds or session terminates. CAP deny-wins semantics apply in all ambiguous states. |
-| Crisis guard error | Fail toward help: on any internal error the crisis module returns `tier: elevated` and surfaces resources (CD-7 from `MODULE-crisis-detection.md`). |
-| NATS publish failure | Supervisor retries with exponential backoff (max 3 retries, 50ms/100ms/200ms); after exhaustion, logs error and transitions session to DRAINING. |
-| CRDT write failure | Op is buffered in a per-agent WAL. Worker signals the supervisor via a `failed_op` report. Supervisor decides whether to retry, skip, or abort the session. |
-| Schema validation failure at PEB | Fail closed: signal is dropped, CAP policy violation is raised, non-PHI error is logged (PB-10 from `privacy-boundary-spec.md`). |
+| Guard unavailable | Fail closed: no Directive dispatched until Guard responds or session terminates |
+| Crisis guard error | Fail toward help: on internal error returns `tier: elevated` and surfaces resources (CD-7, `MODULE-crisis-detection.md`) |
+| NATS publish failure | Retries with exponential backoff (max 3 retries, 50ms/100ms/200ms); after exhaustion, logs error and transitions session to DRAINING |
+| CRDT write failure | Op buffered in a per-agent WAL; worker signals the Supervisor via a `failed_op` report |
+| Schema validation failure at PEP | Fail closed: signal dropped, CAP policy violation raised, non-PHI error logged (PB-10) |
+| PeT recall call fails or times out | Fail toward degraded, not toward blocked: Proofreader and Mind-mapper proceed without personalized context, flagged in the `ExecutionReport` as `context_degraded: true` |
 
 ---
 
-## 5. Interaction Contracts: Message Envelope, CAP Governance, Privacy Gate, Crisis Gate
+## 7. Interaction Contracts: CAP Directive Envelope, Refusal, Privacy Gate, Crisis Gate
 
-### 5.1 The CAP Directive as Inter-Agent Envelope
+### 7.1 The CAP Directive as inter-agent envelope
 
-Every message between the supervisor and a worker is a `Directive` (CAP primitive 1). No agent-to-agent channel bypasses the CAP envelope. This is the foundational invariant of the multi-agent system.
+Every message between the Supervisor and a worker is a `Directive` (CAP Primitive 1). No agent-to-agent channel bypasses the CAP envelope. **This remains the foundational invariant and the single largest gap between the target architecture and the shipped reference client** (Section 13): the shipped Transcriber, Proofreader, and Mind-mapper communicate today through direct backend function calls, not CAP Directives.
 
 ```yaml
 # Illustrative structure (normative field names; see CAP 03_primitives.md for canonical schema)
@@ -237,20 +268,9 @@ Directive:
   nonce:           # prevents replay
 ```
 
-Workers MUST:
-1. Verify the `authority_chain` signature before accepting the Directive.
-2. Verify the Directive has not expired.
-3. Verify the `policy_refs` match the CAP profile they advertise.
-4. Emit an `ExecutionReport` regardless of outcome (success, failure, or refusal).
+Workers MUST verify the `authority_chain` signature and expiry, verify `policy_refs` match their advertised CAP profile, and emit an `ExecutionReport` regardless of outcome. Workers MUST NOT accept a Directive targeting a tool outside their `ToolManifest`, execute a Directive denied by the Guard, or retain raw audio, raw transcripts, or free text beyond the scope of a single op.
 
-Workers MUST NOT:
-- Accept a Directive whose `action.target` references a tool not in their published `ToolManifest`.
-- Execute a Directive that has been denied by the Guard.
-- Retain raw audio, raw transcripts, or free text beyond the scope of a single op.
-
-### 5.2 Refusal Handling
-
-Workers emit a `RefusalMessage` (CAP primitive 3) when they reject a Directive. The `reason_code` field uses one of CAP's 16 typed codes. The supervisor handles each code:
+### 7.2 Refusal handling
 
 | Reason code | Supervisor response |
 |---|---|
@@ -261,34 +281,21 @@ Workers emit a `RefusalMessage` (CAP primitive 3) when they reject a Directive. 
 | `policy_denied` | Accept; do not override; the policy stands |
 | `safety_denied` | Accept; surface appropriate response to user; do not retry |
 
-### 5.3 Privacy-Boundary Gate on Agent Actions
+### 7.3 Privacy-boundary gate on agent actions
 
-The Privacy Boundary PEP (from `privacy-boundary-spec.md`) intercepts every `CrossBoundarySignal` emitted by the supervisor before it reaches any external recipient. The PEP validates the signal against the `CrossBoundarySignal` schema. Only the seven derived signal types in Section 3.1 of that spec may cross.
+The Privacy Boundary PEP intercepts every `CrossBoundarySignal` the Supervisor emits before it reaches an external recipient, validating against the schema in `privacy-boundary-spec.md`.
 
-Agent-specific constraints:
-- **Transcriber**: raw audio and transcript buffers are classified Device-local (Section 3.2 of `privacy-boundary-spec.md`). The Transcriber MUST NOT include transcript text in any Directive payload, `ExecutionReport`, or log entry.
-- **Placer and Reviser**: all CRDT ops go to the local op-log. They MUST NOT emit cross-boundary signals.
-- **Interviewer**: may emit `stress_signal`, `mood_arc`, and `user_disengaged` signals as `CrossBoundarySignal` payloads, but only after the PEP validates them and only when `consent_ref` is active.
-- **Supervisor**: is the sole emitter of external `CrossBoundarySignal` messages. It aggregates derived signals from workers and applies the PEP gate before emitting.
+| Agent | Constraint |
+|---|---|
+| **Transcriber** | Raw audio and transcript buffers are Device-local. MUST NOT include transcript text in any Directive payload, `ExecutionReport`, or log entry |
+| **Proofreader** | May write `pet_fact` ops (Device-local classification, per `SPEC-petkg-longmemory.md` Section 9); MUST NOT emit cross-boundary signals directly |
+| **Mind-mapper** | All CRDT ops go to the local op-log; MUST NOT emit cross-boundary signals |
+| **Interviewer** | May propose `stress_signal`, `mood_arc`, and `user_disengaged` signals, but only the Supervisor emits them, after PEP validation and only with an active `consent_ref` |
+| **Supervisor** | Sole emitter of external `CrossBoundarySignal` messages; aggregates derived signals from workers and applies the PEP gate before emitting |
 
-### 5.4 On-Device Safety Gate: CapLiteGuard (v0.1) and Planned Crisis-Detection Module
+### 7.4 On-device safety gate: CapLiteGuard and the planned crisis-detection module
 
-**Current implementation (v0.1):** The on-device safety gate is `CapLiteGuard` (`Yar/src/cap/guard.py`), a deterministic multilingual (English + Farsi) term-matching guard. It is not an LLM-based classifier. It runs synchronously before any model inference, on every user input and every capture-level or write-level operation.
-
-`CapLiteGuard` evaluates six boundary categories in priority order:
-
-| Check order | Category | Enforcement |
-|---|---|---|
-| 1 (highest) | Crisis terms | Matches a hardcoded list of crisis phrases in English and Farsi; returns deny immediately with a support message pointing to 1480 (Iran Social Emergency) and findahelpline.com |
-| 2 | Diagnosis terms | Term-matching (EN + Farsi); blocks diagnostic claim requests |
-| 3 | Treatment advice | Term-matching and 4 compiled regex patterns; blocks prescriptive advice requests |
-| 4 | Intent claims | Term-matching; blocks "knows their true intent" type requests |
-| 5 | Raw-data sharing | Checks `raw_share_terms` + `user_confirmed_external_write` flag |
-| 6 | Health-risk scoring | Term-matching; blocks health score requests |
-
-Crisis denial includes an affirming support message. Matched terms are never retained in any `GuardDecision` field or audit log (consistent with CD-1 and CD-10 goals from `MODULE-crisis-detection.md`).
-
-**The richer LLM/MoE supervisor-level safety arbitration described elsewhere in this spec is PLANNED, not yet implemented.** There is no wired-up supervisor agent. The `therapist_supervisor` scenario in `cytoplex/src/cytoplex/scenarios/therapist_supervisor/` is the reference pattern for what the future supervisor-side safety arbitration will look like.
+**Current implementation:** `CapLiteGuard` is a deterministic multilingual (English and Farsi) term-matching guard, not an LLM classifier, running synchronously before any model inference. It evaluates six boundary categories in priority order (crisis terms first, then diagnosis terms, treatment advice, intent claims, raw-data sharing, health-risk scoring) and never retains matched text. Crisis denial routes to 1480 (Iran Social Emergency) and findahelpline.com; the launch-market hotline set is an open founder decision shared with `MODULE-crisis-detection.md`.
 
 ```
 User input -> CapLiteGuard.evaluate() -> GuardDecision
@@ -297,73 +304,106 @@ User input -> CapLiteGuard.evaluate() -> GuardDecision
                                             -> GemmaEdgeIntentService
                                      deny (crisis terms matched)
                                             -> support message returned immediately
-                                            -> no model inference
                                      deny (other boundary)
                                             -> refusal reason returned
-                                            -> no model inference
 ```
 
-If the `CapLiteGuard` is unavailable, the system fails toward help for crisis-adjacent inputs and fails closed for all other operations.
+The richer LLM/MoE supervisor-level safety arbitration described elsewhere in this spec, and the full tiered `CrisisDecision` module in `MODULE-crisis-detection.md`, remain **design-final, deferred post-YC** (decision D5). If `CapLiteGuard` is unavailable, the system fails toward help for crisis-adjacent inputs and fails closed for everything else.
 
 ---
 
-## 6. The Conversational Brainmap Loop: A Worked Instance
+## 8. PeT Integration: Personalized Context for Every Worker
 
-This section describes how features F13 (Voice-grown thought map), F14 (Thought placement assistant), F31 (Thought map reviewer), and F60 (Conversational thought map) from `yar-unified-feature-comparison-v4.md` are implemented as a three-agent coordination loop. This is the CU-6 capability cluster, the highest-priority founder-elevated feature set.
+`SPEC-petkg-longmemory.md` (finalized in parallel with this revision) defines PeT, the Personal Temporal knowledge graph: Yar's long-term memory layer. The coupling contract is fixed and this spec adopts it directly: **PeT facts are ops on the same CRDT op-log every other Yar write uses**, via the shared `OpEnvelope` (`SPEC-sync-protocol.md` Section 6.2), with `entity_type: pet_fact` and an `actor_id` that names the writing agent (for example `yar.proofreader.v1`), distinct from the `device_id` that ran it.
 
-### 6.1 Agents in the Loop
+### 8.1 Recall API surface
+
+```yaml
+pet.recall(query: string, as_of: datetime | null, top_k: int) -> [RankedFact]
+pet.resolve_entity(text_span: string, context: ThreadContext) -> [EntityMatch]
+pet.get_placement_context(node_proposal: string, thread_id: string) -> PlacementContext
+pet.assert_fact(fact: PetFact) -> fact_id           # writes a CRDT op; never a direct table write
+pet.retract_fact(fact_id: string, reason: string) -> void
+```
+
+### 8.2 Proofreader: personal-NER context
+
+The Proofreader calls `pet.resolve_entity` on each span it is uncertain about. Resolution runs a hybrid match: exact and fuzzy lexical match over `Term.canonical_name` and `aliases[]` via FTS5, combined with vector similarity via sqlite-vec, fused by reciprocal rank fusion (the same technique the Mind-mapper's shipped hybrid retrieval already validates). A match above threshold is surfaced as a suggested correction or expansion; a low-confidence match is a soft suggestion, never a silent rewrite.
+
+### 8.3 Mind-mapper: placement context
+
+The Mind-mapper calls `pet.get_placement_context` with the current node proposal and thread ID, receiving the 2-hop graph neighborhood of the thread's existing nodes, recent facts ranked by recency and confidence, and a short thread summary that reuses `BrainmapSessionState`'s shape (Section 9.5). This satisfies the constraint that placement decisions depend only on structured, derived context, never on raw transcript text beyond the current session.
+
+### 8.4 Who does not call PeT directly
+
+The **Transcriber** never calls the recall API; it is upstream of every consumer. The **Supervisor** does not call PeT directly either; it aggregates the structural state (`BrainmapSessionState`, guidance updates) that the Mind-mapper and Interviewer already produce, and PeT facts are classified Device-local exactly like raw transcript text, so they follow the same rule as Section 7.3: they never appear in a `Directive` payload, `ExecutionReport`, or `CrossBoundarySignal` bound for an external recipient.
+
+### 8.5 Confidence defaults carried over from PeT
+
+| Source | Default confidence |
+|---|---|
+| Explicit first-person user statement | 1.0 |
+| Proofreader NER match against an existing Term or Person | 0.8 |
+| Mind-mapper inference during placement | 0.6 |
+| Derived signal crossing the privacy boundary | Per the signal's own confidence field, never upgraded |
+
+A fact below threshold is never surfaced to the user or another agent as a settled statement; UI and agent-facing summaries hedge ("Yar thinks you might mean...").
+
+---
+
+## 9. The Conversational Brainmap Loop: A Worked Instance
+
+This section implements F13 (Voice-grown thought map), F14 (Thought placement assistant), F31 (Thought map reviewer), and F60 (Conversational thought map), the CU-6 capability cluster, the highest-priority founder-elevated feature set. Agent names are updated to the canonical scheme (Section 2); the mechanics are unchanged from v0.1.
+
+### 9.1 Agents in the loop
 
 | Agent | Role in the loop | Trigger |
 |---|---|---|
-| Transcriber | Converts voice turn to text fragment; emits segment boundary event | Continuous; voice-activity detection |
-| Placer | Inserts new thought-nodes into the brainmap CRDT | Supervisor dispatch after each voice segment |
-| Reviser | Restructures existing nodes: moves, renames, adds links | Supervisor dispatch when Interviewer detects revision intent |
+| Transcriber | Converts a voice turn to text; emits segment boundary event | Continuous; voice-activity detection |
+| Proofreader | Resolves personal terms and names in the fragment before placement | Supervisor dispatch after each voice segment, before Mind-mapper |
+| Mind-mapper | Inserts new thought-nodes; restructures existing nodes on revision intent | Supervisor dispatch after Proofreader; restructure branch when Interviewer detects revision intent |
 
-### 6.2 Per-Turn Sequence Diagram
+### 9.2 Per-turn sequence
 
 ```mermaid
 sequenceDiagram
   participant User
   participant Transcriber
+  participant Proofreader
   participant Interviewer
   participant Supervisor
-  participant Placer
-  participant Reviser
+  participant MindMapper as Mind-mapper
+  participant PeT as PeT recall API
   participant CRDTLog as CRDT Op-Log
 
   User->>Transcriber: voice turn
-  Transcriber->>Interviewer: transcript fragment + VocalBiomarkerFrame
-  Interviewer->>Supervisor: CAP Directive (action: analyze_turn, payload: {segment, mood_signal})
+  Transcriber->>Proofreader: transcript fragment
+  Proofreader->>PeT: pet.resolve_entity(span)
+  PeT-->>Proofreader: EntityMatch[]
+  Proofreader->>Interviewer: tagged fragment + mood_signal
+  Interviewer->>Supervisor: CAP Directive (action: analyze_turn)
   Supervisor->>Supervisor: evaluate policy, build AuthorityChain
-  Supervisor->>Placer: CAP Directive (action: place_node, payload: {node_proposal, context})
-  Placer->>CRDTLog: CRDT insert op (node, edges)
-  Placer->>Supervisor: ExecutionReport (status: succeeded, node_id)
+  Supervisor->>MindMapper: CAP Directive (action: place_node)
+  MindMapper->>PeT: pet.get_placement_context(proposal, thread_id)
+  PeT-->>MindMapper: PlacementContext
+  MindMapper->>CRDTLog: CRDT insert op (node, edges)
+  MindMapper->>Supervisor: ExecutionReport (status: succeeded, node_id)
   alt revision intent detected
-    Supervisor->>Reviser: CAP Directive (action: revise_map, payload: {revision_proposal})
-    Reviser->>CRDTLog: CRDT move/link ops + revision-history entry
-    Reviser->>Supervisor: ExecutionReport (status: succeeded, ops_applied)
+    Supervisor->>MindMapper: CAP Directive (action: revise_map)
+    MindMapper->>CRDTLog: CRDT move/link ops + revision-history entry
+    MindMapper->>Supervisor: ExecutionReport (status: succeeded, ops_applied)
   end
   Supervisor->>Interviewer: guidance update (map_state_summary)
   Interviewer->>User: verbal response
 ```
 
-### 6.3 Placement Logic
+### 9.3 Placement logic
 
-The Placer receives a `PlaceDirective` with:
-- `node_proposal`: the extracted thought unit (text, concept label, entity refs from the personal vocabulary)
-- `context`: the current brainmap state summary (node count, recent nodes, active thread IDs)
-- `placement_strategy`: one of `{auto, anchor_to_last, new_thread, link_to_existing}`
+The Mind-mapper receives a `PlaceDirective` with a `node_proposal` (the extracted thought unit), `context` (current brainmap state summary, upgraded with the PeT placement context from Section 8.3), and `placement_strategy` (`auto`, `anchor_to_last`, `new_thread`, `link_to_existing`). It chooses a placement using the brainmap's CRDT tree structure (Loro `Tree` container, per `SPEC-sync-protocol.md` Section 5.1) and writes a single CRDT insert op.
 
-The Placer chooses a placement position using the brainmap's CRDT tree structure (Loro `Tree` container). It writes a single CRDT insert op and returns the `node_id`. The Placer MUST NOT make placement decisions that depend on the content of prior transcripts beyond the current session CRDT state.
+### 9.4 Revision logic
 
-### 6.4 Revision Logic
-
-Revision is triggered when the Interviewer's mood-state inference or explicit user phrase ("actually, that connects to...") flags revision intent. The Supervisor constructs a `ReviseDirective` with:
-- `revision_type`: one of `{move_node, rename_node, add_link, remove_link, merge_nodes}`
-- `target_node_ids`: list of CRDT node IDs to operate on
-- `new_parent_id` (for move), `new_label` (for rename), `link_type` (for add_link)
-
-The Reviser applies ops atomically to the CRDT store and writes a revision-history entry:
+Revision triggers when the Interviewer's mood-state inference or an explicit user phrase ("actually, that connects to...") flags revision intent. The Supervisor constructs a `ReviseDirective` (`revision_type`, `target_node_ids`, plus type-specific fields). The Mind-mapper applies ops atomically and writes a revision-history entry:
 
 ```yaml
 RevisionHistoryEntry:
@@ -371,15 +411,13 @@ RevisionHistoryEntry:
   timestamp:     { range: datetime, required: true }
   ops_applied:   { range: CRDTOpRef, multivalued: true }
   revision_type: { range: RevisionTypeEnum, required: true }
-  authored_by:   # agent_id of the Reviser
+  authored_by:   # agent_id of the Mind-mapper
   undo_available: { range: boolean, required: true }  # always true; op-log allows replay
 ```
 
 Undo is always available: the CRDT op-log is the source of truth, and replaying ops up to any prior state restores the map. The UI exposes undo at the granularity of individual voice turns.
 
-### 6.5 Map State as Observed by the Supervisor
-
-After each turn, the Supervisor maintains a `BrainmapSessionState`:
+### 9.5 Map state as observed by the Supervisor
 
 ```yaml
 BrainmapSessionState:
@@ -390,73 +428,67 @@ BrainmapSessionState:
   pending_revisions: { range: integer }      # count of revision suggestions not yet applied
 ```
 
-This state is used to construct guidance updates sent back to the Interviewer. It contains no raw text, only structural and derived signals.
+This state carries no raw text, only structural and derived signals, and is the same shape the Mind-mapper's PeT placement-context call (Section 8.3) reuses.
 
 ---
 
-## 7. Edge and Supervisor Split
+## 10. F24 Interactive Refinement: Supervisor-Mediated Daily-Plan Loop
 
-The edge-AI specification is a forthcoming sibling spec (`SPEC-edge-ai-hybrid.md`). This section establishes the architectural boundary this spec depends on.
+`FEATURE-VERIFICATION.md` (row 1) confirms F24 (AI morning plan) currently ships a single-pass suggestion, not a back-and-forth refinement, and recommends extending F24's scope rather than minting a new feature id. **This spec is where that extension is architecturally grounded.**
 
-### 7.1 Split Principle
+The daily-plan refinement loop is a **Supervisor-mediated conversation** that reuses the Mind-mapper's conversational-iteration pattern (Section 9.2's per-turn Directive and `ExecutionReport` cycle) rather than inventing a new interaction shape:
 
-**Everything that must respond in under 200ms runs on-device (edge).** Everything that requires larger context windows, cross-session policy, or external tool access runs on the supervisor tier (laptop or cloud).
+1. The Interviewer opens the loop with the day's proposed anchors (from F24's existing prioritization, unchanged).
+2. Each person response is a turn: the Interviewer issues a CAP Directive to the Supervisor exactly as it does mid-brainmap (Section 9.2), carrying the proposed change (reorder, drop, add-back).
+3. The Supervisor evaluates policy (does the change violate a hard commitment, a clinician-set constraint, or a consent boundary) and returns a `guidance update`, the same message type the brainmap loop already uses.
+4. No CRDT graph write occurs unless the person confirms a change; this differs from the Mind-mapper's placement loop only in that the target entity type is a daily-plan anchor list, not a brainmap node.
+
+**No new agent role is required.** F24's refinement loop is a second worked instance of the same Supervisor-Interviewer conversational pattern Section 9 already establishes, not a sixth agent.
+
+---
+
+## 11. Edge and Supervisor Split
+
+`SPEC-edge-ai-hybrid.md` is the sibling spec that owns the detailed latency budget, device-only fallback, and model deployment targets. This section states the boundary this spec depends on.
+
+### 11.1 Split principle
+
+**Everything that must respond in under 200ms runs on-device (edge). Everything that requires larger context windows, cross-session policy, or external tool access runs on the supervisor tier (laptop or cloud).**
 
 | Tier | Runs | Latency target | Model |
 |---|---|---|---|
-| Edge (on-device) | Transcriber, Placer, Reviser, Interviewer, Crisis Guard | Under 200ms per op | Gemma 4 E4B (LiteRT) |
-| Supervisor | Policy evaluation, complex reasoning, cross-agent coordination, external tool Directives | No hard RT constraint | Gemma 4 26B MoE (Ollama) |
+| Edge (on-device) | Transcriber (device path), Mind-mapper (device path), Interviewer, Crisis Guard | Under 200ms per op | Gemma 4 E4B (LiteRT) |
+| Server (shipped today) | Transcriber (server path), Proofreader, Mind-mapper (server path) | No hard RT constraint measured yet | faster-whisper; rule-based floor plus OpenAI-compatible upgrade path; BM25/RRF hybrid retrieval |
+| Supervisor (cloud/laptop) | Policy evaluation, complex reasoning, cross-agent coordination, external tool Directives | No hard RT constraint | Gemma 4 26B MoE (Ollama) |
 
-### 7.2 Low-Latency Handoff
+The middle row is new this revision: the shipped reference client's server tier is neither the edge tier nor the CAP-governed cloud Supervisor tier described in the target architecture. It is a third, already-real deployment shape that the edge-versus-supervisor split did not previously name. `SPEC-edge-ai-hybrid.md` should reconcile this explicitly in its own next revision.
 
-Workers emit `ExecutionReport`s asynchronously over NATS. The Supervisor processes these out-of-band and sends guidance updates back to the Interviewer. The Interviewer does not block on supervisor guidance; it continues the conversational turn with the last-known guidance state and incorporates updates at the next turn boundary.
+### 11.2 Low-latency handoff
 
-The handoff contract:
-- Interviewer reads from `yar.session.<id>.guidance` (NATS subject, retained last value).
-- Supervisor writes to `yar.session.<id>.guidance` after processing each batch of `ExecutionReport`s.
-- If no guidance has been received yet, Interviewer uses the session-default guidance (CAP-Lite defaults).
-
-### 7.3 Dependency on Edge-AI Spec
-
-`SPEC-edge-ai-hybrid.md` (not yet written; Batch 4b in `SPEC_CONSOLIDATION_PLAN.md`) must specify:
-- The latency budget per agent and per op class.
-- The fallback behavior when the supervisor is unreachable (device-only mode).
-- The model quantization and LiteRT deployment targets.
-- The supervisor interrupt protocol for injecting high-priority guidance mid-turn.
-
-Until that spec is written, the split described in this section is a placeholder. Implementations MUST treat the edge vs supervisor boundary as a runtime configuration, not a hardcoded topology.
+Workers emit `ExecutionReport`s asynchronously over NATS. The Supervisor processes these out-of-band and sends guidance updates back to the Interviewer, which does not block on Supervisor responses; it continues the conversational turn with the last-known guidance state and incorporates updates at the next turn boundary.
 
 ---
 
-## 8. Cross-Cutting Standards
+## 12. Cross-Cutting Standards
 
-### 8.1 LinkML and Biolink Schema Foundation
+### 12.1 LinkML and Biolink schema foundation
 
-All schemas defined in this spec (AgentCard, Directive payload types, BrainmapSessionState, RevisionHistoryEntry) MUST be expressed in LinkML syntax. Where biological or clinical entities appear in payload types (e.g., mood or physiological signal labels), those classes MUST inherit from Biolink Model (e.g., `biolink:PhenotypicFeature`) per Section 4b of `SPEC_CONSOLIDATION_PLAN.md`.
+All schemas defined in this spec (AgentCard, Directive payload types, `BrainmapSessionState`, `RevisionHistoryEntry`) MUST be expressed in LinkML syntax, with clinical or biological entities inheriting from Biolink Model where applicable. Canonical schema files live in `Yar/spec/schemas/multi-agent/`.
 
-The canonical schema files will live in `Yar/spec/schemas/multi-agent/`. The JSON Schema runtime validators for the CAP envelope and `CrossBoundarySignal` are generated from the LinkML sources.
+### 12.2 CRDT op-log as source of truth
 
-### 8.2 CRDT Op-Log as Source of Truth
+Every persistent state change described in this spec is a CRDT operation on the op-log, not a direct database write: node placements and revisions (Mind-mapper), NER corrections and extracted structure (Proofreader, as `pet_fact` and task ops), revision history entries (append-only), and session-scoped guidance state (Supervisor actor, ephemeral Dapr state, clears on session end).
 
-Every persistent state change described in this spec is a CRDT operation on the op-log, not a direct database write. This applies to:
-- Node placements (Placer): CRDT Tree insert.
-- Node revisions (Reviser): CRDT Tree move, Map rename, edge link/unlink.
-- Revision history entries: CRDT Map append (append-only; immutable once written).
-- Session-scoped guidance state (Supervisor actor): Dapr state (ephemeral, not CRDT; clears on session end).
-
-The op-log engine is TBD per `SPEC-storage-engine.md` open decisions O-1 through O-3. This spec is agnostic to which engine executes the op-log; all agents write through the op-log abstraction layer, not directly to the engine.
-
-### 8.3 Naming Rules
+### 12.3 Naming rules
 
 - Do not use "Substrate" as a noun for the data layer. Use "storage layer", "data layer", or "local runtime".
-- The universal sensor protocol is **CSP** (Cytonome Sensor Protocol; formerly USAP/UBAP). Do not use the deprecated aliases.
+- The universal sensor protocol is **CSP** (Cytonome Sensor Protocol). Do not use the deprecated aliases USAP or UBAP.
 - The governance protocol is **CAP** (Cytognosis Authority Protocol). Do not use "Cognitive Agent Protocol".
 - **Cytoplex** is the product name; **CAP** is the protocol name.
-- Agent IDs use the form `yar.<role>.<version>` (e.g., `yar.placer.v1`, `yar.supervisor.v1`).
+- **Canonical worker names are Transcriber, Proofreader, and Mind-mapper (Section 2). Do not reintroduce "Placer" or "Reviser" in new code, specs, or product copy.** Existing shipped module paths (`backend/knowledge/`, `backend/assistant/`) are not required to rename immediately; see Open Decision O-8, Section 16.
+- Agent IDs use the form `yar.<role>.<version>`: `yar.supervisor.v1`, `yar.interviewer.v1`, `yar.transcriber.v1`, `yar.proofreader.v1`, `yar.mindmapper.v1`.
 
-### 8.4 CAP Governance Anchors
-
-This spec implements the following CAP sections:
+### 12.4 CAP governance anchors
 
 | This spec requires | CAP source |
 |---|---|
@@ -468,43 +500,84 @@ This spec implements the following CAP sections:
 | CAP-Lite profile constraints | `07_profiles_roadmap.md` |
 | Crypto: Ed25519 mTLS, detached JWS | `04_security_trust_evidence.md` |
 | Audit: hash-chain append-only | `02_core_model.md` |
+| Edge-cloud `RoutingPolicy` concept (Cactus-style hybrid routing) | `cap-comprehensive.md` Section 5; formalized for Yar in a forthcoming `SPEC-cactus-routing` |
 
-The crisis-detection gate is governed by `MODULE-crisis-detection.md`. The cross-boundary signal schema is governed by `privacy-boundary-spec.md`. This spec does not redefine those; it wires them into the agent interaction flow.
+### 12.5 Affirming language
 
-### 8.5 Affirming Language
-
-Any API response payload, UI string, or notification content generated by agents MUST use affirming, non-stigmatizing language:
-- Use "elevated distress signal", not "abnormal affective state".
-- Use "lower focus today", not "impaired" or "bad day".
-- Agent-generated feedback is person-first and compared to the user's own baseline, never a normative standard.
+Any API response payload, UI string, or notification content generated by agents MUST use affirming, non-stigmatizing language: "elevated distress signal", not "abnormal affective state"; "lower focus today", not "impaired" or "bad day"; feedback compared to the user's own baseline, never a normative standard.
 
 ---
 
-## 9. Decided vs Open
+## 13. Implementation Status Against the Shipped Reference Client
+
+`YAR-CLIENT-EVAL.md` (2026-07-06, evaluating `yar-code-20260705-2354`) is ground truth for this section. It recommends adopting that codebase as the Yar Wave 1 reference implementation, and this spec treats it as such.
+
+| Canonical agent | Target architecture (this spec) | Shipped reality (`YAR-CLIENT-EVAL.md`) | Gap |
+|---|---|---|---|
+| **Transcriber** | On-device Whisper-compatible STT, CAP-governed Executor | Server-tier: mock and faster-whisper providers, content-hash blob archive. Device-tier whisper.cpp/WhisperKit seam documented, not bundled | No CAP wiring; no device-tier build yet |
+| **Proofreader** | CAP-governed Executor, personal-NER, structured output, PeT-integrated | `backend/assistant/extraction.py` (transcript-to-task extraction), `backend/assistant/providers.py` (grounded chat, rule-based floor plus OpenAI-compatible upgrade), gazetteer NER | No CAP wiring; no PeT integration yet (blocked on `SPEC-petkg-longmemory` landing); NER is gazetteer-based, not yet the hybrid FTS5/sqlite-vec/RRF match Section 8.2 specifies |
+| **Mind-mapper** | CAP-governed Executor, PeT-integrated placement and restructuring | `backend/knowledge/`: BM25 plus hashing embedder plus RRF hybrid retrieval plus n-hop graph expansion; `GraphEngine` seam for FalkorDB; `EmbeddingProvider` seam; frontend spatial canvas | No CAP wiring; hashing embedder is a placeholder for a real embedder (`YAR-CLIENT-EVAL.md` recommendation 5); no PeT placement-context call yet |
+| **Supervisor** | Gemma 4 26B MoE, Ollama, owns AuthorityChain and cross-boundary emission | Not present. "No `cytoplex` import anywhere in the codebase," confirmed directly | Entire role unbuilt |
+| **Interviewer** | CAP-governed conversational process, mood-arc inference | Grounded chat exists (`backend/assistant/providers.py`); no CAP wiring, no mood-arc inference, no separate process boundary | Functionally partial, structurally absent |
+| **CapLiteGuard** | Deterministic on-device gate | Shipped, ported into the reference client (commit `068b10d`) | None; this is the one component fully aligned with the target |
+| **Dapr and NATS orchestration** | Directive dispatch, actor model, interrupt stream | Not present | Entire orchestration layer unbuilt; Dapr Agents v1.0 (Section 6.1) is the recommended starting point when this work begins |
+
+**Reading this table correctly:** the honest summary is not "little has been built." Three of five agent roles are shipped as working, tested MVP functionality, ahead of what the prior draft of this spec claimed. The real gap is narrower and more specific than "PLANNED": it is CAP envelope wiring, PeT integration, and the Supervisor/Interviewer/orchestration layer around already-working pipeline logic, not the pipeline logic itself.
+
+---
+
+## 14. Risks
+
+| Risk | Description | Mitigation |
+|---|---|---|
+| **CAP envelope gap in shipped code** | The three shipped workers communicate through direct function calls, not CAP Directives; a naive reading of "SHIPPED" could imply CAP compliance that does not exist | Section 13's table states this explicitly; treat CAP wiring as a scoped follow-on task against already-working code, not a rewrite |
+| **Naming migration drag** | Existing module paths, commit history, and prior docs still say "Placer" and "Reviser"; new engineers may reintroduce the old names | Section 12.3's naming rule is normative going forward; Open Decision O-8 (Section 16) sets the non-blocking migration policy |
+| **PeT dependency is itself in-flight** | Proofreader and Mind-mapper's PeT integration depends on `SPEC-petkg-longmemory`, which is Draft v1, not yet built | Section 6.3's failure-handling row (`context_degraded: true`) means both agents already have a defined degrade path if PeT is unavailable or unbuilt |
+| **Supervisor, Interviewer, and orchestration remain fully unbuilt** | Three of the five roles, and the entire Dapr/NATS layer, have zero shipped code | `cytoplex/scenarios/therapist_supervisor/` is a validated reference implementation to build from, not a blank-page design problem |
+| **Third deployment tier not yet reconciled with edge/supervisor split** | The shipped server-tier workers are neither edge nor CAP-governed cloud Supervisor (Section 11.1) | Flagged explicitly for `SPEC-edge-ai-hybrid.md`'s next revision; not resolved in this spec |
+| **`actor_id` vs `device_id` discipline** | Agent-authored ops (Proofreader, Mind-mapper) must set `actor_id` to the agent id, not the device id, or audit trails cannot distinguish person-authored from agent-inferred facts | `SPEC-sync-protocol.md` Section 7.4 already requires this; the cross-agent op interleaving test (Section 15) is the enforcement point |
+
+---
+
+## 15. Test Plan
+
+| Test | What it verifies |
+|---|---|
+| Agent-rename regression scan | No new code, spec, or product copy under active development reintroduces "Placer" or "Reviser" as a role name (Section 12.3) |
+| CAP envelope conformance (Transcriber, Proofreader, Mind-mapper) | Once wired, each shipped worker's calls become real `Directive`/`ExecutionReport` pairs verifiable against `03_primitives.md`; currently expected to fail, which is the honest baseline this revision records |
+| PeT recall latency | `pet.get_placement_context` and `pet.resolve_entity` return within the 200ms edge budget (Section 11.1) once wired |
+| PeT context-degraded fallback | Proofreader and Mind-mapper proceed correctly, without crashing or blocking, when PeT is unavailable (Section 6.3) |
+| Cross-agent op interleaving | Mind-mapper and Proofreader ops interleaved with person-authored edits on the same brainmap session resolve deterministically; `actor_id` correctly distinguishes authorship (shared gate with `SPEC-sync-protocol.md` Section 12) |
+| Brainmap loop end-to-end (renamed) | The Section 9.2 sequence runs correctly under the canonical names, including the Proofreader step now inserted before Mind-mapper placement |
+| F24 refinement loop | A scripted multi-turn daily-plan negotiation resolves without an unintended CRDT write until the person confirms (Section 10) |
+| Crisis interception | A scripted crisis-adjacent phrase is intercepted by `CapLiteGuard` before any of the three shipped workers see it |
+| Dapr/NATS smoke test (once deployed) | Directive dispatch, actor lifecycle, and the interrupt stream behave per Section 6, using Dapr Agents v1.0's reference patterns |
+
+---
+
+## 16. Decided vs Open
 
 ### Decided
 
 | Component | Decision |
 |---|---|
 | Supervisor-worker topology (no worker-to-worker direct communication) | Decided |
-| CAP Directive as the universal inter-agent message envelope | Decided |
+| CAP Directive as the universal inter-agent message envelope | Decided (not yet wired in shipped code, Section 13) |
+| Canonical worker names: Transcriber, Proofreader, Mind-mapper, plus Supervisor and Interviewer | Decided this revision (Section 2) |
 | Deny-wins semantics: any Guard deny blocks the Directive | Decided |
 | MCP as the tool and agent discovery layer | Decided |
 | AgentCard as the session-scoped capability advertisement unit | Decided |
-| `CapLiteGuard` (deterministic multilingual term-matching, `Yar/src/cap/guard.py`) as the v0.1 on-device safety gate | Decided (IMPLEMENTED) |
-| `GemmaEdgeIntentService` (Gemma 4 E4B, flutter_gemma) as the v0.1 on-device intent service (`Yar/apps/mobile/lib/src/services/gemma_edge_intent_service.dart`) | Decided (IMPLEMENTED) |
-| Gemma 4 E4B (LiteRT, on-device) as the model for future worker agents | Decided (model choice; agent wiring PLANNED) |
-| Gemma 4 26B MoE (Ollama) for the supervisor | Decided (model choice; supervisor agent PLANNED) |
-| Dapr and NATS as the orchestration runtime at L7 | Decided (PLANNED; not yet deployed) |
-| CRDT op-log as the single source of truth for all persistent state | Decided (from SPEC-storage-engine.md) |
-| Privacy Boundary PEP gates every outbound cross-boundary signal | Decided (from privacy-boundary-spec.md) |
-| Crisis Guard is synchronous, on-device, and non-bypassable | Decided (from MODULE-crisis-detection.md) |
-| Fail-closed on Guard unavailability | Decided |
-| Fail toward help on Crisis Guard error | Decided |
-| Three-agent brainmap loop: Transcriber, Placer, Reviser | Decided (CU-6 from v4 feature matrix) |
-| Revision history per turn in the CRDT op-log | Decided |
-| Undo at voice-turn granularity via op-log replay | Decided |
-| Edge latency target under 200ms per op | Decided (principle; budget in SPEC-edge-ai-hybrid.md) |
+| `CapLiteGuard` as the v0.1 on-device safety gate | Decided (IMPLEMENTED) |
+| `GemmaEdgeIntentService` as the v0.1 on-device intent service | Decided (IMPLEMENTED) |
+| Dapr and NATS as the orchestration runtime at L7 | Decided (PLANNED; reinforced by Dapr Agents v1.0) |
+| CRDT op-log as the single source of truth for all persistent state, PeT facts included | Decided (from `SPEC-storage-engine.md` and `SPEC-petkg-longmemory.md`) |
+| PeT recall API as the shared long-term-context contract for Proofreader and Mind-mapper | Decided this revision (Section 8) |
+| Privacy Boundary PEP gates every outbound cross-boundary signal | Decided |
+| Crisis Guard is synchronous, on-device, and non-bypassable | Decided |
+| Three-worker pipeline (Transcriber, Proofreader, Mind-mapper) as the CU-6 brainmap loop and the general capture pipeline | Decided (this revision reconciles all four naming schemes to this) |
+| F24 daily-plan refinement reuses the Supervisor-Interviewer conversational pattern; no new agent role | Decided this revision (Section 10) |
+| Revision history per turn in the CRDT op-log; undo at voice-turn granularity | Decided |
+| Edge latency target under 200ms per op | Decided (principle; budget in `SPEC-edge-ai-hybrid.md`) |
 | LinkML as canonical schema language for all payload types | Decided (cross-cutting standard) |
 | No "Substrate" naming in any spec or code identifier | Decided (naming rule) |
 
@@ -512,39 +585,30 @@ Any API response payload, UI string, or notification content generated by agents
 
 | # | Decision | Current leaning | Blocker or gate |
 |---|---|---|---|
-| **O-1** | Dapr and NATS version pins, deployment topology (embedded vs sidecar), and mobile binding | Not specified | Architecture decision; mobile-side Dapr binding may require a thin Rust or Dart shim; depends on SPEC-edge-ai-hybrid.md |
-| **O-2** | AgentCard attestation key lifecycle: key rotation during a session, recovery on agent restart | No leaning; borrow any-sync per-space key model as design reference | Shared with key-custody open decision in SPEC-sync-protocol.md O-3 |
-| **O-3** | Supervisor actor persistence: does the Dapr actor state survive app backgrounding? | No leaning | Mobile lifecycle semantics differ across iOS and Android; coordination with SPEC-edge-ai-hybrid.md |
-| **O-4** | Concurrent brainmap sessions: can a user have two active brainmap threads simultaneously? | No leaning; lean toward no for v1 | CRDT multi-root tree semantics; Placer and Reviser conflict resolution policy |
-| **O-5** | Maximum op-log depth for undo: lifetime or session-bounded? | No leaning | HIPAA data-retention rules apply; coordinate with Counsel (Duane Valz) and privacy-boundary-spec.md open decision 2 |
-| **O-6** | Paralinguistic signals from the Transcriber: which `VocalBiomarkerFrame` fields are forwarded to the Interviewer within the on-device boundary? | No leaning; no fields cross the privacy boundary in v1 | Requires SPEC-sensor-speech-mentalstate.md to define the schema and the in-boundary vs cross-boundary classification |
-| **O-7** | Supervisor location in v1: always local (Ollama on user laptop) or optionally cloud-hosted? | Lean toward local-only for v1 | Privacy-boundary schema applies to any cloud path; cloud supervisor must pass the same PEP gate as all external recipients |
+| **O-1** | Dapr and NATS version pins, deployment topology, mobile binding | Not specified; Dapr Agents v1.0 is the recommended starting point | Shared with `SPEC-edge-ai-hybrid.md` O-1 |
+| **O-2** | AgentCard attestation key lifecycle: rotation during a session, recovery on restart | No leaning; borrow any-sync's per-space key model | Shared with `SPEC-sync-protocol.md` O-3 |
+| **O-3** | Supervisor actor persistence: does Dapr actor state survive app backgrounding? | No leaning | Mobile lifecycle semantics; coordinate with `SPEC-edge-ai-hybrid.md` |
+| **O-4** | Concurrent brainmap sessions: can a user have two active threads simultaneously? | Lean toward no for v1 | CRDT multi-root tree semantics; Mind-mapper conflict-resolution policy |
+| **O-5** | Maximum op-log depth for undo: lifetime or session-bounded | No leaning | HIPAA data-retention rules; coordinate with counsel and `privacy-boundary-spec.md` |
+| **O-6** | Paralinguistic signals from the Transcriber: which fields forward to the Interviewer within the on-device boundary | No leaning; no fields cross in v1 | Requires `SPEC-sensor-speech-mentalstate.md` |
+| **O-7** | Supervisor location in v1: always local (Ollama) or optionally cloud-hosted | Lean toward local-only for v1 | Any cloud path must pass the same PEP gate |
+| **O-8** | Migration policy for existing shipped module names (`backend/knowledge/`, the old "Reviser" references) | **Recommend: rename in specs and new code immediately (done, this revision); rename shipped module paths and identifiers opportunistically as those files are next touched, not as a blocking refactor.** A forced rename of working, tested code purely for naming consistency is not worth the regression risk this close to Wave 1 | Engineering discretion; revisit if naming drift causes an actual bug, not preemptively |
+| **O-9** | Does the Proofreader need a CAP profile distinct from the Mind-mapper, given personal-NER touches Person-type PeT facts | **Recommend: no.** Reuse the CAP-Lite constraints already governing PeT writes (`SPEC-petkg-longmemory.md` Section 9); a second profile adds governance surface without a concrete requirement driving it | Revisit only if a specific Wave 2 feature needs a Proofreader capability the shared profile cannot express |
 
 ---
 
-## 10. Cross-References
+## 17. Cross-References
 
-- `Cytoplex/spec/02_core_model.md` -- CAP role definitions, CAPEnvelope FSM.
-- `Cytoplex/spec/03_primitives.md` -- canonical Directive, GuardDecision, RefusalMessage, ExecutionReport, AuthorityChain schemas.
-- `Cytoplex/spec/04_security_trust_evidence.md` -- Ed25519 mTLS, detached JWS, prompt-injection mitigation.
-- `Cytoplex/spec/05_integrations.md` -- CAP composition with MCP, A2A, OPA, OpenTelemetry.
-- `Cytoplex/spec/07_profiles_roadmap.md` -- CAP-Lite and CAP-Med profile constraints.
-- `Cytoplex/spec/privacy-boundary-spec.md` -- `CrossBoundarySignal` schema; PEP gate details; EARS requirements PB-1 through PB-10.
-- `Yar/spec/MODULE-crisis-detection.md` -- Crisis Guard API contract; EARS requirements CD-1 through CD-10.
-- `Yar/spec/SPEC-storage-engine.md` -- CRDT op-log source of truth; L4 engine open decisions.
-- `Yar/spec/SPEC-sync-protocol.md` -- L2 replication; L0 transport (mDNS, Tailscale, Iroh).
-- `Yar/consolidation_2026-06-21/_storage/STORAGE_SYNC_DIGEST.md` -- Data fabric layer diagram; L7 agent stack (Gemma E2B and 26B MoE, Dapr, NATS) rationale.
-- `Yar/research/yar-unified-feature-comparison-v4.md` -- F13, F14, F15, F31, F60 (brainmap features); CU-6 capability cluster; supervisor concept in Section 10.6.
-- `Yar/research/cap-yar-comprehensive-reference.md` -- CAP primitives reference; Yar backend module inventory; CAP-Lite guard internals.
-- `04-Engineering/cytoplex/reports/multi-agent-architecture-report.md` -- Validated edge-interviewer and center-supervisor test results (Level 12 Gemma); referenced as engineering evidence for the supervisor-worker topology.
-- `Yar/src/cap/guard.py` -- `CapLiteGuard` implementation; the v0.1 on-device safety gate (IMPLEMENTED).
-- `Yar/src/cap/models.py` -- `GuardDecision`, `GuardDecisionValue` types.
-- `Yar/apps/mobile/lib/src/services/gemma_edge_intent_service.dart` -- `GemmaEdgeIntentService`; Gemma 4 E4B on-device intent inference (IMPLEMENTED).
-- `cytoplex/src/cytoplex/scenarios/therapist_supervisor/` -- Reference supervisor-worker scenario using Ollama + CAP envelope wiring.
-- `cytoplex/src/cytoplex/profiles/cap_med.py` -- CAP-Med profile (`cap-med/therapist-supervisor/v1`); reference for Yar medical-domain constraints.
-- `cytoplex/policies/cap_med_policy.json` -- Medical-domain CAP policy rules.
-- `SPEC-edge-ai-hybrid.md` (forthcoming, Batch 4b) -- Latency budget, device-only fallback, model deployment, supervisor interrupt protocol.
-- `SPEC-personas-voice.md` (forthcoming, Batch 4a) -- Persona state as CRDT; ElevenLabs integration contract; dynamic persona selection.
+- `Cytoplex/spec/02_core_model.md`, `03_primitives.md`, `04_security_trust_evidence.md`, `05_integrations.md`, `07_profiles_roadmap.md` -- CAP primitives, roles, and profile constraints.
+- `Cytoplex/spec/privacy-boundary-spec.md`, `Yar/spec/MODULE-crisis-detection.md` -- `CrossBoundarySignal` schema, PEP gate, PB-1 through PB-10; Crisis Guard API contract, CD-1 through CD-10, D5 deferral decision.
+- `Yar/spec/SPEC-storage-engine.md`, `SPEC-sync-protocol.md`, `SPEC-petkg-longmemory.md` -- CRDT op-log source of truth; op envelope and `actor_id`/`device_id`; PeT data model, recall API, and cytomem convergence plan (the shared contract for Section 8).
+- `Yar/spec/SPEC-edge-ai-hybrid.md` -- Latency budget, device-only fallback, model deployment; owes this spec a reconciliation of the third deployment tier (Section 11.1).
+- `Yar/spec/YAR-CLIENT-EVAL.md`, `README.md` -- Ground truth for Section 13's implementation-status table; the spec-folder index whose "placer/reviser/side-thread" gloss is reconciled in Section 2.
+- `docs/04-Engineering/cytoplex/research/cap-comprehensive.md` -- CAP v0.2 gap analysis; Section 5's `RoutingPolicy` sketch, the basis for a forthcoming `SPEC-cactus-routing`.
+- `Yar/research/yar-unified-feature-comparison-v4.md`, `_planning-20260719/FEATURE-VERIFICATION.md`, `SPECS-INVENTORY.md` -- F13, F14, F15, F31, F60, F24, and the CU-6 cluster; the Transcriber/Interviewer, Proofreader, and Mind-mapper gap findings (rows 4, 7, 8) this revision resolves; the build-order rationale for this spec ahead of the three worker specs.
+- `Yar/src/cap/guard.py`, `yar-code-20260705-2354/backend/cap/`, `Yar/apps/mobile/lib/src/services/gemma_edge_intent_service.dart` -- `CapLiteGuard` and `GemmaEdgeIntentService` implementations.
+- `cytoplex/src/cytoplex/scenarios/therapist_supervisor/`, `cytoplex/src/cytoplex/profiles/cap_med.py` -- Reference supervisor-worker implementation and profile.
+- `SPEC-transcriber-agent`, `SPEC-proofreading-agent`, `SPEC-mindmapping-agent`, `SPEC-personas-voice.md` -- Forthcoming per-worker detail specs (Section 4) and the persona scope-boundary note.
 
 ---
 
@@ -553,23 +617,23 @@ Any API response payload, UI string, or notification content generated by agents
 
 - **AgentCard:** A session-scoped capability advertisement published by each agent at initialization. Embeds CAP metadata and is attested with a detached JWS.
 - **AuthorityChain:** A CAP primitive (Primitive 7) that binds Controller, Guard, and Executor under session keys with temporal bounds.
-- **CRDT op-log:** The single source of truth for all persistent Yar state. The graph or storage engine is a derived index rebuilt by replaying the log.
+- **CRDT op-log:** The single source of truth for all persistent Yar state, PeT facts included. The graph or storage engine is a derived index rebuilt by replaying the log.
 - **CAP (Cytognosis Authority Protocol):** The transport-independent authority protocol governing what agents can do. Implemented in Cytoplex.
-- **CAP-Lite:** The default CAP safety profile for Yar. Blocks diagnosis claims, treatment recommendations, raw data sharing without consent, and external writes without confirmation. The v0.1 on-device enforcement is `CapLiteGuard` (`Yar/src/cap/guard.py`), a deterministic term-matching gate. The full CAP-Lite sidecar process at `:7100` is PLANNED.
-- **CrossBoundarySignal:** A derived, structured datum permitted to leave the on-device trust zone under consent and PEP validation. Only seven types are permitted (see privacy-boundary-spec.md Section 3.1).
-- **CrisisDecision:** The output of the Crisis Guard: tier (none, elevated, acute), matched signal codes, and recommended action codes. Never contains matched text.
-- **Dapr:** Distributed application runtime. Provides service invocation, actor model, and state management for the multi-agent orchestration layer.
-- **Directive:** CAP Primitive 1. A bounded authorization request issued by a Controller to an Executor. Contains the action target, parameters, authority chain, policy refs, expiry, and reversibility flag.
+- **CAP-Lite:** Yar's default CAP safety profile. The v0.1 on-device enforcement is `CapLiteGuard`, a deterministic term-matching gate.
+- **CrossBoundarySignal:** A derived, structured datum permitted to leave the on-device trust zone under consent and PEP validation.
+- **CrisisDecision:** The output of the Crisis Guard: tier, matched signal codes, and recommended action codes. Never contains matched text.
+- **Dapr:** Distributed application runtime providing service invocation, actor model, and state management. Dapr Agents v1.0 (2026) is its production-ready AI-agent orchestration layer.
+- **Directive:** CAP Primitive 1. A bounded authorization request issued by a Controller to an Executor.
 - **ExecutionReport:** CAP Primitive 4. Emitted by every Executor after any Directive, regardless of outcome.
-- **GuardDecision:** CAP Primitive 2. The output of a Guard check: allow, deny, allow_with_constraints, escalate, require_more_evidence, require_human_review, or advisory_warning.
-- **Interviewer:** The on-device worker agent responsible for real-time conversational response and mood-state inference.
-- **LiteRT:** Google's on-device ML runtime (formerly TensorFlow Lite). Runs Gemma 4 E4B on mobile hardware.
-- **MCP (Model Context Protocol):** The open standard for AI tool invocation. CAP wraps MCP tool calls via Directive.action.target = mcp://server/tool.
-- **NATS:** Messaging transport for the Dapr orchestration layer. Used for supervisor-to-worker Directive delivery and ExecutionReport collection.
-- **Placer:** The on-device worker agent that inserts new thought-nodes into the brainmap CRDT.
-- **Reviser:** The on-device worker agent that restructures existing brainmap nodes (move, rename, link).
-- **Supervisor:** The Gemma 4 26B MoE agent running on the laptop or cloud. Owns the AuthorityChain, policy routing, crisis escalation, and cross-agent state.
-- **Transcriber:** The on-device ASR worker. Converts voice to transcript fragments and emits VocalBiomarkerFrames. Never retains raw audio after frame emission.
-- **VocalBiomarkerFrame:** A structured acoustic feature frame (jitter, shimmer, F0 contour, response latency) emitted by the Transcriber for longitudinal neuropsychiatric tracking. Defined in the forthcoming SPEC-sensor-speech-mentalstate.md.
+- **GuardDecision:** CAP Primitive 2. Allow, deny, allow_with_constraints, escalate, require_more_evidence, require_human_review, or advisory_warning.
+- **Interviewer:** The worker agent responsible for real-time conversational response, mood-state inference, and the F24 refinement dialogue. PLANNED as a distinct process.
+- **Mind-mapper:** The canonical name (this revision) for the worker that places new thought-nodes and restructures the existing brainmap; subsumes the prior "Placer" and the structural half of the prior "Reviser". SHIPPED as an MVP.
+- **MCP (Model Context Protocol):** The open standard for AI tool invocation. CAP wraps MCP tool calls via `Directive.action.target = mcp://server/tool`.
+- **NATS:** Messaging transport for the Dapr orchestration layer.
+- **PeT (Personal Temporal knowledge graph):** Yar's long-term personal memory layer, defined in `SPEC-petkg-longmemory.md`. Every worker's personalized context flows through its recall API.
+- **Proofreader:** The canonical name (this revision) for the new worker role that resolves personal terms and names, tags revisions, and produces structured output; subsumes the prior "Reviser"'s text-side duties and `YAR-CLIENT-EVAL.md`'s "revision-tagging". SHIPPED as an MVP.
+- **Supervisor:** The Gemma 4 26B MoE agent running on the laptop or cloud. Owns the AuthorityChain, policy routing, crisis escalation, and cross-agent state. PLANNED.
+- **Transcriber:** The ASR worker. Converts voice to transcript fragments. SHIPPED at the server tier; device-tier is groundwork only.
+- **VocalBiomarkerFrame:** A structured acoustic feature frame emitted by the Transcriber for longitudinal neuropsychiatric tracking, defined in the forthcoming `SPEC-sensor-speech-mentalstate.md`.
 
 </details>
