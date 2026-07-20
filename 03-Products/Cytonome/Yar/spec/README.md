@@ -1,12 +1,12 @@
 > **Status**: Active
-> **Date**: 2026-07-17
+> **Date**: 2026-07-19
 > **Author**: @mohammadi (research agent)
 > **Audience**: engineers, stakeholders
 > **Tags**: `yar`, `spec`, `index`
 
 # Yar Spec Index
 
-**BLUF:** This folder holds Yar's 14 formal engineering specs plus 6 storage/safety session artifacts from 2026-07-16 and 2 supporting guides. Two specs are `active` (data-sovereignty, storage-engine); the rest are `draft` pending build; the two safety modules and the new safety checkpoint are `design-final` but deferred post-YC. The `adhd/` easy-read twins that used to sit here were archived 2026-07-16 (see `../_archive/cleanup_2026-07-16/adhd-twins/spec/`); `adhd/` is now an empty placeholder, not a live section.
+**BLUF:** This folder holds Yar's 20 formal core engineering specs (12 pre-existing plus the 8-spec Wave 0 suite added or updated 2026-07-19), 2 safety/governance specs, 6 storage/safety session artifacts, and 2 supporting guides. Two specs are `active` (data-sovereignty, storage-engine); the Wave 0 suite is `draft v1/v2` pending founder review; the two safety modules are `design-final` but deferred post-YC. The `adhd/` easy-read twins that used to sit here were archived 2026-07-16 (see `../_archive/cleanup_2026-07-16/adhd-twins/spec/`); `adhd/` is now an empty placeholder, not a live section.
 
 [Up: Yar master index](../README.md)
 
@@ -14,18 +14,33 @@
 
 | File | Purpose | Status | Date |
 |---|---|---|---|
-| [SPEC-CSP.md](./SPEC-CSP.md) | Cytonome Sensor Protocol — universal sensor adapter, "MCP for sensors" | draft | 2026-06-21 |
+| [SPEC-CSP.md](./SPEC-CSP.md) | Cytonome Sensor Protocol: universal sensor adapter, "MCP for sensors" | draft | 2026-06-21 |
 | [SPEC-data-sovereignty.md](./SPEC-data-sovereignty.md) | Data ownership, export, and residency guarantees | active | 2026-07-06 |
 | [SPEC-edge-ai-hybrid.md](./SPEC-edge-ai-hybrid.md) | On-device / cloud hybrid inference split | draft | 2026-06-22 |
-| [SPEC-multi-agent.md](./SPEC-multi-agent.md) | Three-agent brainmap loop (placer, reviser, side-thread) | draft | 2026-06-21 |
+| [SPEC-multi-agent.md](./SPEC-multi-agent.md) | Supervisor-worker orchestration; canonical agent naming (Supervisor, Interviewer, Transcriber, Proofreader, Mind-mapper) | draft v0.2 | 2026-07-19 |
 | [SPEC-neurobehavioral-axes.md](./SPEC-neurobehavioral-axes.md) | Dimensional neurobehavioral axis substrate | draft | 2026-06-22 |
-| [SPEC-personas-voice.md](./SPEC-personas-voice.md) | Adaptive persona, relationship stance, on-device TTS (Kokoro) | draft | 2026-06-22 |
+| [SPEC-personas-voice.md](./SPEC-personas-voice.md) | Adaptive persona, relationship stance, on-device TTS (Kokoro); one persona on the Interviewer, workers voiceless | draft v0.2 | 2026-07-19 |
 | [SPEC-sensor-menstrual.md](./SPEC-sensor-menstrual.md) | Menstrual/reproductive-cycle sensing (Cytoscope-owned science) | draft | 2026-06-22 |
 | [SPEC-sensor-physiological.md](./SPEC-sensor-physiological.md) | Physiological/passive-sensing modalities (Cytoscope-owned science) | draft | 2026-06-22 |
 | [SPEC-sensor-social-interaction.md](./SPEC-sensor-social-interaction.md) | Temporal social-interaction sensing (Cytoscope-owned science) | draft | 2026-06-22 |
 | [SPEC-sensor-speech-mentalstate.md](./SPEC-sensor-speech-mentalstate.md) | Speech mental-state sensor (Cytoscope-owned science) | draft | 2026-06-22 |
 | [SPEC-storage-engine.md](./SPEC-storage-engine.md) | Storage engine decision: SQLite wins 10k rows, FalkorDB wins 100k | active | 2026-06-21 |
-| [SPEC-sync-protocol.md](./SPEC-sync-protocol.md) | Op-log sync protocol across devices | draft | 2026-06-21 |
+| [SPEC-sync-protocol.md](./SPEC-sync-protocol.md) | Cross-device sync (F68); O-1 resolved: any-sync transport-only, Yar reducer authoritative, Loro CRDT lib | draft v0.2 | 2026-07-19 |
+
+## Wave 0 spec suite (added 2026-07-19)
+
+Dependency-ordered per `../research/SPECS-INVENTORY.md`. All are `draft v1` pending founder review; each carries its own open-questions section with recommendations.
+
+| File | Purpose | Feature anchors |
+|---|---|---|
+| [SPEC-petkg-longmemory.md](./SPEC-petkg-longmemory.md) | PeT (Personal Temporal knowledge graph) + long-term memory: bitemporal facts on SQLite/FalkorDB; cytomem schema convergence | F67, F66 |
+| [SPEC-cactus-routing.md](./SPEC-cactus-routing.md) | Local/cloud RoutingPolicy for all agents; Cactus concept borrowed, binary not shipped (license gate); Gemma 4 Apache-2.0 confirmed | all agents |
+| [SPEC-transcriber-agent.md](./SPEC-transcriber-agent.md) | Dictation STT worker: whisper.cpp/WhisperKit edge, faster-whisper server; raw audio device-only; speaker_hint seam for F69 | F01, F02, F03, F13 |
+| [SPEC-proofreading-agent.md](./SPEC-proofreading-agent.md) | Proofreader worker: gazetteer, GLiNER/spaCy, Instructor tiers; DSPy offline-only; dual CAP gates | F33, F58, F09 seam |
+| [SPEC-mindmapping-agent.md](./SPEC-mindmapping-agent.md) | Mind-mapper worker (flagship): LLM placement + conservatism contract; conservative structure revision | F13, F14, F15, F31, F60 |
+| [SPEC-browser-extension.md](./SPEC-browser-extension.md) | MV3 side-panel extension: WADM annotation, Memex parity checklist, paired localhost handoff | F50, F59, F16 |
+| [SPEC-multiplatform-delivery.md](./SPEC-multiplatform-delivery.md) | Thin adoption of the org interface templates; Tauri v2 mobile recommended for phone | F41 delivery |
+| [SPEC-meeting-diarization.md](./SPEC-meeting-diarization.md) | Botless meeting diarization: pyannote/diart/FluidAudio stack; consent-first UX; counsel review required | F69 (gated) |
 
 ## Safety and governance (session artifacts, 2026-07-16)
 
@@ -44,7 +59,7 @@ See each file's own "Related documents" footer for the cross-link chain between 
 | [ANYSYNC-FIT-ASSESSMENT_2026-07-16.md](./ANYSYNC-FIT-ASSESSMENT_2026-07-16.md) | Any-Sync fit assessment against SPEC-sync-protocol and SPEC-storage-engine | assessment | 2026-07-16 |
 | [STORAGE_BENCHMARK_TRACKER.md](./STORAGE_BENCHMARK_TRACKER.md) | Living master status table for all storage engines and sync options; open decisions O-1 through O-8 | draft (refreshed) | 2026-07-16 |
 
-Full benchmark evidence for these decisions lives in [`../benchmark/`](../benchmark/README.md) — see especially `SURREALDB-PATCH11-VERDICT_2026-07-16.md` and `SURREALDB-RETEST-REPORT_2026-07-16.md`.
+Full benchmark evidence for these decisions lives in [`../benchmark/`](../benchmark/README.md); see especially `SURREALDB-PATCH11-VERDICT_2026-07-16.md` and `SURREALDB-RETEST-REPORT_2026-07-16.md`.
 
 ## Supporting guides
 
