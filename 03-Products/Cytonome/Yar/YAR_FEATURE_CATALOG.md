@@ -155,9 +155,9 @@ Not yet scored in the v4 comparison matrix (post-matrix additions per `research/
 - **SPEC-edge-ai-hybrid:** F19 (Gemma 4 E4B)
 - **SPEC-storage-engine / SPEC-sync-protocol:** F52, F16, F68
 - **SPEC-petkg-longmemory:** F67, F66 (PeT temporal knowledge graph + long-term recall)
-- **SPEC-meeting-diarization:** F69 (consent-gated)
+- **SPEC-meeting-diarization:** F69 (consent-first; internal use now, counsel review before public release)
 - **SPEC-transcriber-agent / SPEC-proofreading-agent / SPEC-mindmapping-agent:** worker-level detail under SPEC-multi-agent (F01, F13-F15, F31, F33, F58, F60)
-- **SPEC-cactus-routing:** local/cloud model routing for all agents (with SPEC-edge-ai-hybrid)
+- **SPEC-cactus-routing:** simple local-vs-cloud model selection for all agents (Cactus removed 2026-07-19; with SPEC-edge-ai-hybrid)
 - **SPEC-browser-extension:** F50, F59 (WADM + Memex parity)
 - **SPEC-multiplatform-delivery:** F41 delivery architecture (org interface templates)
 - **MODULE-crisis-detection + privacy-boundary-spec:** gate F18, F27, F28, F36, F42, F56

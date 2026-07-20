@@ -6,7 +6,7 @@
 
 # Yar Spec Index
 
-**BLUF:** This folder holds Yar's 20 formal core engineering specs (12 pre-existing plus the 8-spec Wave 0 suite added or updated 2026-07-19), 2 safety/governance specs, 6 storage/safety session artifacts, and 2 supporting guides. Two specs are `active` (data-sovereignty, storage-engine); the Wave 0 suite is `draft v1/v2` pending founder review; the two safety modules are `design-final` but deferred post-YC. The `adhd/` easy-read twins that used to sit here were archived 2026-07-16 (see `../_archive/cleanup_2026-07-16/adhd-twins/spec/`); `adhd/` is now an empty placeholder, not a live section.
+**BLUF:** This folder holds Yar's 20 formal core engineering specs (12 pre-existing plus the 8-spec Wave 0 suite added or updated 2026-07-19), 2 safety/governance specs, 6 storage/safety session artifacts, and 2 supporting guides. The Wave 0 suite and its three companion updates were founder-approved and promoted to `active` on 2026-07-19, joining data-sovereignty and storage-engine; the two safety modules stay `design-final`, deferred post-YC. The `adhd/` easy-read twins that used to sit here were archived 2026-07-16 (see `../_archive/cleanup_2026-07-16/adhd-twins/spec/`); `adhd/` is now an empty placeholder, not a live section.
 
 [Up: Yar master index](../README.md)
 
@@ -17,30 +17,30 @@
 | [SPEC-CSP.md](./SPEC-CSP.md) | Cytonome Sensor Protocol: universal sensor adapter, "MCP for sensors" | draft | 2026-06-21 |
 | [SPEC-data-sovereignty.md](./SPEC-data-sovereignty.md) | Data ownership, export, and residency guarantees | active | 2026-07-06 |
 | [SPEC-edge-ai-hybrid.md](./SPEC-edge-ai-hybrid.md) | On-device / cloud hybrid inference split | draft | 2026-06-22 |
-| [SPEC-multi-agent.md](./SPEC-multi-agent.md) | Supervisor-worker orchestration; canonical agent naming (Supervisor, Interviewer, Transcriber, Proofreader, Mind-mapper) | draft v0.2 | 2026-07-19 |
+| [SPEC-multi-agent.md](./SPEC-multi-agent.md) | Supervisor-worker orchestration; canonical agent naming (Supervisor, Interviewer, Transcriber, Proofreader, Mind-mapper) | active | 2026-07-19 |
 | [SPEC-neurobehavioral-axes.md](./SPEC-neurobehavioral-axes.md) | Dimensional neurobehavioral axis substrate | draft | 2026-06-22 |
-| [SPEC-personas-voice.md](./SPEC-personas-voice.md) | Adaptive persona, relationship stance, on-device TTS (Kokoro); one persona on the Interviewer, workers voiceless | draft v0.2 | 2026-07-19 |
+| [SPEC-personas-voice.md](./SPEC-personas-voice.md) | Adaptive persona, relationship stance, on-device TTS (Kokoro); one persona on the Interviewer, workers voiceless | active | 2026-07-19 |
 | [SPEC-sensor-menstrual.md](./SPEC-sensor-menstrual.md) | Menstrual/reproductive-cycle sensing (Cytoscope-owned science) | draft | 2026-06-22 |
 | [SPEC-sensor-physiological.md](./SPEC-sensor-physiological.md) | Physiological/passive-sensing modalities (Cytoscope-owned science) | draft | 2026-06-22 |
 | [SPEC-sensor-social-interaction.md](./SPEC-sensor-social-interaction.md) | Temporal social-interaction sensing (Cytoscope-owned science) | draft | 2026-06-22 |
 | [SPEC-sensor-speech-mentalstate.md](./SPEC-sensor-speech-mentalstate.md) | Speech mental-state sensor (Cytoscope-owned science) | draft | 2026-06-22 |
 | [SPEC-storage-engine.md](./SPEC-storage-engine.md) | Storage engine decision: SQLite wins 10k rows, FalkorDB wins 100k | active | 2026-06-21 |
-| [SPEC-sync-protocol.md](./SPEC-sync-protocol.md) | Cross-device sync (F68); O-1 resolved: any-sync transport-only, Yar reducer authoritative, Loro CRDT lib | draft v0.2 | 2026-07-19 |
+| [SPEC-sync-protocol.md](./SPEC-sync-protocol.md) | Cross-device sync (F68); O-1 resolved: any-sync transport-only, Yar reducer authoritative, Loro CRDT lib | active | 2026-07-19 |
 
 ## Wave 0 spec suite (added 2026-07-19)
 
-Dependency-ordered per `../research/SPECS-INVENTORY.md`. All are `draft v1` pending founder review; each carries its own open-questions section with recommendations.
+Dependency-ordered per `../research/SPECS-INVENTORY.md`. All were founder-approved and promoted to `active` on 2026-07-19; each carries its own open-questions section with recommendations.
 
 | File | Purpose | Feature anchors |
 |---|---|---|
 | [SPEC-petkg-longmemory.md](./SPEC-petkg-longmemory.md) | PeT (Personal Temporal knowledge graph) + long-term memory: bitemporal facts on SQLite/FalkorDB; cytomem schema convergence | F67, F66 |
-| [SPEC-cactus-routing.md](./SPEC-cactus-routing.md) | Local/cloud RoutingPolicy for all agents; Cactus concept borrowed, binary not shipped (license gate); Gemma 4 Apache-2.0 confirmed | all agents |
+| [SPEC-cactus-routing.md](./SPEC-cactus-routing.md) | Model routing: simple local-vs-cloud selection (Cactus removed per founder decision 2026-07-19; filename kept for link stability); Gemma 4 Apache-2.0 confirmed | all agents |
 | [SPEC-transcriber-agent.md](./SPEC-transcriber-agent.md) | Dictation STT worker: whisper.cpp/WhisperKit edge, faster-whisper server; raw audio device-only; speaker_hint seam for F69 | F01, F02, F03, F13 |
 | [SPEC-proofreading-agent.md](./SPEC-proofreading-agent.md) | Proofreader worker: gazetteer, GLiNER/spaCy, Instructor tiers; DSPy offline-only; dual CAP gates | F33, F58, F09 seam |
 | [SPEC-mindmapping-agent.md](./SPEC-mindmapping-agent.md) | Mind-mapper worker (flagship): LLM placement + conservatism contract; conservative structure revision | F13, F14, F15, F31, F60 |
 | [SPEC-browser-extension.md](./SPEC-browser-extension.md) | MV3 side-panel extension: WADM annotation, Memex parity checklist, paired localhost handoff | F50, F59, F16 |
-| [SPEC-multiplatform-delivery.md](./SPEC-multiplatform-delivery.md) | Thin adoption of the org interface templates; Tauri v2 mobile recommended for phone | F41 delivery |
-| [SPEC-meeting-diarization.md](./SPEC-meeting-diarization.md) | Botless meeting diarization: pyannote/diart/FluidAudio stack; consent-first UX; counsel review required | F69 (gated) |
+| [SPEC-multiplatform-delivery.md](./SPEC-multiplatform-delivery.md) | Thin adoption of the org interface templates; Tauri v2 on phone and desktop (founder-decided 2026-07-19) | F41 delivery |
+| [SPEC-meeting-diarization.md](./SPEC-meeting-diarization.md) | Botless meeting diarization: pyannote/diart/FluidAudio stack; consent-first UX; Phase 0 internal use now, counsel review gates public release only | F69 (phased) |
 
 ## Safety and governance (session artifacts, 2026-07-16)
 

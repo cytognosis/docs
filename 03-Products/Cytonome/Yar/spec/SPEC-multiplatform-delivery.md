@@ -1,7 +1,7 @@
 ---
 spec_id: SPEC-multiplatform-delivery
 version: "1.0"
-status: draft
+status: active
 domain: multiplatform-delivery
 owner: Shahin Mohammadi
 created: 2026-07-19
@@ -21,7 +21,7 @@ implements:
   - F41 (UI parity across phone, desktop, web dashboard; extension of F41, per FEATURE-VERIFICATION.md item 3a)
 ---
 
-> **Status**: Draft v1
+> **Status**: Active (founder-approved 2026-07-19)
 > **Date**: 2026-07-19
 > **Author**: @shahin (agent-drafted, founder review pending)
 > **Audience**: engineers and reviewers
@@ -37,7 +37,7 @@ implements:
 
 ## BLUF
 
-Yar ships across four delivery surfaces (phone, desktop, web dashboard, browser extension) that map onto the org's four locked interface templates (`00_master_architecture.md` Section 4.2). This spec **adopts that design system wholesale** and adds only the deltas that exist because Yar is Yar. The one real tension: the org template names Flutter for phone, but Yar's shipped Wave 1 reference client is Tauri v2, which also targets iOS and Android; this spec recommends **Tauri v2 mobile**, with Flutter held as the org-template fallback.
+Yar ships across four delivery surfaces (phone, desktop, web dashboard, browser extension) that map onto the org's four locked interface templates (`00_master_architecture.md` Section 4.2). This spec **adopts that design system wholesale** and adds only the deltas that exist because Yar is Yar. The one real tension: the org template names Flutter for phone, but Yar's shipped Wave 1 reference client is Tauri v2, which also targets iOS and Android; the founder decided on 2026-07-19: **Tauri v2 on both phone and desktop**. Flutter remains only a documented contingency.
 
 ---
 
@@ -64,7 +64,7 @@ This spec is deliberately thin. It is an adoption and cross-reference document, 
 
 | Surface | Org template (`00_master_architecture.md` §4.2) | Status | Yar-specific deltas |
 |---|---|---|---|
-| **Phone** (`apps/mobile`) | `app-phone/`, org default is Flutter (BSD-3-Clause) | **Planned.** Framework choice open, see Section 3 | Voice-capture affordance, touch-first brainmap canvas, crisis screens, F23 read-aloud |
+| **Phone** (`apps/mobile`) | `app-phone/`, org default is Flutter (BSD-3-Clause) | **Planned.** Framework decided: Tauri v2 (Section 3, founder decision 2026-07-19) | Voice-capture affordance, touch-first brainmap canvas, crisis screens, F23 read-aloud |
 | **Desktop** (`apps/desktop`) | `app-desktop/`, Tauri v2 (MIT/Apache-2.0 dual) wrapping `app-web/` | **Shipped.** Wave 1 reference client per `YAR-CLIENT-EVAL.md` | Same deltas as web, plus native offline-first storage (op-log on local filesystem) |
 | **Web dashboard** (`apps/web`) | `app-web/`, React 19 (MIT) + Vite (MIT) + Tailwind CSS (MIT) + shadcn/ui (MIT) | **Shipped**, Vite build clean per `YAR-CLIENT-EVAL.md` Section 9; used standalone and wrapped by desktop | Same deltas as desktop; "web" means the local dashboard build a person runs on their own machine, not a hosted multi-tenant site, consistent with Yar having no required server |
 | **Browser extension** (`apps/extension`) | `app-extension/`, MV3 (platform API, not licensed software) plus side panel | **Drafted.** `SPEC-browser-extension.md`, capture and annotation only | Capture surface, not a full client (Section 5); paired localhost API handoff to desktop |
@@ -75,13 +75,13 @@ This spec is deliberately thin. It is an adoption and cross-reference document, 
 
 **The tension.** `00_master_architecture.md` Section 4.2 and Section 11 name Flutter as the org's locked phone template, authored in Claude Design. `YAR-CLIENT-EVAL.md` recommends adopting a Tauri v2 plus React plus Django codebase as the Yar Wave 1 reference implementation, and Tauri v2 targets iOS and Android from the same codebase already shipping Yar's desktop app.
 
-**Recommendation: Tauri v2 mobile.** One codebase across desktop and phone means the op-log, the CRDT reducer, offline-first behavior, and every delta in Section 4 (voice capture, brainmap canvas, crisis screens) are written once, not reimplemented a second time in Dart for the Flutter template. Yar is a single-engineer-scale Wave 1 product; a second UI codebase is a real cost, not a convenience.
+**Decision (founder, 2026-07-19): Tauri v2 on both phone and desktop.** The founder's stated rationale: better performance from the efficient Rust implementation; a unified implementation with one framework across phone and desktop; access to a large library of existing blocks, modules, and interfaces (for example the React ecosystem) through Tauri's general web-stack support; and a growing community. One codebase also means the op-log, the CRDT reducer, offline-first behavior, and every delta in Section 4 (voice capture, brainmap canvas, crisis screens) are written once, not reimplemented a second time in Dart. Yar is a single-engineer-scale Wave 1 product; a second UI codebase is a real cost, not a convenience.
 
 **Evidence check (July 2026).** Tauri v2 reached stable in late 2024 and is on the 2.11 line as of mid-2026 (2.11.5, July 1, 2026). Mobile support, iOS and Android from one codebase, WKWebView on iOS and Android System WebView on Android, is **functional for production but newer and less mature than desktop**; plugin coverage on mobile lags desktop, and some capabilities need platform-specific code. iOS App Store publishing is a supported path (bundle identifier, code signing, provisioning, App Store Connect upload).
 
 **Fallback.** If Tauri mobile hits a hard blocker, a required native capability with no mobile plugin, or App Store review friction tied specifically to Tauri's WebView bridge, fall back to the org-template default, Flutter, for phone only, keeping Tauri for desktop and web. Treat this as a last resort: it forks the brainmap canvas and voice-capture UI into a second codebase.
 
-**Founder decision flagged.** The org master architecture and the Yar client evaluation point in different directions on this one surface. Recommendation stated above; proceeding on Tauri v2 mobile unless told otherwise.
+**Decision recorded.** The org master architecture named Flutter for phone; Yar deviates deliberately, per the founder decision of 2026-07-19, and this deviation is documented here as the canonical record. The org template itself is unchanged for other products.
 
 ---
 
@@ -171,7 +171,7 @@ Per `FEATURE-VERIFICATION.md` item 3a, cross-surface UI parity is **not a new fe
 
 | # | Question | Recommendation |
 |---|---|---|
-| **Q1** | Tauri v2 mobile vs. Flutter for phone | **Resolved in this revision: Tauri v2 mobile** (Section 3), for one-codebase reasons; revisit only if a hard plugin or App Store blocker appears |
+| **Q1** | Tauri v2 mobile vs. Flutter for phone | **Resolved by founder decision 2026-07-19: Tauri v2 on both phone and desktop** (Section 3); Flutter is contingency only, revisit only if a hard plugin or App Store blocker appears |
 | **Q2** | Does the web dashboard need a separately hosted, multi-tenant deployment target? | **No.** It is the same Vite build the desktop app wraps, run locally by the person, consistent with "no required server" |
 | **Q3** | Should the browser extension ever grow into a full client? | **No.** Section 5 and `SPEC-browser-extension.md` Section 3 fix this boundary; revisit only if a concrete Wave 2 feature cannot function under the current scope |
 | **Q4** | Who verifies accessibility-budget conformance across four codebases over time? | **Recommend** the org accessibility budget (`branding/design-system/accessibility-budget.md`) as the single source of truth, with a per-surface check in this spec's Section 7 test plan rather than a fifth, Yar-only accessibility document |

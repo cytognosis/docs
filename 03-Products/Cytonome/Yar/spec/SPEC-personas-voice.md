@@ -1,7 +1,7 @@
 ---
 spec_id: SPEC-personas-voice
 version: "0.2"
-status: draft
+status: active
 domain: personas-voice
 owner: Shahin Mohammadi
 created: 2026-06-22
@@ -11,7 +11,7 @@ coordinates_with: [SPEC-transcriber-agent, SPEC-proofreading-agent, SPEC-mindmap
 implements: [CAP]
 ---
 
-> **Status**: Draft v0.2
+> **Status**: Active (founder-approved 2026-07-19)
 > **Date**: 2026-07-19
 > **Author**: Cytognosis Foundation
 > **Audience**: engineers

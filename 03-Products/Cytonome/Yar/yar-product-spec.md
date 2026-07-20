@@ -107,10 +107,10 @@ Features are organized in a 3-level hierarchy (6 domains, 19 clusters, 69 featur
 - **`SPEC-storage-engine` / `SPEC-sync-protocol`:** F52, F16, F68 (storage-engine ACTIVE; sync co-designed with storage and the PeT temporal-KG abstractions)
 - **`SPEC-petkg-longmemory`:** F67, F66 (PeT temporal knowledge graph + long-term recall)
 - **`SPEC-transcriber-agent` / `SPEC-proofreading-agent` / `SPEC-mindmapping-agent`:** worker-level detail under `SPEC-multi-agent` (F01, F13-F15, F31, F33, F58, F60)
-- **`SPEC-cactus-routing`:** local/cloud model routing for all agents (with `SPEC-edge-ai-hybrid`)
+- **`SPEC-cactus-routing`:** simple local-vs-cloud model selection for all agents (Cactus removed 2026-07-19; with `SPEC-edge-ai-hybrid`)
 - **`SPEC-browser-extension`:** F50, F59 (WADM + Memex parity)
 - **`SPEC-multiplatform-delivery`:** F41 delivery architecture (org interface templates)
-- **`SPEC-meeting-diarization`:** F69 (consent-gated; counsel review of multi-party consent law)
+- **`SPEC-meeting-diarization`:** F69 (consent-first; internal use now, counsel review before public release)
 - **`SPEC-neurobehavioral-axes`:** axis substrate for all features
 - **`MODULE-crisis-detection` + `privacy-boundary-spec`:** gate F18, F27, F28, F36, F42, F56
 - **Sensor-science specs** (`SPEC-sensor-speech-mentalstate`, `-physiological`, `-menstrual`, `-social-interaction`): consumed by F54, F40, F30, F56, F42; the sensing science is owned by the **Cytoscope** project (Section 10).

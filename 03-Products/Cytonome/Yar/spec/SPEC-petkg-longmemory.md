@@ -1,7 +1,7 @@
 ---
 spec_id: SPEC-petkg-longmemory
 version: "1.0"
-status: draft
+status: active
 domain: memory-knowledge-graph
 owner: Shahin Mohammadi
 created: 2026-07-19
@@ -15,7 +15,7 @@ implements:
   - F66 (ask & summarize your captures)
 ---
 
-> **Status**: Draft v1
+> **Status**: Active (founder-approved 2026-07-19)
 > **Date**: 2026-07-19
 > **Author**: @shahin (agent-drafted, founder review pending)
 > **Audience**: engineers

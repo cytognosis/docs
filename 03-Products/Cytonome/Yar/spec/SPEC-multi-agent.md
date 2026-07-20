@@ -1,7 +1,7 @@
 ---
 spec_id: SPEC-multi-agent
 version: "0.2"
-status: draft
+status: active
 domain: multi-agent
 owner: Shahin Mohammadi
 created: 2026-06-21
@@ -23,7 +23,7 @@ coordinates_with:
   - SPEC-mindmapping-agent
 ---
 
-> **Status**: Draft v0.2
+> **Status**: Active (founder-approved 2026-07-19)
 > **Date**: 2026-07-19
 > **Author**: Cytognosis Foundation
 > **Audience**: engineers

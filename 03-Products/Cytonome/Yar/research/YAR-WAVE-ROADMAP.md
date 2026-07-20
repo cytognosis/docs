@@ -132,3 +132,14 @@ All 10 Wave 0 spec areas (plus SPEC-meeting-diarization) were written or updated
 **Revised total: approximately 149 to 276 eng-weeks** (was 174 to 318; midpoint about 213, down from about 246). Wave 0 core drops to about **75 eng-weeks** midpoint (was about 85). Spec-writing uncertainty is retired; remaining wide ranges are genuine engineering risk (mind-mapper structure inference, PeT retrieval quality, sync E2E hardening).
 
 Roadmap-specific notes: the Section 3 watch item (PeT and ReMem underspecified; Cactus and Gemma licenses unverified) is fully retired. Q2's two biggest rocks (PeT, sync) carry materially less risk; at 3 FTE the full-roadmap estimate moves from about 8 quarters toward 7. The foundation-phase caution about coding-agent multipliers (1.0x-1.3x on research-heavy work) still applies.
+
+### Founder decisions, 2026-07-19 (same day, post-review)
+
+| Area | Decision | Effect |
+|---|---|---|
+| **Cactus routing** | Cactus REMOVED entirely (nonprofit/fully-free framing does not durably fix its license: the $2M funding-or-revenue clause is organizational, and the YC PBC arm would trip it). Feature descoped to a **simple local-vs-cloud model selection** (three-state user setting + per-agent defaults + CAP/privacy gates) | Effort revised **5-10 down to 2-4 eng-weeks**; learned routing is a reopenable later enhancement |
+| **Phone framework** | **Tauri v2 on both phone and desktop, DECIDED** (Rust performance, unified framework, React ecosystem access, growing community); Flutter is contingency only | Founder-decision flag closed |
+| **F69 diarization** | Counsel review DEFERRED to public release; **Phase 0 internal use ships now** (founder + consenting design partners, consent UX + PHI exclusion on). Landscape research (meeting-transcription-tools-landscape-2026-07) incorporated into the spec; no separate tooling spec needed | Legal gate no longer blocks internal builds; G01/G02 + counsel gate apply only to the public release |
+| **E2E encryption** | PHASED: plaintext transition builds acceptable while all agents are local and relays are self-hosted single-tenant; hard prerequisite before any Cytognosis-hosted relay or cloud agent | Removed from the local-first launch critical path; scheduled with the cloud-agent milestone |
+
+**Re-revised total: approximately 146 to 270 eng-weeks.** All specs promoted from draft to active on 2026-07-19.

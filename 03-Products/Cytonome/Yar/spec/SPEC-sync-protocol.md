@@ -1,7 +1,7 @@
 ---
 spec_id: SPEC-sync-protocol
 version: "0.2"
-status: draft
+status: active
 domain: storage-sync
 owner: Shahin Mohammadi
 created: 2026-06-21
@@ -13,7 +13,7 @@ coordinates_with: [SPEC-CSP, SPEC-multi-agent, SPEC-petkg-longmemory]
 
 > **Related:** [storage-engine spec](./SPEC-storage-engine.md) (v0.2, ACTIVE); [data-sovereignty spec](./SPEC-data-sovereignty.md) (ACTIVE); [CSP spec](./SPEC-CSP.md); [multi-agent spec](./SPEC-multi-agent.md); `SPEC-petkg-longmemory.md` (sibling, drafted in parallel)
 
-> **Status**: Draft v2 (research-complete, recommendation made)
+> **Status**: Active (founder-approved 2026-07-19)
 > **Date**: 2026-07-19
 > **Author**: @shahin (agent-drafted, founder review pending)
 > **Audience**: engineers and reviewers
@@ -360,7 +360,7 @@ Per `SPEC-multi-agent.md` Section 8.2: Placer's Tree inserts, Reviser's Tree mov
 
 ### 8.3 E2E Encryption Status (Honesty Check)
 
-`SPEC-data-sovereignty.md` states the target plainly: "the server should hold encrypted op payloads (ciphertext)... E2E encryption is a launch gate." As of this revision, `Operation.payload` is a **plaintext** `JSONField` in the live codebase. Calling the current server relay "zero-knowledge" would not be accurate yet. This spec treats E2E encryption (NaCl `crypto_box`, per `SPEC-data-sovereignty.md` DS-1) as a **hard prerequisite before any production server relay ships**, not an optional hardening pass. Until it lands, any server-connected build must be labeled clearly as a transition-period build, not a zero-knowledge one, in both documentation and in-app copy.
+`SPEC-data-sovereignty.md` states the target plainly: "the server should hold encrypted op payloads (ciphertext)". As of this revision, `Operation.payload` is a **plaintext** `JSONField` in the live codebase. Calling the current server relay "zero-knowledge" would not be accurate yet. **Phasing (founder decision, 2026-07-19):** in the early phase, where all agents run locally and any relay is self-hosted and single-tenant (the person's own infrastructure), plaintext transition builds are acceptable, provided documentation and in-app copy label them clearly as transition-period builds, never as zero-knowledge. E2E encryption (NaCl `crypto_box`, per `SPEC-data-sovereignty.md` DS-1) becomes a **hard prerequisite before any Cytognosis-hosted relay or central/cloud agent ships** (for example agents running on Cytognosis infrastructure). Schedule the encryption work with the cloud-agent milestone, not the local-first launch.
 
 ### 8.4 Access Control at L6 (Unchanged)
 
@@ -430,7 +430,7 @@ All four data types share the same underlying mechanism (deterministic reducer o
 | Risk | Mitigation |
 |---|---|
 | any-sync's client is Go-only; no Rust FFI exists | Desktop sidecar (Section 5.2) avoids embedding Go in the Rust core; mobile stays a thin remote client in phase 1 |
-| E2E encryption is not yet implemented; current relay is plaintext | Treated as a hard launch gate (Section 8.3), not an optional hardening pass; no production server relay ships without it |
+| E2E encryption is not yet implemented; current relay is plaintext | Phased per Section 8.3: acceptable for self-hosted single-tenant early builds with clear labeling; hard prerequisite before any Cytognosis-hosted relay or cloud agent ships |
 | Vendor continuity: any-sync's MIT repos are steered by one company (Anytype / Any Association) | Mitigated structurally: Yar's reducer, not any-sync's object model, is the source of truth, so a fork or full replacement of the transport remains possible without an application rewrite |
 | Single-tenant assumption may not hold if Yar ever adds shared spaces (family, clinician) | Tracked as an explicit open decision (O-6, Section 13); any-sync's space model can extend to this, but it is out of scope for v1 |
 | Loro's smaller ecosystem versus Yjs | Automerge 3.0 is the documented, MIT, memory-efficient fallback; this is a decoupled decision from the transport choice (Section 5.1) and low-stakes by the founder's own prior framing |
@@ -446,7 +446,7 @@ All four data types share the same underlying mechanism (deterministic reducer o
 | 12-case edge benchmark against the real any-sync adapter (not just the simulated harness) | Idempotency, ordering, chunking, crash-resume, device lifecycle, tombstone races, tie-breaking, partition healing, blob transfer, anti-pattern guard | Must pass 12/12 before Phase 2 (Section 6.4) is considered done |
 | PeT assert/retract ordering test | New: concurrent assertion plus retraction across two devices resolves to the rule in Section 9.4 | Blocks `SPEC-petkg-longmemory.md` sign-off |
 | Cross-agent op interleaving test | New: Placer and Reviser ops interleaved with person-authored edits on the same brainmap session resolve deterministically, `actor_id` correctly distinguishes authorship | Blocks Wave 0 multi-agent integration |
-| E2E encryption round-trip test | Payload encrypted on-device, opaque at relay, decrypted correctly on a second device | Hard gate before any production server relay ships (Section 8.3) |
+| E2E encryption round-trip test | Payload encrypted on-device, opaque at relay, decrypted correctly on a second device | Hard gate before any Cytognosis-hosted relay or cloud agent ships (Section 8.3) |
 | Key rotation test | Rotate a device's key mid-session; old token invalidated; no data loss | Required before multi-device GA |
 | ACL and space membership test | Add and remove a device from a personal space; confirm access revocation takes effect within one sync round-trip | Required before multi-device GA |
 | Mobile background-limit soak test | iOS and Android background fetch windows; confirm no silent data loss when the app is backgrounded mid-sync | Required before mobile GA; currently unresolved (Section 10) |
