@@ -47,9 +47,10 @@
 | Additional Cytognosis-unique features with no direct competitor equivalent | 21 |
 | Academic sources verified | Chen et al. 2026 (CSCW), Brain.fm Communications Biology 2024, Blue Lin CHI 2024 + IMWUT 2025 |
 
-> **Taxonomy update (2026-07-18):** Two features (F63 invisible-disability advocacy mode, F64 personal compass) were added on 2026-07-18 per decision D-E; they have no competitor equivalent and are not yet scored in this matrix. Current taxonomy total: 64.
+> **Taxonomy update (2026-07-18):** Two features (F63 invisible-disability advocacy mode, F64 personal compass) were added on 2026-07-18 per decision D-E; they have no competitor equivalent and are not yet scored in this matrix.
+> **Taxonomy update (2026-07-19):** Five features (F65 focus & adherence guardian, F66 ask & summarize your captures, F67 long-term personal memory, F68 cross-device sync, F69 meeting-mode diarization) were added per `FEATURE-VERIFICATION.md`; they are post-matrix additions, not yet scored here. Current taxonomy total: 69.
 >
-> **Domain hierarchy** (6 domains, 19 clusters, 64 features): see `FEATURE-HIERARCHY.md` and `features.json` in this folder.
+> **Domain hierarchy** (6 domains, 19 clusters, 69 features): see `FEATURE-HIERARCHY.md` and `features.json` in this folder.
 
 ---
 
