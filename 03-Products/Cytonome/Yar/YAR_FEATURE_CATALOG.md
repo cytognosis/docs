@@ -170,10 +170,10 @@ The 14 formal specs plus 15 ADHD variants are written and promoted to `docs/03-P
 
 Per the voice-as-sensor rule, the sensing science moves to the Cytoscope project; Yar keeps the consumption and UX. **Pure Cytoscope:** F40 (voice wellbeing SER), F46 (brain sensor hardware). **Shared (science to Cytoscope, in-app surface stays Yar):** F30 (wearable biosignal validation), F54 (DistilHuBERT model artifacts), F62 (clinical instruments). Voice-as-persona (F11, F29, F45, F57; SPEC-personas-voice) stays Yar.
 
-## 8. Open integration deltas (for the feature consolidation)
+## 8. Open integration deltas (status as of 2026-07-19)
 
-1. Resolve the 3 INCORPORATION_MAP gaps: benchmark numbers into `SPEC-storage-engine`; CapLiteGuard into `SPEC-multi-agent`; cytos KG schema into `SPEC-CSP`.
-2. Retire the dated `consolidation_2026-06-21/` dir in the docs-repo Yar (route into `spec/` or `research/`; no snapshot folders).
-3. Confirm all 14 specs have linked ADHD-Obsidian variants; add any missing.
-4. Hand F40/F46 (and the science side of F30/F54/F62) to the Cytoscope project.
-5. Retire the stale 05-31 master and pre-v4 comparisons.
+1. INCORPORATION_MAP gaps: benchmark numbers into `SPEC-storage-engine` DONE (v0.2 active); CapLiteGuard into `SPEC-multi-agent` DONE (v0.2, 2026-07-19); cytos KG schema into `SPEC-CSP` still OPEN.
+2. `consolidation_2026-06-21/` dir retired DONE (removed; git history retains it).
+3. Spec ADHD twins: policy changed 2026-07-16, twins retired; the ADHD navigation surface is now the master-index twin `README.adhd.md` (2026-07-19).
+4. Hand F40/F46 (and the science side of F30/F54/F62) to the Cytoscope project: still OPEN.
+5. Stale 05-31 master and pre-v4 comparisons retired DONE.

@@ -6,7 +6,7 @@
 
 # Yar Spec Index
 
-**BLUF:** This folder holds Yar's 20 formal core engineering specs (12 pre-existing plus the 8-spec Wave 0 suite added or updated 2026-07-19), 2 safety/governance specs, 6 storage/safety session artifacts, and 2 supporting guides. The Wave 0 suite and its three companion updates were founder-approved and promoted to `active` on 2026-07-19, joining data-sovereignty and storage-engine; the two safety modules stay `design-final`, deferred post-YC. The `adhd/` easy-read twins that used to sit here were archived 2026-07-16 (see `../_archive/cleanup_2026-07-16/adhd-twins/spec/`); `adhd/` is now an empty placeholder, not a live section.
+**BLUF:** This folder holds Yar's 20 formal core engineering specs (12 pre-existing plus the 8-spec Wave 0 suite added or updated 2026-07-19), 2 safety/governance specs, 6 storage/safety session artifacts, and 2 supporting guides. The Wave 0 suite and its three companion updates were founder-approved and promoted to `active` on 2026-07-19, joining data-sovereignty and storage-engine; the two safety modules stay `design-final`, deferred post-YC. The `adhd/` easy-read twins were retired 2026-07-16 and now live only in git history.
 
 [Up: Yar master index](../README.md)
 
@@ -68,15 +68,15 @@ Full benchmark evidence for these decisions lives in [`../benchmark/`](../benchm
 | [STORAGE-ENGINE-RECOMMENDATION.md](./STORAGE-ENGINE-RECOMMENDATION.md) | Storage engine recommendation for Yar v0.1 | Active | 2026-07-10 |
 | [SurrealDB-tuning-and-graphrag-guide.md](./SurrealDB-tuning-and-graphrag-guide.md) | Troubleshooting T1-T12, SCHEMAFULL schema, FTS/HNSW index syntax, GraphRAG query patterns | Draft | 2026-06-21 |
 | [SurrealDB-advanced-optimization-and-versions.md](./SurrealDB-advanced-optimization-and-versions.md) | Version changelog 3.1.0-3.1.5, max-performance checklist, PATCH11 docker-compose changes | Draft | 2026-06-22 |
-| [YAR-CLIENT-EVAL.md](./YAR-CLIENT-EVAL.md) | Evaluation of the `yar-code-20260705-2354` client against these specs | Active | 2026-07-10 |
+| [YAR-CLIENT-EVAL.md](./YAR-CLIENT-EVAL.md) | Evaluation of the Tauri reference client (the `yar-code-20260705-2354` snapshot, since promoted to the canonical `~/repos/cytognosis/Yar`) against these specs | Active | 2026-07-10 |
 
-## Archive placeholder
+## Retired content
 
-`adhd/` is an empty directory. The easy-read spec twins that used to live here were archived 2026-07-16 to `../_archive/cleanup_2026-07-16/adhd-twins/spec/`. Treat the core specs above as the current source; the archive is historical only.
+The easy-read ADHD spec twins were retired 2026-07-16; the on-disk `_archive/` was later removed. Both are retrievable from git history. Treat the core specs above as the current source.
 
 ## Cross-links
 
 - Feature-to-spec map: [`../yar-product-spec.md`](../yar-product-spec.md) Section 7.
 - Benchmark evidence for storage decisions: [`../benchmark/README.md`](../benchmark/README.md).
 - Research chain (framework/AnySync assessments): [`../research/README.md`](../research/README.md).
-- CAP code path (engineering): `~/repos/cytognosis/yar_revisions/yar-code-20260705-2354/backend/cap/`.
+- CAP code path (engineering): `~/repos/cytognosis/Yar/backend/cap/` (canonical repo; formerly the `yar-code-20260705-2354` snapshot).

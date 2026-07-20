@@ -49,7 +49,7 @@ This is the one-page index for all formal benchmark documents in this folder and
 | Document | Path | Purpose |
 |---|---|---|
 | SurrealDB Code Audit | [`../research/SURREALDB_CODE_AUDIT.md`](../research/SURREALDB_CODE_AUDIT.md) | 8 code-level issues ranked by impact, exact before/after code snippets for each fix, Summary Table |
-| Benchmark Revision Plan (archived) | [`../_archive/consolidation_2026-06-21/_storage/BENCHMARK_REVISION_PLAN.md`](../_archive/consolidation_2026-06-21/_storage/BENCHMARK_REVISION_PLAN.md) | All 12 package-level issues with file/line references, local install plan, code revisions CR-1 through CR-9, step-by-step rerun procedure, risks R1-R8. Historical; superseded by `SURREALDB-RETEST-REPORT_2026-07-16.md` and `SURREALDB-PATCH11-VERDICT_2026-07-16.md` below |
+| Benchmark Revision Plan (archived) | git history (the on-disk `_archive/` was retired) | All 12 package-level issues with file/line references, local install plan, code revisions CR-1 through CR-9, step-by-step rerun procedure, risks R1-R8. Historical; superseded by `SURREALDB-RETEST-REPORT_2026-07-16.md` and `SURREALDB-PATCH11-VERDICT_2026-07-16.md` below |
 
 ---
 
