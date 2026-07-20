@@ -1,34 +1,35 @@
 ---
 spec_id: SPEC-personas-voice
-version: "0.1"
+version: "0.2"
 status: draft
 domain: personas-voice
 owner: Shahin Mohammadi
 created: 2026-06-22
-last_updated: 2026-06-22
+last_updated: 2026-07-19
 depends_on: [SPEC-multi-agent, SPEC-CSP, SPEC-storage-engine]
+coordinates_with: [SPEC-transcriber-agent, SPEC-proofreading-agent, SPEC-mindmapping-agent]
 implements: [CAP]
 ---
 
-> **Status**: Draft
-> **Date**: 2026-06-22
+> **Status**: Draft v0.2
+> **Date**: 2026-07-19
 > **Author**: Cytognosis Foundation
 > **Audience**: engineers
-> **Tags**: `yar`, `cytonome`, `personas`, `voice`, `tts`, `cap`, `kokoro`, `elevenlabs`
-> **Related:** [SPEC-multi-agent](./SPEC-multi-agent.md); [SPEC-CSP](./SPEC-CSP.md); crisis detection at `./MODULE-crisis-detection.md`; privacy boundary at `Cytoplex/spec/privacy-boundary-spec.md`
+> **Tags**: `yar`, `cytonome`, `personas`, `voice`, `tts`, `cap`, `kokoro`, `elevenlabs`, `scope-boundary`
+> **Related:** [SPEC-multi-agent](./SPEC-multi-agent.md) (v0.2, canonical agent naming); [SPEC-CSP](./SPEC-CSP.md); [SPEC-transcriber-agent](./SPEC-transcriber-agent.md); [SPEC-proofreading-agent](./SPEC-proofreading-agent.md); [SPEC-mindmapping-agent](./SPEC-mindmapping-agent.md); crisis detection at `./MODULE-crisis-detection.md`; privacy boundary at `Cytoplex/spec/privacy-boundary-spec.md`
 
 # SPEC: Yar Personas, Voice, and Character System
 
 > **Reading options:** An ADHD-friendly progressive-disclosure rendering is generated from this file. The hand-maintained ADHD twin (`spec/adhd/SPEC-personas-voice_adhd.md`) was retired 2026-07-16; see `_archive/cleanup_2026-07-16/adhd-twins/`.
 
-> **Naming disambiguation:** "Persona" here means the **Voice Persona** — the app companion's switchable character and TTS voice (Steady, Curious, Anchor, etc.), governed by CAP. This is a distinct concept from the **Trait Profiler** (`research/persona_profiler_frameworks_reference.md`, `research/persona_profiler_schema.yaml`), which models a person's own personality, values, and traits for cofounder/collaborator matching and social-interaction mood tracking. Do not conflate the two.
+> **Naming disambiguation:** "Persona" here means the **Voice Persona**, the app companion's switchable character and TTS voice (Steady, Curious, Anchor, etc.), governed by CAP. This is a distinct concept from the **Trait Profiler** (`research/persona_profiler_frameworks_reference.md`, `research/persona_profiler_schema.yaml`), which models a person's own personality, values, and traits for cofounder/collaborator matching and social-interaction mood tracking. Do not conflate the two. The Voice Persona is also distinct from per-agent character: Section 2.3 (new this revision) states explicitly which agents in the multi-agent system carry a persona at all, and which do not.
 
-**Reading time**: ~14 minutes.
-**If you only read one thing**: Section 3 (persona model with LinkML schema) and Section 5 (voice layer). Personas are CAP-governed character configurations that determine how Yar speaks to the user. A persona is NOT an autonomous agent — it is a structured style envelope applied by the Interviewer worker, modulated in real time by CSP signals (mood, distress, cognitive load), and persisted as CRDT operations. The current v0.1 voice path uses Kokoro (implemented); ElevenLabs integration is planned but not yet built.
+**Reading time**: ~16 minutes.
+**If you only read one thing**: Section 2.3 (scope boundary: which agents have a persona), Section 3 (persona model with LinkML schema), and Section 5 (voice layer). Personas are CAP-governed character configurations that determine how Yar speaks to the user. A persona is NOT an autonomous agent, and it is NOT worn by every agent in the multi-agent system; it is a structured style envelope applied by the Interviewer worker alone, modulated in real time by CSP signals (mood, distress, cognitive load), and persisted as CRDT operations. The current v0.1 voice path uses Kokoro (implemented, Apache-2.0 licensed model weights); ElevenLabs integration is planned but not yet built.
 
 ---
 
-**BLUF**: Yar presents itself through switchable, consent-governed personas that control tone, pacing, and character. Persona behavior is driven by CSP sensor signals (distress, cognitive load, mood arc) and governed by CAP so that no persona action can override a safety gate or cross a privacy boundary. Persona preference state is stored as CRDT operations in the op-log. Voice synthesis in v0.1 uses Kokoro on-device TTS (`Yar/src/yar/core/tts/kokoro_english.py`); ElevenLabs integration is planned for a future release.
+**BLUF**: Yar presents itself through switchable, consent-governed personas that control tone, pacing, and character, applied by exactly one worker, the Interviewer, on behalf of the whole multi-agent system. Persona behavior is driven by CSP sensor signals (distress, cognitive load, mood arc) and governed by CAP so that no persona action can override a safety gate or cross a privacy boundary. Persona preference state is stored as CRDT operations in the op-log. The three pipeline workers named in `SPEC-multi-agent.md` v0.2, Transcriber, Proofreader, and Mind-mapper, are voiceless and personaless by design (Section 2.3, new this revision): giving each of them its own persona would multiply TTS cost, complicate consent, and break the one-companion mental model this product depends on for neurodivergent users. Voice synthesis in v0.1 uses Kokoro on-device TTS (`Yar/src/yar/core/tts/kokoro_english.py`), fully on-device with zero network calls; ElevenLabs integration is planned for a future release.
 
 ---
 
@@ -38,9 +39,13 @@ implements: [CAP]
 
 The Kokoro TTS engine is implemented at `Yar/src/yar/core/tts/kokoro_english.py` using `kokoro-v1.0.onnx` with the Misaki English G2P phoneme pipeline. Six voice options are available: `af_sarah`, `af_bella`, `af_heart`, `af_nicole`, `am_michael`, `am_fenrir`. Kokoro is the **current** v0.1 voice path.
 
+**License confirmed, this revision:** Kokoro's underlying model weights (`hexgrad/Kokoro-82M`) are Apache-2.0 licensed, confirmed directly against the Hugging Face model card (`https://huggingface.co/hexgrad/Kokoro-82M`) rather than a secondary summary. Full fp32-precision weights were released under Apache-2.0 in December 2024 and remain so as of this July 2026 revision. This is a permissive, commercial-compatible license with no royalty or attribution obligation that would conflict with Yar's fully-free, no-subscription posture, and no license risk blocks the v0.1 voice path.
+
 **Not yet implemented:** the full `PersonaDefinition` LinkML schema and PersonaRegistry described in Section 3, CSP signal-driven tone modulation (Section 4.2), the CRDT preference state model (Section 6), the ElevenLabs integration contract (Section 5), and the affirming-language post-generation filter (Section 7.2). The implemented `PersonaMode` is a simple enum, not the rich `PersonaDefinition` described in Section 3.1. Do not treat the spec's `PersonaDefinition` class as describing existing behavior.
 
 **Persona mode mapping note:** The implemented 5-mode enum (`assistant`, `buddy`, `guardian`, `coach`, `quiet`) does not correspond one-to-one with the three example personas in this spec (Steady, Curious, Anchor). See Section 3.3 for reconciliation.
+
+**Scope boundary, confirmed this revision:** the persona system in this spec governs exactly one worker, the Interviewer. `SPEC-multi-agent.md` v0.2 canonical naming (Supervisor, Interviewer, Transcriber, Proofreader, Mind-mapper) is now the normative agent list this spec cross-references throughout; see Section 2.3.
 
 ---
 
@@ -48,13 +53,13 @@ The Kokoro TTS engine is implemented at `Yar/src/yar/core/tts/kokoro_english.py`
 
 This spec defines how Yar presents itself to the user: which voice it uses, what character it embodies, how it adapts tone to context, and what guardrails constrain its expression. It is the companion output spec to `SPEC-CSP.md` (which handles input sensing) and `SPEC-sensor-speech-mentalstate.md` (which handles acoustic analysis of the user's voice).
 
-**In scope:** persona definition and the LinkML schema, dynamic persona discovery and selection logic, CSP signal modulation of persona tone (planned), the TTS integration contract covering Kokoro (v0.1, implemented) and ElevenLabs (planned), CRDT preference-state model (planned), safety behavior under crisis (planned), and affirming-language guardrails (planned).
+**In scope:** persona definition and the LinkML schema, dynamic persona discovery and selection logic, CSP signal modulation of persona tone (planned), the TTS integration contract covering Kokoro (v0.1, implemented) and ElevenLabs (planned), CRDT preference-state model (planned), safety behavior under crisis (planned), affirming-language guardrails (planned), and, new this revision, an explicit scope boundary stating which agents in the multi-agent system carry a persona at all (Section 2.3).
 
-**Out of scope:** acoustic feature extraction from the user's voice (see `SPEC-CSP.md` and `SPEC-sensor-speech-mentalstate.md`), supervisor routing logic (see `SPEC-multi-agent.md`), neurobehavioral axis scoring (see `SPEC-neurobehavioral-axes.md`), and the brainmap placement and revision loop (see `SPEC-multi-agent.md` Section 6).
+**Out of scope:** acoustic feature extraction from the user's voice (see `SPEC-CSP.md` and `SPEC-sensor-speech-mentalstate.md`), supervisor routing logic (see `SPEC-multi-agent.md`), neurobehavioral axis scoring (see `SPEC-neurobehavioral-axes.md`), the brainmap placement and revision loop (see `SPEC-mindmapping-agent.md` and `SPEC-multi-agent.md` Section 9), and the internal pipeline design of the Transcriber and Proofreader workers (see their own specs). None of these workers render a persona; see Section 2.3.
 
-**Relationship to the multi-agent system:** A persona is not an agent. It is a style envelope applied at the Interviewer worker layer. The Interviewer reads the active `PersonaConfig` from the CRDT store, applies it to its system prompt, and renders responses and TTS output accordingly. The Supervisor may update the active persona (via a CAP Directive) when CSP signals warrant a tone shift. No worker may change the active persona unilaterally.
+**Relationship to the multi-agent system:** A persona is not an agent. It is a style envelope applied at the Interviewer worker layer, and only at that layer. The Interviewer reads the active `PersonaConfig` from the CRDT store, applies it to its system prompt, and renders responses and TTS output accordingly. The Supervisor may update the active persona (via a CAP Directive) when CSP signals warrant a tone shift, but the Supervisor itself never speaks to the user and never wears a persona. No worker, including Transcriber, Proofreader, and Mind-mapper, may change the active persona unilaterally, and none of the three pipeline workers has a persona of its own to change. See Section 2.3 for the full resolution.
 
-**Naming rules:** use CSP (Cytonome Sensor Protocol; formerly USAP/UBAP), CAP (not "Cognitive Agent Protocol"), Cytoplex (not "CAP product"), and avoid "Substrate" for any data layer. These rules are normative throughout this spec.
+**Naming rules:** use CSP (Cytonome Sensor Protocol; formerly USAP/UBAP), CAP (not "Cognitive Agent Protocol"), Cytoplex (not "CAP product"), and avoid "Substrate" for any data layer. Canonical worker names are Supervisor, Interviewer, Transcriber, Proofreader, and Mind-mapper, per `SPEC-multi-agent.md` v0.2 Section 2; do not reintroduce "Placer" or "Reviser." These rules are normative throughout this spec.
 
 ---
 
@@ -80,7 +85,31 @@ User:        accepts / declines
 Interviewer: PersonaPreferenceOp (CRDT) → op-log
 ```
 
-The active persona is part of the CRDT store (Section 6), not ephemeral supervisor state. The Supervisor reads it as a reference; it does not own it.
+The active persona is part of the CRDT store (Section 6), not ephemeral supervisor state. The Supervisor reads it as a reference; it does not own it, and, per Section 2.3, it never wears one.
+
+### 2.3 Scope Boundary: Which Agents Have a Persona
+
+`_planning-20260719/SPECS-INVENTORY.md`'s personas row flags a real gap in the prior revision of this spec: it covered the single app-facing Voice Persona in detail but never stated, in one place, whether the other four canonical agents in `SPEC-multi-agent.md` v0.2 (Supervisor, Transcriber, Proofreader, Mind-mapper) need a persona of their own. This section closes that gap and is normative going forward.
+
+**Resolution: exactly one user-facing Voice Persona exists in Yar.** It is worn by the Interviewer, the worker that renders every conversational turn and dispatches TTS (Section 2.2). No other agent speaks to the user in its own voice, and no other agent is assigned its own persona.
+
+| Agent | Persona? | Rationale |
+|---|---|---|
+| **Interviewer** | **Yes.** Sole bearer of the Voice Persona. | The Interviewer is the only agent with a user-facing conversational turn (`SPEC-multi-agent.md` Section 3, Section 9.1). It reads the active `PersonaConfig` from the CRDT store, applies its tone, and dispatches TTS. Every persona in Section 3.2 (Steady, Curious, Anchor) and every implemented `PersonaMode` (Section 3.3) is a configuration the Interviewer wears, never a separate character the Interviewer negotiates with another agent. |
+| **Supervisor** | **No.** Governs persona state; does not wear one. | The Supervisor may issue a `PersonaSwitchDirective` (Section 2.2, Section 4.3) and owns policy arbitration and crisis escalation, but it never renders a response or a voice directly to the user (`SPEC-multi-agent.md` Section 2.3). It has no tone, no TTS dispatch, and no character of its own; it is a controller, not a conversational surface. |
+| **Transcriber** | **No.** Voiceless and personaless by design. | Converts voice to `TranscriptSegment` events and stops (`SPEC-transcriber-agent.md` Section 2.1). It has no dialogue turn, no conversational response, and no affect-rendering duty; that boundary is drawn explicitly in that spec's own scope section. A worker with nothing to say to the user has no need of a voice to say it in. |
+| **Proofreader** | **No.** Voiceless and personaless by design. | Resolves personal terms, tags revisions, and produces structured output (`SPEC-proofreading-agent.md` Section 1, BLUF). Its output is data consumed by the Mind-mapper and the CRDT op-log, never a rendered utterance to the person. A persona governs how something is said aloud or in text to the user; the Proofreader never says anything to the user directly. |
+| **Mind-mapper** | **No.** Voiceless and personaless by design. | Places thought-nodes and proposes structure revisions (`SPEC-mindmapping-agent.md` Section 4). Even its `RevisionBatch` rationale strings (`SPEC-mindmapping-agent.md` Section 8.1, Section 12.3) are structured, human-readable text rendered *through* the Interviewer's active persona when surfaced to the user, not spoken in a Mind-mapper voice of its own. |
+
+**Why this is the right resolution, not merely the convenient one:**
+
+1. **Cost.** Every persona carries a `voice_ref` (Section 3.1) bound to a TTS model and, once ElevenLabs ships, a per-voice licensing cost. A persona per worker would mean paying for and maintaining three or four additional voice identities the person never actually hears independently, since worker output only ever reaches the person relayed through the Interviewer regardless.
+2. **Consent.** CAP-governed persona switches already require explicit user confirmation (Section 2.2, Section 4.5). A world with five personas, one per agent, multiplies the consent surface for no benefit: the person did not ask to negotiate tone with a transcription pipeline, and there is no product reason to ask them to.
+3. **The one-companion mental model.** This is the reason that matters most for neurodivergent adult users specifically. Yar's whole value proposition is a single, consistent, trustworthy companion, not a committee of specialized assistants. A person who hears one voice when Yar reflects a feeling, and a different voice, or worse, a differently-configured silence, when Yar tags a revision or places a thought, experiences Yar as fragmented, not as a companion. Voice consistency is part of what makes externalizing memory into Yar feel safe enough to actually do.
+
+**What still varies per worker: configuration, not character.** The Proofreader's confidence thresholds, the Mind-mapper's conservatism budget (`SPEC-mindmapping-agent.md` Section 5.1), and the Transcriber's model tier (`SPEC-transcriber-agent.md` Section 3) all vary by deployment, and indirectly by the active persona's declared behavior profile (for example, a `quiet` `PersonaMode` session may suppress how often the Mind-mapper's `RevisionBatch` is surfaced to the user, per Section 4.6). None of this is a worker adopting its own character. It is the Interviewer's single persona shaping how much, and how often, worker output reaches the user, the same distinction `SPEC-multi-agent.md` Section 12.5 draws between affirming-language content rules (character, universal, CAP-enforced) and per-worker behavior (configuration, worker-specific, not a persona).
+
+**Cross-reference:** This resolution is normative alongside `SPEC-multi-agent.md` v0.2 Section 2 (canonical agent naming) and Section 2.2 above (the Supervisor-Interviewer persona relationship). It changes no schema in Section 3; it states, for the first time in one place, the boundary those schemas already implied.
 
 ---
 
@@ -164,10 +193,10 @@ classes:
         description: "Target words per minute. Modulation applies ±20%."
       pause_frequency:
         range: PauseFrequencyEnum
-        description: "low | medium | high — how often Yar inserts breathing pauses."
+        description: "low | medium | high: how often Yar inserts breathing pauses."
       pitch_target:
         range: PitchTargetEnum
-        description: "lower | neutral | higher — relative to TTS model baseline."
+        description: "lower | neutral | higher: relative to TTS model baseline."
       warmth:
         range: integer
         minimum_value: 1
@@ -425,9 +454,9 @@ The three example personas above (Steady, Curious, Anchor) describe a planned ri
 | `coach` | Direct and encouraging. Short messages, action-oriented. | Anchor (partial) | Anchor is more structured; coach is more action-oriented. |
 | `quiet` | Minimal output. Only essential messages, no commentary. | No spec persona | Not represented in the three spec examples. This is an implemented mode with no spec counterpart. |
 
-**Gaps:** The spec's three example personas (Steady, Curious, Anchor) do not map cleanly to the five enum modes. `guardian` is the closest to Steady; `buddy` is loose for Curious; `assistant` and `coach` both approximate Anchor from different angles; `quiet` has no spec analogue. The full `PersonaDefinition` system (Section 3.1) is the intended replacement for the simple enum — when implemented, it should accommodate all five current modes plus the richer spec personas.
+**Gaps:** The spec's three example personas (Steady, Curious, Anchor) do not map cleanly to the five enum modes. `guardian` is the closest to Steady; `buddy` is loose for Curious; `assistant` and `coach` both approximate Anchor from different angles; `quiet` has no spec analogue. The full `PersonaDefinition` system (Section 3.1) is the intended replacement for the simple enum; when implemented, it should accommodate all five current modes plus the richer spec personas.
 
-**Implication for implementers:** Use `PersonaMode` (the enum) for any current work. Do not build against the `PersonaDefinition` LinkML schema until it is implemented and the enum is migrated.
+**Implication for implementers:** Use `PersonaMode` (the enum) for any current work. Do not build against the `PersonaDefinition` LinkML schema until it is implemented and the enum is migrated. All five modes are worn exclusively by the Interviewer, per Section 2.3; none is ever assigned to the Supervisor, Transcriber, Proofreader, or Mind-mapper.
 
 ---
 
@@ -492,7 +521,7 @@ The user may switch personas at any time via:
 2. **UI control**: Persona picker in the settings panel (direct CRDT write, no Directive needed for explicit user action).
 3. **Onboarding**: Persona preference is set during the first session via a brief guided selection.
 
-User-initiated switches require no CAP Directive — they originate from the user (the root authority in CAP). The Interviewer writes a `PersonaPreferenceOp` directly to the op-log after confirming the selection with the user.
+User-initiated switches require no CAP Directive; they originate from the user (the root authority in CAP). The Interviewer writes a `PersonaPreferenceOp` directly to the op-log after confirming the selection with the user.
 
 ### 4.5 User Override and Consent
 
@@ -504,13 +533,21 @@ The user has unconditional authority over persona selection. No Supervisor Direc
 
 Persona data (which persona is active, which the user prefers, tone adjustment history) is classified `on_device_only` per the CSP privacy-tier model. It never crosses the privacy boundary.
 
+### 4.6 Persona Coverage of the F24 Daily-Plan Refinement Loop
+
+`SPEC-multi-agent.md` v0.2 Section 10 defines the F24 interactive daily-plan refinement loop as a Supervisor-mediated conversation that reuses the Interviewer's existing conversational pattern (per-turn CAP Directive, `guidance update`) rather than inventing a new interaction shape or a new agent. Section 2.3 above establishes why this works cleanly: because the Interviewer is the sole bearer of the Voice Persona, F24's refinement dialogue is rendered through whichever of the five implemented `PersonaMode` values (`assistant`, `buddy`, `guardian`, `coach`, `quiet`, Section 3.3) is currently active, exactly like every other Interviewer turn.
+
+Concretely: a `quiet`-mode person negotiating their morning anchors hears short, minimal-commentary turns; a `buddy`-mode person hears the same negotiation rendered warmer and more casual; a `guardian`-mode person hears it rendered calmer and safety-focused. The refinement logic itself, what counts as a hard commitment and what the Supervisor will or will not let the person reorder (`SPEC-multi-agent.md` Section 10), does not change across persona modes. Only the delivery does. The prompt templates that realize this per-mode rendering for F24 specifically live at `prompts/daily-anchor-planner.md`; that file is the implementation surface for this section's requirement, not a separate persona system, and it does not introduce a sixth `PersonaMode` or a persona specific to F24.
+
+No new agent role and no new persona are introduced for F24, matching `SPEC-multi-agent.md` Section 10's own closing line ("No new agent role is required").
+
 ---
 
 ## 5. Voice Layer
 
 ### 5.1 Current v0.1 Implementation: Kokoro
 
-The implemented TTS engine is **Kokoro** (`Yar/src/yar/core/tts/kokoro_english.py`). Kokoro uses `kokoro-v1.0.onnx` (full-precision model; the INT8 variant was benchmarked as slower on the team's local setup and is not the default) with Misaki English G2P phoneme preprocessing. It is an Apache-2.0-licensed, fully on-device, zero-network-call engine.
+The implemented TTS engine is **Kokoro** (`Yar/src/yar/core/tts/kokoro_english.py`). Kokoro uses `kokoro-v1.0.onnx` (full-precision model; the INT8 variant was benchmarked as slower on the team's local setup and is not the default) with Misaki English G2P phoneme preprocessing. It is a fully on-device, zero-network-call engine, built on `hexgrad/Kokoro-82M` model weights confirmed Apache-2.0 licensed directly against the Hugging Face model card (Implementation Status, above); this is a permissive license consistent with Yar's fully-free, no-subscription posture.
 
 **Implemented Kokoro voice options** (from `kokoro_english.py`):
 
@@ -607,7 +644,7 @@ Audio playback stops immediately
 Interviewer: process new user turn
 ```
 
-**Supervisor interrupt:** The Supervisor may issue an `inject_priority_message` Directive to preempt ongoing TTS output. This uses the same VAD-cancel pathway. The Supervisor uses this only for safety-critical injections (e.g., crisis response insertion).
+**Supervisor interrupt:** The Supervisor may issue an `inject_priority_message` Directive to preempt ongoing TTS output. This uses the same VAD-cancel pathway. The Supervisor uses this only for safety-critical injections (e.g., crisis response insertion). This is the one case where the Supervisor's Directive reaches the speaker at all; it still does so through the Interviewer's active persona voice, not a Supervisor voice of its own, consistent with Section 2.3.
 
 **Latency budget for barge-in:**
 - VAD onset detection: under 50ms.
@@ -802,7 +839,7 @@ rules:
   - rule_id: no_shame_or_disappointment
     description: >-
       Yar must never express disappointment in the user's behavior or output.
-      Rewrite: "You didn't finish the task again" → "This one stayed open — want to revisit it?"
+      Rewrite: "You didn't finish the task again" → "This one stayed open, want to revisit it?"
     detection: embedding classifier (disappointment framing)
     action: regenerate
 
@@ -821,11 +858,11 @@ rules:
     action: rewrite
 ```
 
-**Regeneration limit:** If a response fails guardrails after 2 regeneration attempts, Yar delivers a safe fallback response ("I want to make sure I'm saying this well — can I try again?") rather than delivering a rule-violating response.
+**Regeneration limit:** If a response fails guardrails after 2 regeneration attempts, Yar delivers a safe fallback response ("I want to make sure I'm saying this well, can I try again?") rather than delivering a rule-violating response.
 
 ### 7.3 Anti-Sycophancy and No-Harmful-Compliance Constraints
 
-Yar's character layer explicitly prohibits sycophantic responses and harmful compliance — that is, agreeing with harmful user statements or validating dangerous plans to avoid conflict. These constraints are implemented as `disallowed_behaviors` present in every persona and enforced by the CAP Guard.
+Yar's character layer explicitly prohibits sycophantic responses and harmful compliance, that is, agreeing with harmful user statements or validating dangerous plans to avoid conflict. These constraints are implemented as `disallowed_behaviors` present in every persona and enforced by the CAP Guard.
 
 **Sycophancy constraint:** Yar does not affirm every statement the user makes. It distinguishes between:
 - Validating feelings (always appropriate): "That sounds really hard."
@@ -843,7 +880,7 @@ Yar uses hedged language when it cannot evaluate content: "I can hold that idea 
 
 The following EARS-style requirements are normative for v1. Test IDs are assigned for integration with the acceptance test suite.
 
-**Implementation status note for 8.1-8.4**: All requirements in this section are **planned** (target state for v1.0 full release). The current v0.1 implementation satisfies none of PV-1 through PV-20 in their full form. The implemented system supports `GET /persona`, `PATCH /persona`, and `GET /persona/modes` on the simple 5-mode `PersonaMode` enum. All richer criteria are acceptance gates for future milestones.
+**Implementation status note for 8.1-8.4**: All requirements in this section are **planned** (target state for v1.0 full release). The current v0.1 implementation satisfies none of PV-1 through PV-21 in their full form. The implemented system supports `GET /persona`, `PATCH /persona`, and `GET /persona/modes` on the simple 5-mode `PersonaMode` enum. All richer criteria are acceptance gates for future milestones.
 
 ### 8.1 Persona Behavior
 
@@ -855,13 +892,14 @@ The following EARS-style requirements are normative for v1. Test IDs are assigne
 | PV-4 | The system shall suppress Supervisor persona-switch recommendations for the remainder of a session after three consecutive user declines. | Planned |
 | PV-5 | The system shall rate-limit Supervisor `PersonaSwitchDirective` emissions to no more than one per 10-minute interval. | Planned |
 | PV-6 | The system shall default to `PersonaMode.assistant` if no persona preference exists for the user. | **Implemented** (v0.1; see `routes_persona.py`) |
+| PV-21 | The system shall route all user-facing rendering of Supervisor persona-switch recommendations, Mind-mapper `RevisionBatch` rationale text, and F24 refinement-loop dialogue through the Interviewer's active persona; no agent other than the Interviewer shall dispatch TTS or independently apply a persona configuration. | Planned (architecture-level constraint, Section 2.3, new this revision) |
 
 ### 8.2 Voice Layer
 
 | ID | Requirement | Status |
 |---|---|---|
 | PV-7 | The system shall deliver first audio within 200ms of the Interviewer completing text generation, measured at the speaker output. | Planned (latency not yet measured for Kokoro v0.1) |
-| PV-8 | The system shall use Kokoro (`kokoro-v1.0.onnx`) as the primary TTS engine for on-device sessions, with no network calls required. | **Implemented** (v0.1; `Yar/src/yar/core/tts/kokoro_english.py`) |
+| PV-8 | The system shall use Kokoro (`kokoro-v1.0.onnx`) as the primary TTS engine for on-device sessions, with no network calls required. | **Implemented** (v0.1; `Yar/src/yar/core/tts/kokoro_english.py`; underlying weights confirmed Apache-2.0, Implementation Status above) |
 | PV-9 (planned) | When ElevenLabs on-device is integrated, the system shall use `eleven_flash_v2_5` as the primary model and fall back to Kokoro if ElevenLabs is unavailable. | Planned (ElevenLabs integration not yet built) |
 | PV-10 | The system shall stop TTS audio playback within 100ms of VAD detecting user voice onset (barge-in). | Planned (requires audio-playback interrupt layer; not yet implemented) |
 | PV-11 | The system shall not transmit any audio to ElevenLabs cloud servers during an on-device session, including synthesized audio, user audio, or persona configuration. | **Satisfied by default** in v0.1 (no ElevenLabs integration; Kokoro is local-only) |
@@ -898,24 +936,28 @@ The following EARS-style requirements are normative for v1. Test IDs are assigne
 | **O-5** | PersonaPreferenceState retention under full data delete: does persona history have a separate delete flow, or is it covered by the global user-data-delete flow? | Covered by global delete; persona is not a separate consent scope. | Legal posture (Duane Valz review recommended for the data-deletion flow as a whole). |
 | **O-6** | Identity-first language preference (e.g., "autistic person" vs "person with autism"): how is this stored and respected in guardrail rule `person_first_language`? | Stored as a boolean flag in `PersonaPreferenceState`; user sets during onboarding. | Onboarding UX design; no technical blocker. |
 | **O-7** | Anti-sycophancy enforcement: rule-based filter, fine-tuned model head, or system-prompt instruction only? | System prompt instruction in v1; add embedding classifier in v1.1 when false-positive rate is measured. | Requires evals data; cannot be finalized before v1 user testing. |
+| **O-8** | Should any future worker (for example, a forthcoming meeting-diarization agent, F69) ever get its own voice or persona? | No. Extend Section 2.3's resolution: any spoken or rendered output from a future worker routes through the Interviewer's active persona, exactly like the Mind-mapper's `RevisionBatch` rationale text does today. | Revisit only if a future spec proposes a worker with a genuinely independent conversational surface, which would itself be a Supervisor/Interviewer-topology change, not a persona-system change. |
 
 ---
 
 ## 10. References
 
-1. ElevenLabs Models Documentation: [https://elevenlabs.io/docs/overview/models](https://elevenlabs.io/docs/overview/models) — canonical model IDs, latency specs, deprecation dates.
-2. ElevenLabs Latency Documentation: [https://elevenlabs.io/docs/eleven-api/concepts/latency](https://elevenlabs.io/docs/eleven-api/concepts/latency) — `eleven_flash_v2_5` ~75ms first-audio latency.
-3. ElevenLabs Streaming API: [https://elevenlabs.io/docs/api-reference/streaming](https://elevenlabs.io/docs/api-reference/streaming) — WebSocket bidirectional streaming endpoint.
-4. `04-Engineering/yar/research/elevenlabs_evaluation.md` — Cytognosis evaluation of ElevenLabs TTS, STT, and on-device capabilities (2026-05-17).
-5. `04-Engineering/yar/research/voice_model_deep_evaluation.md` — Model comparison for supervisor interrupt control, nonverbal understanding, and longitudinal tracking; VocalBiomarkerFrame schema (2026-05-17).
-6. `03-Products/Cytonome/Yar/spec/SPEC-multi-agent.md` — Supervisor-worker topology, CAP Directive envelope, Dapr/NATS orchestration, crisis-detection gate.
-7. `03-Products/Cytonome/Yar/spec/SPEC-CSP.md` — Cytonome Sensor Protocol; CSP signal schema; adapter lifecycle; privacy-tier classification.
-8. `Cytoplex/spec/03_primitives.md` — CAP Directive, GuardDecision, RefusalMessage schemas.
-9. `Cytoplex/spec/06_conformance.md` — CAP conformance profile requirements.
-10. `Cytoplex/spec/privacy-boundary-spec.md` — CrossBoundarySignal schema; PEP gate; PB-1 through PB-10.
-11. `Yar/spec/MODULE-crisis-detection.md` — Crisis Guard API contract; CD-1 through CD-10.
-12. `Yar/spec/SPEC-storage-engine.md` — CRDT op-log source of truth; L4 engine open decisions.
-13. `03-Products/Cytonome/Yar/steering/yar-product.md` — Yar product vision; user personas; success metrics.
+1. ElevenLabs Models Documentation ([https://elevenlabs.io/docs/overview/models](https://elevenlabs.io/docs/overview/models)): canonical model IDs, latency specs, deprecation dates.
+2. ElevenLabs Latency Documentation ([https://elevenlabs.io/docs/eleven-api/concepts/latency](https://elevenlabs.io/docs/eleven-api/concepts/latency)): `eleven_flash_v2_5` ~75ms first-audio latency.
+3. ElevenLabs Streaming API ([https://elevenlabs.io/docs/api-reference/streaming](https://elevenlabs.io/docs/api-reference/streaming)): WebSocket bidirectional streaming endpoint.
+4. `04-Engineering/yar/research/elevenlabs_evaluation.md`: Cytognosis evaluation of ElevenLabs TTS, STT, and on-device capabilities (2026-05-17).
+5. `04-Engineering/yar/research/voice_model_deep_evaluation.md`: Model comparison for supervisor interrupt control, nonverbal understanding, and longitudinal tracking; VocalBiomarkerFrame schema (2026-05-17).
+6. `03-Products/Cytonome/Yar/spec/SPEC-multi-agent.md` (v0.2): Supervisor-worker topology, canonical agent naming, CAP Directive envelope, Dapr/NATS orchestration, crisis-detection gate.
+7. `03-Products/Cytonome/Yar/spec/SPEC-CSP.md`: Cytonome Sensor Protocol; CSP signal schema; adapter lifecycle; privacy-tier classification.
+8. `Cytoplex/spec/03_primitives.md`: CAP Directive, GuardDecision, RefusalMessage schemas.
+9. `Cytoplex/spec/06_conformance.md`: CAP conformance profile requirements.
+10. `Cytoplex/spec/privacy-boundary-spec.md`: CrossBoundarySignal schema; PEP gate; PB-1 through PB-10.
+11. `Yar/spec/MODULE-crisis-detection.md`: Crisis Guard API contract; CD-1 through CD-10.
+12. `Yar/spec/SPEC-storage-engine.md`: CRDT op-log source of truth; L4 engine open decisions.
+13. `03-Products/Cytonome/Yar/steering/yar-product.md`: Yar product vision; user personas; success metrics.
+14. `hexgrad/Kokoro-82M` model card, Hugging Face ([https://huggingface.co/hexgrad/Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M)): Apache-2.0 license confirmation for the Kokoro model weights underlying the v0.1 voice path, checked directly this revision (2026-07-19).
+15. `SPEC-transcriber-agent.md`, `SPEC-proofreading-agent.md`, `SPEC-mindmapping-agent.md`: the three worker specs whose voicelessness this spec's Section 2.3 states explicitly.
+16. `_planning-20260719/SPECS-INVENTORY.md`: personas row, source of the scope-boundary gap this revision closes.
 
 ---
 
@@ -932,17 +974,20 @@ The following EARS-style requirements are normative for v1. Test IDs are assigne
 - **CSP (Cytonome Sensor Protocol):** The protocol governing sensor adapters that feed signals into Yar. Defined in SPEC-CSP.md.
 - **Curious:** Built-in persona. Exploratory, engaged, slightly faster paced. Best for thinking-out-loud and flow states.
 - **Eleven Flash v2.5 (`eleven_flash_v2_5`):** ElevenLabs' ultra-low-latency TTS model. ~75ms first-audio. Primary on-device model for Yar.
-- **Interviewer:** The on-device worker agent (Gemma 4 E4B) responsible for real-time conversational response. Applies persona config and dispatches TTS.
-- **Kokoro 82M:** Open-source TTS model (Apache 2.0). Fallback when ElevenLabs on-device is unavailable.
+- **Interviewer:** The on-device worker agent (Gemma 4 E4B) responsible for real-time conversational response. The sole bearer of the Voice Persona (Section 2.3); applies persona config and dispatches TTS.
+- **Kokoro 82M:** Open-source TTS model (`hexgrad/Kokoro-82M`, Apache-2.0, confirmed Section 5.1). Fallback when ElevenLabs on-device is unavailable; the current v0.1 primary.
+- **Mind-mapper:** The worker that places thought-nodes and proposes structure revisions. Personaless and voiceless by design (Section 2.3); its `RevisionBatch` rationale text is rendered through the Interviewer's persona, never spoken in its own voice.
 - **Modulation:** Within-persona adjustment of tone parameters (speaking rate, pause frequency, warmth) driven by real-time CSP signals. Does not switch personas.
-- **Persona:** A named, versioned character configuration for Yar. Controls tone, voice, behavioral constraints, and language register.
+- **Persona:** A named, versioned character configuration for Yar. Controls tone, voice, behavioral constraints, and language register. Worn only by the Interviewer (Section 2.3).
 - **PersonaDefinition:** The LinkML schema class defining a persona. Stored in the PersonaRegistry.
 - **PersonaPreferenceState:** The user's persistent persona and voice preferences. Stored as a CRDT Map.
 - **PersonaRegistry:** The on-device list of all available personas. Read-only for workers; write access via CAP Directive.
 - **PersonaSwitchDirective:** A CAP Directive issued by the Supervisor to recommend a persona switch. Requires user confirmation.
+- **Proofreader:** The worker that resolves personal terms and names and tags revisions. Personaless and voiceless by design (Section 2.3); its output is data, never a rendered utterance.
 - **Steady:** Built-in persona. Calm, grounded, lower pace, high warmth. Default and crisis-adjacent persona.
-- **Supervisor:** The Gemma 4 26B MoE agent. May issue PersonaSwitchDirective; does not own persona state.
+- **Supervisor:** The Gemma 4 26B MoE agent. May issue PersonaSwitchDirective; does not own persona state and never wears a persona itself (Section 2.3).
 - **ToneParams:** The set of adjustable acoustic parameters within a persona (speaking rate, pause frequency, pitch target, warmth, directness).
+- **Transcriber:** The ASR and segmentation worker. Personaless and voiceless by design (Section 2.3); has no dialogue turn.
 - **VAD (Voice Activity Detection):** On-device model that detects the onset of user speech. Triggers barge-in cancel.
 - **Voice:** The acoustic rendering layer. Assigned to a persona; can be overridden by the user.
 - **VoiceRef:** LinkML schema class identifying a TTS provider, voice ID, and model ID.
